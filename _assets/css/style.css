@@ -50,7 +50,7 @@ body {
     justify-content:center;
 }
 
-.container {
+.l-container {
     background-color: white;
     display: flex;
     margin-top: 10em;
