@@ -14,7 +14,6 @@
     font-size: 12px;
     font-weight: normal;
     line-height: 1.5em;
-    
 }
 
 /* -- links -- */
@@ -43,26 +42,27 @@ hr {
 /* ----- LAYOUT ----- */
 
 body {
+    align-items:center;
     background-color: mistyrose;
+    display: flex;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
+    justify-content:center;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    margin-top: 10em;
 }
 
 main {
-    background-color: white;
     padding: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10em;
     width: 50em;
 }
 
 .l-sidebar {
-    background-color: white;
-    margin-left: 12em;
-    margin-top: -2em;
     padding: 1em;
-    position: fixed;
 }
 
 .l-sidebar__menu {
