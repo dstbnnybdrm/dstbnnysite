@@ -33,6 +33,10 @@ a:hover {
     color: var(--main-color);
 }
 
+p {
+    margin-bottom: 1em;
+}
+
 hr {
     border: none;
     margin-bottom: 1em;
@@ -99,6 +103,12 @@ footer {
 }
 
 .sect__list-item {
+    list-style: "∟ ";
+    margin-left: 2em;
+}
+
+.sect__list-item--italic {
+    font-style: italic;
     list-style: "∟ ";
     margin-left: 2em;
 }
