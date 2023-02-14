@@ -106,11 +106,6 @@ footer {
     margin-left: 2em;
 }
 
-/* .sect__list-item {
-    list-style: "∟ ";
-    margin-left: 2em;
-} */
-
 .sect__list-item--italic {
     font-style: italic;
     list-style: "∟ ";
