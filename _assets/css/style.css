@@ -81,7 +81,7 @@ footer {
     bottom: 0;
     margin-bottom: 1em;
     margin-right: 2em;
-    position: absolute;
+    position:fixed;
     right: 0;
     text-align: right;
 }
