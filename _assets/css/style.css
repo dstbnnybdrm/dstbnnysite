@@ -4,7 +4,7 @@
 :root {
     --main-color: #808080;
     --secondary-color: black;
-    --accent-color: #e84d72; 
+    --accent-color: #e84d72;
 }
 
 /* -- reset -- */
@@ -33,6 +33,7 @@ a:hover {
     color: var(--main-color);
 }
 
+/* -- paragraphs -- */
 p {
     margin-bottom: 1em;
 }
@@ -42,10 +43,15 @@ hr {
     margin-bottom: 1em;
 }
 
-/* ----- LAYOUT ----- */
+/* -- list -- */
+li {
+    list-style: "∟ ";
+}
 
+
+/* ----- LAYOUT ----- */
 body {
-    align-items:center;
+    align-items: center;
     background-color: mistyrose;
     display: flex;
     font-family: 'Courier New', Courier, monospace;
@@ -54,6 +60,7 @@ body {
     padding-left: calc(100vw - 100%);
 }
 
+/* -- containers -- */
 .l-container {
     background-color: white;
     display: flex;
@@ -61,10 +68,7 @@ body {
 }
 
 .l-container--column {
-    background-color: white;
-    display: flex;
     flex-direction: column;
-    margin-top: 10em;
 }
 
 main {
@@ -76,102 +80,78 @@ main {
     padding: 1em;
 }
 
-.l-sidebar--back {
+.l-centre {
+    margin: auto;
     text-align: center;
-    padding: 1em 0 0 1em;
+    padding: 1em;
 }
 
-.l-sidebar__menu {
-    margin: 1em 0;
-}
-
-.l-sidebar__menu--centre {
-    margin: 1em 0;
-    text-align: center;
-}
-
-.l-sidebar__menu-item {
-    list-style: "∟ ";
-    margin-left: 2em;
-}
-
-.l-sidebar__menu-item--hor {
-    display: inline;
-    list-style: none;
-    margin-right: 2em;
+.l-grid {
+    display: flex;
 }
 
 footer {
     bottom: 0;
     margin-bottom: 1em;
     margin-right: 2em;
-    position:fixed;
+    position: fixed;
     right: 0;
     text-align: right;
 }
 
-
 /* ----- MODULES ----- */
 
-.sect {
+.nav-menu {
+    margin: 1em 0;
+}
+
+.nav-menu__item {
+    margin-left: 2em;
+}
+
+.nav-menu__item.is-active {
+    font-style: italic;
+    margin-left: 2em;
+}
+
+.nav-menu__item-hor {
+    display: inline;
+    list-style: none;
+    margin: 0 1em 0 1em;
+}
+
+.update-log {
+    width: 25em;
+    height: 10em;
+    overflow-y: scroll;
+}
+
+.section {
     margin-bottom: 1em;
 }
 
-.sect__title {
+.section__title {
     font-weight: bold;
 }
 
-.sect__subtitle {
+.section__subtitle {
     font-style: italic;
 }
 
-.sect__list-item {
-    list-style: "∟ ";
+.section-list__item {
     margin-left: 2em;
 }
 
-.sect__list-item--italic {
-    font-style: italic;
-    list-style: "∟ ";
-    margin-left: 2em;
+.section-list__item--italic {
     border-left: 6em;
-}
-
-.sect__list-item--hor {
-    display: inline;
-    list-style: none; 
-}
-
-.poem-sect {
-    display: flex;
-    flex-direction: row;
+    font-style: italic;
     margin-left: 2em;
 }
 
-.poem-deco {
-    white-space: pre;
+.section-list__item--hor {
+    display: inline;
+    list-style: none;
 }
-
-.poem-deco--side {
-    white-space: pre;
-}
-
-.poem {
-    display: none;
-    margin-left: 4em;
-}
-
-.poem__title {
-    font-style: italic;
-}
-
-
-.ascii-art {
-    white-space: pre;
-}
-
-
-/* ----- STATE ----- */
 
 .poem-nav {
     margin-top: 1em;
@@ -180,22 +160,39 @@ footer {
 .poem-nav__item {
     color: var(--accent-color);
     display: inline;
-    list-style: none; 
+    list-style: none;
     user-select: none;
 }
 
-.poem-nav__item--div {
-    /* color: var(--main-color); */
+.poem-nav__div {
     display: inline;
-    list-style: none; 
+    list-style: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.poem-sect {
+    margin-left: 2em;
+}
+
+.poem {
+    display: none;
+    margin-left: 4em;
+}
+
+.poem.is-visible {
+    display: block;
+}
+
+.poem__title {
+    font-style: italic;
+}
+
+.ascii-art {
+    white-space: pre;
 }
 
 /* -- breakpoints -- */
-/*  
-@media screen and (min-width: 600px){
-
-}
-*/
-
+/* @media screen and (min-width: 600px){} */
 
 /* ----- THEME ----- */

@@ -1,21 +1,25 @@
 const pageList = document.getElementsByClassName("poem");
 var index = 0;
-pageList[index].style.display = "block";
+pageList[index].className += " is-visible";
 
-function prev() {
+function next() {
   if (index != 0) {
-    pageList[index].style.display = "none";
+    pageList[index].className
+      = pageList[index].className.replace( /(?:^|\s)is-visible(?!\S)/g , '' );
+    console.log(pageList[index].className)
     index--;
-    pageList[index].style.display = "block";
+    pageList[index].className += " is-visible";
     // window.location.href = "#" + pageList[index].id.toString(); 
+    
   }
 }
 
-function next() {
+function prev() {
   if (index != pageList.length-1) {
-    pageList[index].style.display = "none";
+    pageList[index].className
+      = pageList[index].className.replace( /(?:^|\s)is-visible(?!\S)/g , '' );
     index++;
-    pageList[index].style.display = "block";
+    pageList[index].className += " is-visible";
     // window.location.href = "#" + pageList[index].id.toString(); 
   }
 }
