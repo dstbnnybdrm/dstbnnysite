@@ -50,12 +50,19 @@ body {
     display: flex;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
-    justify-content:center;
+    justify-content: center;
 }
 
 .l-container {
     background-color: white;
     display: flex;
+    margin-top: 10em;
+}
+
+.l-container--column {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
     margin-top: 10em;
 }
 
@@ -72,9 +79,20 @@ main {
     margin: 1em 0;
 }
 
+.l-sidebar__menu--centre {
+    margin: 1em 0;
+    text-align: center;
+}
+
 .l-sidebar__menu-item {
     list-style: "∟ ";
     margin-left: 2em;
+}
+
+.l-sidebar__menu-item--hor {
+    display: inline;
+    list-style: none;
+    margin-right: 2em;
 }
 
 footer {
@@ -143,6 +161,11 @@ footer {
 
 
 .ascii-art {
+    white-space: pre;
+}
+
+.ascii-art--right-align {
+    text-align: right;
     white-space: pre;
 } 
 
