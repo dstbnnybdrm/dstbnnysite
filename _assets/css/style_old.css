@@ -1,0 +1,265 @@
+/* -- GLOBAL -- */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5em;
+  list-style: "- ";
+}
+
+:root {
+  --main-color: #808080;
+  --secondary-color: black;
+  --accent-color: #e84d72;
+}
+
+
+/* -- LAYOUT -- */
+
+/* -- primary -- */
+body {
+  background-color: white;
+  color: var(--main-color);
+  font-family: monospace;
+  font-size: 1em;
+}
+
+main {
+  margin: 3em 2em;
+}
+
+section {
+  margin-bottom: 3em;
+  margin-right: auto;
+}
+
+article {
+  margin-bottom: 3em;
+  margin-right: auto;
+}
+
+/* -- secondary -- */
+.poem {
+  margin-left: 2em;
+}
+
+/* -- header -- */
+header {
+  margin: 2em 2em 3em 2em;
+  user-select: none;
+}
+
+
+/* -- LINKS -- */
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--accent-color);
+}
+
+a:visited {
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: var(--main-color);
+}
+
+
+/* -- TEXT -- */
+
+/* -- paragraph -- */
+p {
+  margin-bottom: 1em;
+}
+
+.p--right-align {
+  margin-left: 20em;
+}
+
+/* -- heading -- */
+.heading {
+  margin-bottom: 0.5em;
+}
+
+.heading--style {
+  font-style: italic;
+}
+
+.heading--color {
+  color: var(--secondary-color);
+}
+
+.heading-music {
+  margin-bottom: 1em;
+}
+
+/* -- list -- */
+.list {
+  margin-left: 1em;
+}
+
+/* -- menu -- */
+.menu__item {
+  display: inline;
+}
+
+.menu__item--style {
+  list-style: none;
+}
+
+.nav-btn {
+  display: inline;
+}
+
+.nav-btn--style {
+  color: var(--accent-color);
+  user-select: none;
+}
+
+.nav-btn--style:hover {
+  color: var(--main-color);
+}
+
+
+/* -- OTHER -- */
+.pg {
+  display: none;
+}
+
+
+/* -- BREAKPOINTS -- */
+
+/* -- MEDIUM screen size -- */
+@media screen and (min-width: 600px){
+  /* -- LAYOUT -- */
+  
+  /* -- primary -- */
+  main {
+    margin: 0 25% 0 7em;
+  }
+
+  /* -- secondary -- */
+  .mus-container {
+  }
+  
+  .container--grid {
+    display: block;
+  }
+    
+  /* -- header -- */
+  header {
+    margin: 4em;
+  }
+  
+  iframe {
+    max-width: 40em;
+    display: block;
+  }
+  
+  /* -- background imgs -- */
+  .bg__img {
+    background-repeat: no-repeat;
+    position: static;
+  }
+  
+  #paradiso-img {
+    background-image: url(/assets/img/bg/paradiso.jpg);
+    background-position: bottom -69em left -27em;
+    background-size: 80em;
+  }
+
+  #bedroom-img {
+    background-image: url(/assets/img/bg/bedroom.jpg);
+    background-position: bottom -42em right -4em;
+    background-size: 60em;
+  }
+
+  #leaves-img {
+    background-image: url(/assets/img/bg/leaves.jpg);
+    background-position: bottom -70em center;
+    background-size: 45em;
+  }
+}
+
+/* -- LARGE screen size -- */
+@media screen and (min-width: 1280px) {
+  /* -- LAYOUT -- */
+  
+  /* -- primary -- */
+  main {
+    margin: 13em 7em 0 19em;
+  }
+  
+  /* -- secondary -- */
+  .mus-container {
+    width: 26em;
+    padding-right: 15em;
+  }
+  
+  .comms-container {
+    width: 34em;
+    padding-right: 5em;
+  }
+  
+  .container--grid {
+    display: inline-grid;
+  }
+  
+  .sect-container {
+    width: 60em;
+  }
+  
+  /* -- header -- */
+  header {
+    position: fixed;
+    width: 13em;
+    top: 10em;
+    margin-left: 4em;
+  }
+  
+  /* -- background imgs -- */
+  .bg__img {
+    background-repeat: no-repeat;
+    position: static;
+  }
+  
+  #paradiso-img {
+    background-image: url(/assets/img/bg/paradiso.jpg);
+    background-position: bottom -84em left -20em;
+    background-size: 80em;
+  }
+
+  #bedroom-img {
+   background-image: url(/assets/img/bg/bedroom.jpg);
+    background-position: bottom -52em right -4em;
+    background-size: 60em;
+  }
+
+  #leaves-img {
+    background-image: url(/assets/img/bg/leaves.jpg);
+    background-position: bottom -70em center;
+    background-size: 45em;
+  }
+
+  #arrow-img {
+    background-image: url(/assets/img/bg/arrows.png);
+    background-position: 24em -3em;
+  }
+  
+  
+  /* -- TEXT -- */
+  
+  /* -- heading -- */
+  .heading-music {
+    height: 3.5em;
+  }
+  
+  /* -- menu -- */
+  .menu__item {
+    display: block;
+  }
+}

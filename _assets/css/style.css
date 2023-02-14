@@ -1,0 +1,125 @@
+/* ----- BASE ----- */
+
+/* -- colour palette var -- */
+:root {
+    --main-color: #808080;
+    --secondary-color: black;
+    --accent-color: #e84d72; 
+}
+
+/* -- reset -- */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.5em;
+    
+}
+
+/* -- links -- */
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--accent-color);
+}
+
+a:visited {
+    color: var(--accent-color);
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+hr {
+    border: none;
+    margin-bottom: 1em;
+}
+
+
+/* ----- LAYOUT ----- */
+
+body {
+    background-color: mistyrose;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+main {
+    background-color: white;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10em;
+    width: 50em;
+}
+
+.l-sidebar {
+    background-color: white;
+    margin-left: 12em;
+    margin-top: -2em;
+    padding: 1em;
+    position: fixed;
+}
+
+.l-sidebar__menu {
+    margin: 1em 0;
+}
+
+.l-sidebar__menu-item {
+    list-style: "∟ ";
+    margin-left: 2em;
+}
+
+footer {
+    bottom: 0;
+    margin-bottom: 1em;
+    margin-right: 2em;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+
+/* ----- MODULES ----- */
+
+.sect {
+    margin-bottom: 1em;
+}
+
+.sect__title {
+    font-weight: bold;
+}
+
+.sect__subtitle {
+    font-style: italic;
+}
+
+.sect__list-item {
+    list-style: "∟ ";
+    margin-left: 2em;
+}
+
+.sect__list-item--hor {
+    display: inline;
+    list-style: none; 
+}
+
+.ascii-art {
+    white-space: pre;
+} 
+
+/* ----- STATE ----- */
+
+/* -- breakpoints -- */
+/*  
+@media screen and (min-width: 600px){
+
+}
+*/
+
+
+/* ----- THEME ----- */
