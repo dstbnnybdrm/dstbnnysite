@@ -75,6 +75,11 @@ main {
     padding: 1em;
 }
 
+.l-sidebar--back {
+    text-align: center;
+    padding: 1em 0 0 1em;
+}
+
 .l-sidebar__menu {
     margin: 1em 0;
 }
@@ -163,11 +168,6 @@ footer {
 .ascii-art {
     white-space: pre;
 }
-
-.ascii-art--right-align {
-    text-align: right;
-    white-space: pre;
-} 
 
 
 /* ----- STATE ----- */
