@@ -51,6 +51,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
     justify-content: center;
+    padding-left: calc(100vw - 100%);
 }
 
 .l-container {
