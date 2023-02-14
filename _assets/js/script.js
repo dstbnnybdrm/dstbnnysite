@@ -7,7 +7,7 @@ function prev() {
     pageList[index].style.display = "none";
     index--;
     pageList[index].style.display = "block";
-    window.location.href = "#" + pageList[index].id.toString(); 
+    // window.location.href = "#" + pageList[index].id.toString(); 
   }
 }
 
@@ -16,6 +16,6 @@ function next() {
     pageList[index].style.display = "none";
     index++;
     pageList[index].style.display = "block";
-    window.location.href = "#" + pageList[index].id.toString(); 
+    // window.location.href = "#" + pageList[index].id.toString(); 
   }
 }
