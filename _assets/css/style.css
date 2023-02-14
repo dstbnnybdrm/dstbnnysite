@@ -159,9 +159,16 @@ footer {
 }
 
 .poem-nav__item {
+    color: var(--accent-color);
     display: inline;
     list-style: none; 
     user-select: none;
+}
+
+.poem-nav__item--div {
+    /* color: var(--main-color); */
+    display: inline;
+    list-style: none; 
 }
 
 /* -- breakpoints -- */
