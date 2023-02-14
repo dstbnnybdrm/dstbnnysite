@@ -108,11 +108,46 @@ footer {
     list-style: none; 
 }
 
+.poem-sect {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2em;
+}
+
+.poem-deco {
+    white-space: pre;
+}
+
+.poem-deco--side {
+    white-space: pre;
+}
+
+.poem {
+    display: none;
+    margin-left: 4em;
+}
+
+.poem__title {
+    font-style: italic;
+}
+
+
 .ascii-art {
     white-space: pre;
 } 
 
+
 /* ----- STATE ----- */
+
+.poem-nav {
+    margin-top: 1em;
+}
+
+.poem-nav__item {
+    display: inline;
+    list-style: none; 
+    user-select: none;
+}
 
 /* -- breakpoints -- */
 /*  

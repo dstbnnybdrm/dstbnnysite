@@ -1,4 +1,4 @@
-const pageList = document.getElementsByClassName("pg");
+const pageList = document.getElementsByClassName("poem");
 var index = 0;
 pageList[index].style.display = "block";
 

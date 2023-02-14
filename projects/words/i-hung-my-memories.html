@@ -53,24 +53,28 @@
 
       <main>
         <!-- poem navigation -->
-        <section>
-          <h2>i hung my memories (aug - oct 2022)</h2>
+        <section class="sect">
+          <h2 class="sect__title">i hung my memories (aug - oct 2022)</h2>
           <p>dada poems made out of fragments of many personal writings from around 2017-2020.
           <p>putting all the old writings i could find, from memos on my phone, to forgotten google doc pages,
             into a single document and randomly shuffling the words around with a generator, i try to find
             some kind of meaning out of the result, cutting and stitching together whole phrases and
             pieces of nonsense sentences.
-          <ul>
-            <li onclick="prev()">next
-            <li> /
-            <li onclick="next()">prev
+          <ul class="poem-nav">
+            <li onclick="prev()" class="poem-nav__item">next
+            <li class="poem-nav__item"> /
+            <li onclick="next()" class="poem-nav__item">prev
           </ul>
         </section>
         
         <!-- poems -->
-        <section>
-          <article class="pg">
-            <h3>nice (oct 24th, 1:24am)</h3>
+        <div class="poem-deco">        ___________________________   ___________________________
+    .-/|                           \ /                           |\-.
+    ||||                            |                            ||||
+        </div>
+        <section class="poem-sect">  
+          <article class="poem">
+            <h3 class="poem__title">nice (oct 24th, 1:24am)</h3>
             <p>it feels like<br>
             i’m searching for something.<br>
             
@@ -83,8 +87,8 @@
             i think it's nice.<br>
           </article>
         
-          <article class="pg">
-            <h3>losing (oct 6th, 6:43pm)</h3>
+          <article class="poem">
+            <h3 class="poem__title">losing (oct 6th, 6:43pm)</h3>
             <p>everyday<br>
             everyday<br>
             everyday<br>
@@ -105,17 +109,19 @@
             everyday<br>
           </article>
           
-          <article class="pg">
-            <h3>you and i, writing on trees (sep 18, 5:28pm)</h3>
-            <p>i never changed like you did. time shoved months out of me.
-              my radio waves break and <br>
-              messages fall out. despite this you'll
+          <article class="poem">
+            <h3 class="poem__title">you and i, writing on trees (sep 18, 5:28pm)</h3>
+            <p>i never changed like you did. time shoved months out of me. <br>
+              my radio waves break and<br>
+              messages fall out.<br>
+
+            <p>despite this you'll<br>
               think the same words, keeping the same letters,<br>
-              almost as if you and i were writing on trees.
+              almost as if you and i were writing on trees.<br>
           </article>
           
-          <article class="pg">
-            <h3>flowerbed seasons (aug 26, 5:54pm)</h3>
+          <article class="poem">
+            <h3 class="poem__title">flowerbed seasons (aug 26, 5:54pm)</h3>
             <p>if clouds could bite<br>
               i would sleep at 15,<br>
               staring,<br>
@@ -127,8 +133,8 @@
           </article>
           
           <!--
-          <article class="pg">
-            <h3 class="heading heading--style">Time and the months (aug 25, 8:48am)</h3>
+          <article class="poem">
+            <h3 class="poem__title">Time and the months (aug 25, 8:48am)</h3>
             <p>you didn’t like that i said<br>
             the months had nothing.
             <p>i realise now<br>
@@ -149,8 +155,8 @@
           </article>
           -->
           
-          <article class="pg">
-            <h3>every river (aug 21, 6:31pm)</h3>
+          <article class="poem">
+            <h3 class="poem__title">every river (aug 21, 6:31pm)</h3>
             <p>her image waved of every river i walked,<br>
               a hope too used out.<br>
               i lit apart on why, at last,<br>
@@ -159,6 +165,12 @@
               so, still lord, why dream?
           </article>
         </section>
+        <div class="poem-deco">
+    ||||                            |                            ||||
+    ||||___________________________ | ___________________________||||
+    ||/============================\|/============================\||
+    `-----------------------------~___~----------------------------''
+        </div>
       </main>
     </div>
 
