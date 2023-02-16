@@ -126,8 +126,17 @@ footer {
     overflow-y: scroll;
 }
 
+.update-log__title {}
+
+.update-log__content {}
+
 .section {
     margin-bottom: 1em;
+}
+
+.section--grid {
+    width: 25em;
+    padding: 0em 1em 0em 1em;
 }
 
 .section__title {
@@ -137,6 +146,8 @@ footer {
 .section__subtitle {
     font-style: italic;
 }
+
+.section__content {}
 
 .section-list__item {
     margin-left: 2em;
