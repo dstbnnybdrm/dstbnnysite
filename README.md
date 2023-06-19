@@ -1,4 +1,4 @@
-# dstbnnybdrm
+# dustbunnybedroom
 proof of my existence;
 
 a static website to host all of my personal creative projects, blog, 
