@@ -35,18 +35,13 @@
   <!-- style + script -->
   <link   rel="stylesheet"    href="../../_assets/css/style.css">
   <script src="js/script.js"  defer></script>
+  <script src="https://unpkg.com/webamp"></script>
 </head>
 
 <body>
-  <!-- <div id="app"></div>
-    <script src="https://unpkg.com/webamp"></script>
-    <script defer>
-        const app = document.getElementById("app")
-        const webamp = new Webamp();
-        webamp.renderWhenReady(app);
-    </script> -->
 
   <div class="l-container">
+
     <div class="l-sidebar">
       <div class="ascii-art">_,.-'~'-.,__,.-'~'-.,_</div>
       <header>
@@ -65,6 +60,14 @@
     </div>
 
     <main>
+      <!-- webamp player -->
+      <div id="player"></div>
+      <script>
+        const player = document.getElementById("player")
+        const webamp = new Webamp();
+        webamp.renderWhenReady(player);
+      </script>
+
       <section class="section">
         <h2 class="section__title">music</h2>
         <p>since about 2017 i've been making a great variety of music
