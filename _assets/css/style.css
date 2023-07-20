@@ -121,9 +121,9 @@ footer {
 }
 
 .update-log {
-    width: 25em;
     height: 10em;
     overflow-y: scroll;
+    padding: 0em 1em 0em 1em;
 }
 
 .update-log__title {}
