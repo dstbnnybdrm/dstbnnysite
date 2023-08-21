@@ -2,7 +2,10 @@
 
 /* -- common variables -- */
 :root {
-
+    --text-color: #4a4849;
+    --color-primary: #ebb7b6;
+    --color-secondary: #a45e5f;
+    --color-tertiary: #b6ebb7;
 }
 
 /* -- reset -- */
@@ -13,6 +16,24 @@
 
     font-size: 14px;
     font-weight: normal;
+    color: var(--text-color);
+}
+
+
+/* -- links -- */
+a {
+    text-decoration: underline;
+}
+a:link {
+    color: var(--color-primary);
+}
+
+a:visited {
+    color: var(--color-secondary);
+}
+
+a:hover {
+    color: var(--color-tertiary);
 }
 
 /* -- paragraphs -- */
@@ -39,12 +60,12 @@ body {
     display: flex;
     justify-content: center;
 
-    background-color: lightgray;
 }
 
 .l-page-content {
     margin-top: 5%;
     padding: 1em;
+
     background-color: white;
 }
 
@@ -92,11 +113,13 @@ footer {
 }
 
 .navi__item {
-    margin-left: 1.5em;
+    margin-left: 1em;
 }
 
 .navi__item.--hor {
     display: inline-block;
+    margin-left: 0;
+    margin-right: 1em
 }
 
 .navi__item.--current-page {
