@@ -47,101 +47,113 @@
   </head>
 
   <body>
-    <div class="l-container l-container--column">
-      <div class="l-centre">
-        <header>
-          <div class="ascii-art">
-<!--     -->█▀▄ █▀ ▀█▀ █▄▄ █▄░█ █▄░█ █▄█ █▄▄ █▀▄ █▀█ █▀▄▀█
-<!--     -->█▄▀ ▄█ ░█░ █▄█ █░▀█ █░▀█ ░█░ █▄█ █▄▀ █▀▄ █░▀░█
+    <div class="l-page-content">
+      <!-- HEADER & NAVIGATION -->
+      <header>
+        <pre class="ascii-art"><!--
+  these weird comments are so i can properly "indent" the ascii art without it
+  actually affecting the whitespace
+     -->█▀▄ █▀ ▀█▀ █▄▄ █▄░█ █▄░█ █▄█ █▄▄ █▀▄ █▀█ █▀▄▀█
+<!-- -->█▄▀ ▄█ ░█░ █▄█ █░▀█ █░▀█ ░█░ █▄█ █▄▀ █▀▄ █░▀░█<!--
+  --></pre>
+        <nav class="navi">
+          <ul>
+            <li class="navi__item --hor">
+              <a href="about/index.html">about</a>
+            </li>
+            <li class="navi__item --hor">
+              <a href="">blog (wip)</a>
+            </li>
+            <li class="navi__item --hor">
+              <a href="commissions/index.html">commissions</a>
+            </li>
+            <li class="navi__item --hor">
+              <a href="download/index.html">downloads</a>
+            </li>
+            <li class="navi__item --hor">
+              <a href="guestbook/index.html">guestbook</a>
+            </li>
+            <li class="navi__item --hor">
+              projects : 
+              <ul class="navi__item --hor">
+                <li class="navi__item --hor">
+                  <a href="projects/music/index.html">music</a>
+                </li>
+                <li class="navi__item --hor">
+                  <a href="projects/game-dev/index.html">game dev (wip)</a>
+                </li>
+                <li class="navi__item --hor">
+                  <a href="projects/">other</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main>
+        <div class="l-flex-column">
+          <div class="l-flex-row">
+            <section class="section --half-width">
+              <h2 class="section__title">welcome !</h2>
+
+              <p>
+                hi ! this is just my little corner of the internet to throw all
+                of my various creative projects into, mainly music, game dev
+                (wip), audio commissions, and anything else i feel like !
+              </p>
+
+              <p>enjoy yr stay &lt;3</p>
+            </section>
+
+            <section class="section --half-width">
+              <h2 class="section__title">what's new ?</h2>
+
+              <p>DREAM DISPHORIA - intrusyve thotz</p>
+
+              <!-- todo: add image here maybe -->
+
+              <p>the debut album off my new project DREAM DISPHORIA !</p>
+
+              <p>
+                for those who like breakcore/jungle-adjacent music—and don't mind
+                a healthy dose of edge to go along with it ;)
+              </p>
+
+              <p>
+                check it out 
+                <a href="https://dustbunnybedroom.bandcamp.com/album/intrusyve-thotz">
+                  here</a> !
+              </p>
+            </section>
           </div>
 
-          <p>enjoy yr stay &lt;3</p>
-
-          <nav>
-            <ul>
-              <li class="nav-menu__item-hor">
-                <a href="about/index.html">about</a>
-              </li>
-              <li class="nav-menu__item-hor">
-                <a href="projects/index.html">projects</a>
-              </li>
-              <li class="nav-menu__item-hor">
-                <a href="commissions/index.html">commissions</a>
-              </li>
-              <li class="nav-menu__item-hor">
-                <a href="download/index.html">downloads</a>
-              </li>
-              <li class="nav-menu__item-hor">
-                <a href="guestbook/index.html">guestbook</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-      </div>
-
-      <main>
-        <div class="l-grid">
-          <section class="section section--grid">
-            <h2 class="section__title">welcome</h2>
-
-            <p class="section__content">
-              hi! this is just my little pocket on the internet to throw all of
-              my various creative projects into, mainly music, game dev (wip),
-              audio commissions, and anything else i feel like !
-            </p>
-          </section>
-
-          <section class="section section--grid">
-            <h2 class="section__title">what's new?</h2>
-
-            <p class="section__content">
-              my album "intrusyve thotz" off of my new alias DREAM DISPHORIA is
-              out now!
-            </p>
-
-            <p class="section__content">image</p>
-
-            <p class="section__content">
-              for those who like breakcore/jungle-adjacent music—and don't mind
-              a healthy dose of edge to go along with it ;)
-            </p>
-
-            <p class="section__content">check it out <a href="">here !</a></p>
-          </section>
-        </div>
-
-        <div class="l-grid">
-          <section class="update-log">
+          <section class="section">
             <h2 class="section__title">update log</h2>
 
-            <p class="update-log__content">
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
-              sint cillum sint consectetur cupidatat.
-            </p>
+            <div class="update-log">
+              <article>
+                <time datetime="" class="update-log__date">date : </time>
+                <p>Lorem ipsum dolor sit amet, qui minim labore.</p>
+              </article>
 
-            <p class="update-log__content">
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
-              sint cillum sint consectetur cupidatat.
-            </p>
+              <article>
+                <time datetime="" class="update-log__date">date : </time>
+                <p>Lorem ipsum dolor sit amet, qui minim labore.</p>
+              </article>
 
-            <p class="update-log__content">
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
-              sint cillum sint consectetur cupidatat.
-            </p>
-
-            <p class="update-log__content">
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
-              sint cillum sint consectetur cupidatat.
-            </p>
+              <article>
+                <time datetime="" class="update-log__date">date : </time>
+                <p>Lorem ipsum dolor sit amet, qui minim labore.</p>
+              </article>
+            </div>
           </section>
         </div>
       </main>
     </div>
 
-    <footer>
-      est. 2022 <br />
-      enjoy yr stay
-    </footer>
+    <footer>enjoy yr stay</footer>
   </body>
 </html>
 
