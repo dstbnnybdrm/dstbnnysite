@@ -59,7 +59,6 @@ body {
 
     display: flex;
     justify-content: center;
-
 }
 
 .l-page-content {
@@ -87,11 +86,13 @@ footer {
 
 .l-flex-row {
     display: flex;
+    gap: 1em;
     flex-direction: row;
 }
 
 .l-flex-column {
     display: flex;
+    gap: 1em;
     flex-direction: column;
 }
 
