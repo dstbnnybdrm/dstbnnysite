@@ -1,36 +1,18 @@
 /* ----- BASE ----- */
 
-/* -- colour palette var -- */
+/* -- common variables -- */
 :root {
-    --main-color: #808080;
-    --secondary-color: black;
-    --accent-color: #e84d72;
+
 }
 
 /* -- reset -- */
 * {
     margin: 0;
     padding: 0;
-    font-size: 12px;
-    font-weight: normal;
     line-height: 1.5em;
-}
 
-/* -- links -- */
-a {
-    text-decoration: none;
-}
-
-a:link {
-    color: var(--accent-color);
-}
-
-a:visited {
-    color: var(--accent-color);
-}
-
-a:hover {
-    color: var(--main-color);
+    font-size: 14px;
+    font-weight: normal;
 }
 
 /* -- paragraphs -- */
@@ -48,162 +30,86 @@ li {
     list-style: "∟ ";
 }
 
-
 /* ----- LAYOUT ----- */
+
 body {
-    align-items: center;
-    background-color: mistyrose;
-    display: flex;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
-    justify-content: center;
-    padding-left: calc(100vw - 100%);
-}
 
-/* -- containers -- */
-.l-container {
-    background-color: white;
     display: flex;
-    margin-top: 10em;
+    justify-content: center;
 }
 
-.l-container--column {
-    flex-direction: column;
+.l-page-content {
+    width: 50em;
+    margin-top: 5%;
+    padding: 1em;
+    background-color: white;
 }
 
 main {
-    padding: 1em;
-    width: 50em;
-}
-
-.l-sidebar {
-    padding: 1em;
-}
-
-.l-centre {
-    margin: auto;
-    text-align: center;
-    padding: 1em;
-}
-
-.l-grid {
     display: flex;
+}
+
+header {
+    padding: 1em;
 }
 
 footer {
     bottom: 0;
     margin-bottom: 1em;
-    margin-right: 2em;
     position: fixed;
-    right: 0;
-    text-align: right;
+    text-align: center;
+}
+
+.l-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.l-flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ----- MODULES ----- */
 
-.nav-menu {
-    margin: 1em 0;
+.navi {
 }
 
-.nav-menu__item {
-    margin-left: 2em;
+.navi__item {
+
 }
 
-.nav-menu__item.is-active {
-    font-style: italic;
-    margin-left: 2em;
+.navi__item.--hor {
+    display: inline-block;
 }
-
-.nav-menu__item-hor {
-    display: inline;
-    list-style: none;
-    margin: 0 1em 0 1em;
-}
-
-.update-log {
-    height: 10em;
-    overflow-y: scroll;
-    padding: 0em 1em 0em 1em;
-}
-
-.update-log__title {}
-
-.update-log__content {}
 
 .section {
-    margin-bottom: 1em;
+    display: block;
+    padding: 1em;
 }
 
-.section--grid {
-    width: 25em;
-    padding: 0em 1em 0em 1em;
+.section.--half-width {
+    width: 50%;
 }
 
 .section__title {
     font-weight: bold;
 }
 
-.section__subtitle {
-    font-style: italic;
+.update-log {
+    height: 5em;
+    overflow-y: scroll;
 }
 
-.section__content {}
-
-.section-list__item {
-    margin-left: 2em;
-}
-
-.section-list__item--italic {
-    border-left: 6em;
-    font-style: italic;
-    margin-left: 2em;
-}
-
-.section-list__item--hor {
-    display: inline;
-    list-style: none;
-}
-
-.poem-nav {
-    margin-top: 1em;
-}
-
-.poem-nav__item {
-    color: var(--accent-color);
-    display: inline;
-    list-style: none;
-    user-select: none;
-}
-
-.poem-nav__div {
-    display: inline;
-    list-style: none;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-.poem-sect {
-    margin-left: 2em;
-}
-
-.poem {
-    display: none;
-    margin-left: 4em;
-}
-
-.poem.is-visible {
-    display: block;
-}
-
-.poem__title {
+.update-log__date {
     font-style: italic;
 }
 
 .ascii-art {
-    white-space: pre;
+    line-height: 1em;
 }
 
-/* -- breakpoints -- */
-/* @media screen and (min-width: 600px){} */
+/* ----- BREAKPOINTS ----- */
 
-/* ----- THEME ----- */
