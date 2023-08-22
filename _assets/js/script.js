@@ -1,22 +1,8 @@
-const pageList = document.getElementsByClassName("poem");
-var index = 0;
-pageList[index].className += " is-visible";
+window.onload = () => {
 
-function next() {
-  if (index != 0) {
-    pageList[index].className
-      = pageList[index].className.replace( /(?:^|\s)is-visible(?!\S)/g , '' );
-    index--;
-    pageList[index].className += " is-visible";
-  }
+    console.log("test!!!");
+
+    fetch("/_assets/template/header.html")
+    .then(response => response.text())
+    .then(text=> document.getElementById("header").innerHTML = text);
 }
-
-function prev() {
-  if (index != pageList.length-1) {
-    pageList[index].className
-      = pageList[index].className.replace( /(?:^|\s)is-visible(?!\S)/g , '' );
-    index++;
-    pageList[index].className += " is-visible";
-  }
-}
-
