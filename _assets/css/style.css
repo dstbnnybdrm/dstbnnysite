@@ -13,15 +13,16 @@
 
 /* -- reset -- */
 * {
+    color: var(--text-color);
+    line-height: 1.5em;
+
+    list-style: none;
+
     margin: 0;
     padding: 0;
-    line-height: 1.5em;
     font-size: var(--text-size-normal);
     font-weight: normal;
-    color: var(--text-color);
-    list-style: none;
 }
-
 
 /* ----- LAYOUT ----- */
 
@@ -35,9 +36,16 @@ body {
     background-color: gray;
 }
 
+.l-main-content {
+    padding: 1em 2em;
 
-main {
-    padding: 1em;
+    width: 50em;
+}
+
+.l-main-content.--overflow-y {
+    height: 50em;
+
+    overflow-y: scroll;
 }
 
 header {
@@ -45,12 +53,15 @@ header {
 }
 
 #footer {
-    bottom: 0;
+    text-align: right;
+
     margin-bottom: 1em;
     margin-right: 2em;
+
     position: fixed;
+
+    bottom: 0;
     right: 0;
-    text-align: right;
 }
 
 .l-flex-row {
@@ -66,15 +77,15 @@ header {
 }
 
 .l-page-content {
+    border: 1px solid;
+
     margin-top: 5%;
     padding: 1em;
-    width:50em;
-    height: 50em;
+
     background-color: white;
 }
 
 .l-sidebar {
-    position: fixed;
 }
 
 /* ----- MODULES ----- */
@@ -101,8 +112,9 @@ p {
 }
 
 hr {
-    border-top: 1px;
     margin: 1em 0;
+
+    border-top: 1px;
 }
 
 /* -- list -- */
@@ -124,11 +136,13 @@ hr {
 
 .navi__item {
     list-style: "∟ ";
+
     margin-left: 1em;
 }
 
 .navi__item.--hor {
     display: inline-block;
+
     margin-left: 0;
     margin-right: 1em
 }
@@ -156,6 +170,7 @@ hr {
 /* -- update-log -- */
 .update-log {
     height: 5em;
+
     overflow-y: scroll;
 }
 
@@ -165,27 +180,32 @@ hr {
 
 /* -- table -- */
 .table {
+    width: 100%;
+
     border-color: var(--text-color);
     border: 1px solid;
     border-collapse: collapse;
-    width: 100%;
 }
 
 .table__title {
     font-size: var(--text-size-small);
     font-weight: bold;
+
     border: 1px solid;
 }
 
 .table__entry {
     font-size: var(--text-size-small);
+
     padding: 1em;
+
     border: 1px solid;
 }
 
 .ascii-art {
-    margin: 1em 0;
     line-height: 1em;
+
+    margin: 1em 0;
 }
 
 /* ----- BREAKPOINTS ----- */
