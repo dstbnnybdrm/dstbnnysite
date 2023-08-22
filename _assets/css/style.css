@@ -16,40 +16,12 @@
 
     font-size: 14px;
     font-weight: normal;
+
     color: var(--text-color);
+
+    list-style: none;
 }
 
-
-/* -- links -- */
-a {
-    text-decoration: underline;
-}
-a:link {
-    color: var(--color-primary);
-}
-
-a:visited {
-    color: var(--color-secondary);
-}
-
-a:hover {
-    color: var(--color-tertiary);
-}
-
-/* -- paragraphs -- */
-p {
-    margin-bottom: 1em;
-}
-
-hr {
-    border: none;
-    margin-bottom: 1em;
-}
-
-/* -- list -- */
-li {
-    list-style: "∟ ";
-}
 
 /* ----- LAYOUT ----- */
 
@@ -98,6 +70,33 @@ footer {
 
 /* ----- MODULES ----- */
 
+/* -- links -- */
+a {
+    text-decoration: underline;
+}
+a:link {
+    color: var(--color-primary);
+}
+
+a:visited {
+    color: var(--color-secondary);
+}
+
+a:hover {
+    color: var(--color-tertiary);
+}
+
+/* -- paragraphs -- */
+p {
+    margin-bottom: 1em;
+}
+
+hr {
+    border: none;
+    margin-bottom: 1em;
+}
+
+/* -- list -- */
 .link-list {
 }
 
@@ -109,11 +108,13 @@ footer {
     display: inline-block;
 }
 
+/* --- navigation -- */
 .navi {
     margin: 1em 0;
 }
 
 .navi__item {
+    list-style: "∟ ";
     margin-left: 1em;
 }
 
@@ -127,6 +128,7 @@ footer {
     font-style: italic;
 }
 
+/* -- sections */
 .section {
     display: block;
 }
@@ -139,6 +141,7 @@ footer {
     font-weight: bold;
 }
 
+/* update-log */
 .update-log {
     height: 5em;
     overflow-y: scroll;
@@ -148,7 +151,25 @@ footer {
     font-style: italic;
 }
 
+.table {
+    border-color: var(--text-color);
+    border: 1px solid;
+    border-collapse: collapse;
+    width:100%;
+}
+
+.table__title {
+    font-weight: bold;
+    border: 1px solid;
+}
+
+.table__entry {
+    padding: 1em;
+    border: 1px solid;
+}
+
 .ascii-art {
+    margin: 1em 0;
     line-height: 1em;
 }
 
