@@ -2,6 +2,9 @@
 
 /* -- common variables -- */
 :root {
+    --text-size-normal: 14px;
+    --text-size-big: 16px;
+    --text-size-small: 12px;
     --text-color: #4a4849;
     --color-primary: #df8c8b;
     --color-secondary: #844b4c;
@@ -13,12 +16,9 @@
     margin: 0;
     padding: 0;
     line-height: 1.5em;
-
-    font-size: 14px;
+    font-size: var(--text-size-normal);
     font-weight: normal;
-
     color: var(--text-color);
-
     list-style: none;
 }
 
@@ -31,17 +31,12 @@ body {
 
     display: flex;
     justify-content: center;
+
+    background-color: gray;
 }
 
-.l-page-content {
-    margin-top: 5%;
-    padding: 1em;
-
-    background-color: white;
-}
 
 main {
-    width: 50em;
     padding: 1em;
 }
 
@@ -49,11 +44,13 @@ header {
     padding: 1em;
 }
 
-footer {
+#footer {
     bottom: 0;
     margin-bottom: 1em;
+    margin-right: 2em;
     position: fixed;
-    text-align: center;
+    right: 0;
+    text-align: right;
 }
 
 .l-flex-row {
@@ -66,6 +63,18 @@ footer {
     display: flex;
     gap: 1em;
     flex-direction: column;
+}
+
+.l-page-content {
+    margin-top: 5%;
+    padding: 1em;
+    width:50em;
+    height: 50em;
+    background-color: white;
+}
+
+.l-sidebar {
+    position: fixed;
 }
 
 /* ----- MODULES ----- */
@@ -92,8 +101,8 @@ p {
 }
 
 hr {
-    border: none;
-    margin-bottom: 1em;
+    border-top: 1px;
+    margin: 1em 0;
 }
 
 /* -- list -- */
@@ -101,7 +110,6 @@ hr {
 }
 
 .link-list__item {
-
 }
 
 .link-list__item.--hor {
@@ -109,6 +117,7 @@ hr {
 }
 
 /* --- navigation -- */
+
 .navi {
     margin: 1em 0;
 }
@@ -128,7 +137,7 @@ hr {
     font-style: italic;
 }
 
-/* -- sections */
+/* -- sections -- */
 .section {
     display: block;
 }
@@ -141,7 +150,10 @@ hr {
     font-weight: bold;
 }
 
-/* update-log */
+.section__subtitle {
+}
+
+/* -- update-log -- */
 .update-log {
     height: 5em;
     overflow-y: scroll;
@@ -151,19 +163,22 @@ hr {
     font-style: italic;
 }
 
+/* -- table -- */
 .table {
     border-color: var(--text-color);
     border: 1px solid;
     border-collapse: collapse;
-    width:100%;
+    width: 100%;
 }
 
 .table__title {
+    font-size: var(--text-size-small);
     font-weight: bold;
     border: 1px solid;
 }
 
 .table__entry {
+    font-size: var(--text-size-small);
     padding: 1em;
     border: 1px solid;
 }
