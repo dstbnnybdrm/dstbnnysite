@@ -1,8 +1,6 @@
 window.onload = () => {
-
-    console.log("test!!!");
-
-    fetch("/_assets/template/header.html")
+    fetch("/_assets/template/navi.html")
     .then(response => response.text())
-    .then(text=> document.getElementById("header").innerHTML = text);
+    .then(text => document.getElementById("navi-links").innerHTML = text);
 }
+
