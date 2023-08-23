@@ -82,7 +82,7 @@ header {
 }
 
 .l-page-content {
-    /*border: 1px solid;*/
+    border: 1px solid;
 
     margin-top: 5%;
     padding: 1em;
@@ -207,10 +207,19 @@ hr {
     border: 1px solid;
 }
 
+/* -- misc -- */
 .ascii-art {
     line-height: 1em;
 
     margin: 1em 0;
+}
+
+.line-divider {
+    width: 100%;
+
+    margin: 1em auto;
+
+    border-top: 1px dashed;
 }
 
 /* ----- BREAKPOINTS ----- */
