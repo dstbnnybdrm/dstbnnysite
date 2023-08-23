@@ -5,10 +5,14 @@
     --text-size-normal: 14px;
     --text-size-big: 16px;
     --text-size-small: 12px;
-    --text-color: #4a4849;
-    --color-primary: #df8c8b;
-    --color-secondary: #844b4c;
-    --color-tertiary: #85c3b7;
+
+    --text-color: #333;
+
+    --color-primary: #F69;
+    --color-secondary: #C36;
+    --color-tertiary: #6CC;
+
+    --color-background: white;
 }
 
 /* -- reset -- */
@@ -17,6 +21,8 @@
     line-height: 1.5em;
 
     list-style: none;
+
+    border-color: var(--text-color);
 
     margin: 0;
     padding: 0;
@@ -76,7 +82,7 @@ header {
 }
 
 .l-page-content {
-    border: 1px solid;
+    /*border: 1px solid;*/
 
     margin-top: 5%;
     padding: 1em;
