@@ -38,12 +38,6 @@ p {
     margin-bottom: 1em;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 /* table */
 table, th, td {
     border: 1px solid;
@@ -148,7 +142,7 @@ a:hover {
 .m-navi {
 }
 
-.m-navi__items {
+ul.m-navi__item {
     list-style: "∟ ";
     margin-left: 1.5em;
 }
