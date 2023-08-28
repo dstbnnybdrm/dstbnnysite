@@ -17,7 +17,7 @@
 
 /* less shitty box-sizing (border-based instead of content-based) */
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* reset layout defaults */
@@ -32,10 +32,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
 
     line-height: 1.5em;
-}
-
-p {
-    margin-bottom: 1em;
 }
 
 ul {
@@ -99,13 +95,16 @@ a:hover {
 
 /* ---- ATOMS ---- */
 
-.a-link-list {
+.a-list {
+    display: block;
 }
 
-.a-link-list__item {
+.a-list__item {
+    margin-left: 1.5em;
 }
 
-.a-link-list__item.--hor {
+.a-list__item.--hor {
+    margin: 0;
     display: inline-block;
 }
 
@@ -131,14 +130,10 @@ a:hover {
 
 .a-ascii-art {
     line-height: 1em;
-
-    margin: 1em 0;
 }
 
 .a-line-divider {
     width: 100%;
-
-    margin: 1em auto;
 
     border-top: 1px dashed;
 }
@@ -150,13 +145,11 @@ a:hover {
 
 .m-navi__items {
     list-style: "∟ ";
-    margin-left: 1.5em;
 }
 
-.m-navi__item.--hor {
+.m-navi__items.--hor {
     display: inline-block;
 
-    margin-left: 0;
     margin-right: 1em;
 }
 
@@ -178,6 +171,10 @@ a:hover {
 }
 
 .m-section__subtitle {
+}
+
+.m-section__content {
+    margin-bottom: 1em;
 }
 
 .m-update-log {
@@ -214,7 +211,7 @@ a:hover {
 }
 
 .o-body__sidebar {
-    margin: 0 1em;
+    margin: 1em;
 }
 
 .o-main {
@@ -241,8 +238,16 @@ a:hover {
 .o-home-header__navi {
 }
 
+.o-home-header__ascii-art {
+    margin-bottom: 1em;
+}
+
 .o-sidebar {
     display: block;
+}
+
+.o-sidebar__navi {
+    margin: 1em 0;
 }
 
 .o-footer {
