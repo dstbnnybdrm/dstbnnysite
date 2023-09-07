@@ -96,6 +96,7 @@ a:hover {
 /* ---- ATOMS ---- */
 
 .a-list {
+    list-style: "→ ";
     display: block;
 }
 
@@ -171,6 +172,7 @@ a:hover {
 }
 
 .m-section__subtitle {
+    font-size: var(--text-size-normal);
 }
 
 .m-section__content {
