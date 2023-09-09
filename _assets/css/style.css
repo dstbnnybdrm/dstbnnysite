@@ -3,6 +3,7 @@
     --text-size-normal: 14px;
     --text-size-big: 16px;
     --text-size-small: 12px;
+    --letter-spacing-subtitle: 0.125em;
 
     --text-color: #333;
 
@@ -172,6 +173,7 @@ a:hover {
 }
 
 .m-section__subtitle {
+    letter-spacing: var(--letter-spacing-subtitle);
     font-size: var(--text-size-normal);
 }
 
@@ -231,6 +233,7 @@ a:hover {
 }
 
 .o-main__section {
+    margin-bottom: 1.5em;
 }
 
 .o-home-header {
