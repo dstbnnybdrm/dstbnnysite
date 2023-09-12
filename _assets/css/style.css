@@ -7,9 +7,9 @@
 
     --text-color: #333;
 
-    --color-primary: #F69;
-    --color-secondary: #C36;
-    --color-tertiary: #6CC;
+    --color-primary: #f69;
+    --color-secondary: #c36;
+    --color-tertiary: #6cc;
 
     --color-background: white;
 }
@@ -17,7 +17,9 @@
 /* ----- GLOBAL RESETS ----- */
 
 /* less shitty box-sizing (border-based instead of content-based) */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -30,7 +32,7 @@
 /* text reset */
 body {
     font-size: var(--text-size-normal);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
 
     line-height: 1.5em;
 }
@@ -42,24 +44,39 @@ ul {
 }
 
 /* table */
-table, th, td {
+table,
+th,
+td {
     border: 1px solid;
     border-collapse: collapse;
 }
 
 /* improve media defaualts */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
 }
 
 /* remove form typography styles */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
     font: inherit;
 }
 
 /* avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
 }
 
@@ -266,4 +283,3 @@ a:hover {
     bottom: 0;
     right: 0;
 }
-
