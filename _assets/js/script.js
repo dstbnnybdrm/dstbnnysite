@@ -1,5 +1,6 @@
 var url = window.location.pathname;
 
+// IDs for html templates
 var navi_list_id = document.getElementById("js-navi-list");
 var new_stuff_id = document.getElementById("js-new-stuff");
 var footer_id = document.getElementById("js-footer");
