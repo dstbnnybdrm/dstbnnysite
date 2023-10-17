@@ -111,6 +111,12 @@ a:hover {
     width: 50%;
 }
 
+.u-center {
+    display: block;
+    margin: auto;
+    margin-top: 25%;
+}
+
 /* ---- ATOMS ---- */
 
 .a-list {
@@ -122,9 +128,25 @@ a:hover {
     margin-left: 1.5em;
 }
 
+.a-list__item.--unavailable {
+    user-select: none;
+}
+
 .a-list__item.--hor {
-    margin: 0;
+    margin: 0 1em 0 0;
     display: inline-block;
+}
+
+.a-list__item.--hor.--main {
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing-subtitle);
+    font-size: var(--text-size-normal);
+}
+
+.a-list__item.--hor.--unavailable {
+    margin: 0 1em 0 0;
+    display: inline-block;
+    user-select: none;
 }
 
 .a-table {
@@ -157,6 +179,10 @@ a:hover {
     border-top: 1px dashed;
 }
 
+.a-comm-status {
+    letter-spacing: var(--letter-spacing-subtitle);
+}
+
 /* ---- MOLECULES ---- */
 
 .m-navi {
@@ -187,9 +213,11 @@ a:hover {
 .m-section__title {
     font-size: var(--text-size-big);
     font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 .m-section__subtitle {
+    font-weight: bold;
     letter-spacing: var(--letter-spacing-subtitle);
     font-size: var(--text-size-normal);
 }
@@ -206,6 +234,10 @@ a:hover {
 
 .m-update-log__date {
     font-style: italic;
+}
+
+.m-update-log__log {
+    margin-bottom: 0.5em;
 }
 
 /* ---- ORGANISMS ---- */
