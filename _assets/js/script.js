@@ -4,6 +4,7 @@ var navi_list_id = document.getElementById("js-navi-list");
 var new_stuff_id = document.getElementById("js-new-stuff");
 var footer_id = document.getElementById("js-footer");
 var comm_status_id = document.getElementById("js-comm-status");
+var update_log_id = document.getElementById("js-update-log");
 
 window.onload = () => {
     if (navi_list_id) {
@@ -28,5 +29,11 @@ window.onload = () => {
         fetch("/_assets/template/comm-status.html")
             .then((response) => response.text())
             .then((text) => (comm_status_id.innerHTML = text));
+    }
+
+    if (update_log_id) {
+        fetch("/_assets/template/update-log.html")
+            .then((response) => response.text())
+            .then((text) => (update_log_id.innerHTML = text));
     }
 };
