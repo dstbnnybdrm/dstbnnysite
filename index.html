@@ -58,19 +58,21 @@
        --></pre>
         <nav class="o-home-header__navi m-navi">
           <ul class="m-navi__items a-list">
-            <li class="a-list__item --hor">
+            <li class="a-list__item --hor --main">
               <a href="/about.html">about</a>
             </li>
-            <li class="a-list__item --hor">
-              <a href="/">blog (wip)</a>
+            <li class="a-list__item --hor --main --unavailable">
+              <!-- <a href="/"> -->
+              blog (wip)
+              <!-- </a> -->
             </li>
-            <li class="a-list__item --hor">
+            <li class="a-list__item --hor --main">
               <a href="/commissions.html">commissions</a>
             </li>
-            <li class="a-list__item --hor">
+            <li class="a-list__item --hor --main">
               <a href="/download.html">downloads</a>
             </li>
-            <li class="a-list__item --hor">
+            <li class="a-list__item --hor --main">
               <a href="/guestbook.html">guestbook</a>
             </li>
           </ul>
@@ -79,8 +81,10 @@
             <li class="a-list__item --hor">
               <a href="/projects/music.html">music</a>
             </li>
-            <li class="a-list__item --hor">
-              <a href="/projects/game-dev.html">game dev (wip)</a>
+            <li class="a-list__item --hor --unavailable">
+              <!-- <a href="/projects/game-dev.html"> -->
+              game dev (wip)
+              <!-- </a> -->
             </li>
             <li class="a-list__item --hor">
               <a href="/projects/other.html">other</a>
@@ -90,6 +94,9 @@
       </header>
 
       <main class="o-main">
+        <section class="o-main__section m-section">
+          <div class="m-section__content a-line-divider"></div>
+        </section>
         <div class="u-flex-row">
           <section class="o-main__section m-section --half-width">
             <h2 class="m-section__title">welcome !</h2>
@@ -100,7 +107,7 @@
               audio commissions, and anything else i feel like !
             </p>
 
-            <p class="m-section__content" id="js-comm-status"></p>
+            <p class="m-section__content a-comm-status" id="js-comm-status"></p>
 
             <p class="m-section__content">enjoy yr stay &lt;3</p>
           </section>
@@ -117,21 +124,7 @@
 
         <section class="o-main__section m-section m-update-log">
           <h2 class="m-section__title">update log</h2>
-
-          <article class="m-update-log__log">
-            <time datetime="" class="m-update-log__date">date : </time>
-            <p>Lorem ipsum dolor sit amet, qui minim labore.</p>
-          </article>
-
-          <article class="m-update-log__log">
-            <time datetime="" class="m-update-log__date">date : </time>
-            <p>Lorem ipsum dolor sit amet, qui minim labore.</p>
-          </article>
-
-          <article class="m-update-log__log">
-            <time datetime="" class="m-update-log__date">date : </time>
-            <p>Lorem ipsum dolor sit amet, qui minim labore.</p>
-          </article>
+          <div id="js-update-log"></div>
         </section>
       </main>
     </div>
