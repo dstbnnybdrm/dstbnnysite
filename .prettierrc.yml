@@ -16,7 +16,9 @@ printWidth: 80
 requirePragma: false
 tabWidth: 4
 overrides:
-  - files: "**/*.html"
+  - files: 
+    - "*.html"
+    - "**/*.html"
     options:
       tabWidth: 2
 useTabs: false
