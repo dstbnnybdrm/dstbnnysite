@@ -1,40 +1,28 @@
-var url = window.location.pathname;
-
-// IDs for html templates
-var navi_list_id = document.getElementById("js-navi-list");
-var new_stuff_id = document.getElementById("js-new-stuff");
-var footer_id = document.getElementById("js-footer");
-var comm_status_id = document.getElementById("js-comm-status");
-var update_log_id = document.getElementById("js-update-log");
+const template_url = "/_assets/template/";
+const id_names = [
+    "js-navi-list",
+    "js-new-stuff",
+    "js-footer",
+    "js-comm-status",
+    "js-update-log",
+];
 
 window.onload = () => {
-    if (navi_list_id) {
-        fetch("/_assets/template/navi.html")
-            .then((response) => response.text())
-            .then((text) => (navi_list_id.innerHTML = text));
-    }
+    id_names.forEach((name) => {
+        let id = document.getElementById(name);
 
-    if (new_stuff_id) {
-        fetch("/_assets/template/new.html")
-            .then((response) => response.text())
-            .then((text) => (new_stuff_id.innerHTML = text));
-    }
+        if (!id) {
+            // id wasn't found on this page so move on
+            return;
+        }
 
-    if (footer_id) {
-        fetch("/_assets/template/footer.html")
-            .then((response) => response.text())
-            .then((text) => (footer_id.innerHTML = text));
-    }
+        // get filename from id name
+        let template_filename = name.substring(3).concat(".html");
+        let template_location = template_url.concat(template_filename);
 
-    if (comm_status_id) {
-        fetch("/_assets/template/comm-status.html")
+        // load template into page
+        fetch(template_location)
             .then((response) => response.text())
-            .then((text) => (comm_status_id.innerHTML = text));
-    }
-
-    if (update_log_id) {
-        fetch("/_assets/template/update-log.html")
-            .then((response) => response.text())
-            .then((text) => (update_log_id.innerHTML = text));
-    }
+            .then((content) => (id.innerHTML = content));
+    });
 };
