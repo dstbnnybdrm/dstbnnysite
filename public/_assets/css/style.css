@@ -1,3 +1,9 @@
+/*
+ * using a slighly modified version of ABEM (an already slightly modified
+ * version of BEM):
+ * https://css-tricks.com/abem-useful-adaptation-bem/
+ */
+
 /* -- common variables -- */
 :root {
     --text-size-normal: 14px;
@@ -14,7 +20,12 @@
     --color-background: white;
 }
 
-/* ----- GLOBAL RESETS ----- */
+/* ----- GLOBAL RESETS ----- 
+ *
+ * global reset taken from here: 
+ * https://www.joshwcomeau.com/css/custom-css-reset/
+ * 
+ */
 
 /* less shitty box-sizing (border-based instead of content-based) */
 *,
