@@ -332,6 +332,7 @@ a:hover {
     /* right: 0; */
 }
 
+/* start to bring in columns */
 @media screen and (min-width: 700px) {
     .m-section.--half-width {
         width: 50%;
@@ -340,4 +341,8 @@ a:hover {
     .u-flex-row {
         flex-direction: row;
     }
+}
+
+/* switch to centered, boxed-in layout */
+@media screen and (min-width: 1000px) {
 }
