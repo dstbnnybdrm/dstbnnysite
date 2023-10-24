@@ -57,29 +57,33 @@
 <!--   -->█▄▀ ▄█ ░█░ █▄█ █░▀█ █░▀█ ░█░ █▄█ █▄▀ █▀▄ █░▀░█<!--
        --></pre>
         <nav class="o-home-header__navi m-navi">
-          <ul class="m-navi__items a-list">
-            <li class="a-list__item --hor --main">
+          <ul class="m-navi__list --home">
+            <li class="m-navi__list-item --main --home">
               <a href="/about.html">about</a>
             </li>
-            <li class="a-list__item --hor --main --unavailable">blog (wip)</li>
-            <li class="a-list__item --hor --main">
+            <li class="m-navi__list-item --main --home">blog (wip)</li>
+            <li class="m-navi__list-item --main --home">
               <a href="/commissions.html">commissions</a>
             </li>
-            <li class="a-list__item --hor --main">
+            <li class="m-navi__list-item --main --home">
               <a href="/download.html">downloads</a>
             </li>
-            <li class="a-list__item --hor --main">
+            <li class="m-navi__list-item --main --home">
               <a href="/guestbook.html">guestbook</a>
             </li>
           </ul>
-          <ul>
-            <li class="a-list__item --hor">projects :</li>
-            <li class="a-list__item --hor">
-              <a href="/projects/music.html">music</a>
-            </li>
-            <li class="a-list__item --hor --unavailable">game dev (wip)</li>
-            <li class="a-list__item --hor">
-              <a href="/projects/other.html">other</a>
+          <ul class="m-navi__list --home">
+            <li class="m-navi__list-item --home">
+              projects :
+              <ul class="m-navi__list m-navi__list-item --home">
+                <li class="m-navi__list-item --home">
+                  <a href="/projects/music.html">music</a>
+                </li>
+                <li class="m-navi__list-item --home">game dev (wip)</li>
+                <li class="m-navi__list-item --home">
+                  <a href="/projects/other.html">other</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -97,20 +101,18 @@
               hi ! this is just my little corner of the internet to throw all of
               my various creative projects into, mainly music, game dev (wip),
               audio commissions, and anything else i feel like !
+              <img
+                class="m-section__image"
+                src="/_assets/img/pinkbunnyhop.gif"
+              />
             </p>
 
             <p class="m-section__content a-comm-status" id="js-comm-status"></p>
-
-            <div class="m-section__content a-line-divider"></div>
-
-            <p class="m-section__content">
-              note : as of now this site isn't optimised for mobile yet, but i'm
-              working on it !
-            </p>
           </section>
 
           <section class="o-main__section m-section --half-width">
             <h2 class="m-section__title">what's new ?</h2>
+
             <div id="js-new-stuff"></div>
           </section>
         </div>
@@ -123,6 +125,7 @@
           <h2 class="m-section__title">update log</h2>
           <div id="js-update-log"></div>
         </section>
+        <div class="o-main__section a-small-screen-divider"></div>
       </main>
     </div>
 
