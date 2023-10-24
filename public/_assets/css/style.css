@@ -258,8 +258,8 @@ a:hover {
     padding-bottom: 1rem;
 }
 
-.o-home-header__navi {
-}
+/* .o-home-header__navi { */
+/* } */
 
 .o-home-header__ascii-art {
     font-size: clamp(0.5rem, 3vw, 1rem);
@@ -358,6 +358,14 @@ a:hover {
     .m-navi__list-item.--main.--home {
         letter-spacing: var(--letter-spacing-subtitle);
         font-weight: bold;
+    }
+
+    /* .m-whats-new { */
+    /* } */
+
+    .m-whats-new__content {
+        height: 25rem;
+        overflow-y: scroll;
     }
 
     .o-body {
