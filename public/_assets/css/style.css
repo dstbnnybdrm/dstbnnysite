@@ -9,7 +9,7 @@
     --text-size-normal: 1rem;
     --text-size-big: 1.125rem;
     --text-size-small: 0.825rem;
-    --letter-spacing-subtitle: 0.125rem;
+    --letter-spacing-wide: 0.125rem;
 
     --text-color: #333;
 
@@ -39,6 +39,8 @@
 * {
     margin: 0;
     padding: 0;
+    /* for debugging: */
+    /* outline: 2px dashed hotpink; */
     font-size: 14px;
 }
 
@@ -46,14 +48,14 @@
 body {
     font-size: var(--text-size-normal);
     font-family: "Courier New", Courier, monospace;
-
     line-height: 1.5rem;
 }
 
 ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+
+    list-style-type: none;
 }
 
 /* table */
@@ -71,6 +73,7 @@ video,
 canvas,
 svg {
     display: block;
+
     max-width: 100%;
 }
 
@@ -109,22 +112,28 @@ a:hover {
 /* ----- UTILITIES ----- */
 
 .u-flex-row {
-    display: flex;
-    gap: 1rem;
+    /* overwritten on wider screen: */
     flex-direction: column;
+    gap: 1rem;
+
+    display: flex;
 }
 
 .u-flex-column {
-    display: flex;
-    gap: 1rem;
     flex-direction: column;
+    gap: 1rem;
+
+    display: flex;
 }
 
 /* ---- ATOMS ---- */
 
+/* --- list --- */
+
 .a-list {
-    list-style: "→ ";
     display: block;
+
+    list-style: "→ ";
 }
 
 .a-list__item {
@@ -132,9 +141,12 @@ a:hover {
 }
 
 .a-list__item.--hor {
-    margin: 0;
     display: inline-block;
+
+    margin: 0;
 }
+
+/* --- table --- */
 
 .a-table {
     margin-inline: auto;
@@ -147,75 +159,101 @@ a:hover {
 }
 
 .a-table__entry {
-    font-size: var(--text-size-small);
     padding: 1rem;
+
+    font-size: var(--text-size-small);
 }
 
+/* --- ascii art --- */
+
 .a-ascii-art {
-    line-height: 1rem;
     overflow: hidden;
+
+    line-height: 1rem;
 }
+
+/* --- other --- */
 
 .a-navi-art {
     display: none;
 }
 
 .a-line-divider {
-    width: 100%;
     border-top: 1px dashed;
+    width: 100%;
 }
 .a-small-screen-divider {
-    width: 100%;
     border-top: 1px dashed;
+    width: 100%;
 }
 
 .a-comm-status {
     display: inline-block;
-    padding: 0.5rem;
-    letter-spacing: var(--letter-spacing-subtitle);
+
     border: 1px dashed black;
+    padding: 0.5rem;
+
+    letter-spacing: var(--letter-spacing-wide);
 }
 
 .a-new-label {
     display: inline-block;
+
     height: 2rem;
 }
 
 /* ---- MOLECULES ---- */
 
+/* --- navi --- */
+
 .m-navi {
-    display: flex;
     flex-direction: column;
+
+    display: flex;
 }
 
 .m-navi__list {
     display: inline-block;
 }
 
+/* .m-navi__list.--home { */
+/* } */
+
 .m-navi__list-item {
-    display: inline-block;
     margin: 0 1rem 0 0;
+
+    display: inline-block;
 }
 
+/* .m-navi__list-item.--home { */
+/* } */
+
 .m-navi__list-item.--main {
-    letter-spacing: var(--letter-spacing-subtitle);
     font-weight: bold;
+    letter-spacing: var(--letter-spacing-wide);
 }
+
+/* --- section --- */
 
 .m-section {
     display: block;
 }
 
+/* .m-section.--half-width { */
+/* } */
+
 .m-section__title {
+    margin-bottom: 0.5rem;
+
     font-size: var(--text-size-big);
     font-weight: bold;
-    margin-bottom: 0.5rem;
 }
 
 .m-section__subtitle {
     font-size: var(--text-size-normal);
     font-weight: bold;
-    letter-spacing: var(--letter-spacing-subtitle);
+
+    letter-spacing: var(--letter-spacing-wide);
 }
 
 .m-section__content {
@@ -226,6 +264,8 @@ a:hover {
     display: inline-block;
 }
 
+/* --- update log --- */
+
 .m-update-log__date {
     font-style: italic;
 }
@@ -234,30 +274,37 @@ a:hover {
     margin-bottom: 1rem;
 }
 
+/* --- what's new --- */
+
+/* .m-whats-new { */
+/* } */
+
+/* .m-whats-new__content { */
+/* } */
+
 /* ---- ORGANISMS ---- */
 
+/* --- body --- */
+
 .o-body {
-    padding: 1rem;
-    display: flex;
     flex-direction: column;
+
+    display: flex;
+
+    padding: 1rem;
 }
 
 .o-body__page-content {
     margin-inline: auto;
 }
 
-.o-main {
-    max-width: var(--main-max-width);
-}
-
-.o-main__section {
-    margin-bottom: 1.5rem;
-}
+/* --- home header --- */
 
 .o-home-header {
-    display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
+    display: flex;
 }
 
 .o-home-header__navi {
@@ -268,6 +315,8 @@ a:hover {
     font-size: clamp(0.5rem, 3vw, 1rem);
     line-height: clamp(0.5rem, 3vw, 1rem);
 }
+
+/* --- sidebar --- */
 
 .o-sidebar {
     display: block;
@@ -281,47 +330,72 @@ a:hover {
     margin: 1rem 0;
 }
 
+/* --- main --- */
+
+.o-main {
+    max-width: var(--main-max-width);
+}
+
+.o-main__section {
+    margin-bottom: 1.5rem;
+}
+
+/* --- footer --- */
+
 .o-footer {
     margin-inline: auto;
     padding: 1rem 0 0 0;
 }
 
-/* ----- BREAKPOINTS ----- */
+/* ---- BREAKPOINTS ---- */
 
-/* start to bring in columns */
 @media screen and (min-width: 600px) {
+    /* ---- UTILITIES ---- */
+
     .u-flex-row {
         flex-direction: row;
     }
 
+    /* ---- ATOMS ---- */
+
     .a-table {
         width: 90%;
     }
+
+    /* ---- MOLECULES ---- */
 
     .m-section.--half-width {
         width: 50%;
     }
 
     .m-update-log {
-        height: 10rem;
         overflow-y: scroll;
+
+        height: 10rem;
     }
+
+    /* ---- ORGANISMS ---- */
 }
 
 /* switch to centered, boxed-in layout */
 @media screen and (min-width: 1000px) and (min-height: 810px) {
+    /* ---- ATOMS ---- */
+
     .a-navi-art {
         display: block;
     }
 
     .a-table__entry.--overflow-y {
-        height: 15rem;
         overflow-y: scroll;
+
+        height: 15rem;
     }
 
     .a-small-screen-divider {
         display: none;
     }
+
+    /* ---- MOLECULES ---- */
 
     .m-navi {
         display: block;
@@ -329,6 +403,7 @@ a:hover {
 
     .m-navi__list {
         display: block;
+
         margin: 0 0 0 1.5rem;
     }
 
@@ -337,13 +412,18 @@ a:hover {
     }
 
     .m-navi__list-item {
-        list-style: "∟ ";
         display: list-item;
-        margin: 0;
+
+        margin-right: 0;
+
+        list-style: "∟ ";
     }
 
     .m-navi__list-item.--home {
         display: inline-block;
+
+        font-weight: normal;
+        letter-spacing: var(--letter-spacing-wide);
     }
 
     .m-navi__list-item.--main {
@@ -351,27 +431,30 @@ a:hover {
         letter-spacing: normal;
     }
 
-    .m-navi__list-item.--main.--home {
-        letter-spacing: var(--letter-spacing-subtitle);
-        font-weight: bold;
-    }
+    /* --- what's new --- */
 
     /* .m-whats-new { */
     /* } */
 
     .m-whats-new__content {
-        height: 25rem;
         overflow-y: scroll;
+
+        height: 25rem;
     }
+
+    /* ---- ORGANISMS ---- */
+
+    /* --- body --- */
 
     .o-body {
         padding: 2rem 0 0 0;
     }
 
     .o-body__page-content.--row {
-        display: flex;
         flex-direction: row;
         gap: 1rem;
+
+        display: flex;
     }
 
     .o-body__page-content {
@@ -379,16 +462,7 @@ a:hover {
         padding: 1rem;
     }
 
-    .o-main {
-        width: 50rem;
-        padding: 0 1rem 0 0;
-    }
-
-    .o-main.--overflow-y {
-        min-height: 35rem;
-        max-height: 50rem;
-        overflow-y: scroll;
-    }
+    /* --- sidebar --- */
 
     .o-sidebar {
         display: block;
@@ -402,10 +476,29 @@ a:hover {
         display: block;
     }
 
+    /* --- main --- */
+
+    .o-main {
+        width: 50rem;
+        padding: 0 1rem 0 0;
+    }
+
+    .o-main.--overflow-y {
+        overflow-y: scroll;
+
+        min-height: 35rem;
+        max-height: 50rem;
+    }
+
+    /* --- footer --- */
+
     .o-footer {
         position: fixed;
         bottom: 0;
         left: 50%;
+
         transform: translate(-50%, -50%);
+
+        padding: 0;
     }
 }
