@@ -228,6 +228,11 @@ a:hover {
 /* .m-navi__list-item.--home { */
 /* } */
 
+.m-navi__list-item.--home-main {
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing-wide);
+}
+
 .m-navi__list-item.--main {
     font-weight: bold;
     letter-spacing: var(--letter-spacing-wide);
@@ -421,14 +426,18 @@ a:hover {
 
     .m-navi__list-item.--home {
         display: inline-block;
-
-        font-weight: normal;
-        letter-spacing: var(--letter-spacing-wide);
     }
 
     .m-navi__list-item.--main {
         font-weight: normal;
         letter-spacing: normal;
+    }
+
+    .m-navi__list-item.--home-main {
+        display: inline-block;
+
+        font-weight: bold;
+        letter-spacing: var(--letter-spacing-wide);
     }
 
     /* --- what's new --- */
