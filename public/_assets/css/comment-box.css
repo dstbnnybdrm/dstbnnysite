@@ -1,56 +1,79 @@
-#HCB_comment_box textarea {
-}
+/* global font changes */
 #HCB_comment_box {
     font-family: "Courier New", Courier, monospace;
-    color: #888;
-    background-color: #fff;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
 }
+
+/* HCB's messages to user */
+#hcb_msg {
+    text-transform: lowercase;
+    margin-bottom: 1rem;
+}
+
+/* text forms */
+input#hcb_form_name,
+textarea#hcb_form_content {
+    border: 1px dotted black;
+}
+
 #HCB_comment_box p.error {
     border: 1px solid red;
-    background-color: #fee;
+ }
+
+/* "not using html comment box yet?" */
+#HCB_comment_box div.home-desc {
+    display: none;
 }
-.hcb-mod b {
-    color: #d34;
+
+/* rss image */
+#HCB_comment_box img.hcb-icon {
+    display:none;
 }
-#HCB_comment_box textarea,
-#HCB_comment_box input.text {
-    font-family: "Courier New", Courier, monospace;
-    border-top: 1px solid #e4e4e4;
-    border-left: 1px solid #e4e4e4;
-    border-bottom: 1px solid #eaeaea;
-    border-right: 1px solid #eaeaea;
-    background-color: #f8f8f8;
+
+/* ----- COMMENT LIST ----- */
+div#comments_list {
+    border-top: 1px dashed black;
+    padding-top: 1em;
+    margin-top: 1em;
 }
-#HCB_comment_box .hcb-wrapper-half {
-    display: block;
-    width: 50%;
-    float: left;
-}
-#HCB_comment_box .hcb-wrapper {
-    clear: both;
-}
-#HCB_comment_box input.text {
-    display: block;
-    width: 97%;
-}
-#HCB_comment_box input.submit {
-    border-top: 1px solid #eee;
-    border-left: 1px solid #eee;
-    border-bottom: 1px solid #888;
-    border-right: 1px solid #888;
-    background-color: #ccc;
-    color: #666;
-    font-weight: 700;
-    cursor: pointer;
-}
-#HCB_comment_box span.home-desc {
-    font-size: 10px;
-    opacity: 0.4;
-}
+
 #HCB_comment_box div.comment {
-    border-bottom: 1px dotted #eee;
-    margin-bottom: 5px;
+    margin: 0;
+    padding: 0;
 }
-.hcb-mod i {
-    color: #00008b;
+
+#HCB_comment_box blockquote {
+    padding: 0;
+    margin: 0;
+    
+}
+
+#HCB_comment_box p.hcb-comment-tb {
+    margin-top: 0.25rem;
+}
+
+#HCB_comment_box p.hcb-comment-body {
+}
+
+#HCB_comment_box span.date {
+    color: black;
+    font-size: 0.825rem;
+    letter-spacing: 0.125rem;
+    text-transform: lowercase;
+}
+
+/* comment buttons */
+#HCB_comment_box button.hcb-flag,
+#HCB_comment_box button.hcb-like, 
+#HCB_comment_box button.hcb-reply {
+    color: #f69;
+}
+
+#HCB_comment_box img {
+    display: inline-block;
+}
+
+#HCB_comment_box blockquote {
 }
