@@ -5,6 +5,7 @@ const id_names = [
     "js-footer",
     "js-comm-status",
     "js-update-log",
+    "js-88x31",
 ];
 
 window.onload = () => {
