@@ -20,7 +20,7 @@ textarea#hcb_form_content {
 
 #HCB_comment_box p.error {
     border: 1px solid red;
- }
+}
 
 /* "not using html comment box yet?" */
 #HCB_comment_box div.home-desc {
@@ -29,10 +29,11 @@ textarea#hcb_form_content {
 
 /* rss image */
 #HCB_comment_box img.hcb-icon {
-    display:none;
+    display: none;
 }
 
 /* ----- COMMENT LIST ----- */
+
 div#comments_list {
     border-top: 1px dashed black;
     padding-top: 1em;
@@ -47,15 +48,14 @@ div#comments_list {
 #HCB_comment_box blockquote {
     padding: 0;
     margin: 0;
-    
 }
 
 #HCB_comment_box p.hcb-comment-tb {
     margin-top: 0.25rem;
 }
 
-#HCB_comment_box p.hcb-comment-body {
-}
+/* #HCB_comment_box p.hcb-comment-body { */
+/* } */
 
 #HCB_comment_box span.date {
     color: black;
@@ -66,14 +66,11 @@ div#comments_list {
 
 /* comment buttons */
 #HCB_comment_box button.hcb-flag,
-#HCB_comment_box button.hcb-like, 
+#HCB_comment_box button.hcb-like,
 #HCB_comment_box button.hcb-reply {
     color: #f69;
 }
 
 #HCB_comment_box img {
     display: inline-block;
-}
-
-#HCB_comment_box blockquote {
 }
