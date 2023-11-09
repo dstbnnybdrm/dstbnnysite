@@ -14,12 +14,11 @@ proseWrap: preserve
 insertPragma: false
 printWidth: 80
 requirePragma: false
-tabWidth: 4
+tabWidth: 2
 overrides:
   - files: 
-    - "*.html"
-    - "**/*.html"
+    - "**/*.css"
     options:
-      tabWidth: 2
+      tabWidth: 4
 useTabs: false
 embeddedLanguageFormatting: auto
