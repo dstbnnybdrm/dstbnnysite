@@ -205,7 +205,8 @@ a:hover {
 .a-buttons {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-around; */
+    gap: 0.5rem;
 
     display: flex;
 }
@@ -414,9 +415,8 @@ a:hover {
     /* .a-buttons { */
     /* } */
 
-    .a-buttons__button {
-        margin: 0 0 0.5rem 0;
-    }
+    /* .a-buttons__button { */
+    /* } */
 
     /* ---- MOLECULES ---- */
 
