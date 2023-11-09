@@ -202,18 +202,6 @@ a:hover {
     height: 2rem;
 }
 
-.a-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* justify-content: space-around; */
-    gap: 0.5rem;
-
-    display: flex;
-}
-
-/* .a-buttons__button { */
-/* } */
-
 /* ---- MOLECULES ---- */
 
 /* --- navi --- */
@@ -297,6 +285,23 @@ a:hover {
 /* } */
 
 /* .m-whats-new__content { */
+/* } */
+
+/* --- buttons --- */
+
+.m-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    gap: 0.5rem;
+
+    display: flex;
+}
+
+/* .m-buttons.--overflow-y { */
+/* } */
+
+/* .m-buttons__button { */
 /* } */
 
 /* ---- ORGANISMS ---- */
@@ -412,12 +417,6 @@ a:hover {
         display: none;
     }
 
-    /* .a-buttons { */
-    /* } */
-
-    /* .a-buttons__button { */
-    /* } */
-
     /* ---- MOLECULES ---- */
 
     .m-navi {
@@ -468,6 +467,21 @@ a:hover {
 
         height: 25rem;
     }
+
+    /* --- section --- */
+
+    .m-section__content.--overflow-y {
+        overflow-y: scroll;
+
+        height: 25rem;
+    }
+
+    /* --- buttons --- */
+    /* .m-buttons { */
+    /* } */
+
+    /* .m-buttons__button { */
+    /* } */
 
     /* ---- ORGANISMS ---- */
 
