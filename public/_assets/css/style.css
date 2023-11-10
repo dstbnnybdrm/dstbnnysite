@@ -42,6 +42,7 @@
     /* for debugging: */
     /* outline: 2px dashed hotpink; */
     font-size: 14px;
+    scrollbar-width: thin;
 }
 
 /* text reset */
@@ -182,6 +183,7 @@ a:hover {
     border-top: 1px dashed;
     width: 100%;
 }
+
 .a-small-screen-divider {
     border-top: 1px dashed;
     width: 100%;
@@ -474,6 +476,7 @@ a:hover {
         overflow-y: scroll;
 
         height: 25rem;
+        padding-right: 1rem;
     }
 
     /* --- buttons --- */
