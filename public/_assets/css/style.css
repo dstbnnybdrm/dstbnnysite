@@ -396,6 +396,7 @@ a:hover {
         overflow-y: scroll;
 
         height: 10rem;
+        padding-right: 1rem;
     }
 
     /* ---- ORGANISMS ---- */
@@ -468,6 +469,7 @@ a:hover {
         overflow-y: scroll;
 
         height: 25rem;
+        padding-right: 1rem;
     }
 
     /* --- section --- */
@@ -480,6 +482,7 @@ a:hover {
     }
 
     /* --- buttons --- */
+
     /* .m-buttons { */
     /* } */
 
