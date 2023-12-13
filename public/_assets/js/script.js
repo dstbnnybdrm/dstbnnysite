@@ -6,6 +6,7 @@ const id_names = [
   "js-comm-status",
   "js-update-log",
   "js-88x31",
+  "js-wip",
 ];
 
 window.onload = () => {
