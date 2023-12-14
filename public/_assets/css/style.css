@@ -98,6 +98,9 @@ h6 {
 }
 
 /* link */
+a {
+    text-decoration-style: dotted;
+}
 a:link {
     color: var(--color-primary);
 }
