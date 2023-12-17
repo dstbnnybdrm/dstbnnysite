@@ -203,6 +203,8 @@ a:hover {
     padding: 0.5rem;
 
     letter-spacing: var(--letter-spacing-wide);
+
+    font-family: var(--font-secondary);
 }
 
 .a-new-label {
@@ -480,7 +482,7 @@ a:hover {
 }
 
 /* switch to centered, boxed-in layout */
-@media screen and (min-width: 1000px) and (min-height: 810px) {
+@media screen and (min-width: 1000px) and (min-height: 830px) {
     /* --- what's new --- */
 
     /* .m-whats-new { */
