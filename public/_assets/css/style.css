@@ -222,34 +222,18 @@ a:hover {
 }
 
 .m-navi__home {
-    font-size: var(--text-size-big);
-    font-weight: var(--letter-spacing-wide);
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing-wide);
 }
 
 .m-navi__list {
+    margin: 0.25rem 0 0 0;
     display: inline-block;
 }
-
-/* .m-navi__list.--home { */
-/* } */
 
 .m-navi__list-item {
     margin: 0 1rem 0 0;
-
     display: inline-block;
-}
-
-/* .m-navi__list-item.--home { */
-/* } */
-
-.m-navi__list-item.--home-main {
-    font-weight: bold;
-    letter-spacing: var(--letter-spacing-wide);
-}
-
-.m-navi__list-item.--main {
-    font-weight: bold;
-    letter-spacing: var(--letter-spacing-wide);
 }
 
 /* --- section --- */
@@ -385,7 +369,7 @@ a:hover {
 
 /* ---- BREAKPOINTS ---- */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     /* ---- UTILITIES ---- */
 
     .u-flex-row {
@@ -397,26 +381,6 @@ a:hover {
     .a-table {
         width: 90%;
     }
-
-    /* ---- MOLECULES ---- */
-
-    .m-section.--half-width {
-        width: 50%;
-    }
-
-    .m-update-log {
-        overflow-y: scroll;
-
-        height: 10rem;
-        padding-right: 1rem;
-    }
-
-    /* ---- ORGANISMS ---- */
-}
-
-/* switch to centered, boxed-in layout */
-@media screen and (min-width: 1000px) and (min-height: 810px) {
-    /* ---- ATOMS ---- */
 
     .a-navi-art {
         display: block;
@@ -436,6 +400,11 @@ a:hover {
 
     .m-navi {
         display: block;
+    }
+
+    .m-navi__home {
+        font-weight: normal;
+        letter-spacing: normal;
     }
 
     .m-navi__list {
@@ -472,6 +441,46 @@ a:hover {
         letter-spacing: var(--letter-spacing-wide);
     }
 
+    .m-section.--half-width {
+        width: 50%;
+    }
+
+    .m-update-log {
+        overflow-y: scroll;
+
+        height: 10rem;
+        padding-right: 1rem;
+    }
+
+    /* ---- ORGANISMS ---- */
+    .o-body__sidebar {
+        margin: 0 1rem 0 0;
+    }
+
+    .o-body__page-content.--row {
+        flex-direction: row;
+        gap: 1rem;
+
+        display: flex;
+    }
+
+    /* --- sidebar --- */
+
+    .o-sidebar {
+        display: block;
+    }
+
+    .o-sidebar__navi {
+        /* padding: 1rem 0; */
+    }
+
+    .o-sidebar__ascii-art {
+        display: block;
+    }
+}
+
+/* switch to centered, boxed-in layout */
+@media screen and (min-width: 1000px) and (min-height: 810px) {
     /* --- what's new --- */
 
     /* .m-whats-new { */
