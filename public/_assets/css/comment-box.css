@@ -1,6 +1,15 @@
 /* global font changes */
-#HCB_comment_box {
+#HCB_comment_box #hcb_form textarea,
+#HCB_comment_box #hcb_form #hcb_form_name {
     font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+    text-transform: lowercase;
+    color: black;
+    background-color: white;
+}
+
+#HCB_comment_box {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     color: black;
     background-color: white;

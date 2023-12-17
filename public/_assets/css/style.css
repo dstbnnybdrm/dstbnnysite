@@ -6,6 +6,9 @@
 
 /* -- common variables -- */
 :root {
+    --font-primary: Verdana, Geneva, Tahoma, sans-serif;
+    --font-secondary: "Courier New", Courier, monospace;
+
     --text-size-normal: 1rem;
     --text-size-big: 1.125rem;
     --text-size-small: 0.825rem;
@@ -48,7 +51,7 @@
 /* text reset */
 body {
     font-size: var(--text-size-normal);
-    font-family: "Courier New", Courier, monospace;
+    font-family: var(--font-primary);
     line-height: 1.5rem;
 }
 
@@ -171,7 +174,7 @@ a:hover {
 /* --- ascii art --- */
 
 .a-ascii-art {
-    font-family: monospace;
+    font-family: var(--font-secondary);
     overflow: hidden;
 
     line-height: 1rem;
