@@ -214,6 +214,9 @@ a:hover {
     letter-spacing: var(--letter-spacing-wide);
 }
 
+.m-section__container {
+}
+
 .m-section__content {
     margin-bottom: 1rem;
 }
@@ -225,9 +228,14 @@ a:hover {
 /* --- update log --- */
 
 .m-update-log {
-    overflow-y: scroll;
+    min-width: 0;
+    min-height: 0;
 
     grid-area: update;
+
+    flex-direction: column;
+
+    display: flex;
 }
 
 .m-update-log__date {
@@ -239,17 +247,25 @@ a:hover {
 }
 
 .m-welcome {
-    overflow-y: auto;
     min-width: 0;
+    min-height: 0;
 
     grid-area: welcome;
+
+    flex-direction: column;
+
+    display: flex;
 }
 
 .m-whats-new {
-    overflow-y: auto;
     min-width: 0;
+    min-height: 0;
 
     grid-area: whats-new;
+
+    flex-direction: column;
+
+    display: flex;
 }
 
 /* --- buttons --- */
@@ -316,10 +332,7 @@ a:hover {
     /* ---- MOLECULES ---- */
 
     .m-update-log {
-        height: calc(var(--main-height) / 2);
-        overflow-y: scroll;
-
-        grid-area: update;
+        max-height: calc(var(--main-height) / 2);
     }
 
     /* ---- ORGANISMS ---- */
@@ -350,7 +363,8 @@ a:hover {
             "welcome    whats-new"
             "update     update";
         grid-template-columns: auto;
-        gap: 1rem 2rem;
+        gap: 2rem;
+        /* min-height: 0; */
 
         display: grid;
     }
@@ -373,6 +387,10 @@ a:hover {
     }
 
     /* ---- MOLECULES ---- */
+
+    .m-section__container {
+        overflow-y: auto;
+    }
 
     .m-navi {
     }
@@ -397,8 +415,8 @@ a:hover {
     }
 
     .m-update-log {
-        height: auto;
-        overflow-y: auto;
+        /* height: auto; */
+        /* overflow-y: auto; */
 
         grid-area: update;
     }
