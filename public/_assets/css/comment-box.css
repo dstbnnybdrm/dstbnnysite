@@ -63,8 +63,9 @@ div#comments_list {
     margin-top: 0.25rem;
 }
 
-/* #HCB_comment_box p.hcb-comment-body { */
-/* } */
+#HCB_comment_box .hcb-comment-body {
+    font-size: 12px;
+}
 
 #HCB_comment_box span.date {
     color: black;
@@ -81,5 +82,6 @@ div#comments_list {
 }
 
 #HCB_comment_box img {
+    font-size: 12px;
     display: inline-block;
 }
