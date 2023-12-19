@@ -303,7 +303,11 @@ a:hover {
 /* --- main --- */
 
 .o-main {
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+
     padding: 1rem;
+
     min-width: 0;
 }
 
@@ -313,14 +317,13 @@ a:hover {
 /* --- home-page --- */
 
 .o-home-page {
-    height: inherit;
 }
 
 /* --- footer --- */
 
 .o-footer {
     margin-inline: auto;
-    padding: 1rem 0 0 0;
+    padding: 1rem;
 }
 
 /* ---- BREAKPOINTS ---- */
@@ -331,10 +334,6 @@ a:hover {
 
     /* ---- MOLECULES ---- */
 
-    .m-update-log {
-        max-height: calc(var(--main-height) / 2);
-    }
-
     /* ---- ORGANISMS ---- */
 
     /* --- body --- */
@@ -342,18 +341,6 @@ a:hover {
     .o-body {
         max-width: calc(var(--main-width) / 1.25);
         margin: auto;
-    }
-
-    .o-body__container {
-    }
-
-    .o-body__sidebar {
-        /* margin: 0 1rem 0 0; */
-    }
-
-    /* --- sidebar --- */
-
-    .o-sidebar {
     }
 
     /* --- home-page --- */
@@ -364,7 +351,6 @@ a:hover {
             "update     update";
         grid-template-columns: auto;
         gap: 2rem;
-        /* min-height: 0; */
 
         display: grid;
     }
@@ -415,9 +401,6 @@ a:hover {
     }
 
     .m-update-log {
-        /* height: auto; */
-        /* overflow-y: auto; */
-
         grid-area: update;
     }
 
@@ -425,17 +408,15 @@ a:hover {
 
     /* --- body --- */
 
-    .o-body {
-    }
-
     .o-body__container {
         top: 0;
         left: 0;
         right: 0;
         bottom: 2rem;
 
-        margin: auto;
         border: 1px solid black;
+        margin: auto;
+        padding: 1rem;
 
         width: var(--main-width);
         height: var(--main-height);
@@ -443,7 +424,6 @@ a:hover {
         position: absolute;
 
         flex-direction: row;
-        justify-content: center;
 
         display: flex;
     }
@@ -466,10 +446,8 @@ a:hover {
     /* --- main --- */
 
     .o-main {
-        width: var(--main-width);
-        height: var(--main-height);
-
-        padding: 1rem;
+        border: none;
+        overflow-y: auto;
     }
 
     .o-home-page {
@@ -480,6 +458,7 @@ a:hover {
 
     .o-footer {
         position: fixed;
+
         bottom: 0;
         left: 50%;
 
