@@ -130,6 +130,10 @@ a:hover {
 .body__navi-bar {
 }
 
+.body__footer {
+    margin: 1rem auto;
+}
+
 /* --- navi-bar --- */
 
 .navi-bar {
@@ -268,8 +272,11 @@ a:hover {
 /* --- footer --- */
 
 .footer {
-    margin-inline: auto;
-    padding: 1rem;
+}
+
+.footer__content {
+    margin: auto;
+    text-align: center;
 }
 
 /* --- list --- */
@@ -316,11 +323,11 @@ a:hover {
 }
 
 .buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    width: 100%;
+}
 
-    display: flex;
+.buttons__button {
+    display: inline-block;
 }
 
 /* ---- BREAKPOINTS ---- */
@@ -345,18 +352,10 @@ a:hover {
 
         display: grid;
     }
-
-    /* --- footer --- */
-
-    .footer {
-        justify-content: center;
-
-        display: flex;
-    }
 }
 
 /* bring in box container layout */
-@media screen and (min-width: 970px) and (min-height: 770px) {
+@media screen and (min-width: 900px) and (min-height: 740px) {
     /* --- body --- */
 
     .body__container {
@@ -433,13 +432,12 @@ a:hover {
     /* --- footer --- */
 
     .footer {
-        position: fixed;
-
+        right: 0;
+        left: 0;
         bottom: 0;
-        left: 50%;
 
-        transform: translate(-50%, -50%);
+        width: var(--main-width);
 
-        padding: 0;
+        position: fixed;
     }
 }
