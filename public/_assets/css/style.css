@@ -1,7 +1,6 @@
 /*
- * using a slighly modified version of ABEM (an already slightly modified
- * version of BEM):
- * https://css-tricks.com/abem-useful-adaptation-bem/
+ * using BEM methodology: https://getbem.com/
+ *
  */
 
 /* -- common variables -- */
@@ -118,41 +117,188 @@ a:hover {
     color: var(--color-tertiary);
 }
 
-/* ---- ATOMS ---- */
+/* ---- BLOCKS ---- */
+
+/* --- body --- */
+
+.body {
+}
+
+.body__container {
+}
+
+.body__navi-bar {
+}
+
+/* --- navi-bar --- */
+
+.navi-bar {
+    padding: 1rem;
+}
+
+.navi-bar__navi {
+}
+
+/* --- navi --- */
+
+.navi {
+    flex-direction: column;
+
+    display: flex;
+}
+
+.navi__home {
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.navi__list {
+    margin: 0.25rem 0 0 0;
+    display: inline-block;
+}
+
+.navi__list-item {
+    margin: 0 1rem 0 0;
+    display: inline-block;
+}
+
+/* --- home-page --- */
+
+.home-page {
+}
+
+/* --- main --- */
+
+.main {
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+
+    padding: 1rem;
+
+    min-width: 0;
+}
+
+.main__section {
+    margin: 0 0 2rem 0;
+}
+
+/* --- section --- */
+
+.section {
+}
+
+.section__title {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--text-size-big);
+    font-weight: bold;
+}
+
+.section__subtitle {
+    font-size: var(--text-size-normal);
+    font-weight: bold;
+
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.section__container {
+    padding: 0 1rem 0 0;
+}
+
+.section__content {
+    margin-bottom: 1rem;
+}
+
+.section__image {
+    display: inline-block;
+}
+
+/* --- update log --- */
+
+.update-log {
+    min-width: 0;
+    min-height: 0;
+
+    margin: 0;
+
+    grid-area: update;
+
+    flex-direction: column;
+
+    display: flex;
+}
+
+.update-log__date {
+    font-style: italic;
+}
+
+.update-log__log {
+    margin-bottom: 1rem;
+}
+
+/* --- welcome --- */
+
+.welcome {
+    min-width: 0;
+    min-height: 0;
+
+    margin: 0;
+
+    grid-area: welcome;
+
+    flex-direction: column;
+
+    display: flex;
+}
+
+/* --- whats-new --- */
+
+.whats-new {
+    min-width: 0;
+    min-height: 0;
+
+    margin: 0;
+
+    grid-area: whats-new;
+
+    flex-direction: column;
+
+    display: flex;
+}
+
+/* --- footer --- */
+
+.footer {
+    margin-inline: auto;
+    padding: 1rem;
+}
 
 /* --- list --- */
 
-.a-list {
+.list {
     display: block;
 
     list-style: "→ ";
 }
 
-.a-list__item {
+.list__item {
     margin: 0 0 0 1.5rem;
 }
 
 /* --- other --- */
 
-.a-ascii-art {
+.ascii-art {
     font-family: var(--font-secondary);
     overflow: hidden;
 
     line-height: 1rem;
 }
 
-.a-line-divider {
+.line-divider {
     border-top: 1px dashed;
     width: 100%;
 }
 
-.a-small-screen-divider {
-    border-top: 1px dashed black;
-    width: 100%;
-    margin: auto;
-}
-
-.a-comm-status {
+.comm-status {
     display: inline-block;
 
     border: 1px dashed black;
@@ -163,113 +309,13 @@ a:hover {
     font-family: var(--font-secondary);
 }
 
-.a-new-label {
+.new-label {
     display: inline-block;
 
     height: 2rem;
 }
 
-/* ---- MOLECULES ---- */
-
-/* --- navi --- */
-
-.m-navi {
-    flex-direction: column;
-
-    display: flex;
-}
-
-.m-navi__home {
-    font-weight: bold;
-    letter-spacing: var(--letter-spacing-wide);
-}
-
-.m-navi__list {
-    margin: 0.25rem 0 0 0;
-    display: inline-block;
-}
-
-.m-navi__list-item {
-    margin: 0 1rem 0 0;
-    display: inline-block;
-}
-
-/* --- section --- */
-
-.m-section {
-}
-
-.m-section__title {
-    margin: 0 0 0.25rem 0;
-    font-size: var(--text-size-big);
-    font-weight: bold;
-}
-
-.m-section__subtitle {
-    font-size: var(--text-size-normal);
-    font-weight: bold;
-
-    letter-spacing: var(--letter-spacing-wide);
-}
-
-.m-section__container {
-    padding: 0 1rem 0 0;
-}
-
-.m-section__content {
-    margin-bottom: 1rem;
-}
-
-.m-section__image {
-    display: inline-block;
-}
-
-/* --- update log --- */
-
-.m-update-log {
-    min-width: 0;
-    min-height: 0;
-
-    grid-area: update;
-
-    flex-direction: column;
-
-    display: flex;
-}
-
-.m-update-log__date {
-    font-style: italic;
-}
-
-.m-update-log__log {
-    margin-bottom: 1rem;
-}
-
-.m-welcome {
-    min-width: 0;
-    min-height: 0;
-
-    grid-area: welcome;
-
-    flex-direction: column;
-
-    display: flex;
-}
-
-.m-whats-new {
-    min-width: 0;
-    min-height: 0;
-
-    grid-area: whats-new;
-
-    flex-direction: column;
-
-    display: flex;
-}
-
-/* --- buttons --- */
-
-.m-buttons {
+.buttons {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -277,135 +323,43 @@ a:hover {
     display: flex;
 }
 
-/* ---- ORGANISMS ---- */
-
-/* --- body --- */
-
-.o-body {
-}
-
-.o-body__container {
-}
-
-.o-body__sidebar {
-}
-
-/* --- sidebar --- */
-
-.o-sidebar {
-    padding: 1rem;
-}
-
-.o-sidebar__navi {
-}
-
-/* --- main --- */
-
-.o-main {
-    border-top: 1px dashed black;
-    border-bottom: 1px dashed black;
-
-    padding: 1rem;
-
-    min-width: 0;
-}
-
-.o-main__section {
-    margin: 0 0 2rem 0;
-}
-
-/* --- home-page --- */
-
-.o-home-page {
-}
-
-/* --- footer --- */
-
-.o-footer {
-    margin-inline: auto;
-    padding: 1rem;
-}
-
 /* ---- BREAKPOINTS ---- */
 
-/* bring in sidebar, scrolling overflows, and side-to-side elements */
+/* bring in scrolling overflows, side-to-side elements, centred footer */
 @media screen and (min-width: 600px) {
-    /* ---- ATOMS ---- */
-
-    /* ---- MOLECULES ---- */
-
-    /* ---- ORGANISMS ---- */
-
     /* --- body --- */
 
-    .o-body {
+    .body {
         max-width: calc(var(--main-width) / 1.25);
         margin: auto;
     }
 
     /* --- home-page --- */
 
-    .o-home-page {
+    .home-page {
         grid-template-areas:
             "welcome    whats-new"
             "update     update";
         grid-template-columns: auto;
-        gap: 0 2rem;
+        gap: 2rem;
 
         display: grid;
     }
 
     /* --- footer --- */
 
-    .o-footer {
+    .footer {
         justify-content: center;
 
         display: flex;
     }
 }
 
-/* boxed-in layout */
+/* bring in box container layout */
 @media screen and (min-width: 970px) and (min-height: 770px) {
-    /* ---- ATOMS ---- */
-
-    .a-small-screen-divider {
-        display: none;
-    }
-
-    /* ---- MOLECULES ---- */
-
-    .m-section__container {
-        overflow-y: auto;
-    }
-
-    .m-navi__home {
-        font-weight: normal;
-        letter-spacing: normal;
-    }
-
-    .m-navi__list {
-        display: block;
-
-        margin: 0 0 0 1.5rem;
-    }
-
-    .m-navi__list-item {
-        display: list-item;
-
-        margin-right: 0;
-
-        list-style: "∟ ";
-    }
-
-    .m-update-log {
-        grid-area: update;
-    }
-
-    /* ---- ORGANISMS ---- */
-
     /* --- body --- */
 
-    .o-body__container {
+    .body__container {
         top: 0;
         left: 0;
         right: 0;
@@ -425,25 +379,60 @@ a:hover {
         display: flex;
     }
 
-    .o-body__page-content {
+    .body__page-content {
         border: 1px solid;
         padding: 2rem 1rem;
     }
 
+    /* --- navi --- */
+
+    .navi__home {
+        font-weight: normal;
+        letter-spacing: normal;
+    }
+
+    .navi__list {
+        display: block;
+
+        margin: 0 0 0 1.5rem;
+    }
+
+    .navi__list-item {
+        display: list-item;
+
+        margin-right: 0;
+
+        list-style: "∟ ";
+    }
+
+    /* --- home-page --- */
+
+    .home-page {
+        grid-template-rows: 2fr 1fr;
+    }
+
     /* --- main --- */
 
-    .o-main {
+    .main {
         border: none;
         overflow-y: auto;
     }
 
-    .o-home-page {
-        grid-template-rows: 2fr 1fr;
+    /* --- section --- */
+
+    .section__container {
+        overflow-y: auto;
+    }
+
+    /* --- update-log --- */
+
+    .update-log {
+        grid-area: update;
     }
 
     /* --- footer --- */
 
-    .o-footer {
+    .footer {
         position: fixed;
 
         bottom: 0;
