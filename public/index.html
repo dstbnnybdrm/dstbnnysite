@@ -48,59 +48,43 @@
   </head>
 
   <body class="o-body">
-    <div class="o-body__page-content --row">
+    <div class="o-body__container">
       <header class="o-body__sidebar o-sidebar">
         <nav class="o-sidebar__navi" id="js-navi-list"></nav>
-        <div class="o-sidebar__divider a-small-screen-divider"></div>
       </header>
 
-      <main class="o-main">
-        <div class="u-flex-row">
-          <section class="o-main__section m-section --half-width">
-            <h1 class="m-section__title">welcome!</h1>
+      <main class="o-main o-home-page">
+        <section class="o-main__section m-section m-welcome">
+          <h1 class="m-section__title">welcome!</h1>
+          <div class="m-section__container">
+            <p class="m-section__content">
+              hi! this is just my little corner of the internet to throw all of
+              my various creative projects into, mainly music, game dev (wip),
+              audio commissions, and anything else i feel like!
+              <img
+                class="m-section__image"
+                src="/_assets/img/pinkbunnyhop.gif"
+              />
+            </p>
 
-            <div class="m-section__content --overflow-y">
-              <p class="m-section__content">
-                hi! this is just my little corner of the internet to throw all
-                of my various creative projects into, mainly music, game dev
-                (wip), audio commissions, and anything else i feel like!
-                <img
-                  class="m-section__image"
-                  src="/_assets/img/pinkbunnyhop.gif"
-                />
-              </p>
+            <div
+              class="m-section__content a-comm-status"
+              id="js-comm-status"
+            ></div>
 
-              <p
-                class="m-section__content a-comm-status"
-                id="js-comm-status"
-              ></p>
+            <div class="m-section__content m-buttons" id="js-88x31"></div>
+          </div>
+        </section>
 
-              <div class="m-section__content m-buttons" id="js-88x31"></div>
-            </div>
-          </section>
-
-          <section class="o-main__section m-section --half-width m-whats-new">
-            <h2 class="m-section__title">what's new?</h2>
-
-            <div class="m-whats-new__content" id="js-new-stuff"></div>
-          </section>
-        </div>
-
-        <section class="o-main__section m-section">
-          <div class="m-section__content a-line-divider"></div>
+        <section class="o-main__section m-section m-whats-new">
+          <h2 class="m-section__title">what's new?</h2>
+          <div class="m-section__container" id="js-new-stuff"></div>
         </section>
 
         <section class="o-main__section m-section m-update-log">
           <h2 class="m-section__title">update log</h2>
-          <div id="js-update-log"></div>
-          <p class="m-update-log__log">
-            my github is
-            <a href="https://github.com/dstbnnybdrm/dstbnnysite">here</a> if you
-            want to see a more comprehensive log (as well as questionable
-            practice lol).
-          </p>
+          <div class="m-section__container" id="js-update-log"></div>
         </section>
-        <div class="o-main__section a-small-screen-divider"></div>
       </main>
     </div>
 
