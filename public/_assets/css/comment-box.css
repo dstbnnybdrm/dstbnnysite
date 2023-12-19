@@ -78,10 +78,10 @@ div#comments_list {
 #HCB_comment_box button.hcb-flag,
 #HCB_comment_box button.hcb-like,
 #HCB_comment_box button.hcb-reply {
+    font-size: 12px;
     color: #f69;
 }
 
 #HCB_comment_box img {
-    font-size: 12px;
     display: inline-block;
 }
