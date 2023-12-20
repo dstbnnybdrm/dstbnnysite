@@ -306,12 +306,15 @@ a:hover {
 }
 
 .comm-status {
+    width: 100%;
+
     display: inline-block;
 
     border: 1px dashed black;
     padding: 0.5rem;
 
     letter-spacing: var(--letter-spacing-wide);
+    text-align: center;
 
     font-family: var(--font-secondary);
 }
