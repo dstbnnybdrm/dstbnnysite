@@ -45,6 +45,11 @@
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+      defer
+    ></script>
     <script src="/_assets/js/blog.js" defer></script>
   </head>
 
@@ -56,11 +61,15 @@
     <main class="main">
       <h1 id="js-blog-post-title"></h1>
       <h4 id="js-blog-post-date"></h4>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <zero-md>
+        <template>
+          <link rel="stylesheet" href="/_assets/style/blog.css" />
+        </template>
+        <!--prettier-ignore-->
+        <script type="text/markdown">
+**This** is my [markdown](https://example.com)
+        </script>
+      </zero-md>
 
       <div id="js-blog-post-nav"></div>
     </main>
