@@ -53,16 +53,18 @@
     <script src="/_assets/js/blog.js" defer></script>
   </head>
 
-  <body class="body">
-    <header>
+  <body class="body body--blog">
+    <header class="blog-header body__blog-header">
       <div id="js-blog-header">...</div>
+      <div class="blog-header__recent-posts" id="js-blog-recent-posts"></div>
+      <!-- <div id="js-blog-footer"></div> -->
     </header>
 
-    <main class="main">
-      <article>
-        <h1 id="js-blog-post-title"></h1>
-        <h4 id="js-blog-post-date"></h4>
-        <zero-md>
+    <main class="main main--blog">
+      <article class="main__blog-post blog-post">
+        <h1 class="blog-post__title" id="js-blog-post-title"></h1>
+        <h4 class="blog-post__date" id="js-blog-post-date"></h4>
+        <zero-md class="blog-post__content">
           <template>
             <link rel="stylesheet" href="/_assets/css/blog.css" />
           </template>
@@ -187,9 +189,7 @@ With a reference later in the document defining the URL location:
         </zero-md>
       </article>
 
-      <div id="js-blog-post-nav"></div>
+      <div class="blog-post__navi" id="js-blog-post-nav"></div>
     </main>
-
-    <div id="js-blog-footer"></div>
   </body>
 </html>
