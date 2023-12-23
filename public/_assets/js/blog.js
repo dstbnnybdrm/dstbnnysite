@@ -74,29 +74,29 @@ if (currentIndex > -1) {
     let monthSlice = postsArray[currentIndex][0].slice(11, 13);
     let month = "";
     if (monthSlice === "01") {
-      month = "Jan";
+      month = "jan";
     } else if (monthSlice === "02") {
-      month = "Feb";
+      month = "feb";
     } else if (monthSlice === "03") {
-      month = "Mar";
+      month = "mar";
     } else if (monthSlice === "04") {
-      month = "Apr";
+      month = "apr";
     } else if (monthSlice === "05") {
-      month = "May";
+      month = "may";
     } else if (monthSlice === "06") {
-      month = "Jun";
+      month = "jun";
     } else if (monthSlice === "07") {
-      month = "Jul";
+      month = "jul";
     } else if (monthSlice === "08") {
-      month = "Aug";
+      month = "aug";
     } else if (monthSlice === "09") {
-      month = "Sep";
+      month = "sep";
     } else if (monthSlice === "10") {
-      month = "Oct";
+      month = "oct";
     } else if (monthSlice === "11") {
-      month = "Nov";
+      month = "nov";
     } else if (monthSlice === "12") {
-      month = "Dec";
+      month = "dec";
     }
     niceDate =
       postsArray[currentIndex][0].slice(14, 16) +
@@ -128,10 +128,10 @@ function formatPostLink(i) {
       postsArray[i][0] +
       '">' +
       postsArray[i][0].slice(6, 16) +
-      ': "' +
-      // " \u00BB " +
+      // ': "' +
+      " \u00BB " +
       postTitle_i +
-      '"</a></li>'
+      "</a></li>"
     );
   } else {
     return (
@@ -146,7 +146,7 @@ function formatPostLink(i) {
   }
 }
 
-let postListHTML = "<ul>";
+let postListHTML = "<h2>all posts</h2><ul>";
 for (let i = 0; i < postsArray.length; i++) {
   postListHTML += formatPostLink(i);
 }
@@ -154,7 +154,7 @@ postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
 let recentPostsCutoff = 3; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
-let recentPostListHTML = "<h2>Recent Posts:</h2><ul>";
+let recentPostListHTML = "<h2>recent posts</h2><ul>";
 let numberOfRecentPosts = Math.min(recentPostsCutoff, postsArray.length);
 for (let i = 0; i < numberOfRecentPosts; i++) {
   recentPostListHTML += formatPostLink(i);
