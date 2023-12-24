@@ -124,7 +124,7 @@ a:hover {
 /* .body { */
 /* } */
 
-/* .body--blog { */
+/* .body--blog-home { */
 /* } */
 
 /* .body__container { */
@@ -171,6 +171,17 @@ a:hover {
 }
 
 .navi__list-item {
+    margin: 0 1rem 0 0;
+    display: inline-block;
+}
+
+.blog-navi {
+}
+
+.blog-navi__list {
+}
+
+.blog-navi__list-item {
     margin: 0 1rem 0 0;
     display: inline-block;
 }
@@ -305,6 +316,12 @@ a:hover {
     margin: 1rem 0 0 0;
 }
 
+.blog-header__all-posts {
+    display: none;
+}
+
+/* --- blog footer --- */
+
 .blog-footer {
     grid-area: blog-footer;
     padding: 1rem;
@@ -334,17 +351,6 @@ a:hover {
 }
 
 .blog-post__navi {
-}
-
-/* --- blog-navi --- */
-
-.blog-navi {
-}
-
-.blog-navi__list {
-}
-
-.blog-navi__list-item {
 }
 
 /* --- list --- */
@@ -414,6 +420,10 @@ a:hover {
         margin: auto;
     }
 
+    .body--blog-home {
+        margin: 0;
+    }
+
     /* --- home-page --- */
 
     .home-page {
@@ -434,12 +444,15 @@ a:hover {
 
     /* --- blog --- */
 
+    .blog-header__all-posts {
+        display: block;
+        margin: 1rem 0 0 0;
+    }
+
     .body--blog {
         margin-left: 0;
 
-        grid-template-areas:
-            "blog-header    blog-post"
-            "blog-footer    blog-post";
+        grid-template-areas: "blog-header    blog-post";
 
         display: grid;
     }
@@ -515,6 +528,7 @@ a:hover {
         border-top: none;
         border-bottom: none;
         border-left: 1px dotted black;
+        max-width: 80rem;
     }
 
     /* --- section --- */

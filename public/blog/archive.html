@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>zonelets archive</title>
+    <!-- primary tags -->
+    <title>/archive</title>
     <meta name="description" content="proof of my existence &lt;3." />
     <meta name="author" content="jp" />
 
@@ -46,16 +47,23 @@
     <script src="/_assets/js/blog.js" defer></script>
   </head>
 
-  <body class="body">
-    <header>
+  <body class="body body--blog-home">
+    <header class="body__blog-header blog-header">
+      <a href="/">back to site</a>
       <div id="js-blog-header">...</div>
     </header>
 
     <main class="main">
-      <h1>zonelets archive</h1>
-      <div id="js-blog-posts"></div>
+      <section class="main__section section">
+        <h1 class="section__title">archive</h1>
+        <div id="js-blog-posts"></div>
+      </section>
     </main>
 
-    <div id="js-blog-footer"></div>
+    <footer class="body__blog-footer blog-footer">
+      <p class="blog-footer__content">
+        built with <a href="https://zonelets.net/" target="_blank">zonelets</a>!
+      </p>
+    </footer>
   </body>
 </html>
