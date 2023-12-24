@@ -1,5 +1,6 @@
 /*
- * this script file was originally from zonelets and heavily modified by me! -jp
+ * this script file was originally provided by zonelets and
+ * heavily modified by me! -jp
  */
 
 //TABLE OF CONTENTS
@@ -18,7 +19,7 @@
 
 let postsArray = [
   //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
-  ["posts/2020-11-10-post-template.html"],
+  // ["posts/2020-11-10-post-template.html"],
 ];
 
 //==[ 2. GENERATING THE HTML SECTIONS TO BE INSERTED ]==
@@ -224,17 +225,12 @@ if (postsArray.length < 2) {
 
 const template_url = "/_assets/template/blog/";
 
-let blog_header = document.getElementById("js-blog-header");
-let blog_footer = document.getElementById("js-blog-footer");
+let blog_header = document.getElementById("js-blog-navi-list");
 
 // i made these into their own html files, so they have to be fetched - jp
-fetch(template_url + "blog-header.html")
+fetch(template_url + "blog-navi-list.html")
   .then((response) => response.text())
   .then((content) => (blog_header.innerHTML = content));
-
-fetch(template_url + "blog-footer.html")
-  .then((response) => response.text())
-  .then((content) => (blog_footer.innerHTML = content));
 
 if (document.getElementById("js-blog-post-nav")) {
   document.getElementById("js-blog-post-nav").innerHTML = nextprevHTML;
