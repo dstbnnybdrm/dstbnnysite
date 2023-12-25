@@ -124,6 +124,9 @@ a:hover {
 /* .body { */
 /* } */
 
+/* .body--blog-home { */
+/* } */
+
 /* .body__container { */
 /* } */
 
@@ -132,6 +135,12 @@ a:hover {
 
 .body__footer {
     margin: 1rem auto;
+}
+
+.body__blog-header {
+}
+
+.body__blog-footer {
 }
 
 /* --- navi-bar --- */
@@ -166,6 +175,17 @@ a:hover {
     display: inline-block;
 }
 
+.blog-navi {
+}
+
+.blog-navi__list {
+}
+
+.blog-navi__list-item {
+    margin: 0 1rem 0 0;
+    display: inline-block;
+}
+
 /* --- home-page --- */
 
 /* .home-page { */
@@ -182,8 +202,14 @@ a:hover {
     min-width: 0;
 }
 
+/* .main--blog { */
+/* } */
+
 .main__section {
     margin: 0 0 2rem 0;
+}
+
+.main__blog-post {
 }
 
 /* --- section --- */
@@ -279,6 +305,54 @@ a:hover {
     text-align: center;
 }
 
+/* --- blog --- */
+
+.blog-header {
+    grid-area: blog-header;
+    padding: 1rem;
+}
+
+.blog-header__recent-posts {
+    margin: 1rem 0 0 0;
+}
+
+.blog-header__all-posts {
+    display: none;
+}
+
+/* --- blog footer --- */
+
+.blog-footer {
+    grid-area: blog-footer;
+    padding: 1rem;
+}
+
+.blog-footer__content {
+}
+
+/* --- blog-post --- */
+
+.blog-post {
+    grid-area: blog-post;
+}
+
+.blog-post__title {
+    margin: 0 0 0.25rem 0;
+    font-size: var(--text-size-big);
+    font-weight: bold;
+}
+
+.blog-post__date {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.blog-post__content {
+}
+
+.blog-post__navi {
+}
+
 /* --- list --- */
 
 .list {
@@ -298,6 +372,8 @@ a:hover {
     overflow: hidden;
 
     line-height: 1rem;
+
+    user-select: none;
 }
 
 .line-divider {
@@ -344,6 +420,10 @@ a:hover {
         margin: auto;
     }
 
+    .body--blog-home {
+        margin: 0;
+    }
+
     /* --- home-page --- */
 
     .home-page {
@@ -354,6 +434,30 @@ a:hover {
         gap: 2rem;
 
         display: grid;
+    }
+
+    .main--blog {
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px dotted black;
+    }
+
+    /* --- blog --- */
+
+    .blog-header__all-posts {
+        display: block;
+        margin: 1rem 0 0 0;
+    }
+
+    .body--blog {
+        margin-left: 0;
+
+        grid-template-areas: "blog-header    blog-post";
+
+        display: grid;
+    }
+
+    .blog-header {
     }
 }
 
@@ -418,6 +522,13 @@ a:hover {
     .main {
         border: none;
         overflow-y: auto;
+    }
+
+    .main--blog {
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px dotted black;
+        max-width: 80rem;
     }
 
     /* --- section --- */

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- primary tags -->
-    <title>/dstbnnyblog</title>
+    <title>set title</title>
     <meta name="description" content="proof of my existence &lt;3." />
     <meta name="author" content="jp" />
 
@@ -50,44 +50,37 @@
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+      defer
+    ></script>
     <script src="/_assets/js/blog.js" defer></script>
   </head>
 
-  <body class="body body--blog-home">
+  <body class="body body--blog">
     <header class="blog-header body__blog-header">
-      <a href="/">back to site</a>
-      <div id="js-blog-navi-list">this site requires javascript!</div>
+      <div id="js-blog-header">...</div>
+      <div class="blog-header__all-posts" id="js-blog-navi-list"></div>
     </header>
 
-    <main class="main">
-      <section class="section main__section">
-        <h1 class="section__title">dstbnnyblog</h1>
+    <main class="main main--blog">
+      <article class="blog-post main__blog-post">
+        <h1 class="blog-post__title">post title</h1>
+        <h4 class="blog-post__date">date</h4>
+        <zero-md class="blog-post__content">
+          <template>
+            <link rel="stylesheet" href="/_assets/css/blog.css" />
+          </template>
+          <!-- actual post goes here! -->
+          <!--prettier-ignore-->
+          <script type="text/markdown">
 
-        <p class="section__content">various thought dumps and ramblings</p>
+          </script>
+        </zero-md>
+      </article>
 
-        <div class="section__content" id="js-blog-recent-posts"></div>
-      </section>
-
-      <section class="section main__section">
-        <pre class="ascii-art">
-       .--.                   .---.
-   .---|__|           .-.     |~~~|
-.--|===|--|_          |_|     |~~~|--.
-|  |===|  |'\     .---!~|  .--|   |--|
-|%%|   |  |.'\    |===| |--|%%|   |  |
-|%%|   |  |\.'\   |   | |__|  |   |  |
-|  |   |  | \  \  |===| |==|  |   |  |
-|  |   |__|  \.'\ |   |_|__|  |~~~|__|
-|  |===|--|   \.'\|===|~|--|%%|~~~|--|
-^--^---'--^    `-'`---^-^--^--^---'--'</pre
-        >
-      </section>
+      <div class="blog-post__navi" id="js-blog-post-nav"></div>
     </main>
-
-    <footer class="blog-footer body__blog-footer">
-      <p class="blog-footer__content">
-        built with <a href="https://zonelets.net/" target="_blank">zonelets</a>!
-      </p>
-    </footer>
   </body>
 </html>
