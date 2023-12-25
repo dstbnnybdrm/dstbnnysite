@@ -1,6 +1,7 @@
 /*
- * this script file was originally provided by zonelets and
- * heavily modified by me! -jp
+ *      this script file was originally provided by zonelets and
+ *      heavily modified by me! —jp
+ * ₍ᐢ. . ᐢ₎
  */
 
 //TABLE OF CONTENTS
