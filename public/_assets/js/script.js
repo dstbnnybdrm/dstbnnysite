@@ -1,7 +1,7 @@
 const template_url = "/_assets/template/";
 const id_names = [
   "js-navi-list",
-  "js-new-stuff",
+  "js-news-feed",
   "js-footer",
   "js-comm-status",
   "js-update-log",

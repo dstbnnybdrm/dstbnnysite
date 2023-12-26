@@ -231,10 +231,6 @@ a:hover {
     grid-area: welcome;
 }
 
-.section--whats-new {
-    grid-area: whats-new;
-}
-
 .section__title {
     margin: 0 0 0.25rem 0;
 
@@ -260,6 +256,27 @@ a:hover {
     display: inline-block;
 }
 
+/* --- news feed --- */
+
+.news-feed {
+    grid-area: news-feed;
+
+    margin: 0;
+}
+
+.news-feed__entry {
+    margin-bottom: 1rem;
+    border-bottom: 1px dotted black;
+    padding: 0 0 1rem 0;
+}
+
+.news-feed__title {
+    padding: 0 0 0.25rem 0;
+
+    font-style: italic;
+    font-weight: normal;
+}
+
 /* --- update log --- */
 
 .update-log {
@@ -268,13 +285,13 @@ a:hover {
     margin: 0;
 }
 
+.update-log__log {
+    margin-bottom: 1rem;
+}
+
 .update-log__date {
     font-style: italic;
     font-weight: normal;
-}
-
-.update-log__log {
-    margin-bottom: 1rem;
 }
 
 /* --- footer --- */
@@ -416,7 +433,7 @@ a:hover {
         display: grid;
 
         grid-template-areas:
-            "welcome    whats-new"
+            "welcome    news-feed"
             "update     update";
         grid-template-columns: auto;
         gap: 2rem;
