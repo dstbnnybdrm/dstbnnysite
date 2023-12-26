@@ -279,7 +279,7 @@ a:hover {
     padding: 0 0 1rem 0;
 }
 
-.feed__entry--last {
+.feed__entry:last-child {
     border: none;
 }
 
