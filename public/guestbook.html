@@ -50,16 +50,23 @@
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/_assets/css/comment-box.css"
+    />
     <script src="/_assets/js/script.js" defer></script>
   </head>
 
   <body class="body">
     <div class="body__container">
-      <header class="body__navi-bar navi-bar">
-        <nav class="navi-bar__navi" id="js-navi-list"></nav>
-      </header>
+      <header></header>
 
-      <main class="main --overflow-y">
+      <nav class="body__navi-bar navi-bar">
+        <div class="navi-bar__navi" id="js-navi-list"></div>
+      </nav>
+
+      <main class="main">
         <section class="main__section m-section">
           <h1 class="m-section__title">guestbook</h1>
 
@@ -69,14 +76,10 @@
 
           <!-- begin wwww.htmlcommentbox.com -->
           <div id="HCB_comment_box" class="m-section__content">
-            <a href="http://www.htmlcommentbox.com">Widget</a> is loading
+            <a href="http://www.htmlcommentbox.com">widget</a> is loading
             comments...
           </div>
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="/_assets/css/comment-box.css"
-          />
+
           <script type="text/javascript" id="hcb">
             if (!window.hcb_user) {
               hcb_user = { comments_header: " " };
