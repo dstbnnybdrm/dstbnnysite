@@ -360,6 +360,10 @@ a:hover {
     margin: 0 0 0 1.5rem;
 }
 
+.list__item--update {
+    list-style: "+ ";
+}
+
 /* --- 88x31 buttons --- */
 
 .buttons-88x31 {
