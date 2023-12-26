@@ -270,6 +270,7 @@ a:hover {
 
 .update-log__date {
     font-style: italic;
+    font-weight: normal;
 }
 
 .update-log__log {
