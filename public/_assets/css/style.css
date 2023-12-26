@@ -180,6 +180,8 @@ a:hover {
     margin: 0 1rem 0 0;
 }
 
+/* --- blog navi --- */
+
 /* .blog-navi { */
 /* } */
 
@@ -221,6 +223,8 @@ a:hover {
 .section {
     display: flex;
 
+    margin: 0;
+
     flex-direction: column;
 
     min-width: 0;
@@ -229,6 +233,14 @@ a:hover {
 
 .section--welcome {
     grid-area: welcome;
+}
+
+.section--news-feed {
+    grid-area: news-feed;
+}
+
+.section--update-log {
+    grid-area: update;
 }
 
 .section__title {
@@ -252,44 +264,22 @@ a:hover {
     margin-bottom: 1rem;
 }
 
-.section__image {
-    display: inline-block;
-}
+/* --- feed --- */
 
-/* --- news feed --- */
+/* .feed { */
+/* } */
 
-.news-feed {
-    grid-area: news-feed;
-
-    margin: 0;
-}
-
-.news-feed__entry {
-    margin-bottom: 1rem;
+.feed__entry {
+    margin: 0 0 1rem 0;
     border-bottom: 1px dotted black;
     padding: 0 0 1rem 0;
 }
 
-.news-feed__title {
-    padding: 0 0 0.25rem 0;
-
-    font-style: italic;
-    font-weight: normal;
+.feed__entry--last {
+    border: none;
 }
 
-/* --- update log --- */
-
-.update-log {
-    grid-area: update;
-
-    margin: 0;
-}
-
-.update-log__log {
-    margin-bottom: 1rem;
-}
-
-.update-log__date {
+.feed__title {
     font-style: italic;
     font-weight: normal;
 }
@@ -312,6 +302,8 @@ a:hover {
 
     padding: 1rem;
 }
+
+/* --- blog header --- */
 
 .blog-header__recent-posts {
     margin: 1rem 0 0 0;
@@ -368,6 +360,16 @@ a:hover {
     margin: 0 0 0 1.5rem;
 }
 
+/* --- 88x31 buttons --- */
+
+.buttons-88x31 {
+    width: 100%;
+}
+
+.buttons-88x31__button {
+    display: inline-block;
+}
+
 /* --- other --- */
 
 .ascii-art {
@@ -403,14 +405,6 @@ a:hover {
     height: 2rem;
 }
 
-.buttons-88x31 {
-    width: 100%;
-}
-
-.buttons-88x31__button {
-    display: inline-block;
-}
-
 /* ---- BREAKPOINTS ---- */
 
 /* bring in scrolling overflows, side-to-side elements, centred footer */
@@ -421,6 +415,14 @@ a:hover {
         margin: auto;
 
         max-width: calc(var(--main-width) / 1.25);
+    }
+
+    .body--blog {
+        display: grid;
+
+        grid-template-areas: "blog-header    blog-post";
+
+        margin-left: 0;
     }
 
     .body--blog-home {
@@ -453,14 +455,6 @@ a:hover {
         margin: 1rem 0 0 0;
     }
 
-    .body--blog {
-        display: grid;
-
-        grid-template-areas: "blog-header    blog-post";
-
-        margin-left: 0;
-    }
-
     /* .blog-header { */
     /* } */
 }
@@ -490,7 +484,7 @@ a:hover {
     .body__page-content {
         border: 1px solid;
 
-        padding: 2rem 1rem;
+        /* padding: 2rem 1rem; */
     }
 
     /* --- navi --- */
@@ -538,12 +532,6 @@ a:hover {
 
     .section__container {
         overflow-y: auto;
-    }
-
-    /* --- update-log --- */
-
-    .update-log {
-        grid-area: update;
     }
 
     /* --- footer --- */
