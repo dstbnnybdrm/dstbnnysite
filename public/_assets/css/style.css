@@ -47,7 +47,7 @@
     /* for debugging: */
     /* outline: 2px dashed lightblue; */
 
-    scrollbar-width: thin;
+    /* scrollbar-width: thin; */
 
     font-size: 13px;
 }
@@ -126,7 +126,6 @@ a:hover {
 /* --- page --- */
 
 /* .page { */
-/*     padding: 2rem; */
 /* } */
 
 .page-wrapper {
@@ -147,8 +146,8 @@ a:hover {
     margin: 0 0 1rem 0;
 }
 
-.page__footer {
-}
+/* .page__footer { */
+/* } */
 
 /* --- header --- */
 
@@ -209,9 +208,9 @@ a:hover {
     padding: 1rem;
 }
 
-.main__section {
-    /* margin: 0 0 2rem 0; */
-}
+/* .main__section { */
+/*     margin: 0 0 2rem 0; */
+/* } */
 
 /* --- section --- */
 
@@ -459,9 +458,6 @@ a:hover {
         padding: 1rem;
     }
 
-    .navi__list {
-    }
-
     /* --- main --- */
 
     .main {
@@ -535,9 +531,6 @@ a:hover {
         column-gap: 1rem;
 
         max-width: var(--main-width);
-    }
-
-    .page__footer {
     }
 
     /* --- navi --- */
