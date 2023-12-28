@@ -52,47 +52,54 @@ c(  づ✿
     <script src="/_assets/js/script.js" defer></script>
   </head>
 
-  <body class="body">
-    <div class="body__container">
-      <header></header>
+  <body class="page">
+    <div class="page-wrapper">
+      <header class="header page__header">
+        <pre class="ascii-art">
+() ___                        .    _______
+||(___)_______________()     /_\   |__*__|
+||----|#| |#|_|#|_|#|_||    __|__  |__*__|
+||____|_|#|_|#|_|#|_|#||    |_*_|  |__*__|
+||    |#|_|#|_|#|_|#|_||    |   |  |/   \|
+</pre
+        >
+      </header>
 
-      <nav class="navi-bar body__navi-bar">
-        <div class="navi-bar__navi" id="js-navi-list"></div>
+      <nav class="navi page__navi">
+        <div class="" id="js-navi-list"></div>
       </nav>
 
-      <main class="main main--home">
-        <section class="section section--welcome main__section">
+      <main class="main main--home page__main">
+        <section class="section main__section">
           <h1 class="section__title">welcome!</h1>
-          <div class="section__container">
-            <p class="section__content">
-              hi, i'm jp and this is my little corner of the web! i use it to
-              throw all of my various creative projects into, mainly
-              <a href="/work/music.html">music</a>,
-              <a href="/work/game-dev.html">game dev (wip)</a>,
-              <a href="/commission.html">audio commissions</a>, and
-              <a href="/work">anything else</a> i feel like!
-              <img class="section__image" src="/_assets/img/pinkbunnyhop.gif" />
-            </p>
+          <p class="section__content">
+            hi, i'm jp and this is my little corner of the web! i use it to
+            throw all of my various creative projects into, mainly
+            <a href="/work/music.html">music</a>,
+            <a href="/work/game-dev.html">game dev (wip)</a>,
+            <a href="/commission.html">audio commissions</a>, and
+            <a href="/work">anything else</a> i feel like!
+            <!-- <img class="section__image" src="/_assets/img/pinkbunnyhop.gif" /> -->
+          </p>
 
-            <div class="comm-status section__content" id="js-comm-status"></div>
+          <!-- <div class="comm-status section__content" id="js-comm-status"></div> -->
 
-            <p class="section__content">
-              feel free to sign my <a href="/guestbook.html">guestbook</a>!
-            </p>
+          <p class="section__content">
+            feel free to sign my <a href="/guestbook.html">guestbook</a>!
+          </p>
 
-            <figure class="buttons-88x31 section__content">
-              <img
-                class="buttons-88x31__button"
-                src="/_assets/img/88x31/javascript.gif"
-                alt="note: this page requires Javascript"
-              />
-              <img
-                class="buttons-88x31__button"
-                src="/_assets/img/88x31/responsive_website.gif"
-                alt="note: this page is responsive"
-              />
-            </figure>
-          </div>
+          <figure>
+            <img
+              class="buttons-88x31__button"
+              src="/_assets/img/88x31/javascript.gif"
+              alt="note: this page requires Javascript"
+            />
+            <img
+              class="buttons-88x31__button"
+              src="/_assets/img/88x31/responsive_website.gif"
+              alt="note: this page is responsive"
+            />
+          </figure>
         </section>
 
         <section class="feed section section--news-feed main__section">
@@ -105,8 +112,10 @@ c(  づ✿
           <div class="section__container" id="js-update-log"></div>
         </section>
       </main>
-    </div>
 
-    <div id="js-footer"></div>
+      <footer class="footer page__footer">
+        <div id="js-footer"></div>
+      </footer>
+    </div>
   </body>
 </html>
