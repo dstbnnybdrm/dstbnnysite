@@ -58,15 +58,17 @@
     <script src="/_assets/js/script.js" defer></script>
   </head>
 
-  <body class="body">
-    <div class="body__container">
-      <header></header>
+  <body class="page">
+    <div class="page-wrapper">
+      <header class="header page__header">
+        <div id="js-header"></div>
+      </header>
 
-      <nav class="body__navi-bar navi-bar">
-        <div class="navi-bar__navi" id="js-navi-list"></div>
+      <nav class="navi page__navi">
+        <div id="js-navi"></div>
       </nav>
 
-      <main class="main">
+      <main class="main page__main">
         <section class="main__section m-section">
           <h1 class="m-section__title">guestbook</h1>
 
@@ -105,8 +107,10 @@
           <!-- end www.htmlcommentbox.com -->
         </section>
       </main>
-    </div>
 
-    <footer class="footer" id="js-footer"></footer>
+      <footer class="footer page__footer">
+        <div id="js-footer"></div>
+      </footer>
+    </div>
   </body>
 </html>

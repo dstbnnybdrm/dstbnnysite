@@ -373,14 +373,6 @@ a:hover {
     list-style: "─ ";
 }
 
-.list__item--update {
-    /* list-style: "+ "; */
-}
-
-.list__item--update-description {
-    list-style: "∟ ";
-}
-
 /* --- 88x31 buttons --- */
 
 .buttons-88x31 {

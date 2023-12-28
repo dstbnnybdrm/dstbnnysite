@@ -1,12 +1,11 @@
 const template_url = "/_assets/template/";
 const id_names = [
-  "js-navi-list",
-  "js-news-feed",
+  "js-header",
+  "js-navi",
   "js-footer",
   "js-comm-status",
+  "js-news-feed",
   "js-update-log",
-  "js-88x31",
-  "js-wip",
 ];
 
 window.onload = () => {
