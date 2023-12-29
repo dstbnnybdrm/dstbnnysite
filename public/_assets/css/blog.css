@@ -1,3 +1,26 @@
+/* -- common variables -- */
+:root {
+    --font-family--main: Verdana, Geneva, Tahoma, sans-serif;
+    --font-family--mono: "Courier New", Courier, monospace;
+
+    --font-size--small: 0.75rem;
+    --font-size--base: 1rem;
+    --font-size--large: 1.125rem;
+
+    --letter-spacing-wide: 0.125rem;
+
+    --text-color: #333;
+
+    --color-primary: #f69;
+    --color-secondary: #c36;
+    --color-tertiary: #6cc;
+
+    --color-background: white;
+
+    --main-width: 67rem;
+    --main-height: 50rem;
+}
+
 /* ----- GLOBAL RESETS ----- 
  *
  * global reset taken from here: 
@@ -19,14 +42,14 @@
     /* for debugging: */
     /* outline: 2px dashed purple; */
     font-size: 12px;
-    scrollbar-width: thin;
 }
 
 /* text reset */
 body {
-    font-size: var(--text-size-normal);
-    font-family: var(--font-primary);
+    font-size: var(--font-size--base);
+    font-family: var(--font-family--main);
     line-height: 1.5rem;
+    height: 100%;
 }
 
 ul {
@@ -92,26 +115,32 @@ a:hover {
 
 /* ----- */
 
-h1 {
-    margin: 1rem 0 1rem 0;
-    font-size: var(--text-size-big);
+h1,
+h2 {
+    margin: 0;
+    font-size: var(--font-size--large);
     font-weight: bold;
 }
 
-h2,
 h3,
 h4,
 h5,
 h6 {
-    margin: 1rem 0 0.5rem 0;
-    font-size: var(--text-size-normal);
+    font-size: var(--font-size--base);
     font-weight: bold;
 
     letter-spacing: var(--letter-spacing-wide);
 }
 
+time {
+    margin: 0;
+
+    font-weight: normal;
+    font-style: italic;
+}
+
 p {
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0;
 }
 
 ul,
@@ -120,7 +149,7 @@ ol {
 }
 
 ul > li {
-    list-style: "→ ";
+    list-style: "- ";
     margin: 0 0 0 1.5rem;
 }
 
@@ -158,6 +187,10 @@ pre > code {
 
 code {
     margin: 0 0.5rem;
-    font-family: var(--font-secondary);
+    font-family: var(--font-family--mono);
     letter-spacing: var(--letter-spacing-wide);
+}
+
+footer {
+    text-align: right;
 }
