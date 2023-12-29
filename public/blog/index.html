@@ -50,46 +50,87 @@
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
-    <script src="/_assets/js/blog.js" defer></script>
+    <script src="/_assets/js/script.js" defer></script>
+    <script defer>
+      // Get all the title elements
+      var titleElements = document.querySelectorAll(".entries__title");
+
+      // Add a click event listener to each title
+      titleElements.forEach(function (titleElement) {
+        titleElement.addEventListener("click", function () {
+          // Get the blog URL from the data attribute
+          var blogUrl = titleElement.getAttribute("data-blog-url");
+
+          // Update the iframe's src attribute
+          var iframe = document.getElementById("blogFrame");
+          iframe.src = blogUrl;
+        });
+      });
+    </script>
   </head>
 
-  <body class="body body--blog-home">
-    <header></header>
-
-    <nav class="blog-header body__blog-header">
-      <a href="/">back to site</a>
-      <div id="js-blog-navi-list">this site requires javascript!</div>
-    </nav>
-
-    <main class="main">
-      <section class="section main__section">
-        <h1 class="section__title">dstbnnyblog</h1>
-
-        <p class="section__content">various thought dumps and ramblings</p>
-
-        <div class="section__content" id="js-blog-recent-posts"></div>
-      </section>
-
-      <section class="section main__section">
+  <body class="page page--blog">
+    <div class="page-wrapper page-wrapper--blog">
+      <header class="header header--blog page__header">
         <pre class="ascii-art">
-       .--.                   .---.
-   .---|__|           .-.     |~~~|
-.--|===|--|_          |_|     |~~~|--.
-|  |===|  |'\     .---!~|  .--|   |--|
-|%%|   |  |.'\    |===| |--|%%|   |  |
-|%%|   |  |\.'\   |   | |__|  |   |  |
-|  |   |  | \  \  |===| |==|  |   |  |
-|  |   |__|  \.'\ |   |_|__|  |~~~|__|
-|  |===|--|   \.'\|===|~|--|%%|~~~|--|
-^--^---'--^    `-'`---^-^--^--^---'--'</pre
+       .--.       .---.
+   .---|__|       |~~~|
+.--|===|--|_      |~~~|--.
+|  |===|  |'\     |   |--|
+|%%|   |  |.'\    |   |  |
+|%%|   |  |\.'\   |   |  |
+|  |   |  | \  \  |   |  |
+|  |   |__|  \.'\ |~~~|__|
+|  |===|--|   \.'\|~~~|--|</pre
         >
-      </section>
-    </main>
+      </header>
 
-    <footer class="blog-footer body__blog-footer">
-      <p class="blog-footer__content">
-        built with <a href="https://zonelets.net/" target="_blank">zonelets</a>!
-      </p>
-    </footer>
+      <nav class="navi navi--blog page__navi">
+        <h1 class="section__title">dstbnnyblog</h1>
+        <p class="section__content">various thoughts and ramblings</p>
+
+        <ul class="navi__list navi__list--blog">
+          <li class="navi__list-item navi__list-item--blog">
+            <a href="/">« back to site «</a>
+          </li>
+          <!-- <li class="navi__list-item navi__list-item--blog"> -->
+          <!--   <a href="">archive</a> -->
+          <!-- </li> -->
+        </ul>
+
+        <nav class="entries-navi navi__entries-navi">
+          <h2 class="">entries</h2>
+          <div class="">
+            <ul class="">
+              <li
+                class="entries__title"
+                data-post-url="posts/post-template.html"
+              >
+                <button>first post</button>
+              </li>
+              <!-- <li class="entries__title" data-post-url="posts/post-template.html"> -->
+              <!--   <button>second post</button> -->
+              <!-- </li> -->
+            </ul>
+          </div>
+        </nav>
+      </nav>
+
+      <main class="main main--blog page__main">
+        <!-- the actual blog post -->
+        <iframe
+          id="js-blog-post"
+          class="blog-post main__blog-post"
+          src="posts/post-template.html"
+          onload="this.height=this.contentWindow.document.body.scrollHeight;"
+        ></iframe>
+      </main>
+
+      <footer class="footer footer--blog page__footer">
+        <p class="footer__text">
+          dustbunnybedroom est. 2022 | <a href="/sitemap.html">sitemap</a>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
