@@ -455,8 +455,11 @@ a:hover {
         }
 
         &__subcategory {
-            border-bottom: 1px dotted black;
             padding: 0 0 0.5rem 0;
+        }
+
+        &__subcategory:not(:last-child) {
+            border-bottom: 1px dotted black;
         }
 
         &__title {
@@ -607,8 +610,11 @@ a:hover {
         &__subcategory {
             @include default-list-item();
 
-            border: none;
             padding: 0;
+        }
+
+        &__subcategory:not(:last-child) {
+            border: none;
         }
 
         &__title {

@@ -335,8 +335,10 @@ a:hover {
     line-height: 2rem;
   }
   .navi__subcategory {
-    border-bottom: 1px dotted black;
     padding: 0 0 0.5rem 0;
+  }
+  .navi__subcategory:not(:last-child) {
+    border-bottom: 1px dotted black;
   }
   .navi__title {
     display: block;
@@ -438,8 +440,10 @@ a:hover {
   .navi__subcategory {
     margin-left: 1.5rem;
     list-style: "❀ ";
-    border: none;
     padding: 0;
+  }
+  .navi__subcategory:not(:last-child) {
+    border: none;
   }
   .navi__title {
     display: list-item;
