@@ -18,6 +18,7 @@ tabWidth: 2
 overrides:
   - files: 
     - "**/*.css"
+    - "**/*.scss"
     options:
       tabWidth: 4
 useTabs: false
