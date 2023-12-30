@@ -376,6 +376,9 @@ a:hover {
     grid-template-columns: auto;
     gap: 2rem;
   }
+  .main--sitemap {
+    border: none;
+  }
   /* --- footer --- */
   .footer {
     border-top: 1px dashed black;
@@ -385,7 +388,7 @@ a:hover {
   }
 }
 /* bring in box container layout */
-@media screen and (min-width: 900px) and (min-height: 740px) {
+@media screen and (min-width: 900px) and (min-height: 850px) {
   /* --- page --- */
   /* centre page content */
   .page {
@@ -512,6 +515,11 @@ a:hover {
   }
   .main--home {
     grid-template-rows: 2fr 1fr;
+  }
+  .main--sitemap {
+    border: none;
+    width: max-content;
+    height: auto;
   }
   .main--blog {
     border: none;

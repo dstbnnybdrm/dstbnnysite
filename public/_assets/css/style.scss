@@ -513,6 +513,10 @@ a:hover {
             grid-template-columns: auto;
             gap: 2rem;
         }
+
+        &--sitemap {
+            border: none;
+        }
     }
 
     /* --- footer --- */
@@ -526,7 +530,7 @@ a:hover {
 }
 
 /* bring in box container layout */
-@media screen and (min-width: 900px) and (min-height: 740px) {
+@media screen and (min-width: 900px) and (min-height: 850px) {
     /* --- page --- */
 
     /* centre page content */
@@ -711,6 +715,13 @@ a:hover {
 
         &--home {
             grid-template-rows: 2fr 1fr;
+        }
+
+        &--sitemap {
+            border: none;
+
+            width: max-content;
+            height: auto;
         }
 
         &--blog {
