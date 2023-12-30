@@ -408,7 +408,7 @@ a:hover {
     column-gap: 1rem;
     max-width: var(--main-width);
   }
-  .page-wrapper-wrapper--blog {
+  .page-wrapper--blog {
     display: grid;
     grid-template-areas: "header ." "navi main" "footer footer";
     grid-template-rows: min-content 1fr;
@@ -423,11 +423,6 @@ a:hover {
   .navi {
     display: block;
     border: 1px solid black;
-  }
-  .navi--blog {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
   }
   .navi__home {
     display: inline;
@@ -453,6 +448,11 @@ a:hover {
     display: block;
     margin: 0 0 0 1.5rem;
   }
+  .navi--blog {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+  }
   .navi-list__item {
     display: list-item;
     margin: 0;
@@ -469,9 +469,6 @@ a:hover {
   }
   .navi-list__link:hover {
     background-color: initial;
-  }
-  .entries-navi {
-    display: block;
   }
   /* --- main --- */
   .main {

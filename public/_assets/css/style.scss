@@ -153,9 +153,6 @@ a:hover {
     grid-column: 1rem;
 
     margin: 1rem 0;
-
-    // &--blog {
-    // }
 }
 
 /* --- header --- */
@@ -555,13 +552,14 @@ a:hover {
 
         max-width: var(--main-width);
 
-        &-wrapper--blog {
+        &--blog {
             display: grid;
 
             grid-template-areas:
                 "header ."
                 "navi main"
                 "footer footer";
+
             grid-template-rows: min-content 1fr;
         }
     }
@@ -583,12 +581,6 @@ a:hover {
         display: block;
 
         border: 1px solid black;
-
-        &--blog {
-            border-top: 1px solid black;
-            border-right: 1px solid black;
-            border-left: 1px solid black;
-        }
 
         &__home {
             display: inline;
@@ -622,6 +614,12 @@ a:hover {
 
             margin: 0 0 0 1.5rem;
         }
+
+        &--blog {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+        }
     }
 
     .navi-list {
@@ -648,10 +646,6 @@ a:hover {
         &__link:hover {
             background-color: initial;
         }
-    }
-
-    .entries-navi {
-        display: block;
     }
 
     /* --- main --- */

@@ -51,22 +51,7 @@
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
     <script src="/_assets/js/script.js" defer></script>
-    <script defer>
-      // Get all the title elements
-      var titleElements = document.querySelectorAll(".entries__title");
-
-      // Add a click event listener to each title
-      titleElements.forEach(function (titleElement) {
-        titleElement.addEventListener("click", function () {
-          // Get the blog URL from the data attribute
-          var blogUrl = titleElement.getAttribute("data-blog-url");
-
-          // Update the iframe's src attribute
-          var iframe = document.getElementById("blogFrame");
-          iframe.src = blogUrl;
-        });
-      });
-    </script>
+    <script src="/_assets/js/blog2.js" defer></script>
   </head>
 
   <body class="page page--blog">
@@ -89,30 +74,28 @@
         <h1 class="section__title">dstbnnyblog</h1>
         <p class="section__content">various thoughts and ramblings</p>
 
-        <ul class="navi__list navi__list--blog">
-          <li class="navi__list-item navi__list-item--blog">
-            <a href="/">« back to site «</a>
-          </li>
-          <!-- <li class="navi__list-item navi__list-item--blog"> -->
-          <!--   <a href="">archive</a> -->
-          <!-- </li> -->
-        </ul>
+        <a href="/" class="navi__home">« back to site «</a>
 
-        <nav class="entries-navi navi__entries-navi">
-          <h2 class="">entries</h2>
-          <div class="">
-            <ul class="">
-              <li
-                class="entries__title"
+        <nav class="posts-navi navi__posts">
+          <h2 class="posts-navi__title">entries</h2>
+          <ul class="posts-list posts-navi__list">
+            <li class="posts-list__post">
+              <button
+                class="posts-list__button"
+                data-post-url="posts/post-template-2.html"
+              >
+                second post
+              </button>
+            </li>
+            <li class="posts-list__post">
+              <button
+                class="posts-list__button"
                 data-post-url="posts/post-template.html"
               >
-                <button>first post</button>
-              </li>
-              <!-- <li class="entries__title" data-post-url="posts/post-template.html"> -->
-              <!--   <button>second post</button> -->
-              <!-- </li> -->
-            </ul>
-          </div>
+                first post
+              </button>
+            </li>
+          </ul>
         </nav>
       </nav>
 
