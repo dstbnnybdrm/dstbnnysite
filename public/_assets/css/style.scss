@@ -121,6 +121,16 @@ a:hover {
     color: var(--color-tertiary);
 }
 
+@mixin default-list-item {
+    margin-left: 1.5rem;
+
+    list-style: "❀ ";
+}
+
+@mixin button-hover {
+    background-color: var(--color-primary);
+}
+
 /* ---- BLOCKS ---- */
 
 /* --- page --- */
@@ -184,7 +194,7 @@ a:hover {
     }
 
     &__home:hover {
-        background-color: var(--color-primary);
+        @include button-hover();
     }
 
     &__title {
@@ -221,8 +231,12 @@ a:hover {
     }
 
     &__link:hover {
-        background-color: var(--color-primary);
+        @include button-hover();
     }
+}
+
+.posts-navi {
+    display: none;
 }
 
 /* --- main --- */
@@ -350,20 +364,20 @@ a:hover {
 
     list-style: "❀ ";
 
+    &__item {
+        @include default-list-item();
+
+        &--tree {
+            margin: 0 0 0 1rem;
+            list-style: "─ ";
+        }
+    }
+
     &--tree {
         margin-left: 1rem;
         border-left: 1px solid black;
 
         list-style: none;
-    }
-
-    &__item {
-        margin: 0 0 0 1.5rem;
-    }
-
-    &__item--tree {
-        margin: 0 0 0 1rem;
-        list-style: "─ ";
     }
 }
 
@@ -595,7 +609,8 @@ a:hover {
         }
 
         &__subcategory {
-            margin: 0 0 0 1.5rem;
+            @include default-list-item();
+
             border: none;
             padding: 0;
         }
@@ -610,9 +625,13 @@ a:hover {
         }
 
         &__list {
-            display: block;
+            @include default-list-item();
 
-            margin: 0 0 0 1.5rem;
+            display: block;
+        }
+
+        &__posts {
+            margin: 1rem 0 0 0;
         }
 
         &--blog {
@@ -645,6 +664,38 @@ a:hover {
 
         &__link:hover {
             background-color: initial;
+        }
+    }
+
+    .posts-navi {
+        display: block;
+    }
+
+    .posts-list {
+        overflow-y: auto;
+
+        &__post {
+            @include default-list-item();
+
+            display: list-item;
+        }
+
+        &__button {
+            display: block;
+
+            border: none;
+
+            width: 100%;
+
+            text-align: left;
+            color: var(--color-primary);
+
+            background: none;
+        }
+
+        &__button:hover {
+            @include button-hover();
+            color: var(--color-tertiary);
         }
     }
 

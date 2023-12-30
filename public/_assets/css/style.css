@@ -175,6 +175,10 @@ a:hover {
   background-color: var(--color-primary);
 }
 
+.posts-navi {
+  display: none;
+}
+
 /* --- main --- */
 .main {
   grid-area: main;
@@ -259,17 +263,18 @@ a:hover {
   display: block;
   list-style: "❀ ";
 }
-.list--tree {
-  margin-left: 1rem;
-  border-left: 1px solid black;
-  list-style: none;
-}
 .list__item {
-  margin: 0 0 0 1.5rem;
+  margin-left: 1.5rem;
+  list-style: "❀ ";
 }
 .list__item--tree {
   margin: 0 0 0 1rem;
   list-style: "─ ";
+}
+.list--tree {
+  margin-left: 1rem;
+  border-left: 1px solid black;
+  list-style: none;
 }
 
 /* --- 88x31 buttons --- */
@@ -434,7 +439,8 @@ a:hover {
     background-color: initial;
   }
   .navi__subcategory {
-    margin: 0 0 0 1.5rem;
+    margin-left: 1.5rem;
+    list-style: "❀ ";
     border: none;
     padding: 0;
   }
@@ -445,8 +451,12 @@ a:hover {
     list-style: "∟ ";
   }
   .navi__list {
+    margin-left: 1.5rem;
+    list-style: "❀ ";
     display: block;
-    margin: 0 0 0 1.5rem;
+  }
+  .navi__posts {
+    margin: 1rem 0 0 0;
   }
   .navi--blog {
     border-top: 1px solid black;
@@ -469,6 +479,29 @@ a:hover {
   }
   .navi-list__link:hover {
     background-color: initial;
+  }
+  .posts-navi {
+    display: block;
+  }
+  .posts-list {
+    overflow-y: auto;
+  }
+  .posts-list__post {
+    margin-left: 1.5rem;
+    list-style: "❀ ";
+    display: list-item;
+  }
+  .posts-list__button {
+    display: block;
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: var(--color-primary);
+    background: none;
+  }
+  .posts-list__button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
   }
   /* --- main --- */
   .main {
