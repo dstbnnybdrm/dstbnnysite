@@ -234,7 +234,6 @@ a:hover {
 .feed__entry:not(:last-child) {
   margin: 0 0 0.75rem 0;
   border-bottom: 1px dotted black;
-  padding: 0 0 0.75rem 0;
 }
 .feed__entry:nth-child(n+4) {
   display: none;
