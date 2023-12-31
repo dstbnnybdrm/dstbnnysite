@@ -529,7 +529,7 @@ a:hover {
 }
 
 /* bring in box container layout */
-@media screen and (min-width: 900px) and (min-height: 850px) {
+@media screen and (min-width: 900px) and (min-height: 780px) {
     /* --- page --- */
 
     /* centre page content */
@@ -747,10 +747,9 @@ a:hover {
     /* --- footer --- */
 
     .footer {
-        border: 1px solid black;
-
-        &--blog {
-            border: none;
+        border: none;
+        &__content {
+            display: none;
         }
 
         &__text {
@@ -763,6 +762,32 @@ a:hover {
             left: 0;
 
             width: var(--main-width);
+        }
+    }
+}
+
+@media screen and (min-height: 850px) {
+    .footer {
+        border: 1px solid black;
+
+        &__content {
+            display: block;
+        }
+
+        &__text {
+            position: fixed;
+
+            margin: auto;
+
+            right: 0;
+            bottom: 0.5rem;
+            left: 0;
+
+            width: var(--main-width);
+        }
+
+        &--blog {
+            border: none;
         }
     }
 }
