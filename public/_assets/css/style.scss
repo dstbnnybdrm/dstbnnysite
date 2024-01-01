@@ -121,6 +121,10 @@ a:hover {
     color: var(--color-tertiary);
 }
 
+abbr {
+    text-decoration: none;
+}
+
 @mixin default-list-item {
     margin-left: 1.5rem;
 

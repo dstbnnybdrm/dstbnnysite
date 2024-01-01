@@ -110,6 +110,10 @@ a:hover {
   color: var(--color-tertiary);
 }
 
+abbr {
+  text-decoration: none;
+}
+
 /* ---- BLOCKS ---- */
 /* --- page --- */
 .page__main {
