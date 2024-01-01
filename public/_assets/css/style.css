@@ -282,6 +282,17 @@ a:hover {
 }
 
 /* --- other --- */
+.hidden-title {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .ascii-art {
   overflow: hidden;
   user-select: none;
@@ -535,7 +546,7 @@ a:hover {
   .footer {
     border: none;
   }
-  .footer__content {
+  .footer__buttons {
     display: none;
   }
   .footer__text {
@@ -551,7 +562,7 @@ a:hover {
   .footer {
     border: 1px solid black;
   }
-  .footer__content {
+  .footer__buttons {
     display: block;
   }
   .footer__text {

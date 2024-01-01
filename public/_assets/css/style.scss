@@ -335,7 +335,7 @@ a:hover {
 
     padding: 1rem;
 
-    // &__content {
+    // &__buttons {
     // }
 
     &__text {
@@ -387,6 +387,17 @@ a:hover {
 }
 
 /* --- other --- */
+
+.hidden-title {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
 .ascii-art {
     overflow: hidden;
@@ -748,7 +759,7 @@ a:hover {
 
     .footer {
         border: none;
-        &__content {
+        &__buttons {
             display: none;
         }
 
@@ -770,7 +781,7 @@ a:hover {
     .footer {
         border: 1px solid black;
 
-        &__content {
+        &__buttons {
             display: block;
         }
 
