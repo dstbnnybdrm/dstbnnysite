@@ -168,7 +168,6 @@ abbr {
         "footer footer";
 
     grid-template-columns: auto;
-    // grid-column: 1rem;
 
     margin: 1rem 0;
 }
@@ -338,13 +337,6 @@ abbr {
 
 .aside {
     grid-area: aside;
-
-    // border-top: 1px dashed black;
-    // border-right: 1px solid black;
-    // border-bottom: 1px dashed black;
-    // border-left: 1px solid black;
-
-    // margin: 0 0 1rem 0;
 }
 
 /* --- footer --- */
@@ -404,7 +396,6 @@ abbr {
     &__button {
         width: 88px;
         height: 31px;
-        // display: inline-block;
     }
 }
 
@@ -487,7 +478,6 @@ abbr {
 
         &__home {
             line-height: 2rem;
-            // margin-bottom: 1rem;
         }
 
         &__subcategory {
@@ -528,9 +518,8 @@ abbr {
             display: inline-block;
 
             border: none;
-            width: 8rem;
 
-            // background-color: red;
+            width: 8rem;
         }
     }
 
