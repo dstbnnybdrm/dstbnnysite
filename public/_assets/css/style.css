@@ -250,9 +250,6 @@ abbr {
 .aside {
   grid-area: aside;
 }
-.aside__content {
-  margin: 1rem;
-}
 
 /* --- footer --- */
 .footer {
@@ -410,6 +407,9 @@ abbr {
     border-right: 1px solid black;
     border-bottom: 1px dashed black;
     border-left: 1px solid black;
+  }
+  .aside__content {
+    margin: 1rem;
   }
   /* --- footer --- */
   .footer {
