@@ -150,6 +150,9 @@ abbr {
         margin: 0 0 1rem 0;
     }
 
+    // &__aside {
+    // }
+
     // &__footer {
     // }
 }
@@ -161,10 +164,11 @@ abbr {
         "header header"
         "navi navi"
         "main main"
+        "aside aside"
         "footer footer";
 
     grid-template-columns: auto;
-    grid-column: 1rem;
+    // grid-column: 1rem;
 
     margin: 1rem 0;
 }
@@ -332,15 +336,27 @@ abbr {
     }
 }
 
+.aside {
+    grid-area: aside;
+
+    // border-top: 1px dashed black;
+    // border-right: 1px solid black;
+    // border-bottom: 1px dashed black;
+    // border-left: 1px solid black;
+
+    // margin: 0 0 1rem 0;
+
+    &__content {
+        margin: 1rem;
+    }
+}
+
 /* --- footer --- */
 
 .footer {
     grid-area: footer;
 
     padding: 1rem;
-
-    // &__buttons {
-    // }
 
     &__text {
         text-align: center;
@@ -350,10 +366,10 @@ abbr {
 /* --- text --- */
 
 // .text {
-// }
 
-// .text--centred {
+// .&--centred {
 //     text-align: center;
+// }
 // }
 
 /* --- list --- */
@@ -383,10 +399,16 @@ abbr {
 /* --- 88x31 buttons --- */
 
 .buttons-88x31 {
+    display: flex;
+
+    flex-direction: row;
+
     width: 100%;
 
     &__button {
-        display: inline-block;
+        width: 88px;
+        height: 31px;
+        // display: inline-block;
     }
 }
 
@@ -445,6 +467,10 @@ abbr {
         padding: 0 2rem;
 
         &__navi {
+            margin: 0 0 1rem 0;
+        }
+
+        &__aside {
             margin: 0 0 1rem 0;
         }
     }
@@ -533,6 +559,13 @@ abbr {
         }
     }
 
+    .aside {
+        border-top: 1px dashed black;
+        border-right: 1px solid black;
+        border-bottom: 1px dashed black;
+        border-left: 1px solid black;
+    }
+
     /* --- footer --- */
 
     .footer {
@@ -577,7 +610,7 @@ abbr {
         grid-template-areas:
             "header header"
             "navi main"
-            "footer footer";
+            "aside aside";
         grid-template-columns: min-content 1fr;
         column-gap: 1rem;
 
@@ -588,8 +621,7 @@ abbr {
 
             grid-template-areas:
                 "header ."
-                "navi main"
-                "footer footer";
+                "navi main";
 
             grid-template-rows: min-content 1fr;
         }
@@ -759,50 +791,35 @@ abbr {
         }
     }
 
+    .aside {
+        display: none;
+    }
+
     /* --- footer --- */
 
     .footer {
+        position: fixed;
+
+        margin: auto;
         border: none;
-        &__buttons {
-            display: none;
-        }
+        padding: 0;
 
-        &__text {
-            position: fixed;
+        right: 0;
+        bottom: 0.5rem;
+        left: 0;
 
-            margin: auto;
+        width: var(--main-width);
 
-            right: 0;
-            bottom: 0.5rem;
-            left: 0;
-
-            width: var(--main-width);
+        &--blog {
+            border: none;
         }
     }
 }
 
 @media screen and (min-height: 850px) {
-    .footer {
+    .aside {
+        display: block;
+
         border: 1px solid black;
-
-        &__buttons {
-            display: block;
-        }
-
-        &__text {
-            position: fixed;
-
-            margin: auto;
-
-            right: 0;
-            bottom: 0.5rem;
-            left: 0;
-
-            width: var(--main-width);
-        }
-
-        &--blog {
-            border: none;
-        }
     }
 }

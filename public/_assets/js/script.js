@@ -2,6 +2,7 @@ const template_url = "/_assets/template/";
 const id_names = [
   "js-header",
   "js-navi",
+  "js-aside",
   "js-footer",
   "js-comm-status",
   "js-news-feed",
