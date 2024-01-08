@@ -284,6 +284,8 @@ abbr {
 .buttons-88x31 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   width: 100%;
 }
 .buttons-88x31__button {
