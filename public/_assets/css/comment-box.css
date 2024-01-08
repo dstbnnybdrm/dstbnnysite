@@ -1,18 +1,16 @@
-/* global font changes */
-#HCB_comment_box #hcb_form textarea,
-#HCB_comment_box #hcb_form #hcb_form_name {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 1rem;
-    text-transform: lowercase;
-    color: black;
-    background-color: white;
+#HCB_comment_box {
+    /* display: grid !important; */
+    /* gap: 1rem; */
+
+    /* grid-template-areas: "comment-form comments-list"; */
 }
 
-#HCB_comment_box {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem;
-    color: black;
-    background-color: white;
+#HCB_comment_form_box {
+    /* grid-area: comment-form; */
+}
+
+#comments_list {
+    /* grid-area: comments-list; */
 }
 
 /* HCB's messages to user */
@@ -25,6 +23,34 @@
 input#hcb_form_name,
 textarea#hcb_form_content {
     border: 1px dotted black;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    color: black;
+    background: none;
+}
+
+::-webkit-input-placeholder {
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    text-transform: lowercase;
+}
+
+:-moz-placeholder {
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    text-transform: lowercase;
+}
+
+::-moz-placeholder {
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    text-transform: lowercase;
+}
+
+:-ms-input-placeholder {
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    text-transform: lowercase;
 }
 
 #HCB_comment_box p.error {
@@ -63,11 +89,17 @@ div#comments_list {
     margin-top: 0.25rem;
 }
 
-#HCB_comment_box .hcb-comment-body {
-    font-size: 12px;
+#HCB_comment_box p.hcb-comment-body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+#HCB_comment_box b.author-name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #HCB_comment_box span.date {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
     font-size: 0.825rem;
     letter-spacing: 0.125rem;
@@ -75,11 +107,11 @@ div#comments_list {
 }
 
 /* comment buttons */
-#HCB_comment_box button.hcb-flag,
-#HCB_comment_box button.hcb-like,
-#HCB_comment_box button.hcb-reply {
-    font-size: 12px;
+#HCB_comment_box p.hcb-comment-tb button {
     color: #f69;
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #HCB_comment_box img {
