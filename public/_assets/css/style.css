@@ -114,6 +114,10 @@ abbr {
   text-decoration: none;
 }
 
+iframe {
+  display: block;
+}
+
 /* ---- BLOCKS ---- */
 /* --- page --- */
 .page__main {
@@ -189,7 +193,6 @@ abbr {
   border-bottom: 1px dashed black;
   padding: 1rem;
 }
-
 /* --- section --- */
 .section {
   display: flex;
@@ -226,6 +229,7 @@ abbr {
 
 /* --- blog-post --- */
 .blog-post {
+  display: block;
   border: none;
   width: 100%;
 }
@@ -568,6 +572,9 @@ abbr {
   }
   .aside {
     display: none;
+  }
+  .blog-post {
+    height: 100%;
   }
   /* --- footer --- */
   .footer {

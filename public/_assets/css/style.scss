@@ -125,6 +125,10 @@ abbr {
     text-decoration: none;
 }
 
+iframe {
+    display: block;
+}
+
 @mixin default-list-item {
     margin-left: 1.5rem;
 
@@ -254,6 +258,9 @@ abbr {
     border-top: 1px dashed black;
     border-bottom: 1px dashed black;
     padding: 1rem;
+
+    &--blog {
+    }
 }
 
 /* --- section --- */
@@ -305,6 +312,8 @@ abbr {
 /* --- blog-post --- */
 
 .blog-post {
+    display: block;
+
     border: none;
 
     width: 100%;
@@ -784,6 +793,10 @@ abbr {
 
     .aside {
         display: none;
+    }
+
+    .blog-post {
+        height: 100%;
     }
 
     /* --- footer --- */

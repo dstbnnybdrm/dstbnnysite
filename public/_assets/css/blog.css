@@ -49,7 +49,8 @@ body {
     font-size: var(--font-size--base);
     font-family: var(--font-family--main);
     line-height: 1.5rem;
-    height: 100%;
+    margin: 0;
+    padding: 0 1rem 0 0;
 }
 
 ul {
@@ -114,6 +115,11 @@ a:hover {
 }
 
 /* ----- */
+
+em,
+i {
+    display: inline;
+}
 
 h1,
 h2 {
@@ -198,4 +204,20 @@ code {
 
 footer {
     text-align: right;
+}
+
+audio {
+    width: 100%;
+}
+
+figure {
+    display: block;
+
+    margin: 1rem 0;
+    border: 1px dotted black;
+    padding: 1rem;
+}
+
+figcaption {
+    font-style: italic;
 }
