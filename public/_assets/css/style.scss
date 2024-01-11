@@ -820,7 +820,7 @@ iframe {
     }
 }
 
-@media screen and (min-height: 850px) {
+@media screen and (min-width: 900px) and (min-height: 850px) {
     .aside {
         display: block;
 
