@@ -292,7 +292,11 @@ iframe {
   gap: 0.5rem;
   width: 100%;
 }
+.buttons-88x31--inline {
+  flex-wrap: nowrap;
+}
 .buttons-88x31__button {
+  display: inline;
   width: 88px;
   height: 31px;
 }

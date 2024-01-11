@@ -404,9 +404,15 @@ iframe {
 
     width: 100%;
 
+    &--inline {
+      flex-wrap: nowrap;
+    }
+
     &__button {
-        width: 88px;
-        height: 31px;
+      display: inline;
+
+      width: 88px;
+      height: 31px;
     }
 }
 
