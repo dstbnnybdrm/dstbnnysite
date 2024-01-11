@@ -63,10 +63,10 @@ textarea#hcb_form_content {
 }
 
 /* rss image */
-#HCB_comment_box img.hcb-icon {
+/*#HCB_comment_box img.hcb-icon {
     display: none;
 }
-
+*/
 /* ----- COMMENT LIST ----- */
 
 div#comments_list {
