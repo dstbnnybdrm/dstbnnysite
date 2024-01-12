@@ -59,16 +59,16 @@
   </head>
 
   <body class="page">
-    <div class="page-wrapper">
-      <header class="header page__header">
-        <div id="js-header"></div>
-      </header>
+    <div class="page-wrapper page-wrapper--guestbook">
+      <!-- <header class="header page__header"> -->
+      <!--   <div id="js-header"></div> -->
+      <!-- </header> -->
 
-      <nav class="navi page__navi">
-        <div id="js-navi"></div>
+      <nav class="navi navi--guestbook page__navi">
+        <a href="/" class="navi__home">« back to site «</a>
       </nav>
 
-      <main class="main page__main">
+      <main class="main main--guestbook page__main">
         <section class="main__section m-section">
           <h1 class="m-section__title">guestbook</h1>
 
@@ -77,14 +77,13 @@
           </p>
 
           <!-- begin wwww.htmlcommentbox.com -->
-          <div id="HCB_comment_box" class="m-section__content">
-            <a href="http://www.htmlcommentbox.com">widget</a> is loading
+          <div id="HCB_comment_box">
+            <a href="http://www.htmlcommentbox.com">Comment Box</a> is loading
             comments...
           </div>
-
           <script type="text/javascript" id="hcb">
             if (!window.hcb_user) {
-              hcb_user = { comments_header: " " };
+              hcb_user = {};
             }
             (function () {
               var s = document.createElement("script"),
@@ -98,19 +97,19 @@
                   "/jread?page=" +
                   encodeURIComponent(l).replace("+", "%2B") +
                   "&mod=%241%24wq1rdBcg%249uQ99sWaFhC5XHrQ7T5jV1" +
-                  "&opts=16798&num=10&ts=1696047997962",
+                  "&opts=16646&num=10&ts=1705102805023",
               );
               if (typeof s != "undefined")
                 document.getElementsByTagName("head")[0].appendChild(s);
-            })();
+            })(); /*-->*/
           </script>
           <!-- end www.htmlcommentbox.com -->
         </section>
       </main>
 
-      <aside class="aside page__aside">
-        <div id="js-aside"></div>
-      </aside>
+      <!-- <aside class="aside page__aside"> -->
+      <!--   <div id="js-aside"></div> -->
+      <!-- </aside> -->
 
       <footer class="footer page__footer">
         <div id="js-footer"></div>

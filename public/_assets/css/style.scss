@@ -631,6 +631,14 @@ iframe {
 
             grid-template-rows: min-content 1fr;
         }
+
+        &--guestbook {
+            display: grid;
+
+            grid-template-areas:
+                "navi"
+                "main";
+        }
     }
 
     /* --- header --- */
@@ -696,6 +704,11 @@ iframe {
             border-top: 1px solid black;
             border-right: 1px solid black;
             border-left: 1px solid black;
+        }
+
+        &--guestbook {
+            border: none;
+            margin: 0;
         }
     }
 
@@ -778,6 +791,11 @@ iframe {
 
         &--blog {
             border: none;
+        }
+
+        &--guestbook {
+            border: none;
+            height: auto;
         }
     }
 

@@ -462,6 +462,10 @@ iframe {
     grid-template-areas: "header ." "navi main";
     grid-template-rows: min-content 1fr;
   }
+  .page-wrapper--guestbook {
+    display: grid;
+    grid-template-areas: "navi" "main";
+  }
   /* --- header --- */
   .header--blog {
     display: flex;
@@ -508,6 +512,10 @@ iframe {
     border-top: 1px solid black;
     border-right: 1px solid black;
     border-left: 1px solid black;
+  }
+  .navi--guestbook {
+    border: none;
+    margin: 0;
   }
   .navi-list__item {
     display: list-item;
@@ -565,6 +573,10 @@ iframe {
   }
   .main--blog {
     border: none;
+  }
+  .main--guestbook {
+    border: none;
+    height: auto;
   }
   /* --- section --- */
   .section__container {

@@ -1,119 +1,180 @@
-#HCB_comment_box {
-    /* display: grid !important; */
-    /* gap: 1rem; */
-
-    /* grid-template-areas: "comment-form comments-list"; */
+:root {
+    --font-family--main: Verdana, Geneva, Tahoma, sans-serif;
+    --font-family--form: "Courier New", Courier, monospace;
 }
 
-#HCB_comment_form_box {
-    /* grid-area: comment-form; */
-}
+/* --- COMMENT BOX GENERAL STUFF --- */
 
-#comments_list {
-    /* grid-area: comments-list; */
-}
+/* comments heading */
 
+#HCB_comment_box h3 {
+    display: none;
+}
 /* HCB's messages to user */
-#hcb_msg {
+
+#HCB_comment_box #hcb_msg {
+    grid-area: comment-message;
+
+    margin: 1rem 0;
+
+    font-family: var(--font-family--main);
     text-transform: lowercase;
-    margin-bottom: 1rem;
 }
+
+#HCB_comment_box p.error {
+    grid-area: comment-message;
+
+    border: 1px solid red;
+
+    font-family: var(--font-family--main);
+    text-transform: lowercase;
+}
+
+/* "not using html comment box yet?" */
+
+#HCB_comment_box div.home-desc {
+    display: none;
+}
+
+/* log-in icon */
+
+#HCB_comment_box img.hcb-icon.hcb-door-in {
+    display: inline;
+}
+
+/* --- COMMENT FORMS --- */
 
 /* text forms */
+
 input#hcb_form_name,
 textarea#hcb_form_content {
     border: 1px dotted black;
-    font-family: "Courier New", Courier, monospace;
+
+    font-family: var(--font-family--form);
     font-size: 16px;
     color: black;
     background: none;
 }
 
+/* placeholder text */
+
 ::-webkit-input-placeholder {
     font-size: 16px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: var(--font-family--form);
     text-transform: lowercase;
 }
 
 :-moz-placeholder {
     font-size: 16px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: var(--font-family--form);
     text-transform: lowercase;
 }
 
 ::-moz-placeholder {
     font-size: 16px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: var(--font-family--form);
     text-transform: lowercase;
 }
 
 :-ms-input-placeholder {
     font-size: 16px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: var(--font-family--form);
     text-transform: lowercase;
 }
 
-#HCB_comment_box p.error {
-    border: 1px solid red;
+/* --- COMMENTS LIST --- */
+
+#comments_list {
+    border-top: 1px dotted black;
+    padding: 1rem 0 0 0;
 }
 
-/* "not using html comment box yet?" */
-#HCB_comment_box div.home-desc {
-    display: none;
+#comments_list #no_comments {
+    font-family: var(--font-family--main);
+    text-transform: lowercase;
 }
 
-/* rss image */
-/*#HCB_comment_box img.hcb-icon {
-    display: none;
-}
-*/
-/* ----- COMMENT LIST ----- */
-
-div#comments_list {
-    border-top: 1px dashed black;
-    padding-top: 1em;
-    margin-top: 1em;
-}
-
-#HCB_comment_box div.comment {
+#comments_list div.comment {
     margin: 0;
     padding: 0;
 }
 
-#HCB_comment_box blockquote {
+#comments_list blockquote {
+    margin: 0;
     padding: 0;
+}
+
+#comments_list p.hcb-comment-tb {
     margin: 0;
 }
 
-#HCB_comment_box p.hcb-comment-tb {
-    margin-top: 0.25rem;
+#comments_list p.hcb-comment-body {
+    font-family: var(--font-family--main);
 }
 
-#HCB_comment_box p.hcb-comment-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 13px;
+#comments_list b.author-name {
+    font-family: var(--font-family--main);
 }
 
-#HCB_comment_box b.author-name {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+#comments_list span.date {
+    font-family: var(--font-family--main);
 
-#HCB_comment_box span.date {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
+
     font-size: 0.825rem;
     letter-spacing: 0.125rem;
     text-transform: lowercase;
 }
 
 /* comment buttons */
-#HCB_comment_box p.hcb-comment-tb button {
+
+#comments_list p.hcb-comment-tb button {
     color: #f69;
+    font-family: var(--font-family--main);
     font-size: 1rem;
     text-transform: lowercase;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#HCB_comment_box img {
+#comments_list .likes img {
     display: inline-block;
+}
+
+@media screen and (min-width: 900px) and (min-height: 780px) {
+    /* --- COMMENT BOX GENERAL STUFF --- */
+
+    div #HCB_comment_box {
+        display: grid;
+        column-gap: 1rem;
+
+        grid-template-areas:
+            "comment-message ."
+            "comment-form comments-list";
+    }
+
+    /* --- COMMENT FORMS --- */
+
+    #HCB_comment_form_box {
+        grid-area: comment-form;
+
+        border: 1px solid black;
+        padding: 1rem;
+
+        height: calc(30rem * 1.414);
+        width: 30rem;
+    }
+
+    /* --- COMMENTS LIST --- */
+
+    #comments_list {
+        grid-area: comments-list;
+
+        overflow-y: auto;
+        overflow-x: hidden !important;
+
+        border: 1px solid black;
+        padding: 1rem;
+
+        height: calc(30rem * 1.414);
+        width: 30rem;
+    }
 }
