@@ -49,19 +49,33 @@ c(  づ✿
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
+
     <script src="/_assets/js/script.js" defer></script>
+    <script
+      src="https://status.cafe/current-status.js?name=dstbnnyjp"
+      defer
+    ></script>
   </head>
 
   <body class="page">
+    <!-- wrap page elements into a grid -->
     <div class="page-wrapper">
       <header class="header page__header">
         <div id="js-header"></div>
       </header>
 
-      <nav class="navi page__navi">
-        <div id="js-navi"></div>
-      </nav>
+      <!-- sidebar -->
+      <div class="sidebar page__sidebar">
+        <nav class="navi page__navi">
+          <div id="js-navi"></div>
+        </nav>
 
+        <aside class="status page__status">
+          <div id="js-status"></div>
+        </aside>
+      </div>
+
+      <!-- main -->
       <main class="main main--home page__main">
         <section class="section main__section">
           <h1 class="section__title">welcome!</h1>
@@ -107,10 +121,12 @@ c(  づ✿
         </section>
       </main>
 
-      <aside class="aside page__aside">
-        <div id="js-aside"></div>
+      <!-- buttons and blinkies -->
+      <aside class="collection page__collection">
+        <div id="js-collection"></div>
       </aside>
 
+      <!-- footer -->
       <footer class="footer page__footer">
         <div id="js-footer"></div>
       </footer>

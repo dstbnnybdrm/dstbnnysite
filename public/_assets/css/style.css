@@ -37,9 +37,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* for debugging: */
-  /* outline: 2px dashed lightblue; */
-  /* scrollbar-width: thin; */
   font-size: 13px;
 }
 
@@ -120,13 +117,9 @@ iframe {
 
 /* ---- BLOCKS ---- */
 /* --- page --- */
-.page__main {
-  margin: 0 0 1rem 0;
-}
-
 .page-wrapper {
   display: grid;
-  grid-template-areas: "header header" "navi navi" "main main" "aside aside" "footer footer";
+  grid-template-areas: "header" "navi" "main" "collection" "footer ";
   grid-template-columns: auto;
   margin: 1rem 0;
 }
@@ -136,6 +129,12 @@ iframe {
   display: flex;
   grid-area: header;
   justify-content: center;
+}
+
+/* --- sidebar --- */
+.sidebar {
+  display: grid;
+  grid-area: sidebar;
 }
 
 /* --- navi --- */
@@ -186,6 +185,18 @@ iframe {
   display: none;
 }
 
+/* --- status --- */
+.status {
+  grid-area: status;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.status #statuscafe {
+  background: none;
+}
+.status #statuscafe-username {
+  margin-bottom: 1rem;
+}
 /* --- main --- */
 .main {
   grid-area: main;
@@ -193,6 +204,7 @@ iframe {
   border-bottom: 1px dashed black;
   padding: 1rem;
 }
+
 /* --- section --- */
 .section {
   display: flex;
@@ -251,8 +263,8 @@ iframe {
   font-weight: normal;
 }
 
-.aside {
-  grid-area: aside;
+.collection {
+  grid-area: collection;
 }
 
 /* --- footer --- */
@@ -346,12 +358,6 @@ iframe {
   .page {
     padding: 0 2rem;
   }
-  .page__navi {
-    margin: 0 0 1rem 0;
-  }
-  .page__aside {
-    margin: 0 0 1rem 0;
-  }
   .page-wrapper {
     margin: 1rem auto;
     max-width: calc(var(--main-width) / 1.25);
@@ -412,13 +418,13 @@ iframe {
   .main--sitemap {
     border: none;
   }
-  .aside {
+  .collection {
     border-top: 1px dashed black;
     border-right: 1px solid black;
     border-bottom: 1px dashed black;
     border-left: 1px solid black;
   }
-  .aside__content {
+  .collection__content {
     margin: 1rem;
   }
   /* --- footer --- */
@@ -452,9 +458,9 @@ iframe {
   }
   .page-wrapper {
     display: grid;
-    grid-template-areas: "header header" "navi main" "aside aside";
+    grid-template-areas: "header header" "sidebar main" "sidebar collection";
     grid-template-columns: min-content 1fr;
-    column-gap: 1rem;
+    gap: 1rem;
     max-width: var(--main-width);
   }
   .page-wrapper--blog {
@@ -471,6 +477,12 @@ iframe {
     display: flex;
     flex-direction: column;
     justify-content: start;
+  }
+  /* --- sidebar --- */
+  .sidebar {
+    grid-template-areas: "navi" "status";
+    grid-template-columns: 1fr min-content;
+    row-gap: 1rem;
   }
   /* --- navi --- */
   .navi {
@@ -586,7 +598,7 @@ iframe {
   .feed__entry:nth-child(n+4) {
     display: block;
   }
-  .aside {
+  .collection {
     display: none;
   }
   .blog-post {
@@ -608,7 +620,7 @@ iframe {
   }
 }
 @media screen and (min-width: 900px) and (min-height: 850px) {
-  .aside {
+  .collection {
     display: block;
     border: 1px solid black;
   }

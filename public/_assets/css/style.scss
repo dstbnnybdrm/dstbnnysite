@@ -44,10 +44,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* for debugging: */
-    /* outline: 2px dashed lightblue; */
-
-    /* scrollbar-width: thin; */
 
     font-size: 13px;
 }
@@ -129,6 +125,8 @@ iframe {
     display: block;
 }
 
+// mixins
+
 @mixin default-list-item {
     margin-left: 1.5rem;
 
@@ -147,14 +145,14 @@ iframe {
     // &__header {
     // }
 
-    // &__navi {
+    // &__sidebar {
     // }
 
-    &__main {
-        margin: 0 0 1rem 0;
-    }
+    // &__main {
+        // margin: 0 0 1rem 0;
+    // }
 
-    // &__aside {
+    // &__collection {
     // }
 
     // &__footer {
@@ -165,11 +163,11 @@ iframe {
     display: grid;
 
     grid-template-areas:
-        "header header"
-        "navi navi"
-        "main main"
-        "aside aside"
-        "footer footer";
+        "header"
+        "navi"
+        "main"
+        "collection"
+        "footer ";
 
     grid-template-columns: auto;
 
@@ -183,6 +181,18 @@ iframe {
 
     grid-area: header;
     justify-content: center;
+}
+
+/* --- sidebar --- */
+
+.sidebar {
+    display: grid;
+
+    grid-area: sidebar;
+
+    // &__navi {}
+
+    // &__status {}
 }
 
 /* --- navi --- */
@@ -250,6 +260,32 @@ iframe {
     display: none;
 }
 
+/* --- status --- */
+
+.status {
+    grid-area: status;
+
+    border: 1px solid black;
+    padding: 1rem;
+
+    #statuscafe {
+        background: none;
+    }
+
+    #statuscafe-username {
+        margin-bottom: 1rem;
+
+        // a {
+        //     display: block;
+        // }
+    }
+
+
+    #statuscafe-content {
+    }
+}
+
+
 /* --- main --- */
 
 .main {
@@ -259,8 +295,8 @@ iframe {
     border-bottom: 1px dashed black;
     padding: 1rem;
 
-    &--blog {
-    }
+    // &--blog {
+    // }
 }
 
 /* --- section --- */
@@ -344,8 +380,8 @@ iframe {
     }
 }
 
-.aside {
-    grid-area: aside;
+.collection{
+    grid-area: collection;
 }
 
 /* --- footer --- */
@@ -378,6 +414,18 @@ iframe {
 
     &__item {
         @include default-list-item();
+
+        // &--music {
+        // }
+
+        // &--downloads{
+        // }
+
+        // &--game-dev{
+        // }
+
+        // &--misc{
+        // }
 
         &--tree {
             margin: 0 0 0 1rem;
@@ -461,6 +509,7 @@ iframe {
     height: 2rem;
 }
 
+
 /* ---- BREAKPOINTS ---- */
 
 /* bring in scrolling overflows, side-to-side elements, centred footer */
@@ -470,13 +519,9 @@ iframe {
     .page {
         padding: 0 2rem;
 
-        &__navi {
-            margin: 0 0 1rem 0;
-        }
-
-        &__aside {
-            margin: 0 0 1rem 0;
-        }
+        // &__collection {
+           // margin: 0 0 1rem 0;
+        // }
     }
 
     .page-wrapper {
@@ -550,8 +595,8 @@ iframe {
             display: grid;
 
             grid-template-areas:
-                "welcome    news-feed"
-                "update     update";
+            "welcome    news-feed"
+            "update     update";
             grid-template-columns: auto;
             gap: 2rem;
         }
@@ -561,7 +606,7 @@ iframe {
         }
     }
 
-    .aside {
+    .collection {
         border-top: 1px dashed black;
         border-right: 1px solid black;
         border-bottom: 1px dashed black;
@@ -614,11 +659,11 @@ iframe {
         display: grid;
 
         grid-template-areas:
-            "header header"
-            "navi main"
-            "aside aside";
+        "header header"
+        "sidebar main"
+        "sidebar collection";
         grid-template-columns: min-content 1fr;
-        column-gap: 1rem;
+        gap: 1rem;
 
         max-width: var(--main-width);
 
@@ -650,6 +695,16 @@ iframe {
             flex-direction: column;
             justify-content: start;
         }
+    }
+
+    /* --- sidebar --- */
+
+    .sidebar {
+        grid-template-areas:
+            "navi"
+            "status";
+        grid-template-columns: 1fr min-content;
+        row-gap: 1rem;
     }
 
     /* --- navi --- */
@@ -770,6 +825,7 @@ iframe {
         }
     }
 
+
     /* --- main --- */
 
     .main {
@@ -815,7 +871,7 @@ iframe {
         }
     }
 
-    .aside {
+    .collection {
         display: none;
     }
 
@@ -845,7 +901,7 @@ iframe {
 }
 
 @media screen and (min-width: 900px) and (min-height: 850px) {
-    .aside {
+    .collection {
         display: block;
 
         border: 1px solid black;
