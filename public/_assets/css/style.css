@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * using BEM methodology: https://getbem.com/
  *
@@ -78,7 +79,6 @@ h6 {
   isolation: isolate;
 }
 
-/*:._.:*~  BASICS  ~*:._.:*/
 /* -- links -- */
 a {
   text-decoration-style: dotted;
@@ -96,15 +96,62 @@ a:hover {
   color: var(--color--tertiary);
 }
 
+/*:._.:*~  BLOCKS  ~*:._.:*/
 /* --- PAGE --- */
 .page {
   font-family: var(--font-family--main);
   font-size: 0.9rem;
 }
+@media (min-width: 375px) and (max-width: 999px) {
+  .page {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1000px) {
+  .page {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0.5rem;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+@media (min-width: 1000px) {
+  .page__collection {
+    max-height: min-content;
+  }
+}
+@media (min-width: 1000px) {
+  .page__footer {
+    position: fixed;
+    right: 0;
+    bottom: 0.5rem;
+    left: 0;
+    margin: auto;
+  }
+}
 
 .page-wrapper {
   display: grid;
   gap: 1rem;
+}
+@media (min-width: 375px) and (max-width: 999px) {
+  .page-wrapper {
+    grid-template-areas: "header" "navi" "main" "collection" "footer";
+  }
+}
+@media (min-width: 1000px) {
+  .page-wrapper {
+    grid-template-areas: "header header" "sidebar main" "sidebar collection";
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto 1fr min-content;
+    max-width: var(--main-content-width);
+    height: var(--main-content-height);
+  }
 }
 
 /* --- HEADER --- */
@@ -112,43 +159,139 @@ a:hover {
   grid-area: header;
 }
 
+@media (min-width: 375px) and (max-width: 999px) {
+  .header-tagline {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .header-tagline {
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+}
+
 /* --- SIDEBAR --- */
 .sidebar {
   grid-area: sidebar;
+}
+@media (min-width: 375px) and (max-width: 999px) {
+  .sidebar {
+    display: contents;
+  }
+}
+@media (min-width: 1000px) {
+  .sidebar {
+    display: grid;
+    grid-area: sidebar;
+    grid-template-areas: "navi" "status" "aside";
+    grid-template-rows: min-content min-content 1fr;
+    row-gap: 1rem;
+  }
 }
 
 /* --- NAVIGATION --- */
 .navi {
   grid-area: navi;
 }
-.navi__title {
-  font-size: var(--font-size--base);
-  font-weight: normal;
+@media (min-width: 1000px) {
+  .navi {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+}
+@media (min-width: 1000px) {
+  .navi__category {
+    display: list-item;
+    margin-left: 1.25rem;
+    list-style: "∟ ";
+  }
+}
+@media (min-width: 1000px) {
+  .navi__title {
+    font-size: var(--font-size--base);
+    font-weight: normal;
+  }
+}
+@media (min-width: 1000px) {
+  .navi__list {
+    margin-left: 1.25rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navi-list__item {
+    display: list-item;
+    border: none;
+    line-height: 1.5rem;
+    list-style: "∟ ";
+  }
 }
 
 /* --- STATUS --- */
 .status {
   grid-area: status;
 }
+@media (min-width: 375px) and (max-width: 999px) {
+  .status {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .status {
+    border: 1px solid black;
+    padding: 1rem;
+    font-size: var(--font-size--small);
+  }
+}
 
 /* --- TBD --- */
 .aside {
   grid-area: aside;
+}
+@media (min-width: 375px) and (max-width: 999px) {
+  .aside {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .aside {
+    border: 1px solid black;
+    padding: 1rem;
+  }
 }
 
 /* --- MAIN --- */
 .main {
   grid-area: main;
 }
+@media (min-width: 1000px) {
+  .main {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+}
 .main__content {
   display: block;
   border: none;
   width: 100%;
 }
+@media (min-width: 1000px) {
+  .main__content {
+    height: 100%;
+  }
+}
 
 /* --- COLLECTION --- */
 .collection {
   grid-area: collection;
+}
+@media (min-width: 1000px) {
+  .collection {
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+  }
 }
 
 /* --- FOOTER --- */
@@ -162,6 +305,8 @@ a:hover {
 /* --- MISC --- */
 .title {
   font-size: var(--font-size--large);
+  /* for screen readers to have a 
+  readable but not visible header */
 }
 .title--hidden {
   border: 0;
@@ -188,117 +333,6 @@ a:hover {
   display: inline;
   width: 88px;
   height: 31px;
-}
-
-/*:._.:*~  SMALL/MOBILE  ~*:._.:*/
-@media (min-width: 375px) and (max-width: 999px) {
-  /* --- PAGE --- */
-  .page {
-    padding: 1rem;
-  }
-  .page-wrapper {
-    grid-template-areas: "header" "navi" "main" "collection" "footer";
-  }
-  /* --- HEADER --- */
-  .header-tagline {
-    display: none;
-  }
-  /* --- SIDEBAR --- */
-  .sidebar {
-    display: contents;
-  }
-  /* --- NAVIGATION --- */
-  /* --- STATUS --- */
-  .status {
-    display: none;
-  }
-  /* --- TBD --- */
-  .aside {
-    display: none;
-  }
-  /* --- MAIN --- */
-  .main {
-    display: contents;
-  }
-  /* --- COLLECTION --- */
-  /* --- FOOTER --- */
-}
-/*:._.:*~  LARGE/DESKTOP  ~*:._.:*/
-@media (min-width: 1000px) {
-  /* --- PAGE --- */
-  .page {
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0.5rem;
-    left: 0;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-  }
-  .page__collection {
-    max-height: min-content;
-  }
-  .page__footer {
-    position: fixed;
-    right: 0;
-    bottom: 0.5rem;
-    left: 0;
-    margin: auto;
-  }
-  .page-wrapper {
-    grid-template-areas: "header header" "sidebar main" "sidebar collection";
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: auto 1fr min-content;
-    max-width: var(--main-content-width);
-    height: var(--main-content-height);
-  }
-  /* --- HEADER --- */
-  .header-tagline {
-    border: 1px solid black;
-    padding: 1rem;
-  }
-  /* --- SIDEBAR --- */
-  .sidebar {
-    display: grid;
-    grid-area: sidebar;
-    grid-template-areas: "navi" "status" "aside";
-    grid-template-rows: min-content min-content 1fr;
-    row-gap: 1rem;
-  }
-  /* --- NAVIGATION --- */
-  .navi {
-    border: 1px solid black;
-    padding: 1rem;
-  }
-  /* --- STATUS --- */
-  .status {
-    border: 1px solid black;
-    padding: 1rem;
-  }
-  /* --- TBD --- */
-  .aside {
-    border: 1px solid black;
-    padding: 1rem;
-  }
-  /* --- MAIN --- */
-  .main {
-    border: 1px solid black;
-    padding: 1rem;
-  }
-  .main__content {
-    border: none;
-    /* take up entirety of container */
-    width: 100%;
-    height: 100%;
-  }
-  /* --- COLLECTION --- */
-  .collection {
-    border: 1px solid black;
-    padding: 1rem;
-  }
-  /* --- FOOTER --- */
 }
 
 /*# sourceMappingURL=style.css.map */
