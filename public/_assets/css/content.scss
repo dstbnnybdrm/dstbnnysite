@@ -1,0 +1,101 @@
+/*:._.:*~  VARIABLES  ~*:._.:*/
+:root {
+    --font-family--main: Verdana, Geneva, Tahoma, sans-serif;
+    --font-family--mono: "Courier New", Courier, monospace;
+
+    --font-size--small: 0.75em;
+    --font-size--base: 1em;
+    --font-size--large: 1.125em;
+
+    --letter-spacing--base: initial;
+    --letter-spacing--wide: 0.125em;
+
+    --color--primary: #f69;
+    --color--secondary: #c36;
+    --color--tertiary: #6cc;
+
+    --color-background: white;
+
+    --main-content-width: 67em;
+    --main-content-height: 50em;
+}
+
+/*:._.:*~  GLOBAL RESETS  ~*:._.:*
+ *
+ * global reset taken from here: 
+ * https://www.joshwcomeau.com/css/custom-css-reset/
+ * 
+ */
+
+/* less shitty box-sizing (border-based instead of content-based) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* reset layout defaults */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* text reset */
+body {
+    line-height: 1.5;
+}
+
+/* improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+
+    max-width: 100%;
+}
+
+/* remove form typography styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* create a root stacking context */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* -- links -- */
+a {
+    text-decoration-style: dotted;
+}
+
+a:link {
+    color: var(--color--primary);
+}
+
+a:visited {
+    color: var(--color--secondary);
+}
+
+a:hover {
+    color: var(--color--tertiary);
+}
+
+/*:._.:*~  BLOCKS  ~*:._.:*/
