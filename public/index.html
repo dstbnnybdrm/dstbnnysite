@@ -1,8 +1,9 @@
-<!--
-  /)/)
- (˶•༝•)     wow, it's the home page!
+<!-- 
+  /)/) 
+ (˶•༝•)
 c(  づ✿
 -->
+
 <!doctype html>
 
 <html lang="en">
@@ -48,7 +49,7 @@ c(  づ✿
     <link href="/_assets/img/favicon/site.webmanifest" rel="manifest" />
 
     <!-- style + script -->
-    <link rel="stylesheet" href="/_assets/css/style.css" />
+    <link rel="stylesheet" href="/_assets/css/style2.css" />
 
     <script src="/_assets/js/script.js" defer></script>
     <script
@@ -58,77 +59,270 @@ c(  づ✿
   </head>
 
   <body class="page">
-    <!-- wrap page elements into a grid -->
     <div class="page-wrapper">
+      <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
       <header class="header page__header">
-        <div id="js-header"></div>
+        <!-- <pre class="ascii-art header_art" aria-hidden="true"> -->
+        <!-- () ___                        .    _______ -->
+        <!-- ||(___)_______________()     /_\   |__*__| -->
+        <!-- ||----|#| |#|_|#|_|#|_||    __|__  |__*__| -->
+        <!-- ||____|_|#|_|#|_|#|_|#||    |_*_|  |__*__| -->
+        <!-- ||    |#|_|#|_|#|_|#|_||    |   |  |/   \|</pre -->
+        <!-- > -->
+
+        <p class="header-tagline header__tagline" id="js-header-tagline">
+          test
+        </p>
       </header>
 
-      <!-- sidebar -->
+      <!-- ~*:._.:*~  SIDEBAR  ~*:._.:*~ -->
+
       <div class="sidebar page__sidebar">
-        <nav class="navi page__navi">
-          <div id="js-navi"></div>
+        <!-- ~* NAVIGATION *~ -->
+        <nav class="navi sidebar__navi">
+          <h1 class="title title--hidden">site navigation</h1>
+
+          <a href="/home.html" class="navi-home navi__home" target="mainframe"
+            ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
+          >
+
+          <nav class="navi__category">
+            <h2 class="navi__title">from me</h2>
+            <ul class="navi-list navi__list">
+              <li class="navi-list__item">
+                <a class="navi-list__link" href="/about.html" target="mainframe"
+                  >about</a
+                >
+              </li>
+              <li class="navi-list__item">
+                <a class="navi-list__link" href="/blog/">blog</a>
+              </li>
+              <li class="navi-list__item">
+                <a class="navi-list__link" href="/work/" target="mainframe"
+                  >work</a
+                >
+              </li>
+              <li class="navi-list__item">
+                <a
+                  class="navi-list__link"
+                  href="/commission.html"
+                  target="mainframe"
+                  >commission</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="navi__category">
+            <h2 class="navi__title">for you</h2>
+            <ul class="navi-list navi__list">
+              <li class="navi-list__item">
+                <a
+                  class="navi-list__link"
+                  href="/resources.html"
+                  target="mainframe"
+                  >resources</a
+                >
+              </li>
+              <li class="navi-list__item">
+                <a
+                  class="navi-list__link"
+                  href="/outlinks.html"
+                  target="mainframe"
+                  >outlinks</a
+                >
+              </li>
+              <li class="navi-list__item">
+                <a class="navi-list__link" href="/guestbook.html">guestbook</a>
+              </li>
+            </ul>
+          </nav>
         </nav>
 
-        <aside class="status page__status">
-          <div id="js-status"></div>
+        <!-- ~* STATUS WIDGET *~ -->
+
+        <aside class="status sidebar__status">
+          <h1 class="title status__title">recent status</h1>
+          <div id="statuscafe-username" class="status__username"></div>
+          <div id="statuscafe-content" class="body-text status__content"></div>
+        </aside>
+
+        <!-- ~* TBD *~ -->
+
+        <aside class="aside sidebar__aside">
+          <div></div>
         </aside>
       </div>
 
-      <!-- main -->
-      <main class="main main--home page__main">
-        <section class="section main__section">
-          <h1 class="section__title">welcome!</h1>
-          <p class="section__content">
-            hi, i'm jp and this is my humble little corner of the web! here
-            you'll find all of my creative work such as:
-            <a href="/work/music.html">music</a>,
-            <a href="/work/game-dev.html">game dev</a>,
-            <a href="/commission.html">audio commissions</a>, and
-            <a href="/work">more</a>, as well anything else i feel like!
-            <img
-              class="section__image"
-              alt=""
-              src="/_assets/img/pinkbunnyhop.gif"
-              style="display: inline"
-            />
-          </p>
+      <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
 
-          <p class="section__content">
-            feel free to sign my <a href="/guestbook.html">guestbook</a> if you
-            want to share any thoughts! or check out my
-            <a href="/blog">blog</a> if you want to read any of mine!
-          </p>
-
-          <p class="section__content">
-            and if you just want to get out of here, maybe check out some
-            <a href="/outlinks.html">other sites</a> that i think are neat!
-          </p>
-
-          <article class="comm-status section__content">
-            <div id="js-comm-status"></div>
-          </article>
-        </section>
-
-        <section class="feed section section--news-feed main__section">
-          <h1 class="section__title">what's new?</h1>
-          <div class="section__container" id="js-news-feed"></div>
-        </section>
-
-        <section class="feed section section--update-log main__section">
-          <h1 class="section__title">update log</h1>
-          <div class="section__container" id="js-update-log"></div>
-        </section>
+      <main id="js-main" class="main page__main">
+        <iframe
+          class="main__content"
+          name="mainframe"
+          src="/home.html"
+        ></iframe>
       </main>
 
-      <!-- buttons and blinkies -->
+      <!-- ~*:._.:*~  COLLECTION  ~*:._.:*~ -->
+
       <aside class="collection page__collection">
-        <div id="js-collection"></div>
+        <marquee
+          onmouseover="this.stop();"
+          onmouseout="this.start();"
+          class="collection__content"
+        >
+          <ul class="buttons-88x31 buttons-88x31--inline">
+            <!-- clickable buttons -->
+            <li class="buttons-88x31__button">
+              <a
+                href="https://decolonizepalestine.com/introduction-to-palestine/"
+                target="_blank"
+              >
+                <img src="/_assets/img/88x31/riversea.gif" alt="neocities" />
+              </a>
+            </li>
+            <li class="buttons-88x31__button">
+              <a
+                href="https://neocities.org/site/dustbunnybedroom"
+                target="_blank"
+              >
+                <img src="/_assets/img/88x31/neocities.gif" alt="neocities" />
+              </a>
+            </li>
+            <li class="buttons-88x31__button">
+              <a href="https://neovim.io/" target="_blank">
+                <img
+                  src="/_assets/img/88x31/neovim.gif"
+                  alt="this site was made with neovim"
+                />
+              </a>
+            </li>
+            <li class="buttons-88x31__button">
+              <a href="https://archive.org/details/Winamp5666" target="_blank">
+                <img
+                  src="/_assets/img/88x31/winamp.gif"
+                  alt="built listening to winamp"
+                />
+              </a>
+            </li>
+            <li class="buttons-88x31__button">
+              <a href="https://www.rpgmakerweb.com/" target="_blank">
+                <img
+                  src="/_assets/img/88x31/rpg_maker.gif"
+                  alt="rpg maker user"
+                />
+              </a>
+            </li>
+            <li class="buttons-88x31__button">
+              <a
+                href="http://www3.nns.ne.jp/~tk-mto/kikiyamaHP.html"
+                target="_blank"
+              >
+                <img src="/_assets/img/88x31/yume_nikki.gif" alt="yume nikki" />
+              </a>
+            </li>
+            <li class="buttons-88x31__button">
+              <a href="https://abyssl.neocities.org/gsii" target="_blank">
+                <img
+                  src="/_assets/img/88x31/gsii_okay.gif"
+                  alt="ghost suburbs ii fanlisting"
+                />
+              </a>
+            </li>
+            <li class="buttons-88x31__button">
+              <a href="https://archive.org/" target="_blank">
+                <img
+                  src="/_assets/img/88x31/internet_archive.gif"
+                  alt="internet archive"
+                />
+              </a>
+            </li>
+            <li class="buttons-88x31__button">
+              <a
+                href="https://carseatheadrest.bandcamp.com/album/twin-fantasy"
+                target="_blank"
+              >
+                <img
+                  src="/_assets/img/88x31/tf.gif"
+                  alt="fantasy: music for the gays"
+                />
+              </a>
+            </li>
+
+            <!-- not clickable buttons -->
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/nb_flag.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/y2k.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/miku_approved.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/poweredbythevoid.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/nekkoscape98.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/cuteanimegirls.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/cassette.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/queercoded.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img
+                src="/_assets/img/88x31/earthbound-fuzzy-pickles.gif"
+                alt=""
+              />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/earthbound-hypnos.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/needy_streamer.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/lain.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/ralseismoking.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/stardewvalley.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/penis.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/badapple.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/mspaint4ever.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/nofuckingthanks.gif" alt="" />
+            </li>
+            <li class="buttons-88x31__button">
+              <img src="/_assets/img/88x31/tyg.gif" alt="" />
+            </li>
+          </ul>
+        </marquee>
       </aside>
 
-      <!-- footer -->
+      <!-- ~*:._.:*~  FOOTER  ~*:._.:*~ -->
+
       <footer class="footer page__footer">
-        <div id="js-footer"></div>
+        <h1 class="title title--hidden">footer</h1>
+
+        <p class="footer__content">
+          © 2022 dustbunnybedroom | <a href="/sitemap.html">sitemap</a>
+        </p>
       </footer>
     </div>
   </body>

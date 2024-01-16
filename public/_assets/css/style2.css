@@ -1,0 +1,301 @@
+/*
+ * using BEM methodology: https://getbem.com/
+ *
+ */
+/*:._.:*~  VARIABLES  ~*:._.:*/
+:root {
+  --font-family--main: Verdana, Geneva, Tahoma, sans-serif;
+  --font-family--mono: "Courier New", Courier, monospace;
+  --font-size--small: 0.75em;
+  --font-size--base: 1em;
+  --font-size--large: 1.125em;
+  --letter-spacing--base: initial;
+  --letter-spacing--wide: 0.125em;
+  --color--primary: #f69;
+  --color--secondary: #c36;
+  --color--tertiary: #6cc;
+  --color-background: white;
+  --main-content-width: 67em;
+  --main-content-height: 50em;
+}
+
+/*:._.:*~  GLOBAL RESETS  ~*:._.:*
+ *
+ * global reset taken from here: 
+ * https://www.joshwcomeau.com/css/custom-css-reset/
+ * 
+ */
+/* less shitty box-sizing (border-based instead of content-based) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* reset layout defaults */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* text reset */
+body {
+  line-height: 1.5;
+}
+
+/* improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* remove form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*:._.:*~  BASICS  ~*:._.:*/
+/* -- links -- */
+a {
+  text-decoration-style: dotted;
+}
+
+a:link {
+  color: var(--color--primary);
+}
+
+a:visited {
+  color: var(--color--secondary);
+}
+
+a:hover {
+  color: var(--color--tertiary);
+}
+
+/* --- PAGE --- */
+.page {
+  font-family: var(--font-family--main);
+  font-size: 0.9rem;
+}
+
+.page-wrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+/* --- HEADER --- */
+.header {
+  grid-area: header;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  grid-area: sidebar;
+}
+
+/* --- NAVIGATION --- */
+.navi {
+  grid-area: navi;
+}
+.navi__title {
+  font-size: var(--font-size--base);
+  font-weight: normal;
+}
+
+/* --- STATUS --- */
+.status {
+  grid-area: status;
+}
+
+/* --- TBD --- */
+.aside {
+  grid-area: aside;
+}
+
+/* --- MAIN --- */
+.main {
+  grid-area: main;
+}
+.main__content {
+  display: block;
+  border: none;
+  width: 100%;
+}
+
+/* --- COLLECTION --- */
+.collection {
+  grid-area: collection;
+}
+
+/* --- FOOTER --- */
+.footer {
+  grid-area: footer;
+}
+.footer__content {
+  text-align: center;
+}
+
+/* --- MISC --- */
+.title {
+  font-size: var(--font-size--large);
+}
+.title--hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.body-text {
+  font-size: var(--font-size--base);
+}
+
+.buttons-88x31 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.buttons-88x31__button {
+  display: inline;
+  width: 88px;
+  height: 31px;
+}
+
+/*:._.:*~  SMALL/MOBILE  ~*:._.:*/
+@media (min-width: 375px) and (max-width: 999px) {
+  /* --- PAGE --- */
+  .page {
+    padding: 1rem;
+  }
+  .page-wrapper {
+    grid-template-areas: "header" "navi" "main" "collection" "footer";
+  }
+  /* --- HEADER --- */
+  .header-tagline {
+    display: none;
+  }
+  /* --- SIDEBAR --- */
+  .sidebar {
+    display: contents;
+  }
+  /* --- NAVIGATION --- */
+  /* --- STATUS --- */
+  .status {
+    display: none;
+  }
+  /* --- TBD --- */
+  .aside {
+    display: none;
+  }
+  /* --- MAIN --- */
+  /* --- COLLECTION --- */
+  /* --- FOOTER --- */
+}
+/*:._.:*~  LARGE/DESKTOP  ~*:._.:*/
+@media (min-width: 1000px) {
+  /* --- PAGE --- */
+  .page {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0.5rem;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .page__collection {
+    max-height: min-content;
+  }
+  .page__footer {
+    position: fixed;
+    right: 0;
+    bottom: 0.5rem;
+    left: 0;
+    margin: auto;
+  }
+  .page-wrapper {
+    grid-template-areas: "header header" "sidebar main" "sidebar collection";
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto 1fr min-content;
+    max-width: var(--main-content-width);
+    height: var(--main-content-height);
+  }
+  /* --- HEADER --- */
+  .header-tagline {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  /* --- SIDEBAR --- */
+  .sidebar {
+    display: grid;
+    grid-area: sidebar;
+    grid-template-areas: "navi" "status" "aside";
+    grid-template-rows: min-content min-content 1fr;
+    row-gap: 1rem;
+  }
+  /* --- NAVIGATION --- */
+  .navi {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  /* --- STATUS --- */
+  .status {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  /* --- TBD --- */
+  .aside {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  /* --- MAIN --- */
+  .main {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  .main__content {
+    border: none;
+    /* take up entirety of container */
+    width: 100%;
+    height: 100%;
+  }
+  /* --- COLLECTION --- */
+  .collection {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  /* --- FOOTER --- */
+}
+
+/*# sourceMappingURL=style2.css.map */
