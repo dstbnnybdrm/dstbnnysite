@@ -1,26 +1,17 @@
-function resize_iframe(iframe) {
-  iframe.height = "";
-  iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-  console.log(iframe.height);
+const frame_element = document.getElementsByName("mainframe")[0];
+
+function update_content_height() {
+  if (frame_element == null) {
+    return;
+  }
+
+  frame_content = frame_element.contentWindow;
+  frame_element.height = frame_content.document.body.scrollHeight + "px";
 }
 
-// window.onload = () => {
-//   id_names.forEach((name) => {
-//     let id = document.getElementById(name);
+window.onload = () => {
+  update_content_height();
+};
 
-//     if (!id) {
-//       // id wasn't found on this page so move on
-//       return;
-//     }
-
-//     // get filename from id name
-//     let template_filename = name.substring(3).concat(".html");
-//     let template_location = template_url.concat(template_filename);
-
-//     // load template into page
-//     fetch(template_location)
-//       .then((response) => response.text())
-//       .then((content) => (id.innerHTML = content));
-//   });
-// };
-//
+// dynamically resize frame height
+window.addEventListener("resize", update_content_height);
