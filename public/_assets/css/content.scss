@@ -99,3 +99,53 @@ a:hover {
 }
 
 /*:._.:*~  BLOCKS  ~*:._.:*/
+
+.container {
+    font-family: var(--font-family--main);
+    font-size: 0.9rem;
+
+    display: flex;
+
+    // &__section {
+    // }
+}
+
+.news-feed {
+    grid-area: news-feed;
+}
+
+.update-log {
+    grid-area: update-log;
+}
+
+.section {
+    border: 1px solid black;
+    // &__title {
+    // }
+
+    // &__subtitle {
+    // }
+
+    // &__content {
+    // }
+}
+
+.commission-status {
+}
+
+.feed {
+    // &__title {
+    // }
+
+    // &__entry {
+    // }
+}
+
+.list {
+    list-style: "❀ ";
+    // &__item {
+    // }
+}
+
+.ascii-art {
+}
