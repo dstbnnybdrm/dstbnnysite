@@ -79,7 +79,8 @@ h6 {
   isolation: isolate;
 }
 
-/* -- links -- */
+/* *~ my resets ~* */
+/* links */
 a {
   text-decoration-style: dotted;
 }
@@ -96,11 +97,15 @@ a:hover {
   color: var(--color--tertiary);
 }
 
+abbr {
+  text-decoration: none;
+}
+
 /*:._.:*~  BLOCKS  ~*:._.:*/
 /* --- PAGE --- */
 .page {
+  font-size: 0.8rem;
   font-family: var(--font-family--main);
-  font-size: 0.9rem;
 }
 @media (min-width: 375px) and (max-width: 999px) {
   .page {
@@ -168,6 +173,7 @@ a:hover {
   .header-tagline {
     border: 1px solid black;
     padding: 0.5rem 1rem;
+    font-style: italic;
     text-align: center;
   }
 }
@@ -242,7 +248,6 @@ a:hover {
   .status {
     border: 1px solid black;
     padding: 1rem;
-    font-size: var(--font-size--small);
   }
 }
 
@@ -303,6 +308,57 @@ a:hover {
 }
 
 /* --- MISC --- */
+.main-container {
+  font-size: 0.8rem;
+  font-family: var(--font-family--main);
+  gap: 1rem;
+  height: 100%;
+}
+@media (min-width: 375px) and (max-width: 999px) {
+  .main-container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
+.main-container__section {
+  width: 100%;
+}
+
+.welcome {
+  grid-area: welcome;
+}
+
+.news-feed {
+  grid-area: news-feed;
+}
+
+.update-log {
+  grid-area: update;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.buttons-88x31 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.buttons-88x31__button {
+  display: inline;
+  width: 88px;
+  height: 31px;
+}
+
+.list {
+  list-style: "❀ ";
+}
+
 .title {
   font-size: var(--font-size--large);
   /* for screen readers to have a 
@@ -317,22 +373,6 @@ a:hover {
   padding: 0;
   position: absolute;
   width: 1px;
-}
-
-.body-text {
-  font-size: var(--font-size--base);
-}
-
-.buttons-88x31 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.buttons-88x31__button {
-  display: inline;
-  width: 88px;
-  height: 31px;
 }
 
 /*# sourceMappingURL=style.css.map */

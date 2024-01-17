@@ -86,7 +86,9 @@ h6 {
     isolation: isolate;
 }
 
-/* -- links -- */
+/* *~ my resets ~* */
+
+/* links */
 a {
     text-decoration-style: dotted;
 }
@@ -103,9 +105,12 @@ a:hover {
     color: var(--color--tertiary);
 }
 
+abbr {
+    text-decoration: none;
+}
+
 // --  MIXINS -- //
 
-// reusable styles
 @mixin layout-border {
     border: 1px solid black;
 }
@@ -122,8 +127,12 @@ a:hover {
     list-style: "∟ ";
 }
 
-// -- BREAKPOINTS -- //
+@mixin text-reset {
+    font-size: 0.8rem;
+    font-family: var(--font-family--main);
+}
 
+// -- BREAKPOINTS -- //
 @mixin small-screen {
     @media (min-width: 375px) and (max-width: 999px) {
         @content;
@@ -140,14 +149,13 @@ a:hover {
 
 /* --- PAGE --- */
 .page {
-    font-family: var(--font-family--main);
-    font-size: 0.9rem;
+    @include text-reset();
 
-    @include small-screen {
+    @include small-screen() {
         padding: 1rem;
     }
 
-    @include large-screen {
+    @include large-screen() {
         display: flex;
         position: absolute;
 
@@ -172,13 +180,13 @@ a:hover {
     // }
 
     &__collection {
-        @include large-screen {
+        @include large-screen() {
             max-height: min-content;
         }
     }
 
     &__footer {
-        @include large-screen {
+        @include large-screen() {
             position: fixed;
 
             right: 0;
@@ -195,7 +203,7 @@ a:hover {
 
     gap: 1rem;
 
-    @include small-screen {
+    @include small-screen() {
         grid-template-areas:
             "header"
             "navi"
@@ -204,7 +212,7 @@ a:hover {
             "footer";
     }
 
-    @include large-screen {
+    @include large-screen() {
         grid-template-areas:
             "header header"
             "sidebar main"
@@ -229,15 +237,16 @@ a:hover {
 }
 
 .header-tagline {
-    @include small-screen {
+    @include small-screen() {
         display: none;
     }
 
-    @include large-screen {
+    @include large-screen() {
         @include layout-border();
 
         padding: 0.5rem 1rem;
 
+        font-style: italic;
         text-align: center;
     }
 }
@@ -246,11 +255,11 @@ a:hover {
 .sidebar {
     grid-area: sidebar;
 
-    @include small-screen {
+    @include small-screen() {
         display: contents;
     }
 
-    @include large-screen {
+    @include large-screen() {
         display: grid;
 
         grid-area: sidebar;
@@ -276,7 +285,7 @@ a:hover {
 .navi {
     grid-area: navi;
 
-    @include large-screen {
+    @include large-screen() {
         @include layout-border();
         @include layout-padding();
     }
@@ -285,7 +294,7 @@ a:hover {
     // }
 
     &__category {
-        @include large-screen {
+        @include large-screen() {
             display: list-item;
 
             @include list-margin();
@@ -295,14 +304,14 @@ a:hover {
     }
 
     &__title {
-        @include large-screen {
+        @include large-screen() {
             font-size: var(--font-size--base);
             font-weight: normal;
         }
     }
 
     &__list {
-        @include large-screen {
+        @include large-screen() {
             @include list-margin();
         }
     }
@@ -313,7 +322,7 @@ a:hover {
 
 .navi-list {
     &__item {
-        @include large-screen {
+        @include large-screen() {
             display: list-item;
 
             border: none;
@@ -332,15 +341,15 @@ a:hover {
 .status {
     grid-area: status;
 
-    @include small-screen {
+    @include small-screen() {
         display: none;
     }
 
-    @include large-screen {
+    @include large-screen() {
         @include layout-border();
         @include layout-padding();
 
-        font-size: var(--font-size--small);
+        // font-size: var(--font-size--small);
     }
     // &__title {
     // }
@@ -356,11 +365,11 @@ a:hover {
 .aside {
     grid-area: aside;
 
-    @include small-screen {
+    @include small-screen() {
         display: none;
     }
 
-    @include large-screen {
+    @include large-screen() {
         @include layout-border();
         @include layout-padding();
     }
@@ -370,7 +379,7 @@ a:hover {
 .main {
     grid-area: main;
 
-    @include large-screen {
+    @include large-screen() {
         @include layout-border();
         @include layout-padding();
     }
@@ -382,7 +391,7 @@ a:hover {
 
         width: 100%;
 
-        @include large-screen {
+        @include large-screen() {
             height: 100%;
         }
     }
@@ -392,7 +401,7 @@ a:hover {
 .collection {
     grid-area: collection;
 
-    @include large-screen {
+    @include large-screen() {
         @include layout-border();
 
         padding: 0.5rem 1rem;
@@ -412,6 +421,99 @@ a:hover {
 }
 
 /* --- MISC --- */
+.main-container {
+    @include text-reset();
+
+    gap: 1rem;
+
+    height: 100%;
+
+    @include small-screen() {
+        display: flex;
+        gap: 1rem;
+
+        flex-direction: column;
+    }
+
+    &--home {
+        // display: grid;
+
+        // grid-template-areas:
+        //     "welcome news-feed"
+        //     "update update";
+        // grid-template-rows: 2fr 1fr;
+    }
+
+    &__section {
+        width: 100%;
+    }
+}
+
+.welcome {
+    grid-area: welcome;
+}
+
+.news-feed {
+    grid-area: news-feed;
+}
+
+.update-log {
+    grid-area: update;
+}
+
+.commission-status {
+}
+
+.ascii-art {
+}
+
+.section {
+    display: flex;
+
+    flex-direction: column;
+
+    // for debugging
+    border: 1px solid black;
+
+    // &__title {
+    // }
+
+    // &__subtitle {
+    // }
+
+    // &__content {
+    // }
+}
+
+.buttons-88x31 {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    &__button {
+        display: inline;
+
+        width: 88px;
+        height: 31px;
+    }
+}
+
+.feed {
+    // &__title {
+    // }
+
+    // &__entry {
+    // }
+}
+
+.list {
+    list-style: "❀ ";
+    // &__item {
+    // }
+}
+
 .title {
     font-size: var(--font-size--large);
 
@@ -429,24 +531,5 @@ a:hover {
     }
 }
 
-// .subtitle {
-// }
-
-.body-text {
-    font-size: var(--font-size--base);
-}
-
-.buttons-88x31 {
-    display: flex;
-
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-
-    &__button {
-        display: inline;
-
-        width: 88px;
-        height: 31px;
-    }
+.subtitle {
 }
