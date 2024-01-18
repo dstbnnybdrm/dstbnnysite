@@ -10,7 +10,7 @@
 
     --font-size--small: 0.75em;
     --font-size--base: 1em;
-    --font-size--large: 1.125em;
+    --font-size--large: 1.125rem;
 
     --letter-spacing--base: initial;
     --letter-spacing--wide: 0.125em;
@@ -43,6 +43,9 @@
 * {
     margin: 0;
     padding: 0;
+
+    // my addition
+    font-size: 13px;
 }
 
 /* text reset */
@@ -109,7 +112,7 @@ abbr {
     text-decoration: none;
 }
 
-// --  MIXINS -- //
+/*:._.:*~  MIXINS  ~*:._.:*/
 
 @mixin layout-border {
     border: 1px solid black;
@@ -128,7 +131,6 @@ abbr {
 }
 
 @mixin text-reset {
-    font-size: 0.8rem;
     font-family: var(--font-family--main);
 }
 
@@ -237,6 +239,7 @@ abbr {
 }
 
 .header-tagline {
+    display: none;
     @include small-screen() {
         display: none;
     }
@@ -267,15 +270,16 @@ abbr {
             "navi"
             "status"
             "aside";
-        grid-template-rows: min-content min-content 1fr;
+        grid-template-rows: min-content 1fr 2fr;
         row-gap: 1rem;
     }
 
     // &__navi {
     // }
 
-    // &__status {
-    // }
+    &__status {
+        overflow-y: auto;
+    }
 
     // &__aside {
     // }
@@ -354,8 +358,9 @@ abbr {
     // &__title {
     // }
 
-    // &__username {
-    // }
+    &__username {
+        font-size: var(--font-size--small);
+    }
 
     // &__content {
     // }
@@ -424,24 +429,17 @@ abbr {
 .main-container {
     @include text-reset();
 
-    gap: 1rem;
-
     height: 100%;
 
-    @include small-screen() {
-        display: flex;
-        gap: 1rem;
-
-        flex-direction: column;
-    }
-
     &--home {
-        // display: grid;
+        display: grid;
 
-        // grid-template-areas:
-        //     "welcome news-feed"
-        //     "update update";
-        // grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+            "welcome news-feed"
+            "update update";
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
 
     &__section {
@@ -468,21 +466,20 @@ abbr {
 }
 
 .section {
-    display: flex;
+    // display: flex;
 
-    flex-direction: column;
+    // flex-direction: column;
+    // gap: 0.5rem;
 
-    // for debugging
-    border: 1px solid black;
+    &__title {
+    }
 
-    // &__title {
-    // }
+    &__subtitle {
+    }
 
-    // &__subtitle {
-    // }
-
-    // &__content {
-    // }
+    &__content {
+        margin: 0 0 0.5rem 0;
+    }
 }
 
 .buttons-88x31 {
@@ -501,17 +498,33 @@ abbr {
 }
 
 .feed {
-    // &__title {
-    // }
+    &__title {
+        margin: 0 0 0.25rem 0;
 
-    // &__entry {
-    // }
+        font-style: italic;
+        font-weight: normal;
+    }
+
+    &__entry {
+        @include small-screen() {
+            &:not(:last-child) {
+                margin: 0 0 0.75rem 0;
+                border-bottom: 1px dotted black;
+            }
+
+            &:nth-child(n + 4) {
+                display: none;
+            }
+        }
+    }
 }
 
 .list {
     list-style: "❀ ";
-    // &__item {
-    // }
+
+    &__item {
+        @include list-margin();
+    }
 }
 
 .title {
@@ -532,4 +545,6 @@ abbr {
 }
 
 .subtitle {
+    font-size: var(--font-size--base);
+    letter-spacing: var(--letter-spacing--wide);
 }
