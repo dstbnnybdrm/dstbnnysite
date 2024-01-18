@@ -1,10 +1,11 @@
-const ids_list = ["news-feed", "update-log"];
+const ids_list = ["news-feed", "update-log", "collection", "footer"];
 
 window.onload = () => {
   ids_list.forEach((id) => {
     let element = document.getElementById(id);
+    if (!element) return;
+
     let element_url = "_assets/template/" + id + ".html";
-    console.log(element_url);
 
     fetch(element_url)
       .then((response) => response.text())
