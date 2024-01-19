@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
@@ -50,29 +50,20 @@
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/_assets/css/comment-box.css"
-    />
-    <script src="/_assets/js/script.js" defer></script>
+    <script src="_assets/js/home.js" defer></script>
   </head>
 
   <body class="page">
     <div class="page-wrapper page-wrapper--guestbook">
-      <!-- <header class="header page__header"> -->
-      <!--   <div id="js-header"></div> -->
-      <!-- </header> -->
-
       <nav class="navi navi--guestbook page__navi">
         <a href="/" class="navi__home">« back to site «</a>
       </nav>
 
-      <main class="main main--guestbook page__main">
-        <section class="main__section m-section">
-          <h1 class="m-section__title">guestbook</h1>
+      <main class="main page__main">
+        <section class="section main__section">
+          <h1 class="section__title">guestbook</h1>
 
-          <p class="m-section__content">
+          <p class="section__content">
             you can sign my guestbook and share any thoughts you may have below!
           </p>
 
@@ -101,19 +92,13 @@
               );
               if (typeof s != "undefined")
                 document.getElementsByTagName("head")[0].appendChild(s);
-            })(); /*-->*/
+            })();
           </script>
           <!-- end www.htmlcommentbox.com -->
         </section>
       </main>
 
-      <!-- <aside class="aside page__aside"> -->
-      <!--   <div id="js-aside"></div> -->
-      <!-- </aside> -->
-
-      <footer class="footer page__footer">
-        <div id="js-footer"></div>
-      </footer>
+      <div id="footer"></div>
     </div>
   </body>
 </html>
