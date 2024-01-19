@@ -274,19 +274,17 @@ abbr {
 
 /* --- HEADER --- */
 .header {
+    display: flex;
+
     grid-area: header;
 
     @include large-screen() {
-        display: flex;
-
         justify-content: center;
         flex-direction: column;
     }
 
     &--blog {
         @include large-screen() {
-            display: flex;
-
             flex-direction: column;
             justify-content: start;
         }
@@ -375,6 +373,9 @@ abbr {
         }
     }
 
+    // &__sub-navi {
+    // }
+
     &__category {
         @include large-screen() {
             @include list-margin();
@@ -408,6 +409,9 @@ abbr {
             @include list-margin();
         }
     }
+
+    // &__description {
+    // }
 }
 
 .navi-home {
@@ -474,40 +478,8 @@ abbr {
     }
 }
 
-/* -- BLOG POST -- */
-.blog-post {
-    height: 100%;
-}
-
-.posts-navi {
-    display: block;
-}
-
-.posts-list {
-    overflow-y: auto;
-
+.blog-posts {
     &__post {
-        @include list-margin();
-
-        display: list-item;
-    }
-
-    &__button {
-        display: block;
-
-        border: none;
-
-        width: 100%;
-
-        text-align: left;
-        color: var(--color-primary);
-
-        background: none;
-    }
-
-    &__button:hover {
-        @include button-hover();
-        color: var(--color-tertiary);
     }
 }
 

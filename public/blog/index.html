@@ -50,7 +50,7 @@
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
-    <script src="/_assets/js/blog.js" defer></script>
+    <script src="/_assets/js/home.js" defer></script>
   </head>
 
   <body class="page page--blog">
@@ -70,23 +70,23 @@
       </header>
 
       <nav class="navi navi--blog page__navi">
-        <h1 class="section__title">
+        <h1 class="navi__title">
           <abbr title="dustbunnyblog">dstbnnyblog</abbr>
         </h1>
-        <p class="section__content">various thoughts and ramblings</p>
+        <p class="navi__description">various thoughts and ramblings</p>
 
         <a href="/" class="navi__home">« back to site «</a>
 
-        <nav class="posts-navi navi__posts">
-          <h2 class="posts-navi__title">entries</h2>
-          <ul class="posts-list posts-navi__list">
+        <nav class="navi navi__sub-navi">
+          <h2 class="navi__title">entries</h2>
+          <ul class="blog-posts navi__list">
             <!-- add new posts here, me! -->
-            <li class="posts-list__post">
+            <li class="blog-posts__post">
               <a href="posts/2023-01-09.html" target="blog-post">
                 "ah shit, here we go again"
               </a>
             </li>
-            <li class="posts-list__post">
+            <li class="blog-posts__post">
               <a href="posts/2023-12-30.html" target="blog-post">
                 new blog, new me
               </a>
@@ -95,17 +95,12 @@
         </nav>
       </nav>
 
-      <main class="main main--blog page__main">
+      <main class="main page__main">
         <!-- the actual blog post -->
-        <iframe name="blog-post" class="blog-post main__blog-post"></iframe>
+        <iframe name="blog-post" class="post-frame"></iframe>
       </main>
 
-      <footer class="footer footer--blog page__footer">
-        <h1 class="hidden-title">footer</h1>
-        <p class="footer__text">
-          dustbunnybedroom est. 2022 | <a href="/sitemap.html">sitemap</a>
-        </p>
-      </footer>
+      <div id="footer"></div>
     </div>
   </body>
 </html>
