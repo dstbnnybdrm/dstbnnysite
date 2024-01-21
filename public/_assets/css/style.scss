@@ -189,16 +189,20 @@ abbr {
         }
     }
 
-    // &__header {
-    // }
+    &__header {
+        grid-area: header;
+    }
 
-    // &__sidebar {
-    // }
+    &__sidebar {
+        grid-area: sidebar;
+    }
 
-    // &__main {
-    // }
+    &__main {
+        grid-area: main;
+    }
 
     &__collection {
+        grid-area: collection;
         @include large-screen() {
             max-height: min-content;
         }
@@ -245,7 +249,7 @@ abbr {
         grid-template-columns: min-content 1fr;
         grid-template-rows: auto 1fr min-content;
 
-        max-width: var(--main-content-width);
+        width: var(--main-content-width);
         height: var(--main-content-height);
     }
 
@@ -275,8 +279,6 @@ abbr {
 /* --- HEADER --- */
 .header {
     display: flex;
-
-    grid-area: header;
 
     @include large-screen() {
         justify-content: center;
@@ -315,8 +317,6 @@ abbr {
 
 /* --- SIDEBAR --- */
 .sidebar {
-    grid-area: sidebar;
-
     @include small-screen() {
         display: contents;
     }
@@ -324,7 +324,6 @@ abbr {
     @include large-screen() {
         display: grid;
 
-        grid-area: sidebar;
         grid-template-areas:
             "navi"
             "status"
@@ -334,21 +333,22 @@ abbr {
     }
 
     &__navi {
-        width: 100%;
+        grid-area: navi;
+        // width: 100%;
     }
 
     &__status {
+        grid-area: status;
         overflow-y: auto;
     }
 
-    // &__aside {
-    // }
+    &__aside {
+        grid-area: aside;
+    }
 }
 
 /* --- NAVIGATION --- */
 .navi {
-    grid-area: navi;
-
     @include small-screen() {
         border-top: 1px solid black;
     }
@@ -485,8 +485,6 @@ abbr {
 
 /* --- STATUS --- */
 .status {
-    grid-area: status;
-
     @include small-screen() {
         display: none;
     }
@@ -508,8 +506,6 @@ abbr {
 
 /* --- TBD --- */
 .aside {
-    grid-area: aside;
-
     @include small-screen() {
         display: none;
     }
@@ -522,12 +518,12 @@ abbr {
 
 /* --- MAIN --- */
 .main {
-    grid-area: main;
+    display: block;
 
     @include small-screen() {
         border-top: 1px dashed black;
         border-bottom: 1px dashed black;
-        padding: 1rem 0;
+        // padding: 1rem 0;
     }
 
     @include large-screen() {
@@ -542,12 +538,15 @@ abbr {
         }
     }
 
-    &__content {
-        display: block;
-
-        border: none;
+    // the main iframe
+    &__frame {
+        // display: flex;
 
         width: 100%;
+
+        border: none;
+        // @include small-screen() {
+        // }
 
         @include large-screen() {
             height: 100%;
@@ -557,8 +556,6 @@ abbr {
 
 /* --- COLLECTION --- */
 .collection {
-    grid-area: collection;
-
     @include large-screen() {
         @include layout-border();
 
@@ -582,39 +579,39 @@ abbr {
 .main-container {
     @include text-reset();
 
-    height: 100%;
-
     &--home {
         display: grid;
 
         grid-template-areas:
             "welcome news-feed"
             "update update";
-        grid-template-rows: auto;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         gap: 1rem;
-
-        overflow: hidden;
-
-        width: var(--main-content-width);
-        height: var(--main-content-height);
     }
 
     &__section {
-        width: 100%;
+        min-width: 0;
+        min-height: 0;
     }
 }
 
 .welcome {
     grid-area: welcome;
+    // background-color: lightpink;
+    height: min-content;
 }
 
 .news-feed {
     grid-area: news-feed;
+    // background-color: lightcyan;
+    height: calc(65vh - 1rem);
 }
 
 .update-log {
     grid-area: update;
+    // background-color: lightgreen;
+    height: 35vh;
 }
 
 .commission-status {
@@ -631,9 +628,9 @@ abbr {
 // }
 
 .section {
-    // display: flex;
+    display: flex;
 
-    // flex-direction: column;
+    flex-direction: column;
     // gap: 0.5rem;
 
     // &__title {
@@ -645,6 +642,12 @@ abbr {
     &__content {
         margin: 0 0 0.5rem 0;
     }
+}
+
+.section-container {
+    overflow-y: scroll;
+    min-height: 0;
+    // height: 50vh;
 }
 
 .buttons-88x31 {
@@ -663,6 +666,7 @@ abbr {
 }
 
 .feed {
+    min-height: 0;
     &__title {
         margin: 0 0 0.25rem 0;
 
