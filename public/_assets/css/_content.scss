@@ -9,13 +9,13 @@
 
 // -- BREAKPOINTS -- //
 @mixin small-frame {
-    @media (max-width: 599px) {
+    @media (max-width: 599px) and (max-height: 459px) {
         @content;
     }
 }
 
 @mixin large-frame {
-    @media (min-width: 600px) {
+    @media (min-width: 600px) and (min-height: 460px) {
         @content;
     }
 }
@@ -24,7 +24,7 @@
     @include text-reset();
 
     @include small-frame() {
-        overflow: hidden;
+        // overflow: hidden;
     }
 
     &--home {
@@ -34,44 +34,35 @@
             grid-template-areas:
                 "welcome news-feed"
                 "update update";
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: min-content min-content;
             gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+
+            grid-template-rows:
+                minmax(0, 3fr)
+                minmax(0, 2fr);
+            height: 100vh;
         }
     }
 
     &__section {
-        min-width: 0;
-        min-height: 0;
+        min-width: min-content;
+        min-height: min-content;
     }
 }
 
 .welcome {
     grid-area: welcome;
-
-    height: min-content;
+    min-width: 0;
 }
 
 .news-feed {
     grid-area: news-feed;
-
-    @include large-frame() {
-        @media (min-height: 500px) {
-            // height: calc(65vh);
-            // height: 65%;
-        }
-    }
+    min-width: 0;
 }
 
 .update-log {
     grid-area: update;
-
-    @include large-frame() {
-        @media (min-height: 500px) {
-            // height: calc(35vh - 1rem);
-            // height: 35%;
-        }
-    }
+    min-width: 0;
 }
 
 /* --- FEED --- */
@@ -88,9 +79,14 @@
             margin: 0 0 0.75rem 0;
             border-bottom: 1px dotted black;
         }
-        @include small-frame() {
+
+        &:nth-child(n + 4) {
+            display: none;
+        }
+
+        @include large-frame() {
             &:nth-child(n + 4) {
-                display: none;
+                display: block;
             }
         }
     }
@@ -127,9 +123,8 @@
 }
 
 .section-container {
-    overflow: visible;
-
     // @media (min-height: 500px) {
+    min-height: 0;
     overflow-y: auto;
     // }
 }
