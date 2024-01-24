@@ -36,7 +36,7 @@ function update_content_height() {
 
   // clear height (otherwise if resulting height is smaller it doesn't change)
   frame_element.height = "";
-  frame_element.height = frame_content.document.body.clientHeight + "px ";
+  frame_element.height = frame_content.document.body.scrollHeight + "px";
 }
 
 function randomise_tagline() {
@@ -52,13 +52,8 @@ window.onload = () => {
   update_content_height();
 };
 
+// dynamically resize frame height
 window.addEventListener("resize", update_content_height);
-
-frame_element.onload = () => {
-  // dynamically resize frame height
-
-  console.log(frame_element.contentWindow.location.pathname);
-};
 
 // update frame height when source page changes
 frame_element.addEventListener("load", update_content_height);
