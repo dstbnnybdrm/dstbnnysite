@@ -52,10 +52,6 @@
     font-size: 13px;
 }
 
-html {
-    height: 100%;
-}
-
 /* text reset */
 body {
     line-height: 1.5;
@@ -190,22 +186,41 @@ abbr {
         }
     }
 
-    &__header {
-        grid-area: header;
-    }
+    // &__header {
+    // }
 
-    &__sidebar {
-        grid-area: sidebar;
-    }
+    // &__sidebar {
+    // }
 
     &__main {
         grid-area: main;
+
+        @include layout-border();
+        @include layout-padding();
+
+        @include for-phone() {
+            border-top: 1px dashed black;
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px dashed black;
+            padding: 1rem 0;
+        }
+
+        &--guestbook {
+            @include for-desktop() {
+                border: none;
+                height: auto;
+            }
+        }
     }
 
     &__collection {
         grid-area: collection;
 
         @include for-desktop() {
+            @include layout-border();
+            padding: 0.5rem 1rem;
+
             max-height: min-content;
         }
     }
@@ -261,7 +276,6 @@ abbr {
             repeat(3, auto);
 
         margin: 1rem auto;
-        height: 100%;
     }
 
     @include for-desktop() {
@@ -283,7 +297,6 @@ abbr {
             grid-template-areas:
                 "header ."
                 "navi   main";
-
             grid-template-rows: min-content 1fr;
         }
     }
@@ -303,14 +316,15 @@ abbr {
 .header {
     display: flex;
 
+    flex-direction: column;
+    grid-area: header;
+
     @include for-desktop() {
         justify-content: center;
-        flex-direction: column;
     }
 
     &--blog {
         @include for-desktop() {
-            flex-direction: column;
             justify-content: start;
         }
     }
@@ -344,13 +358,9 @@ abbr {
 
 /* --- SIDEBAR --- */
 .sidebar {
-    @include for-phone() {
-        display: contents;
-    }
+    display: contents;
 
-    @include for-tablet() {
-        display: contents;
-    }
+    grid-area: sidebar;
 
     @include for-desktop() {
         display: grid;
@@ -364,11 +374,6 @@ abbr {
     }
 
     &__navi {
-        grid-area: navi;
-
-        @include for-phone() {
-        }
-
         @include for-tablet() {
             @include layout-border();
             padding: 1rem;
@@ -382,17 +387,16 @@ abbr {
     }
 
     &__status {
-        grid-area: status;
         overflow-y: auto;
     }
 
-    &__aside {
-        grid-area: aside;
-    }
+    // &__aside {
+    // }
 }
 
 /* --- NAVIGATION --- */
 .navi {
+    grid-area: navi;
     @include for-tablet() {
         display: flex;
 
@@ -424,10 +428,32 @@ abbr {
         }
     }
 
+    &__button {
+        @include for-phone() {
+            display: block;
+
+            border: 1px solid black;
+            border-radius: 0;
+            padding: 0.5rem;
+
+            width: 100%;
+        }
+
+        @include for-tablet() {
+            display: none;
+        }
+
+        @include for-desktop() {
+            display: none;
+        }
+    }
+
     &__subnavi {
         @include for-phone() {
-            &:not(:last-child) {
-                margin: 0 0 1rem 0;
+            display: none;
+
+            &--open {
+                display: block;
             }
         }
 
@@ -492,19 +518,13 @@ abbr {
 }
 
 .navi-home {
-    @include for-phone() {
-        font-weight: bold;
-    }
+    display: block;
 
-    @include for-tablet() {
-        display: block;
+    letter-spacing: var(--letter-spacing--wide);
+    font-weight: bold;
 
-        letter-spacing: var(--letter-spacing--wide);
-        font-weight: bold;
-
-        &:hover {
-            @include button-hover();
-        }
+    &:hover {
+        @include button-hover();
     }
 
     @include for-desktop() {
@@ -513,6 +533,13 @@ abbr {
         letter-spacing: normal;
         font-weight: normal;
     }
+}
+
+.navi-button {
+    font-style: italic;
+    font-size: var(--font-size--small);
+
+    // background: none;
 }
 
 .navi-list {
@@ -572,6 +599,8 @@ abbr {
 
 /* --- STATUS --- */
 .status {
+    grid-area: status;
+
     @include for-phone() {
         display: none;
     }
@@ -598,6 +627,8 @@ abbr {
 
 /* --- TBD --- */
 .aside {
+    grid-area: aside;
+
     @include for-phone() {
         display: none;
     }
@@ -616,38 +647,14 @@ abbr {
 /* --- MAIN --- */
 .main {
     display: block;
-    max-height: none;
-
-    @include for-phone() {
-        border-top: 1px dashed black;
-        border-bottom: 1px dashed black;
-        padding: 1rem 0;
-    }
-
-    @include for-tablet {
-        @include layout-border();
-        @include layout-padding();
-    }
-
-    @include for-desktop() {
-        @include layout-border();
-        @include layout-padding();
-    }
-
-    &--guestbook {
-        @include for-desktop() {
-            border: none;
-            height: auto;
-        }
-    }
 
     // the main iframe
     &__frame {
         display: flex;
 
-        width: 100%;
-
         border: none;
+
+        width: 100%;
 
         @include for-desktop() {
             height: 100%;
@@ -656,16 +663,10 @@ abbr {
 }
 
 /* --- COLLECTION --- */
-.collection {
-    @include for-desktop() {
-        @include layout-border();
-
-        padding: 0.5rem 1rem;
-    }
-
-    // &__content {
-    // }
-}
+// .collection {
+// &__content {
+// }
+// }
 
 /* --- FOOTER --- */
 .footer {

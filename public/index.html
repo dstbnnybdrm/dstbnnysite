@@ -4,7 +4,7 @@
 c(  づ✿
 -->
 
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
@@ -82,16 +82,27 @@ c(  づ✿
           <a
             class="navi-home navi__home"
             href="/home.html"
-            target="mainframe"
+            target="main-frame"
             onclick="update_content_height()"
             ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
           >
+
+          <button
+            class="navi-button navi__button"
+            type="button"
+            onclick="toggle_navi_menu()"
+          >
+            navigation
+          </button>
 
           <nav class="navi navi__subnavi">
             <h2 class="navi__title">from me</h2>
             <ul class="navi-list navi__list">
               <li class="list-item navi-list__item">
-                <a class="navi-list__link" href="/about.html" target="mainframe"
+                <a
+                  class="navi-list__link"
+                  href="/about.html"
+                  target="main-frame"
                   >about</a
                 >
               </li>
@@ -99,7 +110,7 @@ c(  づ✿
                 <a class="navi-list__link" href="/blog/">blog</a>
               </li>
               <li class="list-item navi-list__item">
-                <a class="navi-list__link" href="/work/" target="mainframe"
+                <a class="navi-list__link" href="/work/" target="main-frame"
                   >work</a
                 >
               </li>
@@ -107,7 +118,7 @@ c(  づ✿
                 <a
                   class="navi-list__link"
                   href="/commission.html"
-                  target="mainframe"
+                  target="main-frame"
                   >commission</a
                 >
               </li>
@@ -121,7 +132,7 @@ c(  づ✿
                 <a
                   class="navi-list__link"
                   href="/resources.html"
-                  target="mainframe"
+                  target="main-frame"
                   >resources</a
                 >
               </li>
@@ -129,7 +140,7 @@ c(  づ✿
                 <a
                   class="navi-list__link"
                   href="/outlinks.html"
-                  target="mainframe"
+                  target="main-frame"
                   >outlinks</a
                 >
               </li>
@@ -155,7 +166,7 @@ c(  づ✿
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
       <main id="main" class="main page__main">
-        <iframe class="main__frame" name="mainframe" src="/home.html"></iframe>
+        <iframe class="main__frame" name="main-frame" src="/home.html"></iframe>
       </main>
 
       <!-- ~*:._.:*~  COLLECTION  ~*:._.:*~ -->

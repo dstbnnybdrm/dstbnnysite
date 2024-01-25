@@ -1,10 +1,11 @@
 // elements
-const frame_element = document.getElementsByName("mainframe")[0];
+const frame_element = document.getElementsByName("main-frame")[0];
 const main_element = document.getElementById("main");
 const tagline_element = document.getElementById("tagline");
+const navi_button_element = document.getElementById("navi-button");
+const navi_lists = document.querySelectorAll(".navi__subnavi");
 
 const layout_ids_list = ["collection", "footer"];
-
 const taglines_list = ["enjoy yr stay"];
 
 function load_layouts() {
@@ -37,6 +38,12 @@ function update_content_height() {
   // clear height (otherwise if resulting height is smaller it doesn't change)
   frame_element.height = "";
   frame_element.height = frame_content.document.body.scrollHeight + "px";
+}
+
+function toggle_navi_menu() {
+  navi_lists.forEach((list) => {
+    list.classList.toggle("navi__subnavi" + "--open");
+  });
 }
 
 function randomise_tagline() {
