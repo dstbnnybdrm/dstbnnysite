@@ -176,7 +176,7 @@ abbr {
         margin: auto;
     }
 
-    &--blog {
+    &_blog {
         @include for-desktop() {
             display: block;
             position: static;
@@ -206,7 +206,7 @@ abbr {
             padding: 1rem 0;
         }
 
-        &--guestbook {
+        &_guestbook {
             @include for-desktop() {
                 border: none;
                 height: auto;
@@ -290,7 +290,7 @@ abbr {
         height: var(--main-content-height);
     }
 
-    &--blog {
+    &_blog {
         @include for-desktop() {
             display: grid;
 
@@ -301,7 +301,7 @@ abbr {
         }
     }
 
-    &--guestbook {
+    &_guestbook {
         @include for-desktop() {
             display: grid;
 
@@ -323,7 +323,7 @@ abbr {
         justify-content: center;
     }
 
-    &--blog {
+    &_blog {
         @include for-desktop() {
             justify-content: start;
         }
@@ -403,7 +403,7 @@ abbr {
         flex-wrap: wrap;
     }
 
-    &--guestbook {
+    &_guestbook {
         border: none;
         margin: 0;
     }
@@ -452,7 +452,8 @@ abbr {
         @include for-phone() {
             display: none;
 
-            &--open {
+            /* mobile hamburger menu button */
+            &_toggle_open {
                 display: block;
             }
         }
@@ -478,7 +479,7 @@ abbr {
         }
     }
 
-    /* the "from me," "for you" separators */
+    /* the "from me," "for you" titles */
     &__title {
         @include for-phone() {
             display: block;

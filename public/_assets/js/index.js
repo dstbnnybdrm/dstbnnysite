@@ -42,7 +42,7 @@ function update_content_height() {
 
 function toggle_navi_menu() {
   navi_lists.forEach((list) => {
-    list.classList.toggle("navi__subnavi" + "--open");
+    list.classList.toggle("navi__subnavi" + "_toggle_open");
   });
 }
 

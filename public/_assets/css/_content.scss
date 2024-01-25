@@ -32,7 +32,7 @@
         overflow: hidden;
     }
 
-    &--home {
+    &_home {
         @include large-frame() {
             display: grid;
 
@@ -132,9 +132,8 @@
     font-size: var(--font-size--large);
     font-weight: bold;
 
-    /* for screen readers to have a 
-    readable but not visible header */
-    &--hidden {
+    /* for screen readers */
+    &_hidden {
         border: 0;
         clip: rect(0 0 0 0);
         height: 1px;
@@ -145,13 +144,13 @@
         width: 1px;
     }
 
-    &--subtitle {
+    &_subtitle {
         font-size: var(--font-size--base);
         font-weight: bold;
         letter-spacing: var(--letter-spacing--wide);
     }
 
-    &--feed {
+    &_feed {
         font-size: var(--font-size--base);
         font-style: italic;
         font-weight: normal;
