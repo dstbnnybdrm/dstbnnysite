@@ -57,26 +57,20 @@
 
 .welcome {
     grid-area: welcome;
-    min-width: 0;
 }
 
 .news-feed {
     grid-area: news-feed;
-    min-width: 0;
 }
 
 .update-log {
     grid-area: update;
-    min-width: 0;
 }
 
 /* --- FEED --- */
 .feed {
     &__title {
         margin: 0 0 0.25rem 0;
-
-        font-style: italic;
-        font-weight: normal;
     }
 
     &__entry {
@@ -114,7 +108,6 @@
     display: flex;
 
     flex-direction: column;
-    gap: 0.5rem;
 
     // &__title {
     // }
@@ -122,16 +115,20 @@
     // &__subtitle {
     // }
 
-    // &__content {
-    // }
+    &__content {
+        margin-bottom: 1rem;
+    }
 }
 
 .section-container {
-    min-height: 0;
     overflow-y: auto;
+
+    min-height: 0;
 }
 
 .title {
+    display: inline-block;
+
     font-size: var(--font-size--large);
     font-weight: bold;
 
@@ -148,11 +145,6 @@
         width: 1px;
     }
 
-    &--small {
-        font-size: var(--font-size--base);
-        font-weight: bold;
-    }
-
     &--subtitle {
         font-size: var(--font-size--base);
         font-weight: bold;
@@ -161,6 +153,7 @@
 
     &--feed {
         font-size: var(--font-size--base);
+        font-style: italic;
         font-weight: normal;
         letter-spacing: var(--letter-spacing--wide);
     }
