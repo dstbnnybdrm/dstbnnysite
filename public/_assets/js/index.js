@@ -1,25 +1,28 @@
-// elements
-const frame_element = document.getElementsByName("main-frame")[0];
-const main_element = document.getElementById("main");
-const tagline_element = document.getElementById("tagline");
-const navi_button_element = document.getElementById("navi-button");
-const navi_lists = document.querySelectorAll(".navi__subnavi");
+const LAYOUT_IDS = ["collection", "footer"];
+const TAGLINES = ["enjoy yr stay"];
+const URL_PARAMETER = "p";
+const TEMPLATE_URL = "/_assets/template/";
+const HOME_URL = "/home.html";
 
-const layout_ids_list = ["collection", "footer"];
-const taglines_list = ["enjoy yr stay"];
+const mainframeElement = document.getElementById("mainframe");
+const taglineElement = document.getElementById("tagline");
+const naviLists = document.querySelectorAll(".navi__subnavi");
 
-function load_layouts() {
-  layout_ids_list.forEach((id) => {
+let isFirstLoad = true;
+
+// load major landmark section templates
+function loadLayouts() {
+  LAYOUT_IDS.forEach((id) => {
     let element = document.getElementById(id);
 
     if (!element) {
-      console.log("couldn't find " + id);
+      console.error("couldn't find " + id);
       return;
     }
 
-    let element_url = "_assets/template/" + id + ".html";
+    let elementUrl = TEMPLATE_URL + id + ".html";
 
-    fetch(element_url)
+    fetch(elementUrl)
       .then((response) => response.text())
       .then((html) => {
         element.innerHTML = html;
@@ -27,40 +30,86 @@ function load_layouts() {
   });
 }
 
-function update_content_height() {
-  if (frame_element == null) {
-    console.log("no frame on this page");
+function updateContentHeight() {
+  if (mainframeElement == null) {
+    console.error("couldn't find frame");
     return;
   }
 
-  frame_content = frame_element.contentWindow;
+  const frameContent = mainframeElement.contentWindow;
 
   // clear height (otherwise if resulting height is smaller it doesn't change)
-  frame_element.height = "";
-  frame_element.height = frame_content.document.body.scrollHeight + "px";
+  mainframeElement.height = "";
+  mainframeElement.height = frameContent.document.body.scrollHeight + "px";
 }
 
-function toggle_navi_menu() {
-  navi_lists.forEach((list) => {
+function updateHistory() {
+  const mainframePageTitle = mainframeElement.contentDocument.title;
+
+  if (isFirstLoad) {
+    isFirstLoad = false;
+    document.title = mainframePageTitle;
+    return;
+  }
+
+  history.replaceState(
+    null,
+    "",
+    "?" +
+      URL_PARAMETER +
+      "=" +
+      mainframeElement.contentWindow.location.pathname,
+  );
+
+  document.title = mainframePageTitle;
+}
+
+// checks to see if a url parameter exists and sets the frame source to that page
+function setMainframe() {
+  let parameters = new URLSearchParams(window.location.search);
+  let page = parameters.get(URL_PARAMETER);
+
+  // sets frame source to page if url parameter is present,
+  // otherwise default to home
+  mainframeElement.src = page == null ? HOME_URL : page;
+}
+
+function randomiseTagline() {
+  let index = Math.floor(Math.random() * TAGLINES.length);
+  let random_tagline = TAGLINES[index];
+
+  taglineElement.textContent = random_tagline;
+}
+
+function toggleNaviMenu() {
+  naviLists.forEach((list) => {
     list.classList.toggle("navi__subnavi" + "_toggle_open");
   });
 }
 
-function randomise_tagline() {
-  let index = Math.floor(Math.random() * taglines_list.length);
-  let random_tagline = taglines_list[index];
-
-  tagline.textContent = random_tagline;
-}
-
 window.onload = () => {
-  randomise_tagline();
-  load_layouts();
-  update_content_height();
+  mainframeElement.addEventListener("load", updateHistory, false);
+  setMainframe();
+
+  loadLayouts();
+  randomiseTagline();
 };
 
-// dynamically resize frame height
-window.addEventListener("resize", update_content_height);
+mainframeElement.onload = () => {
+  updateContentHeight();
+};
 
-// update frame height when source page changes
-frame_element.addEventListener("load", update_content_height);
+// window.addEventListener("DOMContentLoaded", () => {});
+
+// window.addEventListener("focusin", () => {
+// });
+
+// dynamically resize frame height
+window.addEventListener("resize", updateContentHeight);
+
+// set frame on back button presses too
+window.addEventListener("popstate", function (e) {
+  if (e.state !== null) {
+    setMainframe();
+  }
+});

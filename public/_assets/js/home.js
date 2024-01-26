@@ -1,7 +1,7 @@
-const ids_list = ["news-feed", "update-log"];
+const idsList = ["news-feed", "update-log"];
 
-window.onload = () => {
-  ids_list.forEach((id) => {
+idsList.forEach((id) => {
+  window.addEventListener("DOMContentLoaded", () => {
     let element = document.getElementById(id);
 
     let element_url = "_assets/template/" + id + ".html";
@@ -12,4 +12,4 @@ window.onload = () => {
         element.innerHTML = html;
       });
   });
-};
+});
