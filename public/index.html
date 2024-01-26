@@ -79,18 +79,14 @@ c(  づ✿
         <nav class="navi sidebar__navi">
           <h1 class="title title_hidden">site navigation</h1>
 
-          <a
-            class="navi-home navi__home"
-            href="/home.html"
-            target="main-frame"
-            onclick="update_content_height()"
+          <a class="navi-home navi__home" href="/home.html" target="mainframe"
             ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
           >
 
           <button
             class="navi-button navi__button"
             type="button"
-            onclick="toggle_navi_menu()"
+            onclick="toggleNaviMenu();"
           >
             navigation
           </button>
@@ -99,10 +95,7 @@ c(  づ✿
             <h2 class="navi__title">from me</h2>
             <ul class="navi-list navi__list">
               <li class="list-item navi-list__item">
-                <a
-                  class="navi-list__link"
-                  href="/about.html"
-                  target="main-frame"
+                <a class="navi-list__link" href="/about.html" target="mainframe"
                   >about</a
                 >
               </li>
@@ -110,7 +103,7 @@ c(  づ✿
                 <a class="navi-list__link" href="/blog/">blog</a>
               </li>
               <li class="list-item navi-list__item">
-                <a class="navi-list__link" href="/work/" target="main-frame"
+                <a class="navi-list__link" href="/work/" target="mainframe"
                   >work</a
                 >
               </li>
@@ -118,7 +111,7 @@ c(  づ✿
                 <a
                   class="navi-list__link"
                   href="/commission.html"
-                  target="main-frame"
+                  target="mainframe"
                   >commission</a
                 >
               </li>
@@ -132,7 +125,7 @@ c(  づ✿
                 <a
                   class="navi-list__link"
                   href="/resources.html"
-                  target="main-frame"
+                  target="mainframe"
                   >resources</a
                 >
               </li>
@@ -140,7 +133,7 @@ c(  づ✿
                 <a
                   class="navi-list__link"
                   href="/outlinks.html"
-                  target="main-frame"
+                  target="mainframe"
                   >outlinks</a
                 >
               </li>
@@ -166,7 +159,12 @@ c(  づ✿
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
       <main id="main" class="main page__main">
-        <iframe class="main__frame" name="main-frame" src="/home.html"></iframe>
+        <iframe
+          class="main__frame"
+          id="mainframe"
+          name="mainframe"
+          src="/home.html"
+        ></iframe>
       </main>
 
       <!-- ~*:._.:*~  COLLECTION  ~*:._.:*~ -->
