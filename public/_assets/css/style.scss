@@ -7,26 +7,36 @@
 @use "content";
 @use "comment-box";
 
-/*:._.:*~  VARIABLES  ~*:._.:*/
+/*:._.:*~   CUSTOM PROPERTIES   ~*:._.:*/
+
+/* ---- THEME DEFAULTS ---- */
 :root {
-    --font-family--main: Verdana, Geneva, Tahoma, sans-serif;
-    --font-family--mono: "Courier New", Courier, monospace;
-
-    --font-size--small: 0.75rem;
-    --font-size--base: 1rem;
-    --font-size--large: 1.125rem;
-
-    --letter-spacing--base: initial;
-    --letter-spacing--wide: 0.125rem;
-
-    --color--primary: #f69;
-    --color--secondary: #c36;
-    --color--tertiary: #6cc;
-
+    --color-primary: #f69;
+    --color-primary-alt: #c36;
+    --color-secondary: #6cc;
+    --color-base: black;
     --color-background: white;
 
-    --main-content-width: 67rem;
-    --main-content-height: 50rem;
+    --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
+    --font-family-alt: "Courier New", Courier, monospace;
+
+    --font-size-base: 1rem;
+    --font-size-small: 0.75rem;
+    --font-size-large: 1.125rem;
+
+    --letter-spacing-base: initial;
+    --letter-spacing-large: 0.125rem;
+
+    --page-wrapper-width: 67rem;
+    --page-wrapper-height: 50rem;
+}
+
+/* ---- THEME OVERRIDES ---- */
+:root[data-theme="dark"] {
+    --color-primary: #f69;
+    --color-primary-alt: #c36;
+    --color-secondary: #6cc;
+    --color-background: white;
 }
 
 /*:._.:*~  GLOBAL RESETS  ~*:._.:*
@@ -101,15 +111,15 @@ a {
 }
 
 a:link {
-    color: var(--color--primary);
+    color: var(--color-primary);
 }
 
 a:visited {
-    color: var(--color--secondary);
+    color: var(--color-primary-alt);
 }
 
 a:hover {
-    color: var(--color--tertiary);
+    color: var(--color-secondary);
 }
 
 abbr {
@@ -119,7 +129,7 @@ abbr {
 /*:._.:*~  MIXINS  ~*:._.:*/
 
 @mixin layout-border {
-    border: 1px solid black;
+    border: 1px solid var(--color-base);
 }
 
 @mixin layout-padding {
@@ -131,7 +141,7 @@ abbr {
 }
 
 @mixin button-hover {
-    background-color: var(--color--primary);
+    background-color: var(--color-primary);
 }
 
 // -- BREAKPOINTS -- //
@@ -158,6 +168,7 @@ abbr {
 /* --- PAGE --- */
 .page {
     @include content.text-reset;
+    background-color: var(--color-background);
 
     padding: 1rem;
 
@@ -199,10 +210,10 @@ abbr {
         @include layout-padding();
 
         @include for-phone() {
-            border-top: 1px dashed black;
+            border-top: 1px dashed var(--color-base);
             border-right: none;
             border-left: none;
-            border-bottom: 1px dashed black;
+            border-bottom: 1px dashed var(--color-base);
             padding: 1rem 0;
         }
 
@@ -286,8 +297,8 @@ abbr {
         grid-template-columns: min-content 1fr;
         grid-template-rows: auto 1fr min-content;
 
-        width: var(--main-content-width);
-        height: var(--main-content-height);
+        width: var(--page-wrapper-width);
+        height: var(--page-wrapper-height);
     }
 
     &_blog {
@@ -413,7 +424,7 @@ abbr {
             display: block;
 
             margin: 0 0 1rem 0;
-            border: 1px dotted black;
+            border: 1px dotted var(--color-base);
             padding: 1rem;
 
             width: 100%;
@@ -432,7 +443,7 @@ abbr {
         @include for-phone() {
             display: block;
 
-            border: 1px solid black;
+            border: 1px solid var(--color-base);
             border-radius: 0;
             padding: 0.5rem;
 
@@ -500,7 +511,7 @@ abbr {
         @include for-desktop() {
             display: list-item;
 
-            font-size: var(--font-size--base);
+            font-size: var(--font-size-base);
             font-weight: normal;
         }
     }
@@ -521,7 +532,7 @@ abbr {
 .navi-home {
     display: block;
 
-    letter-spacing: var(--letter-spacing--wide);
+    letter-spacing: var(--letter-spacing-large);
     font-weight: bold;
 
     &:hover {
@@ -538,7 +549,7 @@ abbr {
 
 .navi-button {
     font-style: italic;
-    font-size: var(--font-size--small);
+    font-size: var(--font-size-small);
 
     // background: none;
 }
@@ -580,7 +591,7 @@ abbr {
         @include for-phone() {
             display: block;
 
-            border: 1px dotted black;
+            border: 1px dotted var(--color-base);
             padding: 1rem;
 
             &:hover {
@@ -619,7 +630,7 @@ abbr {
     // }
 
     &__username {
-        font-size: var(--font-size--small);
+        font-size: var(--font-size-small);
     }
 
     // &__content {

@@ -1,6 +1,6 @@
 /*:._.:*~  MIXINS  ~*:._.:*/
 @mixin text-reset {
-    font-family: var(--font-family--main);
+    font-family: var(--font-family-base);
 }
 
 @mixin list-margin {
@@ -45,8 +45,13 @@
             grid-template-rows:
                 minmax(0, 3fr)
                 minmax(0, 2fr);
+
             height: 100vh;
         }
+    }
+
+    &__breadcrumb {
+        margin-bottom: 1.5rem;
     }
 
     &__section {
@@ -98,7 +103,7 @@
 
     text-align: center;
     letter-spacing: var(--letter-spacing-wide);
-    font-family: var(--font-family--mono);
+    font-family: var(--font-family-alt);
 }
 
 // .ascii-art {
@@ -126,6 +131,11 @@
     min-height: 0;
 }
 
+.section-columns {
+    display: flex;
+    gap: 1rem;
+}
+
 .title {
     display: inline-block;
 
@@ -147,20 +157,43 @@
     &_subtitle {
         font-size: var(--font-size--base);
         font-weight: bold;
-        letter-spacing: var(--letter-spacing--wide);
+        letter-spacing: var(--letter-spacing-large);
     }
 
     &_feed {
         font-size: var(--font-size--base);
         font-style: italic;
         font-weight: normal;
-        letter-spacing: var(--letter-spacing--wide);
+        letter-spacing: var(--letter-spacing-large);
     }
 }
 
 .list {
     &__item {
         @include list-margin();
+        @include default-list-style();
+    }
+}
+
+.breadcrumb {
+    &__list {
+        display: flex;
+
+        padding-bottom: 0.5rem;
+        border-bottom: 1px dotted var(--color-base);
+
+        list-style: none;
+    }
+}
+
+.breadcrumb-list {
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child)::after {
+            content: "/";
+            margin: 0 0.5rem;
+        }
     }
 }
 
@@ -177,4 +210,10 @@
         width: 88px;
         height: 31px;
     }
+}
+
+.new-label {
+    display: inline;
+
+    height: 2rem;
 }
