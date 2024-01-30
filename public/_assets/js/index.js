@@ -10,24 +10,32 @@ const naviLists = document.querySelectorAll(".navi__subnavi");
 
 let isFirstLoad = true;
 
-// load major landmark section templates
-function loadLayouts() {
-  LAYOUT_IDS.forEach((id) => {
+/*
+ * basically taken directly from this stackoverflow answer:
+ *
+ * https://stackoverflow.com/a/52349344
+ *
+ * thank you friend, and if only i had learned this sooner i would have saved
+ * hours of banging my head against the wall :')
+ */
+async function fetchHtmlAsText(url) {
+  const response = await fetch(url);
+  return await response.text();
+}
+
+async function loadLayout() {
+  for (const id of LAYOUT_IDS) {
     let element = document.getElementById(id);
 
     if (!element) {
       console.error("couldn't find " + id);
-      return;
+      continue;
     }
 
     let elementUrl = TEMPLATE_URL + id + ".html";
 
-    fetch(elementUrl)
-      .then((response) => response.text())
-      .then((html) => {
-        element.innerHTML = html;
-      });
-  });
+    element.innerHTML = await fetchHtmlAsText(elementUrl);
+  }
 }
 
 function updateContentHeight() {
@@ -38,9 +46,10 @@ function updateContentHeight() {
 
   const frameContent = mainframeElement.contentWindow;
 
-  // clear height (otherwise if resulting height is smaller it doesn't change)
-  mainframeElement.height = "";
+  mainframeElement.height = "0";
   mainframeElement.height = frameContent.document.body.scrollHeight + "px";
+
+  console.log("content height updated: " + mainframeElement.height);
 }
 
 function updateHistory() {
@@ -89,20 +98,13 @@ function toggleNaviMenu() {
 
 window.onload = () => {
   mainframeElement.addEventListener("load", updateHistory, false);
+  mainframeElement.addEventListener("load", updateContentHeight);
+
   setMainframe();
 
-  loadLayouts();
+  loadLayout();
   randomiseTagline();
 };
-
-mainframeElement.onload = () => {
-  updateContentHeight();
-};
-
-// window.addEventListener("DOMContentLoaded", () => {});
-
-// window.addEventListener("focusin", () => {
-// });
 
 // dynamically resize frame height
 window.addEventListener("resize", updateContentHeight);
