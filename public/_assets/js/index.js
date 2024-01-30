@@ -96,9 +96,19 @@ function toggleNaviMenu() {
     });
 }
 
+function isNaviMenuOpen() {
+    if (naviLists[0].classList.contains("navi__subnavi" + "_toggle_open"))
+        return true;
+
+    return false;
+}
+
 window.onload = () => {
     mainframeElement.addEventListener("load", updateHistory, false);
     mainframeElement.addEventListener("load", updateContentHeight);
+    mainframeElement.addEventListener("load", function (e) {
+        if (isNaviMenuOpen()) toggleNaviMenu();
+    });
 
     setMainframe();
 
