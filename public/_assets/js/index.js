@@ -4,8 +4,8 @@ const URL_PARAMETER = "p";
 const TEMPLATE_URL = "/_assets/template/";
 const HOME_URL = "/home.html";
 
-const mainframeElement = document.getElementById("mainframe");
-const taglineElement = document.getElementById("tagline");
+const mainframe = document.getElementsByName("mainframe")[0];
+const tagline = document.getElementById("tagline");
 const naviLists = document.querySelectorAll(".navi__subnavi");
 
 let isFirstLoad = true;
@@ -39,21 +39,21 @@ async function loadLayout() {
 }
 
 function updateContentHeight() {
-    if (mainframeElement == null) {
+    if (mainframe == null) {
         console.error("couldn't find frame");
         return;
     }
 
-    const frameContent = mainframeElement.contentWindow;
+    const frameContent = mainframe.contentWindow;
 
-    mainframeElement.height = "0";
-    mainframeElement.height = frameContent.document.body.scrollHeight + "px";
+    mainframe.height = "0";
+    mainframe.height = frameContent.document.body.scrollHeight + "px";
 
-    console.log("content height updated: " + mainframeElement.height);
+    console.log("content height updated: " + mainframe.height);
 }
 
 function updateHistory() {
-    const mainframePageTitle = mainframeElement.contentDocument.title;
+    const mainframePageTitle = mainframe.contentDocument.title;
 
     if (isFirstLoad) {
         isFirstLoad = false;
@@ -64,10 +64,7 @@ function updateHistory() {
     history.replaceState(
         null,
         "",
-        "?" +
-            URL_PARAMETER +
-            "=" +
-            mainframeElement.contentWindow.location.pathname,
+        "?" + URL_PARAMETER + "=" + mainframe.contentWindow.location.pathname,
     );
 
     document.title = mainframePageTitle;
@@ -80,14 +77,14 @@ function setMainframe() {
 
     // sets frame source to page if url parameter is present,
     // otherwise default to home
-    mainframeElement.src = page == null ? HOME_URL : page;
+    mainframe.src = page == null ? HOME_URL : page;
 }
 
 function randomiseTagline() {
     let index = Math.floor(Math.random() * TAGLINES.length);
     let random_tagline = TAGLINES[index];
 
-    taglineElement.textContent = random_tagline;
+    tagline.textContent = random_tagline;
 }
 
 function toggleNaviMenu() {
@@ -104,9 +101,9 @@ function isNaviMenuOpen() {
 }
 
 window.onload = () => {
-    mainframeElement.addEventListener("load", updateHistory, false);
-    mainframeElement.addEventListener("load", updateContentHeight);
-    mainframeElement.addEventListener("load", function (e) {
+    mainframe.addEventListener("load", updateHistory, false);
+    mainframe.addEventListener("load", updateContentHeight);
+    mainframe.addEventListener("load", function () {
         if (isNaviMenuOpen()) toggleNaviMenu();
     });
 
