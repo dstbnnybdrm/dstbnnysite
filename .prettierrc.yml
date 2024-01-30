@@ -19,6 +19,7 @@ overrides:
   - files: 
     - "**/*.css"
     - "**/*.scss"
+    - "**/*.js"
     options:
       tabWidth: 4
 useTabs: false
