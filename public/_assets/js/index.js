@@ -19,91 +19,91 @@ let isFirstLoad = true;
  * hours of banging my head against the wall :')
  */
 async function fetchHtmlAsText(url) {
-  const response = await fetch(url);
-  return await response.text();
+    const response = await fetch(url);
+    return await response.text();
 }
 
 async function loadLayout() {
-  for (const id of LAYOUT_IDS) {
-    let element = document.getElementById(id);
+    for (const id of LAYOUT_IDS) {
+        let element = document.getElementById(id);
 
-    if (!element) {
-      console.error("couldn't find " + id);
-      continue;
+        if (!element) {
+            console.error("couldn't find " + id);
+            continue;
+        }
+
+        let elementUrl = TEMPLATE_URL + id + ".html";
+
+        element.innerHTML = await fetchHtmlAsText(elementUrl);
     }
-
-    let elementUrl = TEMPLATE_URL + id + ".html";
-
-    element.innerHTML = await fetchHtmlAsText(elementUrl);
-  }
 }
 
 function updateContentHeight() {
-  if (mainframeElement == null) {
-    console.error("couldn't find frame");
-    return;
-  }
+    if (mainframeElement == null) {
+        console.error("couldn't find frame");
+        return;
+    }
 
-  const frameContent = mainframeElement.contentWindow;
+    const frameContent = mainframeElement.contentWindow;
 
-  mainframeElement.height = "0";
-  mainframeElement.height = frameContent.document.body.scrollHeight + "px";
+    mainframeElement.height = "0";
+    mainframeElement.height = frameContent.document.body.scrollHeight + "px";
 
-  console.log("content height updated: " + mainframeElement.height);
+    console.log("content height updated: " + mainframeElement.height);
 }
 
 function updateHistory() {
-  const mainframePageTitle = mainframeElement.contentDocument.title;
+    const mainframePageTitle = mainframeElement.contentDocument.title;
 
-  if (isFirstLoad) {
-    isFirstLoad = false;
+    if (isFirstLoad) {
+        isFirstLoad = false;
+        document.title = mainframePageTitle;
+        return;
+    }
+
+    history.replaceState(
+        null,
+        "",
+        "?" +
+            URL_PARAMETER +
+            "=" +
+            mainframeElement.contentWindow.location.pathname,
+    );
+
     document.title = mainframePageTitle;
-    return;
-  }
-
-  history.replaceState(
-    null,
-    "",
-    "?" +
-      URL_PARAMETER +
-      "=" +
-      mainframeElement.contentWindow.location.pathname,
-  );
-
-  document.title = mainframePageTitle;
 }
 
 // checks to see if a url parameter exists and sets the frame source to that page
 function setMainframe() {
-  let parameters = new URLSearchParams(window.location.search);
-  let page = parameters.get(URL_PARAMETER);
+    let parameters = new URLSearchParams(window.location.search);
+    let page = parameters.get(URL_PARAMETER);
 
-  // sets frame source to page if url parameter is present,
-  // otherwise default to home
-  mainframeElement.src = page == null ? HOME_URL : page;
+    // sets frame source to page if url parameter is present,
+    // otherwise default to home
+    mainframeElement.src = page == null ? HOME_URL : page;
 }
 
 function randomiseTagline() {
-  let index = Math.floor(Math.random() * TAGLINES.length);
-  let random_tagline = TAGLINES[index];
+    let index = Math.floor(Math.random() * TAGLINES.length);
+    let random_tagline = TAGLINES[index];
 
-  taglineElement.textContent = random_tagline;
+    taglineElement.textContent = random_tagline;
 }
 
 function toggleNaviMenu() {
-  naviLists.forEach((list) => {
-    list.classList.toggle("navi__subnavi" + "_toggle_open");
-  });
+    naviLists.forEach((list) => {
+        list.classList.toggle("navi__subnavi" + "_toggle_open");
+    });
 }
 
 window.onload = () => {
-  mainframeElement.addEventListener("load", updateHistory, false);
-  mainframeElement.addEventListener("load", updateContentHeight);
+    mainframeElement.addEventListener("load", updateHistory, false);
+    mainframeElement.addEventListener("load", updateContentHeight);
 
-  setMainframe();
+    setMainframe();
 
-  loadLayout();
-  randomiseTagline();
+    loadLayout();
+    randomiseTagline();
 };
 
 // dynamically resize frame height
@@ -111,7 +111,7 @@ window.addEventListener("resize", updateContentHeight);
 
 // set frame on back button presses too
 window.addEventListener("popstate", function (e) {
-  if (e.state !== null) {
-    setMainframe();
-  }
+    if (e.state !== null) {
+        setMainframe();
+    }
 });
