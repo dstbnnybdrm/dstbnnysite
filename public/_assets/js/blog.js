@@ -1,5 +1,5 @@
-const postFrame = document.getElementByName("post-frame")[0];
-const postNavButtons = document.querySelectorAll(".posts-list__button");
+const postFrame = document.getElementsByName("post-frame")[0];
+const postNavButtons = document.querySelectorAll(".blog-posts__link");
 
 function updateContentHeight() {
     if (postFrame == null) {
@@ -15,23 +15,8 @@ function updateContentHeight() {
     console.log("content height updated: " + postFrame.height);
 }
 
-// (modified from lostlove's blog which can be found here:
-// https://lostlove.neocities.org/blog)
-function linkNavButtons() {
-    postNavButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            // change iframe to button's post url
-            let post_location = button.getAttribute("data-post-url");
-            blog_post.src = post_location;
-        });
-    });
-}
-
-// add click event to every post button
-window.addEventListener("load", linkNavButtons);
-
 // show most recent post on page load
-window.addEventListener("load", function () {
-    let recent_post_location = postNavButtons[0].getAttribute("data-post-url");
-    blog_post.src = recent_post_location;
-});
+window.onload = () => {
+    let recent_post_location = postNavButtons[0].getAttribute("href");
+    postFrame.src = recent_post_location;
+};

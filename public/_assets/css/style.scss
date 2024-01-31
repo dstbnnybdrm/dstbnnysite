@@ -187,21 +187,16 @@ abbr {
         margin: auto;
     }
 
-    &_blog {
-        @include for-desktop() {
-            display: block;
-            position: static;
-
-            margin: 0;
-            padding: 2rem;
-        }
-    }
-
     // &__header {
     // }
 
     // &__sidebar {
     // }
+
+    &__navi {
+        @include layout-border();
+        @include layout-padding();
+    }
 
     &__main {
         grid-area: main;
@@ -215,6 +210,11 @@ abbr {
             border-left: none;
             border-bottom: 1px dashed var(--color-base);
             padding: 1rem 0;
+        }
+
+        &_blog {
+            border: none;
+            margin: 0 0 0 1rem;
         }
 
         &_guestbook {
@@ -309,6 +309,9 @@ abbr {
                 "header ."
                 "navi   main";
             grid-template-rows: min-content 1fr;
+            gap: 0;
+
+            height: calc(var(--page-wrapper-height) + 5rem);
         }
     }
 
@@ -408,10 +411,19 @@ abbr {
 /* --- NAVIGATION --- */
 .navi {
     grid-area: navi;
+
     @include for-tablet() {
         display: flex;
 
         flex-wrap: wrap;
+    }
+
+    &_blog {
+        display: flex;
+
+        flex-direction: column;
+        row-gap: 0.5rem;
+        // @include layout-border();
     }
 
     &_guestbook {
@@ -488,6 +500,10 @@ abbr {
 
             @include navi-list-style();
         }
+
+        &_blog {
+            margin-left: 0;
+        }
     }
 
     /* the "from me," "for you" titles */
@@ -513,6 +529,13 @@ abbr {
 
             font-size: var(--font-size-base);
             font-weight: normal;
+        }
+
+        &_blog {
+            display: block;
+            list-style: none;
+
+            font-weight: bold;
         }
     }
 
@@ -604,10 +627,12 @@ abbr {
     }
 }
 
-// .blog-posts {
-//     &__post {
-//     }
-// }
+.blog-posts {
+    @include content.default-list-style();
+
+    // &__post {
+    // }
+}
 
 /* --- STATUS --- */
 .status {

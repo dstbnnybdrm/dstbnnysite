@@ -106,8 +106,10 @@
     font-family: var(--font-family-alt);
 }
 
-// .ascii-art {
-// }
+.ascii-art {
+    font-family: var(--font-family-alt);
+    line-height: 1rem;
+}
 
 .section {
     display: flex;
@@ -165,6 +167,13 @@
         font-style: italic;
         font-weight: normal;
         letter-spacing: var(--letter-spacing-large);
+    }
+
+    &_blog {
+        display: inline-block;
+
+        font-size: var(--font-size--large);
+        font-weight: bold;
     }
 }
 

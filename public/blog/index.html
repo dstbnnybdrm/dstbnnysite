@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -53,9 +53,9 @@
     <script src="/_assets/js/blog.js" defer></script>
   </head>
 
-  <body class="page page_blog">
+  <body class="page">
     <div class="page-wrapper page-wrapper_blog">
-      <header class="header header_blog page__header">
+      <header class="header page__header">
         <pre class="ascii-art" aria-hidden="true">
        .--.       .---.
    .---|__|       |~~~|
@@ -70,24 +70,32 @@
       </header>
 
       <nav class="navi navi_blog page__navi">
-        <h1 class="title title_navi navi__title">
+        <h1 class="title navi__title navi__title_blog">
           <abbr title="dustbunnyblog">dstbnnyblog</abbr>
         </h1>
         <p class="navi__description">various thoughts and ramblings</p>
 
-        <a href="/" class="navi__home">« back to site «</a>
+        <a href="/" class="navi__home">back to site</a>
 
-        <nav class="navi navi__subnavi">
-          <h2 class="title title_subnavi navi__title">entries</h2>
+        <nav class="navi navi__subnavi navi__subnavi_blog">
+          <h2 class="title navi__title navi__title_blog">entries</h2>
           <ul class="blog-posts navi__list">
             <!-- add new posts here, me! -->
             <li class="blog-posts__post">
-              <a href="posts/2023-01-09.html" target="blog-post">
+              <a
+                class="blog-posts__link"
+                href="posts/2023-01-09.html"
+                target="post-frame"
+              >
                 "ah shit, here we go again"
               </a>
             </li>
             <li class="blog-posts__post">
-              <a href="posts/2023-12-30.html" target="blog-post">
+              <a
+                class="blog-posts__link"
+                href="posts/2023-12-30.html"
+                target="post-frame"
+              >
                 new blog, new me
               </a>
             </li>
@@ -95,7 +103,7 @@
         </nav>
       </nav>
 
-      <main class="main page__main">
+      <main class="main page__main page__main_blog">
         <!-- the actual blog post -->
         <iframe name="post-frame" class="main__frame"></iframe>
       </main>
