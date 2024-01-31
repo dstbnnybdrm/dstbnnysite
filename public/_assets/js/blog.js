@@ -19,4 +19,7 @@ function updateContentHeight() {
 window.onload = () => {
     let recent_post_location = postNavButtons[0].getAttribute("href");
     postFrame.src = recent_post_location;
+    postFrame.addEventListener("load", updateContentHeight);
 };
+
+window.addEventListener("resize", updateContentHeight);
