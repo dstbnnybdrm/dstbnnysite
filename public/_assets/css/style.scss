@@ -4,8 +4,8 @@
  */
 
 // import partials
+@use "mixins";
 @use "content";
-// @use "blog";
 @use "comment-box";
 
 /*:._.:*~   CUSTOM PROPERTIES   ~*:._.:*/
@@ -47,7 +47,7 @@
  * 
  */
 
-/* less shitty box-sizing (border-based instead of content-based) */
+/* less shitty box-sizing (border-based instead of mixins-based) */
 *,
 *::before,
 *::after {
@@ -127,48 +127,11 @@ abbr {
     text-decoration: none;
 }
 
-/*:._.:*~  MIXINS  ~*:._.:*/
-
-@mixin layout-border {
-    border: 1px solid var(--color-base);
-}
-
-@mixin layout-padding {
-    padding: 1rem;
-}
-
-@mixin navi-list-style {
-    list-style: "∟ ";
-}
-
-@mixin button-hover {
-    background-color: var(--color-primary);
-}
-
-// -- BREAKPOINTS -- //
-@mixin for-phone {
-    @media screen and (max-width: 499px) {
-        @content;
-    }
-}
-
-@mixin for-tablet {
-    @media screen and (min-width: 500px) and (max-width: 800px) {
-        @content;
-    }
-}
-
-@mixin for-desktop {
-    @media screen and (min-width: 801px) {
-        @content;
-    }
-}
-
 /*:._.:*~  BLOCKS  ~*:._.:*/
 
 /* --- PAGE --- */
 .page {
-    @include content.text-reset;
+    @include mixins.text-reset;
     background-color: var(--color-background);
 
     padding: 1rem;
@@ -185,15 +148,16 @@ abbr {
     &__main {
         grid-area: main;
 
-        @include layout-border();
-        @include layout-padding();
+        @include mixins.layout-border();
+        @include mixins.layout-padding();
 
         &_blog {
             border: none;
         }
 
-        // &_guestbook {
-        // }
+        &_guestbook {
+            border: none;
+        }
     }
 
     &__collection {
@@ -204,7 +168,7 @@ abbr {
         grid-area: footer;
     }
 
-    @include for-phone() {
+    @include mixins.for-phone() {
         &__navi {
             border-top: 1px solid black;
             padding: 0.5rem 0 0 0;
@@ -219,14 +183,14 @@ abbr {
         }
     }
 
-    @include for-tablet() {
+    @include mixins.for-tablet() {
         &__navi {
-            @include layout-border();
-            @include layout-padding();
+            @include mixins.layout-border();
+            @include mixins.layout-padding();
         }
     }
 
-    @include for-desktop() {
+    @include mixins.for-desktop() {
         display: flex;
         position: absolute;
 
@@ -241,23 +205,18 @@ abbr {
         margin: auto;
 
         &__navi {
-            @include layout-border();
-            @include layout-padding();
+            @include mixins.layout-border();
+            @include mixins.layout-padding();
         }
 
         &__main {
             &_blog {
                 margin: 0 0 0 1rem;
             }
-
-            &_guestbook {
-                border: none;
-                height: auto;
-            }
         }
 
         &__collection {
-            @include layout-border();
+            @include mixins.layout-border();
             padding: 0.5rem 1rem;
 
             max-height: min-content;
@@ -290,7 +249,7 @@ abbr {
     // &_guestbook {
     // }
 
-    @include for-phone() {
+    @include mixins.for-phone() {
         grid-template-areas:
             "header"
             "navi"
@@ -303,7 +262,7 @@ abbr {
         margin: 1rem 0;
     }
 
-    @include for-tablet() {
+    @include mixins.for-tablet() {
         grid-template-areas:
             "header     header"
             "navi       navi"
@@ -324,12 +283,26 @@ abbr {
             grid-template-areas:
                 "header"
                 "navi"
-                "main";
+                "main"
+                "footer";
             grid-template-columns: 100%;
+        }
+
+        &_guestbook {
+            display: grid;
+
+            grid-template-areas:
+                "navi"
+                "main";
+            grid-template-columns: min-content;
+            row-gap: 0;
+
+            width: min-content;
+            height: min-content;
         }
     }
 
-    @include for-desktop() {
+    @include mixins.for-desktop() {
         grid-template-areas:
             "header     header"
             "sidebar    main"
@@ -355,6 +328,11 @@ abbr {
             grid-template-areas:
                 "navi"
                 "main";
+            // grid-template-columns: min-content;
+            gap: 0;
+
+            width: min-content;
+            height: min-content;
         }
     }
 }
@@ -378,7 +356,7 @@ abbr {
         width: 100%;
     }
 
-    @include for-desktop() {
+    @include mixins.for-desktop() {
         justify-content: center;
 
         &_blog {
@@ -391,16 +369,16 @@ abbr {
     font-style: italic;
     text-align: center;
 
-    @include for-phone() {
+    @include mixins.for-phone() {
         display: none;
     }
 
-    @include for-tablet() {
+    @include mixins.for-tablet() {
         display: block;
     }
 
-    @include for-desktop() {
-        @include layout-border();
+    @include mixins.for-desktop() {
+        @include mixins.layout-border();
     }
 }
 
@@ -420,15 +398,15 @@ abbr {
     // &__aside {
     // }
 
-    @include for-tablet() {
+    @include mixins.for-tablet() {
         &__navi {
-            @include layout-border();
+            @include mixins.layout-border();
             padding: 1rem;
             column-gap: 1rem;
         }
     }
 
-    @include for-desktop() {
+    @include mixins.for-desktop() {
         display: grid;
 
         grid-template-areas:
@@ -439,8 +417,8 @@ abbr {
         row-gap: 1rem;
 
         &__navi {
-            @include layout-border();
-            @include layout-padding();
+            @include mixins.layout-border();
+            @include mixins.layout-padding();
         }
     }
 }
@@ -454,7 +432,7 @@ abbr {
 
         flex-direction: column;
         row-gap: 0.5rem;
-        // @include layout-border();
+        // @include mixins.layout-border();
     }
 
     &_guestbook {
@@ -484,7 +462,7 @@ abbr {
     // &__list {
     // }
 
-    @include for-phone() {
+    @include mixins.for-phone() {
         &__home {
             display: block;
 
@@ -526,7 +504,7 @@ abbr {
         }
     }
 
-    @include for-tablet() {
+    @include mixins.for-tablet() {
         display: flex;
 
         flex-wrap: wrap;
@@ -559,7 +537,7 @@ abbr {
         }
     }
 
-    @include for-desktop() {
+    @include mixins.for-desktop() {
         &__home {
             margin: 0;
         }
@@ -569,9 +547,9 @@ abbr {
         }
 
         &__subnavi {
-            @include content.list-margin();
+            @include mixins.list-margin();
 
-            @include navi-list-style();
+            @include mixins.navi-list-style();
 
             &_blog {
                 margin-left: 0;
@@ -586,7 +564,7 @@ abbr {
         }
 
         &__list {
-            @include content.list-margin();
+            @include mixins.list-margin();
         }
     }
 }
@@ -598,10 +576,10 @@ abbr {
     font-weight: bold;
 
     &:hover {
-        @include button-hover();
+        @include mixins.button-hover();
     }
 
-    @include for-desktop() {
+    @include mixins.for-desktop() {
         display: inline;
 
         letter-spacing: normal;
@@ -620,7 +598,7 @@ abbr {
     // &__link {
     // }
 
-    @include for-phone() {
+    @include mixins.for-phone() {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -636,36 +614,36 @@ abbr {
             padding: 1rem;
 
             &:hover {
-                @include button-hover();
+                @include mixins.button-hover();
             }
         }
     }
 
-    @include for-tablet() {
+    @include mixins.for-tablet() {
         display: flex;
         flex-direction: row;
         column-gap: 2rem;
         &__item {
-            @include content.list-margin();
-            @include content.default-list-style();
+            @include mixins.list-margin();
+            @include mixins.default-list-style();
         }
     }
 
-    @include for-desktop() {
+    @include mixins.for-desktop() {
         &__item {
             display: list-item;
 
             border: none;
 
             line-height: 1.5rem;
-            @include navi-list-style();
+            @include mixins.navi-list-style();
         }
     }
 }
 
 .blog-posts {
-    @include content.default-list-style();
-    @include content.list-margin();
+    @include mixins.default-list-style();
+    @include mixins.list-margin();
 
     // &__post {
     // }
@@ -682,21 +660,21 @@ abbr {
         font-size: var(--font-size-small);
     }
 
-    // &__content {
+    // &__mixins {
     // }
 
-    @include for-phone() {
+    @include mixins.for-phone() {
         display: none;
     }
 
-    @include for-tablet() {
-        @include layout-border();
-        @include layout-padding();
+    @include mixins.for-tablet() {
+        @include mixins.layout-border();
+        @include mixins.layout-padding();
     }
 
-    @include for-desktop() {
-        @include layout-border();
-        @include layout-padding();
+    @include mixins.for-desktop() {
+        @include mixins.layout-border();
+        @include mixins.layout-padding();
     }
 }
 
@@ -704,18 +682,18 @@ abbr {
 .aside {
     grid-area: aside;
 
-    @include for-phone() {
+    @include mixins.for-phone() {
         display: none;
     }
 
-    @include for-tablet() {
-        @include layout-border();
-        @include layout-padding();
+    @include mixins.for-tablet() {
+        @include mixins.layout-border();
+        @include mixins.layout-padding();
     }
 
-    @include for-desktop() {
-        @include layout-border();
-        @include layout-padding();
+    @include mixins.for-desktop() {
+        @include mixins.layout-border();
+        @include mixins.layout-padding();
     }
 }
 
@@ -732,7 +710,7 @@ abbr {
         width: 100%;
     }
 
-    @include for-desktop() {
+    @include mixins.for-desktop() {
         &__frame {
             height: 100%;
         }
@@ -741,7 +719,7 @@ abbr {
 
 /* --- COLLECTION --- */
 // .collection {
-// &__content {
+// &__mixins {
 // }
 // }
 

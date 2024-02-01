@@ -1,0 +1,60 @@
+/*:._.:*~  MIXINS  ~*:._.:*/
+@mixin layout-border {
+    border: 1px solid var(--color-base);
+}
+
+@mixin layout-padding {
+    padding: 1rem;
+}
+
+@mixin navi-list-style {
+    list-style: "∟ ";
+}
+
+@mixin button-hover {
+    background-color: var(--color-primary);
+}
+
+@mixin text-reset {
+    font-family: var(--font-family-base);
+}
+
+@mixin list-margin {
+    margin-left: 1.25rem;
+}
+
+@mixin default-list-style {
+    list-style: "❀ ";
+}
+
+// -- BREAKPOINTS -- //
+@mixin for-phone {
+    @media screen and (max-width: 499px) {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media screen and (min-width: 500px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media screen and (min-width: 801px) {
+        @content;
+    }
+}
+
+// -- BREAKPOINTS -- //
+@mixin small-frame {
+    @media (max-width: 599px) and (max-height: 459px) {
+        @content;
+    }
+}
+
+@mixin large-frame {
+    @media (min-width: 600px) and (min-height: 460px) {
+        @content;
+    }
+}

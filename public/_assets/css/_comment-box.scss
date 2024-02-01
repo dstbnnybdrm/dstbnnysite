@@ -1,3 +1,5 @@
+@use "mixins";
+
 :root {
     --font-family--main: Verdana, Geneva, Tahoma, sans-serif;
     --font-family--form: "Courier New", Courier, monospace;
@@ -5,47 +7,81 @@
 
 /* --- COMMENT BOX GENERAL STUFF --- */
 
-/* comments heading */
+div #HCB_comment_box {
+    display: flex;
 
-#HCB_comment_box h3 {
-    display: none;
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    /* comments heading */
+    h3 {
+        display: none;
+    }
+
+    /* HCB's messages to user */
+    #hcb_msg {
+        grid-area: comment-message;
+
+        margin: 1rem 0;
+
+        font-family: var(--font-family--main);
+        text-transform: lowercase;
+    }
+
+    p.error {
+        grid-area: comment-message;
+
+        border: 1px solid red;
+
+        font-family: var(--font-family--main);
+        text-transform: lowercase;
+    }
+
+    /* "not using html comment box yet?" */
+    div.home-desc {
+        display: none;
+    }
+
+    /* log-in icon */
+    img.hcb-icon.hcb-door-in {
+        display: inline;
+    }
+
+    @include mixins.for-phone() {
+        width: 100%;
+    }
+
+    @include mixins.for-tablet() {
+        width: 30rem;
+    }
+
+    @include mixins.for-desktop() {
+        display: grid;
+        column-gap: 1rem;
+
+        grid-template-areas:
+            "comment-message ."
+            "comment-form comments-list";
+        width: min-content;
+    }
 }
-/* HCB's messages to user */
 
-#HCB_comment_box #hcb_msg {
-    grid-area: comment-message;
+#HCB_comment_form_box {
+    grid-area: comment-form;
 
-    margin: 1rem 0;
+    @include mixins.for-desktop() {
+        border: 1px solid black;
+        padding: 1rem;
 
-    font-family: var(--font-family--main);
-    text-transform: lowercase;
-}
-
-#HCB_comment_box p.error {
-    grid-area: comment-message;
-
-    border: 1px solid red;
-
-    font-family: var(--font-family--main);
-    text-transform: lowercase;
-}
-
-/* "not using html comment box yet?" */
-
-#HCB_comment_box div.home-desc {
-    display: none;
-}
-
-/* log-in icon */
-
-#HCB_comment_box img.hcb-icon.hcb-door-in {
-    display: inline;
+        height: calc(30rem * 1.414);
+        width: 30rem;
+    }
 }
 
 /* --- COMMENT FORMS --- */
 
 /* text forms */
-
 input#hcb_form_name,
 textarea#hcb_form_content {
     border: 1px dotted black;
@@ -53,11 +89,11 @@ textarea#hcb_form_content {
     font-family: var(--font-family--form);
     font-size: 16px;
     color: black;
+
     background: none;
 }
 
 /* placeholder text */
-
 ::-webkit-input-placeholder {
     font-size: 16px;
     font-family: var(--font-family--form);
@@ -85,89 +121,61 @@ textarea#hcb_form_content {
 /* --- COMMENTS LIST --- */
 
 #comments_list {
+    grid-area: comments-list;
+
     border-top: 1px dotted black;
     padding: 1rem 0 0 0;
-}
 
-#comments_list #no_comments {
-    font-family: var(--font-family--main);
-    text-transform: lowercase;
-}
-
-#comments_list div.comment {
-    margin: 0;
-    padding: 0;
-}
-
-#comments_list blockquote {
-    margin: 0;
-    padding: 0;
-}
-
-#comments_list p.hcb-comment-tb {
-    margin: 0;
-}
-
-#comments_list p.hcb-comment-body {
-    font-family: var(--font-family--main);
-}
-
-#comments_list b.author-name {
-    font-family: var(--font-family--main);
-}
-
-#comments_list span.date {
-    font-family: var(--font-family--main);
-
-    color: black;
-
-    font-size: 0.825rem;
-    letter-spacing: 0.125rem;
-    text-transform: lowercase;
-}
-
-/* comment buttons */
-
-#comments_list p.hcb-comment-tb button {
-    color: #f69;
-    font-family: var(--font-family--main);
-    font-size: 1rem;
-    text-transform: lowercase;
-}
-
-#comments_list .likes img {
-    display: inline-block;
-}
-
-@media screen and (min-width: 900px) and (min-height: 780px) {
-    /* --- COMMENT BOX GENERAL STUFF --- */
-
-    div #HCB_comment_box {
-        display: grid;
-        column-gap: 1rem;
-
-        grid-template-areas:
-            "comment-message ."
-            "comment-form comments-list";
+    #no_comments {
+        font-family: var(--font-family--main);
+        text-transform: lowercase;
     }
 
-    /* --- COMMENT FORMS --- */
-
-    #HCB_comment_form_box {
-        grid-area: comment-form;
-
-        border: 1px solid black;
-        padding: 1rem;
-
-        height: calc(30rem * 1.414);
-        width: 30rem;
+    div.comment {
+        margin: 0;
+        padding: 0;
     }
 
-    /* --- COMMENTS LIST --- */
+    blockquote {
+        margin: 0;
+        padding: 0;
+    }
 
-    #comments_list {
-        grid-area: comments-list;
+    p.hcb-comment-tb {
+        margin: 0;
+    }
 
+    p.hcb-comment-body {
+        font-family: var(--font-family--main);
+    }
+
+    b.author-name {
+        font-family: var(--font-family--main);
+    }
+
+    span.date {
+        font-family: var(--font-family--main);
+
+        color: black;
+
+        font-size: 0.825rem;
+        letter-spacing: 0.125rem;
+        text-transform: lowercase;
+    }
+
+    /* comment buttons */
+    p.hcb-comment-tb button {
+        color: #f69;
+        font-family: var(--font-family--main);
+        font-size: 1rem;
+        text-transform: lowercase;
+    }
+
+    .likes img {
+        display: inline-block;
+    }
+
+    @include mixins.for-desktop() {
         overflow-y: auto;
         overflow-x: hidden !important;
 
@@ -178,3 +186,20 @@ textarea#hcb_form_content {
         width: 30rem;
     }
 }
+
+// @media screen and (min-width: 860px) and (min-height: 780px) {
+//     /* --- COMMENT BOX GENERAL STUFF --- */
+
+//     div #HCB_comment_box {
+//     }
+
+//     /* --- COMMENT FORMS --- */
+
+//     #HCB_comment_form_box {
+//     }
+
+//     /* --- COMMENTS LIST --- */
+
+//     #comments_list {
+//     }
+// }

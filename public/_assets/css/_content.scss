@@ -1,31 +1,7 @@
-/*:._.:*~  MIXINS  ~*:._.:*/
-@mixin text-reset {
-    font-family: var(--font-family-base);
-}
-
-@mixin list-margin {
-    margin-left: 1.25rem;
-}
-
-@mixin default-list-style {
-    list-style: "❀ ";
-}
-
-// -- BREAKPOINTS -- //
-@mixin small-frame {
-    @media (max-width: 599px) and (max-height: 459px) {
-        @content;
-    }
-}
-
-@mixin large-frame {
-    @media (min-width: 600px) and (min-height: 460px) {
-        @content;
-    }
-}
+@use "mixins";
 
 .main-container {
-    @include text-reset();
+    @include mixins.text-reset();
 
     // &_home {
     // }
@@ -39,12 +15,12 @@
         min-height: min-content;
     }
 
-    @include small-frame() {
+    @include mixins.small-frame() {
         /* should only need this at suuuuper thin screens? i think? */
         overflow: hidden;
     }
 
-    @include large-frame() {
+    @include mixins.large-frame() {
         &_home {
             display: grid;
 
@@ -92,7 +68,7 @@
         }
     }
 
-    @include large-frame() {
+    @include mixins.large-frame() {
         &__entry {
             &:nth-child(n + 4) {
                 display: block;
@@ -184,8 +160,8 @@
 
 .list {
     &__item {
-        @include list-margin();
-        @include default-list-style();
+        @include mixins.list-margin();
+        @include mixins.default-list-style();
     }
 }
 
