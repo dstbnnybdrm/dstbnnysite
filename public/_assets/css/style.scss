@@ -5,7 +5,7 @@
 
 // import partials
 @use "content";
-@use "blog";
+// @use "blog";
 @use "comment-box";
 
 /*:._.:*~   CUSTOM PROPERTIES   ~*:._.:*/
@@ -179,10 +179,8 @@ abbr {
     // &__sidebar {
     // }
 
-    &__navi {
-        @include layout-border();
-        @include layout-padding();
-    }
+    // &__navi {
+    // }
 
     &__main {
         grid-area: main;
@@ -190,13 +188,9 @@ abbr {
         @include layout-border();
         @include layout-padding();
 
-        // &_blog {
-        // border: none;
-
-        // @include for-desktop() {
-        //     margin: 0 0 0 1rem;
-        // }
-        // }
+        &_blog {
+            border: none;
+        }
 
         // &_guestbook {
         // }
@@ -211,12 +205,24 @@ abbr {
     }
 
     @include for-phone() {
+        &__navi {
+            border-top: 1px solid black;
+            padding: 0.5rem 0 0 0;
+        }
+
         &__main {
             border-top: 1px dashed var(--color-base);
             border-right: none;
             border-left: none;
             border-bottom: 1px dashed var(--color-base);
             padding: 1rem 0;
+        }
+    }
+
+    @include for-tablet() {
+        &__navi {
+            @include layout-border();
+            @include layout-padding();
         }
     }
 
@@ -234,7 +240,16 @@ abbr {
 
         margin: auto;
 
+        &__navi {
+            @include layout-border();
+            @include layout-padding();
+        }
+
         &__main {
+            &_blog {
+                margin: 0 0 0 1rem;
+            }
+
             &_guestbook {
                 border: none;
                 height: auto;
