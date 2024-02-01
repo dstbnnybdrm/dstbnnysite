@@ -50,7 +50,8 @@
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
-    <script src="/_assets/js/blog.js" defer></script>
+    <!-- <script src="/_assets/js/blog.js" defer></script> -->
+    <script src="/_assets/js/index.js" defer></script>
   </head>
 
   <body class="page">
@@ -85,7 +86,7 @@
               <a
                 class="blog-posts__link"
                 href="posts/2023-01-09.html"
-                target="post-frame"
+                target="mainframe"
               >
                 "ah shit, here we go again"
               </a>
@@ -94,7 +95,7 @@
               <a
                 class="blog-posts__link"
                 href="posts/2023-12-30.html"
-                target="post-frame"
+                target="mainframe"
               >
                 new blog, new me
               </a>
@@ -105,10 +106,12 @@
 
       <main class="main page__main page__main_blog">
         <!-- the actual blog post -->
-        <iframe name="post-frame" class="main__frame"></iframe>
+        <iframe name="mainframe" class="main__frame"></iframe>
       </main>
 
-      <div id="footer"></div>
+      <footer class="footer page__footer">
+        <div id="footer"></div>
+      </footer>
     </div>
   </body>
 </html>

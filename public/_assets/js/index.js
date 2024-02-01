@@ -5,6 +5,7 @@ const TEMPLATE_URL = "/_assets/template/";
 const HOME_URL = "/home.html";
 
 const mainframe = document.getElementsByName("mainframe")[0];
+
 const tagline = document.getElementById("tagline");
 const naviLists = document.querySelectorAll(".navi__subnavi");
 
@@ -27,10 +28,7 @@ async function loadLayout() {
     for (const id of LAYOUT_IDS) {
         let element = document.getElementById(id);
 
-        if (!element) {
-            console.error("couldn't find " + id);
-            continue;
-        }
+        if (!element) continue;
 
         let elementUrl = TEMPLATE_URL + id + ".html";
 
@@ -52,6 +50,7 @@ function updateContentHeight() {
     console.log("content height updated: " + mainframe.height);
 }
 
+/* -- TODO -- */
 function updateHistory() {
     const mainframePageTitle = mainframe.contentDocument.title;
 
@@ -61,23 +60,31 @@ function updateHistory() {
         return;
     }
 
-    history.replaceState(
-        null,
-        "",
-        "?" + URL_PARAMETER + "=" + mainframe.contentWindow.location.pathname,
-    );
+    console.log("I'M HERE");
+
+    let location = "";
+
+    // still slightly broken on hard refresh
+    if (window.location.pathname == "/blog/") {
+        location = mainframe.contentWindow.location.pathname.split("/blog")[1];
+    } else {
+        location = mainframe.contentWindow.location.pathname;
+    }
+
+    history.replaceState(null, "", "?" + URL_PARAMETER + "=" + location);
 
     document.title = mainframePageTitle;
 }
 
 // checks to see if a url parameter exists and sets the frame source to that page
-function setMainframe() {
+function setMainframe(defaultPage) {
     let parameters = new URLSearchParams(window.location.search);
     let page = parameters.get(URL_PARAMETER);
 
     // sets frame source to page if url parameter is present,
-    // otherwise default to home
-    mainframe.src = page == null ? HOME_URL : page;
+    // otherwise default to specified page
+    mainframe.src = page == null ? defaultPage : page;
+    updateHistory();
 }
 
 function randomiseTagline() {
@@ -107,10 +114,20 @@ window.onload = () => {
         if (isNaviMenuOpen()) toggleNaviMenu();
     });
 
-    setMainframe();
+    switch (window.location.pathname) {
+        case "/blog/":
+            let postNavButtons = document.querySelectorAll(".blog-posts__link");
+            let recent_post_location = postNavButtons[0].getAttribute("href");
+            setMainframe(recent_post_location);
+            break;
+        case "/":
+            setMainframe(HOME_URL);
+            randomiseTagline();
+            break;
+        default:
+    }
 
     loadLayout();
-    randomiseTagline();
 };
 
 // dynamically resize frame height
