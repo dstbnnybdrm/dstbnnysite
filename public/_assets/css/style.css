@@ -135,6 +135,7 @@
 }
 .list__item_row {
   display: inline-block;
+  margin-left: 0rem;
 }
 .list__item_row:not(:last-child)::after {
   content: "/";
@@ -143,8 +144,8 @@
 
 .breadcrumb__list {
   display: flex;
-  padding-bottom: 0.5rem;
   border-bottom: 1px dotted var(--color-base);
+  padding-bottom: 0.5rem;
 }
 
 .buttons-88x31 {

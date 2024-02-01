@@ -163,6 +163,7 @@
 
     &_row {
         display: flex;
+
         list-style: none;
     }
 
@@ -171,6 +172,8 @@
 
         &_row {
             display: inline-block;
+
+            margin-left: 0rem;
 
             &:not(:last-child)::after {
                 content: "/";
@@ -184,8 +187,8 @@
     &__list {
         display: flex;
 
-        padding-bottom: 0.5rem;
         border-bottom: 1px dotted var(--color-base);
+        padding-bottom: 0.5rem;
     }
 }
 
