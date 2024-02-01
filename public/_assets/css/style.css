@@ -7,6 +7,13 @@
 .main-container {
   font-family: var(--font-family-base);
 }
+.main-container__breadcrumb {
+  margin-bottom: 1.5rem;
+}
+.main-container__section {
+  min-width: min-content;
+  min-height: min-content;
+}
 @media (max-width: 599px) and (max-height: 459px) {
   .main-container {
     /* should only need this at suuuuper thin screens? i think? */
@@ -22,13 +29,6 @@
     grid-template-rows: minmax(0, 3fr) minmax(0, 2fr);
     height: 100vh;
   }
-}
-.main-container__breadcrumb {
-  margin-bottom: 1.5rem;
-}
-.main-container__section {
-  min-width: min-content;
-  min-height: min-content;
 }
 
 .welcome {
@@ -429,6 +429,30 @@ abbr {
   background-color: var(--color-background);
   padding: 1rem;
 }
+.page__navi {
+  border: 1px solid var(--color-base);
+  padding: 1rem;
+}
+.page__main {
+  grid-area: main;
+  border: 1px solid var(--color-base);
+  padding: 1rem;
+}
+.page__collection {
+  grid-area: collection;
+}
+.page__footer {
+  grid-area: footer;
+}
+@media screen and (max-width: 499px) {
+  .page__main {
+    border-top: 1px dashed var(--color-base);
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px dashed var(--color-base);
+    padding: 1rem 0;
+  }
+}
 @media screen and (min-width: 801px) {
   .page {
     display: flex;
@@ -441,49 +465,15 @@ abbr {
     align-items: center;
     margin: auto;
   }
-}
-.page__navi {
-  border: 1px solid var(--color-base);
-  padding: 1rem;
-}
-.page__main {
-  grid-area: main;
-  border: 1px solid var(--color-base);
-  padding: 1rem;
-}
-@media screen and (max-width: 499px) {
-  .page__main {
-    border-top: 1px dashed var(--color-base);
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px dashed var(--color-base);
-    padding: 1rem 0;
-  }
-}
-.page__main_blog {
-  border: none;
-  margin: 0 0 0 1rem;
-}
-@media screen and (min-width: 801px) {
   .page__main_guestbook {
     border: none;
     height: auto;
   }
-}
-.page__collection {
-  grid-area: collection;
-}
-@media screen and (min-width: 801px) {
   .page__collection {
     border: 1px solid var(--color-base);
     padding: 0.5rem 1rem;
     max-height: min-content;
   }
-}
-.page__footer {
-  grid-area: footer;
-}
-@media screen and (min-width: 801px) {
   .page__footer {
     position: fixed;
     right: 0;
@@ -497,6 +487,10 @@ abbr {
 .page-wrapper {
   display: grid;
   gap: 1rem;
+}
+.page-wrapper_blog {
+  display: grid;
+  gap: 0;
 }
 @media screen and (max-width: 499px) {
   .page-wrapper {
@@ -512,6 +506,10 @@ abbr {
     grid-template-rows: repeat(2, auto) minmax(0, min-content) repeat(3, auto);
     margin: 1rem auto;
   }
+  .page-wrapper_blog {
+    grid-template-areas: "header" "navi" "main";
+    grid-template-columns: 100%;
+  }
 }
 @media screen and (min-width: 801px) {
   .page-wrapper {
@@ -521,17 +519,11 @@ abbr {
     width: var(--page-wrapper-width);
     height: var(--page-wrapper-height);
   }
-}
-@media screen and (min-width: 801px) {
   .page-wrapper_blog {
-    display: grid;
     grid-template-areas: "header ." "navi   main";
     grid-template-rows: min-content 1fr;
-    gap: 0;
     height: calc(var(--page-wrapper-height) + 5rem);
   }
-}
-@media screen and (min-width: 801px) {
   .page-wrapper_guestbook {
     display: grid;
     grid-template-areas: "navi" "main";
@@ -544,19 +536,17 @@ abbr {
   flex-direction: column;
   grid-area: header;
 }
+.header__tagline {
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
 @media screen and (min-width: 801px) {
   .header {
     justify-content: center;
   }
-}
-@media screen and (min-width: 801px) {
   .header_blog {
     justify-content: start;
   }
-}
-.header__tagline {
-  padding: 0.5rem 1rem;
-  width: 100%;
 }
 
 .header-tagline {
@@ -584,13 +574,8 @@ abbr {
   display: contents;
   grid-area: sidebar;
 }
-@media screen and (min-width: 801px) {
-  .sidebar {
-    display: grid;
-    grid-template-areas: "navi" "status" "aside";
-    grid-template-rows: min-content 1fr 2fr;
-    row-gap: 1rem;
-  }
+.sidebar__status {
+  overflow-y: auto;
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .sidebar__navi {
@@ -600,25 +585,22 @@ abbr {
   }
 }
 @media screen and (min-width: 801px) {
+  .sidebar {
+    display: grid;
+    grid-template-areas: "navi" "status" "aside";
+    grid-template-rows: min-content 1fr 2fr;
+    row-gap: 1rem;
+  }
   .sidebar__navi {
     border: 1px solid var(--color-base);
     padding: 1rem;
   }
-}
-.sidebar__status {
-  overflow-y: auto;
 }
 
 /* --- NAVIGATION --- */
 .navi {
   grid-area: navi;
   /* the "from me," "for you" titles */
-}
-@media screen and (min-width: 500px) and (max-width: 800px) {
-  .navi {
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
 .navi_blog {
   display: flex;
@@ -629,6 +611,11 @@ abbr {
   border: none;
   margin: 0;
 }
+.navi__title_blog {
+  display: block;
+  list-style: none;
+  font-weight: bold;
+}
 @media screen and (max-width: 499px) {
   .navi__home {
     display: block;
@@ -637,18 +624,6 @@ abbr {
     padding: 1rem;
     width: 100%;
   }
-}
-@media screen and (min-width: 500px) and (max-width: 800px) {
-  .navi__home {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 801px) {
-  .navi__home {
-    margin: 0;
-  }
-}
-@media screen and (max-width: 499px) {
   .navi__button {
     display: block;
     border: 1px solid var(--color-base);
@@ -656,18 +631,6 @@ abbr {
     padding: 0.5rem;
     width: 100%;
   }
-}
-@media screen and (min-width: 500px) and (max-width: 800px) {
-  .navi__button {
-    display: none;
-  }
-}
-@media screen and (min-width: 801px) {
-  .navi__button {
-    display: none;
-  }
-}
-@media screen and (max-width: 499px) {
   .navi__subnavi {
     display: none;
     /* mobile hamburger menu button */
@@ -675,28 +638,6 @@ abbr {
   .navi__subnavi_toggle_open {
     display: block;
   }
-}
-@media screen and (min-width: 500px) and (max-width: 800px) {
-  .navi__subnavi {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.5rem;
-    width: 100%;
-  }
-  .navi__subnavi:not(:first-child) {
-    flex: 1;
-  }
-}
-@media screen and (min-width: 801px) {
-  .navi__subnavi {
-    margin-left: 1.25rem;
-    list-style: "∟ ";
-  }
-}
-.navi__subnavi_blog {
-  margin-left: 0;
-}
-@media screen and (max-width: 499px) {
   .navi__title {
     display: block;
     padding: 0.25rem 0;
@@ -706,24 +647,49 @@ abbr {
   }
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
+  .navi {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .navi__home {
+    width: 100%;
+  }
+  .navi__button {
+    display: none;
+  }
+  .navi__subnavi {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .navi__subnavi:not(:first-child) {
+    flex: 1;
+  }
   .navi__title {
     font-weight: normal;
     font-style: italic;
   }
 }
 @media screen and (min-width: 801px) {
+  .navi__home {
+    margin: 0;
+  }
+  .navi__button {
+    display: none;
+  }
+  .navi__subnavi {
+    margin-left: 1.25rem;
+    list-style: "∟ ";
+  }
+  .navi__subnavi_blog {
+    margin-left: 0;
+  }
   .navi__title {
     display: list-item;
     font-size: var(--font-size-base);
     font-weight: normal;
   }
-}
-.navi__title_blog {
-  display: block;
-  list-style: none;
-  font-weight: bold;
-}
-@media screen and (min-width: 801px) {
   .navi__list {
     margin-left: 1.25rem;
   }
@@ -756,6 +722,17 @@ abbr {
     flex-direction: column;
     gap: 0.5rem;
   }
+  .navi-list__item {
+    display: contents;
+  }
+  .navi-list__link {
+    display: block;
+    border: 1px dotted var(--color-base);
+    padding: 1rem;
+  }
+  .navi-list__link:hover {
+    background-color: var(--color-primary);
+  }
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .navi-list {
@@ -763,13 +740,6 @@ abbr {
     flex-direction: row;
     column-gap: 2rem;
   }
-}
-@media screen and (max-width: 499px) {
-  .navi-list__item {
-    display: contents;
-  }
-}
-@media screen and (min-width: 500px) and (max-width: 800px) {
   .navi-list__item {
     margin-left: 1.25rem;
     list-style: "❀ ";
@@ -783,23 +753,18 @@ abbr {
     list-style: "∟ ";
   }
 }
-@media screen and (max-width: 499px) {
-  .navi-list__link {
-    display: block;
-    border: 1px dotted var(--color-base);
-    padding: 1rem;
-  }
-  .navi-list__link:hover {
-    background-color: var(--color-primary);
-  }
-}
+
 .blog-posts {
   list-style: "❀ ";
+  margin-left: 1.25rem;
 }
 
 /* --- STATUS --- */
 .status {
   grid-area: status;
+}
+.status__username {
+  font-size: var(--font-size-small);
 }
 @media screen and (max-width: 499px) {
   .status {
@@ -817,9 +782,6 @@ abbr {
     border: 1px solid var(--color-base);
     padding: 1rem;
   }
-}
-.status__username {
-  font-size: var(--font-size-small);
 }
 
 /* --- TBD --- */

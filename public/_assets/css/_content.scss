@@ -27,13 +27,25 @@
 .main-container {
     @include text-reset();
 
+    // &_home {
+    // }
+
+    &__breadcrumb {
+        margin-bottom: 1.5rem;
+    }
+
+    &__section {
+        min-width: min-content;
+        min-height: min-content;
+    }
+
     @include small-frame() {
         /* should only need this at suuuuper thin screens? i think? */
         overflow: hidden;
     }
 
-    &_home {
-        @include large-frame() {
+    @include large-frame() {
+        &_home {
             display: grid;
 
             grid-template-areas:
@@ -48,15 +60,6 @@
 
             height: 100vh;
         }
-    }
-
-    &__breadcrumb {
-        margin-bottom: 1.5rem;
-    }
-
-    &__section {
-        min-width: min-content;
-        min-height: min-content;
     }
 }
 
@@ -87,8 +90,10 @@
         &:nth-child(n + 4) {
             display: none;
         }
+    }
 
-        @include large-frame() {
+    @include large-frame() {
+        &__entry {
             &:nth-child(n + 4) {
                 display: block;
             }

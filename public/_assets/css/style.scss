@@ -5,6 +5,7 @@
 
 // import partials
 @use "content";
+@use "blog";
 @use "comment-box";
 
 /*:._.:*~   CUSTOM PROPERTIES   ~*:._.:*/
@@ -172,21 +173,6 @@ abbr {
 
     padding: 1rem;
 
-    @include for-desktop() {
-        display: flex;
-        position: absolute;
-
-        top: 0;
-        right: 0;
-        bottom: 0.5rem;
-        left: 0;
-
-        justify-content: center;
-        align-items: center;
-
-        margin: auto;
-    }
-
     // &__header {
     // }
 
@@ -204,42 +190,65 @@ abbr {
         @include layout-border();
         @include layout-padding();
 
-        @include for-phone() {
+        // &_blog {
+        // border: none;
+
+        // @include for-desktop() {
+        //     margin: 0 0 0 1rem;
+        // }
+        // }
+
+        // &_guestbook {
+        // }
+    }
+
+    &__collection {
+        grid-area: collection;
+    }
+
+    &__footer {
+        grid-area: footer;
+    }
+
+    @include for-phone() {
+        &__main {
             border-top: 1px dashed var(--color-base);
             border-right: none;
             border-left: none;
             border-bottom: 1px dashed var(--color-base);
             padding: 1rem 0;
         }
+    }
 
-        &_blog {
-            border: none;
-            margin: 0 0 0 1rem;
-        }
+    @include for-desktop() {
+        display: flex;
+        position: absolute;
 
-        &_guestbook {
-            @include for-desktop() {
+        top: 0;
+        right: 0;
+        bottom: 0.5rem;
+        left: 0;
+
+        justify-content: center;
+        align-items: center;
+
+        margin: auto;
+
+        &__main {
+            &_guestbook {
                 border: none;
                 height: auto;
             }
         }
-    }
 
-    &__collection {
-        grid-area: collection;
-
-        @include for-desktop() {
+        &__collection {
             @include layout-border();
             padding: 0.5rem 1rem;
 
             max-height: min-content;
         }
-    }
 
-    &__footer {
-        grid-area: footer;
-
-        @include for-desktop() {
+        &__footer {
             position: fixed;
 
             right: 0;
@@ -257,6 +266,14 @@ abbr {
     display: grid;
 
     gap: 1rem;
+
+    &_blog {
+        display: grid;
+        gap: 0;
+    }
+
+    // &_guestbook {
+    // }
 
     @include for-phone() {
         grid-template-areas:
@@ -287,6 +304,14 @@ abbr {
             repeat(3, auto);
 
         margin: 1rem auto;
+
+        &_blog {
+            grid-template-areas:
+                "header"
+                "navi"
+                "main";
+            grid-template-columns: 100%;
+        }
     }
 
     @include for-desktop() {
@@ -299,24 +324,17 @@ abbr {
 
         width: var(--page-wrapper-width);
         height: var(--page-wrapper-height);
-    }
 
-    &_blog {
-        @include for-desktop() {
-            display: grid;
-
+        &_blog {
             grid-template-areas:
                 "header ."
                 "navi   main";
             grid-template-rows: min-content 1fr;
-            gap: 0;
 
             height: calc(var(--page-wrapper-height) + 5rem);
         }
-    }
 
-    &_guestbook {
-        @include for-desktop() {
+        &_guestbook {
             display: grid;
 
             grid-template-areas:
@@ -333,15 +351,8 @@ abbr {
     flex-direction: column;
     grid-area: header;
 
-    @include for-desktop() {
-        justify-content: center;
-    }
-
-    &_blog {
-        @include for-desktop() {
-            justify-content: start;
-        }
-    }
+    // &_blog {
+    // }
 
     // &__art {
     // }
@@ -350,6 +361,14 @@ abbr {
         padding: 0.5rem 1rem;
 
         width: 100%;
+    }
+
+    @include for-desktop() {
+        justify-content: center;
+
+        &_blog {
+            justify-content: start;
+        }
     }
 }
 
@@ -376,6 +395,24 @@ abbr {
 
     grid-area: sidebar;
 
+    // &__navi {
+    // }
+
+    &__status {
+        overflow-y: auto;
+    }
+
+    // &__aside {
+    // }
+
+    @include for-tablet() {
+        &__navi {
+            @include layout-border();
+            padding: 1rem;
+            column-gap: 1rem;
+        }
+    }
+
     @include for-desktop() {
         display: grid;
 
@@ -385,38 +422,17 @@ abbr {
             "aside";
         grid-template-rows: min-content 1fr 2fr;
         row-gap: 1rem;
-    }
 
-    &__navi {
-        @include for-tablet() {
-            @include layout-border();
-            padding: 1rem;
-            column-gap: 1rem;
-        }
-
-        @include for-desktop() {
+        &__navi {
             @include layout-border();
             @include layout-padding();
         }
     }
-
-    &__status {
-        overflow-y: auto;
-    }
-
-    // &__aside {
-    // }
 }
 
 /* --- NAVIGATION --- */
 .navi {
     grid-area: navi;
-
-    @include for-tablet() {
-        display: flex;
-
-        flex-wrap: wrap;
-    }
 
     &_blog {
         display: flex;
@@ -431,8 +447,30 @@ abbr {
         margin: 0;
     }
 
-    &__home {
-        @include for-phone() {
+    // &__home {
+    // }
+
+    // &__button {
+    // }
+
+    // &__subnavi {
+    // }
+
+    /* the "from me," "for you" titles */
+    &__title {
+        &_blog {
+            display: block;
+            list-style: none;
+
+            font-weight: bold;
+        }
+    }
+
+    // &__list {
+    // }
+
+    @include for-phone() {
+        &__home {
             display: block;
 
             margin: 0 0 1rem 0;
@@ -442,17 +480,7 @@ abbr {
             width: 100%;
         }
 
-        @include for-tablet() {
-            width: 100%;
-        }
-
-        @include for-desktop() {
-            margin: 0;
-        }
-    }
-
-    &__button {
-        @include for-phone() {
+        &__button {
             display: block;
 
             border: 1px solid var(--color-base);
@@ -462,17 +490,7 @@ abbr {
             width: 100%;
         }
 
-        @include for-tablet() {
-            display: none;
-        }
-
-        @include for-desktop() {
-            display: none;
-        }
-    }
-
-    &__subnavi {
-        @include for-phone() {
+        &__subnavi {
             display: none;
 
             /* mobile hamburger menu button */
@@ -481,7 +499,32 @@ abbr {
             }
         }
 
-        @include for-tablet() {
+        &__title {
+            display: block;
+
+            padding: 0.25rem 0;
+
+            width: 100%;
+
+            font-weight: normal;
+            font-style: italic;
+        }
+    }
+
+    @include for-tablet() {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        &__home {
+            width: 100%;
+        }
+
+        &__button {
+            display: none;
+        }
+
+        &__subnavi {
             display: flex;
 
             flex-direction: column;
@@ -495,58 +538,39 @@ abbr {
             }
         }
 
-        @include for-desktop() {
-            @include content.list-margin();
-
-            @include navi-list-style();
-        }
-
-        &_blog {
-            margin-left: 0;
+        &__title {
+            font-weight: normal;
+            font-style: italic;
         }
     }
 
-    /* the "from me," "for you" titles */
-    &__title {
-        @include for-phone() {
-            display: block;
-
-            padding: 0.25rem 0;
-
-            width: 100%;
-
-            font-weight: normal;
-            font-style: italic;
+    @include for-desktop() {
+        &__home {
+            margin: 0;
         }
 
-        @include for-tablet() {
-            font-weight: normal;
-            font-style: italic;
+        &__button {
+            display: none;
         }
 
-        @include for-desktop() {
+        &__subnavi {
+            @include content.list-margin();
+
+            @include navi-list-style();
+
+            &_blog {
+                margin-left: 0;
+            }
+        }
+
+        &__title {
             display: list-item;
 
             font-size: var(--font-size-base);
             font-weight: normal;
         }
 
-        &_blog {
-            display: block;
-            list-style: none;
-
-            font-weight: bold;
-        }
-    }
-
-    &__list {
-        @include for-phone() {
-        }
-
-        @include for-tablet() {
-        }
-
-        @include for-desktop() {
+        &__list {
             @include content.list-margin();
         }
     }
@@ -578,40 +602,19 @@ abbr {
 }
 
 .navi-list {
+    // &__link {
+    // }
+
     @include for-phone() {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-    }
 
-    @include for-tablet() {
-        display: flex;
-        flex-direction: row;
-        column-gap: 2rem;
-    }
-
-    &__item {
-        @include for-phone() {
+        &__item {
             display: contents;
         }
 
-        @include for-tablet() {
-            @include content.list-margin();
-            @include content.default-list-style();
-        }
-
-        @include for-desktop() {
-            display: list-item;
-
-            border: none;
-
-            line-height: 1.5rem;
-            @include navi-list-style();
-        }
-    }
-
-    &__link {
-        @include for-phone() {
+        &__link {
             display: block;
 
             border: 1px dotted var(--color-base);
@@ -621,14 +624,33 @@ abbr {
                 @include button-hover();
             }
         }
+    }
 
-        @include for-tablet() {
+    @include for-tablet() {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2rem;
+        &__item {
+            @include content.list-margin();
+            @include content.default-list-style();
+        }
+    }
+
+    @include for-desktop() {
+        &__item {
+            display: list-item;
+
+            border: none;
+
+            line-height: 1.5rem;
+            @include navi-list-style();
         }
     }
 }
 
 .blog-posts {
     @include content.default-list-style();
+    @include content.list-margin();
 
     // &__post {
     // }
@@ -637,6 +659,16 @@ abbr {
 /* --- STATUS --- */
 .status {
     grid-area: status;
+
+    // &__title {
+    // }
+
+    &__username {
+        font-size: var(--font-size-small);
+    }
+
+    // &__content {
+    // }
 
     @include for-phone() {
         display: none;
@@ -651,15 +683,6 @@ abbr {
         @include layout-border();
         @include layout-padding();
     }
-    // &__title {
-    // }
-
-    &__username {
-        font-size: var(--font-size-small);
-    }
-
-    // &__content {
-    // }
 }
 
 /* --- TBD --- */
@@ -692,8 +715,10 @@ abbr {
         border: none;
 
         width: 100%;
+    }
 
-        @include for-desktop() {
+    @include for-desktop() {
+        &__frame {
             height: 100%;
         }
     }
