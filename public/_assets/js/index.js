@@ -1,3 +1,11 @@
+/*
+ * portions of this code have been taken and modified from:
+ *
+ * https://forum.melonland.net/index.php?topic=115
+ *
+ * thank you very much!
+ */
+
 const LAYOUT_IDS = ["collection", "footer"];
 const TAGLINES = ["enjoy yr stay"];
 const URL_PARAMETER = "p";
@@ -16,7 +24,7 @@ let isFirstLoad = true;
  *
  * https://stackoverflow.com/a/52349344
  *
- * thank you friend, and if only i had learned this sooner i would have saved
+ * thank you very much! if only i had learned this sooner i would have saved
  * hours of banging my head against the wall :')
  */
 async function fetchHtmlAsText(url) {
@@ -24,10 +32,10 @@ async function fetchHtmlAsText(url) {
     return await response.text();
 }
 
+// loads the templated major layout sections (ex. footer) if applicable
 async function loadLayout() {
     for (const id of LAYOUT_IDS) {
         let element = document.getElementById(id);
-
         if (!element) continue;
 
         let elementUrl = TEMPLATE_URL + id + ".html";
@@ -36,6 +44,7 @@ async function loadLayout() {
     }
 }
 
+// dynamically updates the height of main iframe
 function updateContentHeight() {
     if (mainframe == null) {
         console.error("couldn't find frame");
@@ -44,13 +53,15 @@ function updateContentHeight() {
 
     const frameContent = mainframe.contentWindow;
 
+    // reset first, for when the resulting height is smaller than the initial
     mainframe.height = "0";
     mainframe.height = frameContent.document.body.scrollHeight + "px";
-
-    console.log("content height updated: " + mainframe.height);
 }
 
-/* -- TODO -- */
+/*
+ * updates the URL and history to specify the page currently viewing within the
+ * mainframe
+ */
 function updateHistory() {
     const mainframePageTitle = mainframe.contentDocument.title;
 
@@ -60,17 +71,7 @@ function updateHistory() {
         return;
     }
 
-    console.log("I'M HERE");
-
-    let location = "";
-
-    // still slightly broken on hard refresh
-    if (window.location.pathname == "/blog/") {
-        location = mainframe.contentWindow.location.pathname.split("/blog")[1];
-    } else {
-        location = mainframe.contentWindow.location.pathname;
-    }
-
+    let location = mainframe.contentWindow.location.pathname;
     history.replaceState(null, "", "?" + URL_PARAMETER + "=" + location);
 
     document.title = mainframePageTitle;
@@ -84,9 +85,11 @@ function setMainframe(defaultPage) {
     // sets frame source to page if url parameter is present,
     // otherwise default to specified page
     mainframe.src = page == null ? defaultPage : page;
+
     updateHistory();
 }
 
+// chooses random string to display on main layout
 function randomiseTagline() {
     let index = Math.floor(Math.random() * TAGLINES.length);
     let random_tagline = TAGLINES[index];
@@ -108,12 +111,7 @@ function isNaviMenuOpen() {
 }
 
 window.onload = () => {
-    mainframe.addEventListener("load", updateHistory, false);
-    mainframe.addEventListener("load", updateContentHeight);
-    mainframe.addEventListener("load", function () {
-        if (isNaviMenuOpen()) toggleNaviMenu();
-    });
-
+    // page setup depending on if blog/main/etc.
     switch (window.location.pathname) {
         case "/blog/":
             let postNavButtons = document.querySelectorAll(".blog-posts__link");
@@ -125,7 +123,16 @@ window.onload = () => {
             randomiseTagline();
             break;
         default:
+            break;
     }
+
+    mainframe.addEventListener("load", updateHistory);
+    mainframe.addEventListener("load", updateContentHeight);
+
+    // auto-close mobile navigation menu after switching pages
+    mainframe.addEventListener("load", function () {
+        if (isNaviMenuOpen()) toggleNaviMenu();
+    });
 
     loadLayout();
 };
