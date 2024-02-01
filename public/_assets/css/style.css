@@ -530,7 +530,7 @@ abbr {
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .page-wrapper {
-    grid-template-areas: "header     header" "navi       navi" "main       main" "status     aside" "collection collection" "footer     footer";
+    grid-template-areas: "header     header" "navi       navi" "main       main" "status     status" "collection collection" "footer     footer";
     grid-template-columns: min-content auto;
     grid-template-rows: repeat(2, auto) minmax(0, min-content) repeat(3, auto);
     margin: 1rem auto;
@@ -627,8 +627,8 @@ abbr {
 @media screen and (min-width: 801px) {
   .sidebar {
     display: grid;
-    grid-template-areas: "navi" "status" "aside";
-    grid-template-rows: min-content 1fr 2fr;
+    grid-template-areas: "navi" "status";
+    grid-template-rows: min-content 1fr;
     row-gap: 1rem;
   }
   .sidebar__navi {
@@ -827,23 +827,7 @@ abbr {
 /* --- TBD --- */
 .aside {
   grid-area: aside;
-}
-@media screen and (max-width: 499px) {
-  .aside {
-    display: none;
-  }
-}
-@media screen and (min-width: 500px) and (max-width: 800px) {
-  .aside {
-    border: 1px solid var(--color-base);
-    padding: 1rem;
-  }
-}
-@media screen and (min-width: 801px) {
-  .aside {
-    border: 1px solid var(--color-base);
-    padding: 1rem;
-  }
+  display: none;
 }
 
 /* --- MAIN --- */

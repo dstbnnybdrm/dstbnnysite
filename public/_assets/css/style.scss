@@ -267,7 +267,7 @@ abbr {
             "header     header"
             "navi       navi"
             "main       main"
-            "status     aside"
+            "status     status"
             "collection collection"
             "footer     footer";
 
@@ -411,9 +411,8 @@ abbr {
 
         grid-template-areas:
             "navi"
-            "status"
-            "aside";
-        grid-template-rows: min-content 1fr 2fr;
+            "status";
+        grid-template-rows: min-content 1fr;
         row-gap: 1rem;
 
         &__navi {
@@ -681,20 +680,21 @@ abbr {
 /* --- TBD --- */
 .aside {
     grid-area: aside;
+    display: none;
 
-    @include mixins.for-phone() {
-        display: none;
-    }
+    // @include mixins.for-phone() {
+    //     display: none;
+    // }
 
-    @include mixins.for-tablet() {
-        @include mixins.layout-border();
-        @include mixins.layout-padding();
-    }
+    // @include mixins.for-tablet() {
+    //     @include mixins.layout-border();
+    //     @include mixins.layout-padding();
+    // }
 
-    @include mixins.for-desktop() {
-        @include mixins.layout-border();
-        @include mixins.layout-padding();
-    }
+    // @include mixins.for-desktop() {
+    //     @include mixins.layout-border();
+    //     @include mixins.layout-padding();
+    // }
 }
 
 /* --- MAIN --- */
