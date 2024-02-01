@@ -159,9 +159,24 @@
 }
 
 .list {
+    @include mixins.default-list-style();
+
+    &_row {
+        display: flex;
+        list-style: none;
+    }
+
     &__item {
         @include mixins.list-margin();
-        @include mixins.default-list-style();
+
+        &_row {
+            display: inline-block;
+
+            &:not(:last-child)::after {
+                content: "/";
+                margin: 0 0.5rem;
+            }
+        }
     }
 }
 
@@ -171,19 +186,6 @@
 
         padding-bottom: 0.5rem;
         border-bottom: 1px dotted var(--color-base);
-
-        list-style: none;
-    }
-}
-
-.breadcrumb-list {
-    &__item {
-        display: inline-block;
-
-        &:not(:last-child)::after {
-            content: "/";
-            margin: 0 0.5rem;
-        }
     }
 }
 
