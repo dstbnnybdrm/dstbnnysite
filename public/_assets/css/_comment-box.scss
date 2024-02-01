@@ -1,12 +1,10 @@
 @use "mixins";
 
-:root {
-    --font-family--main: Verdana, Geneva, Tahoma, sans-serif;
-    --font-family--form: "Courier New", Courier, monospace;
-}
+/*:._.:*~   COMMENT BOX ~*:._.:*/
 
-/* --- COMMENT BOX GENERAL STUFF --- */
+/* --- GENERAL --- */
 
+// thank god for Sass lmao
 div #HCB_comment_box {
     display: flex;
 
@@ -25,7 +23,7 @@ div #HCB_comment_box {
 
         margin: 1rem 0;
 
-        font-family: var(--font-family--main);
+        font-family: var(--font-family-base);
         text-transform: lowercase;
     }
 
@@ -34,7 +32,7 @@ div #HCB_comment_box {
 
         border: 1px solid red;
 
-        font-family: var(--font-family--main);
+        font-family: var(--font-family-base);
         text-transform: lowercase;
     }
 
@@ -86,7 +84,7 @@ input#hcb_form_name,
 textarea#hcb_form_content {
     border: 1px dotted black;
 
-    font-family: var(--font-family--form);
+    font-family: var(--font-family-alt);
     font-size: 16px;
     color: black;
 
@@ -96,19 +94,19 @@ textarea#hcb_form_content {
 /* placeholder text */
 ::-webkit-input-placeholder {
     font-size: 16px;
-    font-family: var(--font-family--form);
+    font-family: var(--font-family-alt);
     text-transform: lowercase;
 }
 
 :-moz-placeholder {
     font-size: 16px;
-    font-family: var(--font-family--form);
+    font-family: var(--font-family-alt);
     text-transform: lowercase;
 }
 
 ::-moz-placeholder {
     font-size: 16px;
-    font-family: var(--font-family--form);
+    font-family: var(--font-family-alt);
     text-transform: lowercase;
 }
 
@@ -127,7 +125,7 @@ textarea#hcb_form_content {
     padding: 1rem 0 0 0;
 
     #no_comments {
-        font-family: var(--font-family--main);
+        font-family: var(--font-family-base);
         text-transform: lowercase;
     }
 
@@ -146,15 +144,15 @@ textarea#hcb_form_content {
     }
 
     p.hcb-comment-body {
-        font-family: var(--font-family--main);
+        font-family: var(--font-family-base);
     }
 
     b.author-name {
-        font-family: var(--font-family--main);
+        font-family: var(--font-family-base);
     }
 
     span.date {
-        font-family: var(--font-family--main);
+        font-family: var(--font-family-base);
 
         color: black;
 
@@ -166,7 +164,7 @@ textarea#hcb_form_content {
     /* comment buttons */
     p.hcb-comment-tb button {
         color: #f69;
-        font-family: var(--font-family--main);
+        font-family: var(--font-family-base);
         font-size: 1rem;
         text-transform: lowercase;
     }
@@ -186,20 +184,3 @@ textarea#hcb_form_content {
         width: 30rem;
     }
 }
-
-// @media screen and (min-width: 860px) and (min-height: 780px) {
-//     /* --- COMMENT BOX GENERAL STUFF --- */
-
-//     div #HCB_comment_box {
-//     }
-
-//     /* --- COMMENT FORMS --- */
-
-//     #HCB_comment_form_box {
-//     }
-
-//     /* --- COMMENTS LIST --- */
-
-//     #comments_list {
-//     }
-// }
