@@ -2,13 +2,13 @@
 
 .main-container {
     @include mixins.text-reset();
+
     color: var(--color-base);
 
     // &_home {
     // }
 
     &__breadcrumb {
-        margin-bottom: 1.5rem;
     }
 
     &__section {
@@ -55,12 +55,15 @@
 /* --- FEED --- */
 .feed {
     &__title {
-        margin: 0 0 0.25rem 0;
+        font-size: 1.1rem;
+        font-family: var(--font-family-alt);
+        font-style: italic;
+        font-weight: normal;
+        letter-spacing: 0.05rem;
     }
 
     &__entry {
         &:not(:last-child) {
-            margin: 0 0 0.75rem 0;
             border-bottom: 1px dotted var(--color-base);
         }
 
@@ -85,28 +88,32 @@
 
     text-align: center;
     letter-spacing: var(--letter-spacing-wide);
-    font-family: var(--font-family-alt);
+    // font-family: var(--font-family-mono);
 }
 
 .ascii-art {
-    font-family: var(--font-family-alt);
+    font-family: var(--font-family-mono);
     line-height: 1rem;
 }
 
 .section {
+    &__title {
+    }
+
+    &__subtitle {
+        border-top: 1px dotted var(--color-base);
+    }
+
+    &__content {
+    }
+}
+
+.section-content {
     display: flex;
 
     flex-direction: column;
 
-    // &__title {
-    // }
-
-    // &__subtitle {
-    // }
-
-    &__content {
-        margin-bottom: 1rem;
-    }
+    gap: 1rem;
 }
 
 .section-container {
@@ -123,8 +130,17 @@
 .title {
     display: inline-block;
 
-    font-size: var(--font-size--large);
+    font-size: var(--font-size-large);
+    font-style: normal;
     font-weight: bold;
+
+    &_subtitle {
+        font-size: var(--font-size-large);
+        font-family: var(--font-family-alt);
+        font-style: italic;
+        font-weight: normal;
+        letter-spacing: 0.05rem;
+    }
 
     /* for screen readers */
     &_hidden {
@@ -136,26 +152,6 @@
         padding: 0;
         position: absolute;
         width: 1px;
-    }
-
-    &_subtitle {
-        font-size: var(--font-size--base);
-        font-weight: bold;
-        letter-spacing: var(--letter-spacing-large);
-    }
-
-    &_feed {
-        font-size: var(--font-size--base);
-        font-style: italic;
-        font-weight: normal;
-        letter-spacing: var(--letter-spacing-large);
-    }
-
-    &_blog {
-        display: inline-block;
-
-        font-size: var(--font-size--large);
-        font-weight: bold;
     }
 }
 
@@ -188,8 +184,8 @@
     &__list {
         display: flex;
 
-        border-bottom: 1px dotted var(--color-base);
-        padding-bottom: 0.5rem;
+        // border-bottom: 1px dotted var(--color-base);
+        // padding-bottom: 0.5rem;
     }
 }
 

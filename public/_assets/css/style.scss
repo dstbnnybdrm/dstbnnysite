@@ -20,11 +20,12 @@
     --color-background: #fffafa;
 
     --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
-    --font-family-alt: "Courier New", Courier, monospace;
+    --font-family-alt: Georgia, "Times New Roman", Times, serif;
+    --font-family-mono: "Courier New", Courier, monospace;
 
+    --font-size-small: 0.9rem;
     --font-size-base: 1rem;
-    --font-size-small: 0.75rem;
-    --font-size-large: 1.125rem;
+    --font-size-large: 1.1rem;
 
     --letter-spacing-base: initial;
     --letter-spacing-large: 0.125rem;
@@ -35,7 +36,6 @@
 
 // ---- THEME OVERRIDES ---- //
 :root[data-theme="dark"] {
-    // dark theme
     --color-primary: #cf4f79;
     --color-primary-alt: var(--color-primary);
     --color-secondary: #54b096;
@@ -63,7 +63,7 @@
     padding: 0;
 
     // my addition
-    font-size: 13px;
+    font-size: 14px;
 }
 
 /* text reset */
@@ -140,6 +140,7 @@ a:hover {
 }
 
 abbr {
+    font: inherit;
     text-decoration: none;
 }
 
@@ -228,7 +229,6 @@ abbr {
 
         &__main {
             &_blog {
-                margin: 0 0 0 1rem;
             }
         }
 
@@ -276,7 +276,7 @@ abbr {
 
         grid-template-columns: auto;
 
-        margin: 1rem 0;
+        // margin: 1rem 0;
     }
 
     @include mixins.for-tablet() {
@@ -294,7 +294,7 @@ abbr {
             minmax(0, min-content)
             repeat(3, auto);
 
-        margin: 1rem auto;
+        // margin: 1rem auto;
 
         &_blog {
             grid-template-areas:
@@ -383,7 +383,7 @@ abbr {
 }
 
 .header-tagline {
-    font-style: italic;
+    // font-style: italic;
     text-align: center;
 
     @include mixins.for-phone() {
@@ -471,7 +471,7 @@ abbr {
             display: block;
             list-style: none;
 
-            font-weight: bold;
+            // font-weight: bold;
         }
     }
 
@@ -482,7 +482,7 @@ abbr {
         &__home {
             display: block;
 
-            margin: 0 0 1rem 0;
+            // margin: 0 0 1rem 0;
             border: 1px dotted var(--color-base);
             padding: 1rem;
 
@@ -521,8 +521,8 @@ abbr {
 
             width: 100%;
 
-            font-weight: normal;
-            font-style: italic;
+            // font-weight: normal;
+            // font-style: italic;
         }
     }
 
@@ -544,7 +544,7 @@ abbr {
 
             flex-direction: column;
 
-            margin-top: 0.5rem;
+            // margin-top: 0.5rem;
 
             width: 100%;
 
@@ -554,8 +554,8 @@ abbr {
         }
 
         &__title {
-            font-weight: normal;
-            font-style: italic;
+            // font-weight: normal;
+            // font-style: italic;
         }
     }
 
@@ -581,8 +581,8 @@ abbr {
         &__title {
             display: list-item;
 
-            font-size: var(--font-size-base);
-            font-weight: normal;
+            // font-size: var(--font-size-base);
+            // font-weight: normal;
         }
 
         &__list {
@@ -595,7 +595,7 @@ abbr {
     display: inline;
 
     letter-spacing: var(--letter-spacing-large);
-    font-weight: bold;
+    // font-weight: bold;
 
     @include mixins.for-phone() {
         display: block;
@@ -605,7 +605,7 @@ abbr {
 
     @include mixins.for-desktop() {
         letter-spacing: normal;
-        font-weight: normal;
+        // font-weight: normal;
     }
 }
 
@@ -617,8 +617,8 @@ abbr {
 
         border: none;
 
-        font-style: italic;
-        font-size: var(--font-size-small);
+        // font-style: italic;
+        // font-size: var(--font-size-small);
 
         color: var(--color-background);
         background-color: var(--color-primary);
@@ -688,7 +688,7 @@ abbr {
     // }
 
     &__username {
-        font-size: var(--font-size-small);
+        // font-size: var(--font-size-small);
     }
 
     // &__mixins {
