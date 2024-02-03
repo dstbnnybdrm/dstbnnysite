@@ -7,7 +7,7 @@
  */
 
 const LAYOUT_IDS = ["collection", "footer"];
-const TAGLINES = ["enjoy yr stay"];
+const TAGLINES = ["enjoy yr stay", "<3 <3 <3", "proof of my existence"];
 const URL_PARAMETER = "p";
 const TEMPLATE_URL = "/_assets/template/";
 const HOME_URL = "/home.html";
