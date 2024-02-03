@@ -12,11 +12,12 @@
 
 /* ---- THEME DEFAULTS ---- */
 :root {
-    --color-primary: #f69;
-    --color-primary-alt: #c36;
-    --color-secondary: #6cc;
-    --color-base: black;
-    --color-background: white;
+    // default/light theme
+    --color-primary: #c43162;
+    --color-primary-alt: var(--color-primary);
+    --color-secondary: #4f9c86;
+    --color-base: #61193e;
+    --color-background: #fffafa;
 
     --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
     --font-family-alt: "Courier New", Courier, monospace;
@@ -32,13 +33,15 @@
     --page-wrapper-height: 50rem;
 }
 
-// ---- THEME OVERRIDES (TODO)---- //
-// :root[data-theme="dark"] {
-//     --color-primary: #f69;
-//     --color-primary-alt: #c36;
-//     --color-secondary: #6cc;
-//     --color-background: white;
-// }
+// ---- THEME OVERRIDES ---- //
+:root[data-theme="dark"] {
+    // dark theme
+    --color-primary: #cf4f79;
+    --color-primary-alt: var(--color-primary);
+    --color-secondary: #54b096;
+    --color-base: #d6ccce;
+    --color-background: #1d0612;
+}
 
 /*:._.:*~  GLOBAL RESETS  ~*:._.:*
  *
@@ -123,6 +126,19 @@ a:hover {
     color: var(--color-secondary);
 }
 
+/* highlight */
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--color-background);
+    background: var(--color-secondary);
+}
+
+::selection {
+    color: var(--color-background);
+    background: var(--color-secondary);
+}
+
 abbr {
     text-decoration: none;
 }
@@ -132,6 +148,7 @@ abbr {
 /* --- PAGE --- */
 .page {
     @include mixins.text-reset;
+    color: var(--color-base);
     background-color: var(--color-background);
 
     padding: 1rem;
@@ -170,7 +187,7 @@ abbr {
 
     @include mixins.for-phone() {
         &__navi {
-            border-top: 1px solid black;
+            border-top: 1px solid var(--color-base);
             padding: 0.5rem 0 0 0;
         }
 
@@ -473,8 +490,6 @@ abbr {
         }
 
         &__button {
-            display: block;
-
             border: 1px solid var(--color-base);
             border-radius: 0;
             padding: 0.5rem;
@@ -485,9 +500,17 @@ abbr {
         &__subnavi {
             display: none;
 
-            /* mobile hamburger menu button */
+            /* mobile hamburger menu */
             &_toggle_open {
                 display: block;
+
+                border: 1px dotted var(--color-base);
+                border-top: none;
+                padding: 0 1rem 1rem 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: none;
+                }
             }
         }
 
@@ -569,28 +592,39 @@ abbr {
 }
 
 .navi-home {
-    display: block;
+    display: inline;
 
     letter-spacing: var(--letter-spacing-large);
     font-weight: bold;
 
-    &:hover {
-        @include mixins.button-hover();
+    @include mixins.for-phone() {
+        display: block;
+
+        @include mixins.button-on-hover();
     }
 
     @include mixins.for-desktop() {
-        display: inline;
-
         letter-spacing: normal;
         font-weight: normal;
     }
 }
 
 .navi-button {
-    font-style: italic;
-    font-size: var(--font-size-small);
+    display: none;
 
-    // background: none;
+    @include mixins.for-phone() {
+        display: block;
+
+        border: none;
+
+        font-style: italic;
+        font-size: var(--font-size-small);
+
+        color: var(--color-background);
+        background-color: var(--color-primary);
+
+        @include mixins.button-on-hover();
+    }
 }
 
 .navi-list {
@@ -612,9 +646,7 @@ abbr {
             border: 1px dotted var(--color-base);
             padding: 1rem;
 
-            &:hover {
-                @include mixins.button-hover();
-            }
+            @include mixins.button-on-hover();
         }
     }
 

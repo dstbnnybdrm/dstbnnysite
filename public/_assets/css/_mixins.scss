@@ -13,8 +13,13 @@
     list-style: "∟ ";
 }
 
-@mixin button-hover {
-    background-color: var(--color-primary);
+@mixin button-on-hover {
+    &:hover {
+        border-color: var(--color-background);
+
+        color: var(--color-background);
+        background-color: var(--color-secondary);
+    }
 }
 
 @mixin text-reset {

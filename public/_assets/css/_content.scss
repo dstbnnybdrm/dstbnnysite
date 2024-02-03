@@ -2,6 +2,7 @@
 
 .main-container {
     @include mixins.text-reset();
+    color: var(--color-base);
 
     // &_home {
     // }
@@ -60,7 +61,7 @@
     &__entry {
         &:not(:last-child) {
             margin: 0 0 0.75rem 0;
-            border-bottom: 1px dotted black;
+            border-bottom: 1px dotted var(--color-base);
         }
 
         &:nth-child(n + 4) {
@@ -80,7 +81,7 @@
 .commission-status {
     display: inline-block;
 
-    border: 1px dashed black;
+    border: 1px dashed var(--color-base);
 
     text-align: center;
     letter-spacing: var(--letter-spacing-wide);

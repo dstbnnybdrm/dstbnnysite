@@ -5,6 +5,7 @@
  */
 .main-container {
   font-family: var(--font-family-base);
+  color: var(--color-base);
 }
 .main-container__breadcrumb {
   margin-bottom: 1.5rem;
@@ -48,7 +49,7 @@
 }
 .feed__entry:not(:last-child) {
   margin: 0 0 0.75rem 0;
-  border-bottom: 1px dotted black;
+  border-bottom: 1px dotted var(--color-base);
 }
 .feed__entry:nth-child(n+4) {
   display: none;
@@ -61,7 +62,7 @@
 
 .commission-status {
   display: inline-block;
-  border: 1px dashed black;
+  border: 1px dashed var(--color-base);
   text-align: center;
   letter-spacing: var(--letter-spacing-wide);
   font-family: var(--font-family-alt);
@@ -215,13 +216,23 @@ div #HCB_comment_box img.hcb-icon.hcb-door-in {
     width: min-content;
   }
 }
-
-#HCB_comment_form_box {
+div #HCB_comment_box #HCB_comment_form_box {
   grid-area: comment-form;
+  /* big "comment" button */
+}
+div #HCB_comment_box #HCB_comment_form_box .btn {
+  border: none;
+  text-transform: lowercase;
+  font-family: var(--font-family-base);
+  color: var(--color-background);
+  background: var(--color-primary);
+}
+div #HCB_comment_box #HCB_comment_form_box .btn:hover, div #HCB_comment_box #HCB_comment_form_box .btn:focus {
+  background: var(--color-secondary);
 }
 @media screen and (min-width: 801px) {
-  #HCB_comment_form_box {
-    border: 1px solid black;
+  div #HCB_comment_box #HCB_comment_form_box {
+    border: 1px solid var(--color-base);
     padding: 1rem;
     height: 42.42rem;
     width: 30rem;
@@ -232,10 +243,10 @@ div #HCB_comment_box img.hcb-icon.hcb-door-in {
 /* text forms */
 input#hcb_form_name,
 textarea#hcb_form_content {
-  border: 1px dotted black;
+  border: 1px dotted var(--color-base);
   font-family: var(--font-family-alt);
   font-size: 16px;
-  color: black;
+  color: var(--color-base);
   background: none;
 }
 
@@ -267,7 +278,7 @@ textarea#hcb_form_content {
 /* --- COMMENTS LIST --- */
 #comments_list {
   grid-area: comments-list;
-  border-top: 1px dotted black;
+  border-top: 1px dotted var(--color-base);
   padding: 1rem 0 0 0;
   /* comment buttons */
 }
@@ -294,7 +305,7 @@ textarea#hcb_form_content {
 }
 #comments_list span.date {
   font-family: var(--font-family-base);
-  color: black;
+  color: var(--color-base);
   font-size: 0.825rem;
   letter-spacing: 0.125rem;
   text-transform: lowercase;
@@ -312,7 +323,7 @@ textarea#hcb_form_content {
   #comments_list {
     overflow-y: auto;
     overflow-x: hidden !important;
-    border: 1px solid black;
+    border: 1px solid var(--color-base);
     padding: 1rem;
     height: 42.42rem;
     width: 30rem;
@@ -322,11 +333,11 @@ textarea#hcb_form_content {
 /*:._.:*~   CUSTOM PROPERTIES   ~*:._.:*/
 /* ---- THEME DEFAULTS ---- */
 :root {
-  --color-primary: #f69;
-  --color-primary-alt: #c36;
-  --color-secondary: #6cc;
-  --color-base: black;
-  --color-background: white;
+  --color-primary: #c43162;
+  --color-primary-alt: var(--color-primary);
+  --color-secondary: #4f9c86;
+  --color-base: #61193e;
+  --color-background: #fffafa;
   --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
   --font-family-alt: "Courier New", Courier, monospace;
   --font-size-base: 1rem;
@@ -336,6 +347,14 @@ textarea#hcb_form_content {
   --letter-spacing-large: 0.125rem;
   --page-wrapper-width: 67rem;
   --page-wrapper-height: 50rem;
+}
+
+:root[data-theme=dark] {
+  --color-primary: #cf4f79;
+  --color-primary-alt: var(--color-primary);
+  --color-secondary: #54b096;
+  --color-base: #d6ccce;
+  --color-background: #1d0612;
 }
 
 /*:._.:*~  GLOBAL RESETS  ~*:._.:*
@@ -416,6 +435,18 @@ a:hover {
   color: var(--color-secondary);
 }
 
+/* highlight */
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--color-background);
+  background: var(--color-secondary);
+}
+
+::selection {
+  color: var(--color-background);
+  background: var(--color-secondary);
+}
+
 abbr {
   text-decoration: none;
 }
@@ -424,6 +455,7 @@ abbr {
 /* --- PAGE --- */
 .page {
   font-family: var(--font-family-base);
+  color: var(--color-base);
   background-color: var(--color-background);
   padding: 1rem;
 }
@@ -446,7 +478,7 @@ abbr {
 }
 @media screen and (max-width: 499px) {
   .page__navi {
-    border-top: 1px solid black;
+    border-top: 1px solid var(--color-base);
     padding: 0.5rem 0 0 0;
   }
   .page__main {
@@ -649,7 +681,6 @@ abbr {
     width: 100%;
   }
   .navi__button {
-    display: block;
     border: 1px solid var(--color-base);
     border-radius: 0;
     padding: 0.5rem;
@@ -657,10 +688,16 @@ abbr {
   }
   .navi__subnavi {
     display: none;
-    /* mobile hamburger menu button */
+    /* mobile hamburger menu */
   }
   .navi__subnavi_toggle_open {
     display: block;
+    border: 1px dotted var(--color-base);
+    border-top: none;
+    padding: 0 1rem 1rem 1rem;
+  }
+  .navi__subnavi_toggle_open:not(:last-child) {
+    border-bottom: none;
   }
   .navi__title {
     display: block;
@@ -720,24 +757,44 @@ abbr {
 }
 
 .navi-home {
-  display: block;
+  display: inline;
   letter-spacing: var(--letter-spacing-large);
   font-weight: bold;
 }
-.navi-home:hover {
-  background-color: var(--color-primary);
+@media screen and (max-width: 499px) {
+  .navi-home {
+    display: block;
+  }
+  .navi-home:hover {
+    border-color: var(--color-background);
+    color: var(--color-background);
+    background-color: var(--color-secondary);
+  }
 }
 @media screen and (min-width: 801px) {
   .navi-home {
-    display: inline;
     letter-spacing: normal;
     font-weight: normal;
   }
 }
 
 .navi-button {
-  font-style: italic;
-  font-size: var(--font-size-small);
+  display: none;
+}
+@media screen and (max-width: 499px) {
+  .navi-button {
+    display: block;
+    border: none;
+    font-style: italic;
+    font-size: var(--font-size-small);
+    color: var(--color-background);
+    background-color: var(--color-primary);
+  }
+  .navi-button:hover {
+    border-color: var(--color-background);
+    color: var(--color-background);
+    background-color: var(--color-secondary);
+  }
 }
 
 @media screen and (max-width: 499px) {
@@ -755,7 +812,9 @@ abbr {
     padding: 1rem;
   }
   .navi-list__link:hover {
-    background-color: var(--color-primary);
+    border-color: var(--color-background);
+    color: var(--color-background);
+    background-color: var(--color-secondary);
   }
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
