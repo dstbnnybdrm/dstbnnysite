@@ -1,154 +1,8 @@
-/*
- * using BEM methodology: https://getbem.com/
- *
- */
-
-// import partials
-@use "mixins";
-@use "content";
-@use "comment-box";
-
-/*:._.:*~   CUSTOM PROPERTIES   ~*:._.:*/
-
-/* ---- THEME DEFAULTS ---- */
-:root {
-    // default/light theme
-    --color-primary: #c43162;
-    --color-primary-alt: var(--color-primary);
-    --color-secondary: #4f9c86;
-    --color-base: #61193e;
-    --color-background: #fffafa;
-
-    --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
-    --font-family-alt: Georgia, "Times New Roman", Times, serif;
-    --font-family-mono: "Courier New", Courier, monospace;
-
-    --font-size-small: 0.9rem;
-    --font-size-base: 1rem;
-    --font-size-large: 1.1rem;
-
-    --letter-spacing-base: initial;
-    --letter-spacing-large: 0.125rem;
-
-    --page-wrapper-width: 67rem;
-    --page-wrapper-height: 50rem;
-}
-
-// ---- THEME OVERRIDES ---- //
-:root[data-theme="dark"] {
-    --color-primary: #cf4f79;
-    --color-primary-alt: var(--color-primary);
-    --color-secondary: #54b096;
-    --color-base: #d6ccce;
-    --color-background: #1d0612;
-}
-
-/*:._.:*~  GLOBAL RESETS  ~*:._.:*
- *
- * global reset taken from here: 
- * https://www.joshwcomeau.com/css/custom-css-reset/
- * 
- */
-
-/* less shitty box-sizing (border-based instead of mixins-based) */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* reset layout defaults */
-* {
-    margin: 0;
-    padding: 0;
-
-    // my addition
-    font-size: 14px;
-}
-
-/* text reset */
-body {
-    line-height: 1.5;
-}
-
-/* improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-
-    max-width: 100%;
-}
-
-/* remove form typography styles */
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-/* avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-/* create a root stacking context */
-#root,
-#__next {
-    isolation: isolate;
-}
-
-/* *~ my resets ~* */
-
-/* links */
-a {
-    text-decoration-style: dotted;
-}
-
-a:link {
-    color: var(--color-primary);
-}
-
-a:visited {
-    color: var(--color-primary-alt);
-}
-
-a:hover {
-    color: var(--color-secondary);
-}
-
-/* highlight */
-
-::-moz-selection {
-    /* Code for Firefox */
-    color: var(--color-background);
-    background: var(--color-secondary);
-}
-
-::selection {
-    color: var(--color-background);
-    background: var(--color-secondary);
-}
-
-abbr {
-    font: inherit;
-    text-decoration: none;
-}
-
-/*:._.:*~  BLOCKS  ~*:._.:*/
+@use "base";
 
 /* --- PAGE --- */
 .page {
-    @include mixins.text-reset;
+    @include base.text-reset;
     color: var(--color-base);
     background-color: var(--color-background);
 
@@ -166,8 +20,8 @@ abbr {
     &__main {
         grid-area: main;
 
-        @include mixins.layout-border();
-        @include mixins.layout-padding();
+        @include base.layout-border();
+        @include base.layout-padding();
 
         &_blog {
             border: none;
@@ -186,7 +40,7 @@ abbr {
         grid-area: footer;
     }
 
-    @include mixins.for-phone() {
+    @include base.for-phone() {
         &__navi {
             border-top: 1px solid var(--color-base);
             padding: 0.5rem 0 0 0;
@@ -201,14 +55,14 @@ abbr {
         }
     }
 
-    @include mixins.for-tablet() {
+    @include base.for-tablet() {
         &__navi {
-            @include mixins.layout-border();
-            @include mixins.layout-padding();
+            @include base.layout-border();
+            @include base.layout-padding();
         }
     }
 
-    @include mixins.for-desktop() {
+    @include base.for-desktop() {
         display: flex;
         position: absolute;
 
@@ -223,8 +77,8 @@ abbr {
         margin: auto;
 
         &__navi {
-            @include mixins.layout-border();
-            @include mixins.layout-padding();
+            @include base.layout-border();
+            @include base.layout-padding();
         }
 
         &__main {
@@ -233,7 +87,7 @@ abbr {
         }
 
         &__collection {
-            @include mixins.layout-border();
+            @include base.layout-border();
             padding: 0.5rem 1rem;
 
             max-height: min-content;
@@ -266,7 +120,7 @@ abbr {
     // &_guestbook {
     // }
 
-    @include mixins.for-phone() {
+    @include base.for-phone() {
         grid-template-areas:
             "header"
             "navi"
@@ -279,7 +133,7 @@ abbr {
         // margin: 1rem 0;
     }
 
-    @include mixins.for-tablet() {
+    @include base.for-tablet() {
         grid-template-areas:
             "header     header"
             "navi       navi"
@@ -319,7 +173,7 @@ abbr {
         }
     }
 
-    @include mixins.for-desktop() {
+    @include base.for-desktop() {
         grid-template-areas:
             "header     header"
             "sidebar    main"
@@ -373,7 +227,7 @@ abbr {
         width: 100%;
     }
 
-    @include mixins.for-desktop() {
+    @include base.for-desktop() {
         justify-content: center;
 
         &_blog {
@@ -386,16 +240,16 @@ abbr {
     // font-style: italic;
     text-align: center;
 
-    @include mixins.for-phone() {
+    @include base.for-phone() {
         display: none;
     }
 
-    @include mixins.for-tablet() {
+    @include base.for-tablet() {
         display: block;
     }
 
-    @include mixins.for-desktop() {
-        @include mixins.layout-border();
+    @include base.for-desktop() {
+        @include base.layout-border();
     }
 }
 
@@ -415,15 +269,15 @@ abbr {
     // &__aside {
     // }
 
-    @include mixins.for-tablet() {
+    @include base.for-tablet() {
         &__navi {
-            @include mixins.layout-border();
+            @include base.layout-border();
             padding: 1rem;
             column-gap: 1rem;
         }
     }
 
-    @include mixins.for-desktop() {
+    @include base.for-desktop() {
         display: grid;
 
         grid-template-areas:
@@ -433,8 +287,8 @@ abbr {
         row-gap: 1rem;
 
         &__navi {
-            @include mixins.layout-border();
-            @include mixins.layout-padding();
+            @include base.layout-border();
+            @include base.layout-padding();
         }
     }
 }
@@ -448,7 +302,7 @@ abbr {
 
         flex-direction: column;
         row-gap: 0.5rem;
-        // @include mixins.layout-border();
+        // @include base.layout-border();
     }
 
     &_guestbook {
@@ -478,7 +332,7 @@ abbr {
     // &__list {
     // }
 
-    @include mixins.for-phone() {
+    @include base.for-phone() {
         &__home {
             display: block;
 
@@ -526,7 +380,7 @@ abbr {
         }
     }
 
-    @include mixins.for-tablet() {
+    @include base.for-tablet() {
         display: flex;
 
         flex-wrap: wrap;
@@ -559,7 +413,7 @@ abbr {
         }
     }
 
-    @include mixins.for-desktop() {
+    @include base.for-desktop() {
         &__home {
             margin: 0;
         }
@@ -569,9 +423,9 @@ abbr {
         }
 
         &__subnavi {
-            @include mixins.list-margin();
+            @include base.list-margin();
 
-            @include mixins.navi-list-style();
+            @include base.navi-list-style();
 
             &_blog {
                 margin-left: 0;
@@ -586,7 +440,7 @@ abbr {
         }
 
         &__list {
-            @include mixins.list-margin();
+            @include base.list-margin();
         }
     }
 }
@@ -597,13 +451,13 @@ abbr {
     letter-spacing: var(--letter-spacing-large);
     // font-weight: bold;
 
-    @include mixins.for-phone() {
+    @include base.for-phone() {
         display: block;
 
-        @include mixins.button-on-hover();
+        @include base.button-on-hover();
     }
 
-    @include mixins.for-desktop() {
+    @include base.for-desktop() {
         letter-spacing: normal;
         // font-weight: normal;
     }
@@ -612,7 +466,7 @@ abbr {
 .navi-button {
     display: none;
 
-    @include mixins.for-phone() {
+    @include base.for-phone() {
         display: block;
 
         border: none;
@@ -623,7 +477,7 @@ abbr {
         color: var(--color-background);
         background-color: var(--color-primary);
 
-        @include mixins.button-on-hover();
+        @include base.button-on-hover();
     }
 }
 
@@ -631,7 +485,7 @@ abbr {
     // &__link {
     // }
 
-    @include mixins.for-phone() {
+    @include base.for-phone() {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -646,35 +500,35 @@ abbr {
             border: 1px dotted var(--color-base);
             padding: 1rem;
 
-            @include mixins.button-on-hover();
+            @include base.button-on-hover();
         }
     }
 
-    @include mixins.for-tablet() {
+    @include base.for-tablet() {
         display: flex;
         flex-direction: row;
         column-gap: 2rem;
         &__item {
-            @include mixins.list-margin();
-            @include mixins.default-list-style();
+            @include base.list-margin();
+            @include base.default-list-style();
         }
     }
 
-    @include mixins.for-desktop() {
+    @include base.for-desktop() {
         &__item {
             display: list-item;
 
             border: none;
 
             line-height: 1.5rem;
-            @include mixins.navi-list-style();
+            @include base.navi-list-style();
         }
     }
 }
 
 .blog-posts {
-    @include mixins.default-list-style();
-    @include mixins.list-margin();
+    @include base.default-list-style();
+    @include base.list-margin();
 
     // &__post {
     // }
@@ -691,21 +545,21 @@ abbr {
         // font-size: var(--font-size-small);
     }
 
-    // &__mixins {
+    // &__content {
     // }
 
-    @include mixins.for-phone() {
+    @include base.for-phone() {
         display: none;
     }
 
-    @include mixins.for-tablet() {
-        @include mixins.layout-border();
-        @include mixins.layout-padding();
+    @include base.for-tablet() {
+        @include base.layout-border();
+        @include base.layout-padding();
     }
 
-    @include mixins.for-desktop() {
-        @include mixins.layout-border();
-        @include mixins.layout-padding();
+    @include base.for-desktop() {
+        @include base.layout-border();
+        @include base.layout-padding();
     }
 }
 
@@ -714,18 +568,18 @@ abbr {
     grid-area: aside;
     display: none;
 
-    // @include mixins.for-phone() {
+    // @include base.for-phone() {
     //     display: none;
     // }
 
-    // @include mixins.for-tablet() {
-    //     @include mixins.layout-border();
-    //     @include mixins.layout-padding();
+    // @include base.for-tablet() {
+    //     @include base.layout-border();
+    //     @include base.layout-padding();
     // }
 
-    // @include mixins.for-desktop() {
-    //     @include mixins.layout-border();
-    //     @include mixins.layout-padding();
+    // @include base.for-desktop() {
+    //     @include base.layout-border();
+    //     @include base.layout-padding();
     // }
 }
 
@@ -742,7 +596,7 @@ abbr {
         width: 100%;
     }
 
-    @include mixins.for-desktop() {
+    @include base.for-desktop() {
         &__frame {
             height: 100%;
         }
@@ -751,7 +605,7 @@ abbr {
 
 /* --- COLLECTION --- */
 // .collection {
-// &__mixins {
+// &__content {
 // }
 // }
 
