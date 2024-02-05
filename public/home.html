@@ -43,14 +43,14 @@
     <link href="/_assets/img/favicon/site.webmanifest" rel="manifest" />
 
     <!-- style + script -->
-    <link rel="stylesheet" href="/_assets/css/style.css" />
+    <link rel="stylesheet" href="/_assets/css/frame.css" />
     <script src="/_assets/js/home.js" defer></script>
   </head>
 
   <body class="main-container main-container_home">
-    <section class="welcome section main-container__section">
-      <h1 class="title section__title">welcome!</h1>
-      <p class="section__content">
+    <section class="welcome section">
+      <h1 class="title">welcome!</h1>
+      <p class="body-text">
         hi, i'm jp and this is my humble little corner of the web! here you'll
         find all of my creative work such as:
         <a href="/work/music.html">music</a>,
@@ -65,7 +65,7 @@
         />
       </p>
 
-      <p class="section__content">
+      <p class="body-text">
         feel free to sign my
         <a href="/guestbook.html" target="_parent">guestbook</a> if you want to
         share any thoughts! or check out my
@@ -73,27 +73,25 @@
         mine!
       </p>
 
-      <p class="section__content">
+      <p class="body-text">
         and if you just want to get out of here, maybe check out some
         <a href="/outlinks.html">other sites</a> that i think are neat!
       </p>
 
-      <div class="section__content">
-        <div id="comm-status"></div>
-      </div>
+      <div id="comm-status"></div>
     </section>
 
-    <article class="news-feed section main-container__section">
-      <h1 class="title section__title">what's new?</h1>
+    <article class="news-feed section">
+      <h1 class="title">what's new?</h1>
       <div class="section-container">
-        <div id="news-feed"></div>
+        <div id="news-feed" class="feed"></div>
       </div>
     </article>
 
-    <article class="update-log section main-container__section">
-      <h1 class="title section__title">update-log</h1>
+    <article class="update-log section">
+      <h1 class="title">update-log</h1>
       <div class="section-container">
-        <div id="update-log"></div>
+        <div id="update-log" class="feed"></div>
       </div>
     </article>
   </body>
