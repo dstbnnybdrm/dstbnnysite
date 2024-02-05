@@ -1,130 +1,26 @@
-/* -- common variables -- */
-:root {
-    --font-family--main: Verdana, Geneva, Tahoma, sans-serif;
-    --font-family--mono: "Courier New", Courier, monospace;
-
-    --font-size--small: 0.75rem;
-    --font-size--base: 1rem;
-    --font-size--large: 1.125rem;
-
-    --letter-spacing-wide: 0.125rem;
-
-    --text-color: #333;
-
-    --color-primary: #f69;
-    --color-secondary: #c36;
-    --color-tertiary: #6cc;
-
-    --color-background: white;
-
-    --main-width: 67rem;
-    --main-height: 50rem;
-}
-
-/* ----- GLOBAL RESETS ----- 
- *
- * global reset taken from here: 
- * https://www.joshwcomeau.com/css/custom-css-reset/
- * 
- */
-
-/* less shitty box-sizing (border-based instead of content-based) */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* reset layout defaults */
-* {
-    margin: 0;
-    padding: 0;
-    /* for debugging: */
-    /* outline: 2px dashed purple; */
-    font-size: 12px;
-}
-
-/* text reset */
-body {
-    font-size: var(--font-size--base);
-    font-family: var(--font-family--main);
-    line-height: 1.5rem;
-    margin: 0;
-    padding: 0 1rem 0 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
-}
-
-/* table */
-table,
-th,
-td {
-    border: 1px solid;
-    border-collapse: collapse;
-}
-
-/* improve media defaualts */
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-
-    max-width: 100%;
-}
-
-/* remove form typography styles */
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-
-/* avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    overflow-wrap: break-word;
-}
-
-/* link */
-a {
-    text-decoration-style: dotted;
-}
-a:link {
-    color: var(--color-primary);
-}
-
-a:visited {
-    color: var(--color-secondary);
-}
-
-a:hover {
-    color: var(--color-tertiary);
-}
+@use "base";
 
 /* ----- */
+
+body {
+    @include base.base-text();
+    line-height: 2rem;
+
+    color: var(--color-base);
+}
 
 em,
 i {
     display: inline;
+
+    @include base.italic-text();
 }
 
 h1,
 h2 {
     margin: 0;
-    font-size: var(--font-size--large);
+
+    font-size: var(--font-size-large);
     font-weight: bold;
 }
 
@@ -132,10 +28,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: var(--font-size--base);
+    font-size: var(--font-size-base);
     font-weight: bold;
 
-    letter-spacing: var(--letter-spacing-wide);
+    letter-spacing: var(--letter-spacing-large);
 }
 
 header > p {
@@ -145,9 +41,8 @@ header > p {
 time {
     margin: 0;
 
-    font-weight: normal;
-    font-style: italic;
-    letter-spacing: var(--letter-spacing-wide);
+    @include base.italic-text();
+    font-size: var(--font-size-large);
 }
 
 p {
@@ -160,13 +55,15 @@ ol {
 }
 
 ul > li {
-    list-style: "- ";
     margin: 0 0 0 1.5rem;
+
+    list-style: "- ";
 }
 
 ol > li {
-    list-style-type: decimal;
     margin: 0 0 0 2rem;
+
+    list-style-type: decimal;
 }
 li > p {
     margin: 0;
@@ -183,13 +80,13 @@ hr {
 
 blockquote {
     margin: 1rem 0 1rem 0;
-    border-left: 1px dotted black;
+    border-left: 1px dotted var(--color-base);
     padding: 0 0 0 1rem;
 }
 
 pre {
     margin: 1rem 0 1rem 0;
-    border: 1px dotted black;
+    border: 1px dotted var(--color-base);
     padding: 1rem;
 }
 pre > code {
@@ -198,8 +95,9 @@ pre > code {
 
 code {
     margin: 0 0.5rem;
-    font-family: var(--font-family--mono);
-    letter-spacing: var(--letter-spacing-wide);
+
+    font-family: var(--font-family-mono);
+    letter-spacing: var(--letter-spacing-large);
 }
 
 footer {
@@ -214,10 +112,10 @@ figure {
     display: block;
 
     margin: 1rem 0;
-    border: 1px dotted black;
+    border: 1px dotted var(--color-base);
     padding: 1rem;
 }
 
 figcaption {
-    font-style: italic;
+    @include base.italic-text();
 }
