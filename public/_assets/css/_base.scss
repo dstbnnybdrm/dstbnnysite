@@ -16,7 +16,7 @@
     --font-size-large: 1.1rem;
 
     --letter-spacing-base: initial;
-    --letter-spacing-large: 0.125rem;
+    --letter-spacing-large: 0.07rem;
 
     --page-wrapper-width: 67rem;
     --page-wrapper-height: 50rem;
@@ -156,10 +156,18 @@ abbr {
     }
 }
 
-@mixin text-reset {
+@mixin base-text {
     font-family: var(--font-family-base);
     font-weight: normal;
     font-style: normal;
+    color: var(--color-base);
+}
+
+@mixin italic-text {
+    font-family: var(--font-family-alt);
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: var(--letter-spacing-large);
     color: var(--color-base);
 }
 

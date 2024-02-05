@@ -108,7 +108,7 @@
 }
 
 .title {
-    @include base.text-reset();
+    @include base.base-text();
 
     font-size: var(--font-size-large);
     font-style: normal;
@@ -137,7 +137,7 @@
 
 .list {
     @include base.default-list-style();
-    @include base.text-reset();
+    @include base.base-text();
 
     &_row {
         display: flex;
@@ -162,11 +162,11 @@
 }
 
 .body-text {
-    @include base.text-reset();
+    @include base.base-text();
 }
 
 .standalone-link {
-    @include base.text-reset();
+    @include base.base-text();
 }
 
 .breadcrumb {

@@ -218,7 +218,7 @@
 }
 
 .header-tagline {
-    @include base.text-reset();
+    @include base.base-text();
     font-family: var(--font-family-alt);
     font-style: italic;
     letter-spacing: 0.07rem;
@@ -247,11 +247,11 @@
     // }
 
     &__status {
+        @include base.layout-border();
+        @include base.layout-padding();
+
         overflow-y: auto;
     }
-
-    // &__aside {
-    // }
 
     @include base.for-tablet() {
         &__navi {
@@ -298,17 +298,17 @@
     }
 
     &__home {
-        @include base.text-reset();
+        @include base.base-text();
     }
 
     &__button {
         display: none;
 
-        @include base.text-reset();
+        @include base.base-text();
     }
 
     &__link {
-        @include base.text-reset();
+        @include base.base-text();
     }
 
     @include base.for-phone() {
@@ -359,7 +359,7 @@
         &__subheading {
             display: block;
 
-            @include base.text-reset();
+            @include base.base-text();
 
             // font-weight: normal;
             font-family: var(--font-family-alt);
@@ -428,14 +428,14 @@
             display: list-item;
 
             font-size: var(--font-size-base);
-            @include base.text-reset();
+            @include base.base-text();
             @include base.navi-list-style();
         }
 
         &__list {
             @include base.list-margin();
 
-            @include base.text-reset();
+            @include base.base-text();
             @include base.navi-list-style();
         }
 
@@ -450,14 +450,14 @@
 }
 
 .navi-title {
-    @include base.text-reset();
+    @include base.base-text();
     font-weight: normal;
 }
 
 .navi-home {
     display: inline;
 
-    @include base.text-reset();
+    @include base.base-text();
     font-size: var(--font-size-large);
     font-weight: bold;
     // letter-spacing: var(--letter-spacing-large);
@@ -477,7 +477,7 @@
 .navi-button {
     display: none;
 
-    @include base.text-reset();
+    @include base.base-text();
 
     @include base.for-phone() {
         display: block;
@@ -495,10 +495,11 @@
 }
 
 .navi-list {
-    @include base.text-reset();
+    @include base.base-text();
 
     @include base.for-phone() {
         display: flex;
+
         flex-direction: column;
         gap: 0.5rem;
 
@@ -548,51 +549,26 @@
 
 /* --- STATUS --- */
 .status {
-    grid-area: status;
+    display: flex;
 
-    // &__title {
-    // }
+    grid-area: status;
+    flex-direction: column;
+    gap: 1rem;
 
     &__username {
-        // font-size: var(--font-size-small);
-    }
+        @include base.italic-text();
 
-    // &__content {
-    // }
+        font-family: var(--font-family-alt);
+        font-size: var(--font-size-small);
+
+        &:before {
+            content: "— ";
+        }
+    }
 
     @include base.for-phone() {
         display: none;
     }
-
-    @include base.for-tablet() {
-        @include base.layout-border();
-        @include base.layout-padding();
-    }
-
-    @include base.for-desktop() {
-        @include base.layout-border();
-        @include base.layout-padding();
-    }
-}
-
-/* --- TBD --- */
-.aside {
-    grid-area: aside;
-    display: none;
-
-    // @include base.for-phone() {
-    //     display: none;
-    // }
-
-    // @include base.for-tablet() {
-    //     @include base.layout-border();
-    //     @include base.layout-padding();
-    // }
-
-    // @include base.for-desktop() {
-    //     @include base.layout-border();
-    //     @include base.layout-padding();
-    // }
 }
 
 /* --- MAIN --- */
