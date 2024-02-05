@@ -13,7 +13,7 @@
   --font-size-base: 1rem;
   --font-size-large: 1.1rem;
   --letter-spacing-base: initial;
-  --letter-spacing-large: 0.125rem;
+  --letter-spacing-large: 0.07rem;
   --page-wrapper-width: 67rem;
   --page-wrapper-height: 50rem;
 }
@@ -47,6 +47,10 @@
 }
 
 /* text reset */
+body {
+  line-height: 1.5;
+}
+
 /* improve media defaults */
 img,
 picture,
@@ -118,15 +122,6 @@ abbr {
   text-decoration: none;
 }
 
-html,
-body {
-  height: 100%;
-}
-
-iframe {
-  display: block;
-}
-
 .main-container {
   display: flex;
   flex-direction: column;
@@ -189,6 +184,7 @@ iframe {
 .ascii-art {
   font-family: var(--font-family-mono);
   line-height: 1rem;
+  user-select: none;
 }
 
 .section {
@@ -210,6 +206,8 @@ iframe {
 
 .title {
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
   font-size: var(--font-size-large);
   font-style: normal;
@@ -237,6 +235,8 @@ iframe {
 .list {
   list-style: "❀ ";
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
 }
 .list_row {
@@ -257,11 +257,23 @@ iframe {
 
 .body-text {
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
+  color: var(--color-base);
+}
+.body-text em,
+.body-text i {
+  font-family: var(--font-family-alt);
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: var(--letter-spacing-large);
   color: var(--color-base);
 }
 
 .standalone-link {
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
 }
 

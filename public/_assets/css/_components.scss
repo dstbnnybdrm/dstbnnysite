@@ -165,6 +165,12 @@
 
 .body-text {
     @include base.base-text();
+
+    // i know i technically shouldn't do this but i am lazy :3c
+    em,
+    i {
+        @include base.italic-text();
+    }
 }
 
 .standalone-link {
