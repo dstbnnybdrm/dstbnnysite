@@ -1,20 +1,9 @@
 @use "base";
 
 .main-container {
-    @include base.text-reset();
-
-    color: var(--color-base);
-
-    // &_home {
-    // }
-
-    &__breadcrumb {
-    }
-
-    &__section {
-        min-width: min-content;
-        min-height: min-content;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 
     @include base.small-frame() {
         /* should only need this at suuuuper thin screens? i think? */
@@ -28,8 +17,9 @@
             grid-template-areas:
                 "welcome news-feed"
                 "update update";
-            gap: 1rem;
             grid-template-columns: 1fr 1fr;
+            row-gap: 1rem;
+            column-gap: 2rem;
 
             grid-template-rows:
                 minmax(0, 3fr)
@@ -54,17 +44,20 @@
 
 /* --- FEED --- */
 .feed {
-    &__title {
-        font-size: 1.1rem;
-        font-family: var(--font-family-alt);
-        font-style: italic;
-        font-weight: normal;
-        letter-spacing: 0.05rem;
-    }
+    display: flex;
+
+    flex-direction: column;
+    gap: 1rem;
 
     &__entry {
-        &:not(:last-child) {
-            border-bottom: 1px dotted var(--color-base);
+        display: flex;
+
+        flex-direction: column;
+        gap: 0.5rem;
+
+        &:not(:first-child) {
+            border-top: 1px dotted var(--color-base);
+            padding-top: 0.5rem;
         }
 
         &:nth-child(n + 4) {
@@ -82,13 +75,12 @@
 }
 
 .commission-status {
-    display: inline-block;
+    // display: inline-block;
 
-    border: 1px dashed var(--color-base);
+    // border: 1px dashed var(--color-base);
 
-    text-align: center;
-    letter-spacing: var(--letter-spacing-wide);
-    // font-family: var(--font-family-mono);
+    // text-align: center;
+    // letter-spacing: var(--letter-spacing-wide);
 }
 
 .ascii-art {
@@ -97,23 +89,16 @@
 }
 
 .section {
-    &__title {
-    }
-
-    &__subtitle {
-        border-top: 1px dotted var(--color-base);
-    }
-
-    &__content {
-    }
-}
-
-.section-content {
     display: flex;
 
     flex-direction: column;
-
     gap: 1rem;
+
+    line-height: 1.5;
+
+    @include base.small-frame() {
+        line-height: 2;
+    }
 }
 
 .section-container {
@@ -122,13 +107,8 @@
     min-height: 0;
 }
 
-.section-columns {
-    display: flex;
-    gap: 1rem;
-}
-
 .title {
-    display: inline-block;
+    @include base.text-reset();
 
     font-size: var(--font-size-large);
     font-style: normal;
@@ -139,7 +119,7 @@
         font-family: var(--font-family-alt);
         font-style: italic;
         font-weight: normal;
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.07rem;
     }
 
     /* for screen readers */
@@ -157,6 +137,7 @@
 
 .list {
     @include base.default-list-style();
+    @include base.text-reset();
 
     &_row {
         display: flex;
@@ -180,12 +161,17 @@
     }
 }
 
+.body-text {
+    @include base.text-reset();
+}
+
+.standalone-link {
+    @include base.text-reset();
+}
+
 .breadcrumb {
     &__list {
         display: flex;
-
-        // border-bottom: 1px dotted var(--color-base);
-        // padding-bottom: 0.5rem;
     }
 }
 
@@ -202,10 +188,4 @@
         width: 88px;
         height: 31px;
     }
-}
-
-.new-label {
-    display: inline;
-
-    height: 2rem;
 }
