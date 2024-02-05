@@ -114,8 +114,8 @@ window.onload = () => {
     // page setup depending on if blog/main/etc.
     switch (window.location.pathname) {
         case "/blog/":
-            let postNavButtons = document.querySelectorAll(".blog-posts__link");
-            let recent_post_location = postNavButtons[0].getAttribute("href");
+            let postNavButtons = document.querySelectorAll(".navi__link");
+            let recent_post_location = postNavButtons[1].getAttribute("href");
             setMainframe(recent_post_location);
             break;
         case "/":

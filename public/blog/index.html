@@ -70,36 +70,48 @@
       </header>
 
       <nav class="navi navi_blog page__navi">
-        <a href="/" class="navi__home">back to site?</a>
+        <a href="/" class="navi__link">back to site?</a>
 
-        <h1 class="title navi__title navi__title_blog">
+        <h1 class="title">
           <abbr title="dustbunnyblog">dstbnnyblog</abbr>
         </h1>
-        <p class="navi__description">various thoughts and ramblings</p>
 
-        <nav class="navi navi__subnavi navi__subnavi_blog">
-          <h2 class="title navi__title navi__title_blog">entries</h2>
-          <ul class="blog-posts navi__list">
-            <!-- add new posts here, me! -->
-            <li class="blog-posts__post">
-              <a
-                class="blog-posts__link"
-                href="posts/2023-01-09.html"
-                target="mainframe"
-              >
-                "ah shit, here we go again"
-              </a>
-            </li>
-            <li class="blog-posts__post">
-              <a
-                class="blog-posts__link"
-                href="posts/2023-12-30.html"
-                target="mainframe"
-              >
-                new blog, new me
-              </a>
-            </li>
-          </ul>
+        <p class="body-text">various thoughts and ramblings</p>
+
+        <nav class="navi navi__navi navi__navi_blog">
+          <h2 class="navi__subheading navi__subheading_blog">entries</h2>
+
+          <button
+            class="button navi__button"
+            type="button"
+            onclick="toggleNaviMenu();"
+          >
+            entries
+          </button>
+
+          <div class="navi__menu">
+            <ul class="navi__list navi__list_blog">
+              <!-- add new posts here, me! -->
+              <li class="navi__item">
+                <a
+                  class="navi__link"
+                  href="posts/2023-01-09.html"
+                  target="mainframe"
+                >
+                  "ah shit, here we go again"
+                </a>
+              </li>
+              <li class="navi__item">
+                <a
+                  class="navi__link"
+                  href="posts/2023-12-30.html"
+                  target="mainframe"
+                >
+                  new blog, new me
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </nav>
 

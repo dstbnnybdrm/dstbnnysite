@@ -86,6 +86,8 @@
 .ascii-art {
     font-family: var(--font-family-mono);
     line-height: 1rem;
+
+    user-select: none;
 }
 
 .section {

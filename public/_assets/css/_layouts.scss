@@ -23,7 +23,7 @@
     @include base.for-phone() {
         &__navi {
             border-top: 1px solid var(--color-base);
-            padding: 0.5rem 0 0 0;
+            padding: 1rem 0;
         }
 
         &__main {
@@ -59,11 +59,6 @@
         &__navi {
             @include base.layout-border();
             @include base.layout-padding();
-        }
-
-        &__main {
-            &_blog {
-            }
         }
 
         &__collection {
@@ -357,6 +352,9 @@
             font-family: var(--font-family-alt);
             font-style: italic;
             letter-spacing: 0.07rem;
+            &_blog {
+                display: none;
+            }
         }
 
         &__list {
@@ -422,6 +420,13 @@
             font-size: var(--font-size-base);
             @include base.base-text();
             @include base.navi-list-style();
+
+            &_blog {
+                display: inline;
+
+                @include base.italic-text();
+                font-size: var(--font-size-large);
+            }
         }
 
         &__list {
@@ -429,14 +434,22 @@
 
             @include base.base-text();
             @include base.navi-list-style();
+
+            &_blog {
+                @include base.default-list-style();
+            }
         }
 
         &__link {
-            width: min-content;
+            width: max-content;
         }
 
         &__navi {
             @include base.list-margin();
+
+            &_blog {
+                margin: 0;
+            }
         }
     }
 }
