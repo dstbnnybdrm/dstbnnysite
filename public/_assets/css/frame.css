@@ -122,6 +122,16 @@ abbr {
   text-decoration: none;
 }
 
+.l-stack {
+  display: flex;
+  flex-direction: column;
+  column-gap: 1rem;
+}
+.l-stack_horizontal {
+  flex-direction: row;
+  row-gap: 1rem;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;

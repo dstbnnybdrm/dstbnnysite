@@ -212,3 +212,23 @@ abbr {
         @content;
     }
 }
+
+//:._.:*~ LAYOUT BLOCKS ~*:._.://
+
+.l-imposter {
+}
+
+.l-sidebar {
+}
+
+.l-stack {
+    display: flex;
+
+    flex-direction: column;
+    column-gap: 1rem;
+
+    &_horizontal {
+        flex-direction: row;
+        row-gap: 1rem;
+    }
+}
