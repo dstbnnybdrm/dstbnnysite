@@ -126,6 +126,8 @@ window.onload = () => {
             break;
     }
 
+    // updateContentHeight();
+
     mainframe.addEventListener("load", updateHistory);
     mainframe.addEventListener("load", updateContentHeight);
 
