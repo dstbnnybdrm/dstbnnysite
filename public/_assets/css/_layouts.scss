@@ -98,9 +98,6 @@
         gap: 0;
     }
 
-    // &_guestbook {
-    // }
-
     @include base.for-phone() {
         grid-template-areas:
             "header"
@@ -110,8 +107,6 @@
             "footer";
 
         grid-template-rows: repeat(5, auto);
-
-        // margin: 1rem 0;
     }
 
     @include base.for-tablet() {
@@ -180,7 +175,6 @@
             grid-template-areas:
                 "navi"
                 "main";
-            // grid-template-columns: min-content;
             gap: 0;
 
             width: min-content;
@@ -196,12 +190,6 @@
     flex-direction: column;
     grid-area: header;
 
-    // &_blog {
-    // }
-
-    // &__art {
-    // }
-
     &__tagline {
         padding: 0.5rem 1rem;
 
@@ -214,26 +202,30 @@
         &_blog {
             justify-content: start;
         }
+
+        &__tagline {
+            @include base.layout-border();
+        }
     }
 }
 
 .header-tagline {
+    display: block;
+
     @include base.base-text();
-    font-family: var(--font-family-alt);
-    font-style: italic;
-    letter-spacing: 0.07rem;
+    @include base.italic-text();
     text-align: center;
 
     @include base.for-phone() {
         display: none;
     }
 
-    @include base.for-tablet() {
-        display: block;
-    }
-
     @include base.for-desktop() {
-        @include base.layout-border();
+        &::before,
+        &::after {
+            content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
+            margin: 0 2rem;
+        }
     }
 }
 
@@ -484,7 +476,6 @@
 
         border: none;
 
-        // font-style: italic;
         font-size: var(--font-size-small);
 
         color: var(--color-background);
@@ -542,9 +533,6 @@
 .blog-posts {
     @include base.default-list-style();
     @include base.list-margin();
-
-    // &__post {
-    // }
 }
 
 /* --- STATUS --- */
@@ -584,7 +572,6 @@
         border: none;
 
         width: 100%;
-        // height: 100%;
     }
 
     @include base.for-desktop() {
@@ -598,15 +585,13 @@
 /* --- COLLECTION --- */
 .collection {
     grid-area: collection;
-    // &__content {
-    // }
 }
 
 /* --- FOOTER --- */
 .footer {
     grid-area: footer;
 
-    &__content {
+    &__body {
         text-align: center;
     }
 }
