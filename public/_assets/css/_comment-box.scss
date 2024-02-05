@@ -102,7 +102,7 @@ input#hcb_form_name,
 textarea#hcb_form_content {
     border: 1px dotted var(--color-base);
 
-    font-family: var(--font-family-alt);
+    font-family: var(--font-family-mono);
     font-size: 16px;
     color: var(--color-base);
 
@@ -112,25 +112,25 @@ textarea#hcb_form_content {
 /* placeholder text */
 ::-webkit-input-placeholder {
     font-size: 16px;
-    font-family: var(--font-family-alt);
+    font-family: var(--font-family-mono);
     text-transform: lowercase;
 }
 
 :-moz-placeholder {
     font-size: 16px;
-    font-family: var(--font-family-alt);
+    font-family: var(--font-family-mono);
     text-transform: lowercase;
 }
 
 ::-moz-placeholder {
     font-size: 16px;
-    font-family: var(--font-family-alt);
+    font-family: var(--font-family-mono);
     text-transform: lowercase;
 }
 
 :-ms-input-placeholder {
     font-size: 16px;
-    font-family: var(--font-family--form);
+    font-family: var(--font-family-mono);
     text-transform: lowercase;
 }
 
