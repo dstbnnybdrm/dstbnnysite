@@ -56,7 +56,7 @@
 
 /* text reset */
 body {
-    // line-height: 1.5;
+    line-height: 1.5;
 }
 
 /* improve media defaults */
@@ -158,6 +158,8 @@ abbr {
 
 @mixin text-reset {
     font-family: var(--font-family-base);
+    font-weight: normal;
+    font-style: normal;
     color: var(--color-base);
 }
 

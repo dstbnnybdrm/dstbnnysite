@@ -79,69 +79,68 @@ c(  づ✿
         <nav class="navi sidebar__navi">
           <h1 class="title title_hidden">site navigation</h1>
 
-          <a class="navi-home navi__home" href="/home.html" target="mainframe"
+          <a class="navi__link" href="/home.html" target="mainframe"
             ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
           >
 
           <button
-            class="navi-button navi__button"
+            class="button navi__button"
             type="button"
             onclick="toggleNaviMenu();"
           >
             navigation
           </button>
 
-          <nav class="navi navi__subnavi">
-            <h2 class="navi-title navi__title">from me</h2>
-            <ul class="navi-list navi__list">
-              <li class="list-item navi-list__item">
-                <a class="navi-list__link" href="/about.html" target="mainframe"
-                  >about</a
-                >
-              </li>
-              <li class="list-item navi-list__item">
-                <a class="navi-list__link" href="/blog/">blog</a>
-              </li>
-              <li class="list-item navi-list__item">
-                <a class="navi-list__link" href="/work/" target="mainframe"
-                  >work</a
-                >
-              </li>
-              <li class="list-item navi-list__item">
-                <a
-                  class="navi-list__link"
-                  href="/commission.html"
-                  target="mainframe"
-                  >commission</a
-                >
-              </li>
-            </ul>
-          </nav>
+          <div class="navi__menu">
+            <nav class="navi navi__navi">
+              <h2 class="navi__subheading">from me</h2>
+              <ul class="navi__list">
+                <li class="navi__item">
+                  <a class="navi__link" href="/about.html" target="mainframe"
+                    >about</a
+                  >
+                </li>
+                <li class="navi__item">
+                  <a class="navi__link" href="/blog/">blog</a>
+                </li>
+                <li class="navi__item">
+                  <a class="navi__link" href="/work/" target="mainframe"
+                    >work</a
+                  >
+                </li>
+                <li class="navi__item">
+                  <a
+                    class="navi__link"
+                    href="/commission.html"
+                    target="mainframe"
+                    >commission</a
+                  >
+                </li>
+              </ul>
+            </nav>
 
-          <nav class="navi navi__subnavi">
-            <h2 class="navi-title navi__title">for you</h2>
-            <ul class="navi-list navi__list">
-              <li class="list-item navi-list__item">
-                <a
-                  class="navi-list__link"
-                  href="/resources.html"
-                  target="mainframe"
-                  >resources</a
-                >
-              </li>
-              <li class="list-item navi-list__item">
-                <a
-                  class="navi-list__link"
-                  href="/outlinks.html"
-                  target="mainframe"
-                  >outlinks</a
-                >
-              </li>
-              <li class="list-item navi-list__item">
-                <a class="navi-list__link" href="/guestbook.html">guestbook</a>
-              </li>
-            </ul>
-          </nav>
+            <nav class="navi navi__navi">
+              <h2 class="navi__subheading">for you</h2>
+              <ul class="navi__list">
+                <li class="navi__item">
+                  <a
+                    class="navi__link"
+                    href="/resources.html"
+                    target="mainframe"
+                    >resources</a
+                  >
+                </li>
+                <li class="navi__item">
+                  <a class="navi__link" href="/outlinks.html" target="mainframe"
+                    >outlinks</a
+                  >
+                </li>
+                <li class="navi__item">
+                  <a class="navi__link" href="/guestbook.html">guestbook</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </nav>
 
         <!-- ~* STATUS WIDGET *~ -->

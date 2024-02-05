@@ -57,6 +57,10 @@
 }
 
 /* text reset */
+body {
+  line-height: 1.5;
+}
+
 /* improve media defaults */
 img,
 picture,
@@ -281,6 +285,8 @@ abbr {
 
 .header-tagline {
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
   font-family: var(--font-family-alt);
   font-style: italic;
@@ -333,9 +339,9 @@ abbr {
 
 /* --- NAVIGATION --- */
 .navi {
-  grid-area: navi;
   display: flex;
-  /* the "from me," "for you" titles */
+  flex-direction: column;
+  grid-area: navi;
 }
 .navi_blog {
   display: flex;
@@ -346,12 +352,124 @@ abbr {
   border: none;
   margin: 0;
 }
-.navi__title_blog {
-  display: block;
-  list-style: none;
+.navi__home {
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
+  color: var(--color-base);
 }
+.navi__button {
+  display: none;
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
+  color: var(--color-base);
+}
+.navi__link {
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
+  color: var(--color-base);
+}
+@media screen and (max-width: 499px) {
+  .navi {
+    gap: 1rem;
+  }
+  .navi__home {
+    display: block;
+    border: 1px dotted var(--color-base);
+    padding: 1rem;
+    width: 100%;
+  }
+  .navi__button {
+    display: block;
+    border: none;
+    padding: 0.5rem;
+    font-size: var(--font-size-small);
+    color: var(--color-background);
+    background-color: var(--color-primary);
+  }
+  .navi__button:hover {
+    border-color: var(--color-background);
+    color: var(--color-background);
+    background-color: var(--color-secondary);
+  }
+  .navi__menu {
+    display: none;
+    /* mobile hamburger menu */
+  }
+  .navi__menu_toggle_open {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px dotted var(--color-base);
+    border-top: none;
+    padding: 0 1rem 1rem 1rem;
+  }
+  .navi__menu_toggle_open:not(:last-child) {
+    border-bottom: none;
+  }
+  .navi__subheading {
+    display: block;
+    font-family: var(--font-family-base);
+    font-weight: normal;
+    font-style: normal;
+    color: var(--color-base);
+    font-family: var(--font-family-alt);
+    font-style: italic;
+    letter-spacing: 0.07rem;
+  }
+  .navi__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .navi__item {
+    display: contents;
+  }
+  .navi__link {
+    border: 1px dotted var(--color-primary);
+    padding: 1rem;
+  }
+  .navi__link:hover {
+    border-color: var(--color-background);
+    color: var(--color-background);
+    background-color: var(--color-secondary);
+  }
+}
+@media screen and (min-width: 801px) {
+  .navi__menu {
+    display: contents;
+  }
+  .navi__subheading {
+    display: list-item;
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-base);
+    font-weight: normal;
+    font-style: normal;
+    color: var(--color-base);
+    list-style: "∟ ";
+  }
+  .navi__list {
+    margin-left: 1.25rem;
+    font-family: var(--font-family-base);
+    font-weight: normal;
+    font-style: normal;
+    color: var(--color-base);
+    list-style: "∟ ";
+  }
+  .navi__link {
+    width: min-content;
+  }
+  .navi__navi {
+    margin-left: 1.25rem;
+  }
+}
+
 .navi-title {
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
   font-weight: normal;
 }
@@ -359,6 +477,8 @@ abbr {
 .navi-home {
   display: inline;
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
   font-size: var(--font-size-large);
   font-weight: bold;
@@ -383,6 +503,8 @@ abbr {
 .navi-button {
   display: none;
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
 }
 @media screen and (max-width: 499px) {
@@ -402,6 +524,8 @@ abbr {
 
 .navi-list {
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
 }
 @media screen and (max-width: 499px) {
@@ -600,6 +724,8 @@ abbr {
 
 .title {
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
   font-size: var(--font-size-large);
   font-style: normal;
@@ -627,6 +753,8 @@ abbr {
 .list {
   list-style: "❀ ";
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
 }
 .list_row {
@@ -647,11 +775,15 @@ abbr {
 
 .body-text {
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
 }
 
 .standalone-link {
   font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-base);
 }
 

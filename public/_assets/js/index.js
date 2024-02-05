@@ -15,7 +15,7 @@ const HOME_URL = "/home.html";
 const mainframe = document.getElementsByName("mainframe")[0];
 
 const tagline = document.getElementById("tagline");
-const naviLists = document.querySelectorAll(".navi__subnavi");
+const naviMenu = document.querySelectorAll(".navi__menu");
 
 let isFirstLoad = true;
 
@@ -84,7 +84,10 @@ function setMainframe(defaultPage) {
 
     // sets frame source to page if url parameter is present,
     // otherwise default to specified page
-    mainframe.src = page == null ? defaultPage : page;
+    mainframe.src =
+        page == null //
+            ? defaultPage //
+            : page; //
 
     updateHistory();
 }
@@ -98,16 +101,13 @@ function randomiseTagline() {
 }
 
 function toggleNaviMenu() {
-    naviLists.forEach((list) => {
-        list.classList.toggle("navi__subnavi" + "_toggle_open");
-    });
+    naviMenu[0].classList.toggle("navi__menu_toggle_open");
 }
 
 function isNaviMenuOpen() {
-    if (naviLists[0].classList.contains("navi__subnavi" + "_toggle_open"))
-        return true;
-
-    return false;
+    return naviMenu[0].classList.contains("navi__menu_toggle_open")
+        ? true //
+        : false; //
 }
 
 window.onload = () => {

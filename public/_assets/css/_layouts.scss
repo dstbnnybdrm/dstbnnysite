@@ -279,9 +279,10 @@
 
 /* --- NAVIGATION --- */
 .navi {
-    grid-area: navi;
-
     display: flex;
+
+    flex-direction: column;
+    grid-area: navi;
 
     &_blog {
         display: flex;
@@ -296,73 +297,93 @@
         margin: 0;
     }
 
-    // &__home {
-    // }
-
-    // &__button {
-    // }
-
-    // &__subnavi {
-    // }
-
-    /* the "from me," "for you" titles */
-    &__title {
-        &_blog {
-            display: block;
-            list-style: none;
-
-            // font-weight: bold;
-        }
+    &__home {
+        @include base.text-reset();
     }
 
-    // &__list {
-    // }
+    &__button {
+        display: none;
+
+        @include base.text-reset();
+    }
+
+    &__link {
+        @include base.text-reset();
+    }
 
     @include base.for-phone() {
-        // &__home {
-        //     display: block;
+        gap: 1rem;
 
-        //     border: 1px dotted var(--color-base);
-        //     padding: 1rem;
+        &__home {
+            display: block;
 
-        //     width: 100%;
-        // }
+            border: 1px dotted var(--color-base);
+            padding: 1rem;
 
-        // &__button {
-        //     border: 1px solid var(--color-base);
-        //     border-radius: 0;
-        //     padding: 0.5rem;
+            width: 100%;
+        }
 
-        //     width: 100%;
-        // }
+        &__button {
+            display: block;
 
-        // &__subnavi {
-        //     display: none;
+            border: none;
+            padding: 0.5rem;
 
-        //     /* mobile hamburger menu */
-        //     &_toggle_open {
-        //         display: block;
+            font-size: var(--font-size-small);
 
-        //         border: 1px dotted var(--color-base);
-        //         border-top: none;
-        //         padding: 0 1rem 1rem 1rem;
+            color: var(--color-background);
+            background-color: var(--color-primary);
 
-        //         &:not(:last-child) {
-        //             border-bottom: none;
-        //         }
-        //     }
-        // }
+            @include base.button-on-hover();
+        }
 
-        // &__title {
-        //     display: block;
+        &__menu {
+            display: none;
+            /* mobile hamburger menu */
+            &_toggle_open {
+                display: flex;
 
-        //     padding: 0.25rem 0;
+                flex-direction: column;
+                gap: 1rem;
 
-        //     width: 100%;
+                border: 1px dotted var(--color-base);
+                border-top: none;
+                padding: 0 1rem 1rem 1rem;
 
-        //     // font-weight: normal;
-        //     // font-style: italic;
-        // }
+                &:not(:last-child) {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &__subheading {
+            display: block;
+
+            @include base.text-reset();
+
+            // font-weight: normal;
+            font-family: var(--font-family-alt);
+            font-style: italic;
+            letter-spacing: 0.07rem;
+        }
+
+        &__list {
+            display: flex;
+
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        &__item {
+            display: contents;
+        }
+
+        &__link {
+            border: 1px dotted var(--color-primary);
+            padding: 1rem;
+
+            @include base.button-on-hover();
+        }
     }
 
     @include base.for-tablet() {
@@ -399,31 +420,32 @@
     }
 
     @include base.for-desktop() {
-        // &__home {
-        //     margin: 0;
-        // }
+        &__menu {
+            display: contents;
+        }
 
-        // &__button {
-        //     display: none;
-        // }
+        &__subheading {
+            display: list-item;
 
-        // &__subnavi {
-        //     @include base.list-margin();
+            font-size: var(--font-size-base);
+            @include base.text-reset();
+            @include base.navi-list-style();
+        }
 
-        //     @include base.navi-list-style();
+        &__list {
+            @include base.list-margin();
 
-        //     &_blog {
-        //         margin-left: 0;
-        //     }
-        // }
+            @include base.text-reset();
+            @include base.navi-list-style();
+        }
 
-        // &__title {
-        //     display: list-item;
-        // }
+        &__link {
+            width: min-content;
+        }
 
-        // &__list {
-        //     @include base.list-margin();
-        // }
+        &__navi {
+            @include base.list-margin();
+        }
     }
 }
 
