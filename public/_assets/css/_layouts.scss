@@ -1,11 +1,9 @@
 @use "base";
 
-/* --- PAGE --- */
 .page {
-    padding: 2rem;
+    display: grid;
 
-    color: var(--color-base);
-    background-color: var(--color-background);
+    gap: 1rem;
 
     &__main {
         @include base.layout-border();
@@ -14,13 +12,26 @@
         &_blog {
             border: none;
         }
+    }
 
-        &_guestbook {
-            border: none;
+    &__header {
+        &_blog {
+            // to counteract grid gap in layout
+            margin-bottom: -1rem;
         }
     }
 
     @include base.for-phone() {
+        padding: 2rem;
+
+        grid-template-areas:
+            "header"
+            "navi"
+            "main"
+            "collection"
+            "footer";
+        grid-template-rows: repeat(5, auto);
+
         &__navi {
             border-top: 1px solid var(--color-base);
             padding: 1rem 0;
@@ -35,26 +46,45 @@
         }
     }
 
-    @include base.for-tablet() {
-        &__navi {
-            @include base.layout-border();
-            @include base.layout-padding();
-        }
-    }
-
     @include base.for-desktop() {
-        display: flex;
-        position: absolute;
+        padding: 2rem 2rem 0 2rem;
 
-        top: 0;
-        right: 0;
-        bottom: 1rem;
-        left: 0;
+        grid-template-areas:
+            "header     header"
+            "sidebar    main"
+            "sidebar    collection"
+            "footer     footer";
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: auto 1fr min-content 2rem;
 
-        // center horizontally
-        justify-content: center;
-        // center vertically
-        align-items: center;
+        height: 100%;
+        max-width: var(--page-wrapper-width);
+
+        &_blog {
+            grid-template-areas:
+                "header     ."
+                "navi       main"
+                "footer     footer";
+            grid-template-rows: min-content 1fr;
+            grid-template-columns: min-content calc(
+                    var(--page-wrapper-width) * 0.75
+                );
+
+            max-width: min-content;
+        }
+
+        &_guestbook {
+            display: grid;
+
+            grid-template-areas:
+                "navi"
+                "main"
+                "footer";
+            gap: 0;
+
+            width: min-content;
+            height: min-content;
+        }
 
         &__navi {
             @include base.layout-border();
@@ -67,118 +97,9 @@
 
             max-height: min-content;
         }
-
-        &__footer {
-            position: fixed;
-
-            right: 0;
-            bottom: 0.5rem;
-            left: 0;
-
-            margin: auto;
-
-            width: 100%;
-        }
     }
 }
 
-.page-body {
-    display: grid;
-
-    grid-area: "page-body";
-    gap: 1rem;
-
-    &_blog {
-        display: grid;
-        gap: 0;
-    }
-
-    @include base.for-phone() {
-        grid-template-areas:
-            "header"
-            "navi"
-            "main"
-            "collection"
-            "footer";
-
-        grid-template-rows: repeat(5, auto);
-    }
-
-    @include base.for-tablet() {
-        grid-template-areas:
-            "header     header"
-            "navi       navi"
-            "main       main"
-            "status     status"
-            "collection collection"
-            "footer     footer";
-
-        grid-template-columns: min-content auto;
-        grid-template-rows:
-            repeat(2, auto)
-            minmax(0, min-content)
-            repeat(3, auto);
-
-        // margin: 1rem auto;
-
-        &_blog {
-            grid-template-areas:
-                "header"
-                "navi"
-                "main"
-                "footer";
-            grid-template-columns: 100%;
-        }
-
-        &_guestbook {
-            display: grid;
-
-            grid-template-areas:
-                "navi"
-                "main";
-            grid-template-columns: min-content;
-            row-gap: 0;
-
-            width: min-content;
-            height: min-content;
-        }
-    }
-
-    @include base.for-desktop() {
-        grid-template-areas:
-            "header     header"
-            "sidebar    main"
-            "sidebar    collection";
-        grid-template-columns: min-content 1fr;
-        grid-template-rows: auto 1fr min-content;
-
-        width: var(--page-wrapper-width);
-        height: var(--page-wrapper-height);
-
-        &_blog {
-            grid-template-areas:
-                "header ."
-                "navi   main";
-            grid-template-rows: min-content 1fr;
-
-            height: calc(var(--page-wrapper-height) + 5rem);
-        }
-
-        &_guestbook {
-            display: grid;
-
-            grid-template-areas:
-                "navi"
-                "main";
-            gap: 0;
-
-            width: min-content;
-            height: min-content;
-        }
-    }
-}
-
-/* --- HEADER --- */
 .header {
     display: flex;
 
@@ -224,28 +145,16 @@
     }
 }
 
-/* --- SIDEBAR --- */
 .sidebar {
     display: contents;
 
     grid-area: sidebar;
 
-    // &__navi {
-    // }
-
     &__status {
         @include base.layout-border();
         @include base.layout-padding();
 
-        overflow-y: auto;
-    }
-
-    @include base.for-tablet() {
-        &__navi {
-            @include base.layout-border();
-            padding: 1rem;
-            column-gap: 1rem;
-        }
+        min-height: 0;
     }
 
     @include base.for-desktop() {
@@ -264,41 +173,24 @@
     }
 }
 
-/* --- NAVIGATION --- */
 .navi {
-    display: flex;
-
-    flex-direction: column;
     grid-area: navi;
 
-    &_blog {
-        display: flex;
-
-        flex-direction: column;
-        row-gap: 0.5rem;
-        // @include base.layout-border();
-    }
+    @include base.base-text();
 
     &_guestbook {
         border: none;
         margin: 0;
     }
 
-    &__home {
-        @include base.base-text();
-    }
-
     &__button {
         display: none;
-
-        @include base.base-text();
-    }
-
-    &__link {
-        @include base.base-text();
     }
 
     @include base.for-phone() {
+        display: flex;
+
+        flex-direction: column;
         gap: 1rem;
 
         &__home {
@@ -326,7 +218,6 @@
 
         &__menu {
             display: none;
-            /* mobile hamburger menu */
             &_toggle_open {
                 display: flex;
 
@@ -346,12 +237,8 @@
         &__subheading {
             display: block;
 
-            @include base.base-text();
+            @include base.italic-text();
 
-            // font-weight: normal;
-            font-family: var(--font-family-alt);
-            font-style: italic;
-            letter-spacing: 0.07rem;
             &_blog {
                 display: none;
             }
@@ -376,39 +263,6 @@
         }
     }
 
-    @include base.for-tablet() {
-        // display: flex;
-
-        // flex-wrap: wrap;
-
-        // &__home {
-        //     width: 100%;
-        // }
-
-        // &__button {
-        //     display: none;
-        // }
-
-        // &__subnavi {
-        //     display: flex;
-
-        //     flex-direction: column;
-
-        //     // margin-top: 0.5rem;
-
-        //     width: 100%;
-
-        //     &:not(:first-child) {
-        //         flex: 1;
-        //     }
-        // }
-
-        // &__title {
-        //     // font-weight: normal;
-        //     // font-style: italic;
-        // }
-    }
-
     @include base.for-desktop() {
         &__menu {
             display: contents;
@@ -417,9 +271,9 @@
         &__subheading {
             display: list-item;
 
-            font-size: var(--font-size-base);
             @include base.base-text();
             @include base.navi-list-style();
+            font-size: var(--font-size-base);
 
             &_blog {
                 display: inline;
@@ -454,107 +308,17 @@
     }
 }
 
-.navi-title {
-    @include base.base-text();
-    font-weight: normal;
-}
-
-.navi-home {
-    display: inline;
-
-    @include base.base-text();
-    font-size: var(--font-size-large);
-    font-weight: bold;
-    // letter-spacing: var(--letter-spacing-large);
-
-    @include base.for-phone() {
-        display: block;
-
-        @include base.button-on-hover();
-    }
-
-    @include base.for-desktop() {
-        font-size: var(--font-size-base);
-        font-weight: normal;
-    }
-}
-
-.navi-button {
-    display: none;
-
-    @include base.base-text();
-
-    @include base.for-phone() {
-        display: block;
-
-        border: none;
-
-        font-size: var(--font-size-small);
-
-        color: var(--color-background);
-        background-color: var(--color-primary);
-
-        @include base.button-on-hover();
-    }
-}
-
-.navi-list {
-    @include base.base-text();
-
-    @include base.for-phone() {
-        display: flex;
-
-        flex-direction: column;
-        gap: 0.5rem;
-
-        &__item {
-            display: contents;
-        }
-
-        &__link {
-            display: block;
-
-            border: 1px dotted var(--color-base);
-            padding: 1rem;
-
-            @include base.button-on-hover();
-        }
-    }
-
-    @include base.for-tablet() {
-        display: flex;
-        flex-direction: row;
-        column-gap: 2rem;
-        &__item {
-            @include base.list-margin();
-            @include base.default-list-style();
-        }
-    }
-
-    @include base.for-desktop() {
-        &__item {
-            display: list-item;
-
-            border: none;
-
-            line-height: 1.5rem;
-            @include base.navi-list-style();
-        }
-    }
-}
-
-.blog-posts {
-    @include base.default-list-style();
-    @include base.list-margin();
-}
-
-/* --- STATUS --- */
 .status {
     display: flex;
 
     grid-area: status;
     flex-direction: column;
     gap: 1rem;
+
+    &__body {
+        min-height: 0;
+        overflow-y: auto;
+    }
 
     &__username {
         @include base.italic-text();
@@ -572,13 +336,11 @@
     }
 }
 
-/* --- MAIN --- */
 .main {
     display: block;
 
     grid-area: main;
 
-    // the main iframe
     &__frame {
         display: block;
 
@@ -589,18 +351,15 @@
 
     @include base.for-desktop() {
         &__frame {
-            // limits height to height of container
             height: 100%;
         }
     }
 }
 
-/* --- COLLECTION --- */
 .collection {
     grid-area: collection;
 }
 
-/* --- FOOTER --- */
 .footer {
     grid-area: footer;
 

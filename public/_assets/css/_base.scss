@@ -31,6 +31,14 @@
     --color-background: #1d0612;
 }
 
+:root[data-theme="high-contrast"] {
+    --color-primary: #cf4f79;
+    --color-primary-alt: var(--color-primary);
+    --color-secondary: #54b096;
+    --color-base: black;
+    --color-background: white;
+}
+
 /*:._.:*~  GLOBAL RESETS  ~*:._.:*
  *
  * global reset taken from here: 
@@ -50,13 +58,11 @@
     margin: 0;
     padding: 0;
 
-    // my addition
     font-size: 14px;
 }
 
 /* text reset */
 body {
-    line-height: 1.5;
 }
 
 /* improve media defaults */
@@ -183,16 +189,16 @@ abbr {
 
 // -- main window -- //
 @mixin for-phone {
-    @media screen and (max-width: 499px) {
+    @media screen and (max-width: 800px) {
         @content;
     }
 }
 
-@mixin for-tablet {
-    @media screen and (min-width: 500px) and (max-width: 800px) {
-        @content;
-    }
-}
+// @mixin for-tablet {
+//     @media screen and (min-width: 500px) and (max-width: 800px) {
+//         @content;
+//     }
+// }
 
 @mixin for-desktop {
     @media screen and (min-width: 801px) {
@@ -216,6 +222,23 @@ abbr {
 //:._.:*~ LAYOUT BLOCKS ~*:._.://
 
 .l-imposter {
+    @include for-phone() {
+        display: contents;
+    }
+
+    @include for-desktop() {
+        display: flex;
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        // center horizontally and vertically
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .l-sidebar {
@@ -225,7 +248,7 @@ abbr {
     display: flex;
 
     flex-direction: column;
-    column-gap: 1rem;
+    row-gap: 1rem;
 
     &_horizontal {
         flex-direction: row;

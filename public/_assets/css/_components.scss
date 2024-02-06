@@ -1,16 +1,11 @@
 @use "base";
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-
-    @include base.small-frame() {
-        /* should only need this at suuuuper thin screens? i think? */
-        overflow: hidden;
-    }
+    line-height: 2rem;
 
     @include base.large-frame() {
+        line-height: 1.5rem;
+
         &_home {
             display: grid;
 
@@ -91,12 +86,10 @@
 }
 
 .section {
-    display: flex;
+    // display: flex;
 
-    flex-direction: column;
-    gap: 1rem;
-
-    line-height: 1.5;
+    // flex-direction: column;
+    // gap: 1rem;
 
     @include base.small-frame() {
         line-height: 2;
@@ -165,12 +158,6 @@
 
 .body-text {
     @include base.base-text();
-
-    // i know i technically shouldn't do this but i am lazy :3c
-    em,
-    i {
-        @include base.italic-text();
-    }
 }
 
 .standalone-link {
