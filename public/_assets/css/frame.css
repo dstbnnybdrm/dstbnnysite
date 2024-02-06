@@ -149,9 +149,11 @@ abbr {
   flex-direction: column;
   row-gap: 1rem;
 }
-.l-stack_horizontal {
-  flex-direction: row;
-  row-gap: 1rem;
+@media (min-width: 600px) and (min-height: 460px) {
+  .l-stack_horizontal {
+    flex-direction: row;
+    column-gap: 1rem;
+  }
 }
 
 .main-container {
@@ -207,6 +209,7 @@ abbr {
   font-family: var(--font-family-mono);
   line-height: 1rem;
   user-select: none;
+  color: var(--color-base);
 }
 
 .section {
