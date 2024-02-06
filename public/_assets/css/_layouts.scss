@@ -12,6 +12,12 @@
         &_blog {
             border: none;
         }
+
+        &_guestbook {
+            border: none;
+
+            // overflow-y: hidden;
+        }
     }
 
     &__header {
@@ -76,19 +82,25 @@
         &_guestbook {
             display: grid;
 
+            align-self: self-start;
             grid-template-areas:
                 "navi"
                 "main"
                 "footer";
+            grid-template-columns: calc(var(--page-wrapper-width) * 0.75);
+            grid-template-rows: auto 1fr auto;
             gap: 0;
 
-            width: min-content;
-            height: min-content;
+            max-width: min-content;
         }
 
         &__navi {
             @include base.layout-border();
             @include base.layout-padding();
+
+            &_guestbook {
+                border: none;
+            }
         }
 
         &__collection {
@@ -288,6 +300,7 @@
 
             @include base.base-text();
             @include base.navi-list-style();
+            line-height: 1.5rem;
 
             &_blog {
                 @include base.default-list-style();
@@ -296,6 +309,7 @@
 
         &__link {
             width: max-content;
+            line-height: 1.5rem;
         }
 
         &__navi {
@@ -318,6 +332,7 @@
     &__body {
         min-height: 0;
         overflow-y: auto;
+        line-height: 1.5rem;
     }
 
     &__username {

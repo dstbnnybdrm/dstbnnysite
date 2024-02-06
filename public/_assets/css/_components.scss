@@ -39,11 +39,6 @@
 
 /* --- FEED --- */
 .feed {
-    display: flex;
-
-    flex-direction: column;
-    gap: 1rem;
-
     &__entry {
         display: flex;
 
@@ -86,13 +81,10 @@
 }
 
 .section {
-    // display: flex;
+    line-height: 2rem;
 
-    // flex-direction: column;
-    // gap: 1rem;
-
-    @include base.small-frame() {
-        line-height: 2;
+    @include base.large-frame() {
+        line-height: 1.5rem;
     }
 }
 
