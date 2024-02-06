@@ -50,9 +50,9 @@ div #HCB_comment_box {
         width: 100%;
     }
 
-    @include base.for-tablet() {
-        width: 30rem;
-    }
+    // @include base.for-tablet() {
+    //     width: 30rem;
+    // }
 
     @include base.for-desktop() {
         display: grid;
