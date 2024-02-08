@@ -3,6 +3,17 @@
 .main-container {
     line-height: 2rem;
 
+    &__breadcrumb {
+        border-bottom: 1px dotted var(--color-base);
+        padding-bottom: 0.5rem;
+    }
+
+    &__section {
+        &:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+    }
+
     @include base.large-frame() {
         line-height: 1.5rem;
 
@@ -83,10 +94,13 @@
 }
 
 .section {
-    line-height: 2rem;
+    &__navi {
+        margin-top: 1rem;
+    }
 
-    @include base.large-frame() {
-        line-height: 1.5rem;
+    &__section {
+        // border-top: 1px dotted var(--color-base);
+        margin-top: 1rem;
     }
 }
 
@@ -161,6 +175,13 @@
 .breadcrumb {
     &__list {
         display: flex;
+    }
+}
+
+.image {
+    &_inline {
+        display: inline-block;
+        height: 1rem;
     }
 }
 

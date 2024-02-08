@@ -517,6 +517,13 @@ abbr {
 .main-container {
   line-height: 2rem;
 }
+.main-container__breadcrumb {
+  border-bottom: 1px dotted var(--color-base);
+  padding-bottom: 0.5rem;
+}
+.main-container__section:not(:first-child) {
+  margin-top: 1.5rem;
+}
 @media (min-width: 600px) and (min-height: 460px) {
   .main-container {
     line-height: 1.5rem;
@@ -570,13 +577,11 @@ abbr {
   color: var(--color-base);
 }
 
-.section {
-  line-height: 2rem;
+.section__navi {
+  margin-top: 1rem;
 }
-@media (min-width: 600px) and (min-height: 460px) {
-  .section {
-    line-height: 1.5rem;
-  }
+.section__section {
+  margin-top: 1rem;
 }
 
 .section-container {
@@ -651,6 +656,11 @@ abbr {
 
 .breadcrumb__list {
   display: flex;
+}
+
+.image_inline {
+  display: inline-block;
+  height: 1rem;
 }
 
 .buttons-88x31 {
