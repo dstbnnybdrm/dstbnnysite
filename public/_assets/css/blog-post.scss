@@ -45,6 +45,11 @@ time {
     font-size: var(--font-size-large);
 }
 
+nav {
+    border-bottom: 1px dotted var(--color-base);
+    padding-bottom: 1rem;
+}
+
 p {
     margin: 1rem 0;
 }
