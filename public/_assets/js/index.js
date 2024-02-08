@@ -126,19 +126,15 @@ window.onload = () => {
             break;
     }
 
-    // updateContentHeight();
-    //
-    if (mainframe == null) {
-        return;
+    if (mainframe != null) {
+        mainframe.addEventListener("load", updateHistory);
+        mainframe.addEventListener("load", updateContentHeight);
+
+        // auto-close mobile navigation menu after switching pages
+        mainframe.addEventListener("load", function () {
+            if (isNaviMenuOpen()) toggleNaviMenu();
+        });
     }
-
-    mainframe.addEventListener("load", updateHistory);
-    mainframe.addEventListener("load", updateContentHeight);
-
-    // auto-close mobile navigation menu after switching pages
-    mainframe.addEventListener("load", function () {
-        if (isNaviMenuOpen()) toggleNaviMenu();
-    });
 
     loadLayout();
 };
