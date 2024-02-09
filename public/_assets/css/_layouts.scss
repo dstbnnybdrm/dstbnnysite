@@ -23,6 +23,7 @@
     }
 
     &__header {
+        align-items: center;
         &_blog {
             // to counteract grid gap in layout
             margin-bottom: -1rem;
@@ -76,12 +77,10 @@
                 "header     ."
                 "navi       main"
                 "footer     footer";
+            grid-template-columns: min-content 1fr;
             grid-template-rows: min-content 1fr 2rem;
-            grid-template-columns: min-content calc(
-                    var(--page-wrapper-width) * 0.75
-                );
 
-            max-width: min-content;
+            width: 100%;
         }
 
         &_guestbook {

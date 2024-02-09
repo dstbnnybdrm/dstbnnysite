@@ -212,6 +212,9 @@ abbr {
 .page__main_sitemap {
   border: none;
 }
+.page__header {
+  align-items: center;
+}
 .page__header_blog {
   margin-bottom: -1rem;
 }
@@ -246,9 +249,9 @@ abbr {
   }
   .page_blog {
     grid-template-areas: "header     ." "navi       main" "footer     footer";
+    grid-template-columns: min-content 1fr;
     grid-template-rows: min-content 1fr 2rem;
-    grid-template-columns: min-content calc(var(--page-wrapper-width) * 0.75);
-    max-width: min-content;
+    width: 100%;
   }
   .page_guestbook {
     display: grid;
