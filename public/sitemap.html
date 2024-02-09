@@ -50,16 +50,19 @@
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/main.css" />
+    <script src="/_assets/js/index.js" defer></script>
   </head>
 
   <body class="l-imposter">
     <div class="page page_sitemap">
+      <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
       <main class="main page__main page__main_sitemap">
         <section class="section l-stack">
           <h1 class="title">sitemap</h1>
 
+          <!-- ~* NAVIGATION *~ -->
           <nav class="sitemap">
-            <a class="sitemap__link" href="/">home</a>
+            <a class="sitemap__link" href="/?p=/home.html">home</a>
 
             <ul class="sitemap__list">
               <li class="sitemap__item">
@@ -72,35 +75,39 @@
 
               <ul class="sitemap__list">
                 <li class="sitemap__item">
-                  <a class="sitemap__link" href="/about.html">about</a>
+                  <a class="sitemap__link" href="/?p=/about.html">about</a>
                 </li>
                 <li class="sitemap__item">
                   <a class="sitemap__link" href="/blog">blog</a>
                 </li>
                 <li class="sitemap__item">
-                  <a class="sitemap__link" href="/work">work</a>
+                  <a class="sitemap__link" href="/?p=/work">work</a>
 
                   <ul class="sitemap__list">
                     <li class="sitemap__item">
-                      <a class="sitemap__link" href="/work/music.html">music</a>
+                      <a class="sitemap__link" href="/?p=/work/music.html"
+                        >music</a
+                      >
                     </li>
                     <li class="sitemap__item">
-                      <a class="sitemap__link" href="/work/samples.html"
+                      <a class="sitemap__link" href="/?p=/work/samples.html"
                         >samples</a
                       >
                     </li>
                     <li class="sitemap__item">
-                      <a class="sitemap__link" href="/work/game-dev.html"
+                      <a class="sitemap__link" href="/?p=/work/game-dev.html"
                         >game dev</a
                       >
                     </li>
                     <li class="sitemap__item">
-                      <a class="sitemap__link" href="/work/misc.html">misc</a>
+                      <a class="sitemap__link" href="/?p=/work/misc.html"
+                        >misc</a
+                      >
                     </li>
                   </ul>
                 </li>
                 <li class="sitemap__item">
-                  <a class="sitemap__link" href="/commission.html"
+                  <a class="sitemap__link" href="/?p=/commission.html"
                     >commission</a
                   >
                 </li>
@@ -110,10 +117,14 @@
 
               <ul class="sitemap__list">
                 <li class="sitemap__item">
-                  <a class="sitemap__link" href="/resources.html">resources</a>
+                  <a class="sitemap__link" href="/?p=/resources.html"
+                    >resources</a
+                  >
                 </li>
                 <li class="sitemap__item">
-                  <a class="sitemap__link" href="/outlinks.html">outlinks</a>
+                  <a class="sitemap__link" href="/?p=/outlinks.html"
+                    >outlinks</a
+                  >
                 </li>
                 <li class="sitemap__item">
                   <a class="sitemap__link" href="/guestbook.html">guestbook</a>
@@ -123,6 +134,11 @@
           </nav>
         </section>
       </main>
+
+      <!-- ~*:._.:*~  FOOTER  ~*:._.:*~ -->
+      <footer class="footer page__footer">
+        <div id="footer"></div>
+      </footer>
     </div>
   </body>
 </html>
