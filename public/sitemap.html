@@ -49,65 +49,76 @@
     <link href="/_assets/img/favicon/site.webmanifest" rel="manifest" />
 
     <!-- style + script -->
-    <link rel="stylesheet" href="/_assets/css/style.css" />
+    <link rel="stylesheet" href="/_assets/css/main.css" />
   </head>
 
-  <body class="page">
-    <div class="page-wrapper">
-      <main class="main main_sitemap page__main">
-        <section class="section">
-          <h1 class="title section__title">sitemap</h1>
-          <nav>
-            <a href="/">home</a>
-            <ul class="list">
-              <li class="list__item">
-                <a href="/sitemap.html">sitemap</a> (you are here!)
+  <body class="l-imposter">
+    <div class="page page_sitemap">
+      <main class="main page__main page__main_sitemap">
+        <section class="section l-stack">
+          <h1 class="title">sitemap</h1>
+
+          <nav class="sitemap">
+            <a class="sitemap__link" href="/">home</a>
+
+            <ul class="sitemap__list">
+              <li class="sitemap__item">
+                <a class="sitemap__link" href="/sitemap.html"
+                  >sitemap (you are here!)</a
+                >
               </li>
-              <li class="list__item">
-                from me:
-                <ul class="list">
-                  <li class="list__item">
-                    <a href="/about.html">about</a>
-                  </li>
-                  <li class="list__item">
-                    <a href="/blog">blog</a>
-                  </li>
-                  <li class="list__item">
-                    <a href="/work">work</a>
-                    <ul class="list">
-                      <li class="list__item">
-                        <a href="/work/music.html">music</a>
-                      </li>
-                      <li class="list__item">
-                        <a href="/work/samples.html">samples</a>
-                      </li>
-                      <li class="list__item">
-                        <a href="/work/game-dev.html">game dev</a>
-                      </li>
-                      <li class="list__item">
-                        <a href="/work/misc.html">misc</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="list__item">
-                    <a href="/commission.html">commission</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="list__item">
-                for you:
-                <ul class="list">
-                  <li class="list__item">
-                    <a href="/resources.html">resources</a>
-                  </li>
-                  <li class="list__item">
-                    <a href="/outlinks.html">outlinks</a>
-                  </li>
-                  <li class="list__item">
-                    <a href="/guestbook.html">guestbook</a>
-                  </li>
-                </ul>
-              </li>
+
+              <h2 class="sitemap__subheading">from me</h2>
+
+              <ul class="sitemap__list">
+                <li class="sitemap__item">
+                  <a class="sitemap__link" href="/about.html">about</a>
+                </li>
+                <li class="sitemap__item">
+                  <a class="sitemap__link" href="/blog">blog</a>
+                </li>
+                <li class="sitemap__item">
+                  <a class="sitemap__link" href="/work">work</a>
+
+                  <ul class="sitemap__list">
+                    <li class="sitemap__item">
+                      <a class="sitemap__link" href="/work/music.html">music</a>
+                    </li>
+                    <li class="sitemap__item">
+                      <a class="sitemap__link" href="/work/samples.html"
+                        >samples</a
+                      >
+                    </li>
+                    <li class="sitemap__item">
+                      <a class="sitemap__link" href="/work/game-dev.html"
+                        >game dev</a
+                      >
+                    </li>
+                    <li class="sitemap__item">
+                      <a class="sitemap__link" href="/work/misc.html">misc</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sitemap__item">
+                  <a class="sitemap__link" href="/commission.html"
+                    >commission</a
+                  >
+                </li>
+              </ul>
+
+              <h2 class="sitemap__subheading">for you</h2>
+
+              <ul class="sitemap__list">
+                <li class="sitemap__item">
+                  <a class="sitemap__link" href="/resources.html">resources</a>
+                </li>
+                <li class="sitemap__item">
+                  <a class="sitemap__link" href="/outlinks.html">outlinks</a>
+                </li>
+                <li class="sitemap__item">
+                  <a class="sitemap__link" href="/guestbook.html">guestbook</a>
+                </li>
+              </ul>
             </ul>
           </nav>
         </section>

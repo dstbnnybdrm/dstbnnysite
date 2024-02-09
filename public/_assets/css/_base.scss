@@ -1,12 +1,24 @@
-/* ---- THEME DEFAULTS ---- */
-:root {
-    // default/light theme
+@mixin theme-light-colours() {
+    color-scheme: light;
+
     --color-primary: #c43162;
     --color-primary-alt: var(--color-primary);
     --color-secondary: #4f9c86;
     --color-base: #61193e;
     --color-background: #fffafa;
+}
 
+@mixin theme-dark-colours() {
+    color-scheme: dark;
+
+    --color-primary: #cf4f79;
+    --color-primary-alt: var(--color-primary);
+    --color-secondary: #54b096;
+    --color-base: #d6ccce;
+    --color-background: #1d0612;
+}
+
+:root {
     --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
     --font-family-alt: Georgia, "Times New Roman", Times, serif;
     --font-family-mono: "Courier New", Courier, monospace;
@@ -23,15 +35,25 @@
 }
 
 // ---- THEME OVERRIDES ---- //
-:root[data-theme="dark"] {
-    --color-primary: #cf4f79;
-    --color-primary-alt: var(--color-primary);
-    --color-secondary: #54b096;
-    --color-base: #d6ccce;
-    --color-background: #1d0612;
+
+// from: https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/
+html,
+html[data-theme="light"] {
+    @include theme-light-colours();
 }
 
-:root[data-theme="high-contrast"] {
+html[data-theme="dark"] {
+    @include theme-dark-colours();
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme]) {
+        @include theme-dark-colours();
+    }
+}
+
+// todo:
+html[data-theme="high-contrast"] {
     --color-primary: #cf4f79;
     --color-primary-alt: var(--color-primary);
     --color-secondary: #54b096;
@@ -59,10 +81,6 @@
     padding: 0;
 
     font-size: 14px;
-}
-
-/* text reset */
-body {
 }
 
 /* improve media defaults */
@@ -103,6 +121,10 @@ h6 {
 
 /* *~ my resets ~* */
 
+html {
+    background-color: var(--color-background);
+}
+
 /* links */
 a {
     text-decoration-style: dotted;
@@ -137,8 +159,6 @@ abbr {
     font: inherit;
     text-decoration: none;
 }
-
-//:._.:*~  MIXINS  ~*:._.://
 
 // -- reusable styles -- //
 @mixin layout-border {
@@ -194,12 +214,6 @@ abbr {
     }
 }
 
-// @mixin for-tablet {
-//     @media screen and (min-width: 500px) and (max-width: 800px) {
-//         @content;
-//     }
-// }
-
 @mixin for-desktop {
     @media screen and (min-width: 801px) {
         @content;
@@ -241,8 +255,8 @@ abbr {
     }
 }
 
-.l-sidebar {
-}
+// .l-sidebar {
+// }
 
 .l-stack {
     display: flex;
