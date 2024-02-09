@@ -37,6 +37,7 @@
             "header"
             "navi"
             "main"
+            "status"
             "collection"
             "footer";
         grid-template-rows: repeat(5, auto);
@@ -171,10 +172,14 @@
     grid-area: sidebar;
 
     &__status {
-        @include base.layout-border();
-        @include base.layout-padding();
-
         min-height: 0;
+    }
+
+    @include base.for-phone() {
+        &__status {
+            border-bottom: 1px dashed var(--color-base);
+            padding-bottom: 1rem;
+        }
     }
 
     @include base.for-desktop() {
@@ -187,6 +192,11 @@
         row-gap: 1rem;
 
         &__navi {
+            @include base.layout-border();
+            @include base.layout-padding();
+        }
+
+        &__status {
             @include base.layout-border();
             @include base.layout-padding();
         }
@@ -431,7 +441,7 @@
     }
 
     @include base.for-phone() {
-        display: none;
+        // display: none;
     }
 }
 

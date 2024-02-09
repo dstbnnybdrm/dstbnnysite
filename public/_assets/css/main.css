@@ -221,7 +221,7 @@ abbr {
 @media screen and (max-width: 800px) {
   .page {
     padding: 2rem;
-    grid-template-areas: "header" "navi" "main" "collection" "footer";
+    grid-template-areas: "header" "navi" "main" "status" "collection" "footer";
     grid-template-rows: repeat(5, auto);
   }
   .page__navi {
@@ -330,9 +330,13 @@ abbr {
   grid-area: sidebar;
 }
 .sidebar__status {
-  border: 1px solid var(--color-base);
-  padding: 1rem;
   min-height: 0;
+}
+@media screen and (max-width: 800px) {
+  .sidebar__status {
+    border-bottom: 1px dashed var(--color-base);
+    padding-bottom: 1rem;
+  }
 }
 @media screen and (min-width: 801px) {
   .sidebar {
@@ -342,6 +346,10 @@ abbr {
     row-gap: 1rem;
   }
   .sidebar__navi {
+    border: 1px solid var(--color-base);
+    padding: 1rem;
+  }
+  .sidebar__status {
     border: 1px solid var(--color-base);
     padding: 1rem;
   }
@@ -574,12 +582,6 @@ abbr {
 .status__username:before {
   content: "— ";
 }
-@media screen and (max-width: 800px) {
-  .status {
-    display: none;
-  }
-}
-
 .main {
   display: block;
   grid-area: main;
@@ -761,6 +763,14 @@ abbr {
   font-family: var(--font-family-base);
   font-weight: normal;
   font-style: normal;
+  color: var(--color-base);
+}
+.body-text i,
+.body-text em {
+  font-family: var(--font-family-alt);
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: var(--letter-spacing-large);
   color: var(--color-base);
 }
 

@@ -131,6 +131,11 @@
 
 .body-text {
     @include base.base-text();
+
+    i,
+    em {
+        @include base.italic-text();
+    }
 }
 
 .standalone-link {
