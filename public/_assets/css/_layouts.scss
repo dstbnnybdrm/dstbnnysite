@@ -372,6 +372,42 @@
     }
 }
 
+.main-container {
+    line-height: 2rem;
+
+    &__breadcrumb {
+        border-bottom: 1px dotted var(--color-base);
+        padding-bottom: 0.5rem;
+    }
+
+    &__section {
+        &:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+    }
+
+    @include base.large-frame() {
+        line-height: 1.5rem;
+
+        &_home {
+            display: grid;
+
+            grid-template-areas:
+                "welcome news-feed"
+                "update update";
+            grid-template-columns: 1fr 1fr;
+            row-gap: 1rem;
+            column-gap: 2rem;
+
+            grid-template-rows:
+                minmax(0, 3fr)
+                minmax(0, 2fr);
+
+            height: 100vh;
+        }
+    }
+}
+
 .collection {
     grid-area: collection;
 }
@@ -379,7 +415,22 @@
 .footer {
     grid-area: footer;
 
-    &__body {
-        text-align: center;
+    @include base.base-text();
+
+    &__list {
+        display: flex;
+
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child)::after {
+            content: "|";
+
+            margin: 0 0.5rem;
+        }
     }
 }
