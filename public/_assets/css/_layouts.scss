@@ -107,6 +107,16 @@
             height: min-content;
         }
 
+        &__header {
+            @include base.layout-border;
+            padding: 0.5rem 1rem;
+
+            &_blog {
+                border: none;
+                padding: 0;
+            }
+        }
+
         &__navi {
             @include base.layout-border();
             @include base.layout-padding();
@@ -131,26 +141,12 @@
     flex-direction: column;
     grid-area: header;
 
-    &__tagline {
-        padding: 0.5rem 1rem;
-
-        width: 100%;
-    }
-
     @include base.for-desktop() {
         justify-content: center;
-
-        &_blog {
-            justify-content: start;
-        }
-
-        &__tagline {
-            @include base.layout-border();
-        }
     }
 }
 
-.header-tagline {
+.tagline {
     display: block;
 
     @include base.base-text();
