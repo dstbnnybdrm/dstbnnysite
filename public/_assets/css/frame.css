@@ -750,6 +750,18 @@ abbr {
   margin-left: 1rem;
 }
 
+.figure {
+  margin: 1rem 1rem 1rem 1.5rem;
+}
+.figure__caption {
+  font-family: var(--font-family-alt);
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: var(--letter-spacing-large);
+  color: var(--color-base);
+  font-size: var(--font-size-small);
+}
+
 .standalone-link {
   font-family: var(--font-family-base);
   font-weight: normal;
