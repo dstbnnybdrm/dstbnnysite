@@ -293,7 +293,6 @@ audio {
 figure {
   display: block;
   margin: 1rem 0;
-  border: 1px dotted var(--color-base);
   padding: 1rem;
 }
 
