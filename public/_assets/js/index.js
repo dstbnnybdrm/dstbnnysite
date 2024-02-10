@@ -101,11 +101,11 @@ function randomiseTagline() {
 }
 
 function toggleNaviMenu() {
-    naviMenu[0].classList.toggle("navi__menu_toggle_open");
+    naviMenu[0].classList.toggle("is-visible");
 }
 
 function isNaviMenuOpen() {
-    return naviMenu[0].classList.contains("navi__menu_toggle_open")
+    return naviMenu[0].classList.contains("is-visible")
         ? true //
         : false; //
 }

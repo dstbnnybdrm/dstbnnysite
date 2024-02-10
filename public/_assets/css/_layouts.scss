@@ -248,20 +248,20 @@
 
         &__menu {
             display: none;
-            &_toggle_open {
-                display: flex;
+            flex-direction: column;
+            gap: 1rem;
 
-                flex-direction: column;
-                gap: 1rem;
+            border: 1px dotted var(--color-base);
+            border-top: none;
+            padding: 0 1rem 1rem 1rem;
 
-                border: 1px dotted var(--color-base);
-                border-top: none;
-                padding: 0 1rem 1rem 1rem;
-
-                &:not(:last-child) {
-                    border-bottom: none;
-                }
+            &:not(:last-child) {
+                border-bottom: none;
             }
+        }
+
+        .is-visible {
+            display: flex;
         }
 
         &__subheading {

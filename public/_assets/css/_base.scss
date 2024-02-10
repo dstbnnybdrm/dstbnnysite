@@ -1,4 +1,4 @@
-@mixin theme-light-colours() {
+@mixin theme-light() {
     color-scheme: light;
 
     --color-primary: #c43162;
@@ -8,7 +8,7 @@
     --color-background: #fffafa;
 }
 
-@mixin theme-dark-colours() {
+@mixin theme-dark() {
     color-scheme: dark;
 
     --color-primary: #cf4f79;
@@ -17,6 +17,14 @@
     --color-base: #d6ccce;
     --color-background: #1d0612;
 }
+
+// @mixin theme-high-contrast() {
+//     --color-primary: #cf4f79;
+//     --color-primary-alt: var(--color-primary);
+//     --color-secondary: #54b096;
+//     --color-base: #d6ccce;
+//     --color-background: black;
+// }
 
 :root {
     --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
@@ -37,29 +45,35 @@
 // ---- THEME OVERRIDES ---- //
 
 // from: https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/
-html,
-html[data-theme="light"] {
-    @include theme-light-colours();
+:root,
+:root[data-theme="light"] {
+    @include theme-light();
 }
 
-html[data-theme="dark"] {
-    @include theme-dark-colours();
+:root[data-theme="dark"] {
+    @include theme-dark();
 }
 
 @media (prefers-color-scheme: dark) {
-    html:not([data-theme]) {
-        @include theme-dark-colours();
+    :root:not([data-theme]) {
+        @include theme-dark();
     }
 }
 
-// todo:
-html[data-theme="high-contrast"] {
-    --color-primary: #cf4f79;
-    --color-primary-alt: var(--color-primary);
-    --color-secondary: #54b096;
-    --color-base: black;
-    --color-background: white;
-}
+// TODO
+// :root[data-theme="high-contrast"] {
+//     --color-primary: #cf4f79;
+//     --color-primary-alt: var(--color-primary);
+//     --color-secondary: #54b096;
+//     --color-base: black;
+//     --color-background: white;
+// }
+
+// @media (prefers-contrast: more) {
+//     :root:not([data-theme]) {
+//         @include theme-high-contrast();
+//     }
+// }
 
 /*:._.:*~  GLOBAL RESETS  ~*:._.:*
  *
