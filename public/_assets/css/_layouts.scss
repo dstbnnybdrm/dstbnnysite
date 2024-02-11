@@ -153,10 +153,6 @@
     @include base.italic-text();
     text-align: center;
 
-    @include base.for-phone() {
-        display: none;
-    }
-
     @include base.for-desktop() {
         &::before,
         &::after {
