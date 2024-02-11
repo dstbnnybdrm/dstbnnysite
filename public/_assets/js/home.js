@@ -6,7 +6,7 @@ async function loadHome() {
         let element_url = "_assets/template/" + id + ".html";
         element.innerHTML = await parent.fetchHtmlAsText(element_url);
     }
-    parent.updateContentHeight();
+    parent.updateFrameSize();
 }
 
 window.onload = () => {

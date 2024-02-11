@@ -36,6 +36,8 @@ const tagline = document.getElementById("tagline");
 const naviButton = document.getElementById("navi-button");
 const naviMenu = document.getElementById("navi-menu");
 
+let viewportWidth = document.documentElement.clientWidth;
+
 let isFirstLoad = true;
 
 /*
@@ -64,7 +66,7 @@ async function loadLayout() {
 }
 
 // dynamically updates the height of main iframe
-function updateContentHeight() {
+function updateFrameSize() {
     if (mainframe == null) {
         // console.error("couldn't find frame");
         return;
@@ -150,7 +152,7 @@ window.onload = () => {
 
     if (mainframe != null) {
         mainframe.addEventListener("load", updateHistory);
-        mainframe.addEventListener("load", updateContentHeight);
+        mainframe.addEventListener("load", updateFrameSize);
 
         // auto-close mobile navigation menu after switching pages
         mainframe.addEventListener("load", function () {
@@ -161,8 +163,13 @@ window.onload = () => {
     loadLayout();
 };
 
-// dynamically resize frame height
-window.addEventListener("resize", updateContentHeight);
+// dynamically resize frame size on viewport width changes
+window.addEventListener("resize", function () {
+    if (viewportWidth != document.documentElement.clientWidth) {
+        updateFrameSize();
+    }
+    viewportWidth = document.documentElement.clientWidth;
+});
 
 // set frame on back button presses too
 window.addEventListener("popstate", function (e) {
