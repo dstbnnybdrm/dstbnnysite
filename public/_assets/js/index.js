@@ -7,7 +7,25 @@
  */
 
 const LAYOUT_IDS = ["collection", "footer"];
-const TAGLINES = ["enjoy yr stay", "<3 <3 <3", "proof of my existence"];
+const TAGLINES = [
+    "enjoy yr stay",
+    "<3 <3 <3",
+    "proof of my existence",
+    "take care of yourself!",
+    "a butterfly perches itself atop your fingertip",
+    "home to Lorna, i.e miss Hole Head",
+    "picture that. in your dreams.",
+    ":3c",
+    "be yourself, violently, and unabashedly",
+    "the internet is dead!",
+    "St. Jack forever and ever",
+    "hikkikimori hours",
+    "<3 <3 <3 <3 <3 <3",
+    "as long the Earth, Sun, and Moon exist",
+    "when i come back you'll still be here",
+    "see you at home!",
+    ">:3c",
+];
 const URL_PARAMETER = "p";
 const TEMPLATE_URL = "/_assets/template/";
 const HOME_URL = "/home.html";
