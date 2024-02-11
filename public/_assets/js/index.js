@@ -68,7 +68,6 @@ async function loadLayout() {
 // dynamically updates the height of main iframe
 function updateFrameSize() {
     if (mainframe == null) {
-        // console.error("couldn't find frame");
         return;
     }
 
