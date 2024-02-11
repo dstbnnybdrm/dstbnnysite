@@ -1,10 +1,10 @@
-<!-- 
-  /)/) 
- (˶•༝•)
-c(  づ✿
--->
+<!-- () ___                        .    _______ -->
+<!-- ||(___)_______________()     /_\   |__*__| -->
+<!-- ||----|#| |#|_|#|_|#|_||    __|__  |__*__| -->
+<!-- ||____|_|#|_|#|_|#|_|#||    |_*_|  |__*__| -->
+<!-- ||    |#|_|#|_|#|_|#|_||    |   |  |/   \| -->
 
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
@@ -62,14 +62,6 @@ c(  づ✿
     <div class="page">
       <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
       <header class="header page__header">
-        <!-- <pre class="ascii-art header_art" aria-hidden="true"> -->
-        <!-- () ___                        .    _______ -->
-        <!-- ||(___)_______________()     /_\   |__*__| -->
-        <!-- ||----|#| |#|_|#|_|#|_||    __|__  |__*__| -->
-        <!-- ||____|_|#|_|#|_|#|_|#||    |_*_|  |__*__| -->
-        <!-- ||    |#|_|#|_|#|_|#|_||    |   |  |/   \|</pre -->
-        <!-- > -->
-
         <p class="tagline" id="tagline">...</p>
       </header>
 
@@ -85,13 +77,15 @@ c(  づ✿
 
           <button
             class="button navi__button"
+            id="navi-button"
             type="button"
             onclick="toggleNaviMenu();"
+            aria-expanded="false"
           >
             navigation
           </button>
 
-          <div class="navi__menu">
+          <div class="navi__menu" id="navi-menu">
             <nav class="navi navi__navi">
               <h2 class="navi__subheading">from me</h2>
               <ul class="navi__list">
@@ -167,8 +161,8 @@ c(  づ✿
         <iframe
           class="main__frame"
           name="mainframe"
-          src="/home.html"
           title="main content"
+          src="/home.html"
         ></iframe>
       </main>
 

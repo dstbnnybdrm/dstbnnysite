@@ -1,7 +1,8 @@
 /*
- * portions of this code have been taken and modified from:
+ * portions of this code regarding iframes and history have been taken and
+ * modified from:
  *
- * https://forum.melonland.net/index.php?topic=115
+ *      https://forum.melonland.net/index.php?topic=115
  *
  * thank you very much!
  */
@@ -22,7 +23,7 @@ const TAGLINES = [
     "hikkikimori hours",
     "<3 <3 <3 <3 <3 <3",
     "as long the Earth, Sun, and Moon exist",
-    "when i come back you'll still be here",
+    "when you come back i'll still be here",
     "see you at home!",
     ">:3c",
 ];
@@ -31,16 +32,16 @@ const TEMPLATE_URL = "/_assets/template/";
 const HOME_URL = "/home.html";
 
 const mainframe = document.getElementsByName("mainframe")[0];
-
 const tagline = document.getElementById("tagline");
-const naviMenu = document.querySelectorAll(".navi__menu");
+const naviButton = document.getElementById("navi-button");
+const naviMenu = document.getElementById("navi-menu");
 
 let isFirstLoad = true;
 
 /*
  * basically taken directly from this stackoverflow answer:
  *
- * https://stackoverflow.com/a/52349344
+ *      https://stackoverflow.com/a/52349344
  *
  * thank you very much! if only i had learned this sooner i would have saved
  * hours of banging my head against the wall :')
@@ -100,8 +101,6 @@ function setMainframe(defaultPage) {
     let parameters = new URLSearchParams(window.location.search);
     let page = parameters.get(URL_PARAMETER);
 
-    // sets frame source to page if url parameter is present,
-    // otherwise default to specified page
     mainframe.src =
         page == null //
             ? defaultPage //
@@ -110,7 +109,7 @@ function setMainframe(defaultPage) {
     updateHistory();
 }
 
-// chooses random string to display on main layout
+// chooses random string to display on page header
 function randomiseTagline() {
     let index = Math.floor(Math.random() * TAGLINES.length);
     let random_tagline = TAGLINES[index];
@@ -119,11 +118,16 @@ function randomiseTagline() {
 }
 
 function toggleNaviMenu() {
-    naviMenu[0].classList.toggle("is-visible");
+    naviMenu.classList.toggle("is-visible");
+    if (naviButton.ariaExpanded == "false") {
+        naviButton.ariaExpanded = "true";
+        return;
+    }
+    naviButton.ariaExpanded = "false";
 }
 
 function isNaviMenuOpen() {
-    return naviMenu[0].classList.contains("is-visible")
+    return naviMenu.classList.contains("is-visible")
         ? true //
         : false; //
 }
