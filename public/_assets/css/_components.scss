@@ -177,8 +177,12 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 
+    &_no-wrap {
+        flex-wrap: nowrap;
+    }
+
     &__button {
-        display: inline;
+        display: inline-block;
 
         width: 88px;
         height: 31px;

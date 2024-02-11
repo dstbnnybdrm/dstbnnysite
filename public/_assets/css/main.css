@@ -805,8 +805,11 @@ abbr {
     flex-wrap: wrap;
     gap: 0.5rem;
 }
+.buttons-88x31_no-wrap {
+    flex-wrap: nowrap;
+}
 .buttons-88x31__button {
-    display: inline;
+    display: inline-block;
     width: 88px;
     height: 31px;
 }
