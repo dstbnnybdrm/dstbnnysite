@@ -13,7 +13,7 @@ const TAGLINES = [
     "<3 <3 <3",
     "proof of my existence",
     "take care of yourself!",
-    "a butterfly perches itself atop your fingertip",
+    'a <a href=""">butterfly</a> perches itself atop your fingertip',
     "home to Lorna, i.e miss Hole Head",
     "picture that. in your dreams.",
     ":3c",
@@ -115,7 +115,7 @@ function randomiseTagline() {
     let index = Math.floor(Math.random() * TAGLINES.length);
     let random_tagline = TAGLINES[index];
 
-    tagline.textContent = random_tagline;
+    tagline.innerHTML = random_tagline;
 }
 
 function toggleNaviMenu() {
