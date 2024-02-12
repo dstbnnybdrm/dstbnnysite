@@ -776,6 +776,7 @@ abbr {
 }
 .buttons-88x31__button {
   display: inline-block;
+  flex-shrink: 0;
   width: 88px;
   height: 31px;
 }
