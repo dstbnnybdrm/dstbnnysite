@@ -829,7 +829,6 @@ abbr {
 div #HCB_comment_box {
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   /* comments heading */
   /* HCB's messages to user */
   /* "not using html comment box yet?" */
@@ -882,7 +881,6 @@ div #HCB_comment_box #HCB_comment_form_box .btn:hover, div #HCB_comment_box #HCB
     column-gap: 1rem;
     grid-template-areas: "comment-message    ." "comment-form       comments-list";
     grid-template-columns: repeat(2, minmax(0rem, 1fr));
-    grid-template-rows: min-content minmax(0rem, 1fr);
   }
   div #HCB_comment_box #HCB_comment_form_box {
     border: 1px solid var(--color-base);
@@ -977,6 +975,7 @@ textarea#hcb_form_content {
     overflow-x: hidden !important;
     border: 1px solid var(--color-base);
     padding: 1rem;
+    aspect-ratio: 1/1.41;
   }
 }
 

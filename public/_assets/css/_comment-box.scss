@@ -10,8 +10,6 @@ div #HCB_comment_box {
 
     flex-direction: column;
 
-    overflow-y: auto;
-
     /* comments heading */
     h3 {
         display: none;
@@ -80,7 +78,7 @@ div #HCB_comment_box {
             "comment-form       comments-list";
 
         grid-template-columns: repeat(2, minmax(0rem, 1fr));
-        grid-template-rows: min-content minmax(0rem, 1fr);
+        // grid-template-rows: min-content 1rem;
 
         #HCB_comment_form_box {
             border: 1px solid var(--color-base);
@@ -193,5 +191,7 @@ textarea#hcb_form_content {
 
         border: 1px solid var(--color-base);
         padding: 1rem;
+
+        aspect-ratio: 1 / 1.41;
     }
 }
