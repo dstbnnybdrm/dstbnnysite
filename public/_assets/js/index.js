@@ -13,8 +13,9 @@ const TAGLINES = [
     "<3 <3 <3",
     "proof of my existence",
     "take care of yourself!",
-    'a <a href=""">butterfly</a> perches itself atop your fingertip',
-    "home to Lorna, i.e miss Hole Head",
+    'a <a href="/closet/butterfly.html">butterfly</a> \
+        perches itself atop your fingertip',
+    "home to <a>Lorna</a>",
     "picture that. in your dreams.",
     ":3c",
     "be yourself, violently, and unabashedly",
