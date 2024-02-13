@@ -138,6 +138,10 @@
     }
 }
 
+.poem {
+    @include base.italic-text();
+}
+
 .quote {
     @include base.italic-text();
     margin-left: 1rem;
@@ -155,12 +159,6 @@
 
 .standalone-link {
     @include base.base-text();
-}
-
-.breadcrumb {
-    &__list {
-        display: flex;
-    }
 }
 
 .image {
