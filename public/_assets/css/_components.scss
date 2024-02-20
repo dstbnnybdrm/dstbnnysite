@@ -139,7 +139,8 @@
 }
 
 .poem {
-    @include base.italic-text();
+    @include base.alt-text();
+    font-size: 1.1rem;
 }
 
 .quote {
@@ -183,8 +184,13 @@
         display: inline-block;
 
         flex-shrink: 0;
+        align-self: center;
 
         width: 88px;
         height: 31px;
+    }
+
+    &__decorative {
+        display: inline-block;
     }
 }

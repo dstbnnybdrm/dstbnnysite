@@ -470,6 +470,10 @@ abbr {
   }
 }
 
+.breadcrumb__list {
+  display: flex;
+}
+
 .sitemap {
   font-family: var(--font-family-base);
   font-weight: normal;
@@ -761,6 +765,14 @@ abbr {
   color: var(--color-base);
 }
 
+.poem {
+  font-family: var(--font-family-alt);
+  font-weight: normal;
+  font-style: normal;
+  color: var(--color-base);
+  font-size: 1.1rem;
+}
+
 .quote {
   font-family: var(--font-family-alt);
   font-weight: normal;
@@ -789,10 +801,6 @@ abbr {
   color: var(--color-base);
 }
 
-.breadcrumb__list {
-  display: flex;
-}
-
 .image_inline {
   display: inline-block;
   height: 1rem;
@@ -810,8 +818,12 @@ abbr {
 .buttons-88x31__button {
   display: inline-block;
   flex-shrink: 0;
+  align-self: center;
   width: 88px;
   height: 31px;
+}
+.buttons-88x31__decorative {
+  display: inline-block;
 }
 
 /*:._.:*~ COMMENT BOX   ~*:._.:*/

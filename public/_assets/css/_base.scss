@@ -203,6 +203,13 @@ abbr {
     color: var(--color-base);
 }
 
+@mixin alt-text {
+    font-family: var(--font-family-alt);
+    font-weight: normal;
+    font-style: normal;
+    color: var(--color-base);
+}
+
 @mixin italic-text {
     font-family: var(--font-family-alt);
     font-weight: normal;
