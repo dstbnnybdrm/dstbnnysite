@@ -40,17 +40,9 @@
     }
 }
 
-.commission-status {
-    // display: inline-block;
-
-    // border: 1px dashed var(--color-base);
-
-    // text-align: center;
-    // letter-spacing: var(--letter-spacing-wide);
-}
-
 .ascii-art {
     font-family: var(--font-family-mono);
+
     line-height: 1rem;
 
     user-select: none;
@@ -59,13 +51,36 @@
 }
 
 .section {
-    &__navi {
-        margin-top: 1rem;
+    &__heading {
+        margin-top: 1.2em;
     }
 
-    &__section {
-        // border-top: 1px dotted var(--color-base);
-        margin-top: 1rem;
+    &__subheading {
+        margin-top: 1.2em;
+    }
+
+    &__body-copy {
+        margin-top: 1em;
+    }
+
+    &__quote {
+        margin-top: 1em;
+    }
+
+    &__list {
+        margin-top: 1em;
+    }
+
+    &__ascii-art {
+        margin-top: 1em;
+    }
+
+    &__navi {
+        margin-top: 1em;
+    }
+
+    &__subsection {
+        margin-left: 0.5rem;
     }
 }
 
@@ -75,32 +90,60 @@
     min-height: 0;
 }
 
+/* for screen readers */
+.hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 .title {
-    @include base.base-text();
-
-    font-size: var(--font-size-large);
-    font-style: normal;
+    color: var(--color-base);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-largest);
     font-weight: bold;
+    font-style: normal;
+    line-height: var(--line-height-largest);
+    letter-spacing: 0.05em;
+}
 
-    &_subtitle {
-        font-size: var(--font-size-large);
-        font-family: var(--font-family-alt);
-        font-style: italic;
-        font-weight: normal;
-        letter-spacing: 0.07rem;
-    }
+.heading {
+    color: var(--color-base);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-larger);
+    font-weight: normal;
+    font-style: normal;
+    line-height: var(--line-height-larger);
+    letter-spacing: 0.07em;
+}
 
-    /* for screen readers */
-    &_hidden {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
+.subheading {
+    color: var(--color-base);
+    font-family: var(--font-family-alt);
+    font-size: var(--font-size-large);
+    font-weight: normal;
+    font-style: italic;
+    line-height: var(--line-height-large);
+    letter-spacing: 0.09em;
+}
+
+.body-copy {
+    color: var(--color-base);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-weight: normal;
+    font-style: normal;
+    line-height: var(--line-height-base);
+}
+
+.quote {
+    @include base.italic-text();
+    margin-left: 1rem;
 }
 
 .list {
@@ -129,23 +172,9 @@
     }
 }
 
-.body-text {
-    @include base.base-text();
-
-    i,
-    em {
-        @include base.italic-text();
-    }
-}
-
 .poem {
     @include base.alt-text();
     font-size: 1.1rem;
-}
-
-.quote {
-    @include base.italic-text();
-    margin-left: 1rem;
 }
 
 .figure {

@@ -31,12 +31,22 @@
     --font-family-alt: Georgia, "Times New Roman", Times, serif;
     --font-family-mono: "Courier New", Courier, monospace;
 
-    --font-size-small: 0.9rem;
+    --font-size-small: 0.83rem;
     --font-size-base: 1rem;
-    --font-size-large: 1.1rem;
+    --font-size-large: 1.2rem;
+    --font-size-larger: 1.32rem;
+    --font-size-largest: 1.44rem;
+
+    --line-height-small: 1.25rem;
+    --line-height-base: 1.5rem;
+    --line-height-large: 1.8rem;
+    --line-height-larger: 1.98rem;
+    --line-height-largest: 2.16rem;
 
     --letter-spacing-base: initial;
     --letter-spacing-large: 0.07rem;
+
+    --measure-maximum: 85ch;
 
     --page-wrapper-width: 67rem;
     --page-wrapper-height: 50rem;
@@ -94,6 +104,7 @@
     margin: 0;
     padding: 0;
 
+    // set root font size; all rem relative to this
     font-size: 14px;
 }
 
@@ -197,10 +208,11 @@ abbr {
 }
 
 @mixin base-text {
-    font-family: var(--font-family-base);
+    color: var(--color-base);
+    font-size: var(--font-size-base);
     font-weight: normal;
     font-style: normal;
-    color: var(--color-base);
+    line-height: var(--line-height-base);
 }
 
 @mixin alt-text {
@@ -283,12 +295,10 @@ abbr {
     display: flex;
 
     flex-direction: column;
-    row-gap: 1rem;
 
     &_horizontal {
         @include large-frame() {
             flex-direction: row;
-            column-gap: 1rem;
         }
     }
 }

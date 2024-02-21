@@ -42,6 +42,8 @@
             "footer";
         grid-template-rows: repeat(5, auto);
 
+        max-width: var(--measure-maximum);
+
         &__navi {
             border-top: 1px solid var(--color-base);
 
@@ -337,8 +339,20 @@
 }
 
 .breadcrumb {
+    @include base.base-text();
+    font-family: var(--font-family-base);
+
     &__list {
         display: flex;
+    }
+
+    &__crumb {
+        display: inline-block;
+
+        &:not(:last-child)::after {
+            content: ">";
+            margin: 0 0.5rem;
+        }
     }
 }
 
