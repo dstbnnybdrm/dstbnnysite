@@ -46,10 +46,15 @@
     --letter-spacing-base: initial;
     --letter-spacing-large: 0.07rem;
 
-    --measure-maximum: 85ch;
+    --spacing-050: 0.69rem;
+    --spacing-075: 0.83rem;
+    --spacing-100: 1rem;
+    --spacing-125: 1.2rem;
+    --spacing-150: 1.44rem;
+    --spacing-175: 1.73rem;
+    --spacing-200: 2rem;
 
-    --page-wrapper-width: 67rem;
-    --page-wrapper-height: 50rem;
+    --measure-max: 67rem;
 }
 
 // ---- THEME OVERRIDES ---- //
@@ -191,11 +196,7 @@ abbr {
 }
 
 @mixin layout-padding {
-    padding: 1rem;
-}
-
-@mixin navi-list-style {
-    list-style: "∟ ";
+    padding: var(--spacing-100);
 }
 
 @mixin button-on-hover {
@@ -207,35 +208,49 @@ abbr {
     }
 }
 
-@mixin base-text {
+@mixin text-style($family, $style: normal, $weight: normal) {
     color: var(--color-base);
-    font-size: var(--font-size-base);
-    font-weight: normal;
-    font-style: normal;
-    line-height: var(--line-height-base);
+    font-style: $style;
+    font-weight: $weight;
+
+    @if $family == sans {
+        font-family: var(--font-family-base);
+    } @else if $family == serif {
+        font-family: var(--font-family-alt);
+    } @else if $family == mono {
+        font-family: var(--font-family-mono);
+    }
 }
 
-@mixin alt-text {
-    font-family: var(--font-family-alt);
-    font-weight: normal;
-    font-style: normal;
-    color: var(--color-base);
-}
-
-@mixin italic-text {
-    font-family: var(--font-family-alt);
-    font-weight: normal;
-    font-style: italic;
-    letter-spacing: var(--letter-spacing-large);
-    color: var(--color-base);
+@mixin text-size($size) {
+    @if $size == small {
+        font-size: var(--font-size-small);
+        line-height: var(--line-height-small);
+    } @else if $size == base {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+    } @else if $size == large {
+        font-size: var(--font-size-large);
+        line-height: var(--line-height-large);
+    } @else if $size == larger {
+        font-size: var(--font-size-larger);
+        line-height: var(--line-height-larger);
+    } @else if $size == largest {
+        font-size: var(--font-size-largest);
+        line-height: var(--line-height-largest);
+    }
 }
 
 @mixin list-margin {
     margin-left: 1.25rem;
 }
 
-@mixin default-list-style {
-    list-style: "❀ ";
+@mixin list-style($style) {
+    @if $style == base {
+        list-style: "❀ ";
+    } @else if $style == navi {
+        list-style: "∟ ";
+    }
 }
 
 //:._.:*~  BREAKPOINTS ~*:._.://
@@ -270,7 +285,8 @@ abbr {
 
 .l-imposter {
     @include for-phone() {
-        display: contents;
+        display: flex;
+        justify-content: center;
     }
 
     @include for-desktop() {
@@ -295,10 +311,12 @@ abbr {
     display: flex;
 
     flex-direction: column;
+    row-gap: var(--spacing-100);
 
     &_horizontal {
         @include large-frame() {
             flex-direction: row;
+            column-gap: var(--spacing-100);
         }
     }
 }

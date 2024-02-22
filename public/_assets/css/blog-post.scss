@@ -31,7 +31,7 @@ h6 {
     font-size: var(--font-size-base);
     font-weight: bold;
 
-    letter-spacing: var(--letter-spacing-large);
+    letter-spacing: var(--letter-spacing-deca);
 }
 
 header > p {
@@ -47,11 +47,11 @@ time {
 
 nav {
     border-bottom: 1px dotted var(--color-base);
-    padding-bottom: 1rem;
+    padding-bottom: var(--spacing-100);
 }
 
 p {
-    margin: 1rem 0;
+    margin: var(--spacing-100) 0;
 }
 
 ul,
@@ -66,7 +66,7 @@ ul > li {
 }
 
 ol > li {
-    margin: 0 0 0 2rem;
+    margin: 0 0 0 var(--spacing-200);
 
     list-style-type: decimal;
 }
@@ -76,23 +76,23 @@ li > p {
 
 th,
 td {
-    padding: 1rem;
+    padding: var(--spacing-100);
 }
 
 hr {
-    margin: 1rem 0 1rem 0;
+    margin: var(--spacing-100) 0 var(--spacing-100) 0;
 }
 
 blockquote {
-    margin: 1rem 0 1rem 0;
+    margin: var(--spacing-100) 0 var(--spacing-100) 0;
     border-left: 1px dotted var(--color-base);
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 var(--spacing-100);
 }
 
 pre {
-    margin: 1rem 0 1rem 0;
+    margin: var(--spacing-100) 0 var(--spacing-100) 0;
     border: 1px dotted var(--color-base);
-    padding: 1rem;
+    padding: var(--spacing-100);
 }
 pre > code {
     margin: 0;
@@ -116,8 +116,8 @@ audio {
 figure {
     display: block;
 
-    margin: 1rem 0;
-    padding: 1rem;
+    margin: var(--spacing-100) 0;
+    padding: var(--spacing-100);
 }
 
 figcaption {
