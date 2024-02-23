@@ -24,6 +24,7 @@
 
     &__header {
         align-items: center;
+
         &_blog {
             // to counteract grid gap in layout
             margin-bottom: calc(var(--spacing-100) * -1);
@@ -217,6 +218,21 @@
         margin: 0;
     }
 
+    &_blog {
+        display: flex;
+
+        flex-direction: column;
+        row-gap: var(--spacing-100);
+    }
+
+    &__title {
+        &_blog {
+            @include base.text-style(sans, normal, bold);
+            @include base.text-size(large);
+            letter-spacing: 0.07rem;
+        }
+    }
+
     &__button {
         display: none;
     }
@@ -271,7 +287,8 @@
         &__subheading {
             display: block;
 
-            @include base.text-style(italic);
+            @include base.text-style(serif, italic);
+            @include base.text-size(large);
 
             &_blog {
                 display: none;
@@ -312,8 +329,9 @@
             &_blog {
                 display: inline;
 
-                @include base.text-style(italic);
-                font-size: var(--font-size-large);
+                @include base.text-style(serif, italic);
+                @include base.text-size(large);
+                letter-spacing: 0.07rem;
             }
         }
 
@@ -322,7 +340,6 @@
 
             @include base.text-style(sans);
             @include base.list-style(navi);
-            // line-height: var(--spacing-150);
 
             &_blog {
                 @include base.list-style(base);

@@ -369,6 +369,20 @@ abbr {
   border: none;
   margin: 0;
 }
+.navi_blog {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-100);
+}
+.navi__title_blog {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: bold;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-large);
+  letter-spacing: 0.07rem;
+}
 .navi__button {
   display: none;
 }
@@ -414,8 +428,11 @@ abbr {
   .navi__subheading {
     display: block;
     color: var(--color-base);
-    font-style: normal;
+    font-style: italic;
     font-weight: normal;
+    font-family: var(--font-family-alt);
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
   }
   .navi__subheading_blog {
     display: none;
@@ -454,9 +471,12 @@ abbr {
   .navi__subheading_blog {
     display: inline;
     color: var(--color-base);
-    font-style: normal;
+    font-style: italic;
     font-weight: normal;
+    font-family: var(--font-family-alt);
     font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
+    letter-spacing: 0.07rem;
   }
   .navi__list {
     margin-left: 1.25rem;
@@ -800,15 +820,6 @@ abbr {
   line-height: var(--line-height-largest);
   letter-spacing: 0.05em;
 }
-.title_blog {
-  color: var(--color-base);
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-large);
-  line-height: var(--line-height-large);
-  letter-spacing: 0.09em;
-}
 
 .heading {
   color: var(--color-base);
@@ -896,7 +907,12 @@ abbr {
 }
 
 .figure {
-  margin: var(--spacing-100) var(--spacing-100) var(--spacing-100) var(--spacing-150);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-075);
+  margin-top: var(--spacing-100);
+  margin-bottom: var(--spacing-100);
+  margin-left: var(--spacing-150);
 }
 .figure__caption {
   color: var(--color-base);
@@ -905,6 +921,7 @@ abbr {
   font-family: var(--font-family-alt);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
+  letter-spacing: 0.09rem;
 }
 
 .image_inline {
