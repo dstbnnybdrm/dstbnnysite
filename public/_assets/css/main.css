@@ -1,10 +1,10 @@
-/* Error: unmatched "}".
+/* Error: Undefined mixin.
  *     ,
- * 197 | }
- *     | ^
+ * 171 |         @include base.font-size(small);
+ *     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *     '
- *   _components.scss 197:1  @use
- *   main.scss 16:1          root stylesheet */
+ *   _comment-box.scss 171:9  @use
+ *   main.scss 18:1           root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: unmatched "}".\a     \2577 \a 197 \2502  }\a     \2502  ^\a     \2575 \a   _components.scss 197:1  @use\a   main.scss 16:1          root stylesheet';
+  content: "Error: Undefined mixin.\a     \2577 \a 171 \2502          @include base.font-size(small);\a     \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   _comment-box.scss 171:9  @use\a   main.scss 18:1           root stylesheet";
 }

@@ -158,7 +158,7 @@
     display: block;
 
     @include base.text-style(serif, italic);
-    letter-spacing: 0.07rem;
+    letter-spacing: var(letter-spacing-120);
     text-align: center;
 
     @include base.for-desktop() {
@@ -229,7 +229,7 @@
         &_blog {
             @include base.text-style(sans, normal, bold);
             @include base.text-size(large);
-            letter-spacing: 0.07rem;
+            letter-spacing: var(letter-spacing-120);
         }
     }
 
@@ -331,7 +331,7 @@
 
                 @include base.text-style(serif, italic);
                 @include base.text-size(large);
-                letter-spacing: 0.07rem;
+                letter-spacing: var(letter-spacing-120);
             }
         }
 
@@ -447,7 +447,7 @@
     &__title {
         @include base.text-style(sans, normal, bold);
         @include base.text-size(base);
-        letter-spacing: 0.07rem;
+        letter-spacing: var(letter-spacing-120);
     }
 
     &__body {
@@ -470,7 +470,7 @@
 
         @include base.text-style(serif, italic);
         @include base.text-size(small);
-        letter-spacing: 0.07rem;
+        letter-spacing: var(letter-spacing-120);
 
         &:before {
             content: "— ";

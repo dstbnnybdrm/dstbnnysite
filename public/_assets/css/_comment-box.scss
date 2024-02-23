@@ -168,8 +168,8 @@ textarea#hcb_form_content {
 
         color: var(--color-base);
 
-        font-size: 0.825rem;
-        letter-spacing: 0.125rem;
+        @include base.font-size(small);
+        letter-spacing: var(--letter-spacing-140);
         text-transform: lowercase;
     }
 

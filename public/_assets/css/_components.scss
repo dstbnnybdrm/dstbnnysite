@@ -11,7 +11,7 @@
     &__title {
         @include base.text-style(serif, italic);
         @include base.text-size(large);
-        letter-spacing: 0.07rem;
+        letter-spacing: var(--letter-spacing-120);
     }
 
     &__entry {
@@ -132,25 +132,19 @@
 .title {
     @include base.text-style($family: sans, $weight: bold);
     @include base.text-size(largest);
-    letter-spacing: 0.05em;
-
-    // &_blog {
-    //     @include base.text-style(sans, normal, bold);
-    //     @include base.text-size(base);
-    //     letter-spacing: 0.07rem;
-    // }
+    letter-spacing: var(--letter-spacing-110);
 }
 
 .heading {
     @include base.text-style(sans);
     @include base.text-size(larger);
-    letter-spacing: 0.07em;
+    letter-spacing: var(--letter-spacing-120);
 }
 
 .subheading {
     @include base.text-style(serif, italic);
     @include base.text-size(large);
-    letter-spacing: 0.09em;
+    letter-spacing: var(--letter-spacing-130);
 }
 
 .body-copy {
@@ -170,9 +164,8 @@
     @include base.text-style(sans);
     @include base.text-size(base);
     @include base.list-style(base);
-    @include base.emphasis-serif();
 
-    }
+    @include base.emphasis-serif();
 
     &_row {
         display: flex;
@@ -200,7 +193,7 @@
     display: flex;
     flex-direction: column;
     row-gap: var(--spacing-100);
-    letter-spacing: 0.05rem;
+    letter-spacing: var(letter-spacing-110);
 
     @include base.text-size(base);
 
@@ -224,7 +217,7 @@
     &__caption {
         @include base.text-style(serif, italic);
         @include base.text-size(small);
-        letter-spacing: 0.09rem;
+        letter-spacing: var(letter-spacing-130);
     }
 }
 

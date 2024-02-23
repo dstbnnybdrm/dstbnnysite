@@ -43,9 +43,13 @@
     --line-height-larger: 1.98rem;
     --line-height-largest: 2.16rem;
 
-    --letter-spacing-base: initial;
-    --letter-spacing-large: 0.07rem;
+    --letter-spacing-100: initial;
+    --letter-spacing-110: 0.05rem;
+    --letter-spacing-120: 0.07rem;
+    --letter-spacing-130: 0.09rem;
+    --letter-spacing-140: 0.12rem;
 
+    // for margin's, padding, gap, etc.
     --spacing-050: 0.69rem;
     --spacing-075: 0.83rem;
     --spacing-100: 1rem;
@@ -54,6 +58,7 @@
     --spacing-175: 1.73rem;
     --spacing-200: 2rem;
 
+    // maximum width that text should span
     --measure-max: 67rem;
 }
 
@@ -211,8 +216,8 @@ abbr {
 @mixin emphasis-serif {
     i,
     em {
-        @include base.text-style(serif, italic);
-        letter-spacing: 0.05rem;
+        @include text-style(serif, italic);
+        letter-spacing: var(--letter-spacing-110);
     }
 }
 
