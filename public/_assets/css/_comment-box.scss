@@ -21,16 +21,16 @@ div #HCB_comment_box {
 
         margin: var(--spacing-100) 0;
 
-        font-family: var(--font-family-base);
+        @include base.text-style(sans);
         text-transform: lowercase;
     }
 
     p.error {
         grid-area: comment-message;
 
-        border: 1px solid red;
+        border: 1px solid var(--color-primary);
 
-        font-family: var(--font-family-base);
+        @include base.text-style(sans);
         text-transform: lowercase;
     }
 
@@ -53,7 +53,7 @@ div #HCB_comment_box {
             border: none;
 
             text-transform: lowercase;
-            font-family: var(--font-family-base);
+            @include base.text-style(sans);
 
             color: var(--color-background);
             background: var(--color-primary);
@@ -96,9 +96,9 @@ input#hcb_form_name,
 textarea#hcb_form_content {
     border: 1px dotted var(--color-base);
 
-    font-family: var(--font-family-mono);
+    @include base.text-style(mono);
+
     font-size: 16px;
-    color: var(--color-base);
 
     background: none;
 }
@@ -106,25 +106,25 @@ textarea#hcb_form_content {
 /* placeholder text */
 ::-webkit-input-placeholder {
     font-size: 16px;
-    font-family: var(--font-family-mono);
+    @include base.text-style(mono);
     text-transform: lowercase;
 }
 
 :-moz-placeholder {
     font-size: 16px;
-    font-family: var(--font-family-mono);
+    @include base.text-style(mono);
     text-transform: lowercase;
 }
 
 ::-moz-placeholder {
     font-size: 16px;
-    font-family: var(--font-family-mono);
+    @include base.text-style(mono);
     text-transform: lowercase;
 }
 
 :-ms-input-placeholder {
     font-size: 16px;
-    font-family: var(--font-family-mono);
+    @include base.text-style(mono);
     text-transform: lowercase;
 }
 
@@ -134,10 +134,10 @@ textarea#hcb_form_content {
     grid-area: comments-list;
 
     border-top: 1px dotted var(--color-base);
-    padding: var(--spacing-100) 0 0 0;
+    padding-top: var(--spacing-100);
 
     #no_comments {
-        font-family: var(--font-family-base);
+        @include base.text-style(sans);
         text-transform: lowercase;
     }
 
@@ -156,33 +156,35 @@ textarea#hcb_form_content {
     }
 
     p.hcb-comment-body {
-        font-family: var(--font-family-base);
+        @include base.text-style(sans);
     }
 
     b.author-name {
-        font-family: var(--font-family-base);
+        @include base.text-style(sans);
     }
 
     span.date {
-        font-family: var(--font-family-base);
-
-        color: var(--color-base);
-
-        @include base.font-size(small);
+        @include base.text-style(serif, italic);
+        @include base.text-size(small);
         letter-spacing: var(--letter-spacing-140);
         text-transform: lowercase;
     }
 
     /* comment buttons */
     p.hcb-comment-tb button {
-        color: #f69;
-        font-family: var(--font-family-base);
-        font-size: var(--spacing-100);
+        color: var(--color-primary);
+
+        @include base.text-style(sans);
+        @include base.text-size(small);
         text-transform: lowercase;
     }
 
-    .likes img {
-        display: inline-block;
+    .likes {
+        @include base.text-style(sans);
+
+        img {
+            display: inline-block;
+        }
     }
 
     @include base.for-desktop() {
