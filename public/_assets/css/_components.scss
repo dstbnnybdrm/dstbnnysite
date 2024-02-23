@@ -156,6 +156,8 @@
 .body-copy {
     @include base.text-style(sans);
     @include base.text-size(base);
+
+    @include base.emphasis-serif();
 }
 
 .quote {
@@ -168,6 +170,9 @@
     @include base.text-style(sans);
     @include base.text-size(base);
     @include base.list-style(base);
+    @include base.emphasis-serif();
+
+    }
 
     &_row {
         display: flex;
@@ -214,8 +219,6 @@
     flex-direction: column;
     row-gap: var(--spacing-075);
 
-    margin-top: var(--spacing-100);
-    margin-bottom: var(--spacing-100);
     margin-left: var(--spacing-150);
 
     &__caption {

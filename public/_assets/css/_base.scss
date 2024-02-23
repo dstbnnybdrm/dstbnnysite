@@ -208,6 +208,14 @@ abbr {
     }
 }
 
+@mixin emphasis-serif {
+    i,
+    em {
+        @include base.text-style(serif, italic);
+        letter-spacing: 0.05rem;
+    }
+}
+
 @mixin text-style($family, $style: normal, $weight: normal) {
     color: var(--color-base);
     font-style: $style;
