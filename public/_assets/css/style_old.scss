@@ -9,7 +9,7 @@
     --font-family--mono: "Courier New", Courier, monospace;
 
     --font-size--small: 0.75rem;
-    --font-size--base: 1rem;
+    --font-size--base: var(--spacing-100);
     --font-size--large: 1.125rem;
 
     --letter-spacing-wide: 0.125rem;
@@ -166,7 +166,7 @@ abbr {
 
     grid-template-columns: auto;
 
-    margin: 1rem 0;
+    margin: var(--spacing-100) 0;
 }
 
 /* --- header --- */
@@ -179,7 +179,7 @@ abbr {
     flex-direction: column;
 
     &__tagline {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem var(--spacing-100);
 
         height: 100%;
         width: 100%;
@@ -214,7 +214,7 @@ abbr {
     grid-area: navi;
 
     border-top: 1px solid black;
-    padding: 1rem;
+    padding: var(--spacing-100);
 
     &__home {
         display: block;
@@ -275,14 +275,14 @@ abbr {
     grid-area: status;
 
     border: 1px solid black;
-    padding: 1rem;
+    padding: var(--spacing-100);
 
     #statuscafe {
         background: none;
     }
 
     #statuscafe-username {
-        margin-bottom: 1rem;
+        margin-bottom: var(--spacing-100);
 
         // a {
         //     display: block;
@@ -305,7 +305,7 @@ abbr {
     // }
 
     &__content {
-        margin: 1rem;
+        margin: var(--spacing-100);
 
         width: 100%;
         height: 100%;
@@ -362,11 +362,11 @@ abbr {
     }
 
     &__container {
-        padding: 0 1rem 0 0;
+        padding: 0 var(--spacing-100) 0 0;
     }
 
     &__content {
-        margin-bottom: 1rem;
+        margin-bottom: var(--spacing-100);
     }
 }
 
@@ -412,7 +412,7 @@ abbr {
 .footer {
     grid-area: footer;
 
-    padding: 1rem;
+    padding: var(--spacing-100);
 
     &__text {
         text-align: center;
@@ -451,13 +451,13 @@ abbr {
         // }
 
         &--tree {
-            margin: 0 0 0 1rem;
+            margin: 0 0 0 var(--spacing-100);
             list-style: "─ ";
         }
     }
 
     &--tree {
-        margin-left: 1rem;
+        margin-left: var(--spacing-100);
         border-left: 1px solid black;
 
         list-style: none;
@@ -502,7 +502,7 @@ abbr {
     overflow: hidden;
 
     user-select: none;
-    line-height: 1rem;
+    line-height: var(--spacing-100);
     font-family: var(--font-family--mono);
 }
 
@@ -529,15 +529,15 @@ abbr {
     /* --- page --- */
 
     .page {
-        padding: 0 2rem;
+        padding: 0 var(--spacing-200);
 
         // &__collection {
-        // margin: 0 0 1rem 0;
+        // margin: 0 0 var(--spacing-100) 0;
         // }
     }
 
     .page-wrapper {
-        margin: 1rem auto;
+        margin: var(--spacing-100) auto;
 
         max-width: calc(var(--main-width) / 1.25);
     }
@@ -548,7 +548,7 @@ abbr {
         border-right: 1px solid black;
         border-bottom: 1px dashed black;
         border-left: 1px solid black;
-        padding: 1rem;
+        padding: var(--spacing-100);
 
         &__home {
             line-height: 2rem;
@@ -573,7 +573,7 @@ abbr {
 
     .navi-list {
         justify-content: start;
-        gap: 1rem;
+        gap: var(--spacing-100);
 
         &__item {
             flex: 0;
@@ -581,7 +581,7 @@ abbr {
             line-height: 2rem;
             text-align: left;
             border-right: 1px dotted black;
-            padding: 0 1rem 0 0;
+            padding: 0 var(--spacing-100) 0 0;
         }
 
         &__item:last-child {
@@ -610,7 +610,7 @@ abbr {
                 "welcome    news-feed"
                 "update     update";
             grid-template-columns: auto;
-            gap: 2rem;
+            gap: var(--spacing-200);
         }
 
         &--sitemap {
@@ -625,7 +625,7 @@ abbr {
         border-left: 1px solid black;
 
         &__content {
-            margin: 0.5rem 1rem;
+            margin: 0.5rem var(--spacing-100);
         }
     }
 
@@ -663,7 +663,7 @@ abbr {
             position: static;
 
             margin: 0;
-            padding: 2rem;
+            padding: var(--spacing-200);
         }
 
         &__footer {
@@ -679,7 +679,7 @@ abbr {
             "sidebar main"
             "sidebar collection";
         grid-template-columns: min-content 1fr;
-        gap: 1rem;
+        gap: var(--spacing-100);
 
         max-width: var(--main-width);
 
@@ -721,7 +721,7 @@ abbr {
             "status"
             "aside";
         grid-template-rows: min-content min-content 1fr;
-        row-gap: 1rem;
+        row-gap: var(--spacing-100);
     }
 
     .aside {
@@ -775,7 +775,7 @@ abbr {
         }
 
         &__posts {
-            margin: 1rem 0 0 0;
+            margin: var(--spacing-100) 0 0 0;
         }
 
         &--blog {
@@ -911,7 +911,7 @@ abbr {
         padding: 0;
 
         right: 0;
-        bottom: 0.5rem;
+        bottom: var(--spacing-075);
         left: 0;
 
         &--blog {

@@ -31,15 +31,36 @@
     --font-family-alt: Georgia, "Times New Roman", Times, serif;
     --font-family-mono: "Courier New", Courier, monospace;
 
-    --font-size-small: 0.9rem;
+    --font-size-small: 0.83rem;
     --font-size-base: 1rem;
-    --font-size-large: 1.1rem;
+    --font-size-large: 1.2rem;
+    --font-size-larger: 1.32rem;
+    --font-size-largest: 1.44rem;
 
-    --letter-spacing-base: initial;
-    --letter-spacing-large: 0.07rem;
+    --line-height-small: 1.25rem;
+    --line-height-base: 1.5rem;
+    --line-height-large: 1.8rem;
+    --line-height-larger: 1.98rem;
+    --line-height-largest: 2.16rem;
 
-    --page-wrapper-width: 67rem;
-    --page-wrapper-height: 50rem;
+    --letter-spacing-100: initial;
+    --letter-spacing-110: 0.05rem;
+    --letter-spacing-120: 0.07rem;
+    --letter-spacing-130: 0.09rem;
+    --letter-spacing-140: 0.12rem;
+
+    // for margin's, padding, gap, etc.
+    --spacing-025: 0.58rem;
+    --spacing-050: 0.69rem;
+    --spacing-075: 0.83rem;
+    --spacing-100: 1rem;
+    --spacing-125: 1.2rem;
+    --spacing-150: 1.44rem;
+    --spacing-175: 1.73rem;
+    --spacing-200: 2rem;
+
+    // maximum width that text should span
+    --measure-max: 67rem;
 }
 
 // ---- THEME OVERRIDES ---- //
@@ -94,6 +115,7 @@
     margin: 0;
     padding: 0;
 
+    // set root font size; all rem relative to this
     font-size: 14px;
 }
 
@@ -180,11 +202,7 @@ abbr {
 }
 
 @mixin layout-padding {
-    padding: 1rem;
-}
-
-@mixin navi-list-style {
-    list-style: "∟ ";
+    padding: var(--spacing-100);
 }
 
 @mixin button-on-hover {
@@ -196,34 +214,57 @@ abbr {
     }
 }
 
-@mixin base-text {
-    font-family: var(--font-family-base);
-    font-weight: normal;
-    font-style: normal;
-    color: var(--color-base);
+@mixin emphasis-serif {
+    i,
+    em {
+        @include text-style(serif, italic);
+        letter-spacing: var(--letter-spacing-110);
+    }
 }
 
-@mixin alt-text {
-    font-family: var(--font-family-alt);
-    font-weight: normal;
-    font-style: normal;
+@mixin text-style($family, $style: normal, $weight: normal) {
     color: var(--color-base);
+    font-style: $style;
+    font-weight: $weight;
+
+    @if $family == sans {
+        font-family: var(--font-family-base);
+    } @else if $family == serif {
+        font-family: var(--font-family-alt);
+    } @else if $family == mono {
+        font-family: var(--font-family-mono);
+    }
 }
 
-@mixin italic-text {
-    font-family: var(--font-family-alt);
-    font-weight: normal;
-    font-style: italic;
-    letter-spacing: var(--letter-spacing-large);
-    color: var(--color-base);
+@mixin text-size($size) {
+    @if $size == small {
+        font-size: var(--font-size-small);
+        line-height: var(--line-height-small);
+    } @else if $size == base {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
+    } @else if $size == large {
+        font-size: var(--font-size-large);
+        line-height: var(--line-height-large);
+    } @else if $size == larger {
+        font-size: var(--font-size-larger);
+        line-height: var(--line-height-larger);
+    } @else if $size == largest {
+        font-size: var(--font-size-largest);
+        line-height: var(--line-height-largest);
+    }
 }
 
 @mixin list-margin {
     margin-left: 1.25rem;
 }
 
-@mixin default-list-style {
-    list-style: "❀ ";
+@mixin list-style($style) {
+    @if $style == base {
+        list-style: "❀ ";
+    } @else if $style == navi {
+        list-style: "∟ ";
+    }
 }
 
 //:._.:*~  BREAKPOINTS ~*:._.://
@@ -258,7 +299,8 @@ abbr {
 
 .l-imposter {
     @include for-phone() {
-        display: contents;
+        display: flex;
+        justify-content: center;
     }
 
     @include for-desktop() {
@@ -283,12 +325,12 @@ abbr {
     display: flex;
 
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: var(--spacing-100);
 
     &_horizontal {
         @include large-frame() {
             flex-direction: row;
-            column-gap: 1rem;
+            column-gap: var(--spacing-100);
         }
     }
 }

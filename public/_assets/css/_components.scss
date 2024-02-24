@@ -1,29 +1,28 @@
 @use "base";
 @use "layouts";
 
-.welcome {
-    grid-area: welcome;
-}
-
-.news-feed {
-    grid-area: news-feed;
-}
-
-.update-log {
-    grid-area: update;
-}
-
 /* --- FEED --- */
 .feed {
+    display: flex;
+
+    flex-direction: column;
+    gap: var(--spacing-150);
+
+    &__title {
+        @include base.text-style(serif, italic);
+        @include base.text-size(large);
+        letter-spacing: var(--letter-spacing-120);
+    }
+
     &__entry {
         display: flex;
 
         flex-direction: column;
-        gap: 0.5rem;
+        gap: var(--spacing-100);
 
         &:not(:first-child) {
             border-top: 1px dotted var(--color-base);
-            padding-top: 0.5rem;
+            padding-top: var(--spacing-075);
         }
 
         &:nth-child(n + 4) {
@@ -40,17 +39,9 @@
     }
 }
 
-.commission-status {
-    // display: inline-block;
-
-    // border: 1px dashed var(--color-base);
-
-    // text-align: center;
-    // letter-spacing: var(--letter-spacing-wide);
-}
-
 .ascii-art {
-    font-family: var(--font-family-mono);
+    @include base.text-style(mono);
+
     line-height: 1rem;
 
     user-select: none;
@@ -59,53 +50,129 @@
 }
 
 .section {
-    &__navi {
-        margin-top: 1rem;
-    }
+    display: flex;
 
-    &__section {
-        // border-top: 1px dotted var(--color-base);
-        margin-top: 1rem;
+    flex-direction: column;
+    row-gap: 1em;
+
+    margin-top: var(--spacing-125);
+
+    &_subsection {
+        margin-top: var(--spacing-075);
+        margin-left: var(--spacing-075);
     }
 }
 
+.welcome {
+    grid-area: welcome;
+
+    margin: 0rem;
+}
+
+.news-feed {
+    grid-area: news-feed;
+
+    margin: 0rem;
+}
+
+.update-log {
+    grid-area: update;
+
+    margin: 0rem;
+}
+
 .section-container {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: 1em;
+
     overflow-y: auto;
 
     min-height: 0;
 }
 
-.title {
-    @include base.base-text();
+/* for screen readers */
+.hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
-    font-size: var(--font-size-large);
-    font-style: normal;
-    font-weight: bold;
-
-    &_subtitle {
-        font-size: var(--font-size-large);
-        font-family: var(--font-family-alt);
-        font-style: italic;
-        font-weight: normal;
-        letter-spacing: 0.07rem;
+.breadcrumb {
+    &__list {
+        display: flex;
     }
 
-    /* for screen readers */
-    &_hidden {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
+    &__crumb {
+        display: inline-block;
+
+        &:not(:last-child)::after {
+            content: ">";
+            margin: 0 var(--spacing-075);
+        }
+    }
+
+    &__link {
+        @include base.text-style(sans);
+        @include base.text-size(small);
+    }
+
+    &__current {
+        @include base.text-style(serif, italic);
+        @include base.text-size(small);
     }
 }
 
+.page-navi {
+    &__header {
+        @include base.text-style(sans);
+        @include base.text-size(base);
+    }
+}
+
+.title {
+    @include base.text-style($family: sans, $weight: bold);
+    @include base.text-size(largest);
+    letter-spacing: var(--letter-spacing-110);
+}
+
+.heading {
+    @include base.text-style(sans);
+    @include base.text-size(larger);
+    letter-spacing: var(--letter-spacing-120);
+}
+
+.subheading {
+    @include base.text-style(serif, italic);
+    @include base.text-size(large);
+    letter-spacing: var(--letter-spacing-130);
+}
+
+.body-copy {
+    @include base.text-style(sans);
+    @include base.text-size(base);
+
+    @include base.emphasis-serif();
+}
+
+.quote {
+    @include base.text-style(serif, italic);
+    @include base.text-size(base);
+    margin-left: var(--spacing-100);
+}
+
 .list {
-    @include base.default-list-style();
-    @include base.base-text();
+    @include base.text-style(sans);
+    @include base.text-size(base);
+    @include base.list-style(base);
+
+    @include base.emphasis-serif();
 
     &_row {
         display: flex;
@@ -123,43 +190,70 @@
 
             &:not(:last-child)::after {
                 content: "/";
-                margin: 0 0.5rem;
+                margin: 0 var(--spacing-050);
             }
         }
     }
 }
 
-.body-text {
-    @include base.base-text();
+.description-list {
+    @include base.list-style(base);
 
-    i,
-    em {
-        @include base.italic-text();
+    &__term {
+        display: inline;
+
+        @include base.text-style(serif, italic);
+        letter-spacing: var(--letter-spacing-110);
+
+        &::before {
+            content: "";
+            display: block;
+
+            margin-bottom: var(--spacing-025);
+        }
+
+        &::after {
+            content: ":";
+        }
+    }
+
+    &__description {
+        display: inline;
+
+        @include base.text-style(sans);
     }
 }
 
 .poem {
-    @include base.alt-text();
-    font-size: 1.1rem;
-}
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-100);
+    letter-spacing: var(letter-spacing-110);
 
-.quote {
-    @include base.italic-text();
-    margin-left: 1rem;
-}
+    @include base.text-size(base);
 
-.figure {
-    margin: 1rem 1rem 1rem 1.5rem;
-    // &__image {
-    // }
-    &__caption {
-        @include base.italic-text();
-        font-size: var(--font-size-small);
+    &__title {
+        @include base.text-style(serif, italic);
+    }
+
+    &__body {
+        @include base.text-style(serif);
     }
 }
 
-.standalone-link {
-    @include base.base-text();
+.figure {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: var(--spacing-075);
+
+    margin-left: var(--spacing-150);
+
+    &__caption {
+        @include base.text-style(serif, italic);
+        @include base.text-size(small);
+        letter-spacing: var(letter-spacing-130);
+    }
 }
 
 .image {
@@ -174,7 +268,7 @@
 
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: var(--spacing-075);
 
     &_no-wrap {
         flex-wrap: nowrap;

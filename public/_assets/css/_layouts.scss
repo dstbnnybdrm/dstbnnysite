@@ -3,7 +3,7 @@
 .page {
     display: grid;
 
-    gap: 1rem;
+    gap: var(--spacing-100);
 
     &__main {
         @include base.layout-border();
@@ -24,14 +24,15 @@
 
     &__header {
         align-items: center;
+
         &_blog {
             // to counteract grid gap in layout
-            margin-bottom: -1rem;
+            margin-bottom: calc(var(--spacing-100) * -1);
         }
     }
 
     @include base.for-phone() {
-        padding: 2rem;
+        padding: var(--spacing-200);
 
         grid-template-areas:
             "header"
@@ -41,12 +42,15 @@
             "collection"
             "footer";
         grid-template-rows: repeat(5, auto);
+        // grid-template-columns: 100%;
+
+        width: var(--measure-max);
 
         &__navi {
             border-top: 1px solid var(--color-base);
 
             &_blog {
-                padding-top: 1rem;
+                padding-top: var(--spacing-100);
             }
         }
 
@@ -55,12 +59,16 @@
             border-right: none;
             border-left: none;
             border-bottom: 1px dashed var(--color-base);
-            padding: 1rem 0;
+            padding: var(--spacing-100) 0;
+
+            &_sitemap {
+                border: none;
+            }
         }
     }
 
     @include base.for-desktop() {
-        padding: 2rem 2rem 0 2rem;
+        padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
 
         grid-template-areas:
             "header     header"
@@ -68,10 +76,10 @@
             "sidebar    collection"
             "footer     footer";
         grid-template-columns: min-content 1fr;
-        grid-template-rows: auto 1fr min-content 2rem;
+        grid-template-rows: auto 1fr min-content var(--spacing-200);
 
         height: 100%;
-        max-width: var(--page-wrapper-width);
+        max-width: var(--measure-max);
 
         &_blog {
             grid-template-areas:
@@ -79,7 +87,7 @@
                 "navi       main"
                 "footer     footer";
             grid-template-columns: min-content 1fr;
-            grid-template-rows: min-content 1fr 2rem;
+            grid-template-rows: min-content 1fr var(--spacing-200);
 
             width: 100%;
         }
@@ -92,7 +100,7 @@
                 "navi"
                 "main"
                 "footer";
-            grid-template-columns: calc(var(--page-wrapper-width) * 0.75);
+            grid-template-columns: calc(var(--measure-max) * 0.75);
             grid-template-rows: auto 1fr 2rem;
             gap: 0;
 
@@ -109,7 +117,7 @@
 
         &__header {
             @include base.layout-border;
-            padding: 0.5rem 1rem;
+            padding: var(--spacing-075) var(--spacing-100);
 
             &_blog {
                 border: none;
@@ -128,7 +136,7 @@
 
         &__collection {
             @include base.layout-border();
-            padding: 0.5rem 1rem;
+            padding: var(--spacing-075) var(--spacing-100);
 
             max-height: min-content;
         }
@@ -149,15 +157,15 @@
 .tagline {
     display: block;
 
-    @include base.base-text();
-    @include base.italic-text();
+    @include base.text-style(serif, italic);
+    letter-spacing: var(letter-spacing-120);
     text-align: center;
 
     @include base.for-desktop() {
         &::before,
         &::after {
             content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
-            margin: 0 2rem;
+            margin: 0 var(--spacing-200);
         }
     }
 }
@@ -174,7 +182,7 @@
     @include base.for-phone() {
         &__status {
             border-bottom: 1px dashed var(--color-base);
-            padding-bottom: 1rem;
+            padding-bottom: var(--spacing-100);
         }
     }
 
@@ -185,7 +193,7 @@
             "navi"
             "status";
         grid-template-rows: min-content 1fr;
-        row-gap: 1rem;
+        row-gap: var(--spacing-100);
 
         &__navi {
             @include base.layout-border();
@@ -202,11 +210,27 @@
 .navi {
     grid-area: navi;
 
-    @include base.base-text();
+    @include base.text-style(sans);
+    @include base.text-size(base);
 
     &_guestbook {
         border: none;
         margin: 0;
+    }
+
+    &_blog {
+        display: flex;
+
+        flex-direction: column;
+        row-gap: var(--spacing-100);
+    }
+
+    &__title {
+        &_blog {
+            @include base.text-style(sans, normal, bold);
+            @include base.text-size(large);
+            letter-spacing: var(letter-spacing-120);
+        }
     }
 
     &__button {
@@ -217,13 +241,13 @@
         display: flex;
 
         flex-direction: column;
-        gap: 1rem;
+        gap: var(--spacing-100);
 
         &__home {
             display: block;
 
             border: 1px dotted var(--color-base);
-            padding: 1rem;
+            padding: var(--spacing-100);
 
             width: 100%;
         }
@@ -232,7 +256,7 @@
             display: block;
 
             border: none;
-            padding: 0.5rem;
+            padding: var(--spacing-075);
 
             font-size: var(--font-size-small);
 
@@ -245,11 +269,11 @@
         &__menu {
             display: none;
             flex-direction: column;
-            gap: 1rem;
+            gap: var(--spacing-100);
 
             border: 1px dotted var(--color-base);
             border-top: none;
-            padding: 0 1rem 1rem 1rem;
+            padding: 0 var(--spacing-100) var(--spacing-100) var(--spacing-100);
 
             &:not(:last-child) {
                 border-bottom: none;
@@ -263,7 +287,8 @@
         &__subheading {
             display: block;
 
-            @include base.italic-text();
+            @include base.text-style(serif, italic);
+            @include base.text-size(large);
 
             &_blog {
                 display: none;
@@ -274,7 +299,7 @@
             display: flex;
 
             flex-direction: column;
-            gap: 0.5rem;
+            gap: var(--spacing-075);
         }
 
         &__item {
@@ -283,7 +308,7 @@
 
         &__link {
             border: 1px dotted var(--color-primary);
-            padding: 1rem;
+            padding: var(--spacing-100);
 
             @include base.button-on-hover();
         }
@@ -297,33 +322,33 @@
         &__subheading {
             display: list-item;
 
-            @include base.base-text();
-            @include base.navi-list-style();
+            @include base.text-style(sans);
+            @include base.list-style(navi);
             font-size: var(--font-size-base);
 
             &_blog {
                 display: inline;
 
-                @include base.italic-text();
-                font-size: var(--font-size-large);
+                @include base.text-style(serif, italic);
+                @include base.text-size(large);
+                letter-spacing: var(letter-spacing-120);
             }
         }
 
         &__list {
             @include base.list-margin();
 
-            @include base.base-text();
-            @include base.navi-list-style();
-            line-height: 1.5rem;
+            @include base.text-style(sans);
+            @include base.list-style(navi);
 
             &_blog {
-                @include base.default-list-style();
+                @include base.list-style(base);
             }
         }
 
         &__link {
             width: max-content;
-            line-height: 1.5rem;
+            // line-height: 1.5rem;
         }
 
         &__navi {
@@ -336,26 +361,20 @@
     }
 }
 
-.breadcrumb {
-    &__list {
-        display: flex;
-    }
-}
-
 .sitemap {
-    @include base.base-text();
+    @include base.text-style(sans);
 
     @include base.for-phone() {
         display: flex;
 
         flex-direction: column;
-        gap: 1rem;
+        gap: var(--spacing-100);
 
         &__home {
             display: block;
 
             border: 1px dotted var(--color-base);
-            padding: 1rem;
+            padding: var(--spacing-100);
 
             width: 100%;
         }
@@ -363,19 +382,19 @@
         &__subheading {
             display: block;
 
-            margin: 1rem 0;
-            @include base.italic-text();
+            margin: var(--spacing-100) 0;
+            @include base.text-style(italic);
         }
 
         &__list {
             display: flex;
 
             flex-direction: column;
-            gap: 0.5rem;
+            gap: var(--spacing-075);
 
             @include base.list-margin();
             border-left: 1px dotted var(--color-base);
-            padding-left: 1rem;
+            padding-left: var(--spacing-100);
         }
 
         &__item {
@@ -384,7 +403,7 @@
 
         &__link {
             border: 1px dotted var(--color-primary);
-            padding: 1rem;
+            padding: var(--spacing-100);
 
             @include base.button-on-hover();
         }
@@ -394,22 +413,22 @@
         &__subheading {
             display: list-item;
 
-            @include base.base-text();
-            @include base.navi-list-style();
+            @include base.text-style(sans);
+            @include base.list-style(navi);
             font-size: var(--font-size-base);
         }
 
         &__list {
             @include base.list-margin();
 
-            @include base.base-text();
-            @include base.navi-list-style();
-            line-height: 1.5rem;
+            @include base.text-style(sans);
+            @include base.list-style(navi);
+            line-height: var(--spacing-150);
         }
 
         &__link {
             width: max-content;
-            line-height: 1.5rem;
+            line-height: var(--spacing-150);
         }
 
         &__navi {
@@ -423,19 +442,35 @@
 
     grid-area: status;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--spacing-100);
+
+    &__title {
+        @include base.text-style(sans, normal, bold);
+        @include base.text-size(base);
+        letter-spacing: var(letter-spacing-120);
+    }
 
     &__body {
         min-height: 0;
         overflow-y: auto;
-        line-height: 1.5rem;
+    }
+
+    &__body-copy {
+        @include base.text-style(sans);
+        @include base.text-size(small);
+
+        &:before,
+        &:after {
+            content: '"';
+        }
     }
 
     &__username {
-        @include base.italic-text();
+        margin-top: var(--spacing-075);
 
-        font-family: var(--font-family-alt);
-        font-size: var(--font-size-small);
+        @include base.text-style(serif, italic);
+        @include base.text-size(small);
+        letter-spacing: var(letter-spacing-120);
 
         &:before {
             content: "— ";
@@ -467,23 +502,17 @@
     }
 }
 
-.main-container {
-    line-height: 2rem;
+.main-body {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: 1em;
 
     &__breadcrumb {
-        border-bottom: 1px dotted var(--color-base);
-        padding-bottom: 0.5rem;
-    }
-
-    &__section {
-        &:not(:first-child) {
-            margin-top: 1.5rem;
-        }
+        margin-bottom: var(--spacing-075);
     }
 
     @include base.large-frame() {
-        line-height: 1.5rem;
-
         &_home {
             display: grid;
 
@@ -491,8 +520,8 @@
                 "welcome news-feed"
                 "update update";
             grid-template-columns: 1fr 1fr;
-            row-gap: 1rem;
-            column-gap: 2rem;
+            row-gap: var(--spacing-100);
+            column-gap: var(--spacing-200);
 
             grid-template-rows:
                 minmax(0, 3fr)
@@ -500,6 +529,11 @@
 
             height: 100vh;
         }
+    }
+
+    @media screen and (min-width: 1000px) {
+        max-width: 58rem;
+        margin: auto;
     }
 }
 
@@ -510,7 +544,8 @@
 .footer {
     grid-area: footer;
 
-    @include base.base-text();
+    @include base.text-style(sans);
+    font-family: var(--font-family-base);
 
     &__list {
         display: flex;
@@ -525,7 +560,7 @@
         &:not(:last-child)::after {
             content: "|";
 
-            margin: 0 0.5rem;
+            margin: 0 var(--spacing-075);
         }
     }
 }
