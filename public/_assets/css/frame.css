@@ -782,6 +782,15 @@ abbr {
   line-height: var(--line-height-small);
 }
 
+.page-navi__header {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
 .title {
   color: var(--color-base);
   font-style: normal;

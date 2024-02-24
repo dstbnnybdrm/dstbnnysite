@@ -129,6 +129,13 @@
     }
 }
 
+.page-navi {
+    &__header {
+        @include base.text-style(sans);
+        @include base.text-size(base);
+    }
+}
+
 .title {
     @include base.text-style($family: sans, $weight: bold);
     @include base.text-size(largest);
