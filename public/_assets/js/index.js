@@ -76,7 +76,9 @@ function updateFrameSize() {
 
     // reset first, for when the resulting height is smaller than the initial
     mainframe.height = "0";
-    mainframe.height = frameContent.document.body.scrollHeight + "px";
+    // add 5 extra pixels to prevent unwanted scrolling (which shouldn't happen
+    // anyway, but it does lmao)
+    mainframe.height = frameContent.document.body.scrollHeight + 5 + "px";
 }
 
 /*
