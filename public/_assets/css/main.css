@@ -85,6 +85,8 @@
 * {
   margin: 0;
   padding: 0;
+  scrollbar-width: auto;
+  scrollbar-gutter: stable;
   font-size: 14px;
 }
 
@@ -621,6 +623,7 @@ abbr {
 .status__username:before {
   content: "— ";
 }
+
 .main {
   display: block;
   grid-area: main;

@@ -1,11 +1,11 @@
 @use "base";
 @use "components";
 
-// * {
-//     padding: 0;
-// }
-
-// html,
 // body {
 //     height: 100%;
+
+//     scrollbar-gutter: stable;
+//     @include base.small-frame() {
+//         overflow-y: hidden;
+//     }
 // }
