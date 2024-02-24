@@ -189,6 +189,34 @@
     }
 }
 
+.description-list {
+    @include base.list-style(base);
+
+    &__term {
+        display: inline;
+
+        @include base.text-style(serif, italic);
+        letter-spacing: var(--letter-spacing-110);
+
+        &::before {
+            content: "";
+            display: block;
+
+            margin-bottom: var(--spacing-025);
+        }
+
+        &::after {
+            content: ":";
+        }
+    }
+
+    &__description {
+        display: inline;
+
+        @include base.text-style(sans);
+    }
+}
+
 .poem {
     display: flex;
     flex-direction: column;

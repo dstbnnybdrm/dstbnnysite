@@ -28,6 +28,7 @@
   --letter-spacing-120: 0.07rem;
   --letter-spacing-130: 0.09rem;
   --letter-spacing-140: 0.12rem;
+  --spacing-025: 0.58rem;
   --spacing-050: 0.69rem;
   --spacing-075: 0.83rem;
   --spacing-100: 1rem;
@@ -902,6 +903,33 @@ abbr {
 .list__item_row:not(:last-child)::after {
   content: "/";
   margin: 0 var(--spacing-050);
+}
+
+.description-list {
+  list-style: "❀ ";
+}
+.description-list__term {
+  display: inline;
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  letter-spacing: var(--letter-spacing-110);
+}
+.description-list__term::before {
+  content: "";
+  display: block;
+  margin-bottom: var(--spacing-025);
+}
+.description-list__term::after {
+  content: ":";
+}
+.description-list__description {
+  display: inline;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
 }
 
 .poem {
