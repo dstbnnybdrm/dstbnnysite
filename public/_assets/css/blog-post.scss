@@ -3,8 +3,8 @@
 /* ----- */
 
 body {
-    @include base.base-text();
-    line-height: 2rem;
+    @include base.text-style(sans);
+    line-height: var(--line-height-large);
 
     color: var(--color-base);
 }
@@ -13,7 +13,8 @@ em,
 i {
     display: inline;
 
-    @include base.italic-text();
+    @include base.text-style(serif, italic);
+    letter-spacing: var(--letter-spacing-110);
 }
 
 h1,
@@ -21,17 +22,24 @@ h2 {
     margin: 0;
 
     font-size: var(--font-size-large);
-    font-weight: bold;
+    @include base.text-size(large);
 }
 
 h3,
 h4,
 h5,
 h6 {
-    font-size: var(--font-size-base);
-    font-weight: bold;
+    @include base.text-style(sans, normal, bold);
 
-    letter-spacing: var(--letter-spacing-deca);
+    letter-spacing: var(--letter-spacing-110);
+}
+
+header {
+    margin-bottom: var(--spacing-175);
+    p {
+        @include base.text-style(serif, italic);
+        letter-spacing: var(--letter-spacing-130);
+    }
 }
 
 header > p {
@@ -41,8 +49,9 @@ header > p {
 time {
     margin: 0;
 
-    @include base.italic-text();
-    font-size: var(--font-size-large);
+    @include base.text-style(serif, italic);
+    @include base.text-size(large);
+    letter-spacing: var(--letter-spacing-120);
 }
 
 nav {
@@ -101,7 +110,7 @@ pre > code {
 code {
     margin: 0 0.5rem;
 
-    font-family: var(--font-family-mono);
+    @include base.text-style(mono);
     letter-spacing: var(--letter-spacing-large);
 }
 
@@ -121,5 +130,6 @@ figure {
 }
 
 figcaption {
-    @include base.italic-text();
+    @include base.text-style(serif, italic);
+    @include base.text-size(small);
 }
