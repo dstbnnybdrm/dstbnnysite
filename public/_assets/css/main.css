@@ -1186,7 +1186,6 @@ textarea#hcb_form_content {
   text-transform: lowercase;
 }
 #comments_list p.hcb-comment-tb button {
-  color: var(--color-primary);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
@@ -1194,6 +1193,7 @@ textarea#hcb_form_content {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
   text-transform: lowercase;
+  color: var(--color-primary);
 }
 #comments_list .likes {
   color: var(--color-base);
