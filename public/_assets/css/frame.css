@@ -684,7 +684,7 @@ abbr {
 .feed__entry {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-100);
+  gap: var(--spacing-025);
 }
 .feed__entry:not(:first-child) {
   border-top: 1px dotted var(--color-base);
