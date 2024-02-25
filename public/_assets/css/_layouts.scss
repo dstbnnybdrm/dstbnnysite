@@ -5,21 +5,14 @@
 
     gap: var(--spacing-100);
 
-    &__main {
-        @include base.layout-border();
-        @include base.layout-padding();
+    &_closet {
+        display: flex;
 
-        &_blog {
-            border: none;
-        }
-
-        &_guestbook {
-            border: none;
-        }
-
-        &_sitemap {
-            border: none;
-        }
+        flex-direction: column;
+        row-gap: var(--spacing-120);
+        min-height: 0;
+        justify-content: center;
+        // max-height: min-content;
     }
 
     &__header {
@@ -42,7 +35,6 @@
             "collection"
             "footer";
         grid-template-rows: repeat(5, auto);
-        // grid-template-columns: 100%;
 
         width: var(--measure-max);
 
@@ -51,6 +43,10 @@
 
             &_blog {
                 padding-top: var(--spacing-100);
+            }
+
+            &_closet {
+                border: none;
             }
         }
 
@@ -63,6 +59,12 @@
 
             &_sitemap {
                 border: none;
+            }
+
+            &_closet {
+                border: none;
+                width: min-content;
+                margin: auto;
             }
         }
     }
@@ -132,6 +134,10 @@
             &_guestbook {
                 border: none;
             }
+
+            &_closet {
+                border: none;
+            }
         }
 
         &__collection {
@@ -139,6 +145,21 @@
             padding: var(--spacing-075) var(--spacing-100);
 
             max-height: min-content;
+        }
+
+        &__main {
+            @include base.layout-border();
+            @include base.layout-padding();
+
+            &_closet {
+                border: none;
+            }
+        }
+    }
+
+    &__main {
+        &_borderless {
+            border: none;
         }
     }
 }
