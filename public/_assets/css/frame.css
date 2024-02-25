@@ -301,7 +301,7 @@ abbr {
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
-  letter-spacing: var(letter-spacing-120);
+  letter-spacing: var(--letter-spacing-120);
   text-align: center;
 }
 @media screen and (min-width: 801px) {
@@ -366,7 +366,7 @@ abbr {
   font-family: var(--font-family-base);
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
-  letter-spacing: var(letter-spacing-120);
+  letter-spacing: var(--letter-spacing-120);
 }
 .navi__button {
   display: none;
@@ -461,7 +461,7 @@ abbr {
     font-family: var(--font-family-alt);
     font-size: var(--font-size-large);
     line-height: var(--line-height-large);
-    letter-spacing: var(letter-spacing-120);
+    letter-spacing: var(--letter-spacing-120);
   }
   .navi__list {
     margin-left: 1.25rem;
@@ -572,7 +572,7 @@ abbr {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  letter-spacing: var(letter-spacing-120);
+  letter-spacing: var(--letter-spacing-120);
 }
 .status__body {
   min-height: 0;
@@ -597,7 +597,7 @@ abbr {
   font-family: var(--font-family-alt);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  letter-spacing: var(letter-spacing-120);
+  letter-spacing: var(--letter-spacing-120);
 }
 .status__username:before {
   content: "— ";
@@ -669,7 +669,6 @@ abbr {
   margin: 0 var(--spacing-075);
 }
 
-/* --- FEED --- */
 .feed {
   display: flex;
   flex-direction: column;
@@ -767,6 +766,12 @@ abbr {
 .breadcrumb__crumb:not(:last-child)::after {
   content: ">";
   margin: 0 var(--spacing-075);
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
 }
 .breadcrumb__link {
   color: var(--color-base);
@@ -915,7 +920,7 @@ abbr {
   display: flex;
   flex-direction: column;
   row-gap: var(--spacing-100);
-  letter-spacing: var(letter-spacing-110);
+  letter-spacing: var(--letter-spacing-110);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
@@ -945,7 +950,7 @@ abbr {
   font-family: var(--font-family-alt);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  letter-spacing: var(letter-spacing-130);
+  letter-spacing: var(--letter-spacing-130);
 }
 
 .image_inline {
