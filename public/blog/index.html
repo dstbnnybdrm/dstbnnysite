@@ -56,7 +56,7 @@
   <body class="l-imposter">
     <div class="page page_blog">
       <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
-      <header class="header page__header page__main_borderless">
+      <header class="header page__header page__header_blog">
         <pre class="ascii-art" aria-hidden="true">
        .--.       .---.
    .---|__|       |~~~|
@@ -71,69 +71,68 @@
       </header>
 
       <!-- ~*:._.:*~  NAVIGATION  ~*:._.:*~ -->
-      <nav class="navi navi_blog page__navi page__navi_blog">
-        <a href="/" class="navi__link">back to site?</a>
-
-        <h1 class="navi__title navi__title_blog">
+      <!-- <nav class="navi navi_blog page__navi page__navi_blog"> -->
+      <nav class="blog-navi page__navi">
+        <h1 class="blog-navi__title">
           <abbr title="dustbunnyblog">dstbnnyblog</abbr>
         </h1>
 
-        <p class="body-copy">various thoughts and ramblings</p>
+        <p class="body-copy">various thoughts and ramblings of mine.</p>
 
-        <nav class="navi navi__navi navi__navi_blog">
-          <h2 class="navi__subheading navi__subheading_blog">entries</h2>
+        <a href="/" class="blog-navi__link">back to site?</a>
 
-          <button
-            class="button navi__button"
-            id="navi-button"
-            type="button"
-            onclick="toggleNaviMenu();"
-          >
-            entries
-          </button>
+        <h2 class="blog-navi__heading">entries</h2>
 
-          <div class="navi__menu" id="navi-menu">
-            <ul class="navi__list navi__list_blog">
-              <!-- add new posts here, me! -->
-              <li class="navi__item">
-                <a
-                  class="navi__link"
-                  href="posts/2024-02-23.html"
-                  target="mainframe"
-                >
-                  on rest
-                </a>
-              </li>
-              <li class="navi__item">
-                <a
-                  class="navi__link"
-                  href="posts/2024-02-08.html"
-                  target="mainframe"
-                >
-                  basitar, Ramiel, and guitar experimentation
-                </a>
-              </li>
-              <li class="navi__item">
-                <a
-                  class="navi__link"
-                  href="posts/2024-01-09.html"
-                  target="mainframe"
-                >
-                  here we go again!
-                </a>
-              </li>
-              <li class="navi__item">
-                <a
-                  class="navi__link"
-                  href="posts/2023-12-30.html"
-                  target="mainframe"
-                >
-                  new blog, new me
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <button
+          class="button blog-navi__button"
+          id="navi-button"
+          type="button"
+          onclick="toggleNaviMenu();"
+        >
+          entries
+        </button>
+
+        <div class="blog-navi__menu" id="navi-menu">
+          <ul class="blog-navi__list">
+            <!-- add new posts here, me! -->
+            <li class="blog-navi__item">
+              <a
+                class="blog-navi__link"
+                href="posts/2024-02-23.html"
+                target="mainframe"
+              >
+                on rest
+              </a>
+            </li>
+            <li class="blog-navi__item">
+              <a
+                class="blog-navi__link"
+                href="posts/2024-02-08.html"
+                target="mainframe"
+              >
+                basitar, Ramiel, and guitar experimentation
+              </a>
+            </li>
+            <li class="blog-navi__item">
+              <a
+                class="blog-navi__link"
+                href="posts/2024-01-09.html"
+                target="mainframe"
+              >
+                here we go again!
+              </a>
+            </li>
+            <li class="blog-navi__item">
+              <a
+                class="blog-navi__link"
+                href="posts/2023-12-30.html"
+                target="mainframe"
+              >
+                new blog, new me
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
