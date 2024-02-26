@@ -480,8 +480,8 @@
         @include base.text-style(sans);
         @include base.text-size(small);
 
-        &:before,
-        &:after {
+        &::before,
+        &::after {
             content: '"';
         }
     }
@@ -493,8 +493,14 @@
         @include base.text-size(small);
         letter-spacing: var(--letter-spacing-120);
 
-        &:before {
+        &::before {
             content: "— ";
+        }
+
+        a {
+            &::after {
+                content: "↗";
+            }
         }
     }
 }
