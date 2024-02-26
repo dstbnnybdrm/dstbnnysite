@@ -29,11 +29,12 @@
         grid-template-areas:
             "header"
             "navi"
+            "theme-toggle"
             "main"
             "status"
             "collection"
             "footer";
-        grid-template-rows: repeat(5, auto);
+        grid-template-rows: repeat(7, auto);
 
         width: var(--measure-max);
 
@@ -188,14 +189,17 @@
 
     grid-area: sidebar;
 
-    &__status {
-        min-height: 0;
-    }
-
     @include base.for-phone() {
         &__status {
             border-bottom: 1px dashed var(--color-base);
             padding-bottom: var(--spacing-100);
+
+            min-height: 0;
+        }
+
+        &__theme-toggle {
+            border: none;
+            padding: var(--spacing-025);
         }
     }
 
@@ -222,6 +226,8 @@
         &__status {
             @include base.layout-border();
             @include base.layout-padding();
+
+            min-height: 0;
         }
     }
 }
@@ -543,7 +549,8 @@
     justify-content: center;
 
     @include base.text-style(sans);
-    @include base.text-size(base);
+    @include base.text-size(small);
+
     color: var(--color-background);
     background-color: var(--color-primary);
 
