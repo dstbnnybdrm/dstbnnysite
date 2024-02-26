@@ -169,6 +169,10 @@ a {
     text-decoration-style: dotted;
 }
 
+a[rel*="external"]::after {
+    content: "↗";
+}
+
 a:link {
     color: var(--color-primary);
 }
