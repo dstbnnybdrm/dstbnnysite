@@ -33,11 +33,13 @@ const TEMPLATE_URL = "/_assets/template/";
 const HOME_URL = "/home.html";
 
 const mainframe = document.getElementsByName("mainframe")[0];
-const tagline = document.getElementById("tagline");
+let viewportWidth = document.documentElement.clientWidth;
+
+// for toggling small screen navigation menu
 const naviButton = document.getElementById("navi-button");
 const naviMenu = document.getElementById("navi-menu");
 
-let viewportWidth = document.documentElement.clientWidth;
+const tagline = document.getElementById("tagline");
 
 let isFirstLoad = true;
 
@@ -136,7 +138,73 @@ function isNaviMenuOpen() {
         : false; //
 }
 
+/**
+ * Utility function to calculate the current theme setting.
+ * Look for a local storage value.
+ * Fall back to system setting.
+ * Fall back to light mode.
+ */
+function calculateCurrentTheme(localStorageTheme, isSystemPreferenceDark) {
+    if (localStorageTheme !== null) {
+        console.log("using local storage theme: " + localStorageTheme);
+        return localStorageTheme;
+    }
+
+    if (isSystemPreferenceDark) {
+        console.log("using system preference theme: dark");
+        return "dark";
+    }
+
+    console.log("using system preference theme: light");
+    return "light";
+}
+
+/**
+ * Utility function to update the button text and aria-label.
+ */
+function updateThemeToggleButton(button, themePreference) {
+    if (button == null) {
+        return;
+    }
+    // // use an aria-label if you are omitting text on the button
+    button.ariaLabel = "current theme is " + themePreference;
+    button.innerText = "theme: " + themePreference;
+}
+
+/**
+ * Utility function to update the theme setting on the html tag
+ */
+function updateTheme(theme) {
+    document.querySelector("html").setAttribute("data-theme", theme);
+}
+
 window.onload = () => {
+    const themeToggleButton = document.getElementById("theme-toggle");
+    const localStorageTheme = localStorage.getItem("theme");
+    const isSystemPreferenceDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+    ).matches;
+
+    let currentTheme = calculateCurrentTheme(
+        localStorageTheme,
+        isSystemPreferenceDark,
+    );
+
+    updateThemeToggleButton(themeToggleButton, currentTheme);
+    updateTheme(currentTheme);
+
+    if (themeToggleButton !== null) {
+        themeToggleButton.addEventListener("click", (event) => {
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+            localStorage.setItem("theme", newTheme);
+            updateThemeToggleButton(themeToggleButton, newTheme);
+            updateTheme(newTheme);
+
+            currentTheme = newTheme;
+        });
+    }
+
     // page setup depending on if blog/main/etc.
     switch (window.location.pathname) {
         case "/blog/":
@@ -152,6 +220,7 @@ window.onload = () => {
             break;
     }
 
+    // update mainframe if on current page
     if (mainframe != null) {
         mainframe.addEventListener("load", updateHistory);
         mainframe.addEventListener("load", updateFrameSize);
@@ -162,6 +231,7 @@ window.onload = () => {
         });
     }
 
+    // load content of major layout sections (footer, collection, etc.)
     loadLayout();
 };
 
@@ -171,11 +241,4 @@ window.addEventListener("resize", function () {
         updateFrameSize();
     }
     viewportWidth = document.documentElement.clientWidth;
-});
-
-// set frame on back button presses too
-window.addEventListener("popstate", function (e) {
-    if (e.state !== null) {
-        setMainframe();
-    }
 });
