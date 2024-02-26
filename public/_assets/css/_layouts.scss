@@ -48,6 +48,10 @@
             &_closet {
                 border: none;
             }
+
+            &_borderless {
+                border: none;
+            }
         }
 
         &__main {
@@ -128,14 +132,14 @@
         }
 
         &__navi {
-            @include base.layout-border();
+            // @include base.layout-border();
             @include base.layout-padding();
 
-            &_guestbook {
+            &_closet {
                 border: none;
             }
 
-            &_closet {
+            &_borderless {
                 border: none;
             }
         }

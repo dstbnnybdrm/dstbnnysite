@@ -222,6 +222,9 @@ abbr {
   .page__navi_closet {
     border: none;
   }
+  .page__navi_borderless {
+    border: none;
+  }
   .page__main {
     border-top: 1px dashed var(--color-base);
     border-right: none;
@@ -276,13 +279,12 @@ abbr {
     padding: 0;
   }
   .page__navi {
-    border: 1px solid var(--color-base);
     padding: var(--spacing-100);
   }
-  .page__navi_guestbook {
+  .page__navi_closet {
     border: none;
   }
-  .page__navi_closet {
+  .page__navi_borderless {
     border: none;
   }
   .page__collection {
