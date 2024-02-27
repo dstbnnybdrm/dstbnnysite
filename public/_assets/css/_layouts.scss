@@ -185,11 +185,11 @@
 }
 
 .sidebar {
-    display: contents;
-
     grid-area: sidebar;
 
     @include base.for-phone() {
+        display: contents;
+
         &__status {
             border-bottom: 1px dashed var(--color-base);
             padding-bottom: var(--spacing-100);
@@ -209,8 +209,9 @@
         grid-template-areas:
             "navi"
             "theme-toggle"
-            "status";
-        grid-template-rows: min-content var(--spacing-200) 1fr;
+            "status"
+            "directories";
+        grid-template-rows: min-content var(--spacing-200) 1fr min-content;
         row-gap: var(--spacing-100);
 
         &__navi {
@@ -228,6 +229,11 @@
             @include base.layout-padding();
 
             min-height: 0;
+        }
+
+        &__directories {
+            @include base.layout-border();
+            @include base.layout-padding();
         }
     }
 }
@@ -602,6 +608,28 @@
                 content: "↗";
             }
         }
+    }
+}
+
+.directories {
+    display: flex;
+
+    grid-area: directories;
+    flex-direction: column;
+    gap: var(--spacing-100);
+
+    &__title {
+        @include base.text-style(sans, normal, bold);
+        @include base.text-size(base);
+        letter-spacing: var(--letter-spacing-120);
+    }
+
+    &__body {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-025);
     }
 }
 
