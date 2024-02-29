@@ -32,6 +32,7 @@
             "theme-toggle"
             "main"
             "status"
+            "directories"
             "collection"
             "footer";
         grid-template-rows: repeat(7, auto);
@@ -195,6 +196,11 @@
             padding-bottom: var(--spacing-100);
 
             min-height: 0;
+        }
+
+        &__directories {
+            border-bottom: 1px dashed var(--color-base);
+            padding-bottom: var(--spacing-100);
         }
 
         &__theme-toggle {
