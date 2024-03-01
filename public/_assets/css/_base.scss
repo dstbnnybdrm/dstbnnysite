@@ -31,6 +31,7 @@
     --font-family-alt: Georgia, "Times New Roman", Times, serif;
     --font-family-mono: "Courier New", Courier, monospace;
 
+    --font-size-smaller: 0.69rem;
     --font-size-small: 0.83rem;
     --font-size-base: 1rem;
     --font-size-large: 1.2rem;
@@ -244,7 +245,10 @@ abbr {
 }
 
 @mixin text-size($size) {
-    @if $size == small {
+    @if $size == smaller {
+        font-size: var(--font-size-smaller);
+        line-height: var(--line-height-smaller);
+    } @else if $size == small {
         font-size: var(--font-size-small);
         line-height: var(--line-height-small);
     } @else if $size == base {
@@ -263,7 +267,7 @@ abbr {
 }
 
 @mixin list-margin {
-    margin-left: 1.25rem;
+    margin-left: var(--spacing-175);
 }
 
 @mixin list-style($style) {
