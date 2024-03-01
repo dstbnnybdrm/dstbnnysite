@@ -329,13 +329,7 @@ abbr {
   flex-direction: column;
   grid-area: header;
 }
-@media screen and (min-width: 801px) {
-  .header {
-    justify-content: center;
-  }
-}
-
-.tagline {
+.header__splash {
   display: block;
   color: var(--color-base);
   font-style: italic;
@@ -345,7 +339,10 @@ abbr {
   text-align: center;
 }
 @media screen and (min-width: 801px) {
-  .tagline::before, .tagline::after {
+  .header {
+    justify-content: center;
+  }
+  .header__splash::before, .header__splash::after {
     content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
     margin: 0 var(--spacing-200);
   }

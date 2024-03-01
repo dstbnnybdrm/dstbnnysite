@@ -164,23 +164,23 @@
     flex-direction: column;
     grid-area: header;
 
+    &__splash {
+        display: block;
+
+        @include base.text-style(serif, italic);
+        letter-spacing: var(--letter-spacing-120);
+        text-align: center;
+    }
+
     @include base.for-desktop() {
         justify-content: center;
-    }
-}
 
-.tagline {
-    display: block;
-
-    @include base.text-style(serif, italic);
-    letter-spacing: var(--letter-spacing-120);
-    text-align: center;
-
-    @include base.for-desktop() {
-        &::before,
-        &::after {
-            content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
-            margin: 0 var(--spacing-200);
+        &__splash {
+            &::before,
+            &::after {
+                content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
+                margin: 0 var(--spacing-200);
+            }
         }
     }
 }
