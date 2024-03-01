@@ -8,7 +8,7 @@
  */
 
 const LAYOUT_IDS = ["collection", "footer"];
-const TAGLINES = [
+const SPLASHES = [
     "enjoy yr stay",
     "<3 <3 <3",
     "proof of my existence",
@@ -39,7 +39,7 @@ let viewportWidth = document.documentElement.clientWidth;
 const naviButton = document.getElementById("navi-button");
 const naviMenu = document.getElementById("navi-menu");
 
-const tagline = document.getElementById("tagline");
+const splash = document.getElementById("splash");
 
 let isFirstLoad = true;
 
@@ -117,10 +117,10 @@ function setMainframe(defaultPage) {
 
 // chooses random string to display on page header
 function randomiseTagline() {
-    let index = Math.floor(Math.random() * TAGLINES.length);
-    let random_tagline = TAGLINES[index];
+    let index = Math.floor(Math.random() * SPLASHES.length);
+    let random_splash = SPLASHES[index];
 
-    tagline.innerHTML = random_tagline;
+    splash.innerHTML = random_splash;
 }
 
 function toggleNaviMenu() {
