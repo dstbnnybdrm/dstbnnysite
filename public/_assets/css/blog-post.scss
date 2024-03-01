@@ -3,7 +3,7 @@
 @mixin figure-margin() {
     margin-top: var(--spacing-050);
     margin-bottom: var(--spacing-050);
-    margin-left: var(--spacing-175);
+    margin-left: var(--spacing-200);
 }
 
 /* ----- */
@@ -25,6 +25,8 @@
     }
 
     &__eyebrow {
+        margin-bottom: var(--spacing-050);
+
         text-transform: uppercase;
         @include base.text-style(sans, normal, bold);
         @include base.text-size(small);
@@ -54,12 +56,14 @@
     &__heading {
         @include base.text-style(sans);
         @include base.text-size(larger);
+        line-height: var(--line-height-larger);
         letter-spacing: var(--letter-spacing-120);
     }
 
     &__copy {
         @include base.text-style(sans);
         @include base.text-size(base);
+        line-height: var(--line-height-large);
         letter-spacing: var(--letter-spacing-100);
 
         @include base.emphasis-serif();
@@ -104,7 +108,10 @@
     }
 
     &__figure {
-        display: block;
+        display: flex;
+
+        flex-direction: column;
+        row-gap: var(--spacing-025);
 
         @include figure-margin();
     }
@@ -112,11 +119,11 @@
     &__figure-caption {
         @include base.text-style(serif, italic);
         @include base.text-size(small);
-        letter-spacing: var(--letter-spacing-120);
+        letter-spacing: var(--letter-spacing-140);
     }
 
     &__figure-body {
-        width: 100%;
+        width: 83%;
     }
 
     &__footer {

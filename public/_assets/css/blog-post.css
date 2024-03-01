@@ -208,6 +208,7 @@ abbr {
   margin-bottom: var(--spacing-150);
 }
 .blog-post__eyebrow {
+  margin-bottom: var(--spacing-050);
   text-transform: uppercase;
   color: var(--color-base);
   font-style: normal;
@@ -252,6 +253,7 @@ abbr {
   font-family: var(--font-family-base);
   font-size: var(--font-size-larger);
   line-height: var(--line-height-larger);
+  line-height: var(--line-height-larger);
   letter-spacing: var(--letter-spacing-120);
 }
 .blog-post__copy {
@@ -261,6 +263,7 @@ abbr {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
+  line-height: var(--line-height-large);
   letter-spacing: var(--letter-spacing-100);
 }
 .blog-post__copy i,
@@ -284,7 +287,7 @@ abbr {
   display: block;
   margin-top: var(--spacing-050);
   margin-bottom: var(--spacing-050);
-  margin-left: var(--spacing-175);
+  margin-left: var(--spacing-200);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -320,10 +323,12 @@ abbr {
   letter-spacing: var(--letter-spacing-110);
 }
 .blog-post__figure {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-025);
   margin-top: var(--spacing-050);
   margin-bottom: var(--spacing-050);
-  margin-left: var(--spacing-175);
+  margin-left: var(--spacing-200);
 }
 .blog-post__figure-caption {
   color: var(--color-base);
@@ -332,10 +337,10 @@ abbr {
   font-family: var(--font-family-alt);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  letter-spacing: var(--letter-spacing-120);
+  letter-spacing: var(--letter-spacing-140);
 }
 .blog-post__figure-body {
-  width: 100%;
+  width: 83%;
 }
 .blog-post__footer {
   display: block;
