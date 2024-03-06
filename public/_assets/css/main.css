@@ -1095,6 +1095,9 @@ abbr {
   font-weight: normal;
   font-family: var(--font-family-base);
 }
+.description-list__description:has(+ .description-list__description)::after {
+  content: ",";
+}
 
 .poem {
   display: flex;

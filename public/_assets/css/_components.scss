@@ -223,6 +223,12 @@
         display: inline;
 
         @include base.text-style(sans);
+
+        &:has(+ &) {
+            &::after {
+                content: ",";
+            }
+        }
     }
 }
 
