@@ -33,7 +33,7 @@
             "main"
             "status"
             "directories"
-            "collection"
+            "marquee"
             "footer";
         grid-template-rows: repeat(7, auto);
 
@@ -73,7 +73,7 @@
         grid-template-areas:
             "header     header"
             "sidebar    main"
-            "sidebar    collection"
+            "sidebar    marquee"
             "footer     footer";
         grid-template-columns: min-content 1fr;
         grid-template-rows: auto 1fr min-content var(--spacing-200);
@@ -134,7 +134,7 @@
             }
         }
 
-        &__collection {
+        &__marquee {
             @include base.layout-border();
             padding: var(--spacing-075) var(--spacing-100);
 
@@ -694,8 +694,8 @@
     }
 }
 
-.collection {
-    grid-area: collection;
+.marquee {
+    grid-area: marquee;
 }
 
 .footer {

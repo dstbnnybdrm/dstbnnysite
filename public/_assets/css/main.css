@@ -236,7 +236,7 @@ abbr {
 @media screen and (max-width: 800px) {
   .page {
     padding: var(--spacing-200);
-    grid-template-areas: "header" "navi" "theme-toggle" "main" "status" "directories" "collection" "footer";
+    grid-template-areas: "header" "navi" "theme-toggle" "main" "status" "directories" "marquee" "footer";
     grid-template-rows: repeat(7, auto);
     width: var(--measure-max);
   }
@@ -266,7 +266,7 @@ abbr {
 @media screen and (min-width: 801px) {
   .page {
     padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
-    grid-template-areas: "header     header" "sidebar    main" "sidebar    collection" "footer     footer";
+    grid-template-areas: "header     header" "sidebar    main" "sidebar    marquee" "footer     footer";
     grid-template-columns: min-content 1fr;
     grid-template-rows: auto 1fr min-content var(--spacing-200);
     height: 100%;
@@ -307,7 +307,7 @@ abbr {
   .page__navi_borderless {
     border: none;
   }
-  .page__collection {
+  .page__marquee {
     border: 1px solid var(--color-base);
     padding: var(--spacing-075) var(--spacing-100);
     max-height: min-content;
@@ -812,8 +812,8 @@ abbr {
   }
 }
 
-.collection {
-  grid-area: collection;
+.marquee {
+  grid-area: marquee;
 }
 
 .footer {

@@ -7,7 +7,7 @@
  * thank you very much!
  */
 
-const LAYOUT_IDS = ["collection", "footer"];
+const LAYOUT_IDS = ["marquee", "footer"];
 const SPLASHES = [
     "enjoy yr stay",
     "<3 <3 <3",
