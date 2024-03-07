@@ -1064,6 +1064,7 @@ abbr {
 }
 .description-list__description:has(+ .description-list__description)::after {
   content: ",";
+  margin: 0 0.5ch;
 }
 
 .poem {
