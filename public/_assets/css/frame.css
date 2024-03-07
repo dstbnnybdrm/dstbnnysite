@@ -1036,10 +1036,10 @@ abbr {
   margin: 0 var(--spacing-050);
 }
 
-.description-list {
+.definition-list {
   list-style: "❀ ";
 }
-.description-list__term {
+.definition-list__term {
   display: inline;
   color: var(--color-base);
   font-style: italic;
@@ -1047,22 +1047,22 @@ abbr {
   font-family: var(--font-family-alt);
   letter-spacing: var(--letter-spacing-110);
 }
-.description-list__term::before {
+.definition-list__term::before {
   content: "";
   display: block;
   margin-bottom: var(--spacing-025);
 }
-.description-list__term::after {
+.definition-list__term::after {
   content: ":";
 }
-.description-list__description {
+.definition-list__description {
   display: inline;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
 }
-.description-list__description:has(+ .description-list__description)::after {
+.definition-list__description:has(+ .definition-list__description)::after {
   content: ",";
   margin: 0 0.5ch;
 }
