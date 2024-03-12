@@ -280,28 +280,36 @@ abbr {
 
 //:._.:*~  BREAKPOINTS ~*:._.://
 
-// -- main window -- //
-@mixin for-phone {
-    @media screen and (max-width: 800px) {
-        @content;
+@mixin for-viewport-size($size) {
+    @if $size == phone {
+        @media screen and (max-width: 800px) {
+            @content;
+        }
+    } @else if $size == desktop {
+        @media screen and (min-width: 801px) {
+            @content;
+        }
     }
 }
 
-@mixin for-desktop {
-    @media screen and (min-width: 801px) {
-        @content;
+@mixin for-frame-size($size) {
+    @if $size == small {
+        @media (max-width: 599px) {
+            @content;
+        }
+    } @else if $size == large {
+        @media (min-width: 600px) {
+            @content;
+        }
     }
 }
 
-// -- content frame -- //
-@mixin small-frame {
-    @media (max-width: 599px) and (max-height: 459px) {
-        @content;
-    }
-}
-
-@mixin large-frame {
-    @media (min-width: 600px) and (min-height: 460px) {
+// when user happens to be inside the main content frame (i.e. they
+// clicked "show only this frame", etc. lol)
+// only really accounts for desktop, but idek how you'd enter the frame
+// on mobile lmao so ¯\_(ツ)_/¯
+@mixin for-in-frame() {
+    @media screen and (min-width: 750px) {
         @content;
     }
 }
@@ -309,12 +317,12 @@ abbr {
 //:._.:*~ LAYOUT BLOCKS ~*:._.://
 
 .l-imposter {
-    @include for-phone() {
+    @include for-viewport-size(phone) {
         display: flex;
         justify-content: center;
     }
 
-    @include for-desktop() {
+    @include for-viewport-size(desktop) {
         display: flex;
         position: absolute;
 
@@ -339,7 +347,7 @@ abbr {
     row-gap: var(--spacing-100);
 
     &_horizontal {
-        @include large-frame() {
+        @include for-frame-size(large) {
             flex-direction: row;
             column-gap: var(--spacing-100);
         }
