@@ -183,7 +183,7 @@ abbr {
   flex-direction: column;
   row-gap: var(--spacing-100);
 }
-@media (min-width: 600px) and (min-height: 460px) {
+@media (min-width: 600px) {
   .l-stack_horizontal {
     flex-direction: row;
     column-gap: var(--spacing-100);
@@ -771,8 +771,10 @@ abbr {
 }
 .main-body__breadcrumb {
   margin-bottom: var(--spacing-075);
+  border-bottom: 1px var(--color-base) dotted;
+  padding-bottom: var(--spacing-075);
 }
-@media (min-width: 600px) and (min-height: 460px) {
+@media (min-width: 600px) {
   .main-body_home {
     display: grid;
     grid-template-areas: "welcome news-feed" "update update";
@@ -783,10 +785,10 @@ abbr {
     height: 100vh;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 750px) {
   .main-body {
-    max-width: 58rem;
-    margin: auto;
+    margin: 5% auto 0 auto;
+    padding: 0 12%;
   }
 }
 
@@ -841,7 +843,7 @@ abbr {
 .feed__entry:nth-child(n+4) {
   display: none;
 }
-@media (min-width: 600px) and (min-height: 460px) {
+@media (min-width: 600px) {
   .feed__entry:nth-child(n+4) {
     display: block;
   }
@@ -891,7 +893,7 @@ abbr {
   min-height: 0;
 }
 
-/* for screen readers */
+/* for visually hiding landmarks needed for screen readers */
 .hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -903,6 +905,10 @@ abbr {
   width: 1px;
 }
 
+.breadcrumb {
+  /* only shows up if user somehow enters the main content frame itself */
+  display: none;
+}
 .breadcrumb__list {
   display: flex;
 }
@@ -934,6 +940,11 @@ abbr {
   font-family: var(--font-family-alt);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
+}
+@media screen and (min-width: 750px) {
+  .breadcrumb {
+    display: block;
+  }
 }
 
 .page-navi__header {

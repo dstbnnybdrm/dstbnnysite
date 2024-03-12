@@ -23,7 +23,7 @@
         }
     }
 
-    @include base.for-phone() {
+    @include base.for-viewport-size(phone) {
         padding: var(--spacing-200);
 
         grid-template-areas:
@@ -67,7 +67,7 @@
         }
     }
 
-    @include base.for-desktop() {
+    @include base.for-viewport-size(desktop) {
         padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
 
         grid-template-areas:
@@ -172,7 +172,7 @@
         text-align: center;
     }
 
-    @include base.for-desktop() {
+    @include base.for-viewport-size(desktop) {
         justify-content: center;
 
         &__splash {
@@ -188,7 +188,7 @@
 .sidebar {
     grid-area: sidebar;
 
-    @include base.for-phone() {
+    @include base.for-viewport-size(phone) {
         display: contents;
 
         &__status {
@@ -209,7 +209,7 @@
         }
     }
 
-    @include base.for-desktop() {
+    @include base.for-viewport-size(desktop) {
         display: grid;
 
         grid-template-areas:
@@ -263,7 +263,7 @@
     &__title {
     }
 
-    @include base.for-phone() {
+    @include base.for-viewport-size(phone) {
         display: flex;
 
         flex-direction: column;
@@ -340,7 +340,7 @@
         }
     }
 
-    @include base.for-desktop() {
+    @include base.for-viewport-size(desktop) {
         &__button {
             display: none;
         }
@@ -391,7 +391,7 @@
         letter-spacing: var(--letter-spacing-120);
     }
 
-    @include base.for-phone() {
+    @include base.for-viewport-size(phone) {
         &__button {
             display: block;
 
@@ -447,7 +447,7 @@
         }
     }
 
-    @include base.for-desktop() {
+    @include base.for-viewport-size(desktop) {
         // &__body {
         // }
 
@@ -485,7 +485,7 @@
 .sitemap {
     @include base.text-style(sans);
 
-    @include base.for-phone() {
+    @include base.for-viewport-size(phone) {
         display: flex;
 
         flex-direction: column;
@@ -530,7 +530,7 @@
         }
     }
 
-    @include base.for-desktop() {
+    @include base.for-viewport-size(desktop) {
         &__subheading {
             display: list-item;
 
@@ -655,7 +655,7 @@
         width: 100%;
     }
 
-    @include base.for-desktop() {
+    @include base.for-viewport-size(desktop) {
         &__frame {
             height: 100%;
         }
@@ -668,11 +668,14 @@
     flex-direction: column;
     row-gap: 1em;
 
+    // only shows up if user somehow enters the main content frame itself lol
     &__breadcrumb {
         margin-bottom: var(--spacing-075);
+        border-bottom: 1px var(--color-base) dotted;
+        padding-bottom: var(--spacing-075);
     }
 
-    @include base.large-frame() {
+    @include base.for-frame-size(large) {
         &_home {
             display: grid;
 
@@ -691,9 +694,9 @@
         }
     }
 
-    @media screen and (min-width: 1000px) {
-        max-width: 58rem;
-        margin: auto;
+    @include base.for-in-frame() {
+        margin: 5% auto 0 auto;
+        padding: 0 12%;
     }
 }
 

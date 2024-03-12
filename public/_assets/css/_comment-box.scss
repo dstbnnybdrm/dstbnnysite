@@ -65,11 +65,11 @@ div #HCB_comment_box {
         }
     }
 
-    @include base.for-phone() {
+    @include base.for-viewport-size(phone) {
         width: 100%;
     }
 
-    @include base.for-desktop() {
+    @include base.for-viewport-size(desktop) {
         display: grid;
         column-gap: var(--spacing-100);
 
@@ -187,7 +187,7 @@ textarea#hcb_form_content {
         }
     }
 
-    @include base.for-desktop() {
+    @include base.for-viewport-size(desktop) {
         overflow-y: auto;
         overflow-x: hidden !important;
 

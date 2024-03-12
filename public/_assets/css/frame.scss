@@ -5,7 +5,7 @@
 //     height: 100%;
 
 //     scrollbar-gutter: stable;
-//     @include base.small-frame() {
+//     @include base.for-frame-size(small) {
 //         overflow-y: hidden;
 //     }
 // }

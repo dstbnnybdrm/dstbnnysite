@@ -29,7 +29,7 @@
         }
     }
 
-    @include base.large-frame() {
+    @include base.for-frame-size(large) {
         &__entry {
             &:nth-child(n + 4) {
                 display: block;
@@ -91,7 +91,7 @@
     min-height: 0;
 }
 
-/* for screen readers */
+/* for visually hiding landmarks needed for screen readers */
 .hidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -104,6 +104,9 @@
 }
 
 .breadcrumb {
+    /* only shows up if user somehow enters the main content frame itself */
+    display: none;
+
     &__list {
         display: flex;
     }
@@ -128,6 +131,10 @@
     &__current {
         @include base.text-style(serif, italic);
         @include base.text-size(small);
+    }
+
+    @include base.for-in-frame() {
+        display: block;
     }
 }
 
