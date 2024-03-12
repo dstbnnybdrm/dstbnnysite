@@ -608,6 +608,10 @@ abbr {
     font-family: var(--font-family-base);
     list-style: "∟ ";
   }
+  .blog-navi__item {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 
 .sitemap {

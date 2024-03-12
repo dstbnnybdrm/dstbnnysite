@@ -474,8 +474,10 @@
             @include base.list-style(navi);
         }
 
-        // &__item {
-        // }
+        &__item {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
 
         // &__link {
         // }
