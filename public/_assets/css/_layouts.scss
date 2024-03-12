@@ -76,7 +76,7 @@
             "sidebar    marquee"
             "footer     footer";
         grid-template-columns: min-content 1fr;
-        grid-template-rows: auto 1fr min-content var(--spacing-200);
+        grid-template-rows: min-content 1fr min-content var(--spacing-200);
 
         height: 100%;
         max-width: var(--measure-max);
@@ -217,10 +217,14 @@
             "theme-toggle"
             "status"
             "directories";
-        grid-template-rows: min-content var(--spacing-200) 1fr min-content;
+        grid-template-rows:
+            auto var(--spacing-200) 2fr
+            auto;
+        grid-template-columns: min-content;
         row-gap: var(--spacing-100);
 
         &__navi {
+            overflow-y: auto;
             @include base.layout-border();
             @include base.layout-padding();
         }
@@ -234,6 +238,7 @@
             @include base.layout-border();
             @include base.layout-padding();
 
+            overflow-y: auto;
             min-height: 0;
         }
 
@@ -583,8 +588,6 @@
     }
 
     &__body {
-        min-height: 0;
-        overflow-y: auto;
     }
 
     &__body-copy {
