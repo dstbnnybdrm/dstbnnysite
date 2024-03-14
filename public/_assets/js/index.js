@@ -27,6 +27,7 @@ const SPLASHES = [
     "when you come back i'll still be here",
     "see you at home!",
     ">:3c",
+    "welcome to my paracosm",
 ];
 const URL_PARAMETER = "p";
 const TEMPLATE_URL = "/_assets/template/";
