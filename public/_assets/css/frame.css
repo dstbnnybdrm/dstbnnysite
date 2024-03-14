@@ -869,6 +869,9 @@ abbr {
   user-select: none;
   color: var(--color-base);
 }
+.ascii-art__inline {
+  display: inline;
+}
 
 .section {
   display: flex;

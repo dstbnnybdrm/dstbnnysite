@@ -46,6 +46,10 @@
     user-select: none;
 
     color: var(--color-base);
+
+    &__inline {
+        display: inline;
+    }
 }
 
 .section {
