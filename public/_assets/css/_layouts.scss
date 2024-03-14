@@ -10,8 +10,9 @@
 
         flex-direction: column;
         row-gap: var(--spacing-125);
-        min-height: 0;
         justify-content: center;
+
+        min-height: 0;
     }
 
     &__header {
@@ -45,6 +46,10 @@
             padding-top: var(--spacing-100);
 
             &_borderless {
+                border: none;
+            }
+
+            &_closet {
                 border: none;
             }
         }
@@ -133,6 +138,10 @@
             &_borderless {
                 border: none;
             }
+
+            &_closet {
+                border: none;
+            }
         }
 
         &__marquee {
@@ -147,6 +156,10 @@
             @include base.layout-padding();
 
             &_blog {
+                border: none;
+            }
+
+            &_closet {
                 border: none;
             }
         }
