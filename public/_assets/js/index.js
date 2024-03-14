@@ -30,7 +30,7 @@ const SPLASHES = [
     "welcome to my paracosm",
 ];
 const URL_PARAMETER = "p";
-const TEMPLATE_URL = "/_assets/template/";
+const TEMPLATE_URL = "/_assets/template/layout/";
 const HOME_URL = "/home.html";
 
 const mainframe = document.getElementsByName("mainframe")[0];
