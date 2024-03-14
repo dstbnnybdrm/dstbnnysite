@@ -232,6 +232,7 @@ abbr {
 }
 .page__header_blog {
   margin-bottom: calc(var(--spacing-100) * -1);
+  width: min-content;
 }
 @media screen and (max-width: 800px) {
   .page {
@@ -607,9 +608,6 @@ abbr {
     font-weight: normal;
     font-family: var(--font-family-base);
     list-style: "∟ ";
-  }
-  .blog-navi__item {
-    white-space: nowrap;
     text-overflow: ellipsis;
   }
 }

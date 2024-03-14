@@ -183,7 +183,7 @@ abbr {
   flex-direction: column;
   row-gap: var(--spacing-100);
 }
-@media (min-width: 600px) and (min-height: 460px) {
+@media (min-width: 600px) {
   .l-stack_horizontal {
     flex-direction: row;
     column-gap: var(--spacing-100);

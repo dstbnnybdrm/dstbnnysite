@@ -20,6 +20,7 @@
         &_blog {
             // to counteract grid gap in layout
             margin-bottom: calc(var(--spacing-100) * -1);
+            width: min-content;
         }
     }
 
@@ -472,15 +473,14 @@
 
             @include base.text-style(sans);
             @include base.list-style(navi);
-        }
-
-        &__item {
-            white-space: nowrap;
             text-overflow: ellipsis;
         }
 
-        // &__link {
-        // }
+        &__item {
+        }
+
+        &__link {
+        }
     }
 }
 
