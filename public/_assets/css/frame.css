@@ -869,7 +869,7 @@ abbr {
   user-select: none;
   color: var(--color-base);
 }
-.ascii-art__inline {
+.ascii-art_inline {
   display: inline;
 }
 
