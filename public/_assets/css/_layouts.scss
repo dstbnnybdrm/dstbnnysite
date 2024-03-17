@@ -5,7 +5,7 @@
 
     gap: var(--spacing-100);
 
-    &_closet {
+    &_simple {
         display: flex;
 
         flex-direction: column;
@@ -48,10 +48,6 @@
             &_borderless {
                 border: none;
             }
-
-            &_closet {
-                border: none;
-            }
         }
 
         &__main {
@@ -65,10 +61,11 @@
                 border: none;
             }
 
-            &_closet {
+            &_borderless {
                 border: none;
-                width: min-content;
                 margin: auto;
+
+                width: min-content;
             }
         }
     }
@@ -138,10 +135,6 @@
             &_borderless {
                 border: none;
             }
-
-            &_closet {
-                border: none;
-            }
         }
 
         &__marquee {
@@ -159,7 +152,7 @@
                 border: none;
             }
 
-            &_closet {
+            &_borderless {
                 border: none;
             }
         }

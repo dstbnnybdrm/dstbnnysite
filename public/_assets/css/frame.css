@@ -199,7 +199,7 @@ abbr {
   display: grid;
   gap: var(--spacing-100);
 }
-.page_closet {
+.page_simple {
   display: flex;
   flex-direction: column;
   row-gap: var(--spacing-125);
@@ -227,9 +227,6 @@ abbr {
   .page__navi_borderless {
     border: none;
   }
-  .page__navi_closet {
-    border: none;
-  }
   .page__main {
     border-top: 1px dashed var(--color-base);
     border-right: none;
@@ -240,10 +237,10 @@ abbr {
   .page__main_sitemap {
     border: none;
   }
-  .page__main_closet {
+  .page__main_borderless {
     border: none;
-    width: min-content;
     margin: auto;
+    width: min-content;
   }
 }
 @media screen and (min-width: 801px) {
@@ -290,9 +287,6 @@ abbr {
   .page__navi_borderless {
     border: none;
   }
-  .page__navi_closet {
-    border: none;
-  }
   .page__marquee {
     border: 1px solid var(--color-base);
     padding: var(--spacing-075) var(--spacing-100);
@@ -305,7 +299,7 @@ abbr {
   .page__main_blog {
     border: none;
   }
-  .page__main_closet {
+  .page__main_borderless {
     border: none;
   }
 }
