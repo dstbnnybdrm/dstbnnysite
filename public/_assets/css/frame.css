@@ -811,11 +811,13 @@ abbr {
 }
 .footer__list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
 }
 .footer__item {
   display: inline-block;
+  white-space: nowrap;
 }
 .footer__item:not(:last-child)::after {
   content: "|";
@@ -898,6 +900,8 @@ abbr {
   flex-direction: column;
   row-gap: 1em;
   overflow-y: auto;
+  border: none;
+  height: 100%;
   min-height: 0;
 }
 
