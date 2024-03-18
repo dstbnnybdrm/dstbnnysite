@@ -1147,4 +1147,53 @@ abbr {
   display: inline-block;
 }
 
+.button-88x31 {
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: center;
+  width: 88px;
+  height: 31px;
+}
+
+.table {
+  display: table;
+  border: 1px solid var(--color-base);
+  border-collapse: collapse;
+  width: min-content;
+}
+.table__row {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+.table__row i,
+.table__row em {
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  letter-spacing: var(--letter-spacing-110);
+}
+.table__header {
+  border: 1px solid var(--color-base);
+  padding: var(--spacing-100);
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: bold;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-100);
+  text-align: left;
+}
+.table__cell {
+  border: 1px solid var(--color-base);
+  padding: var(--spacing-100);
+  width: 1px;
+  white-space: nowrap;
+}
+
 /*# sourceMappingURL=frame.css.map */
