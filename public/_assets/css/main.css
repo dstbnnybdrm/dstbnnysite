@@ -880,7 +880,7 @@ abbr {
   border-top: 1px dotted var(--color-base);
   padding-top: var(--spacing-075);
 }
-.feed__entry:nth-child(n+4) {
+.feed__entry:nth-child(n+5) {
   display: none;
 }
 @media (min-width: 600px) {
