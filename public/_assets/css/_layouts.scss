@@ -721,12 +721,15 @@
     &__list {
         display: flex;
 
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
     }
 
     &__item {
         display: inline-block;
+
+        white-space: nowrap;
 
         &:not(:last-child)::after {
             content: "|";
