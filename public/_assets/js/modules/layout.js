@@ -1,3 +1,5 @@
+import { fetchHtmlAsText as fetchHtml, TEMPLATE_URL } from "./utility.js";
+
 const LAYOUT_IDS = ["marquee", "footer"];
 const SPLASHES = [
     "enjoy yr stay",
@@ -20,41 +22,25 @@ const SPLASHES = [
     ">:3c",
     "welcome to my paracosm",
 ];
-const TEMPLATE_URL = "/_assets/template/layout/";
+const splashText = document.getElementById("splash");
 
-const splash = document.getElementById("splash");
-
-/*
- * fetches an HTML file's contents.
- *
- * basically taken directly from this stackoverflow answer:
- *
- *      https://stackoverflow.com/a/52349344
- *
- * thank you very much! if only i had learned to do this asynchronously sooner i
- * would have saved hours of banging my head against the wall :')
- */
-async function fetchHtmlAsText(url) {
-    const response = await fetch(url);
-    return await response.text();
-}
-
-// loads the templated major layout sections (ex. footer) if applicable
+/** loads the templated major layout sections (ex. footer) if applicable */
 export async function load() {
     for (const id of LAYOUT_IDS) {
+        // check if current ID is on this page, move on if not
         let element = document.getElementById(id);
         if (!element) continue;
 
-        let elementUrl = TEMPLATE_URL + id + ".html";
-
-        element.innerHTML = await fetchHtmlAsText(elementUrl);
+        // load into element's HTML
+        let elementUrl = TEMPLATE_URL + "layout/" + id + ".html";
+        element.innerHTML = await fetchHtml(elementUrl);
     }
 }
 
-// chooses a random string to display on the main page header
+/** chooses a random string to display on the main page header */
 export function randomiseSplashText() {
     let index = Math.floor(Math.random() * SPLASHES.length);
     let random_splash = SPLASHES[index];
 
-    splash.innerHTML = random_splash;
+    splashText.innerHTML = random_splash;
 }

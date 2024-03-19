@@ -1,22 +1,29 @@
-import * as Theme from ".modules/theme.js";
-import * as Navi from ".modules/navi.js";
-import * as Frame from ".modules/frame.js";
-import * as Layout from ".modules/layout.js";
-
-const HOME_URL = "/home.html";
-let viewportWidth = document.documentElement.clientWidth;
+import {
+    PageLayouts,
+    currentPage,
+    HOME_URL,
+    updateViewportWidth,
+    currentViewportWidth,
+} from "./modules/utility.js";
+import * as Theme from "./modules/theme.js";
+import * as Navi from "./modules/navi.js";
+import * as Frame from "./modules/frame.js";
+import * as Layout from "./modules/layout.js";
 
 window.onload = () => {
+    // update the theme colours
     Theme.update();
 
-    // page setup depending on if blog/main/etc.
-    switch (window.location.pathname) {
-        case "/blog.html":
-            let postNavButtons = document.querySelectorAll(".blog-navi__link");
-            let recent_post_location = postNavButtons[1].getAttribute("href");
-            Frame.setSource(recent_post_location);
+    // set up page depending on which layout it should have
+    switch (currentPage()) {
+        case PageLayouts.BLOG:
+            // set frame to most recent blog post
+            const blogPostList = document.querySelectorAll(".blog-navi__link");
+            const mostRecentBlogPost = blogPostButton[1].getAttribute("href");
+            Frame.setSource(mostRecentBlogPost);
             break;
-        case "/":
+        case PageLayouts.MAIN:
+            // set frame to home page
             Frame.setSource(HOME_URL);
             Layout.randomiseSplashText();
             break;
@@ -24,8 +31,7 @@ window.onload = () => {
             break;
     }
 
-    // update mainframe if on current page
-    if (Frame.mainframe != null) {
+    if (Frame.exists()) {
         Frame.mainframe.addEventListener("load", Frame.updateHistory);
         Frame.mainframe.addEventListener("load", Frame.updateSize);
 
@@ -35,14 +41,15 @@ window.onload = () => {
         });
     }
 
-    // load content of major layout sections (footer, collection, etc.)
+    // load content of major layout sections (footer, marquee, etc.) if
+    // applicable
     Layout.load();
 };
 
 // dynamically resize frame size when the viewport width changes
 window.addEventListener("resize", function () {
-    if (viewportWidth != document.documentElement.clientWidth) {
+    if (viewportWidth != currentViewportWidth()) {
         Frame.updateSize();
     }
-    viewportWidth = document.documentElement.clientWidth;
+    updateViewportWidth();
 });

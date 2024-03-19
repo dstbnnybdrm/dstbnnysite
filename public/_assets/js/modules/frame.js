@@ -1,5 +1,5 @@
 /*
- * portions of this code have been taken and modified from:
+ * large portions of this module have been taken and modified from:
  *
  *      https://forum.melonland.net/index.php?topic=115
  *
@@ -44,7 +44,7 @@ export function setSource(defaultPage) {
 
 // dynamically updates the height of main iframe
 export function updateSize() {
-    if (mainframe == null) {
+    if (exists()) {
         return;
     }
 
@@ -55,4 +55,10 @@ export function updateSize() {
     // add 5 extra pixels to prevent unwanted scrolling (which shouldn't happen
     // anyway, but it does lmao)
     mainframe.height = frameContent.document.body.scrollHeight + 5 + "px";
+}
+
+export function exists() {
+    return mainframe == null //
+        ? false
+        : true;
 }
