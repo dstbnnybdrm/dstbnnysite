@@ -1,7 +1,7 @@
-import * as Theme from "./theme.js";
-import * as Navi from "./navi.js";
-import * as Frame from "./frame.js";
-import * as Layout from "./layout.js";
+import * as Theme from ".modules/theme.js";
+import * as Navi from ".modules/navi.js";
+import * as Frame from ".modules/frame.js";
+import * as Layout from ".modules/layout.js";
 
 const HOME_URL = "/home.html";
 let viewportWidth = document.documentElement.clientWidth;
