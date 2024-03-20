@@ -14,7 +14,7 @@ let isFirstLoad = true;
  * updates the URL and history to specify the page currently viewing within the
  * mainframe
  */
-function updateHistory() {
+export function updateHistory() {
     const mainframePageTitle = mainframe.contentDocument.title;
 
     if (isFirstLoad) {
@@ -44,7 +44,7 @@ export function setSource(defaultPage) {
 
 // dynamically updates the height of main iframe
 export function updateSize() {
-    if (exists()) {
+    if (!exists()) {
         return;
     }
 
