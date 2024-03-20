@@ -1,5 +1,5 @@
 // for toggling small screen navigation menu
-const button = document.getElementById("navi-button");
+export const button = document.getElementById("navi-button");
 const menu = document.getElementById("navi-menu");
 
 export function toggleMenu() {
