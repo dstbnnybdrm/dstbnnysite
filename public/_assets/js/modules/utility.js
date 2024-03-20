@@ -22,7 +22,6 @@ export const PageLayouts = Object.freeze({
  * @returns the unique ID for the current page
  */
 export function currentPage() {
-    console.log(window.location.pathname);
     const pathname = window.location.pathname;
 
     if (pathname.includes("blog")) return PageLayouts.BLOG;
