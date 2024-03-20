@@ -1,28 +1,7 @@
-import { fetchHtmlAsText as fetchHtml, TEMPLATE_URL } from "./utility.js";
+import { fetchAsText, TEMPLATE_URL } from "./utility.js";
 
 const LAYOUT_IDS = ["marquee", "footer"];
-const SPLASHES = [
-    "enjoy yr stay",
-    "<3 <3 <3",
-    "proof of my existence",
-    "take care of yourself!",
-    'a <a href="/closet/butterfly.html">butterfly</a> \
-        perches itself atop your fingertip',
-    "home to <a>Lorna</a>",
-    "picture that. in your dreams.",
-    ":3c",
-    "be yourself, violently, and unabashedly",
-    "the internet is dead!",
-    "St. Jack forever and ever",
-    "hikkikimori hours",
-    "<3 <3 <3 <3 <3 <3",
-    "as long the Earth, Sun, and Moon exist",
-    "when you come back i'll still be here",
-    "see you at home!",
-    ">:3c",
-    "welcome to my paracosm",
-];
-const splashText = document.getElementById("splash");
+const splashElement = document.getElementById("splash");
 
 /** loads the templated major layout sections (ex. footer) if applicable */
 export async function load() {
@@ -32,15 +11,24 @@ export async function load() {
         if (!element) continue;
 
         // load into element's HTML
-        let elementUrl = TEMPLATE_URL + "layout/" + id + ".html";
-        element.innerHTML = await fetchHtml(elementUrl);
+        const elementUrl = TEMPLATE_URL + "layout/" + id + ".html";
+        element.innerHTML = await fetchAsText(elementUrl);
     }
 }
 
-/** chooses a random string to display on the main page header */
-export function randomiseSplashText() {
-    let index = Math.floor(Math.random() * SPLASHES.length);
-    let random_splash = SPLASHES[index];
+/** returns an array of all the splash texts */
+async function getSplashes() {
+    let splashes = await fetchAsText(TEMPLATE_URL + "layout/splash.txt");
+    let splashList = splashes.split("\n");
+    splashList.pop(); // remove the final empty string
+    return splashList;
+}
 
-    splashText.innerHTML = random_splash;
+/** chooses a random splash text to display on the main page header */
+export async function randomiseSplashText() {
+    const splashList = await getSplashes();
+    const index = Math.floor(Math.random() * splashList.length);
+    const random_splash = splashList[index];
+
+    splashElement.innerHTML = random_splash;
 }
