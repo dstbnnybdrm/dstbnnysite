@@ -1,5 +1,6 @@
 export const HOME_URL = "/home.html";
 export const TEMPLATE_URL = "/_assets/template/";
+export const BLOG_POST_LIST = document.querySelectorAll(".blog-navi__link");
 
 export let viewportWidth = document.documentElement.clientWidth;
 
@@ -21,24 +22,17 @@ export const PageLayouts = Object.freeze({
  * @returns the unique ID for the current page
  */
 export function currentPage() {
-    switch (window.location.pathname.includes) {
-        case "blog":
-            console.log("currently viewing blog");
-            return PageLayouts.BLOG;
-        case "guestbook":
-            console.log("currently viewing guestbook");
-            return PageLayouts.GUESTBOOK;
-        case "closet":
-            console.log("currently viewing closet");
-            return PageLayouts.CLOSET;
-        default:
-            console.log("currently viewing main layout (hopefully)");
-            return PageLayouts.MAIN;
-    }
+    console.log(window.location.pathname);
+    const pathname = window.location.pathname;
+
+    if (pathname.includes("blog")) return PageLayouts.BLOG;
+    else if (pathname.includes("guestbook")) return PageLayouts.GUESTBOOK;
+    else if (pathname.includes("closet")) return PageLayouts.CLOSET;
+    else return PageLayouts.MAIN;
 }
 
 /**
- * fetches an HTML file's contents.
+ * fetches a text file's contents.
  *
  * basically taken directly from this stackoverflow answer:
  *
@@ -47,7 +41,7 @@ export function currentPage() {
  * (thank you very much! if only i had learned to do this asynchronously sooner i
  * would have saved hours of banging my head against the wall *sob*)
  */
-export async function fetchHtmlAsText(url) {
+export async function fetchAsText(url) {
     const response = await fetch(url);
     return await response.text();
 }
