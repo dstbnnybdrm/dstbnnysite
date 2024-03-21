@@ -13,7 +13,7 @@ import * as Layout from "./modules/layout.js";
 
 window.addEventListener("DOMContentLoaded", function () {
     // update the theme colours
-    Theme.update();
+    Theme.load();
 
     // set up page depending on which layout it should have
     switch (currentPage()) {
