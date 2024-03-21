@@ -1,6 +1,7 @@
 export const HOME_URL = "/home.html";
 export const TEMPLATE_URL = "/_assets/template/";
 export const BLOG_POST_LIST = document.querySelectorAll(".blog-navi__link");
+export const ROOT = document.documentElement;
 
 export let viewportWidth = document.documentElement.clientWidth;
 

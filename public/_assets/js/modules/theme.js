@@ -1,67 +1,67 @@
-/**
- * calculate the current theme setting.
- * Look for a local storage value.
- * Fall back to system setting.
- * Fall back to light mode.
- */
-function getCurrentTheme(localStorageTheme, isSystemPreferenceDark) {
-    if (localStorageTheme !== null) {
-        console.log("using local storage theme: " + localStorageTheme);
-        return localStorageTheme;
-    }
+import { ROOT } from "./utility.js";
 
-    if (isSystemPreferenceDark) {
-        console.log("using system preference theme: dark");
-        return "dark";
-    }
-
-    console.log("using system preference theme: light");
-    return "light";
-}
+const Themes = { DARK: "dark", LIGHT: "light" };
+const TOGGLE_BUTTON = document.getElementById("theme-toggle");
+const THEME_KEY = "theme";
+const cachedTheme = localStorage.getItem(THEME_KEY);
 
 /**
- * update the button text and aria-label.
+ * get the user's preferred theme.
+ *
+ * check local storage, fall back to the user's system preference, fall back to
+ * light theme.
+ *
+ * @returns {Themes} the user's preferred theme
  */
-function updateToggleButton(button, themePreference) {
-    if (button == null) {
-        return;
+function getCurrentTheme() {
+    // if user has visited before check their preferred theme
+    if (cachedTheme) {
+        return cachedTheme;
     }
-    // // use an aria-label if you are omitting text on the button
-    button.ariaLabel = "current theme is " + themePreference;
-    button.innerText = "theme: " + themePreference;
-}
 
-/**
- * update the theme setting on the html tag
- */
-function updateHtml(theme) {
-    document.querySelector("html").setAttribute("data-theme", theme);
-}
-
-export function update() {
-    const themeToggleButton = document.getElementById("theme-toggle");
-    const localStorageTheme = localStorage.getItem("theme");
+    // otherwise, use their system's preference
     const isSystemPreferenceDark = window.matchMedia(
         "(prefers-color-scheme: dark)",
     ).matches;
 
-    let currentTheme = getCurrentTheme(
-        localStorageTheme,
-        isSystemPreferenceDark,
-    );
+    return isSystemPreferenceDark //
+        ? Themes.DARK
+        : Themes.LIGHT;
+}
 
-    updateToggleButton(themeToggleButton, currentTheme);
-    updateHtml(currentTheme);
+/**
+ * set the theme data attribute on the document root to the given theme
+ *
+ * @param {Themes} theme
+ */
+function updateRoot(theme) {
+    ROOT.dataset[THEME_KEY] = theme.valueOf();
+}
 
-    if (themeToggleButton !== null) {
-        themeToggleButton.addEventListener("click", (event) => {
-            const newTheme = currentTheme === "dark" ? "light" : "dark";
+/**
+ * update the TOGGLE_BUTTON's text and aria-label according to the given theme
+ *
+ * @param {Themes} theme
+ */
+function updateToggleButton(theme) {
+    TOGGLE_BUTTON.ariaLabel = "current theme is " + theme.valueOf();
+    TOGGLE_BUTTON.innerText = "theme: " + theme.valueOf();
+}
 
-            localStorage.setItem("theme", newTheme);
-            updateToggleButton(themeToggleButton, newTheme);
-            updateHtml(newTheme);
+export function update() {
+    let currentTheme = getCurrentTheme();
 
-            currentTheme = newTheme;
-        });
-    }
+    updateRoot(currentTheme);
+    updateToggleButton(currentTheme);
+
+    TOGGLE_BUTTON?.addEventListener("click", () => {
+        const newTheme =
+            currentTheme === Themes.DARK ? Themes.LIGHT : Themes.DARK;
+
+        localStorage.setItem(THEME_KEY, newTheme.valueOf());
+        updateRoot(newTheme);
+        updateToggleButton(newTheme);
+
+        currentTheme = newTheme;
+    });
 }
