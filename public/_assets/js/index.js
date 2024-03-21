@@ -11,8 +11,9 @@ import * as Navi from "./modules/navi.js";
 import * as Frame from "./modules/frame.js";
 import * as Layout from "./modules/layout.js";
 
+// page set up
 window.addEventListener("DOMContentLoaded", function () {
-    // update the theme colours
+    // load user's preferred theme
     Theme.load();
 
     // set up page depending on which layout it should have
@@ -34,19 +35,6 @@ window.addEventListener("DOMContentLoaded", function () {
             break;
     }
 
-    if (Frame.exists()) {
-        // update size on load/refresh
-        Frame.updateSize();
-        // update size on new page source
-        Frame.mainframe.addEventListener("load", Frame.updateHistory);
-        Frame.mainframe.addEventListener("load", Frame.updateSize);
-
-        // auto-close mobile navigation menu after switching pages
-        Frame.mainframe.addEventListener("load", function () {
-            if (Navi.isMenuOpen()) Navi.toggleMenu();
-        });
-    }
-
     // load content of major layout sections (footer, marquee, etc.) if
     // applicable
     Layout.load();
@@ -58,4 +46,14 @@ window.addEventListener("resize", function () {
         Frame.updateSize();
     }
     updateViewportWidth();
+});
+
+// update frame on source page change
+Frame.mainframe?.addEventListener("load", Frame.updateHistory);
+Frame.mainframe?.addEventListener("load", Frame.updateSize);
+Frame.mainframe?.addEventListener("load", Theme.updateFrame);
+
+// auto-close mobile navigation menu after changing pages
+Frame.mainframe.addEventListener("load", function () {
+    if (Navi.isMenuOpen()) Navi.toggleMenu();
 });

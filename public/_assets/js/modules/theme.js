@@ -21,15 +21,26 @@ function getCurrentTheme() {
         return cachedTheme;
     }
 
-    console.log("using system preference");
     // otherwise, use their system's preference
+    console.log("using system preference");
     const isSystemPreferenceDark = window.matchMedia(
         "(prefers-color-scheme: dark)",
     ).matches;
+    console.log("system preference is dark? " + isSystemPreferenceDark);
 
-    return isSystemPreferenceDark //
+    return isSystemPreferenceDark == true //
         ? Themes.DARK
         : Themes.LIGHT;
+}
+
+export function updateFrame() {
+    if (!mainframe) return;
+
+    const frameDocument =
+        mainframe.contentWindow.document || mainframe.contentDocument;
+    const frameRoot = frameDocument.documentElement;
+
+    frameRoot.dataset[THEME_KEY] = getCurrentTheme().valueOf();
 }
 
 /**
@@ -39,13 +50,6 @@ function getCurrentTheme() {
  */
 function updateRoot(theme) {
     ROOT.dataset[THEME_KEY] = theme.valueOf();
-}
-
-export function updateFrame(theme) {
-    frameDocument =
-        mainframe.contentWindow.document || mainframe.contentDocument;
-
-    frameDocument[THEME_KEY] = theme.valueOf();
 }
 
 /**
