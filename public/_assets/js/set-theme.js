@@ -5,6 +5,7 @@
  * mostly borrowed from:
  *   https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/
  *
+ * @returns {undefined}
  */
 (() => {
     const ROOT = document.documentElement;

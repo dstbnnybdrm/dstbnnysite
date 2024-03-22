@@ -1,55 +1,71 @@
+/*
+ * general functions, var, and objects that could be needed anywhere.
+ */
+
+/** @type {string} */
 export const HOME_URL = "/home.html";
+/** @type {string} */
 export const TEMPLATE_URL = "/_assets/template/";
+/** @type {Array<?HTMLElement} */
 export const BLOG_POST_LIST = document.querySelectorAll(".blog-navi__link");
+/** @type {?HTMLElement} */
 export const ROOT = document.documentElement;
 
-export let viewportWidth = document.documentElement.clientWidth;
+/** @type {number} */
+let viewportWidth = document.documentElement.clientWidth;
 
 /**
- * unique IDs for each distinct major page
+ * unique IDs for each distinct page that has a main iframe. needed because each
+ * may have their own unique behaviour.
  *
- * needed because each has their own unique layout and behaviour
+ * @enum {string}
  */
 export const PageLayouts = Object.freeze({
-    MAIN: Symbol("main"),
-    BLOG: Symbol("blog"),
-    GUESTBOOK: Symbol("guestbook"),
-    CLOSET: Symbol("closet"),
+    MAIN: "main",
+    BLOG: "blog",
 });
 
 /**
  * determine the current page layout
  *
- * @returns the unique ID for the current page
+ * @returns {PageLayouts} the unique ID for the current page
  */
 export function currentPage() {
     const pathname = window.location.pathname;
 
-    if (pathname.includes("blog")) return PageLayouts.BLOG;
-    else if (pathname.includes("guestbook")) return PageLayouts.GUESTBOOK;
-    else if (pathname.includes("closet")) return PageLayouts.CLOSET;
-    else return PageLayouts.MAIN;
+    // this seems extra for now but maybe i'll have more PageLayouts in the
+    // future lol
+    for (let page in PageLayouts) {
+        if (pathname.includes(page.valueOf())) return page;
+    }
+    return PageLayouts.MAIN;
 }
 
 /**
- * fetches a text file's contents.
+ * fetch a text file's contents as text.
  *
  * basically taken directly from this stackoverflow answer:
  *
  *      https://stackoverflow.com/a/52349344
  *
- * (thank you very much! if only i had learned to do this asynchronously sooner i
- * would have saved hours of banging my head against the wall *sob*)
+ * thank you very much!
+ *
+ *  @returns {Promise<string>} the file's contents
  */
 export async function fetchAsText(url) {
     const response = await fetch(url);
     return await response.text();
 }
 
-export function currentViewportWidth() {
+function currentViewportWidth() {
     return document.documentElement.clientWidth;
 }
 
+export function viewportWidthChanged() {
+    return viewportWidth != currentViewportWidth();
+}
+
+/**  @returns {undefined} */
 export function updateViewportWidth() {
     viewportWidth = currentViewportWidth();
 }

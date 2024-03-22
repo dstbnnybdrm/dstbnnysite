@@ -6,15 +6,27 @@
  * thank you very much!
  */
 
+/**
+ * the key value to use for viewing pages within the
+ * mainframe
+ *
+ * @type {string}
+ */
 const URL_PARAMETER = "p";
+/** @type {?HTMLElement} the iframe holding the page's main content */
 export const mainframe = document.getElementsByName("mainframe")[0];
+/** @type {boolean} */
 let isFirstLoad = true;
 
-/*
- * updates the URL and history to specify the page currently viewing within the
- * mainframe
+/**
+ * update the URL, history, and title to reflect the page currently being viewed
+ * within the mainframe
+ *
+ * @returns {undefined}
  */
 export function updateHistory() {
+    if (!mainframe) return;
+
     const mainframePageTitle = mainframe.contentDocument.title;
 
     if (isFirstLoad) {
@@ -23,16 +35,24 @@ export function updateHistory() {
         return;
     }
 
-    let location = mainframe.contentWindow.location.pathname;
+    const location = mainframe.contentWindow.location.pathname;
     history.replaceState(null, "", "?" + URL_PARAMETER + "=" + location);
 
     document.title = mainframePageTitle;
 }
 
-// checks to see if a url parameter exists and sets the frame source to that page
+/**
+ * check to see if a url parameter exists and then set the frame source to that
+ * page.
+ *
+ * @param {string} defaultPage - the default page to set the frame source to
+ * @returns {undefined}
+ */
 export function setSource(defaultPage) {
-    let parameters = new URLSearchParams(window.location.search);
-    let page = parameters.get(URL_PARAMETER);
+    if (!mainframe) return;
+
+    const parameters = new URLSearchParams(window.location.search);
+    const page = parameters.get(URL_PARAMETER);
 
     mainframe.src =
         page == null //
@@ -42,23 +62,19 @@ export function setSource(defaultPage) {
     updateHistory();
 }
 
-// dynamically updates the height of main iframe
+/**
+ * dynamically update the height of main iframe according to its contents.
+ *
+ * @returns {undefined}
+ */
 export function updateSize() {
-    if (!exists()) {
-        return;
-    }
+    if (!mainframe) return;
 
-    const frameContent = mainframe.contentWindow;
+    const frameContent = mainframe?.contentWindow;
 
-    // reset first, for when the resulting height is smaller than the initial
+    // reset first (for when the resulting height is smaller than the initial)
     mainframe.height = "0";
     // add 5 extra pixels to prevent unwanted scrolling (which shouldn't happen
-    // anyway, but it does lmao)
+    // anyway, but it does lmao ¯\_(ツ)_/¯)
     mainframe.height = frameContent.document.body.scrollHeight + 5 + "px";
-}
-
-export function exists() {
-    return mainframe == null //
-        ? false
-        : true;
 }

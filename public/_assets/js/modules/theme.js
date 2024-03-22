@@ -1,8 +1,21 @@
+/*
+ * lots of the code here is inspired by and borrowed from these two sources:
+ *
+ *      https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f
+ *
+ *      https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/
+ *
+ * thanks a bunch!
+ */
+
 import { ROOT } from "./utility.js";
 import { mainframe } from "./frame.js";
 
-const Themes = { DARK: "dark", LIGHT: "light" };
+/** @enum {string} */
+const Themes = Object.freeze({ DARK: "dark", LIGHT: "light" });
+/** @type {HTMLElement} */
 const TOGGLE_BUTTON = document.getElementById("theme-toggle");
+/** @type {string} */
 const THEME_KEY = "theme";
 
 /**
@@ -16,23 +29,27 @@ const THEME_KEY = "theme";
 function getCurrentTheme() {
     // if user has visited just return their cached theme
     const cachedTheme = localStorage.getItem(THEME_KEY);
+
     if (cachedTheme) {
-        console.log("using local storage");
         return cachedTheme;
     }
 
     // otherwise, use their system's preference
-    console.log("using system preference");
     const isSystemPreferenceDark = window.matchMedia(
         "(prefers-color-scheme: dark)",
     ).matches;
-    console.log("system preference is dark? " + isSystemPreferenceDark);
 
     return isSystemPreferenceDark == true //
         ? Themes.DARK
         : Themes.LIGHT;
 }
 
+/**
+ * set the theme data attribute on the mainframe's root to the given theme
+ *
+ * @param {Themes}
+ * @returns {undefined}
+ */
 export function updateFrame() {
     if (!mainframe) return;
 
@@ -46,17 +63,19 @@ export function updateFrame() {
 /**
  * set the theme data attribute on the document root to the given theme
  *
- * @param {Themes} theme
+ * @param {Themes}
+ * @returns {undefined}
  */
 function updateRoot(theme) {
     ROOT.dataset[THEME_KEY] = theme.valueOf();
+    updateFrame();
 }
 
 /**
- * update the TOGGLE_BUTTON's text and aria-label (if it exists) according to
- * the given theme
+ * update the TOGGLE_BUTTON's text and aria-label according to the given theme.
  *
  * @param {Themes} theme
+ * @returns {undefined}
  */
 function updateButton(theme) {
     if (!TOGGLE_BUTTON) return;
@@ -66,7 +85,10 @@ function updateButton(theme) {
 }
 
 /**
+ * change the current theme to the other alternative and cache it in local
+ * storage as the user's preference.
  *
+ * @returns {undefined}
  */
 function toggle() {
     const currentTheme = getCurrentTheme();
@@ -81,8 +103,10 @@ function toggle() {
 }
 
 /**
- * load the user's preferred theme and update TOGGLE_BUTTON accordingly. and add
- * click event to TOGGLE_BUTTON.
+ * load the user's preferred theme and update TOGGLE_BUTTON accordingly.
+ * should only have to run this once per page load.
+ *
+ * @returns {undefined}
  */
 export function load() {
     let currentTheme = getCurrentTheme();
