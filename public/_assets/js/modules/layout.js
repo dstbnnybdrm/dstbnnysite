@@ -20,7 +20,7 @@ export async function load() {
     for (const id of LAYOUT_IDS) {
         // check if current ID is on this page, move on if not
         let element = document.getElementById(id);
-        if (!element) continue;
+        if (element == null) continue;
 
         // load into element's HTML
         const elementUrl = TEMPLATE_URL + "layout/" + id + ".html";
@@ -49,6 +49,7 @@ async function getSplashes() {
  * @returns {undefined}
  */
 export async function randomiseSplashText() {
+    if (splashElement == null) return;
     const splashList = await getSplashes();
     const index = Math.floor(Math.random() * splashList.length);
     const random_splash = splashList[index];
