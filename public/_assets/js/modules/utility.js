@@ -36,7 +36,7 @@ export function currentPage() {
     // this seems extra for now but maybe i'll have more PageLayouts in the
     // future lol
     for (let page in PageLayouts) {
-        if (pathname.includes(page.valueOf())) return page;
+        if (pathname.includes(PageLayouts[page])) return PageLayouts[page];
     }
     return PageLayouts.MAIN;
 }
