@@ -48,8 +48,8 @@ async function getSplashes() {
  *
  * @returns {undefined}
  */
-export function randomiseSplashText() {
-    const splashList = getSplashes();
+export async function randomiseSplashText() {
+    const splashList = await getSplashes();
     const index = Math.floor(Math.random() * splashList.length);
     const random_splash = splashList[index];
 
