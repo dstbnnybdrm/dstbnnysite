@@ -246,8 +246,8 @@ abbr {
 @media screen and (min-width: 801px) {
   .page {
     padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
-    grid-template-areas: "header     header" "sidebar    main" "sidebar    marquee" "footer     footer";
-    grid-template-columns: min-content 1fr;
+    grid-template-areas: "header           header      header" "major-sidebar    main        minor-sidebar" "major-sidebar    marquee     marquee" "footer           footer      footer";
+    grid-template-columns: min-content 5fr 1fr;
     grid-template-rows: min-content 1fr min-content var(--spacing-200);
     height: 100%;
     max-width: var(--measure-max);
@@ -331,8 +331,11 @@ abbr {
   }
 }
 
-.sidebar {
-  grid-area: sidebar;
+.sidebar_major {
+  grid-area: major-sidebar;
+}
+.sidebar_minor {
+  grid-area: minor-sidebar;
 }
 @media screen and (max-width: 800px) {
   .sidebar {
@@ -355,10 +358,17 @@ abbr {
 @media screen and (min-width: 801px) {
   .sidebar {
     display: grid;
-    grid-template-areas: "navi" "theme-toggle" "status" "directories";
+    row-gap: var(--spacing-100);
+  }
+  .sidebar_major {
+    grid-template-areas: "navi" "theme-toggle" "directories";
     grid-template-rows: auto var(--spacing-200) 2fr auto;
     grid-template-columns: min-content;
-    row-gap: var(--spacing-100);
+  }
+  .sidebar_minor {
+    grid-template-areas: "status";
+    grid-template-rows: auto;
+    grid-template-columns: auto;
   }
   .sidebar__navi {
     overflow-y: auto;
