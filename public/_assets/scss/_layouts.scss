@@ -74,11 +74,11 @@
         padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
 
         grid-template-areas:
-            "header     header"
-            "sidebar    main"
-            "sidebar    marquee"
-            "footer     footer";
-        grid-template-columns: min-content 1fr;
+            "header           header      header"
+            "major-sidebar    main        minor-sidebar"
+            "major-sidebar    marquee     marquee"
+            "footer           footer      footer";
+        grid-template-columns: min-content 5fr 1fr;
         grid-template-rows: min-content 1fr min-content var(--spacing-200);
 
         height: 100%;
@@ -193,7 +193,13 @@
 }
 
 .sidebar {
-    grid-area: sidebar;
+    &_major {
+        grid-area: major-sidebar;
+    }
+
+    &_minor {
+        grid-area: minor-sidebar;
+    }
 
     @include base.for-viewport-size(phone) {
         display: contents;
@@ -219,16 +225,22 @@
     @include base.for-viewport-size(desktop) {
         display: grid;
 
-        grid-template-areas:
-            "navi"
-            "theme-toggle"
-            "status"
-            "directories";
-        grid-template-rows:
-            auto var(--spacing-200) 2fr
-            auto;
-        grid-template-columns: min-content;
         row-gap: var(--spacing-100);
+
+        &_major {
+            grid-template-areas:
+                "navi"
+                "theme-toggle"
+                "directories";
+            grid-template-rows: auto var(--spacing-200) 2fr auto;
+            grid-template-columns: min-content;
+        }
+
+        &_minor {
+            grid-template-areas: "status";
+            grid-template-rows: auto;
+            grid-template-columns: auto;
+        }
 
         &__navi {
             overflow-y: auto;
