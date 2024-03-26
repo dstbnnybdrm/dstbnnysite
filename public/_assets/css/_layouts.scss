@@ -121,9 +121,12 @@
 
             grid-template-areas:
                 "navi       main"
+                ".          main"
                 "footer     footer";
             grid-template-columns: min-content 1fr;
-            grid-template-rows: 1fr var(--spacing-200);
+            grid-template-rows: min-content 1fr var(--spacing-200);
+
+            max-width: 75%;
         }
 
         &_sitemap {

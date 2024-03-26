@@ -51,7 +51,7 @@
 
   <body class="l-imposter">
     <div class="page page_interests">
-      <nav class="page-navi">
+      <nav class="navi page__navi">
         <h1 class="title">interests</h1>
 
         <p class="body-copy">
@@ -61,21 +61,23 @@
 
         <a href="/" class="navi__link">head back?</a>
 
-        <ul class="list page-navi__list">
-          <li class="list__item page-navi__item">
-            <a href="./music.html" target="mainframe">music</a>
-          </li>
-          <li class="list__item page-navi__item">
-            <a href="./rpg-maker.html" target="mainframe">games</a>
-          </li>
-        </ul>
+        <div class="navi__menu" id="navi-menu">
+          <ul class="list page-navi__list">
+            <li class="list__item page-navi__item">
+              <a href="./music.html" target="mainframe">music</a>
+            </li>
+            <li class="list__item page-navi__item">
+              <a href="./rpg-maker.html" target="mainframe">games</a>
+            </li>
+          </ul>
+        </div>
 
         <p class="body-copy">
           (last updated <time datetime="2024-03-26">tue, mar 26th, 2024</time>)
         </p>
       </nav>
 
-      <main id="main" class="main page__main">
+      <main id="main" class="main page__main page__main_borderless">
         <iframe
           class="main__frame"
           name="mainframe"
