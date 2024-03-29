@@ -1,7 +1,8 @@
 @use "base";
 
 .page {
-    display: grid;
+    display: inline-grid; // don't take up full width available
+    // display: contents;
 
     gap: var(--spacing-100);
 
@@ -71,18 +72,17 @@
     }
 
     @include base.for-viewport-size(desktop) {
-        padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
+        // padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
 
         grid-template-areas:
             "header           header      header"
             "major-sidebar    main        minor-sidebar"
             "major-sidebar    marquee     marquee"
             "footer           footer      footer";
-        grid-template-columns: min-content 5fr 1fr;
+        grid-template-columns: min-content fit-content(var(--measure-max)) min-content;
         grid-template-rows: min-content 1fr min-content var(--spacing-200);
 
-        height: 100%;
-        max-width: var(--measure-max);
+        // height: 100%;
 
         &_blog {
             grid-template-areas:
@@ -223,7 +223,7 @@
     }
 
     @include base.for-viewport-size(desktop) {
-        display: grid;
+        display: inline-grid;
 
         row-gap: var(--spacing-100);
 
@@ -232,7 +232,7 @@
                 "navi"
                 "theme-toggle"
                 "directories";
-            grid-template-rows: auto var(--spacing-200) 2fr auto;
+            grid-template-rows: auto var(--spacing-200) 1fr;
             grid-template-columns: min-content;
         }
 
@@ -258,6 +258,7 @@
             @include base.layout-padding();
 
             overflow-y: auto;
+            // overflow-x: visible;
             min-height: 0;
         }
 
@@ -663,7 +664,7 @@
 }
 
 .main {
-    display: block;
+    display: flex;
 
     grid-area: main;
 
@@ -695,29 +696,29 @@
         padding-bottom: var(--spacing-075);
     }
 
-    @include base.for-frame-size(large) {
-        &_home {
-            display: grid;
+    // @include base.for-frame-size(large) {
+    //     &_home {
+    //         display: grid;
 
-            grid-template-areas:
-                "welcome news-feed"
-                "update update";
-            grid-template-columns: 1fr 1fr;
-            row-gap: var(--spacing-100);
-            column-gap: var(--spacing-200);
+    //         grid-template-areas:
+    //             "welcome news-feed"
+    //             "update update";
+    //         grid-template-columns: 1fr 1fr;
+    //         row-gap: var(--spacing-100);
+    //         column-gap: var(--spacing-200);
 
-            grid-template-rows:
-                minmax(0, 3fr)
-                minmax(0, 2fr);
+    //         grid-template-rows:
+    //             minmax(0, 3fr)
+    //             minmax(0, 2fr);
 
-            height: 100vh;
-        }
-    }
+    //         height: 100vh;
+    //     }
+    // }
 
-    @include base.for-in-frame() {
-        margin: 5% auto 0 auto;
-        padding: 0 12%;
-    }
+    // @include base.for-in-frame() {
+    //     margin: 5% auto 0 auto;
+    //     padding: 0 12%;
+    // }
 }
 
 .marquee {
