@@ -1,10 +1,10 @@
 @use "base";
 
 .page {
-    display: inline-grid; // don't take up full width available
-    // display: contents;
+    display: inline-grid;
 
     gap: var(--spacing-100);
+    justify-content: center;
 
     &_simple {
         display: flex;
@@ -40,8 +40,6 @@
             "footer";
         grid-template-rows: repeat(7, auto);
 
-        width: var(--measure-max);
-
         &__navi {
             border-top: 1px solid var(--color-base);
             padding-top: var(--spacing-100);
@@ -72,17 +70,18 @@
     }
 
     @include base.for-viewport-size(desktop) {
-        // padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
+        padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
 
         grid-template-areas:
             "header           header      header"
             "major-sidebar    main        minor-sidebar"
             "major-sidebar    marquee     marquee"
             "footer           footer      footer";
-        grid-template-columns: min-content fit-content(var(--measure-max)) min-content;
+        grid-template-columns: min-content fit-content(var(--measure-max)) 8.3%;
         grid-template-rows: min-content 1fr min-content var(--spacing-200);
 
-        // height: 100%;
+        height: 100%;
+        // width: 40rem;
 
         &_blog {
             grid-template-areas:
@@ -258,7 +257,6 @@
             @include base.layout-padding();
 
             overflow-y: auto;
-            // overflow-x: visible;
             min-height: 0;
         }
 
@@ -606,6 +604,7 @@
         @include base.text-style(sans, normal, bold);
         @include base.text-size(base);
         letter-spacing: var(--letter-spacing-120);
+        white-space: nowrap;
     }
 
     &__body {
