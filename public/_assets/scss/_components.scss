@@ -280,10 +280,13 @@
 }
 
 .image {
+    display: inline-block;
     &_inline {
         display: inline-block;
         height: 1rem;
     }
+    height: min-content;
+    width: min-content;
 }
 
 .buttons-88x31 {
