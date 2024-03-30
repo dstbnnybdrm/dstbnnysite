@@ -6,6 +6,10 @@
     --color-secondary: #4f9c86;
     --color-base: #61193e;
     --color-background: #fffafa;
+    // for transparent, black graphics
+    // converted using: https://codepen.io/sosuke/pen/Pjoqqp
+    --filter-base: invert(14%) sepia(28%) saturate(4517%) hue-rotate(302deg)
+        brightness(85%) contrast(94%);
 }
 
 @mixin theme-dark() {
@@ -16,6 +20,8 @@
     --color-secondary: #54b096;
     --color-base: #d6ccce;
     --color-background: #1d0612;
+    --filter-base: invert(99%) sepia(86%) saturate(259%) hue-rotate(286deg)
+        brightness(91%) contrast(83%);
 }
 
 // @mixin theme-high-contrast() {
@@ -133,6 +139,7 @@ svg {
 
     max-width: 100%;
 
+    // to stop pixel art from being anti-aliased (we WANT the jaggedness lol)
     image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
     image-rendering: -moz-crisp-edges; /* Firefox                        */
     image-rendering: -o-crisp-edges; /* Opera                          */
