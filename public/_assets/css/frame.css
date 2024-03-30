@@ -38,6 +38,8 @@
   --color-secondary: #4f9c86;
   --color-base: #61193e;
   --color-background: #fffafa;
+  --filter-base: invert(14%) sepia(28%) saturate(4517%) hue-rotate(302deg)
+      brightness(85%) contrast(94%);
 }
 
 :root[data-theme=dark] {
@@ -47,6 +49,8 @@
   --color-secondary: #54b096;
   --color-base: #d6ccce;
   --color-background: #1d0612;
+  --filter-base: invert(99%) sepia(86%) saturate(259%) hue-rotate(286deg)
+      brightness(91%) contrast(83%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,6 +61,8 @@
     --color-secondary: #54b096;
     --color-base: #d6ccce;
     --color-background: #1d0612;
+    --filter-base: invert(99%) sepia(86%) saturate(259%) hue-rotate(286deg)
+        brightness(91%) contrast(83%);
   }
 }
 /*:._.:*~  GLOBAL RESETS  ~*:._.:*
@@ -253,7 +259,7 @@ abbr {
   .page {
     padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
     grid-template-areas: "header           header      header" "major-sidebar    main        minor-sidebar" "major-sidebar    marquee     marquee" "footer           footer      footer";
-    grid-template-columns: min-content fit-content(var(--measure-max)) 8.3%;
+    grid-template-columns: min-content fit-content(var(--measure-max)) calc(var(--measure-max) / 6.9);
     grid-template-rows: min-content 1fr min-content var(--spacing-200);
     height: 100%;
   }
@@ -1092,6 +1098,7 @@ abbr {
   display: flex;
   flex-direction: column;
   row-gap: var(--spacing-100);
+  align-items: center;
   letter-spacing: var(--letter-spacing-110);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
@@ -1101,6 +1108,7 @@ abbr {
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
+  width: 100%;
 }
 .poem__body {
   color: var(--color-base);
@@ -1133,6 +1141,9 @@ abbr {
 .image_inline {
   display: inline-block;
   height: 1rem;
+}
+.image_graphic {
+  filter: var(--filter-base);
 }
 
 .buttons-88x31 {

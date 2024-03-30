@@ -249,19 +249,26 @@
 
 .poem {
     display: flex;
+
     flex-direction: column;
     row-gap: var(--spacing-100);
+    align-items: center;
+
     letter-spacing: var(--letter-spacing-110);
 
     @include base.text-size(base);
 
     &__title {
         @include base.text-style(serif, italic);
+        width: 100%;
     }
 
     &__body {
         @include base.text-style(serif);
     }
+
+    // &__illustration {
+    // }
 }
 
 .figure {
@@ -281,12 +288,18 @@
 
 .image {
     display: inline-block;
+
+    height: min-content;
+    width: min-content;
+
     &_inline {
         display: inline-block;
         height: 1rem;
     }
-    height: min-content;
-    width: min-content;
+
+    &_graphic {
+        filter: var(--filter-base);
+    }
 }
 
 .buttons-88x31 {
