@@ -8,7 +8,7 @@
  *
  *    https://sass-lang.com/
  */
-/*:._.:*~  BASE  ~*:._.:*/
+/*:._.:*~ GLOBAL ~*:._.:*/
 :root {
   --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
   --font-family-alt: Georgia, "Times New Roman", Times, serif;
@@ -205,7 +205,6 @@ abbr {
   justify-content: center;
 }
 
-/*:._.:*~  LAYOUTS  ~*:._.:*/
 /*
  * using BEM methodology
  *
@@ -215,7 +214,7 @@ abbr {
  *
  *    https://sass-lang.com/
  */
-/*:._.:*~  BASE  ~*:._.:*/
+/*:._.:*~ GLOBAL ~*:._.:*/
 .page {
   display: grid;
   gap: var(--spacing-100);
@@ -845,7 +844,6 @@ abbr {
   margin: 0 var(--spacing-075);
 }
 
-/*:._.:*~  COMPONENTS  ~*:._.:*/
 /*
  * using BEM methodology
  *
@@ -855,8 +853,7 @@ abbr {
  *
  *    https://sass-lang.com/
  */
-/*:._.:*~  BASE  ~*:._.:*/
-/*:._.:*~  LAYOUTS  ~*:._.:*/
+/*:._.:*~ GLOBAL ~*:._.:*/
 .feed {
   display: flex;
   flex-direction: column;
@@ -1233,7 +1230,7 @@ abbr {
   white-space: nowrap;
 }
 
-/*:._.:*~ COMMENT BOX   ~*:._.:*/
+/*:._.:*~ PAGE-SPECIFIC ~*:._.:*/
 /*
  * using BEM methodology
  *
@@ -1243,7 +1240,176 @@ abbr {
  *
  *    https://sass-lang.com/
  */
-/*:._.:*~  BASE  ~*:._.:*/
+/*:._.:*~ GLOBAL ~*:._.:*/
+/* ----- */
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  color: var(--color-base);
+}
+.blog-post__header {
+  display: inherit;
+  flex-direction: inherit;
+  margin-bottom: var(--spacing-150);
+}
+.blog-post__eyebrow {
+  margin-bottom: var(--spacing-050);
+  text-transform: uppercase;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: bold;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  letter-spacing: var(--letter-spacing-130);
+}
+.blog-post__title {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: bold;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-largest);
+  line-height: var(--line-height-largest);
+  letter-spacing: var(--letter-spacing-110);
+}
+.blog-post__date {
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-large);
+  letter-spacing: var(--letter-spacing-100);
+}
+.blog-post__activity {
+  margin-top: var(--spacing-100);
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-110);
+}
+.blog-post__heading {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-larger);
+  line-height: var(--line-height-larger);
+  line-height: var(--line-height-larger);
+  letter-spacing: var(--letter-spacing-120);
+}
+.blog-post__copy {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  line-height: var(--line-height-large);
+  letter-spacing: var(--letter-spacing-100);
+}
+.blog-post__copy i,
+.blog-post__copy em {
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  letter-spacing: var(--letter-spacing-110);
+}
+.blog-post__code {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-130);
+}
+.blog-post__quote {
+  display: block;
+  margin-top: var(--spacing-050);
+  margin-bottom: var(--spacing-050);
+  margin-left: var(--spacing-200);
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-110);
+}
+.blog-post__list {
+  display: block;
+  list-style: "- ";
+}
+.blog-post__list_ordered {
+  list-style-type: decimal;
+}
+.blog-post__list-item {
+  display: list-item;
+  margin-left: var(--spacing-175);
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-100);
+}
+.blog-post__list-item i,
+.blog-post__list-item em {
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  letter-spacing: var(--letter-spacing-110);
+}
+.blog-post__figure {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-025);
+  margin-top: var(--spacing-050);
+  margin-bottom: var(--spacing-050);
+  margin-left: var(--spacing-200);
+}
+.blog-post__figure-caption {
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  letter-spacing: var(--letter-spacing-140);
+}
+.blog-post__figure-body {
+  width: 83%;
+}
+.blog-post__footer {
+  display: block;
+  text-align: right;
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-110);
+}
+
+/*
+ * using BEM methodology
+ *
+ *    https://getbem.com/
+ *
+ * and Sass
+ *
+ *    https://sass-lang.com/
+ */
+/*:._.:*~ GLOBAL ~*:._.:*/
 /*:._.:*~   COMMENT BOX ~*:._.:*/
 /* --- GENERAL --- */
 div #HCB_comment_box {
