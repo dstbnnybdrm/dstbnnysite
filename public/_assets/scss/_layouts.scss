@@ -88,7 +88,7 @@
         grid-template-rows: min-content 1fr min-content var(--spacing-200);
 
         height: 100%;
-        max-width: var(--measure-max);
+        // max-width: var(--measure-max);
 
         &_blog {
             grid-template-areas:
@@ -122,11 +122,12 @@
             grid-template-areas:
                 "navi       main"
                 "footer     footer";
-            grid-template-columns: 1fr 3.6fr;
+            grid-template-columns: 10% auto;
             grid-template-rows: auto var(--spacing-200);
 
-            max-width: none;
+            // max-width: none;
 
+            width: 100%;
             padding: 0;
         }
 

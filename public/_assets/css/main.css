@@ -270,7 +270,6 @@ abbr {
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content 1fr min-content var(--spacing-200);
     height: 100%;
-    max-width: var(--measure-max);
   }
   .page_blog {
     grid-template-areas: "header     ." "navi       main" "footer     footer";
@@ -290,9 +289,9 @@ abbr {
   .page_interests {
     display: grid;
     grid-template-areas: "navi       main" "footer     footer";
-    grid-template-columns: 1fr 3.6fr;
+    grid-template-columns: 10% auto;
     grid-template-rows: auto var(--spacing-200);
-    max-width: none;
+    width: 100%;
     padding: 0;
   }
   .page_sitemap {
