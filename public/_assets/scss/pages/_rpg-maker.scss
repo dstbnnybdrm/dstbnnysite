@@ -1,0 +1,66 @@
+@use "../base";
+
+.rpg-maker {
+    background-color: black;
+
+    a {
+        @include base.text-style(mono, normal, normal);
+        text-decoration: none;
+    }
+
+    a:link {
+        color: #9999ff;
+    }
+
+    a:active {
+        color: #9999ff;
+    }
+
+    a:visited {
+        color: #666699;
+    }
+
+    a:hover {
+        color: #cccc00;
+    }
+
+    .page {
+        display: flex;
+
+        flex-direction: column;
+        row-gap: 1em;
+
+        width: var(--measure-max);
+    }
+
+    .body-copy {
+        @include base.text-style(mono, normal, normal);
+        color: #cc0000;
+    }
+
+    .title {
+        @include base.text-style(mono, normal, bold);
+        color: #cc0000;
+    }
+
+    .heading {
+        // @include base.text-style(mono, normal, normal);
+        color: #cc0000;
+    }
+
+    .subheading {
+        // @include base.text-style(mono, normal, normal);
+        color: #cc0000;
+    }
+
+    .list {
+        // @include base.text-style(mono, normal, normal);
+        color: #cc0000;
+    }
+
+    .figure {
+        &__image {
+            width: min-content;
+        }
+    }
+}
