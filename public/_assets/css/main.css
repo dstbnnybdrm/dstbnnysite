@@ -1641,7 +1641,7 @@ textarea#hcb_form_content {
   /* highlight */
 }
 .rpg-maker a {
-  text-decoration: none;
+  text-decoration-style: solid;
 }
 .rpg-maker a:link {
   color: #9999ff;
@@ -1719,14 +1719,6 @@ textarea#hcb_form_content {
   width: min-content;
 }
 .rpg-maker .figure__caption {
-  color: var(--color-base);
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-mono);
-  color: var(--colour-base);
-}
-.rpg-maker .figure__caption i,
-.rpg-maker .figure__caption em {
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;

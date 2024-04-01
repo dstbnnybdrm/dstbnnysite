@@ -26,7 +26,8 @@
 
     /* links */
     a {
-        text-decoration: none;
+        // text-decoration: initial;
+        text-decoration-style: solid;
     }
 
     a:link {
@@ -100,8 +101,8 @@
         }
 
         &__caption {
-            @include text();
-            @include text-italic();
+            @include base.text-style(mono, italic, normal);
+            color: var(--colour-base);
         }
     }
 }
