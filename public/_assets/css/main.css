@@ -1627,14 +1627,20 @@ textarea#hcb_form_content {
  *    https://sass-lang.com/
  */
 /*:._.:*~ GLOBAL ~*:._.:*/
+.rpg-maker[data-high-contrast=false] {
+  --colour-base: #f30000;
+}
+
+.rpg-maker[data-high-contrast=true] {
+  --colour-base: white;
+}
+
 .rpg-maker {
   background-color: black;
+  /* links */
+  /* highlight */
 }
 .rpg-maker a {
-  color: var(--color-base);
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-mono);
   text-decoration: none;
 }
 .rpg-maker a:link {
@@ -1649,6 +1655,16 @@ textarea#hcb_form_content {
 .rpg-maker a:hover {
   color: #cccc00;
 }
+.rpg-maker hr {
+  color: #222244;
+}
+.rpg-maker ::-moz-selection {
+  /* Code for Firefox */
+  background: initial;
+}
+.rpg-maker ::selection {
+  background: initial;
+}
 .rpg-maker .page {
   display: flex;
   flex-direction: column;
@@ -1660,26 +1676,62 @@ textarea#hcb_form_content {
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
-  color: #cc0000;
+  color: var(--colour-base);
+}
+.rpg-maker .body-copy i,
+.rpg-maker .body-copy em {
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+  color: var(--colour-base);
 }
 .rpg-maker .title {
   color: var(--color-base);
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-family: var(--font-family-mono);
-  color: #cc0000;
+  color: var(--colour-base);
 }
 .rpg-maker .heading {
-  color: #cc0000;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+  color: var(--colour-base);
 }
 .rpg-maker .subheading {
-  color: #cc0000;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+  color: var(--colour-base);
 }
 .rpg-maker .list {
-  color: #cc0000;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+  color: var(--colour-base);
+  list-style: initial;
 }
 .rpg-maker .figure__image {
   width: min-content;
+}
+.rpg-maker .figure__caption {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+  color: var(--colour-base);
+}
+.rpg-maker .figure__caption i,
+.rpg-maker .figure__caption em {
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+  color: var(--colour-base);
 }
 
 /*# sourceMappingURL=main.css.map */

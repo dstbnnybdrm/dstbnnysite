@@ -1,10 +1,31 @@
 @use "../base";
 
+.rpg-maker[data-high-contrast="false"] {
+    --colour-base: #f30000;
+}
+
+.rpg-maker[data-high-contrast="true"] {
+    --colour-base: white;
+}
+
+@mixin text {
+    @include base.text-style(mono, normal, normal);
+    color: var(--colour-base);
+}
+
+@mixin text-italic {
+    i,
+    em {
+        @include base.text-style(mono, italic, normal);
+        color: var(--colour-base);
+    }
+}
+
 .rpg-maker {
     background-color: black;
 
+    /* links */
     a {
-        @include base.text-style(mono, normal, normal);
         text-decoration: none;
     }
 
@@ -24,6 +45,20 @@
         color: #cccc00;
     }
 
+    hr {
+        color: #222244;
+    }
+
+    /* highlight */
+    ::-moz-selection {
+        /* Code for Firefox */
+        background: initial;
+    }
+
+    ::selection {
+        background: initial;
+    }
+
     .page {
         display: flex;
 
@@ -34,33 +69,39 @@
     }
 
     .body-copy {
-        @include base.text-style(mono, normal, normal);
-        color: #cc0000;
+        @include text();
+        @include text-italic();
     }
 
     .title {
-        @include base.text-style(mono, normal, bold);
-        color: #cc0000;
+        @include text();
     }
 
     .heading {
-        // @include base.text-style(mono, normal, normal);
-        color: #cc0000;
+        @include text();
     }
 
     .subheading {
-        // @include base.text-style(mono, normal, normal);
-        color: #cc0000;
+        @include text();
     }
 
     .list {
-        // @include base.text-style(mono, normal, normal);
-        color: #cc0000;
+        @include text();
+
+        list-style: initial;
+
+        // &__item {
+        // }
     }
 
     .figure {
         &__image {
             width: min-content;
+        }
+
+        &__caption {
+            @include text();
+            @include text-italic();
         }
     }
 }

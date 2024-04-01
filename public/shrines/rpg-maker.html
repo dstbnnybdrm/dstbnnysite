@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,8 +32,9 @@
     <link rel="stylesheet" href="/_assets/css/main.css" />
   </head>
 
-  <body class="rpg-maker">
+  <body class="rpg-maker" data-high-contrast="false">
     <div class="page">
+      <button type="button">accessible mode toggle</button>
       <!-- <header></header> -->
 
       <h2 class="title">RPG Maker</h2>
@@ -71,6 +72,16 @@
         <ul class="list">
           <li class="list__item">
             <a href="#yume-nikki" target="_self">Yume Nikki</a>
+            <ul class="list">
+              <li class="list__item">
+                <a href="#yume-nikki-fangames" target="_self">fangames</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list__item">
+            <a href="#ghost-suburb-ii" target="_self">
+              Ghost Suburb II: From Beyond Sleep into the Eyes of Madness
+            </a>
           </li>
         </ul>
       </nav>
@@ -84,7 +95,9 @@
             src="/_assets/img/rpg-maker/pic1.png"
             alt=""
           />
-          <figcaption class="figure__caption"></figcaption>
+          <figcaption class="figure__caption">
+            the bedroom you start the game in.
+          </figcaption>
         </figure>
 
         <p class="body-copy">
@@ -227,14 +240,16 @@
         </p>
 
         <section class="section section_subsection">
-          <h4 class="subheading">Yume Nikki fangames</h4>
+          <h4 class="subheading" id="yume-nikki-fangames">
+            Yume Nikki fangames
+          </h4>
           <!--       <li class="list__item">.flow</li> -->
           <!--       <li class="list__item">ultraviolet</li> -->
           <!--       <li class="list__item">Answered Prayers</li> -->
         </section>
       </section>
 
-      <!-- <section class="section"> -->
+      <!-- <section class="section" id="ghost-suburb-ii"> -->
       <!-- <h3 class="heading"> -->
       <!--   Ghost Suburb II: From Beyond Sleep into the Eyes of Madness -->
       <!-- </h3> -->
