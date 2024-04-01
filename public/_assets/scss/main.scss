@@ -8,11 +8,11 @@
  *    https://sass-lang.com/
  */
 
-/*:._.:*~  BASE  ~*:._.:*/
+/*:._.:*~ GLOBAL ~*:._.:*/
 @use "base";
-/*:._.:*~  LAYOUTS  ~*:._.:*/
 @use "layouts";
-/*:._.:*~  COMPONENTS  ~*:._.:*/
 @use "components";
-/*:._.:*~ COMMENT BOX   ~*:._.:*/
-@use "comment-box";
+
+/*:._.:*~ PAGE-SPECIFIC ~*:._.:*/
+@use "pages/blog-post";
+@use "pages/comment-box";

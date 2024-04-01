@@ -1,4 +1,4 @@
-import { fetchAsText, TEMPLATE_URL } from "./utility.js";
+import { fetchAsText, COMPONENTS_URL, DATA_URL } from "./utility.js";
 
 /**
  * the IDs of all the templated layout sections.
@@ -23,7 +23,7 @@ export async function load() {
         if (element == null) continue;
 
         // load into element's HTML
-        const elementUrl = TEMPLATE_URL + "layout/" + id + ".html";
+        const elementUrl = COMPONENTS_URL + id + ".html";
         element.innerHTML = await fetchAsText(elementUrl);
     }
 }
@@ -35,7 +35,7 @@ export async function load() {
  * @returns {Array<string>} an array of all the splash texts
  */
 async function getSplashes() {
-    let splashes = await fetchAsText(TEMPLATE_URL + "layout/splash.txt");
+    let splashes = await fetchAsText(DATA_URL + "splash.txt");
     let splashList = splashes.split("\n");
 
     splashList.pop(); // remove the final empty string

@@ -5,7 +5,9 @@
 /** @type {string} */
 export const HOME_URL = "/home.html";
 /** @type {string} */
-export const TEMPLATE_URL = "/_assets/template/";
+export const COMPONENTS_URL = "/_components/";
+/** @type {string} */
+export const DATA_URL = "/_data/";
 /** @type {Array<?HTMLElement} */
 export const BLOG_POST_LIST = document.querySelectorAll(".blog-navi__link");
 /** @type {?HTMLElement} */
