@@ -66,7 +66,7 @@
         flex-direction: column;
         row-gap: 1em;
 
-        width: var(--measure-max);
+        max-width: var(--measure-max);
     }
 
     .body-copy {
@@ -95,14 +95,21 @@
         // }
     }
 
+    .image {
+        width: min-content;
+    }
+
     .figure {
-        &__image {
-            width: min-content;
-        }
+        // &__image {
+        // }
 
         &__caption {
             @include base.text-style(mono, italic, normal);
             color: var(--colour-base);
         }
+    }
+
+    .marquee {
+        display: inline-block;
     }
 }

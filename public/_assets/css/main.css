@@ -1669,7 +1669,7 @@ textarea#hcb_form_content {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
-  width: var(--measure-max);
+  max-width: var(--measure-max);
 }
 .rpg-maker .body-copy {
   color: var(--color-base);
@@ -1715,7 +1715,7 @@ textarea#hcb_form_content {
   color: var(--colour-base);
   list-style: initial;
 }
-.rpg-maker .figure__image {
+.rpg-maker .image {
   width: min-content;
 }
 .rpg-maker .figure__caption {
@@ -1724,6 +1724,9 @@ textarea#hcb_form_content {
   font-weight: normal;
   font-family: var(--font-family-mono);
   color: var(--colour-base);
+}
+.rpg-maker .marquee {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=main.css.map */
