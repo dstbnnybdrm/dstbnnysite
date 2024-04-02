@@ -170,7 +170,7 @@
     letter-spacing: var(--letter-spacing-130);
 }
 
-.body-copy {
+.copy {
     @include base.text-style(sans);
     @include base.text-size(base);
 
