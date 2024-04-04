@@ -1,45 +1,15 @@
 @charset "UTF-8";
 /*
- * using BEM methodology
+ * using the BEM class-naming methodology
  *
  *    https://getbem.com/
  *
- * and Sass
+ * and Sass extension language 
  *
  *    https://sass-lang.com/
  */
 /*:._.:*~ GLOBAL ~*:._.:*/
-:root {
-  --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
-  --font-family-alt: Georgia, "Times New Roman", Times, serif;
-  --font-family-mono: "Courier New", Courier, monospace;
-  --font-size-smaller: 0.69rem;
-  --font-size-small: 0.83rem;
-  --font-size-base: 1rem;
-  --font-size-large: 1.2rem;
-  --font-size-larger: 1.32rem;
-  --font-size-largest: 1.44rem;
-  --line-height-small: 1.25rem;
-  --line-height-base: 1.5rem;
-  --line-height-large: 1.8rem;
-  --line-height-larger: 1.98rem;
-  --line-height-largest: 2.16rem;
-  --letter-spacing-100: initial;
-  --letter-spacing-110: 0.05rem;
-  --letter-spacing-120: 0.07rem;
-  --letter-spacing-130: 0.09rem;
-  --letter-spacing-140: 0.12rem;
-  --spacing-025: 0.58rem;
-  --spacing-050: 0.69rem;
-  --spacing-075: 0.83rem;
-  --spacing-100: 1rem;
-  --spacing-125: 1.2rem;
-  --spacing-150: 1.44rem;
-  --spacing-175: 1.73rem;
-  --spacing-200: 2rem;
-  --measure-max: 67rem;
-}
-
+/* *~ THEME COLOURS ~* */
 :root,
 :root[data-theme=light] {
   color-scheme: light;
@@ -75,11 +45,42 @@
         brightness(91%) contrast(83%);
   }
 }
-/*:._.:*~  GLOBAL RESETS  ~*:._.:*
+/*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
+:root {
+  --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
+  --font-family-alt: Georgia, "Times New Roman", Times, serif;
+  --font-family-mono: "Courier New", Courier, monospace;
+  --font-size-smaller: 0.69rem;
+  --font-size-small: 0.83rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.2rem;
+  --font-size-larger: 1.32rem;
+  --font-size-largest: 1.44rem;
+  --line-height-small: 1.25rem;
+  --line-height-base: 1.5rem;
+  --line-height-large: 1.8rem;
+  --line-height-larger: 1.98rem;
+  --line-height-largest: 2.16rem;
+  --letter-spacing-100: initial;
+  --letter-spacing-110: 0.05rem;
+  --letter-spacing-120: 0.07rem;
+  --letter-spacing-130: 0.09rem;
+  --letter-spacing-140: 0.12rem;
+  --spacing-025: 0.58rem;
+  --spacing-050: 0.69rem;
+  --spacing-075: 0.83rem;
+  --spacing-100: 1rem;
+  --spacing-125: 1.2rem;
+  --spacing-150: 1.44rem;
+  --spacing-175: 1.73rem;
+  --spacing-200: 2rem;
+  --measure-max: 40rem;
+}
+
+/* *~  GLOBAL RESETS  ~* 
  *
- * global reset taken from here: 
+ * taken from here, very slightly modified:
  * https://www.joshwcomeau.com/css/custom-css-reset/
- * 
  */
 /* less shitty box-sizing (border-based instead of mixins-based) */
 *,
@@ -104,12 +105,12 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-  image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
-  image-rendering: -moz-crisp-edges; /* Firefox                        */
-  image-rendering: -o-crisp-edges; /* Opera                          */
-  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-  image-rendering: pixelated; /* Universal support since 2021   */
-  image-rendering: optimize-contrast; /* CSS3 Proposed                  */
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
 }
 
 /* remove form typography styles */
@@ -137,12 +138,8 @@ h6 {
   isolation: isolate;
 }
 
-/* *~ my resets ~* */
-html {
-  background-color: var(--color-background);
-}
-
-/* links */
+/* --- MY resets :3c --- */
+/* - links - */
 a {
   text-decoration-style: dotted;
 }
@@ -163,9 +160,9 @@ a:hover {
   color: var(--color-secondary);
 }
 
-/* highlight */
+/* - selection - */
+/* for Firefox */
 ::-moz-selection {
-  /* Code for Firefox */
   color: var(--color-background);
   background: var(--color-secondary);
 }
@@ -175,12 +172,16 @@ a:hover {
   background: var(--color-secondary);
 }
 
-/* other */
+/* - other - */
 abbr {
   font: inherit;
   text-decoration: none;
 }
 
+/* *~ LAYOUT BLOCKS ~* 
+ *
+ * classes with no semantic meaning; just for styling/arranging
+ */
 @media screen and (max-width: 800px) {
   .l-imposter {
     display: flex;
@@ -218,11 +219,11 @@ abbr {
 }
 
 /*
- * using BEM methodology
+ * using the BEM class-naming methodology
  *
  *    https://getbem.com/
  *
- * and Sass
+ * and Sass extension language 
  *
  *    https://sass-lang.com/
  */
@@ -232,17 +233,11 @@ abbr {
   gap: var(--spacing-100);
   justify-content: center;
 }
-.page_simple {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--spacing-125);
-  justify-content: center;
-  min-height: 0;
-}
 .page__header {
   align-items: center;
 }
 .page__header_blog {
+  /* to counteract grid gap in layout */
   margin-bottom: calc(var(--spacing-100) * -1);
   width: min-content;
 }
@@ -251,6 +246,13 @@ abbr {
     padding: var(--spacing-200);
     grid-template-areas: "header" "navi" "theme-toggle" "main" "status" "directories" "marquee" "footer";
     grid-template-rows: repeat(7, auto);
+  }
+  .page_simple {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-125);
+    justify-content: center;
+    min-height: 0;
   }
   .page__navi {
     border-top: 1px solid var(--color-base);
@@ -282,6 +284,13 @@ abbr {
     grid-template-columns: min-content fit-content(var(--measure-max)) calc(var(--measure-max) / 6.9);
     grid-template-rows: min-content 1fr min-content var(--spacing-200);
     height: 100%;
+  }
+  .page_simple {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-125);
+    justify-content: center;
+    min-height: 0;
   }
   .page_blog {
     grid-template-areas: "header     ." "navi       main" "footer     footer";
@@ -850,11 +859,11 @@ abbr {
 }
 
 /*
- * using BEM methodology
+ * using the BEM class-naming methodology
  *
  *    https://getbem.com/
  *
- * and Sass
+ * and Sass extension language 
  *
  *    https://sass-lang.com/
  */
@@ -1247,11 +1256,11 @@ abbr {
 
 /*:._.:*~ PAGE-SPECIFIC ~*:._.:*/
 /*
- * using BEM methodology
+ * using the BEM class-naming methodology
  *
  *    https://getbem.com/
  *
- * and Sass
+ * and Sass extension language 
  *
  *    https://sass-lang.com/
  */
@@ -1416,11 +1425,11 @@ abbr {
 }
 
 /*
- * using BEM methodology
+ * using the BEM class-naming methodology
  *
  *    https://getbem.com/
  *
- * and Sass
+ * and Sass extension language 
  *
  *    https://sass-lang.com/
  */

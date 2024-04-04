@@ -1,3 +1,5 @@
+/* *~ THEME COLOURS ~* */
+
 @mixin theme-light() {
     color-scheme: light;
 
@@ -24,6 +26,7 @@
         brightness(91%) contrast(83%);
 }
 
+// TODO: high contrast theme
 // @mixin theme-high-contrast() {
 //     --color-primary: #cf4f79;
 //     --color-primary-alt: var(--color-primary);
@@ -32,11 +35,36 @@
 //     --color-background: black;
 // }
 
+// from: https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/
+:root,
+:root[data-theme="light"] {
+    @include theme-light();
+}
+
+:root[data-theme="dark"] {
+    @include theme-dark();
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        @include theme-dark();
+    }
+}
+
+// @media (prefers-contrast: more) {
+//     :root:not([data-theme]) {
+//         @include theme-high-contrast();
+//     }
+// }
+
+/*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
+
 :root {
     --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
     --font-family-alt: Georgia, "Times New Roman", Times, serif;
     --font-family-mono: "Courier New", Courier, monospace;
 
+    // size relations mostly derived from multiples of minor third ratios (6:5)
     --font-size-smaller: 0.69rem;
     --font-size-small: 0.83rem;
     --font-size-base: 1rem;
@@ -56,7 +84,7 @@
     --letter-spacing-130: 0.09rem;
     --letter-spacing-140: 0.12rem;
 
-    // for margin's, padding, gap, etc.
+    // generic spacing for margin's, padding, gap, etc.
     --spacing-025: 0.58rem;
     --spacing-050: 0.69rem;
     --spacing-075: 0.83rem;
@@ -66,48 +94,15 @@
     --spacing-175: 1.73rem;
     --spacing-200: 2rem;
 
-    // maximum width that text should span
-    --measure-max: 67rem;
+    // the maximum line length that text should span (~67 characters, or 2.6
+    // alphabets)
+    --measure-max: 40rem;
 }
 
-// ---- THEME OVERRIDES ---- //
-
-// from: https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/
-:root,
-:root[data-theme="light"] {
-    @include theme-light();
-}
-
-:root[data-theme="dark"] {
-    @include theme-dark();
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme]) {
-        @include theme-dark();
-    }
-}
-
-// TODO
-// :root[data-theme="high-contrast"] {
-//     --color-primary: #cf4f79;
-//     --color-primary-alt: var(--color-primary);
-//     --color-secondary: #54b096;
-//     --color-base: black;
-//     --color-background: white;
-// }
-
-// @media (prefers-contrast: more) {
-//     :root:not([data-theme]) {
-//         @include theme-high-contrast();
-//     }
-// }
-
-/*:._.:*~  GLOBAL RESETS  ~*:._.:*
+/* *~  GLOBAL RESETS  ~* 
  *
- * global reset taken from here: 
+ * taken from here, very slightly modified:
  * https://www.joshwcomeau.com/css/custom-css-reset/
- * 
  */
 
 /* less shitty box-sizing (border-based instead of mixins-based) */
@@ -139,13 +134,13 @@ svg {
 
     max-width: 100%;
 
-    // to stop pixel art from being anti-aliased (we WANT the jaggedness lol)
-    image-rendering: optimizeSpeed; /* STOP SMOOTHING, GIVE ME SPEED  */
-    image-rendering: -moz-crisp-edges; /* Firefox                        */
-    image-rendering: -o-crisp-edges; /* Opera                          */
-    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-    image-rendering: pixelated; /* Universal support since 2021   */
-    image-rendering: optimize-contrast; /* CSS3 Proposed                  */
+    // (try) to disable anti-alias (for pixel art and etc., we WANT the jaggedness lol)
+    image-rendering: optimizeSpeed; // stop smoothing for speed
+    image-rendering: -moz-crisp-edges; //           for Firefox
+    image-rendering: -o-crisp-edges; //             for Opera
+    image-rendering: -webkit-optimize-contrast; //  for Chrome
+    image-rendering: pixelated; // Universal support since 2021
+    image-rendering: optimize-contrast; // CSS3 Proposed
 }
 
 /* remove form typography styles */
@@ -173,13 +168,14 @@ h6 {
     isolation: isolate;
 }
 
-/* *~ my resets ~* */
+/* --- MY resets :3c --- */
 
-html {
-    background-color: var(--color-background);
-}
+// html {
+//     background-color: var(--color-background);
+// }
 
-/* links */
+/* - links - */
+
 a {
     text-decoration-style: dotted;
 }
@@ -200,9 +196,10 @@ a:hover {
     color: var(--color-secondary);
 }
 
-/* highlight */
+/* - selection - */
+
+/* for Firefox */
 ::-moz-selection {
-    /* Code for Firefox */
     color: var(--color-background);
     background: var(--color-secondary);
 }
@@ -212,13 +209,14 @@ a:hover {
     background: var(--color-secondary);
 }
 
-/* other */
+/* - other - */
+
 abbr {
     font: inherit;
     text-decoration: none;
 }
 
-// -- reusable styles -- //
+// --- reusable styles --- //
 @mixin layout-border {
     border: 1px solid var(--color-base);
 }
@@ -292,7 +290,7 @@ abbr {
     }
 }
 
-//:._.:*~  BREAKPOINTS ~*:._.://
+// *~  BREAKPOINTS ~* //
 
 @mixin for-viewport-size($size) {
     @if $size == phone {
@@ -328,7 +326,10 @@ abbr {
     }
 }
 
-//:._.:*~ LAYOUT BLOCKS ~*:._.://
+/* *~ LAYOUT BLOCKS ~* 
+ *
+ * classes with no semantic meaning; just for styling/arranging
+ */
 
 .l-imposter {
     @include for-viewport-size(phone) {
@@ -345,16 +346,12 @@ abbr {
         bottom: 0;
         left: 0;
 
-        // center horizontally and vertically
+        // center horizontally
         justify-content: center;
+        // center vertically
         align-items: center;
-        // flex-grow: 0;
-        // flex-shrink: 0;
     }
 }
-
-// .l-sidebar {
-// }
 
 .l-stack {
     display: flex;
@@ -370,6 +367,7 @@ abbr {
     }
 }
 
+// center horizontally within a container
 .l-center {
     display: flex;
 
