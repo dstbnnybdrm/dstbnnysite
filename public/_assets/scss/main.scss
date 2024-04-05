@@ -1,4 +1,4 @@
-/*
+/**
  * using the BEM class-naming methodology
  *
  *    https://getbem.com/
@@ -8,11 +8,46 @@
  *    https://sass-lang.com/
  */
 
-/*:._.:*~ GLOBAL ~*:._.:*/
-@use "base";
-@use "layouts";
-@use "components";
+/*:._.:*~ ABSTRACTS ~*:._.:*/
+@use "abstracts/breakpoints";
+@use "abstracts/mixins";
 
-/*:._.:*~ PAGE-SPECIFIC ~*:._.:*/
+/*:._.:*~ BASE ~*:._.:*/
+@use "base/base";
+@use "base/reset";
+@use "base/typography";
+
+/*:._.:*~ LAYOUTS ~*:._.:*/
+@use "layouts/page";
+@use "layouts/header";
+@use "layouts/sidebar";
+@use "layouts/navi";
+@use "layouts/theme-toggle";
+@use "layouts/directories";
+@use "layouts/status";
+@use "layouts/main";
+@use "layouts/marquee";
+@use "layouts/footer";
+
+/*:._.:*~ COMPONENTS ~*:._.:*/
+@use "components/layout-blocks";
+@use "components/section";
+@use "components/feed";
+@use "components/image";
+@use "components/table";
+@use "components/figure";
+@use "components/ascii-art";
+@use "components/micro-bar";
+@use "components/breadcrumb";
+
+/*:._.:*~ PAGES ~*:._.:*/
+@use "pages/home";
+@use "pages/blog";
 @use "pages/blog-post";
 @use "pages/comment-box";
+@use "pages/sitemap";
+
+/*:._.:*~ THEMES ~*:._.:*/
+@use "themes/light";
+@use "themes/dark";
+// @use "themes/high-contrast";

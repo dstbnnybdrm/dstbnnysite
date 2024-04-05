@@ -1,0 +1,74 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.sidebar {
+    @include for-viewport-size(phone) {
+        /* no sidebar on mobile layout */
+        display: contents;
+
+        &__status {
+            border-bottom: 1px dashed var(--color-base);
+            padding-bottom: var(--spacing-100);
+        }
+
+        &__directories {
+            border-bottom: 1px dashed var(--color-base);
+            padding-bottom: var(--spacing-100);
+        }
+
+        &__theme-toggle {
+            border: none;
+            padding: var(--spacing-025);
+        }
+    }
+
+    @include for-viewport-size(desktop) {
+        display: inline-grid;
+
+        row-gap: var(--spacing-100);
+
+        /* i.e. the primary (left) and secondary (right) sidebars */
+        &_major {
+            grid-area: major-sidebar;
+            grid-template-areas:
+                "navi"
+                "theme-toggle"
+                "directories";
+            grid-template-rows: auto var(--spacing-200) 1fr;
+            grid-template-columns: min-content;
+        }
+
+        &_minor {
+            grid-area: minor-sidebar;
+            grid-template-areas: "status";
+            grid-template-rows: 100%;
+            grid-template-columns: 100%;
+        }
+
+        &__navi {
+            min-height: 0;
+            overflow-y: auto;
+            @include layout-border();
+            @include layout-padding();
+        }
+
+        &__theme-toggle {
+            border: none;
+            @include layout-padding();
+        }
+
+        &__directories {
+            min-height: 0;
+            overflow-y: auto;
+            @include layout-border();
+            @include layout-padding();
+        }
+
+        &__status {
+            min-height: 0;
+            overflow-y: auto;
+            @include layout-border();
+            @include layout-padding();
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+    display: flex;
+
+    flex-direction: column;
+    grid-area: header;
+
+    &__splash {
+        display: block;
+
+        @include text-style(serif, italic);
+        letter-spacing: var(--letter-spacing-120);
+        text-align: center;
+    }
+
+    @include for-viewport-size(desktop) {
+        justify-content: center;
+
+        &__splash {
+            &::before,
+            &::after {
+                content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
+                margin: 0 var(--spacing-200);
+            }
+        }
+    }
+}

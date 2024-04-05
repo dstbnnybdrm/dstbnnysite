@@ -1,4 +1,5 @@
-@use "../base";
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
 
 /*:._.:*~   COMMENT BOX ~*:._.:*/
 
@@ -21,7 +22,7 @@ div #HCB_comment_box {
 
         margin: var(--spacing-100) 0;
 
-        @include base.text-style(sans);
+        @include text-style(sans);
         text-transform: lowercase;
     }
 
@@ -30,7 +31,7 @@ div #HCB_comment_box {
 
         border: 1px solid var(--color-primary);
 
-        @include base.text-style(sans);
+        @include text-style(sans);
         text-transform: lowercase;
     }
 
@@ -53,7 +54,7 @@ div #HCB_comment_box {
             border: none;
 
             text-transform: lowercase;
-            @include base.text-style(sans);
+            @include text-style(sans);
 
             color: var(--color-background);
             background: var(--color-primary);
@@ -65,11 +66,11 @@ div #HCB_comment_box {
         }
     }
 
-    @include base.for-viewport-size(phone) {
+    @include for-viewport-size(phone) {
         width: 100%;
     }
 
-    @include base.for-viewport-size(desktop) {
+    @include for-viewport-size(desktop) {
         display: grid;
         column-gap: var(--spacing-100);
 
@@ -96,7 +97,7 @@ input#hcb_form_name,
 textarea#hcb_form_content {
     border: 1px dotted var(--color-base);
 
-    @include base.text-style(mono);
+    @include text-style(mono);
 
     font-size: 16px;
 
@@ -106,25 +107,25 @@ textarea#hcb_form_content {
 /* placeholder text */
 ::-webkit-input-placeholder {
     font-size: 16px;
-    @include base.text-style(mono);
+    @include text-style(mono);
     text-transform: lowercase;
 }
 
 :-moz-placeholder {
     font-size: 16px;
-    @include base.text-style(mono);
+    @include text-style(mono);
     text-transform: lowercase;
 }
 
 ::-moz-placeholder {
     font-size: 16px;
-    @include base.text-style(mono);
+    @include text-style(mono);
     text-transform: lowercase;
 }
 
 :-ms-input-placeholder {
     font-size: 16px;
-    @include base.text-style(mono);
+    @include text-style(mono);
     text-transform: lowercase;
 }
 
@@ -137,7 +138,7 @@ textarea#hcb_form_content {
     padding-top: var(--spacing-100);
 
     #no_comments {
-        @include base.text-style(sans);
+        @include text-style(sans);
         text-transform: lowercase;
     }
 
@@ -156,38 +157,38 @@ textarea#hcb_form_content {
     }
 
     p.hcb-comment-body {
-        @include base.text-style(sans);
+        @include text-style(sans);
     }
 
     b.author-name {
-        @include base.text-style(sans);
+        @include text-style(sans);
     }
 
     span.date {
-        @include base.text-style(serif, italic);
-        @include base.text-size(small);
+        @include text-style(serif, italic);
+        @include text-size(small);
         letter-spacing: var(--letter-spacing-140);
         text-transform: lowercase;
     }
 
     /* comment buttons */
     p.hcb-comment-tb button {
-        @include base.text-style(sans);
-        @include base.text-size(small);
+        @include text-style(sans);
+        @include text-size(small);
         text-transform: lowercase;
 
         color: var(--color-primary);
     }
 
     .likes {
-        @include base.text-style(sans);
+        @include text-style(sans);
 
         img {
             display: inline-block;
         }
     }
 
-    @include base.for-viewport-size(desktop) {
+    @include for-viewport-size(desktop) {
         overflow-y: auto;
         overflow-x: hidden !important;
 

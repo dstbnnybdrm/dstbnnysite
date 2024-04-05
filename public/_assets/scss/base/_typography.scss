@@ -1,0 +1,117 @@
+@use "../abstracts/mixins" as *;
+
+.title {
+    @include text-style($family: sans, $weight: bold);
+    @include text-size(largest);
+    letter-spacing: var(--letter-spacing-110);
+}
+
+.heading {
+    @include text-style(sans);
+    @include text-size(larger);
+    letter-spacing: var(--letter-spacing-120);
+}
+
+.subheading {
+    @include text-style(serif, italic);
+    @include text-size(large);
+    letter-spacing: var(--letter-spacing-130);
+}
+
+.copy {
+    @include text-style(sans);
+    @include text-size(base);
+
+    @include emphasis-serif();
+}
+
+.quote {
+    @include text-style(serif, italic);
+    @include text-size(base);
+    margin-left: var(--spacing-100);
+}
+
+.list {
+    @include text-style(sans);
+    @include text-size(base);
+    @include list-style(base);
+
+    @include emphasis-serif();
+
+    &_row {
+        display: flex;
+
+        list-style: none;
+    }
+
+    &__item {
+        @include list-margin();
+
+        &_row {
+            display: inline-block;
+
+            margin-left: 0rem;
+
+            &:not(:last-child)::after {
+                content: "/";
+                margin: 0 var(--spacing-050);
+            }
+        }
+    }
+}
+
+.definition-list {
+    @include list-style(base);
+
+    &__term {
+        display: inline;
+
+        @include text-style(serif, italic);
+        letter-spacing: var(--letter-spacing-110);
+
+        &::before {
+            content: "";
+            display: block;
+
+            margin-bottom: var(--spacing-025);
+        }
+
+        &::after {
+            content: ":";
+        }
+    }
+
+    &__description {
+        display: inline;
+
+        @include text-style(sans);
+
+        &:has(+ &) {
+            &::after {
+                content: ",";
+                margin: 0 0.5ch;
+            }
+        }
+    }
+}
+
+.poem {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: var(--spacing-100);
+    align-items: center;
+
+    letter-spacing: var(--letter-spacing-110);
+
+    @include text-size(base);
+
+    &__title {
+        @include text-style(serif, italic);
+        width: 100%;
+    }
+
+    &__body {
+        @include text-style(serif);
+    }
+}

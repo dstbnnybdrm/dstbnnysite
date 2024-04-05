@@ -1,0 +1,35 @@
+.micro-bars {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-075);
+
+    &_no-wrap {
+        flex-wrap: nowrap;
+    }
+
+    &__button {
+        display: inline-block;
+
+        flex-shrink: 0;
+        align-self: center;
+
+        width: 88px;
+        height: 31px;
+    }
+
+    &__decorative {
+        display: inline-block;
+    }
+}
+
+.micro-bar {
+    display: inline-block;
+
+    flex-shrink: 0;
+    align-self: center;
+
+    width: 88px;
+    height: 31px;
+}

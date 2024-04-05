@@ -1,0 +1,29 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+    grid-area: footer;
+
+    @include text-style(sans);
+    font-family: var(--font-family-base);
+
+    &__list {
+        display: flex;
+
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__item {
+        display: inline-block;
+
+        white-space: nowrap;
+
+        &:not(:last-child)::after {
+            content: "|";
+
+            margin: 0 var(--spacing-075);
+        }
+    }
+}

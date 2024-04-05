@@ -1,0 +1,46 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.status {
+    display: flex;
+
+    grid-area: status;
+    flex-direction: column;
+    gap: var(--spacing-100);
+
+    &__title {
+        @include text-style(sans, normal, bold);
+        @include text-size(base);
+        letter-spacing: var(--letter-spacing-120);
+        white-space: nowrap;
+    }
+
+    &__copy {
+        @include text-style(sans);
+        @include text-size(small);
+        letter-spacing: var(--letter-spacing-150);
+
+        &::before,
+        &::after {
+            content: '"';
+        }
+    }
+
+    &__username {
+        margin-top: var(--spacing-075);
+
+        @include text-style(serif, italic);
+        @include text-size(small);
+        letter-spacing: var(--letter-spacing-120);
+
+        &::before {
+            content: "— ";
+        }
+
+        a {
+            &::after {
+                content: "↗";
+            }
+        }
+    }
+}

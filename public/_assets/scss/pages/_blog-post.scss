@@ -1,4 +1,4 @@
-@use "../base";
+@use "../abstracts/mixins" as *;
 
 @mixin figure-margin() {
     margin-top: var(--spacing-050);
@@ -28,50 +28,50 @@
         margin-bottom: var(--spacing-050);
 
         text-transform: uppercase;
-        @include base.text-style(sans, normal, bold);
-        @include base.text-size(small);
+        @include text-style(sans, normal, bold);
+        @include text-size(small);
         letter-spacing: var(--letter-spacing-130);
     }
 
     &__title {
-        @include base.text-style(sans, normal, bold);
-        @include base.text-size(largest);
+        @include text-style(sans, normal, bold);
+        @include text-size(largest);
         letter-spacing: var(--letter-spacing-110);
     }
 
     &__date {
-        @include base.text-style(serif, italic);
-        @include base.text-size(large);
+        @include text-style(serif, italic);
+        @include text-size(large);
         letter-spacing: var(--letter-spacing-100);
     }
 
     &__activity {
         margin-top: var(--spacing-100);
 
-        @include base.text-style(serif, italic);
-        @include base.text-size(base);
+        @include text-style(serif, italic);
+        @include text-size(base);
         letter-spacing: var(--letter-spacing-110);
     }
 
     &__heading {
-        @include base.text-style(sans);
-        @include base.text-size(larger);
+        @include text-style(sans);
+        @include text-size(larger);
         line-height: var(--line-height-larger);
         letter-spacing: var(--letter-spacing-120);
     }
 
     &__copy {
-        @include base.text-style(sans);
-        @include base.text-size(base);
+        @include text-style(sans);
+        @include text-size(base);
         line-height: var(--line-height-large);
         letter-spacing: var(--letter-spacing-100);
 
-        @include base.emphasis-serif();
+        @include emphasis-serif();
     }
 
     &__code {
-        @include base.text-style(mono);
-        @include base.text-size(base);
+        @include text-style(mono);
+        @include text-size(base);
         letter-spacing: var(--letter-spacing-130);
     }
 
@@ -80,8 +80,8 @@
 
         @include figure-margin();
 
-        @include base.text-style(serif, italic);
-        @include base.text-size(base);
+        @include text-style(serif, italic);
+        @include text-size(base);
         letter-spacing: var(--letter-spacing-110);
     }
 
@@ -98,13 +98,13 @@
     &__list-item {
         display: list-item;
 
-        @include base.list-margin();
+        @include list-margin();
 
-        @include base.text-style(sans);
-        @include base.text-size(base);
+        @include text-style(sans);
+        @include text-size(base);
         letter-spacing: var(--letter-spacing-100);
 
-        @include base.emphasis-serif();
+        @include emphasis-serif();
     }
 
     &__figure {
@@ -117,8 +117,8 @@
     }
 
     &__figure-caption {
-        @include base.text-style(serif, italic);
-        @include base.text-size(small);
+        @include text-style(serif, italic);
+        @include text-size(small);
         letter-spacing: var(--letter-spacing-140);
     }
 
@@ -130,8 +130,8 @@
         display: block;
 
         text-align: right;
-        @include base.text-style(serif, italic);
-        @include base.text-size(base);
+        @include text-style(serif, italic);
+        @include text-size(base);
         letter-spacing: var(--letter-spacing-110);
     }
 }

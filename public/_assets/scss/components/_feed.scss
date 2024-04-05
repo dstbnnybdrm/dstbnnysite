@@ -1,0 +1,37 @@
+@use "../abstracts/mixins" as *;
+.feed {
+    display: flex;
+
+    flex-direction: column;
+    gap: var(--spacing-150);
+
+    &__title {
+        @include text-style(serif, italic);
+        @include text-size(large);
+        letter-spacing: var(--letter-spacing-120);
+    }
+
+    &__entry {
+        display: flex;
+
+        flex-direction: column;
+        gap: var(--spacing-025);
+
+        &:not(:first-child) {
+            border-top: 1px dotted var(--color-base);
+            padding-top: var(--spacing-075);
+        }
+
+        &:nth-child(n + 5) {
+            display: none;
+        }
+    }
+
+    // @include for-frame-size(large) {
+    //     &__entry {
+    //         &:nth-child(n + 4) {
+    //             display: block;
+    //         }
+    //     }
+    // }
+}
