@@ -8,38 +8,27 @@
     flex-direction: column;
     gap: var(--spacing-100);
 
-    &__title {
-        @include text-style(sans, normal, bold);
-        @include text-size(base);
-        letter-spacing: var(--letter-spacing-120);
-        white-space: nowrap;
-    }
+    #statuscafe {
+        #statuscafe-username {
+            @include text-style(serif, italic);
+            @include text-size(small);
+            letter-spacing: var(--letter-spacing-120);
 
-    &__copy {
-        @include text-style(sans);
-        @include text-size(small);
-        letter-spacing: var(--letter-spacing-150);
-
-        &::before,
-        &::after {
-            content: '"';
+            a {
+                &::after {
+                    content: "↗";
+                }
+            }
         }
-    }
 
-    &__username {
-        margin-top: var(--spacing-075);
+        #statuscafe-content {
+            @include text-style(sans);
+            @include text-size(small);
+            letter-spacing: var(--letter-spacing-150);
 
-        @include text-style(serif, italic);
-        @include text-size(small);
-        letter-spacing: var(--letter-spacing-120);
-
-        // &::before {
-        //     content: "— ";
-        // }
-
-        a {
+            &::before,
             &::after {
-                content: "↗";
+                content: '"';
             }
         }
     }

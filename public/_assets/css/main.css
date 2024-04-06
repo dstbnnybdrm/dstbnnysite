@@ -15,7 +15,7 @@
   --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
   --font-family-alt: Georgia, "Times New Roman", Times, serif;
   --font-family-mono: "Courier New", Courier, monospace;
-  /* size relations mostly derived from minor third ratios (6:5) */
+  /* size ratios mostly derived from minor thirds (6:5) */
   --font-size-smaller: 0.69rem;
   --font-size-small: 0.83rem;
   --font-size-base: 1rem;
@@ -41,7 +41,7 @@
   --spacing-150: 1.44rem;
   --spacing-175: 1.73rem;
   --spacing-200: 2rem;
-  /* the maximum line length that text should span (~67 characters, or 2.6
+  /* the maximum line length that text should span (~74 characters, or ~2.8
    alphabets) */
   --measure-max: 44rem;
 }
@@ -543,30 +543,7 @@ abbr {
   flex-direction: column;
   gap: var(--spacing-100);
 }
-.status__title {
-  color: var(--color-base);
-  font-style: normal;
-  font-weight: bold;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-120);
-  white-space: nowrap;
-}
-.status__copy {
-  color: var(--color-base);
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-small);
-  line-height: var(--line-height-small);
-  letter-spacing: var(--letter-spacing-150);
-}
-.status__copy::before, .status__copy::after {
-  content: '"';
-}
-.status__username {
-  margin-top: var(--spacing-075);
+.status #statuscafe #statuscafe-username {
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -575,8 +552,20 @@ abbr {
   line-height: var(--line-height-small);
   letter-spacing: var(--letter-spacing-120);
 }
-.status__username a::after {
+.status #statuscafe #statuscafe-username a::after {
   content: "↗";
+}
+.status #statuscafe #statuscafe-content {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  letter-spacing: var(--letter-spacing-150);
+}
+.status #statuscafe #statuscafe-content::before, .status #statuscafe #statuscafe-content::after {
+  content: '"';
 }
 
 .main {
@@ -686,6 +675,35 @@ abbr {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
+.card__title {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: bold;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-120);
+  white-space: nowrap;
+}
+.card__copy {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  letter-spacing: var(--letter-spacing-150);
+}
+.card__footer {
+  border-top: 1px dotted var(--color-base);
+  padding-top: var(--spacing-100);
 }
 
 .section {
