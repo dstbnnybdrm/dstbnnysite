@@ -669,11 +669,13 @@ abbr {
 
 .card {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: var(--spacing-100);
 }
 .card__body {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: var(--spacing-100);
 }
