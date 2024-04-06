@@ -522,24 +522,16 @@ abbr {
 }
 
 .directories {
-  display: flex;
   grid-area: directories;
-  flex-direction: column;
-  gap: var(--spacing-100);
 }
 
 .support {
-  display: flex;
   grid-area: support;
-  flex-direction: column;
-  gap: var(--spacing-100);
 }
 
 .status {
   display: flex;
   grid-area: status;
-  flex-direction: column;
-  gap: var(--spacing-100);
 }
 .status #statuscafe #statuscafe-username {
   color: var(--color-base);
@@ -675,6 +667,11 @@ abbr {
   width: 1px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
 .card__body {
   display: flex;
   flex-direction: column;

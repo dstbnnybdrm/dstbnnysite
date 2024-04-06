@@ -2,9 +2,9 @@
 @use "../abstracts/mixins" as *;
 
 .directories {
-    display: flex;
+    // display: flex;
 
     grid-area: directories;
-    flex-direction: column;
-    gap: var(--spacing-100);
+    // flex-direction: column;
+    // gap: var(--spacing-100);
 }
