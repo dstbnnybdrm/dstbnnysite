@@ -35,7 +35,7 @@
                 "theme-toggle"
                 "directories"
                 "support";
-            grid-template-rows: auto var(--spacing-200) 1fr;
+            grid-template-rows: min-content var(--spacing-200) auto auto;
             grid-template-columns: min-content;
         }
 
