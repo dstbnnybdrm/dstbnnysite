@@ -33,7 +33,8 @@
             grid-template-areas:
                 "navi"
                 "theme-toggle"
-                "directories";
+                "directories"
+                "support";
             grid-template-rows: auto var(--spacing-200) 1fr;
             grid-template-columns: min-content;
         }
@@ -68,6 +69,13 @@
         &__status {
             // min-height: 0;
             // overflow-y: auto;
+            @include layout-border();
+            @include layout-padding();
+        }
+
+        &__support {
+            min-height: 0;
+            overflow-y: auto;
             @include layout-border();
             @include layout-padding();
         }
