@@ -6,6 +6,9 @@
  */
 
 .l-imposter {
+    width: 100vw;
+    height: 100vh;
+
     @include for-viewport-size(phone) {
         display: flex;
         justify-content: center;

@@ -33,9 +33,9 @@
         @include text-size(small);
         letter-spacing: var(--letter-spacing-120);
 
-        &::before {
-            content: "— ";
-        }
+        // &::before {
+        //     content: "— ";
+        // }
 
         a {
             &::after {

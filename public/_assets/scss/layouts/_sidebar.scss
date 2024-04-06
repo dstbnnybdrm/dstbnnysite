@@ -3,31 +3,31 @@
 
 .sidebar {
     @include for-viewport-size(phone) {
-        /* no sidebar on mobile layout */
-        display: contents;
+        // /* no sidebar on mobile layout */
+        // display: contents;
 
-        &__status {
-            border-bottom: 1px dashed var(--color-base);
-            padding-bottom: var(--spacing-100);
-        }
+        // &__status {
+        //     border-bottom: 1px dashed var(--color-base);
+        //     padding-bottom: var(--spacing-100);
+        // }
 
-        &__directories {
-            border-bottom: 1px dashed var(--color-base);
-            padding-bottom: var(--spacing-100);
-        }
+        // &__directories {
+        //     border-bottom: 1px dashed var(--color-base);
+        //     padding-bottom: var(--spacing-100);
+        // }
 
-        &__theme-toggle {
-            border: none;
-            padding: var(--spacing-025);
-        }
+        // &__theme-toggle {
+        //     border: none;
+        //     padding: var(--spacing-025);
+        // }
     }
 
     @include for-viewport-size(desktop) {
-        display: inline-grid;
+        display: grid;
 
         row-gap: var(--spacing-100);
 
-        /* i.e. the primary (left) and secondary (right) sidebars */
+        /* the primary (left)  sidebars */
         &_major {
             grid-area: major-sidebar;
             grid-template-areas:
@@ -38,6 +38,7 @@
             grid-template-columns: min-content;
         }
 
+        /* and the secondary (right) sidebar */
         &_minor {
             grid-area: minor-sidebar;
             grid-template-areas: "status";
@@ -65,8 +66,8 @@
         }
 
         &__status {
-            min-height: 0;
-            overflow-y: auto;
+            // min-height: 0;
+            // overflow-y: auto;
             @include layout-border();
             @include layout-padding();
         }
