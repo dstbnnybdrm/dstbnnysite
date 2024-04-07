@@ -2,10 +2,11 @@
 .table {
     display: table;
 
-    border: 1px solid var(--color-base);
-    border-collapse: collapse;
-
     width: min-content;
+
+    border: 1px solid var(--color-base);
+
+    border-collapse: collapse;
 
     &__row {
         @include text-style(sans);
@@ -18,17 +19,19 @@
         border: 1px solid var(--color-base);
         padding: var(--spacing-100);
 
+        text-align: left;
+
+        letter-spacing: var(--letter-spacing-100);
+
         @include text-style(sans, normal, bold);
         @include text-size(base);
-        letter-spacing: var(--letter-spacing-100);
-        text-align: left;
     }
 
     &__cell {
+        width: 1px;
         border: 1px solid var(--color-base);
         padding: var(--spacing-100);
 
-        width: 1px;
         white-space: nowrap;
     }
 }

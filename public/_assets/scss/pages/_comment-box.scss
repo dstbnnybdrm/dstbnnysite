@@ -22,8 +22,9 @@ div #HCB_comment_box {
 
         margin: var(--spacing-100) 0;
 
-        @include text-style(sans);
         text-transform: lowercase;
+
+        @include text-style(sans);
     }
 
     p.error {
@@ -31,8 +32,9 @@ div #HCB_comment_box {
 
         border: 1px solid var(--color-primary);
 
-        @include text-style(sans);
         text-transform: lowercase;
+
+        @include text-style(sans);
     }
 
     /* "not using html comment box yet?" */
@@ -40,9 +42,10 @@ div #HCB_comment_box {
         display: none;
     }
 
-    /* log-in icon */
+    /* log in icon */
     img.hcb-icon.hcb-door-in {
         display: inline;
+
         color: var(--color-primary);
     }
 
@@ -52,12 +55,12 @@ div #HCB_comment_box {
         /* big "comment" button */
         .btn {
             border: none;
+            background: var(--color-primary);
 
             text-transform: lowercase;
-            @include text-style(sans);
-
             color: var(--color-background);
-            background: var(--color-primary);
+
+            @include text-style(sans);
 
             &:hover,
             &:focus {
@@ -72,20 +75,18 @@ div #HCB_comment_box {
 
     @include for-viewport-size(desktop) {
         display: grid;
-        column-gap: var(--spacing-100);
 
         grid-template-areas:
             "comment-message    ."
             "comment-form       comments-list";
-
-        grid-template-columns: repeat(2, minmax(0rem, 1fr));
         // grid-template-rows: min-content var(--spacing-100);
+        grid-template-columns: repeat(2, minmax(0rem, 1fr));
+        column-gap: var(--spacing-100);
 
         #HCB_comment_form_box {
+            aspect-ratio: 1 / 1.41;
             border: 1px solid var(--color-base);
             padding: var(--spacing-100);
-
-            aspect-ratio: 1 / 1.41;
         }
     }
 }
@@ -96,37 +97,40 @@ div #HCB_comment_box {
 input#hcb_form_name,
 textarea#hcb_form_content {
     border: 1px dotted var(--color-base);
+    background: none;
 
     @include text-style(mono);
 
     font-size: 16px;
-
-    background: none;
 }
 
 /* placeholder text */
 ::-webkit-input-placeholder {
-    font-size: 16px;
-    @include text-style(mono);
     text-transform: lowercase;
+
+    @include text-style(mono);
+    font-size: 16px;
 }
 
 :-moz-placeholder {
-    font-size: 16px;
-    @include text-style(mono);
     text-transform: lowercase;
+
+    @include text-style(mono);
+    font-size: 16px;
 }
 
 ::-moz-placeholder {
-    font-size: 16px;
-    @include text-style(mono);
     text-transform: lowercase;
+
+    @include text-style(mono);
+    font-size: 16px;
 }
 
 :-ms-input-placeholder {
-    font-size: 16px;
-    @include text-style(mono);
     text-transform: lowercase;
+
+    @include text-style(mono);
+    font-size: 16px;
 }
 
 /* --- COMMENTS LIST --- */
@@ -138,8 +142,9 @@ textarea#hcb_form_content {
     padding-top: var(--spacing-100);
 
     #no_comments {
-        @include text-style(sans);
         text-transform: lowercase;
+
+        @include text-style(sans);
     }
 
     div.comment {
@@ -165,19 +170,22 @@ textarea#hcb_form_content {
     }
 
     span.date {
+        text-transform: lowercase;
+
+        letter-spacing: var(--letter-spacing-140);
+
         @include text-style(serif, italic);
         @include text-size(small);
-        letter-spacing: var(--letter-spacing-140);
-        text-transform: lowercase;
     }
 
     /* comment buttons */
     p.hcb-comment-tb button {
-        @include text-style(sans);
-        @include text-size(small);
         text-transform: lowercase;
 
         color: var(--color-primary);
+
+        @include text-style(sans);
+        @include text-size(small);
     }
 
     .likes {
@@ -189,12 +197,11 @@ textarea#hcb_form_content {
     }
 
     @include for-viewport-size(desktop) {
-        overflow-y: auto;
-        overflow-x: hidden !important;
-
+        aspect-ratio: 1 / 1.41;
         border: 1px solid var(--color-base);
         padding: var(--spacing-100);
 
-        aspect-ratio: 1 / 1.41;
+        overflow-y: auto;
+        overflow-x: hidden !important;
     }
 }

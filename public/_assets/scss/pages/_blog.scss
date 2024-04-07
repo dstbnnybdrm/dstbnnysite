@@ -8,11 +8,9 @@
         &_blog {
             /* counteract grid gap in layout */
             margin-bottom: calc(var(--spacing-100) * -1);
+
             width: min-content;
         }
-    }
-
-    @include for-viewport-size(phone) {
     }
 
     @include for-viewport-size(desktop) {
@@ -21,8 +19,13 @@
                 "header     ."
                 "navi       main"
                 "footer     footer";
-            grid-template-rows: min-content 1fr var(--spacing-200);
-            grid-template-columns: min-content 1fr;
+            grid-template-rows:
+                min-content
+                1fr
+                var(--spacing-200);
+            grid-template-columns:
+                min-content
+                fit-content(var(--measure-max));
 
             width: 100%;
         }

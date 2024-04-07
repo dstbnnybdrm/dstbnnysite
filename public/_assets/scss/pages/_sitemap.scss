@@ -13,16 +13,16 @@
         &__home {
             display: block;
 
+            width: 100%;
             border: 1px dotted var(--color-base);
             padding: var(--spacing-100);
-
-            width: 100%;
         }
 
         &__subheading {
             display: block;
 
             margin: var(--spacing-100) 0;
+
             @include text-style(italic);
         }
 
@@ -61,13 +61,15 @@
         &__list {
             @include list-margin();
 
+            line-height: var(--spacing-150);
+
             @include text-style(sans);
             @include list-style(navi);
-            line-height: var(--spacing-150);
         }
 
         &__link {
             width: max-content;
+
             line-height: var(--spacing-150);
         }
 

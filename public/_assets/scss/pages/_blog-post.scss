@@ -28,51 +28,59 @@
         margin-bottom: var(--spacing-050);
 
         text-transform: uppercase;
+
+        letter-spacing: var(--letter-spacing-130);
+
         @include text-style(sans, normal, bold);
         @include text-size(small);
-        letter-spacing: var(--letter-spacing-130);
     }
 
     &__title {
+        letter-spacing: var(--letter-spacing-110);
+
         @include text-style(sans, normal, bold);
         @include text-size(largest);
-        letter-spacing: var(--letter-spacing-110);
     }
 
     &__date {
+        letter-spacing: var(--letter-spacing-100);
+
         @include text-style(serif, italic);
         @include text-size(large);
-        letter-spacing: var(--letter-spacing-100);
     }
 
     &__activity {
         margin-top: var(--spacing-100);
 
+        letter-spacing: var(--letter-spacing-110);
+
         @include text-style(serif, italic);
         @include text-size(base);
-        letter-spacing: var(--letter-spacing-110);
     }
 
     &__heading {
-        @include text-style(sans);
-        @include text-size(larger);
         line-height: var(--line-height-larger);
         letter-spacing: var(--letter-spacing-120);
+
+        @include text-style(sans);
+        @include text-size(larger);
     }
 
     &__copy {
-        @include text-style(sans);
-        @include text-size(base);
         line-height: var(--line-height-large);
         letter-spacing: var(--letter-spacing-100);
+
+        @include text-style(sans);
+        @include text-size(base);
 
         @include emphasis-serif();
     }
 
     &__code {
+        letter-spacing: var(--letter-spacing-130);
+
         @include text-style(mono);
         @include text-size(base);
-        letter-spacing: var(--letter-spacing-130);
     }
 
     &__quote {
@@ -80,9 +88,10 @@
 
         @include figure-margin();
 
+        letter-spacing: var(--letter-spacing-110);
+
         @include text-style(serif, italic);
         @include text-size(base);
-        letter-spacing: var(--letter-spacing-110);
     }
 
     &__list {
@@ -100,9 +109,10 @@
 
         @include list-margin();
 
+        letter-spacing: var(--letter-spacing-100);
+
         @include text-style(sans);
         @include text-size(base);
-        letter-spacing: var(--letter-spacing-100);
 
         @include emphasis-serif();
     }
@@ -117,9 +127,10 @@
     }
 
     &__figure-caption {
+        letter-spacing: var(--letter-spacing-140);
+
         @include text-style(serif, italic);
         @include text-size(small);
-        letter-spacing: var(--letter-spacing-140);
     }
 
     &__figure-body {
@@ -130,8 +141,9 @@
         display: block;
 
         text-align: right;
+        letter-spacing: var(--letter-spacing-110);
+
         @include text-style(serif, italic);
         @include text-size(base);
-        letter-spacing: var(--letter-spacing-110);
     }
 }

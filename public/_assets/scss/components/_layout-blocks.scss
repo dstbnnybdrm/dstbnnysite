@@ -11,22 +11,20 @@
 
     @include for-viewport-size(phone) {
         display: flex;
+
         justify-content: center;
     }
 
     @include for-viewport-size(desktop) {
         display: flex;
         position: absolute;
-
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
 
-        // center horizontally
-        justify-content: center;
-        // center vertically
         align-items: center;
+        justify-content: center;
     }
 }
 
@@ -52,12 +50,16 @@
 
 /* for visually hiding landmarks needed for screen readers */
 .l-hidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
     position: absolute;
+
+    margin: -1px;
     width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    clip-path: rect(0 0 0 0);
+    clip: rect(0 0 0 0);
 }

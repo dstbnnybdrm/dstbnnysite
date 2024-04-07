@@ -99,18 +99,18 @@ a:hover {
 
 /* for Firefox */
 ::-moz-selection {
-    color: var(--color-background);
     background: var(--color-secondary);
+    color: var(--color-background);
 }
 
 ::selection {
-    color: var(--color-background);
     background: var(--color-secondary);
+    color: var(--color-background);
 }
 
 /* - other - */
 
 abbr {
-    font: inherit;
     text-decoration: none;
+    font: inherit;
 }

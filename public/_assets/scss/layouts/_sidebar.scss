@@ -48,10 +48,11 @@
         }
 
         &__navi {
-            min-height: 0;
-            overflow-y: auto;
             @include layout-border();
+            min-height: 0;
             @include layout-padding();
+
+            overflow-y: auto;
         }
 
         &__theme-toggle {
@@ -60,24 +61,24 @@
         }
 
         &__directories {
-            min-height: 0;
-            overflow-y: auto;
             @include layout-border();
+            min-height: 0;
             @include layout-padding();
+            overflow-y: auto;
         }
 
         &__status {
             // min-height: 0;
-            // overflow-y: auto;
             @include layout-border();
+            // overflow-y: auto;
             @include layout-padding();
         }
 
         &__support {
-            min-height: 0;
-            overflow-y: auto;
             @include layout-border();
+            min-height: 0;
             @include layout-padding();
+            overflow-y: auto;
         }
     }
 }

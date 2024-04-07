@@ -1,21 +1,24 @@
 @use "../abstracts/mixins" as *;
 
 .title {
+    letter-spacing: var(--letter-spacing-110);
+
     @include text-style($family: sans, $weight: bold);
     @include text-size(largest);
-    letter-spacing: var(--letter-spacing-110);
 }
 
 .heading {
+    letter-spacing: var(--letter-spacing-120);
+
     @include text-style(sans);
     @include text-size(larger);
-    letter-spacing: var(--letter-spacing-120);
 }
 
 .subheading {
+    letter-spacing: var(--letter-spacing-130);
+
     @include text-style(serif, italic);
     @include text-size(large);
-    letter-spacing: var(--letter-spacing-130);
 }
 
 .copy {
@@ -26,9 +29,10 @@
 }
 
 .quote {
+    margin-left: var(--spacing-100);
+
     @include text-style(serif, italic);
     @include text-size(base);
-    margin-left: var(--spacing-100);
 }
 
 .list {
@@ -53,8 +57,9 @@
             margin-left: 0rem;
 
             &:not(:last-child)::after {
-                content: "/";
                 margin: 0 var(--spacing-050);
+
+                content: "/";
             }
         }
     }
@@ -66,14 +71,16 @@
     &__term {
         display: inline;
 
-        @include text-style(serif, italic);
         letter-spacing: var(--letter-spacing-110);
 
+        @include text-style(serif, italic);
+
         &::before {
-            content: "";
             display: block;
 
             margin-bottom: var(--spacing-025);
+
+            content: "";
         }
 
         &::after {
@@ -88,8 +95,9 @@
 
         &:has(+ &) {
             &::after {
-                content: ",";
                 margin: 0 0.5ch;
+
+                content: ",";
             }
         }
     }
@@ -99,16 +107,17 @@
     display: flex;
 
     flex-direction: column;
-    row-gap: var(--spacing-100);
     align-items: center;
+    row-gap: var(--spacing-100);
 
     letter-spacing: var(--letter-spacing-110);
 
     @include text-size(base);
 
     &__title {
-        @include text-style(serif, italic);
         width: 100%;
+
+        @include text-style(serif, italic);
     }
 
     &__body {

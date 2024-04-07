@@ -16,28 +16,28 @@
         &__home {
             display: block;
 
+            width: 100%;
             border: 1px dotted var(--color-base);
             padding: var(--spacing-100);
-
-            width: 100%;
         }
 
         &__button {
             display: block;
 
             border: none;
+            background-color: var(--color-primary);
             padding: var(--spacing-075);
 
-            font-size: var(--font-size-small);
-
             color: var(--color-background);
-            background-color: var(--color-primary);
+
+            font-size: var(--font-size-small);
 
             @include button-on-hover();
         }
 
         &__menu {
             display: none;
+
             flex-direction: column;
             gap: var(--spacing-100);
 
@@ -96,16 +96,18 @@
         &__subheading {
             display: list-item;
 
-            @include text-style(sans);
             @include list-style(navi);
+
+            @include text-style(sans);
             @include text-size(base);
         }
 
         &__list {
             @include list-margin();
 
-            @include text-style(sans);
             @include list-style(navi);
+
+            @include text-style(sans);
         }
 
         &__link {

@@ -5,14 +5,17 @@
     display: flex;
 
     flex-direction: column;
+
     grid-area: header;
 
     &__splash {
         display: block;
 
-        @include text-style(serif, italic);
-        letter-spacing: var(--letter-spacing-120);
         text-align: center;
+
+        letter-spacing: var(--letter-spacing-120);
+
+        @include text-style(serif, italic);
     }
 
     @include for-viewport-size(desktop) {
@@ -21,8 +24,8 @@
         &__splash {
             &::before,
             &::after {
-                content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
                 margin: 0 var(--spacing-200);
+                content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
             }
         }
     }

@@ -16,15 +16,17 @@
     }
 
     &__title {
-        @include text-style(sans, normal, bold);
-        @include text-size(base);
         letter-spacing: var(--letter-spacing-120);
         white-space: nowrap;
+
+        @include text-style(sans, normal, bold);
+        @include text-size(base);
     }
     &__copy {
+        letter-spacing: var(--letter-spacing-150);
+
         @include text-style(sans);
         @include text-size(small);
-        letter-spacing: var(--letter-spacing-150);
     }
 
     &__footer {

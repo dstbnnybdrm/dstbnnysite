@@ -294,8 +294,8 @@ abbr {
 /*:._.:*~ LAYOUTS ~*:._.:*/
 .page {
   display: inline-grid;
-  gap: var(--spacing-100);
   justify-content: center;
+  gap: var(--spacing-100);
 }
 @media screen and (min-width: 801px) {
   .page {
@@ -920,6 +920,30 @@ abbr {
   margin: 0rem;
 }
 
+.page__header {
+  align-items: center;
+}
+.page__header_blog {
+  /* counteract grid gap in layout */
+  margin-bottom: calc(var(--spacing-100) * -1);
+  width: min-content;
+}
+@media screen and (min-width: 801px) {
+  .page_blog {
+    grid-template-areas: "header     ." "navi       main" "footer     footer";
+    grid-template-rows: min-content 1fr var(--spacing-200);
+    grid-template-columns: min-content fit-content(var(--measure-max));
+    width: 100%;
+  }
+  .page__header_blog {
+    border: none;
+    padding: 0;
+  }
+  .page__main_blog {
+    border: none;
+  }
+}
+
 .blog-navi {
   display: flex;
   grid-area: navi;
@@ -933,22 +957,22 @@ abbr {
   line-height: var(--line-height-base);
 }
 .blog-navi__title {
+  letter-spacing: var(--letter-spacing-120);
   color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
-  letter-spacing: var(--letter-spacing-120);
 }
 @media screen and (max-width: 800px) {
   .blog-navi__button {
     display: block;
     border: none;
-    padding: var(--spacing-075);
-    font-size: var(--font-size-small);
-    color: var(--color-background);
     background-color: var(--color-primary);
+    padding: var(--spacing-075);
+    color: var(--color-background);
+    font-size: var(--font-size-small);
   }
   .blog-navi__button:hover {
     border-color: var(--color-background);
@@ -993,13 +1017,13 @@ abbr {
 @media screen and (min-width: 801px) {
   .blog-navi__heading {
     display: inline;
+    letter-spacing: var(--letter-spacing-120);
     color: var(--color-base);
     font-style: italic;
     font-weight: normal;
     font-family: var(--font-family-alt);
     font-size: var(--font-size-large);
     line-height: var(--line-height-large);
-    letter-spacing: var(--letter-spacing-120);
   }
   .blog-navi__button {
     display: none;
@@ -1009,12 +1033,12 @@ abbr {
   }
   .blog-navi__list {
     margin-left: var(--spacing-175);
+    text-overflow: ellipsis;
+    list-style: "∟ ";
     color: var(--color-base);
     font-style: normal;
     font-weight: normal;
     font-family: var(--font-family-base);
-    list-style: "∟ ";
-    text-overflow: ellipsis;
   }
 }
 

@@ -10,8 +10,9 @@
     &__list {
         display: flex;
 
-        flex-wrap: wrap;
         flex-direction: row;
+        flex-wrap: wrap;
+
         justify-content: center;
     }
 
@@ -21,9 +22,9 @@
         white-space: nowrap;
 
         &:not(:last-child)::after {
-            content: "|";
-
             margin: 0 var(--spacing-075);
+
+            content: "|";
         }
     }
 }

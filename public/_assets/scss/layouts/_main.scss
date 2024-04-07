@@ -18,11 +18,11 @@
 
     @include for-viewport-size(desktop) {
         &__frame {
-            border: none;
-
             /* take up entire height of GRID CELL */
             height: 100%;
             width: 100%;
+
+            border: none;
         }
     }
 }
@@ -47,13 +47,12 @@
     //         grid-template-areas:
     //             "welcome news-feed"
     //             "update update";
-    //         grid-template-columns: 1fr 1fr;
-    //         row-gap: var(--spacing-100);
-    //         column-gap: var(--spacing-200);
-
     //         grid-template-rows:
     //             minmax(0, 3fr)
     //             minmax(0, 2fr);
+    //         grid-template-columns: 1fr 1fr;
+    //         row-gap: var(--spacing-100);
+    //         column-gap: var(--spacing-200);
 
     //         height: 100vh;
     //     }
@@ -61,6 +60,7 @@
 
     // @include for-in-frame() {
     //     margin: 5% auto 0 auto;
+
     //     padding: 0 12%;
     // }
 }

@@ -5,14 +5,16 @@
     display: flex;
 
     grid-area: theme-toggle;
+
     align-items: center;
     justify-content: center;
 
-    @include text-style(sans);
-    @include text-size(small);
+    background-color: var(--color-primary);
 
     color: var(--color-background);
-    background-color: var(--color-primary);
+
+    @include text-style(sans);
+    @include text-size(small);
 
     @include button-on-hover();
 }
