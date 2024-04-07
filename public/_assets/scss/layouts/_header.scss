@@ -8,6 +8,9 @@
 
     grid-area: header;
 
+    @include layout-border;
+    padding: var(--spacing-075) var(--spacing-100);
+
     &__splash {
         display: block;
 

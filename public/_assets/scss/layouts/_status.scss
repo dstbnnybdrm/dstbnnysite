@@ -6,6 +6,9 @@
 
     grid-area: status;
 
+    @include layout-border();
+    @include layout-padding();
+
     #statuscafe {
         #statuscafe-username {
             @include text-style(serif, italic);

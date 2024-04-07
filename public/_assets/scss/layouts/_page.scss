@@ -4,7 +4,6 @@
 .page {
     display: inline-grid;
 
-    justify-content: center;
     gap: var(--spacing-100);
 
     @include for-viewport-size(phone) {
@@ -114,11 +113,6 @@
         //             height: min-content;
         //         }
 
-        &__header {
-            @include layout-border;
-            padding: var(--spacing-075) var(--spacing-100);
-        }
-
         //         &__navi {
         //             @include layout-border();
         //             @include layout-padding();
@@ -127,22 +121,5 @@
         //                 border: none;
         //             }
         //         }
-
-        &__marquee {
-            @include layout-border();
-            padding: var(--spacing-075) var(--spacing-100);
-
-            // max-height: min-content;
-            // width: 100%;
-        }
-
-        &__main {
-            @include layout-border();
-            @include layout-padding();
-
-            // &_borderless {
-            //     border: none;
-            // }
-        }
     }
 }

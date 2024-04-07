@@ -6,6 +6,13 @@
 
     grid-area: main;
 
+    @include layout-border();
+    @include layout-padding();
+
+    // &_borderless {
+    //     border: none;
+    // }
+
     @include for-viewport-size(phone) {
         //     &__frame {
         //         display: block;

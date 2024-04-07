@@ -1,10 +1,8 @@
-@use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
 .directories {
-    // display: flex;
-
     grid-area: directories;
-    // flex-direction: column;
-    // gap: var(--spacing-100);
+
+    @include layout-border();
+    @include layout-padding();
 }

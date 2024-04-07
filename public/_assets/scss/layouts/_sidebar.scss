@@ -48,36 +48,26 @@
         }
 
         &__navi {
-            @include layout-border();
             min-height: 0;
-            @include layout-padding();
 
             overflow-y: auto;
         }
 
         &__theme-toggle {
-            border: none;
-            @include layout-padding();
         }
 
         &__directories {
-            @include layout-border();
             min-height: 0;
-            @include layout-padding();
             overflow-y: auto;
         }
 
         &__status {
             // min-height: 0;
-            @include layout-border();
             // overflow-y: auto;
-            @include layout-padding();
         }
 
         &__support {
-            @include layout-border();
             min-height: 0;
-            @include layout-padding();
             overflow-y: auto;
         }
     }

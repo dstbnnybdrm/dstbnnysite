@@ -9,7 +9,9 @@
     align-items: center;
     justify-content: center;
 
+    border: none;
     background-color: var(--color-primary);
+    @include layout-padding();
 
     @include text-style(sans);
     @include text-size(small);
