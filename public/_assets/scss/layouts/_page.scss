@@ -67,16 +67,15 @@
             "major-sidebar    main        minor-sidebar"
             "major-sidebar    marquee     marquee"
             "footer           footer      footer";
-        grid-template-columns:
-            min-content
-            minmax(0rem, var(--measure-max))
-            // fit-content(var(--measure-max))
-            min-content;
         grid-template-rows:
             min-content
             1fr
             min-content
             var(--spacing-200);
+        grid-template-columns:
+            min-content
+            minmax(0rem, var(--measure-max))
+            min-content;
 
         height: 100%;
 
