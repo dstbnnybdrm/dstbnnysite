@@ -25,7 +25,7 @@
                 var(--spacing-200);
             grid-template-columns:
                 min-content
-                fit-content(var(--measure-max));
+                minmax(0rem, var(--measure-max));
 
             width: 100%;
         }

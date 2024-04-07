@@ -70,7 +70,8 @@
             "footer           footer      footer";
         grid-template-columns:
             min-content
-            fit-content(var(--measure-max))
+            minmax(0rem, var(--measure-max))
+            // fit-content(var(--measure-max))
             min-content;
         grid-template-rows:
             min-content

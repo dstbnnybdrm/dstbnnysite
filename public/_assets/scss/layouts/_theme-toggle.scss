@@ -11,10 +11,10 @@
 
     background-color: var(--color-primary);
 
-    color: var(--color-background);
-
     @include text-style(sans);
     @include text-size(small);
+
+    color: var(--color-background);
 
     @include button-on-hover();
 }

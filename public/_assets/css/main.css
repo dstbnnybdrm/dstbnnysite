@@ -132,49 +132,49 @@ a:hover {
 /* - selection - */
 /* for Firefox */
 ::-moz-selection {
-  color: var(--color-background);
   background: var(--color-secondary);
+  color: var(--color-background);
 }
 
 ::selection {
-  color: var(--color-background);
   background: var(--color-secondary);
+  color: var(--color-background);
 }
 
 /* - other - */
 abbr {
-  font: inherit;
   text-decoration: none;
+  font: inherit;
 }
 
 .title {
+  letter-spacing: var(--letter-spacing-110);
   color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
   font-size: var(--font-size-largest);
   line-height: var(--line-height-largest);
-  letter-spacing: var(--letter-spacing-110);
 }
 
 .heading {
+  letter-spacing: var(--letter-spacing-120);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   font-size: var(--font-size-larger);
   line-height: var(--line-height-larger);
-  letter-spacing: var(--letter-spacing-120);
 }
 
 .subheading {
+  letter-spacing: var(--letter-spacing-130);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
-  letter-spacing: var(--letter-spacing-130);
 }
 
 .copy {
@@ -195,13 +195,13 @@ abbr {
 }
 
 .quote {
+  margin-left: var(--spacing-100);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  margin-left: var(--spacing-100);
 }
 
 .list {
@@ -233,8 +233,8 @@ abbr {
   margin-left: 0rem;
 }
 .list__item_row:not(:last-child)::after {
-  content: "/";
   margin: 0 var(--spacing-050);
+  content: "/";
 }
 
 .definition-list {
@@ -242,16 +242,16 @@ abbr {
 }
 .definition-list__term {
   display: inline;
+  letter-spacing: var(--letter-spacing-110);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
-  letter-spacing: var(--letter-spacing-110);
 }
 .definition-list__term::before {
-  content: "";
   display: block;
   margin-bottom: var(--spacing-025);
+  content: "";
 }
 .definition-list__term::after {
   content: ":";
@@ -264,25 +264,25 @@ abbr {
   font-family: var(--font-family-base);
 }
 .definition-list__description:has(+ .definition-list__description)::after {
-  content: ",";
   margin: 0 0.5ch;
+  content: ",";
 }
 
 .poem {
   display: flex;
   flex-direction: column;
-  row-gap: var(--spacing-100);
   align-items: center;
+  row-gap: var(--spacing-100);
   letter-spacing: var(--letter-spacing-110);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
 .poem__title {
+  width: 100%;
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
-  width: 100%;
 }
 .poem__body {
   color: var(--color-base);
@@ -301,7 +301,7 @@ abbr {
   .page {
     padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
     grid-template-areas: "header           header      header" "major-sidebar    main        minor-sidebar" "major-sidebar    marquee     marquee" "footer           footer      footer";
-    grid-template-columns: min-content fit-content(var(--measure-max)) min-content;
+    grid-template-columns: min-content minmax(0rem, var(--measure-max)) min-content;
     grid-template-rows: min-content 1fr min-content var(--spacing-200);
     height: 100%;
   }
@@ -326,20 +326,20 @@ abbr {
 }
 .header__splash {
   display: block;
+  text-align: center;
+  letter-spacing: var(--letter-spacing-120);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
-  letter-spacing: var(--letter-spacing-120);
-  text-align: center;
 }
 @media screen and (min-width: 801px) {
   .header {
     justify-content: center;
   }
   .header__splash::before, .header__splash::after {
-    content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
     margin: 0 var(--spacing-200);
+    content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
   }
 }
 
@@ -363,30 +363,30 @@ abbr {
     grid-template-columns: 100%;
   }
   .sidebar__navi {
-    min-height: 0;
-    overflow-y: auto;
     border: 1px solid var(--color-base);
+    min-height: 0;
     padding: var(--spacing-100);
+    overflow-y: auto;
   }
   .sidebar__theme-toggle {
     border: none;
     padding: var(--spacing-100);
   }
   .sidebar__directories {
-    min-height: 0;
-    overflow-y: auto;
     border: 1px solid var(--color-base);
+    min-height: 0;
     padding: var(--spacing-100);
+    overflow-y: auto;
   }
   .sidebar__status {
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
   }
   .sidebar__support {
-    min-height: 0;
-    overflow-y: auto;
     border: 1px solid var(--color-base);
+    min-height: 0;
     padding: var(--spacing-100);
+    overflow-y: auto;
   }
 }
 
@@ -407,17 +407,17 @@ abbr {
   }
   .navi__home {
     display: block;
+    width: 100%;
     border: 1px dotted var(--color-base);
     padding: var(--spacing-100);
-    width: 100%;
   }
   .navi__button {
     display: block;
     border: none;
-    padding: var(--spacing-075);
-    font-size: var(--font-size-small);
-    color: var(--color-background);
     background-color: var(--color-primary);
+    padding: var(--spacing-075);
+    color: var(--color-background);
+    font-size: var(--font-size-small);
   }
   .navi__button:hover {
     border-color: var(--color-background);
@@ -477,21 +477,21 @@ abbr {
   }
   .navi__subheading {
     display: list-item;
+    list-style: "∟ ";
     color: var(--color-base);
     font-style: normal;
     font-weight: normal;
     font-family: var(--font-family-base);
-    list-style: "∟ ";
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
   }
   .navi__list {
     margin-left: var(--spacing-175);
+    list-style: "∟ ";
     color: var(--color-base);
     font-style: normal;
     font-weight: normal;
     font-family: var(--font-family-base);
-    list-style: "∟ ";
   }
   .navi__link {
     width: max-content;
@@ -506,6 +506,7 @@ abbr {
   grid-area: theme-toggle;
   align-items: center;
   justify-content: center;
+  background-color: var(--color-primary);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
@@ -513,7 +514,6 @@ abbr {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
   color: var(--color-background);
-  background-color: var(--color-primary);
 }
 .theme-toggle:hover {
   border-color: var(--color-background);
@@ -564,10 +564,10 @@ abbr {
 }
 @media screen and (min-width: 801px) {
   .main__frame {
-    border: none;
     /* take up entire height of GRID CELL */
     height: 100%;
     width: 100%;
+    border: none;
   }
 }
 
@@ -597,8 +597,8 @@ abbr {
 }
 .footer__list {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .footer__item {
@@ -606,8 +606,8 @@ abbr {
   white-space: nowrap;
 }
 .footer__item:not(:last-child)::after {
-  content: "|";
   margin: 0 var(--spacing-075);
+  content: "|";
 }
 
 /*:._.:*~ COMPONENTS ~*:._.:*/
@@ -633,8 +633,8 @@ abbr {
     right: 0;
     bottom: 0;
     left: 0;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -657,14 +657,15 @@ abbr {
 
 /* for visually hiding landmarks needed for screen readers */
 .l-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
   position: absolute;
+  margin: -1px;
   width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip-path: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
 }
 
 .card {
@@ -680,23 +681,23 @@ abbr {
   gap: var(--spacing-100);
 }
 .card__title {
+  letter-spacing: var(--letter-spacing-120);
+  white-space: nowrap;
   color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-120);
-  white-space: nowrap;
 }
 .card__copy {
+  letter-spacing: var(--letter-spacing-150);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  letter-spacing: var(--letter-spacing-150);
 }
 .card__footer {
   border-top: 1px dotted var(--color-base);
@@ -718,10 +719,10 @@ abbr {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
-  overflow-y: auto;
-  border: none;
   height: 100%;
   min-height: 0;
+  border: none;
+  overflow-y: auto;
 }
 
 .feed {
@@ -730,13 +731,13 @@ abbr {
   gap: var(--spacing-150);
 }
 .feed__title {
+  letter-spacing: var(--letter-spacing-120);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
-  letter-spacing: var(--letter-spacing-120);
 }
 .feed__entry {
   display: flex;
@@ -766,9 +767,9 @@ abbr {
 
 .table {
   display: table;
+  width: min-content;
   border: 1px solid var(--color-base);
   border-collapse: collapse;
-  width: min-content;
 }
 .table__row {
   color: var(--color-base);
@@ -789,19 +790,19 @@ abbr {
 .table__header {
   border: 1px solid var(--color-base);
   padding: var(--spacing-100);
+  text-align: left;
+  letter-spacing: var(--letter-spacing-100);
   color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-100);
-  text-align: left;
 }
 .table__cell {
+  width: 1px;
   border: 1px solid var(--color-base);
   padding: var(--spacing-100);
-  width: 1px;
   white-space: nowrap;
 }
 
@@ -812,23 +813,23 @@ abbr {
   margin-left: var(--spacing-150);
 }
 .figure__caption {
+  letter-spacing: var(--letter-spacing-130);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  letter-spacing: var(--letter-spacing-130);
 }
 
 .ascii-art {
   color: var(--color-base);
+  line-height: 1rem;
+  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
-  line-height: 1rem;
   user-select: none;
-  color: var(--color-base);
 }
 .ascii-art_inline {
   display: inline;
@@ -873,7 +874,6 @@ abbr {
   display: inline-block;
 }
 .breadcrumb__crumb:not(:last-child)::after {
-  content: ">";
   margin: 0 var(--spacing-075);
   color: var(--color-base);
   font-style: normal;
@@ -881,6 +881,7 @@ abbr {
   font-family: var(--font-family-base);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
+  content: ">";
 }
 .breadcrumb__link {
   color: var(--color-base);
@@ -932,7 +933,7 @@ abbr {
   .page_blog {
     grid-template-areas: "header     ." "navi       main" "footer     footer";
     grid-template-rows: min-content 1fr var(--spacing-200);
-    grid-template-columns: min-content fit-content(var(--measure-max));
+    grid-template-columns: min-content minmax(0rem, var(--measure-max));
     width: 100%;
   }
   .page__header_blog {
@@ -1057,61 +1058,61 @@ abbr {
 .blog-post__eyebrow {
   margin-bottom: var(--spacing-050);
   text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-130);
   color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  letter-spacing: var(--letter-spacing-130);
 }
 .blog-post__title {
+  letter-spacing: var(--letter-spacing-110);
   color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
   font-size: var(--font-size-largest);
   line-height: var(--line-height-largest);
-  letter-spacing: var(--letter-spacing-110);
 }
 .blog-post__date {
+  letter-spacing: var(--letter-spacing-100);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
-  letter-spacing: var(--letter-spacing-100);
 }
 .blog-post__activity {
   margin-top: var(--spacing-100);
+  letter-spacing: var(--letter-spacing-110);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-110);
 }
 .blog-post__heading {
+  line-height: var(--line-height-larger);
+  letter-spacing: var(--letter-spacing-120);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   font-size: var(--font-size-larger);
   line-height: var(--line-height-larger);
-  line-height: var(--line-height-larger);
-  letter-spacing: var(--letter-spacing-120);
 }
 .blog-post__copy {
+  line-height: var(--line-height-large);
+  letter-spacing: var(--letter-spacing-100);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  line-height: var(--line-height-large);
-  letter-spacing: var(--letter-spacing-100);
 }
 .blog-post__copy i,
 .blog-post__copy em {
@@ -1122,26 +1123,26 @@ abbr {
   letter-spacing: var(--letter-spacing-110);
 }
 .blog-post__code {
+  letter-spacing: var(--letter-spacing-130);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-130);
 }
 .blog-post__quote {
   display: block;
   margin-top: var(--spacing-050);
   margin-bottom: var(--spacing-050);
   margin-left: var(--spacing-200);
+  letter-spacing: var(--letter-spacing-110);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-110);
 }
 .blog-post__list {
   display: block;
@@ -1153,13 +1154,13 @@ abbr {
 .blog-post__list-item {
   display: list-item;
   margin-left: var(--spacing-175);
+  letter-spacing: var(--letter-spacing-100);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-100);
 }
 .blog-post__list-item i,
 .blog-post__list-item em {
@@ -1178,13 +1179,13 @@ abbr {
   margin-left: var(--spacing-200);
 }
 .blog-post__figure-caption {
+  letter-spacing: var(--letter-spacing-140);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  letter-spacing: var(--letter-spacing-140);
 }
 .blog-post__figure-body {
   width: 83%;
@@ -1192,13 +1193,13 @@ abbr {
 .blog-post__footer {
   display: block;
   text-align: right;
+  letter-spacing: var(--letter-spacing-110);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-110);
 }
 
 /*:._.:*~   COMMENT BOX ~*:._.:*/
@@ -1209,7 +1210,7 @@ div #HCB_comment_box {
   /* comments heading */
   /* HCB's messages to user */
   /* "not using html comment box yet?" */
-  /* log-in icon */
+  /* log in icon */
 }
 div #HCB_comment_box h3 {
   display: none;
@@ -1217,20 +1218,20 @@ div #HCB_comment_box h3 {
 div #HCB_comment_box #hcb_msg {
   grid-area: comment-message;
   margin: var(--spacing-100) 0;
+  text-transform: lowercase;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
-  text-transform: lowercase;
 }
 div #HCB_comment_box p.error {
   grid-area: comment-message;
   border: 1px solid var(--color-primary);
+  text-transform: lowercase;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
-  text-transform: lowercase;
 }
 div #HCB_comment_box div.home-desc {
   display: none;
@@ -1245,13 +1246,13 @@ div #HCB_comment_box #HCB_comment_form_box {
 }
 div #HCB_comment_box #HCB_comment_form_box .btn {
   border: none;
+  background: var(--color-primary);
   text-transform: lowercase;
+  color: var(--color-background);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
-  color: var(--color-background);
-  background: var(--color-primary);
 }
 div #HCB_comment_box #HCB_comment_form_box .btn:hover, div #HCB_comment_box #HCB_comment_form_box .btn:focus {
   background: var(--color-secondary);
@@ -1264,14 +1265,14 @@ div #HCB_comment_box #HCB_comment_form_box .btn:hover, div #HCB_comment_box #HCB
 @media screen and (min-width: 801px) {
   div #HCB_comment_box {
     display: grid;
-    column-gap: var(--spacing-100);
     grid-template-areas: "comment-message    ." "comment-form       comments-list";
     grid-template-columns: repeat(2, minmax(0rem, 1fr));
+    column-gap: var(--spacing-100);
   }
   div #HCB_comment_box #HCB_comment_form_box {
+    aspect-ratio: 1/1.41;
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
-    aspect-ratio: 1/1.41;
   }
 }
 
@@ -1280,49 +1281,49 @@ div #HCB_comment_box #HCB_comment_form_box .btn:hover, div #HCB_comment_box #HCB
 input#hcb_form_name,
 textarea#hcb_form_content {
   border: 1px dotted var(--color-base);
+  background: none;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
   font-size: 16px;
-  background: none;
 }
 
 /* placeholder text */
 ::-webkit-input-placeholder {
-  font-size: 16px;
+  text-transform: lowercase;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
-  text-transform: lowercase;
+  font-size: 16px;
 }
 
 :-moz-placeholder {
-  font-size: 16px;
+  text-transform: lowercase;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
-  text-transform: lowercase;
+  font-size: 16px;
 }
 
 ::-moz-placeholder {
-  font-size: 16px;
+  text-transform: lowercase;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
-  text-transform: lowercase;
+  font-size: 16px;
 }
 
 :-ms-input-placeholder {
-  font-size: 16px;
+  text-transform: lowercase;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
-  text-transform: lowercase;
+  font-size: 16px;
 }
 
 /* --- COMMENTS LIST --- */
@@ -1333,11 +1334,11 @@ textarea#hcb_form_content {
   /* comment buttons */
 }
 #comments_list #no_comments {
+  text-transform: lowercase;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
-  text-transform: lowercase;
 }
 #comments_list div.comment {
   margin: 0;
@@ -1363,24 +1364,24 @@ textarea#hcb_form_content {
   font-family: var(--font-family-base);
 }
 #comments_list span.date {
+  text-transform: lowercase;
+  letter-spacing: var(--letter-spacing-140);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  letter-spacing: var(--letter-spacing-140);
-  text-transform: lowercase;
 }
 #comments_list p.hcb-comment-tb button {
+  text-transform: lowercase;
+  color: var(--color-primary);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  text-transform: lowercase;
-  color: var(--color-primary);
 }
 #comments_list .likes {
   color: var(--color-base);
@@ -1393,11 +1394,11 @@ textarea#hcb_form_content {
 }
 @media screen and (min-width: 801px) {
   #comments_list {
-    overflow-y: auto;
-    overflow-x: hidden !important;
+    aspect-ratio: 1/1.41;
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
-    aspect-ratio: 1/1.41;
+    overflow-y: auto;
+    overflow-x: hidden !important;
   }
 }
 
@@ -1415,9 +1416,9 @@ textarea#hcb_form_content {
   }
   .sitemap__home {
     display: block;
+    width: 100%;
     border: 1px dotted var(--color-base);
     padding: var(--spacing-100);
-    width: 100%;
   }
   .sitemap__subheading {
     display: block;
@@ -1459,12 +1460,12 @@ textarea#hcb_form_content {
   }
   .sitemap__list {
     margin-left: var(--spacing-175);
+    line-height: var(--spacing-150);
     color: var(--color-base);
     font-style: normal;
     font-weight: normal;
     font-family: var(--font-family-base);
     list-style: "∟ ";
-    line-height: var(--spacing-150);
   }
   .sitemap__link {
     width: max-content;
