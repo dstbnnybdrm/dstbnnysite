@@ -1,6 +1,47 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
+.page {
+    &__header {
+        align-items: center;
+
+        &_blog {
+            /* counteract grid gap in layout */
+            margin-bottom: calc(var(--spacing-100) * -1);
+            width: min-content;
+        }
+    }
+
+    @include for-viewport-size(phone) {
+    }
+
+    @include for-viewport-size(desktop) {
+        &_blog {
+            grid-template-areas:
+                "header     ."
+                "navi       main"
+                "footer     footer";
+            grid-template-rows: min-content 1fr var(--spacing-200);
+            grid-template-columns: min-content 1fr;
+
+            width: 100%;
+        }
+
+        &__header {
+            &_blog {
+                border: none;
+                padding: 0;
+            }
+        }
+
+        &__main {
+            &_blog {
+                border: none;
+            }
+        }
+    }
+}
+
 .blog-navi {
     display: flex;
 
@@ -13,9 +54,10 @@
     @include text-size(base);
 
     &__title {
+        letter-spacing: var(--letter-spacing-120);
+
         @include text-style(sans, normal, bold);
         @include text-size(large);
-        letter-spacing: var(--letter-spacing-120);
     }
 
     @include for-viewport-size(phone) {
@@ -23,18 +65,18 @@
             display: block;
 
             border: none;
+            background-color: var(--color-primary);
             padding: var(--spacing-075);
 
-            font-size: var(--font-size-small);
-
             color: var(--color-background);
-            background-color: var(--color-primary);
+            font-size: var(--font-size-small);
 
             @include button-on-hover();
         }
 
         &__menu {
             display: none;
+
             flex-direction: column;
             gap: var(--spacing-100);
 
@@ -81,9 +123,10 @@
         &__heading {
             display: inline;
 
+            letter-spacing: var(--letter-spacing-120);
+
             @include text-style(serif, italic);
             @include text-size(large);
-            letter-spacing: var(--letter-spacing-120);
         }
 
         &__button {
@@ -97,9 +140,11 @@
         &__list {
             @include list-margin();
 
-            @include text-style(sans);
-            @include list-style(navi);
             text-overflow: ellipsis;
+
+            @include list-style(navi);
+
+            @include text-style(sans);
         }
 
         &__item {
