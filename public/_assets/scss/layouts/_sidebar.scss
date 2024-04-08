@@ -35,25 +35,40 @@
                 "theme-toggle"
                 "directories"
                 "support";
-            grid-template-rows: min-content var(--spacing-200) auto auto;
+            grid-template-rows:
+                min-content
+                var(--spacing-200)
+                auto
+                auto;
             grid-template-columns: min-content;
         }
 
         /* and the secondary (right) sidebar */
         &_minor {
             grid-area: minor-sidebar;
-            grid-template-areas: "status";
-            grid-template-rows: 100%;
-            grid-template-columns: 100%;
+            grid-template-areas:
+                "status"
+                "site-log";
+            grid-template-rows:
+                min-content
+                auto;
+            grid-template-columns: auto;
+        }
+
+        &__section {
+            min-height: 0;
+            min-width: fit-content;
+            overflow-y: auto;
+
+            @include layout-border();
+            @include layout-padding();
         }
 
         &__navi {
             min-height: 0;
+            min-width: min-content;
 
             overflow-y: auto;
-        }
-
-        &__theme-toggle {
         }
 
         &__directories {
@@ -61,14 +76,18 @@
             overflow-y: auto;
         }
 
-        &__status {
-            // min-height: 0;
-            // overflow-y: auto;
-        }
-
         &__support {
             min-height: 0;
             overflow-y: auto;
         }
+    }
+}
+
+.site-log {
+    grid-area: site-log;
+    // this is scuffed but rn idk a better way to do it LMAO
+    #site-log {
+        max-height: 1rem;
+        // overflow-y: auto;
     }
 }

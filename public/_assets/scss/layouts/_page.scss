@@ -74,10 +74,11 @@
             var(--spacing-200);
         grid-template-columns:
             min-content
-            minmax(0rem, var(--measure-max))
+            minmax(0, var(--measure-max))
             min-content;
 
-        height: 100%;
+        min-height: 0;
+        max-height: 100vh;
 
         //         &_simple {
         //             display: flex;
