@@ -134,4 +134,8 @@
         @include base.text-size(base);
         letter-spacing: var(--letter-spacing-110);
     }
+
+    hr {
+        border: 1px dotted var(--color-base);
+    }
 }

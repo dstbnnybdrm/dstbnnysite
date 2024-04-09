@@ -1399,6 +1399,9 @@ abbr {
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-110);
 }
+.blog-post hr {
+  border: 1px dotted var(--color-base);
+}
 
 /*
  * using BEM methodology
