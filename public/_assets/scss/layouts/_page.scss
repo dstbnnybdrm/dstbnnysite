@@ -77,8 +77,7 @@
             minmax(0, var(--measure-max))
             min-content;
 
-        min-height: 0;
-        max-height: 100vh;
+        height: 100vh;
 
         //         &_simple {
         //             display: flex;

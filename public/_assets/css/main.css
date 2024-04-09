@@ -302,8 +302,7 @@ abbr {
     grid-template-areas: "header           header      header" "major-sidebar    main        minor-sidebar" "major-sidebar    marquee     marquee" "footer           footer      footer";
     grid-template-rows: min-content 1fr min-content var(--spacing-200);
     grid-template-columns: min-content minmax(0, var(--measure-max)) min-content;
-    min-height: 0;
-    max-height: 100vh;
+    height: 100vh;
   }
 }
 
