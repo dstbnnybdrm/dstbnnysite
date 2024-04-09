@@ -304,6 +304,13 @@ abbr {
     grid-template-columns: min-content minmax(0, var(--measure-max)) min-content;
     height: 100vh;
   }
+  .page_simple {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-125);
+    justify-content: center;
+    min-height: 0;
+  }
 }
 
 .header {
@@ -392,6 +399,9 @@ abbr {
   padding: var(--spacing-100);
 }
 @media screen and (min-width: 801px) {
+  .navi_borderless {
+    border: none;
+  }
   .navi__button {
     display: none;
   }
@@ -498,8 +508,11 @@ abbr {
   padding: var(--spacing-100);
 }
 @media screen and (min-width: 801px) {
+  .main_borderless {
+    border: none;
+  }
   .main__frame {
-    /* take up entire height of GRID CELL */
+    /* take up entire space of GRID CELL */
     height: 100%;
     width: 100%;
     border: none;

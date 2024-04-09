@@ -88,6 +88,10 @@
     }
 
     @include for-viewport-size(desktop) {
+        &_borderless {
+            border: none;
+        }
+
         &__button {
             display: none;
         }

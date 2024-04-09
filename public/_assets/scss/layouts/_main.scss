@@ -9,10 +9,6 @@
     @include layout-border();
     @include layout-padding();
 
-    // &_borderless {
-    //     border: none;
-    // }
-
     @include for-viewport-size(phone) {
         //     &__frame {
         //         display: block;
@@ -24,8 +20,12 @@
     }
 
     @include for-viewport-size(desktop) {
+        &_borderless {
+            border: none;
+        }
+
         &__frame {
-            /* take up entire height of GRID CELL */
+            /* take up entire space of GRID CELL */
             height: 100%;
             width: 100%;
 
