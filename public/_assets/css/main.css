@@ -1040,8 +1040,18 @@ abbr {
   line-height: var(--line-height-base);
 }
 
-/*:._.:*~   COMMENT BOX ~*:._.:*/
-/* --- GENERAL --- */
+@media screen and (min-width: 801px) {
+  .page_guestbook {
+    display: grid;
+    align-self: self-start;
+    grid-template-areas: "navi" "main" "footer";
+    grid-template-columns: calc(var(--measure-max) * 0.75);
+    grid-template-rows: auto 1fr 2rem;
+    gap: 0;
+    max-width: min-content;
+  }
+}
+
 div #HCB_comment_box {
   display: flex;
   flex-direction: column;
@@ -1237,6 +1247,14 @@ textarea#hcb_form_content {
     padding: var(--spacing-100);
     overflow-y: auto;
     overflow-x: hidden !important;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .page_sitemap {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
   }
 }
 

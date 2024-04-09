@@ -1,6 +1,20 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
+.page {
+    @include for-viewport-size(phone) {
+    }
+    @include for-viewport-size(desktop) {
+        &_sitemap {
+            display: flex;
+
+            flex-direction: column;
+
+            height: min-content;
+        }
+    }
+}
+
 .sitemap {
     @include text-style(sans);
 
