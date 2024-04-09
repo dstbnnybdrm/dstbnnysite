@@ -1058,10 +1058,9 @@ abbr {
     display: grid;
     align-self: self-start;
     grid-template-areas: "navi" "main" "footer";
-    grid-template-columns: calc(var(--measure-max) * 0.75);
+    grid-template-columns: auto;
     grid-template-rows: auto 1fr 2rem;
     gap: 0;
-    max-width: min-content;
   }
 }
 
@@ -1099,13 +1098,13 @@ div #HCB_comment_box div.home-desc {
 }
 div #HCB_comment_box img.hcb-icon.hcb-door-in {
   display: inline;
-  color: var(--color-primary);
+  filter: var(--filter-base);
 }
 div #HCB_comment_box #HCB_comment_form_box {
   grid-area: comment-form;
   /* big "comment" button */
 }
-div #HCB_comment_box #HCB_comment_form_box .btn {
+div #HCB_comment_box #HCB_comment_form_box input.btn {
   border: none;
   background: var(--color-primary);
   text-transform: lowercase;
@@ -1115,7 +1114,7 @@ div #HCB_comment_box #HCB_comment_form_box .btn {
   font-weight: normal;
   font-family: var(--font-family-base);
 }
-div #HCB_comment_box #HCB_comment_form_box .btn:hover, div #HCB_comment_box #HCB_comment_form_box .btn:focus {
+div #HCB_comment_box #HCB_comment_form_box input.btn:hover, div #HCB_comment_box #HCB_comment_form_box input.btn:focus {
   background: var(--color-secondary);
 }
 @media screen and (max-width: 800px) {
