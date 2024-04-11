@@ -63,31 +63,5 @@
             @include layout-border();
             @include layout-padding();
         }
-
-        &__navi {
-            min-height: 0;
-            min-width: min-content;
-
-            overflow-y: auto;
-        }
-
-        &__directories {
-            min-height: 0;
-            overflow-y: auto;
-        }
-
-        &__support {
-            min-height: 0;
-            overflow-y: auto;
-        }
-    }
-}
-
-.site-log {
-    grid-area: site-log;
-    // this is scuffed but rn idk a better way to do it LMAO
-    #site-log {
-        max-height: 1rem;
-        // overflow-y: auto;
     }
 }
