@@ -1,22 +1,22 @@
 <!-- <article class="feed__entry"> -->
-<!--   <h2 class="feed__title"> -->
+<!--   <h2 class="site-log__date"> -->
 <!--     <time datetime="">date</time> -->
 <!--   </h2> -->
-<!--   <dl class="definition-list"> -->
-<!--     <dt class="definition-list__term">type(scope)</dt> -->
-<!--     <dd class="definition-list__description"> -->
+<!--   <dl class="site-log__list"> -->
+<!--     <dt class="site-log__type">type(scope)</dt> -->
+<!--     <dd class="site-log__description"> -->
 <!--       description -->
 <!--     </dd> -->
 <!--   </dl> -->
 <!-- </article> -->
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-03-31">sun, march 31, 2024 (easter!)</time>
   </h2>
-  <dl class="definition-list">
-    <dt class="definition-list__term">refactor</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">refactor</dt>
+    <dd class="site-log__description">
       bunch of changes to the site's folder structure;
       <em>shouldn't</em> have affected any actual content (hopefully, lol)
     </dd>
@@ -24,18 +24,18 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-03-22">fri, march 22, 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">fix(theme)</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">fix(theme)</dt>
+    <dd class="site-log__description">
       stopped the "theme flicker" that happens sometimes when the page loads
       with the default theme and then quickly changes to the user-set theme
     </dd>
-    <dt class="definition-list__term">fix(theme)</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">fix(theme)</dt>
+    <dd class="site-log__description">
       i <em>think</em> i fixed the main iframe being a different theme from the
       rest of the site sometimes? (happens when the site pulls from the user's
       cached theme but the iframe didn't get the memo lol)
@@ -44,13 +44,13 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-03-19">tue, march 19, 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">refactor(script)</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">refactor(script)</dt>
+    <dd class="site-log__description">
       updated <i>all</i> the javascript code to use modules now; if i did it
       well then hopefully you don't notice at all! lol
     </dd>
@@ -58,30 +58,30 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-03-18">mon, march 18, 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">change(home)</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">change(home)</dt>
+    <dd class="site-log__description">
       put the "what's new" and "update log" sections into their own iframes
     </dd>
-    <dt class="definition-list__term">new(footer)</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">new(footer)</dt>
+    <dd class="site-log__description">
       added new supplementary links to the footer
     </dd>
   </dl>
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-03-16">sat, march 16, 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">change(contact)</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">change(contact)</dt>
+    <dd class="site-log__description">
       moved <a href="contact.html" target="_parent">contact</a> page to its own
       page outside of the iframe
     </dd>
@@ -89,7 +89,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-03-14">thur march 14 2024</time>
   </h2>
 
@@ -98,43 +98,43 @@
     <span class="ascii-art ascii-art_inline">:3c</span>)
   </p>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">fix(layout)</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">fix(layout)</dt>
+    <dd class="site-log__description">
       stopped desktop layout sidebar from weirdly overflowing on shorter height
       screens
     </dd>
-    <dt class="definition-list__term">change(breadcrumb)</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">change(breadcrumb)</dt>
+    <dd class="site-log__description">
       breadcrumbs only show up when inside an iframe page and will link to
       outside of it (inspired by how
       <a rel="external" href="https://doqmeat.neocities.org/" target="_blank"
         >des</a
       >'s site handles journal entries!)
     </dd>
-    <dt class="definition-list__term">change(blog)</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">change(blog)</dt>
+    <dd class="site-log__description">
       move <a href="/blog.html" target="_parent">dstbnnyblog</a> page to root
       folder (just FYI: this probably changed how the url looks for each
       individual entry so if you've visited those in the past the links in your
       history probably won't work anymore)
     </dd>
-    <dt class="definition-list__term">change(blog)</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">change(blog)</dt>
+    <dd class="site-log__description">
       list the blog entry date instead of its title in the navigation (some
       titles may get a bit long and i think that the text wrap looks ugly lol so
       it's gonna be like this for now)
     </dd>
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       made inline ascii art (e.g.
       <span class="ascii-art ascii-art_inline">:)</span>,
       <span class="ascii-art ascii-art_inline">:3c</span>,
       <span class="ascii-art ascii-art_inline">¯\_(ツ)_/¯</span>, lol) display
       with a different, monospace font
     </dd>
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added new links to <a href="/resources.html">resources</a> and
       <a href="/links.html">links</a> pages
     </dd>
@@ -142,17 +142,17 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-03-07">thur march 07 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       updated <a href="now.html">now</a> page with some info i missed lol!
     </dd>
-    <dt class="definition-list__term">fix</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">fix</dt>
+    <dd class="site-log__description">
       stopped the
       <a
         rel="external"
@@ -167,39 +167,39 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-03-05">tue march 05 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added a <a href="now.html">now</a> page, inspired by others who've done
       the same/similar!
     </dd>
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added another site to <a href="/links.html">links</a>!
     </dd>
   </dl>
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-03-01">fri march 01 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added another site to <a href="/links.html">links</a>!
     </dd>
-    <dt class="definition-list__term">fix</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">fix</dt>
+    <dd class="site-log__description">
       added style classes to some text that were missing them lol
     </dd>
-    <dt class="definition-list__term">fix</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">fix</dt>
+    <dd class="site-log__description">
       removed some weird left over characters in
       <a href="/blog/" target="_parent">blog posts</a>
     </dd>
@@ -207,13 +207,13 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-02-29">wed february 29 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">change</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">change</dt>
+    <dd class="site-log__description">
       made some minor additions and changes to
       <a href="/blog/" target="_parent">blog posts</a> styles!
     </dd>
@@ -221,17 +221,17 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-02-26">mon february 26 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added more sites to <a href="/links.html">links</a>!
     </dd>
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added a button to toggle between light and dark themes as well as auto
       detect users' local or system preference!
     </dd>
@@ -239,30 +239,30 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-02-25">sun february 25 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">fix</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">fix</dt>
+    <dd class="site-log__description">
       removed some weird border stuff on the guestbook!
     </dd>
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added an icon to external links to distinguish them more!
     </dd>
   </dl>
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-02-24">sat february 24 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">fix</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">fix</dt>
+    <dd class="site-log__description">
       finally fixed some weird scrolling behaviour with the main iframe on small
       screens!
     </dd>
@@ -270,34 +270,34 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-02-23">fri february 23 2024</time>
   </h2>
 
-  <dl class="definition-list">
-    <dt class="definition-list__term">change</dt>
-    <dd class="definition-list__description">
+  <dl class="site-log__list">
+    <dt class="site-log__type">change</dt>
+    <dd class="site-log__description">
       made changes to the typography on pages (font sizes, headings, etc.) & the
       spacing of elements. hopefully things are easier to parse!
     </dd>
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added some links pertaining to typography in
       <a href="/resources.html#web">resources</a>; i learned a lot!
     </dd>
-    <dt class="definition-list__term">fix</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">fix</dt>
+    <dd class="site-log__description">
       updated some styles i missed on the guestbook! (styling htmlcommentbox is
       such a pain! lol)
     </dd>
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added a new format for these update-log posts! don't think i'll go back &
       retroactively change the old ones lol but i'll just use this format from
       here on!
     </dd>
-    <dt class="definition-list__term">new</dt>
-    <dd class="definition-list__description">
+    <dt class="site-log__type">new</dt>
+    <dd class="site-log__description">
       added games section to
       <a href="about/interests.html#games">interests</a>!
     </dd>
@@ -305,7 +305,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-02-20">tue february 20 2024</time>
   </h2>
 
@@ -319,7 +319,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-02-11">sun february 11 2024</time>
   </h2>
   <p class="copy">
@@ -383,7 +383,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-01-12">fri january 12 2024</time>
   </h2>
   <ul class="list">
@@ -401,7 +401,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-01-11">thur january 11 2024</time>
   </h2>
   <ul class="list">
@@ -415,7 +415,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-01-10">wed january 10 2024 </time>
   </h2>
   <ul class="list">
@@ -426,7 +426,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-01-07">sun january 07 2024 </time>
   </h2>
   <ul class="list">
@@ -447,7 +447,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2024-01-01">mon january 01 2024 (new years day!)</time>
   </h2>
   <ul class="list">
@@ -478,7 +478,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-31">sun december 31 2023 (new years eve!)</time>
   </h2>
   <ul class="list">
@@ -495,7 +495,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-30">sat december 30 2023</time>
   </h2>
   <ul class="list">
@@ -521,7 +521,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-26">tue december 26 2023 (boxing day!)</time>
   </h2>
   <ul class="list">
@@ -538,7 +538,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-25">mon december 25 2023 (christmas!)</time>
   </h2>
   <ul class="list">
@@ -549,7 +549,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-24">sun december 24 2023 (christmas eve!)</time>
   </h2>
   <ul class="list">
@@ -568,7 +568,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-20">wed december 20 2023</time>
   </h2>
   <ul class="list">
@@ -584,7 +584,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-19">tue december 19 2023</time>
   </h2>
   <ul class="list">
@@ -593,7 +593,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-16">sat december 16 2023</time>
   </h2>
   <ul class="list">
@@ -608,7 +608,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-15">fri december 15 2023</time>
   </h2>
   <ul class="list">
@@ -626,7 +626,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-12-13">wed december 13 2023</time>
   </h2>
   <ul class="list">
@@ -651,7 +651,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-11-23">thu november 23 2023</time>
   </h2>
   <ul class="list">
@@ -668,7 +668,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-11-19">sun november 19 2023</time>
   </h2>
 
@@ -684,7 +684,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-11-06">wed november 08 2023</time>
   </h2>
   <ul class="list">
@@ -697,7 +697,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-11-06">mon november 06 2023</time>
   </h2>
   <ul class="list">
@@ -708,7 +708,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-10-30">mon october 30 2023</time>
   </h2>
   <ul class="list">
@@ -719,7 +719,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-10-25">wed october 25 2023</time>
   </h2>
   <ul class="list">
@@ -730,7 +730,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-10-24">tue october 24 2023</time>
   </h2>
   <ul class="list">
@@ -740,7 +740,7 @@
 </article>
 
 <article class="feed__entry">
-  <h2 class="feed__title">
+  <h2 class="site-log__date">
     <time datetime="2023-10-17">tue october 17 2023</time>
   </h2>
   <ul class="list">

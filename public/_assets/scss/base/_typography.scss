@@ -92,14 +92,7 @@
         display: inline;
 
         @include text-style(sans);
-
-        &:has(+ &) {
-            &::after {
-                margin: 0 0.5ch;
-
-                content: ",";
-            }
-        }
+        @include description-list-spacing();
     }
 }
 

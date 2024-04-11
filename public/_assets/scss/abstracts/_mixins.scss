@@ -70,3 +70,15 @@
         list-style: "∟ ";
     }
 }
+
+@mixin description-list-spacing {
+    /* selects a description that has a definition list directly following
+        it */
+    &:has(+ &) {
+        &::after {
+            margin: 0 0.5ch;
+
+            content: ",";
+        }
+    }
+}

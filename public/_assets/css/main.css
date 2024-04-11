@@ -263,6 +263,8 @@ abbr {
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
+  /* selects a description that has a definition list directly following
+      it */
 }
 .definition-list__description:has(+ .definition-list__description)::after {
   margin: 0 0.5ch;
@@ -340,11 +342,17 @@ abbr {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .sidebar {
+    /* no sidebar on mobile layout */
+    display: contents;
+  }
+}
 @media screen and (min-width: 801px) {
   .sidebar {
     display: grid;
     row-gap: var(--spacing-100);
-    /* the primary (left)  sidebars */
+    /* the primary (left) sidebars */
     /* and the secondary (right) sidebar */
   }
   .sidebar_major {
@@ -360,32 +368,12 @@ abbr {
     grid-template-columns: auto;
   }
   .sidebar__section {
-    min-height: 0;
     min-width: fit-content;
+    min-height: 0;
     overflow-y: auto;
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
   }
-  .sidebar__navi {
-    min-height: 0;
-    min-width: min-content;
-    overflow-y: auto;
-  }
-  .sidebar__directories {
-    min-height: 0;
-    overflow-y: auto;
-  }
-  .sidebar__support {
-    min-height: 0;
-    overflow-y: auto;
-  }
-}
-
-.site-log {
-  grid-area: site-log;
-}
-.site-log #site-log {
-  max-height: 1rem;
 }
 
 .navi {
@@ -500,6 +488,56 @@ abbr {
 }
 .status #statuscafe #statuscafe-content::before, .status #statuscafe #statuscafe-content::after {
   content: '"';
+}
+
+.site-log {
+  grid-area: site-log;
+}
+.site-log #site-log {
+  max-height: 1rem; /* stops this container from expanding the grid cell,
+ * but lets its content overflow while still using the
+ * scrollbar, idk it's weird this is dumb lol
+ */
+}
+.site-log__date {
+  letter-spacing: var(--letter-spacing-120);
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+.site-log__type {
+  display: inline;
+  letter-spacing: var(--letter-spacing-110);
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+.site-log__type::before {
+  display: block;
+  margin-bottom: var(--spacing-025);
+  content: "";
+}
+.site-log__type::after {
+  content: ":";
+}
+.site-log__description {
+  display: inline;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+.site-log__description * {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
 }
 
 .main {

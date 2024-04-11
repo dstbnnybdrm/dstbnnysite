@@ -3,8 +3,8 @@
 
 .sidebar {
     @include for-viewport-size(phone) {
-        // /* no sidebar on mobile layout */
-        // display: contents;
+        /* no sidebar on mobile layout */
+        display: contents;
 
         // &__status {
         //     border-bottom: 1px dashed var(--color-base);
@@ -27,7 +27,7 @@
 
         row-gap: var(--spacing-100);
 
-        /* the primary (left)  sidebars */
+        /* the primary (left) sidebars */
         &_major {
             grid-area: major-sidebar;
             grid-template-areas:
@@ -56,8 +56,8 @@
         }
 
         &__section {
-            min-height: 0;
             min-width: fit-content;
+            min-height: 0;
             overflow-y: auto;
 
             @include layout-border();
