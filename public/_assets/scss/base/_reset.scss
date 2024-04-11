@@ -4,7 +4,7 @@
  * https://www.joshwcomeau.com/css/custom-css-reset/
  */
 
-/* less shitty box-sizing (border-based instead of mixins-based) */
+/* less shitty box-sizing (border-based instead of content-based) */
 *,
 *::before,
 *::after {
@@ -21,6 +21,8 @@
 
     // set root font size; all rem relative to this
     font-size: 14px;
+
+    scrollbar-width: thin;
 }
 
 /* improve media defaults */
@@ -33,7 +35,8 @@ svg {
 
     max-width: 100%;
 
-    // (try) to disable anti-alias (for pixel art and etc., we WANT the jaggedness lol)
+    // (try) to disable anti-alias (for pixel art and etc., we WANT the
+    // jaggedness lol)
     image-rendering: optimizeSpeed; // stop smoothing for speed
     image-rendering: -moz-crisp-edges; //           for Firefox
     image-rendering: -o-crisp-edges; //             for Opera
