@@ -21,6 +21,10 @@
         @include text-style(serif, italic);
     }
 
+    @include for-viewport-size(phone) {
+        border: none;
+    }
+
     @include for-viewport-size(desktop) {
         justify-content: center;
 

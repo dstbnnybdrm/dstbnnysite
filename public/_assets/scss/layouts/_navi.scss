@@ -11,80 +11,83 @@
     @include layout-padding();
 
     @include for-viewport-size(phone) {
-        // display: flex;
+        display: flex;
 
-        // flex-direction: column;
-        // gap: var(--spacing-100);
+        flex-direction: column;
+        gap: var(--spacing-100);
 
-        // &__home {
-        //     display: block;
+        border: none;
+        padding: 0;
 
-        //     width: 100%;
-        //     border: 1px dotted var(--color-base);
-        //     padding: var(--spacing-100);
-        // }
+        &__home {
+            display: block;
 
-        // &__button {
-        //     display: block;
+            width: 100%;
+            border: 1px dotted var(--color-base);
+            padding: var(--spacing-100);
+        }
 
-        //     border: none;
-        //     background-color: var(--color-primary);
-        //     padding: var(--spacing-075);
+        &__button {
+            display: block;
 
-        //     color: var(--color-background);
+            border: none;
+            background-color: var(--color-primary);
+            padding: var(--spacing-075);
 
-        //     font-size: var(--font-size-small);
+            color: var(--color-background);
 
-        //     @include button-on-hover();
-        // }
+            font-size: var(--font-size-small);
 
-        // &__menu {
-        //     display: none;
+            @include button-on-hover();
+        }
 
-        //     flex-direction: column;
-        //     gap: var(--spacing-100);
+        &__menu {
+            display: none;
 
-        //     border: 1px dotted var(--color-base);
-        //     border-top: none;
-        //     padding: 0 var(--spacing-100) var(--spacing-100) var(--spacing-100);
+            flex-direction: column;
+            gap: var(--spacing-100);
 
-        //     &:not(:last-child) {
-        //         border-bottom: none;
-        //     }
-        // }
+            border: 1px dotted var(--color-base);
+            border-top: none;
+            padding: 0 var(--spacing-100) var(--spacing-100) var(--spacing-100);
 
-        // .is-visible {
-        //     display: flex;
-        // }
+            &:not(:last-child) {
+                border-bottom: none;
+            }
+        }
 
-        // &__subheading {
-        //     display: block;
+        .is-visible {
+            display: flex;
+        }
 
-        //     @include text-style(serif, italic);
-        //     @include text-size(large);
+        &__subheading {
+            display: block;
 
-        //     &_blog {
-        //         display: none;
-        //     }
-        // }
+            @include text-style(serif, italic);
+            @include text-size(large);
 
-        // &__list {
-        //     display: flex;
+            &_blog {
+                display: none;
+            }
+        }
 
-        //     flex-direction: column;
-        //     gap: var(--spacing-075);
-        // }
+        &__list {
+            display: flex;
 
-        // &__item {
-        //     display: contents;
-        // }
+            flex-direction: column;
+            gap: var(--spacing-075);
+        }
 
-        // &__link {
-        //     border: 1px dotted var(--color-primary);
-        //     padding: var(--spacing-100);
+        &__item {
+            display: contents;
+        }
 
-        //     @include button-on-hover();
-        // }
+        &__link {
+            border: 1px dotted var(--color-primary);
+            padding: var(--spacing-100);
+
+            @include button-on-hover();
+        }
     }
 
     @include for-viewport-size(desktop) {

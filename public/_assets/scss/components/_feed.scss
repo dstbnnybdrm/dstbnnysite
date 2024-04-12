@@ -1,16 +1,10 @@
 @use "../abstracts/mixins" as *;
+
 .feed {
     display: flex;
 
     flex-direction: column;
     gap: var(--spacing-150);
-
-    &__title {
-        letter-spacing: var(--letter-spacing-120);
-
-        @include text-style(serif, italic);
-        @include text-size(large);
-    }
 
     &__entry {
         display: flex;
@@ -26,6 +20,13 @@
         &:nth-child(n + 5) {
             display: none;
         }
+    }
+
+    &__title {
+        letter-spacing: var(--letter-spacing-120);
+
+        @include text-style(serif, italic);
+        // @include text-size(large);
     }
 
     // @include for-frame-size(large) {

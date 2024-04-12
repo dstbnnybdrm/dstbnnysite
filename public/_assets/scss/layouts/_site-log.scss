@@ -4,13 +4,8 @@
 .site-log {
     grid-area: site-log;
 
-    // TODO: this is scuffed af, need a better way to do it LMAO
-    #site-log {
-        max-height: 1rem; /* stops this container from expanding the grid cell,
-                           * but lets its content overflow while still using the
-                           * scrollbar, idk it's weird this is dumb lol
-                           */
-    }
+    @include layout-border();
+    @include layout-padding();
 
     &__date {
         letter-spacing: var(--letter-spacing-120);
@@ -52,5 +47,11 @@
         * {
             @include text-size(small);
         }
+    }
+
+    @include for-viewport-size(phone) {
+    }
+
+    @include for-viewport-size(desktop) {
     }
 }

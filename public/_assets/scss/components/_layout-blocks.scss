@@ -48,6 +48,11 @@
     justify-content: center;
 }
 
+.l-scrollbar-container {
+    min-height: 0;
+    overflow-y: auto;
+}
+
 /* for visually hiding landmarks needed for screen readers */
 .l-hidden {
     position: absolute;

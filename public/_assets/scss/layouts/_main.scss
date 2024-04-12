@@ -10,13 +10,13 @@
     @include layout-padding();
 
     @include for-viewport-size(phone) {
-        //     &__frame {
-        //         display: block;
+        &__frame {
+            display: block;
 
-        //         border: none;
+            border: none;
 
-        //         width: 100%;
-        //     }
+            width: 100%;
+        }
     }
 
     @include for-viewport-size(desktop) {
