@@ -30,6 +30,8 @@
     }
 
     &__footer {
+        align-self: center;
+
         border-top: 1px dotted var(--color-base);
         padding-top: var(--spacing-100);
     }

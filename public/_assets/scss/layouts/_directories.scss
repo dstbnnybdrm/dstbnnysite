@@ -1,8 +1,14 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
 
 .directories {
     grid-area: directories;
 
-    @include layout-border();
-    @include layout-padding();
+    @include for-viewport-size(phone) {
+    }
+
+    @include for-viewport-size(desktop) {
+        @include layout-border();
+        @include layout-padding();
+    }
 }

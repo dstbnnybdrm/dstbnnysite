@@ -6,9 +6,6 @@
 
     grid-area: status;
 
-    @include layout-border();
-    @include layout-padding();
-
     #statuscafe {
         #statuscafe-username {
             @include text-style(serif, italic);
@@ -32,5 +29,15 @@
                 content: '"';
             }
         }
+    }
+
+    @include for-viewport-size(phone) {
+        border-top: 1px dashed var(--color-base);
+        padding: var(--spacing-100) 0;
+    }
+
+    @include for-viewport-size(desktop) {
+        @include layout-border();
+        @include layout-padding();
     }
 }

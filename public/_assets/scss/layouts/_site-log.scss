@@ -3,9 +3,7 @@
 
 .site-log {
     grid-area: site-log;
-
-    @include layout-border();
-    @include layout-padding();
+    min-width: 0;
 
     &__date {
         letter-spacing: var(--letter-spacing-120);
@@ -50,8 +48,14 @@
     }
 
     @include for-viewport-size(phone) {
+        border-top: 1px dashed var(--color-base);
+        padding: var(--spacing-100) 0;
     }
 
     @include for-viewport-size(desktop) {
+        @include layout-border();
+        @include layout-padding();
+
+        overflow: hidden;
     }
 }

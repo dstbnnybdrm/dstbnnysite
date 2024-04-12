@@ -49,6 +49,8 @@
 }
 
 .l-scrollbar-container {
+    display: block;
+
     min-height: 0;
     overflow-y: auto;
 }

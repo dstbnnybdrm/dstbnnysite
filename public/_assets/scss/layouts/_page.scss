@@ -4,8 +4,6 @@
 .page {
     display: inline-grid;
 
-    gap: var(--spacing-100);
-
     @include for-viewport-size(phone) {
         padding: var(--spacing-200);
 
@@ -19,7 +17,8 @@
             "site-log       site-log"
             "marquee        marquee"
             "footer         footer";
-        grid-template-rows: repeat(7, auto);
+        grid-template-rows: repeat(8, auto) var(--spacing-200);
+        row-gap: var(--spacing-100);
 
         //         &_simple {
         //             display: flex;
@@ -52,8 +51,6 @@
     }
 
     @include for-viewport-size(desktop) {
-        padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
-
         grid-template-areas:
             "header           header      header"
             "major-sidebar    main        minor-sidebar"
@@ -68,8 +65,10 @@
             min-content
             minmax(0, var(--measure-max))
             min-content;
+        gap: var(--spacing-100);
 
         height: 100vh;
+        padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
 
         &_simple {
             display: flex;

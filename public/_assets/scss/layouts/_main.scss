@@ -6,10 +6,11 @@
 
     grid-area: main;
 
-    @include layout-border();
-    @include layout-padding();
-
     @include for-viewport-size(phone) {
+        border-top: 1px dashed var(--color-base);
+        border-bottom: 1px dashed var(--color-base);
+        padding: var(--spacing-100) 0;
+
         &__frame {
             display: block;
 
@@ -20,6 +21,9 @@
     }
 
     @include for-viewport-size(desktop) {
+        @include layout-border();
+        @include layout-padding();
+
         &_borderless {
             border: none;
         }

@@ -1,4 +1,5 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
 
 .feed {
     display: flex;
@@ -16,10 +17,6 @@
             border-top: 1px dotted var(--color-base);
             padding-top: var(--spacing-075);
         }
-
-        &:nth-child(n + 5) {
-            display: none;
-        }
     }
 
     &__title {
@@ -29,11 +26,14 @@
         // @include text-size(large);
     }
 
-    // @include for-frame-size(large) {
-    //     &__entry {
-    //         &:nth-child(n + 4) {
-    //             display: block;
-    //         }
-    //     }
+    @include for-viewport-size(phone) {
+        &__entry {
+            &:nth-child(n + 4) {
+                display: none;
+            }
+        }
+    }
+
+    // @include for-viewport-size(desktop) {
     // }
 }
