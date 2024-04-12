@@ -298,7 +298,7 @@ abbr {
 .page {
   display: inline-grid;
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .page {
     padding: var(--spacing-200);
     grid-template-areas: "header         header" "navi           navi" "theme-toggle   theme-toggle" "main           main" "support        directories" "status         status" "site-log       site-log" "marquee        marquee" "footer         footer";
@@ -306,7 +306,7 @@ abbr {
     row-gap: var(--spacing-100);
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .page {
     grid-template-areas: "header           header      header" "major-sidebar    main        minor-sidebar" "major-sidebar    marquee     marquee" "footer           footer      footer";
     grid-template-rows: min-content 1fr min-content var(--spacing-200);
@@ -340,12 +340,12 @@ abbr {
   font-weight: normal;
   font-family: var(--font-family-alt);
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .header {
     border: none;
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .header {
     justify-content: center;
   }
@@ -355,13 +355,13 @@ abbr {
   }
 }
 
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .sidebar {
     /* no sidebar on mobile layout */
     display: contents;
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .sidebar {
     display: grid;
     row-gap: var(--spacing-100);
@@ -399,7 +399,7 @@ abbr {
   border: 1px solid var(--color-base);
   padding: var(--spacing-100);
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .navi {
     display: flex;
     flex-direction: column;
@@ -470,7 +470,7 @@ abbr {
     background-color: var(--color-secondary);
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .navi_borderless {
     border: none;
   }
@@ -533,7 +533,7 @@ abbr {
 .directories {
   grid-area: directories;
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .directories {
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
@@ -543,12 +543,12 @@ abbr {
 .support {
   grid-area: support;
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .support {
     border-right: 1px dashed var(--color-base);
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .support {
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
@@ -583,13 +583,13 @@ abbr {
 .status #statuscafe #statuscafe-content::before, .status #statuscafe #statuscafe-content::after {
   content: '"';
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .status {
     border-top: 1px dashed var(--color-base);
     padding: var(--spacing-100) 0;
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .status {
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
@@ -598,10 +598,10 @@ abbr {
 
 .site-log {
   grid-area: site-log;
-  min-width: 0;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
 }
 .site-log__date {
-  letter-spacing: var(--letter-spacing-120);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -610,8 +610,7 @@ abbr {
   line-height: var(--line-height-small);
 }
 .site-log__type {
-  display: inline;
-  letter-spacing: var(--letter-spacing-110);
+  letter-spacing: var(--letter-spacing-120);
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -619,16 +618,13 @@ abbr {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
 }
-.site-log__type::before {
-  display: block;
-  margin-bottom: var(--spacing-025);
-  content: "";
-}
 .site-log__type::after {
   content: ":";
 }
+.site-log__type:not(:first-of-type) {
+  padding-top: var(--spacing-100);
+}
 .site-log__description {
-  display: inline;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
@@ -640,17 +636,16 @@ abbr {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .site-log {
     border-top: 1px dashed var(--color-base);
     padding: var(--spacing-100) 0;
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .site-log {
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
-    overflow: hidden;
   }
 }
 
@@ -658,7 +653,7 @@ abbr {
   display: flex;
   grid-area: main;
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .main {
     border-top: 1px dashed var(--color-base);
     border-bottom: 1px dashed var(--color-base);
@@ -670,7 +665,7 @@ abbr {
     width: 100%;
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .main {
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
@@ -702,13 +697,13 @@ abbr {
   grid-area: marquee;
   padding: var(--spacing-075) var(--spacing-100);
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .marquee {
     border-top: 1px dashed var(--color-base);
     padding: var(--spacing-100) 0;
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .marquee {
     border: 1px solid var(--color-base);
   }
@@ -746,13 +741,13 @@ abbr {
   width: 100vw;
   height: 100vh;
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .l-imposter {
     display: flex;
     justify-content: center;
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .l-imposter {
     display: flex;
     position: absolute;
@@ -812,6 +807,7 @@ abbr {
   align-items: center;
   flex-direction: column;
   gap: var(--spacing-100);
+  padding-bottom: var(--spacing-100);
 }
 .card__title {
   letter-spacing: var(--letter-spacing-120);
@@ -880,7 +876,7 @@ abbr {
   font-weight: normal;
   font-family: var(--font-family-alt);
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .feed__entry:nth-child(n+4) {
     display: none;
   }
@@ -1063,7 +1059,7 @@ abbr {
   margin-bottom: calc(var(--spacing-100) * -1);
   width: min-content;
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .page_blog {
     grid-template-areas: "header     ." "navi       main" "footer     footer";
     grid-template-rows: min-content 1fr var(--spacing-200);
@@ -1237,7 +1233,7 @@ abbr {
   line-height: var(--line-height-base);
 }
 
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .page_guestbook {
     display: grid;
     align-self: self-start;
@@ -1301,12 +1297,12 @@ div #HCB_comment_box #HCB_comment_form_box input.btn {
 div #HCB_comment_box #HCB_comment_form_box input.btn:hover, div #HCB_comment_box #HCB_comment_form_box input.btn:focus {
   background: var(--color-secondary);
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   div #HCB_comment_box {
     width: 100%;
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   div #HCB_comment_box {
     display: grid;
     grid-template-areas: "comment-message    ." "comment-form       comments-list";
@@ -1436,7 +1432,7 @@ textarea#hcb_form_content {
 #comments_list .likes img {
   display: inline-block;
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   #comments_list {
     aspect-ratio: 1/1.41;
     border: 1px solid var(--color-base);
@@ -1446,7 +1442,7 @@ textarea#hcb_form_content {
   }
 }
 
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .page_sitemap {
     display: flex;
     flex-direction: column;
@@ -1460,7 +1456,7 @@ textarea#hcb_form_content {
   font-weight: normal;
   font-family: var(--font-family-base);
 }
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 800px) {
   .sitemap {
     display: flex;
     flex-direction: column;
@@ -1500,7 +1496,7 @@ textarea#hcb_form_content {
     background-color: var(--color-secondary);
   }
 }
-@media screen and (min-width: 201px) {
+@media screen and (min-width: 801px) {
   .sitemap__subheading {
     display: list-item;
     color: var(--color-base);

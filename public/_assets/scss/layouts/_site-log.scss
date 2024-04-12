@@ -3,11 +3,10 @@
 
 .site-log {
     grid-area: site-log;
-    min-width: 0;
+    // min-width: 0;
+    @include text-size(small);
 
     &__date {
-        letter-spacing: var(--letter-spacing-120);
-
         @include text-style(serif, italic);
         @include text-size(small);
     }
@@ -16,28 +15,32 @@
     }
 
     &__type {
-        display: inline;
+        // display: inline;
 
-        letter-spacing: var(--letter-spacing-110);
+        letter-spacing: var(--letter-spacing-120);
 
         @include text-style(serif, italic);
         @include text-size(small);
 
-        &::before {
-            display: block;
+        // &::before {
+        //     display: block;
 
-            margin-bottom: var(--spacing-025);
+        //     margin-bottom: var(--spacing-025);
 
-            content: "";
-        }
+        //     content: "";
+        // }
 
         &::after {
             content: ":";
         }
+
+        &:not(:first-of-type) {
+            padding-top: var(--spacing-100);
+        }
     }
 
     &__description {
-        display: inline;
+        // display: inline;
 
         @include text-style(sans);
         @include text-size(small);
@@ -56,6 +59,6 @@
         @include layout-border();
         @include layout-padding();
 
-        overflow: hidden;
+        // overflow: hidden;
     }
 }
