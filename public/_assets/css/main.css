@@ -302,7 +302,7 @@ abbr {
   .page {
     padding: var(--spacing-200);
     grid-template-areas: "header         header" "navi           navi" "theme-toggle   theme-toggle" "main           main" "support        directories" "status         status" "site-log       site-log" "marquee        marquee" "footer         footer";
-    grid-template-rows: repeat(8, auto) var(--spacing-200);
+    grid-template-rows: repeat(8, auto) min-content;
     row-gap: var(--spacing-100);
   }
 }
@@ -829,7 +829,7 @@ abbr {
   line-height: var(--line-height-small);
 }
 .card__footer {
-  align-self: center;
+  align-items: center;
   border-top: 1px dotted var(--color-base);
   padding-top: var(--spacing-100);
 }

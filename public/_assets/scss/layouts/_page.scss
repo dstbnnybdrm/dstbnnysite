@@ -17,7 +17,7 @@
             "site-log       site-log"
             "marquee        marquee"
             "footer         footer";
-        grid-template-rows: repeat(8, auto) var(--spacing-200);
+        grid-template-rows: repeat(8, auto) min-content;
         row-gap: var(--spacing-100);
 
         //         &_simple {
