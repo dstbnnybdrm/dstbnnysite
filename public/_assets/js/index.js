@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
     switch (currentPage()) {
         case PageLayouts.BLOG:
             // set frame to most recent blog post
-            const blogPostList = document.querySelectorAll(".blog-navi__link");
+            const blogPostList = document.querySelectorAll(".navi__link");
             const mostRecentBlogPost = blogPostList[1].getAttribute("href");
             frameSource = mostRecentBlogPost;
             break;

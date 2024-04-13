@@ -1,14 +1,36 @@
-@use "../base";
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
 
-/*:._.:*~   COMMENT BOX ~*:._.:*/
+.page {
+    @include for-viewport-size(phone) {
+    }
 
-/* --- GENERAL --- */
+    @include for-viewport-size(desktop) {
+        &_guestbook {
+            display: grid;
+
+            align-self: self-start;
+            grid-template-areas:
+                "navi"
+                "main"
+                "footer";
+            grid-template-columns: auto;
+            grid-template-rows: auto 1fr 2rem;
+            gap: 0;
+
+            // width: 100vw;
+            // max-width: min-content;
+        }
+    }
+}
 
 // thank god for Sass lmao
 div #HCB_comment_box {
     display: flex;
 
     flex-direction: column;
+
+    height: auto;
 
     /* comments heading */
     h3 {
@@ -19,10 +41,12 @@ div #HCB_comment_box {
     #hcb_msg {
         grid-area: comment-message;
 
+        height: min-content;
         margin: var(--spacing-100) 0;
 
-        @include base.text-style(sans);
         text-transform: lowercase;
+
+        @include text-style(sans);
     }
 
     p.error {
@@ -30,8 +54,9 @@ div #HCB_comment_box {
 
         border: 1px solid var(--color-primary);
 
-        @include base.text-style(sans);
         text-transform: lowercase;
+
+        @include text-style(sans);
     }
 
     /* "not using html comment box yet?" */
@@ -39,24 +64,26 @@ div #HCB_comment_box {
         display: none;
     }
 
-    /* log-in icon */
-    img.hcb-icon.hcb-door-in {
+    /* log in icon */
+    .hcb-icon.hcb-door-in {
         display: inline;
-        color: var(--color-primary);
+
+        // color: var(--color-primary);
+        filter: var(--filter-base);
     }
 
     #HCB_comment_form_box {
         grid-area: comment-form;
 
         /* big "comment" button */
-        .btn {
+        .submit.btn {
+            @include text-style(sans);
+
             border: none;
+            background: var(--color-primary);
 
             text-transform: lowercase;
-            @include base.text-style(sans);
-
             color: var(--color-background);
-            background: var(--color-primary);
 
             &:hover,
             &:focus {
@@ -65,26 +92,24 @@ div #HCB_comment_box {
         }
     }
 
-    @include base.for-viewport-size(phone) {
+    @include for-viewport-size(phone) {
         width: 100%;
     }
 
-    @include base.for-viewport-size(desktop) {
+    @include for-viewport-size(desktop) {
         display: grid;
-        column-gap: var(--spacing-100);
 
         grid-template-areas:
             "comment-message    ."
             "comment-form       comments-list";
-
-        grid-template-columns: repeat(2, minmax(0rem, 1fr));
         // grid-template-rows: min-content var(--spacing-100);
+        grid-template-columns: repeat(2, minmax(0rem, 1fr));
+        column-gap: var(--spacing-100);
 
         #HCB_comment_form_box {
+            aspect-ratio: 1 / 1.41;
             border: 1px solid var(--color-base);
             padding: var(--spacing-100);
-
-            aspect-ratio: 1 / 1.41;
         }
     }
 }
@@ -95,37 +120,40 @@ div #HCB_comment_box {
 input#hcb_form_name,
 textarea#hcb_form_content {
     border: 1px dotted var(--color-base);
+    background: none;
 
-    @include base.text-style(mono);
+    @include text-style(mono);
 
     font-size: 16px;
-
-    background: none;
 }
 
 /* placeholder text */
 ::-webkit-input-placeholder {
-    font-size: 16px;
-    @include base.text-style(mono);
     text-transform: lowercase;
+
+    @include text-style(mono);
+    font-size: 16px;
 }
 
 :-moz-placeholder {
-    font-size: 16px;
-    @include base.text-style(mono);
     text-transform: lowercase;
+
+    @include text-style(mono);
+    font-size: 16px;
 }
 
 ::-moz-placeholder {
-    font-size: 16px;
-    @include base.text-style(mono);
     text-transform: lowercase;
+
+    @include text-style(mono);
+    font-size: 16px;
 }
 
 :-ms-input-placeholder {
-    font-size: 16px;
-    @include base.text-style(mono);
     text-transform: lowercase;
+
+    @include text-style(mono);
+    font-size: 16px;
 }
 
 /* --- COMMENTS LIST --- */
@@ -137,8 +165,9 @@ textarea#hcb_form_content {
     padding-top: var(--spacing-100);
 
     #no_comments {
-        @include base.text-style(sans);
         text-transform: lowercase;
+
+        @include text-style(sans);
     }
 
     div.comment {
@@ -156,44 +185,46 @@ textarea#hcb_form_content {
     }
 
     p.hcb-comment-body {
-        @include base.text-style(sans);
+        @include text-style(sans);
     }
 
     b.author-name {
-        @include base.text-style(sans);
+        @include text-style(sans);
     }
 
     span.date {
-        @include base.text-style(serif, italic);
-        @include base.text-size(small);
-        letter-spacing: var(--letter-spacing-140);
         text-transform: lowercase;
+
+        letter-spacing: var(--letter-spacing-140);
+
+        @include text-style(serif, italic);
+        @include text-size(small);
     }
 
     /* comment buttons */
     p.hcb-comment-tb button {
-        @include base.text-style(sans);
-        @include base.text-size(small);
         text-transform: lowercase;
 
         color: var(--color-primary);
+
+        @include text-style(sans);
+        @include text-size(small);
     }
 
     .likes {
-        @include base.text-style(sans);
+        @include text-style(sans);
 
         img {
             display: inline-block;
         }
     }
 
-    @include base.for-viewport-size(desktop) {
-        overflow-y: auto;
-        overflow-x: hidden !important;
-
+    @include for-viewport-size(desktop) {
+        aspect-ratio: 1 / 1.41;
         border: 1px solid var(--color-base);
         padding: var(--spacing-100);
 
-        aspect-ratio: 1 / 1.41;
+        overflow-y: auto;
+        overflow-x: hidden !important;
     }
 }

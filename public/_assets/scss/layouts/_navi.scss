@@ -1,0 +1,134 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.navi {
+    grid-area: navi;
+
+    @include text-style(sans);
+    @include text-size(base);
+
+    @include layout-border();
+    @include layout-padding();
+
+    @include for-viewport-size(phone) {
+        display: flex;
+
+        flex-direction: column;
+        gap: var(--spacing-100);
+
+        border: none;
+        padding: 0;
+
+        &__home {
+            display: block;
+
+            width: 100%;
+            border: 1px dotted var(--color-base);
+            padding: var(--spacing-100);
+        }
+
+        &__button {
+            display: block;
+
+            border: none;
+            background-color: var(--color-primary);
+            padding: var(--spacing-075);
+
+            color: var(--color-background);
+
+            font-size: var(--font-size-small);
+
+            @include button-on-hover();
+        }
+
+        &__menu {
+            display: none;
+
+            flex-direction: column;
+            gap: var(--spacing-100);
+
+            border: 1px dotted var(--color-base);
+            border-top: none;
+            padding: 0 var(--spacing-100) var(--spacing-100) var(--spacing-100);
+
+            &:not(:last-child) {
+                border-bottom: none;
+            }
+        }
+
+        .is-visible {
+            display: flex;
+        }
+
+        &__subheading {
+            display: block;
+
+            @include text-style(serif, italic);
+            @include text-size(large);
+
+            &_blog {
+                display: none;
+            }
+        }
+
+        &__list {
+            display: flex;
+
+            flex-direction: column;
+            gap: var(--spacing-075);
+        }
+
+        &__item {
+            display: contents;
+        }
+
+        &__link {
+            border: 1px dotted var(--color-primary);
+            padding: var(--spacing-100);
+
+            @include button-on-hover();
+        }
+    }
+
+    @include for-viewport-size(desktop) {
+        &_borderless {
+            border: none;
+        }
+
+        &__button {
+            display: none;
+        }
+
+        &__menu {
+            display: contents;
+        }
+
+        &__subheading {
+            display: list-item;
+
+            @include list-style(navi);
+
+            @include text-style(sans);
+            @include text-size(base);
+        }
+
+        &__list {
+            @include list-margin();
+
+            @include list-style(navi);
+
+            @include text-style(sans);
+        }
+
+        &__link {
+            width: max-content;
+        }
+
+        &__navi {
+            @include list-margin();
+
+            border: none;
+            padding: 0;
+        }
+    }
+}

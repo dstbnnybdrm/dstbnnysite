@@ -1,0 +1,16 @@
+.image {
+    display: inline-block;
+
+    height: min-content;
+    width: min-content;
+
+    &_inline {
+        display: inline-block;
+
+        height: 1rem;
+    }
+
+    &_graphic {
+        filter: var(--filter-base);
+    }
+}

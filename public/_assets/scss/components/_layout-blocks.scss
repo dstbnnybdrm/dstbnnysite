@@ -1,0 +1,72 @@
+@use "../abstracts/breakpoints" as *;
+
+/**
+ * convention for layout blocks taken from:
+ *    https://bem-cheat-sheet.9elements.com/#layout-blocks
+ */
+
+.l-imposter {
+    width: 100vw;
+    height: 100vh;
+
+    @include for-viewport-size(phone) {
+        display: flex;
+
+        justify-content: center;
+    }
+
+    @include for-viewport-size(desktop) {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.l-stack {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: var(--spacing-100);
+
+    &_horizontal {
+        @include for-frame-size(large) {
+            flex-direction: row;
+            column-gap: var(--spacing-100);
+        }
+    }
+}
+
+.l-center {
+    display: flex;
+
+    justify-content: center;
+}
+
+.l-scrollbar-container {
+    display: block;
+
+    min-height: 0;
+    overflow-y: auto;
+}
+
+/* for visually hiding landmarks needed for screen readers */
+.l-hidden {
+    position: absolute;
+
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    clip-path: rect(0 0 0 0);
+    clip: rect(0 0 0 0);
+}

@@ -6,7 +6,7 @@ import { fetchAsText, COMPONENTS_URL, DATA_URL } from "./utility.js";
  * @type {Array<string>}
  * @constant
  */
-const LAYOUT_IDS = ["marquee", "footer"];
+const LAYOUT_IDS = ["marquee", "footer", "site-log"];
 /** @type {?HTMLElement} */
 const splashElement = document.getElementById("splash");
 

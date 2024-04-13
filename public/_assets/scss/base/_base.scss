@@ -1,0 +1,41 @@
+/*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
+
+:root {
+    --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
+    --font-family-alt: Georgia, "Times New Roman", Times, serif;
+    --font-family-mono: "Courier New", Courier, monospace;
+
+    /* size ratios mostly derived from minor thirds (6:5) */
+    --font-size-smaller: 0.69rem;
+    --font-size-small: 0.83rem;
+    --font-size-base: 1rem;
+    --font-size-large: 1.2rem;
+    --font-size-larger: 1.32rem;
+    --font-size-largest: 1.44rem;
+
+    --line-height-small: 1.25rem;
+    --line-height-base: 1.5rem;
+    --line-height-large: 1.8rem;
+    --line-height-larger: 1.98rem;
+    --line-height-largest: 2.16rem;
+
+    --letter-spacing-100: initial;
+    --letter-spacing-110: 0.05rem;
+    --letter-spacing-120: 0.07rem;
+    --letter-spacing-130: 0.09rem;
+    --letter-spacing-140: 0.12rem;
+
+    /* generic spacing for margin's, padding, gap, etc. */
+    --spacing-025: 0.58rem;
+    --spacing-050: 0.69rem;
+    --spacing-075: 0.83rem;
+    --spacing-100: 1rem;
+    --spacing-125: 1.2rem;
+    --spacing-150: 1.44rem;
+    --spacing-175: 1.73rem;
+    --spacing-200: 2rem;
+
+    /* the maximum line length that text should span (~74 characters, or ~2.8
+     alphabets) */
+    --measure-max: 44rem;
+}

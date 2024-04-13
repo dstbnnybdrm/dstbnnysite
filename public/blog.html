@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -58,7 +58,7 @@
   <body class="l-imposter">
     <div class="page page_blog">
       <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
-      <header class="header page__header page__header_blog">
+      <header class="header header_blog page__header">
         <pre class="ascii-art" aria-hidden="true">
        .--.       .---.
    .---|__|       |~~~|
@@ -73,64 +73,73 @@
       </header>
 
       <!-- ~*:._.:*~  NAVIGATION  ~*:._.:*~ -->
-      <!-- <nav class="navi navi_blog page__navi page__navi_blog"> -->
-      <nav class="blog-navi page__navi">
-        <h1 class="blog-navi__title">
+      <!-- <nav class="navi navi_blog  page__navi_blog"> -->
+      <nav class="navi navi_blog">
+        <h1 class="navi__title">
           <abbr title="dustbunnyblog">dstbnnyblog</abbr>
         </h1>
 
-        <p class="body-copy">various thoughts and ramblings of mine.</p>
+        <p class="copy">various thoughts and ramblings of mine.</p>
 
-        <a href="/" class="blog-navi__link">back to site?</a>
+        <a href="/" class="navi__link">back to site?</a>
 
-        <h2 class="blog-navi__heading">entries</h2>
+        <!-- <h2 class="navi__heading">entries</h2> -->
 
-        <button class="button blog-navi__button" id="navi-button" type="button">
+        <button class="button navi__button" id="navi-button" type="button">
           entries
         </button>
 
-        <div class="blog-navi__menu" id="navi-menu">
-          <ul class="blog-navi__list">
+        <div class="navi__menu" id="navi-menu">
+          <ul class="navi__list">
             <!-- add new posts here, me! -->
-            <li class="blog-navi__item">
+            <li class="navi__item">
               <a
-                class="blog-navi__link"
+                class="navi__link"
+                href="/posts/2024-04-09.html"
+                target="mainframe"
+              >
+                apr. 09, 2024
+              </a>
+            </li>
+            <li class="navi__item">
+              <a
+                class="navi__link"
                 href="/posts/2024-03-28.html"
                 target="mainframe"
               >
                 mar. 28, 2024
               </a>
             </li>
-            <li class="blog-navi__item">
+            <li class="navi__item">
               <a
-                class="blog-navi__link"
+                class="navi__link"
                 href="/posts/2024-02-23.html"
                 target="mainframe"
               >
                 feb. 23, 2024
               </a>
             </li>
-            <li class="blog-navi__item">
+            <li class="navi__item">
               <a
-                class="blog-navi__link"
+                class="navi__link"
                 href="/posts/2024-02-08.html"
                 target="mainframe"
               >
                 feb. 08, 2024
               </a>
             </li>
-            <li class="blog-navi__item">
+            <li class="navi__item">
               <a
-                class="blog-navi__link"
+                class="navi__link"
                 href="/posts/2024-01-09.html"
                 target="mainframe"
               >
                 jan. 09, 2024
               </a>
             </li>
-            <li class="blog-navi__item">
+            <li class="navi__item">
               <a
-                class="blog-navi__link"
+                class="navi__link"
                 href="/posts/2023-12-30.html"
                 target="mainframe"
               >
@@ -142,7 +151,7 @@
       </nav>
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
-      <main class="main page__main page__main_blog">
+      <main class="main page__main_blog">
         <!-- the actual blog post -->
         <iframe class="main__frame" name="mainframe" title="blog post"></iframe>
       </main>

@@ -1,0 +1,94 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.page {
+    display: inline-grid;
+
+    @include for-viewport-size(phone) {
+        padding: var(--spacing-200);
+
+        grid-template-areas:
+            "header         header"
+            "navi           navi"
+            "theme-toggle   theme-toggle"
+            "main           main"
+            "support        directories"
+            "status         status"
+            "site-log       site-log"
+            "marquee        marquee"
+            "footer         footer";
+        grid-template-rows: repeat(8, auto) min-content;
+        row-gap: var(--spacing-100);
+
+        max-width: var(--measure-max);
+
+        &_simple {
+            display: flex;
+
+            flex-direction: column;
+            row-gap: var(--spacing-125);
+            justify-content: center;
+
+            min-height: 0;
+        }
+
+        //         &__main {
+        //             border-top: 1px dashed var(--color-base);
+        //             border-right: none;
+        //             border-left: none;
+        //             border-bottom: 1px dashed var(--color-base);
+        //             padding: var(--spacing-100) 0;
+
+        //             &_sitemap {
+        //                 border: none;
+        //             }
+
+        //             &_borderless {
+        //                 border: none;
+        //                 margin: auto;
+
+        //                 width: min-content;
+        //             }
+        //         }
+    }
+
+    @include for-viewport-size(desktop) {
+        grid-template-areas:
+            "header           header      header"
+            "major-sidebar    main        minor-sidebar"
+            "major-sidebar    marquee     marquee"
+            "footer           footer      footer";
+        grid-template-rows:
+            min-content
+            1fr
+            min-content
+            var(--spacing-200);
+        grid-template-columns:
+            min-content
+            minmax(0, var(--measure-max))
+            min-content;
+        gap: var(--spacing-100);
+
+        height: 100vh;
+        padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
+
+        &_simple {
+            display: flex;
+
+            flex-direction: column;
+            row-gap: var(--spacing-125);
+            justify-content: center;
+
+            min-height: 0;
+        }
+
+        //         &__navi {
+        //             @include layout-border();
+        //             @include layout-padding();
+
+        //             &_borderless {
+        //                 border: none;
+        //             }
+        //         }
+    }
+}

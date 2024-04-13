@@ -1,0 +1,43 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.status {
+    display: flex;
+
+    grid-area: status;
+
+    #statuscafe {
+        #statuscafe-username {
+            @include text-style(serif, italic);
+            @include text-size(small);
+            letter-spacing: var(--letter-spacing-120);
+
+            a {
+                &::after {
+                    content: "↗";
+                }
+            }
+        }
+
+        #statuscafe-content {
+            @include text-style(sans);
+            @include text-size(small);
+            letter-spacing: var(--letter-spacing-150);
+
+            &::before,
+            &::after {
+                content: '"';
+            }
+        }
+    }
+
+    @include for-viewport-size(phone) {
+        border-top: 1px dashed var(--color-base);
+        padding: var(--spacing-100) 0;
+    }
+
+    @include for-viewport-size(desktop) {
+        @include layout-border();
+        @include layout-padding();
+    }
+}

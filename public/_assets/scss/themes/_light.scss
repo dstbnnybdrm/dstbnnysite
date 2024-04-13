@@ -1,0 +1,21 @@
+/* *~ THEME COLOURS ~* */
+
+@mixin theme-light() {
+    color-scheme: light;
+
+    --color-primary: #c43162;
+    --color-primary-alt: var(--color-primary);
+    --color-secondary: #4f9c86;
+    --color-base: #61193e;
+    --color-background: #fffafa;
+    // for transparent, black graphics
+    // converted using: https://codepen.io/sosuke/pen/Pjoqqp
+    --filter-base: invert(14%) sepia(28%) saturate(4517%) hue-rotate(302deg)
+        brightness(85%) contrast(94%);
+}
+
+// from: https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/
+:root,
+:root[data-theme="light"] {
+    @include theme-light();
+}

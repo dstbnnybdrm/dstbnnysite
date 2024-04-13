@@ -1,0 +1,22 @@
+@mixin theme-dark() {
+    color-scheme: dark;
+
+    --color-primary: #cf4f79;
+    --color-primary-alt: var(--color-primary);
+    --color-secondary: #54b096;
+    --color-base: #d6ccce;
+    --color-background: #1d0612;
+    --filter-base: invert(99%) sepia(86%) saturate(259%) hue-rotate(286deg)
+        brightness(91%) contrast(83%);
+}
+
+// from: https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/
+:root[data-theme="dark"] {
+    @include theme-dark();
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        @include theme-dark();
+    }
+}

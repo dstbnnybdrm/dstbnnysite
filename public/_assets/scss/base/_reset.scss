@@ -1,0 +1,122 @@
+/* *~  GLOBAL RESETS  ~* 
+ *
+ * taken from here, very slightly modified:
+ * https://www.joshwcomeau.com/css/custom-css-reset/
+ */
+
+/* less shitty box-sizing (border-based instead of content-based) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* reset layout defaults */
+* {
+    margin: 0;
+    padding: 0;
+
+    // use the default scrollbar width for the platform, if applicable
+    scrollbar-width: auto;
+
+    // set root font size; all rem relative to this
+    font-size: 14px;
+
+    scrollbar-width: thin;
+
+    background-color: var(--color-background);
+}
+
+/* improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+
+    max-width: 100%;
+
+    // (try) to disable anti-alias (for pixel art and etc., we WANT the
+    // jaggedness lol)
+    image-rendering: optimizeSpeed; // stop smoothing for speed
+    image-rendering: -moz-crisp-edges; //           for Firefox
+    image-rendering: -o-crisp-edges; //             for Opera
+    image-rendering: -webkit-optimize-contrast; //  for Chrome
+    image-rendering: pixelated; // Universal support since 2021
+    image-rendering: optimize-contrast; // CSS3 Proposed
+}
+
+/* remove form typography styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* create a root stacking context */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* --- MY resets :3c --- */
+
+// html {
+//     background-color: var(--color-background);
+// }
+
+/* - links - */
+
+a {
+    text-decoration-style: dotted;
+}
+
+a[rel*="external"]::after {
+    content: "↗";
+}
+
+a:link {
+    color: var(--color-primary);
+}
+
+a:visited {
+    color: var(--color-primary-alt);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+/* - selection - */
+
+/* for Firefox */
+::-moz-selection {
+    background: var(--color-secondary);
+    color: var(--color-background);
+}
+
+::selection {
+    background: var(--color-secondary);
+    color: var(--color-background);
+}
+
+/* - other - */
+
+abbr {
+    text-decoration: none;
+    font: inherit;
+    background: none;
+}

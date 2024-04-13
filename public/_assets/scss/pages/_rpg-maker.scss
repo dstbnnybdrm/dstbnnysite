@@ -1,4 +1,4 @@
-@use "../base";
+@use "../abstracts/mixins";
 
 .rpg-maker[data-high-contrast="false"] {
     --colour-base: #f30000;

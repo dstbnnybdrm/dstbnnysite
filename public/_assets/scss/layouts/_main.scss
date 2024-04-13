@@ -1,0 +1,77 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.main {
+    display: flex;
+
+    grid-area: main;
+
+    @include for-viewport-size(phone) {
+        border-top: 1px dashed var(--color-base);
+        border-bottom: 1px dashed var(--color-base);
+        padding: var(--spacing-100) 0;
+
+        &__frame {
+            display: block;
+
+            border: none;
+
+            width: 100%;
+        }
+    }
+
+    @include for-viewport-size(desktop) {
+        @include layout-border();
+        @include layout-padding();
+
+        &__frame {
+            /* take up entire space of GRID CELL */
+            height: 100%;
+            width: 100%;
+
+            border: none;
+        }
+    }
+
+    &_borderless {
+        border: none;
+    }
+}
+
+.main-body {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: 1em;
+
+    /* only shows up if user somehow enters the main content frame itself lol*/
+    &__breadcrumb {
+        margin-bottom: var(--spacing-075);
+        border-bottom: 1px var(--color-base) dotted;
+        padding-bottom: var(--spacing-075);
+    }
+
+    // @include for-frame-size(large) {
+    //     &_home {
+    //         display: grid;
+
+    //         grid-template-areas:
+    //             "welcome news-feed"
+    //             "update update";
+    //         grid-template-rows:
+    //             minmax(0, 3fr)
+    //             minmax(0, 2fr);
+    //         grid-template-columns: 1fr 1fr;
+    //         row-gap: var(--spacing-100);
+    //         column-gap: var(--spacing-200);
+
+    //         height: 100vh;
+    //     }
+    // }
+
+    // @include for-in-frame() {
+    //     margin: 5% auto 0 auto;
+
+    //     padding: 0 12%;
+    // }
+}
