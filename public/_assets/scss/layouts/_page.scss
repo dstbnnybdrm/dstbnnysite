@@ -20,6 +20,8 @@
         grid-template-rows: repeat(8, auto) min-content;
         row-gap: var(--spacing-100);
 
+        width: var(--measure-max);
+
         //         &_simple {
         //             display: flex;
 

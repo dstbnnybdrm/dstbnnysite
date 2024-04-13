@@ -24,10 +24,6 @@
         @include layout-border();
         @include layout-padding();
 
-        &_borderless {
-            border: none;
-        }
-
         &__frame {
             /* take up entire space of GRID CELL */
             height: 100%;
@@ -35,6 +31,10 @@
 
             border: none;
         }
+    }
+
+    &_borderless {
+        border: none;
     }
 }
 

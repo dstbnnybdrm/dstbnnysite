@@ -304,6 +304,7 @@ abbr {
     grid-template-areas: "header         header" "navi           navi" "theme-toggle   theme-toggle" "main           main" "support        directories" "status         status" "site-log       site-log" "marquee        marquee" "footer         footer";
     grid-template-rows: repeat(8, auto) min-content;
     row-gap: var(--spacing-100);
+    width: var(--measure-max);
   }
 }
 @media screen and (min-width: 801px) {
@@ -326,8 +327,9 @@ abbr {
 
 .header {
   display: flex;
-  flex-direction: column;
   grid-area: header;
+  align-items: center;
+  flex-direction: column;
   border: 1px solid var(--color-base);
   padding: var(--spacing-075) var(--spacing-100);
 }
@@ -670,15 +672,15 @@ abbr {
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
   }
-  .main_borderless {
-    border: none;
-  }
   .main__frame {
     /* take up entire space of GRID CELL */
     height: 100%;
     width: 100%;
     border: none;
   }
+}
+.main_borderless {
+  border: none;
 }
 
 .main-body {
@@ -1070,6 +1072,7 @@ abbr {
   border: none;
   padding: 0;
 }
+
 @media screen and (max-width: 800px) {
   .navi_blog {
     border-top: 1px solid var(--color-base);
