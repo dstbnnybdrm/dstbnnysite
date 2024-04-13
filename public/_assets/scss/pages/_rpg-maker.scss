@@ -1,4 +1,4 @@
-@use "../abstracts/mixins";
+@use "../abstracts/mixins" as *;
 
 .rpg-maker[data-high-contrast="false"] {
     --colour-base: #f30000;
@@ -9,14 +9,14 @@
 }
 
 @mixin text {
-    @include base.text-style(mono, normal, normal);
+    @include text-style(sans);
     color: var(--colour-base);
 }
 
 @mixin text-italic {
     i,
     em {
-        @include base.text-style(mono, italic, normal);
+        @include text-style(sans, italic, normal);
         color: var(--colour-base);
     }
 }
@@ -63,13 +63,12 @@
     .page {
         display: flex;
 
-        flex-direction: column;
-        row-gap: 1em;
+        flex-direction: row;
 
-        max-width: var(--measure-max);
+        padding: 0;
     }
 
-    .body-copy {
+    .copy {
         @include text();
         @include text-italic();
     }
@@ -104,12 +103,55 @@
         // }
 
         &__caption {
-            @include base.text-style(mono, italic, normal);
+            @include text-style(sans, italic, normal);
             color: var(--colour-base);
         }
     }
 
     .marquee {
         display: inline-block;
+
+        border: none;
+    }
+
+    .main {
+        display: flex;
+
+        flex-direction: column;
+        gap: var(--spacing-100);
+
+        max-width: var(--measure-max);
+        border: none;
+        overflow-y: auto;
+    }
+
+    .navi {
+        display: flex;
+
+        flex-direction: column;
+        gap: var(--spacing-200);
+
+        width: 14.4rem;
+        border: none;
+        border-right: 5px solid white;
+
+        text-align: center;
+
+        &__footer {
+        }
+    }
+
+    .navi-list {
+        display: flex;
+
+        flex-direction: column;
+        gap: var(--spacing-025);
+
+        margin: 0;
+
+        list-style: none;
+
+        &__item {
+        }
     }
 }
