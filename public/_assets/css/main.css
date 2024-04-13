@@ -304,7 +304,14 @@ abbr {
     grid-template-areas: "header         header" "navi           navi" "theme-toggle   theme-toggle" "main           main" "support        directories" "status         status" "site-log       site-log" "marquee        marquee" "footer         footer";
     grid-template-rows: repeat(8, auto) min-content;
     row-gap: var(--spacing-100);
-    width: var(--measure-max);
+    max-width: var(--measure-max);
+  }
+  .page_simple {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-125);
+    justify-content: center;
+    min-height: 0;
   }
 }
 @media screen and (min-width: 801px) {

@@ -20,17 +20,17 @@
         grid-template-rows: repeat(8, auto) min-content;
         row-gap: var(--spacing-100);
 
-        width: var(--measure-max);
+        max-width: var(--measure-max);
 
-        //         &_simple {
-        //             display: flex;
+        &_simple {
+            display: flex;
 
-        //             flex-direction: column;
-        //             row-gap: var(--spacing-125);
-        //             justify-content: center;
+            flex-direction: column;
+            row-gap: var(--spacing-125);
+            justify-content: center;
 
-        //             min-height: 0;
-        //         }
+            min-height: 0;
+        }
 
         //         &__main {
         //             border-top: 1px dashed var(--color-base);
