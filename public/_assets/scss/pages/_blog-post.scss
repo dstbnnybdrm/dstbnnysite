@@ -146,4 +146,8 @@
         @include text-style(serif, italic);
         @include text-size(base);
     }
+
+    hr {
+        border: 1px dotted var(--color-base);
+    }
 }

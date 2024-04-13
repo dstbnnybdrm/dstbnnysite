@@ -1245,6 +1245,9 @@ abbr {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
+.blog-post hr {
+  border: 1px dotted var(--color-base);
+}
 
 @media screen and (min-width: 801px) {
   .page_guestbook {
