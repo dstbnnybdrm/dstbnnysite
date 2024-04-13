@@ -4,9 +4,9 @@
 .header {
     display: flex;
 
-    flex-direction: column;
-
     grid-area: header;
+    align-items: center;
+    flex-direction: column;
 
     @include layout-border;
     padding: var(--spacing-075) var(--spacing-100);

@@ -2,17 +2,6 @@
 @use "../abstracts/mixins" as *;
 
 .page {
-    &__header {
-        align-items: center;
-
-        &_blog {
-            /* counteract grid gap in layout */
-            margin-bottom: calc(var(--spacing-100) * -1);
-
-            width: min-content;
-        }
-    }
-
     @include for-viewport-size(desktop) {
         &_blog {
             grid-template-areas:
@@ -26,21 +15,34 @@
             grid-template-columns:
                 min-content
                 minmax(0rem, var(--measure-max));
-
-            // width: 100%;
-        }
-
-        &__header {
-            &_blog {
-                border: none;
-                padding: 0;
-            }
         }
 
         &__main {
             &_blog {
                 border: none;
             }
+        }
+    }
+}
+
+.header {
+    &_blog {
+        align-self: end;
+        justify-self: center;
+
+        width: min-content;
+        /* counteract grid gap in layout */
+        margin-bottom: calc(var(--spacing-100) * -1);
+        border: none;
+        padding: 0;
+    }
+}
+
+.navi {
+    &_blog {
+        @include for-viewport-size(phone) {
+            border-top: 1px solid var(--color-base);
+            padding-top: var(--spacing-100);
         }
     }
 }
