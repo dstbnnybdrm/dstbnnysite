@@ -5,7 +5,7 @@
  * have little to no clue what i am doing! lmao
  *
  * but i try to list sources i use whenever i can, so feel free to check those
- * out!
+ * out if you're interested!
  */
 
 import {
@@ -66,4 +66,10 @@ Frame.mainframe?.addEventListener("load", Frame.updateSize);
 // auto-close mobile navigation menu after changing pages
 Frame.mainframe?.addEventListener("load", function () {
     if (Navi.isMenuOpen()) Navi.toggleMenu();
+});
+
+Frame.mainframe?.addEventListener("load", () => {
+    console.log(
+        Frame.mainframe.contentWindow.document.getElementById("news-feed"),
+    );
 });
