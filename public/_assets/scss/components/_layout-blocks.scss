@@ -35,10 +35,10 @@
     row-gap: var(--spacing-100);
 
     &_horizontal {
-        @include for-frame-size(large) {
-            flex-direction: row;
-            column-gap: var(--spacing-100);
-        }
+        // @include for-frame-size(large) {
+        //     flex-direction: row;
+        //     column-gap: var(--spacing-100);
+        // }
     }
 }
 

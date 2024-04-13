@@ -65,7 +65,6 @@
   scrollbar-width: auto;
   font-size: 14px;
   scrollbar-width: thin;
-  background-color: var(--color-background);
 }
 
 /* improve media defaults */
@@ -299,7 +298,6 @@ abbr {
 /*:._.:*~ LAYOUTS ~*:._.:*/
 .page {
   display: inline-grid;
-  background-color: var(--color-background);
 }
 @media screen and (max-width: 800px) {
   .page {
@@ -697,12 +695,19 @@ abbr {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
-  /* only shows up if user somehow enters the main content frame itself lol*/
 }
-.main-body__breadcrumb {
-  margin-bottom: var(--spacing-075);
-  border-bottom: 1px var(--color-base) dotted;
-  padding-bottom: var(--spacing-075);
+@media screen and (min-width: 44rem) {
+  .main-body {
+    max-width: var(--measure-max);
+    margin-inline: auto;
+    padding-top: var(--spacing-100);
+    /* show to guide user back outside of frame */
+  }
+  .main-body__breadcrumb {
+    margin-bottom: var(--spacing-075);
+    border-bottom: 1px var(--color-base) dotted;
+    padding-bottom: var(--spacing-075);
+  }
 }
 
 .marquee {
@@ -777,13 +782,6 @@ abbr {
   flex-direction: column;
   row-gap: var(--spacing-100);
 }
-@media (min-width: 600px) {
-  .l-stack_horizontal {
-    flex-direction: row;
-    column-gap: var(--spacing-100);
-  }
-}
-
 .l-center {
   display: flex;
   justify-content: center;
@@ -1040,7 +1038,7 @@ abbr {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 44rem) {
   .breadcrumb {
     display: block;
   }
