@@ -1260,6 +1260,7 @@ abbr {
 div #HCB_comment_box {
   display: flex;
   flex-direction: column;
+  height: auto;
   /* comments heading */
   /* HCB's messages to user */
   /* "not using html comment box yet?" */
@@ -1270,6 +1271,7 @@ div #HCB_comment_box h3 {
 }
 div #HCB_comment_box #hcb_msg {
   grid-area: comment-message;
+  height: min-content;
   margin: var(--spacing-100) 0;
   text-transform: lowercase;
   color: var(--color-base);
@@ -1289,7 +1291,7 @@ div #HCB_comment_box p.error {
 div #HCB_comment_box div.home-desc {
   display: none;
 }
-div #HCB_comment_box img.hcb-icon.hcb-door-in {
+div #HCB_comment_box .hcb-icon.hcb-door-in {
   display: inline;
   filter: var(--filter-base);
 }
@@ -1297,17 +1299,17 @@ div #HCB_comment_box #HCB_comment_form_box {
   grid-area: comment-form;
   /* big "comment" button */
 }
-div #HCB_comment_box #HCB_comment_form_box input.btn {
-  border: none;
-  background: var(--color-primary);
-  text-transform: lowercase;
-  color: var(--color-background);
+div #HCB_comment_box #HCB_comment_form_box .submit.btn {
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
+  border: none;
+  background: var(--color-primary);
+  text-transform: lowercase;
+  color: var(--color-background);
 }
-div #HCB_comment_box #HCB_comment_form_box input.btn:hover, div #HCB_comment_box #HCB_comment_form_box input.btn:focus {
+div #HCB_comment_box #HCB_comment_form_box .submit.btn:hover, div #HCB_comment_box #HCB_comment_form_box .submit.btn:focus {
   background: var(--color-secondary);
 }
 @media screen and (max-width: 800px) {

@@ -30,6 +30,8 @@ div #HCB_comment_box {
 
     flex-direction: column;
 
+    height: auto;
+
     /* comments heading */
     h3 {
         display: none;
@@ -39,6 +41,7 @@ div #HCB_comment_box {
     #hcb_msg {
         grid-area: comment-message;
 
+        height: min-content;
         margin: var(--spacing-100) 0;
 
         text-transform: lowercase;
@@ -62,7 +65,7 @@ div #HCB_comment_box {
     }
 
     /* log in icon */
-    img.hcb-icon.hcb-door-in {
+    .hcb-icon.hcb-door-in {
         display: inline;
 
         // color: var(--color-primary);
@@ -73,14 +76,14 @@ div #HCB_comment_box {
         grid-area: comment-form;
 
         /* big "comment" button */
-        input.btn {
+        .submit.btn {
+            @include text-style(sans);
+
             border: none;
             background: var(--color-primary);
 
             text-transform: lowercase;
             color: var(--color-background);
-
-            @include text-style(sans);
 
             &:hover,
             &:focus {
