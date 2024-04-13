@@ -65,6 +65,7 @@
   scrollbar-width: auto;
   font-size: 14px;
   scrollbar-width: thin;
+  background-color: var(--color-background);
 }
 
 /* improve media defaults */
@@ -146,6 +147,7 @@ a:hover {
 abbr {
   text-decoration: none;
   font: inherit;
+  background: none;
 }
 
 .title {
@@ -297,6 +299,7 @@ abbr {
 /*:._.:*~ LAYOUTS ~*:._.:*/
 .page {
   display: inline-grid;
+  background-color: var(--color-background);
 }
 @media screen and (max-width: 800px) {
   .page {
