@@ -149,6 +149,10 @@ abbr {
   background: none;
 }
 
+body {
+  background-color: var(--color-background);
+}
+
 .title {
   letter-spacing: var(--letter-spacing-110);
   color: var(--color-base);
