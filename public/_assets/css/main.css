@@ -760,6 +760,11 @@ abbr {
   margin: 0 var(--spacing-075);
   content: "|";
 }
+@media screen and (max-width: 800px) {
+  .footer {
+    padding-bottom: var(--spacing-050);
+  }
+}
 
 /*:._.:*~ COMPONENTS ~*:._.:*/
 /**
