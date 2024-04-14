@@ -792,8 +792,14 @@ abbr {
 .l-stack {
   display: flex;
   flex-direction: column;
+  justify-items: center;
   row-gap: var(--spacing-100);
 }
+.l-stack_horizontal {
+  flex-direction: row;
+  column-gap: var(--spacing-100);
+}
+
 .l-center {
   display: flex;
   justify-content: center;
