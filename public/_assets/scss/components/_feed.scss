@@ -26,13 +26,8 @@
         // @include text-size(large);
     }
 
-    @include for-viewport-size(phone) {
-        &__entry {
-            &:nth-child(n + 4) {
-                display: none;
-            }
-        }
-    }
+    // @include for-viewport-size(phone) {
+    // }
 
     // @include for-viewport-size(desktop) {
     // }
