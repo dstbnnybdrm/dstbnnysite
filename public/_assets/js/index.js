@@ -67,9 +67,3 @@ Frame.mainframe?.addEventListener("load", Frame.updateSize);
 Frame.mainframe?.addEventListener("load", function () {
     if (Navi.isMenuOpen()) Navi.toggleMenu();
 });
-
-Frame.mainframe?.addEventListener("load", () => {
-    console.log(
-        Frame.mainframe.contentWindow.document.getElementById("news-feed"),
-    );
-});
