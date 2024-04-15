@@ -4,6 +4,10 @@
 .navi {
     grid-area: navi;
 
+    display: flex;
+
+    flex-direction: column;
+
     @include text-style(sans);
     @include text-size(base);
 
@@ -11,9 +15,6 @@
     @include layout-padding();
 
     @include for-viewport-size(phone) {
-        display: flex;
-
-        flex-direction: column;
         gap: var(--spacing-100);
 
         border: none;

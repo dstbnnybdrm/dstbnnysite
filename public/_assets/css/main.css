@@ -404,6 +404,8 @@ abbr {
 
 .navi {
   grid-area: navi;
+  display: flex;
+  flex-direction: column;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
@@ -415,8 +417,6 @@ abbr {
 }
 @media screen and (max-width: 800px) {
   .navi {
-    display: flex;
-    flex-direction: column;
     gap: var(--spacing-100);
     border: none;
     padding: 0;
@@ -677,7 +677,13 @@ abbr {
 
 .main {
   display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
   grid-area: main;
+}
+.main__footer {
+  border-top: 1px dashed var(--color-base);
+  padding-top: var(--spacing-100);
 }
 @media screen and (max-width: 800px) {
   .main {

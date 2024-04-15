@@ -4,7 +4,15 @@
 .main {
     display: flex;
 
+    flex-direction: column;
+    gap: var(--spacing-100);
+
     grid-area: main;
+
+    &__footer {
+        border-top: 1px dashed var(--color-base);
+        padding-top: var(--spacing-100);
+    }
 
     @include for-viewport-size(phone) {
         border-top: 1px dashed var(--color-base);
