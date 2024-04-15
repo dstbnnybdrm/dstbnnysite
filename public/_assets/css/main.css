@@ -1286,6 +1286,7 @@ abbr {
 }
 
 .rpg-maker {
+  --border-style: 5px solid white;
   background-color: black;
   /* links */
   /* highlight */
@@ -1317,8 +1318,19 @@ abbr {
 }
 .rpg-maker .page {
   display: flex;
-  flex-direction: row;
   padding: 0;
+}
+@media screen and (max-width: 800px) {
+  .rpg-maker .page {
+    flex-direction: column;
+    margin-inline: auto;
+    padding: var(--spacing-200);
+  }
+}
+@media screen and (min-width: 801px) {
+  .rpg-maker .page {
+    flex-direction: row;
+  }
 }
 .rpg-maker .copy {
   color: var(--color-base);
@@ -1389,19 +1401,44 @@ abbr {
 .rpg-maker .navi {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: var(--spacing-200);
-  width: 14.4rem;
   border: none;
-  border-right: 5px solid white;
-  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .rpg-maker .navi {
+    padding-bottom: var(--spacing-100);
+    border-bottom: var(--border-style);
+  }
+}
+@media screen and (min-width: 801px) {
+  .rpg-maker .navi {
+    width: 14.4rem;
+    border-right: var(--border-style);
+    text-align: center;
+  }
 }
 .rpg-maker .navi-list {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-025);
-  margin: 0;
-  list-style: none;
 }
+.rpg-maker .navi-list__item::marker {
+  color: var(--colour-base);
+}
+@media screen and (max-width: 800px) {
+  .rpg-maker .navi-list {
+    margin-left: var(--spacing-175);
+    list-style: "• ";
+  }
+}
+@media screen and (min-width: 801px) {
+  .rpg-maker .navi-list {
+    margin: 0;
+    list-style: none;
+  }
+}
+
 @media screen and (min-width: 801px) {
   .page_guestbook {
     display: grid;

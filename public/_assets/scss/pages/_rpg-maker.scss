@@ -1,4 +1,5 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
 
 .rpg-maker[data-high-contrast="false"] {
     --colour-base: #f30000;
@@ -22,6 +23,8 @@
 }
 
 .rpg-maker {
+    --border-style: 5px solid white;
+
     background-color: black;
 
     /* links */
@@ -63,9 +66,18 @@
     .page {
         display: flex;
 
-        flex-direction: row;
-
         padding: 0;
+
+        @include for-viewport-size(phone) {
+            flex-direction: column;
+
+            margin-inline: auto;
+            padding: var(--spacing-200);
+        }
+
+        @include for-viewport-size(desktop) {
+            flex-direction: row;
+        }
     }
 
     .copy {
@@ -129,15 +141,24 @@
         display: flex;
 
         flex-direction: column;
+        flex-shrink: 0;
         gap: var(--spacing-200);
 
-        width: 14.4rem;
         border: none;
-        border-right: 5px solid white;
-
-        text-align: center;
 
         &__footer {
+        }
+
+        @include for-viewport-size(phone) {
+            padding-bottom: var(--spacing-100);
+            border-bottom: var(--border-style);
+        }
+
+        @include for-viewport-size(desktop) {
+            width: 14.4rem;
+            border-right: var(--border-style);
+
+            text-align: center;
         }
     }
 
@@ -147,11 +168,21 @@
         flex-direction: column;
         gap: var(--spacing-025);
 
-        margin: 0;
-
-        list-style: none;
-
         &__item {
+            &::marker {
+                color: var(--colour-base);
+            }
+        }
+
+        @include for-viewport-size(phone) {
+            @include list-margin();
+            list-style: "• ";
+        }
+
+        @include for-viewport-size(desktop) {
+            margin: 0;
+
+            list-style: none;
         }
     }
 }
