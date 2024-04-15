@@ -27,4 +27,8 @@
             content: "|";
         }
     }
+
+    @include for-viewport-size(phone) {
+        padding-bottom: var(--spacing-050);
+    }
 }

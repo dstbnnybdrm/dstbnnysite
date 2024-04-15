@@ -23,8 +23,6 @@
     font-size: 14px;
 
     scrollbar-width: thin;
-
-    // background-color: var(--color-background);
 }
 
 /* improve media defaults */
@@ -74,9 +72,9 @@ h6 {
 
 /* --- MY resets :3c --- */
 
-// html {
-//     background-color: var(--color-background);
-// }
+body {
+    background-color: var(--color-background);
+}
 
 /* - links - */
 

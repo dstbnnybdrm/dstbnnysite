@@ -109,6 +109,10 @@ h6 {
 }
 
 /* --- MY resets :3c --- */
+body {
+  background-color: var(--color-background);
+}
+
 /* - links - */
 a {
   text-decoration-style: dotted;
@@ -611,6 +615,15 @@ abbr {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
 }
+.site-log__entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-025);
+}
+.site-log__entry:not(:first-child) {
+  border-top: 1px dotted var(--color-base);
+  padding-top: var(--spacing-075);
+}
 .site-log__date {
   color: var(--color-base);
   font-style: italic;
@@ -650,6 +663,9 @@ abbr {
   .site-log {
     border-top: 1px dashed var(--color-base);
     padding: var(--spacing-100) 0;
+  }
+  .site-log__entry:nth-child(n+4) {
+    display: none;
   }
 }
 @media screen and (min-width: 801px) {
@@ -695,12 +711,19 @@ abbr {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
-  /* only shows up if user somehow enters the main content frame itself lol*/
 }
-.main-body__breadcrumb {
-  margin-bottom: var(--spacing-075);
-  border-bottom: 1px var(--color-base) dotted;
-  padding-bottom: var(--spacing-075);
+@media screen and (min-width: 44rem) {
+  .main-body {
+    max-width: var(--measure-max);
+    margin-inline: auto;
+    padding-top: var(--spacing-100);
+    /* show to guide user back outside of frame */
+  }
+  .main-body__breadcrumb {
+    margin-bottom: var(--spacing-075);
+    border-bottom: 1px var(--color-base) dotted;
+    padding-bottom: var(--spacing-075);
+  }
 }
 
 .marquee {
@@ -741,6 +764,11 @@ abbr {
   margin: 0 var(--spacing-075);
   content: "|";
 }
+@media screen and (max-width: 800px) {
+  .footer {
+    padding-bottom: var(--spacing-050);
+  }
+}
 
 /*:._.:*~ COMPONENTS ~*:._.:*/
 /**
@@ -773,13 +801,12 @@ abbr {
 .l-stack {
   display: flex;
   flex-direction: column;
+  justify-items: center;
   row-gap: var(--spacing-100);
 }
-@media (min-width: 600px) {
-  .l-stack_horizontal {
-    flex-direction: row;
-    column-gap: var(--spacing-100);
-  }
+.l-stack_horizontal {
+  flex-direction: row;
+  column-gap: var(--spacing-100);
 }
 
 .l-center {
@@ -884,11 +911,6 @@ abbr {
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
-}
-@media screen and (max-width: 800px) {
-  .feed__entry:nth-child(n+4) {
-    display: none;
-  }
 }
 
 .image {
@@ -1038,7 +1060,7 @@ abbr {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 44rem) {
   .breadcrumb {
     display: block;
   }
@@ -1081,6 +1103,11 @@ abbr {
   padding: 0;
 }
 
+.navi_blog {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
 @media screen and (max-width: 800px) {
   .navi_blog {
     border-top: 1px solid var(--color-base);

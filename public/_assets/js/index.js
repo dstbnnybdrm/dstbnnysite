@@ -5,7 +5,7 @@
  * have little to no clue what i am doing! lmao
  *
  * but i try to list sources i use whenever i can, so feel free to check those
- * out!
+ * out if you're interested!
  */
 
 import {

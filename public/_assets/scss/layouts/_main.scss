@@ -44,34 +44,16 @@
     flex-direction: column;
     row-gap: 1em;
 
-    /* only shows up if user somehow enters the main content frame itself lol*/
-    &__breadcrumb {
-        margin-bottom: var(--spacing-075);
-        border-bottom: 1px var(--color-base) dotted;
-        padding-bottom: var(--spacing-075);
+    @include for-in-frame() {
+        max-width: var(--measure-max);
+        margin-inline: auto;
+        padding-top: var(--spacing-100);
+
+        /* show to guide user back outside of frame */
+        &__breadcrumb {
+            margin-bottom: var(--spacing-075);
+            border-bottom: 1px var(--color-base) dotted;
+            padding-bottom: var(--spacing-075);
+        }
     }
-
-    // @include for-frame-size(large) {
-    //     &_home {
-    //         display: grid;
-
-    //         grid-template-areas:
-    //             "welcome news-feed"
-    //             "update update";
-    //         grid-template-rows:
-    //             minmax(0, 3fr)
-    //             minmax(0, 2fr);
-    //         grid-template-columns: 1fr 1fr;
-    //         row-gap: var(--spacing-100);
-    //         column-gap: var(--spacing-200);
-
-    //         height: 100vh;
-    //     }
-    // }
-
-    // @include for-in-frame() {
-    //     margin: 5% auto 0 auto;
-
-    //     padding: 0 12%;
-    // }
 }
