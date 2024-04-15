@@ -1310,7 +1310,6 @@ abbr {
   color: #222244;
 }
 .rpg-maker ::-moz-selection {
-  /* Code for Firefox */
   background: initial;
 }
 .rpg-maker ::selection {
@@ -1319,17 +1318,18 @@ abbr {
 .rpg-maker .page {
   display: flex;
   padding: 0;
+  /* move navi to top, center layout */
+}
+@media screen and (min-width: 801px) {
+  .rpg-maker .page {
+    flex-direction: row;
+  }
 }
 @media screen and (max-width: 800px) {
   .rpg-maker .page {
     flex-direction: column;
     margin-inline: auto;
     padding: var(--spacing-200);
-  }
-}
-@media screen and (min-width: 801px) {
-  .rpg-maker .page {
-    flex-direction: row;
   }
 }
 .rpg-maker .copy {
@@ -1398,6 +1398,11 @@ abbr {
   border: none;
   overflow-y: auto;
 }
+.rpg-maker .main__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
 .rpg-maker .navi {
   display: flex;
   flex-direction: column;
@@ -1405,17 +1410,18 @@ abbr {
   gap: var(--spacing-200);
   border: none;
 }
+@media screen and (min-width: 801px) {
+  .rpg-maker .navi {
+    align-items: center;
+    width: 14.4rem;
+    border-right: var(--border-style);
+    text-align: center;
+  }
+}
 @media screen and (max-width: 800px) {
   .rpg-maker .navi {
     padding-bottom: var(--spacing-100);
     border-bottom: var(--border-style);
-  }
-}
-@media screen and (min-width: 801px) {
-  .rpg-maker .navi {
-    width: 14.4rem;
-    border-right: var(--border-style);
-    text-align: center;
   }
 }
 .rpg-maker .navi-list {
@@ -1426,16 +1432,16 @@ abbr {
 .rpg-maker .navi-list__item::marker {
   color: var(--colour-base);
 }
-@media screen and (max-width: 800px) {
-  .rpg-maker .navi-list {
-    margin-left: var(--spacing-175);
-    list-style: "• ";
-  }
-}
 @media screen and (min-width: 801px) {
   .rpg-maker .navi-list {
     margin: 0;
     list-style: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .rpg-maker .navi-list {
+    margin-left: var(--spacing-175);
+    list-style: "• ";
   }
 }
 
