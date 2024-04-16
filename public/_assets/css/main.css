@@ -210,6 +210,16 @@ abbr {
   line-height: var(--line-height-base);
 }
 
+.dinkus {
+  border: none;
+}
+.dinkus::before {
+  display: block;
+  color: var(--color-base);
+  text-align: center;
+  content: "❦";
+}
+
 .list {
   color: var(--color-base);
   font-style: normal;
@@ -1279,8 +1289,14 @@ abbr {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
-.blog-post hr {
-  border: 1px dotted var(--color-base);
+.blog-post__dinkus {
+  border: none;
+}
+.blog-post__dinkus::before {
+  display: block;
+  color: var(--color-base);
+  text-align: center;
+  content: "❦";
 }
 
 .rpg-maker[data-high-contrast=false] {

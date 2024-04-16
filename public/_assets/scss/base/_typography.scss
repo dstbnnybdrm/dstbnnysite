@@ -35,6 +35,19 @@
     @include text-size(base);
 }
 
+.dinkus {
+    border: none;
+
+    &::before {
+        display: block;
+
+        color: var(--color-base);
+        text-align: center;
+
+        content: "❦";
+    }
+}
+
 .list {
     @include text-style(sans);
     @include text-size(base);
