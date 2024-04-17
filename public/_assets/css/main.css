@@ -1082,6 +1082,19 @@ abbr {
   }
 }
 
+.text-area {
+  width: 83%;
+  height: 6rem;
+  border: 1px dotted var(--color-base);
+  padding: var(--spacing-025);
+  background: none;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+  font-size: 16px;
+}
+
 /*:._.:*~ PAGES ~*:._.:*/
 .welcome {
   grid-area: welcome;
