@@ -147,7 +147,15 @@
         @include text-size(base);
     }
 
-    hr {
-        border: 1px dotted var(--color-base);
+    &__dinkus {
+        border: none;
+        &::before {
+            display: block;
+
+            color: var(--color-base);
+            text-align: center;
+
+            content: "❦";
+        }
     }
 }

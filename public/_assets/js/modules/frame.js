@@ -1,3 +1,5 @@
+import { PageLayouts, currentPage } from "./utility.js";
+
 /*
  * large portions of this module have been taken and modified from:
  *
@@ -38,7 +40,11 @@ export function updateHistory() {
     const location = mainframe.contentWindow.location.pathname;
     history.replaceState(null, "", "?" + URL_PARAMETER + "=" + location);
 
-    document.title = mainframePageTitle;
+    if (currentPage() == PageLayouts.BLOG) {
+        document.title = mainframePageTitle + " — dstbnnyblog";
+    } else {
+        document.title = mainframePageTitle + " — dstbnnnybdrm";
+    }
 }
 
 /**
