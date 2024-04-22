@@ -1479,7 +1479,7 @@ abbr {
     display: grid;
     align-self: self-start;
     grid-template-areas: "navi" "main" "footer";
-    grid-template-columns: auto;
+    grid-template-columns: minmax(0, var(--measure-max));
     grid-template-rows: auto 1fr 2rem;
     gap: 0;
   }
