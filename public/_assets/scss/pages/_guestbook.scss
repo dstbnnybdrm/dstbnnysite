@@ -20,6 +20,7 @@
 
             // width: 100vw;
             // max-width: min-content;
+            max-width: calc(var(--measure-max) * 2);
         }
     }
 }
