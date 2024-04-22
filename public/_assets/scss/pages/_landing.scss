@@ -1,0 +1,22 @@
+.page {
+    &_landing {
+        display: flex;
+
+        flex-direction: column;
+        row-gap: var(--spacing-125);
+        justify-content: center;
+
+        max-width: var(--measure-max);
+        min-height: 0;
+    }
+}
+
+.header {
+    &_landing {
+    }
+}
+
+.footer {
+    &_landing {
+    }
+}
