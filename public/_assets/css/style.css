@@ -1090,6 +1090,19 @@ abbr {
 }
 
 /*:._.:*~ PAGES ~*:._.:*/
+.page_landing {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-125);
+  justify-content: center;
+  max-width: var(--measure-max);
+  height: auto;
+}
+
+.main_landing {
+  border: none;
+}
+
 .welcome {
   grid-area: welcome;
   margin: 0rem;

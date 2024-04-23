@@ -7,12 +7,18 @@
         justify-content: center;
 
         max-width: var(--measure-max);
-        min-height: 0;
+        height: auto;
     }
 }
 
 .header {
     &_landing {
+    }
+}
+
+.main {
+    &_landing {
+        border: none;
     }
 }
 
