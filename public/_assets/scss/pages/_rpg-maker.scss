@@ -16,7 +16,8 @@
 
 @mixin text-italic {
     i,
-    em {
+    em,
+    cite {
         @include text-style(sans, italic, normal);
         color: var(--colour-base);
     }

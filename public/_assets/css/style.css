@@ -1401,7 +1401,8 @@ abbr {
   color: var(--colour-base);
 }
 .rpg-maker .copy i,
-.rpg-maker .copy em {
+.rpg-maker .copy em,
+.rpg-maker .copy cite {
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
