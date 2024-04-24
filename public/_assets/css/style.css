@@ -200,7 +200,10 @@ abbr {
   letter-spacing: var(--letter-spacing-110);
 }
 
-.quote {
+.block-quote {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-050);
   margin-left: var(--spacing-100);
   color: var(--color-base);
   font-style: italic;
@@ -209,7 +212,6 @@ abbr {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
-
 .dinkus {
   border: none;
 }
@@ -1099,10 +1101,21 @@ abbr {
   height: auto;
 }
 
-.main_landing {
+.landing {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-125);
+  justify-content: center;
+  max-width: var(--measure-max);
+  height: auto;
   border: none;
 }
-
+.landing__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-125);
+  border-bottom: 1px solid var(--color-base);
+}
 .welcome {
   grid-area: welcome;
   margin: 0rem;
