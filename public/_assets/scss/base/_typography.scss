@@ -28,11 +28,22 @@
     @include emphasis-serif();
 }
 
-.quote {
+.block-quote {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: var(--spacing-050);
+
     margin-left: var(--spacing-100);
 
     @include text-style(serif, italic);
     @include text-size(base);
+
+    &__body {
+    }
+
+    &__cite {
+    }
 }
 
 .dinkus {
