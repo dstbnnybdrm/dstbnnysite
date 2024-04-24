@@ -199,6 +199,9 @@ abbr {
   font-family: var(--font-family-alt);
   letter-spacing: var(--letter-spacing-110);
 }
+.copy_center {
+  text-align: center;
+}
 
 .block-quote {
   display: flex;

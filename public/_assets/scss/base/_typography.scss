@@ -26,6 +26,10 @@
     @include text-size(base);
 
     @include emphasis-serif();
+
+    &_center {
+        text-align: center;
+    }
 }
 
 .block-quote {
