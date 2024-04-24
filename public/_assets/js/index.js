@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
             const mostRecentBlogPost = blogPostList[1].getAttribute("href");
             frameSource = mostRecentBlogPost;
             break;
-        case PageLayouts.MAIN:
+        case PageLayouts.HUB:
             // set frame to home page
             frameSource = HOME_URL;
             Layout.randomiseSplashText();
