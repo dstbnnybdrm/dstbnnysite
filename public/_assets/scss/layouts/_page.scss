@@ -4,6 +4,17 @@
 .page {
     display: inline-grid;
 
+    &_simple {
+        display: flex;
+
+        flex-direction: column;
+        row-gap: var(--spacing-125);
+        justify-content: center;
+
+        max-width: var(--measure-max);
+        min-height: 0;
+    }
+
     @include for-viewport-size(phone) {
         padding: var(--spacing-200);
 
@@ -21,16 +32,6 @@
         row-gap: var(--spacing-100);
 
         max-width: var(--measure-max);
-
-        &_simple {
-            display: flex;
-
-            flex-direction: column;
-            row-gap: var(--spacing-125);
-            justify-content: center;
-
-            min-height: 0;
-        }
 
         //         &__main {
         //             border-top: 1px dashed var(--color-base);
@@ -71,16 +72,6 @@
 
         height: 100vh;
         padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
-
-        &_simple {
-            display: flex;
-
-            flex-direction: column;
-            row-gap: var(--spacing-125);
-            justify-content: center;
-
-            min-height: 0;
-        }
 
         //         &__navi {
         //             @include layout-border();
