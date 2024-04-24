@@ -45,7 +45,12 @@ window.addEventListener("load", () => {
             break;
     }
 
-    Frame.setSource(frameSource);
+    // update document title
+    if (!Frame.mainframe) {
+        document.title += " — dstbnnybdrm";
+    } else {
+        Frame.setSource(frameSource);
+    }
 
     // load content of major layout sections (footer, marquee, etc.) if
     // applicable
