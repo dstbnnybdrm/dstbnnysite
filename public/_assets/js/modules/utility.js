@@ -23,7 +23,7 @@ let viewportWidth = document.documentElement.clientWidth;
  * @enum {string}
  */
 export const PageLayouts = Object.freeze({
-    MAIN: "main",
+    HUB: "hub",
     BLOG: "blog",
 });
 
@@ -38,9 +38,11 @@ export function currentPage() {
     // this seems extra for now but maybe i'll have more PageLayouts in the
     // future lol
     for (let page in PageLayouts) {
-        if (pathname.includes(PageLayouts[page])) return PageLayouts[page];
+        if (pathname.includes(PageLayouts[page])) {
+            return PageLayouts[page];
+        }
     }
-    return PageLayouts.MAIN;
+    return PageLayouts.HUB;
 }
 
 /**
