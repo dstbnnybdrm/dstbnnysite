@@ -1110,6 +1110,9 @@ abbr {
   height: auto;
   border: none;
 }
+.landing__stars {
+  margin-left: 4rem;
+}
 .landing__header {
   display: flex;
   flex-direction: column;

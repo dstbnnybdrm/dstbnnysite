@@ -20,6 +20,10 @@
     height: auto;
     border: none;
 
+    &__stars {
+        margin-left: 4rem;
+    }
+
     &__header {
         display: flex;
 
