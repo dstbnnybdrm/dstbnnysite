@@ -1341,6 +1341,19 @@ abbr {
   text-align: center;
   content: "❦";
 }
+@media screen and (min-width: 44rem) {
+  .blog-post {
+    max-width: var(--measure-max);
+    margin-inline: auto;
+    padding-top: var(--spacing-100);
+    /* show to guide user back outside of frame */
+  }
+  .blog-post__breadcrumb {
+    margin-bottom: var(--spacing-075);
+    border-bottom: 1px var(--color-base) dotted;
+    padding-bottom: var(--spacing-075);
+  }
+}
 
 .rpg-maker[data-high-contrast=false] {
   --colour-base: #f30000;
