@@ -153,6 +153,10 @@ abbr {
   background: none;
 }
 
+summary {
+  cursor: pointer;
+}
+
 .title {
   letter-spacing: var(--letter-spacing-110);
   color: var(--color-base);
@@ -289,6 +293,14 @@ abbr {
 .definition-list__description:has(+ .definition-list__description)::after {
   margin: 0 0.5ch;
   content: ",";
+}
+
+.dropdown__label {
+  list-style-type: "❦ ";
+}
+
+.dropdown[open] .dropdown__label {
+  list-style-type: "❧ ";
 }
 
 .poem {
@@ -521,6 +533,9 @@ abbr {
     font-weight: normal;
     font-family: var(--font-family-base);
   }
+  .menu__dropdown {
+    list-style: none;
+  }
   .menu__heading {
     display: list-item;
     color: var(--color-base);
@@ -529,6 +544,9 @@ abbr {
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
+  }
+  .menu__dropdown {
+    list-style: none;
   }
   .menu__list {
     margin-left: var(--spacing-175);

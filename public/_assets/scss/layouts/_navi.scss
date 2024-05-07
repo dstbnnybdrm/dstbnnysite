@@ -78,6 +78,9 @@
             list-style: none;
         }
 
+        &__dropdown {
+        }
+
         &__heading {
             display: block;
 
@@ -127,11 +130,19 @@
             @include text-style(sans);
         }
 
+        &__dropdown {
+            list-style: none;
+        }
+
         &__heading {
             display: list-item;
 
             @include text-style(sans);
             @include text-size(base);
+        }
+
+        &__dropdown {
+            list-style: none;
         }
 
         &__list {

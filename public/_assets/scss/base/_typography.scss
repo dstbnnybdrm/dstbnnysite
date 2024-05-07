@@ -124,6 +124,18 @@
     }
 }
 
+.dropdown {
+    &__label {
+        list-style-type: "❦ ";
+    }
+}
+
+.dropdown[open] {
+    .dropdown__label {
+        list-style-type: "❧ ";
+    }
+}
+
 .poem {
     display: flex;
 
