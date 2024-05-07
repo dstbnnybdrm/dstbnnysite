@@ -10,7 +10,7 @@ const menu = document.getElementById("navi-menu");
  * @returns {undefined}
  */
 export function toggleMenu() {
-    menu?.classList.toggle("is-visible");
+    menu?.classList.toggle("menu_visible");
     if (button.ariaExpanded == "false") {
         button.ariaExpanded = "true";
         return;
@@ -20,7 +20,7 @@ export function toggleMenu() {
 
 /** @returns {boolean} */
 export function isMenuOpen() {
-    return menu?.classList.contains("is-visible")
+    return menu?.classList.contains("menu_visible")
         ? true //
         : false; //
 }

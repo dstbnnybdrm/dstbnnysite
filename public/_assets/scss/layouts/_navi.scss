@@ -20,12 +20,14 @@
         border: none;
         padding: 0;
 
-        &__home {
+        &__link {
             display: block;
 
             width: 100%;
-            border: 1px dotted var(--color-base);
+            border: 1px dotted var(--color-primary);
             padding: var(--spacing-100);
+
+            @include button-on-hover();
         }
 
         &__button {
@@ -41,28 +43,45 @@
 
             @include button-on-hover();
         }
+    }
 
-        &__menu {
+    @include for-viewport-size(desktop) {
+        // &_borderless {
+        //     border: none;
+        // }
+
+        &__button {
             display: none;
+        }
+    }
+}
 
-            flex-direction: column;
-            gap: var(--spacing-100);
+.menu {
+    @include for-viewport-size(phone) {
+        display: none;
+        flex-direction: column;
+        gap: var(--spacing-100);
 
-            border: 1px dotted var(--color-base);
-            border-top: none;
-            padding: 0 var(--spacing-100) var(--spacing-100) var(--spacing-100);
+        // border: 1px dotted var(--color-base);
+        // border-top: none;
+        margin-bottom: var(--spacing-100);
 
+        // &:not(:last-child) {
+        //     border-bottom: none;
+        // }
+
+        &__section {
             &:not(:last-child) {
-                border-bottom: none;
+                margin-bottom: var(--spacing-100);
             }
+
+            list-style: none;
         }
 
-        .is-visible {
-            display: flex;
-        }
-
-        &__subheading {
+        &__heading {
             display: block;
+
+            margin-bottom: var(--spacing-050);
 
             @include text-style(serif, italic);
             @include text-size(large);
@@ -89,25 +108,27 @@
 
             @include button-on-hover();
         }
+
+        &_visible {
+            display: block;
+        }
     }
 
     @include for-viewport-size(desktop) {
-        &_borderless {
-            border: none;
-        }
+        display: flex;
 
-        &__button {
-            display: none;
-        }
+        flex-direction: column;
 
-        &__menu {
-            display: contents;
-        }
-
-        &__subheading {
-            display: list-item;
+        &__section {
+            @include list-margin();
 
             @include list-style(navi);
+
+            @include text-style(sans);
+        }
+
+        &__heading {
+            display: list-item;
 
             @include text-style(sans);
             @include text-size(base);
@@ -117,19 +138,9 @@
             @include list-margin();
 
             @include list-style(navi);
-
-            @include text-style(sans);
         }
 
         &__link {
-            width: max-content;
-        }
-
-        &__navi {
-            @include list-margin();
-
-            border: none;
-            padding: 0;
         }
     }
 }
