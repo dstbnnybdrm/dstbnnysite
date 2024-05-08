@@ -3,7 +3,7 @@
 
 .dropdown {
     &__label {
-        list-style-type: "❦ ";
+        list-style-type: "❧ ";
         @include button-on-hover();
     }
 
@@ -23,6 +23,6 @@
 
 .dropdown[open] {
     .dropdown__label {
-        list-style-type: "❧ ";
+        list-style-type: "❦ ";
     }
 }
