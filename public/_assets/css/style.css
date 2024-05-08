@@ -295,14 +295,6 @@ summary {
   content: ",";
 }
 
-.dropdown__label {
-  list-style-type: "❦ ";
-}
-
-.dropdown[open] .dropdown__label {
-  list-style-type: "❧ ";
-}
-
 .poem {
   display: flex;
   flex-direction: column;
@@ -468,6 +460,9 @@ summary {
   }
 }
 @media screen and (min-width: 801px) {
+  .navi_borderless {
+    border: none;
+  }
   .navi__button {
     display: none;
   }
