@@ -57,18 +57,17 @@
 }
 
 .menu {
+    &__dropdown {
+        list-style: none;
+    }
+
     @include for-viewport-size(phone) {
         display: none;
+
         flex-direction: column;
         gap: var(--spacing-100);
 
-        // border: 1px dotted var(--color-base);
-        // border-top: none;
         margin-bottom: var(--spacing-100);
-
-        // &:not(:last-child) {
-        //     border-bottom: none;
-        // }
 
         &__section {
             &:not(:last-child) {
@@ -76,9 +75,6 @@
             }
 
             list-style: none;
-        }
-
-        &__dropdown {
         }
 
         &__heading {
@@ -91,6 +87,12 @@
 
             &_blog {
                 display: none;
+            }
+        }
+
+        &__dropdown {
+            &:not(:last-child) {
+                margin-bottom: var(--spacing-100);
             }
         }
 
@@ -130,19 +132,11 @@
             @include text-style(sans);
         }
 
-        &__dropdown {
-            list-style: none;
-        }
-
         &__heading {
             display: list-item;
 
             @include text-style(sans);
             @include text-size(base);
-        }
-
-        &__dropdown {
-            list-style: none;
         }
 
         &__list {
