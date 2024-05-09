@@ -46,38 +46,11 @@ window.addEventListener("load", () => {
         default:
             break;
     }
-
-    // update document title
-    if (!Frame.mainframe) {
-        document.title += " — dstbnnybdrm";
-    } else {
-        Frame.setSource(frameSource);
-    }
+    Frame.setSource(frameSource);
 
     // load content of major layout sections (footer, marquee, etc.) if
     // applicable
     Layout.load();
-
-    // add open graph meta tags
-    var comment = document.createComment("open graph tags");
-    HEAD.appendChild(comment);
-
-    var openGraphLink = document.createElement("meta");
-    openGraphLink.setAttribute("property", "og:url");
-    openGraphLink.content = document.location;
-    HEAD.appendChild(openGraphLink);
-
-    var openGraphTitle = document.createElement("meta");
-    openGraphTitle.setAttribute("property", "og:title");
-    openGraphTitle.content = document.title;
-    HEAD.appendChild(openGraphTitle);
-
-    var openGraphDescription = document.createElement("meta");
-    openGraphDescription.setAttribute("property", "og:description");
-    openGraphDescription.content = document
-        .querySelector("meta[name='description']")
-        .getAttribute("content");
-    HEAD.appendChild(openGraphDescription);
 });
 
 // dynamically resize frame size when the viewport width changes
