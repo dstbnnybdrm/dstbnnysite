@@ -40,11 +40,7 @@ export function updateHistory() {
     const location = mainframe.contentWindow.location.pathname;
     history.replaceState(null, "", "?" + URL_PARAMETER + "=" + location);
 
-    // if (currentPage() == PageLayouts.BLOG) {
-    //     document.title = mainframePageTitle + " — dstbnnyblog";
-    // } else {
-    //     document.title = mainframePageTitle + " — dstbnnnybdrm";
-    // }
+    document.title = mainframePageTitle;
 }
 
 /**
