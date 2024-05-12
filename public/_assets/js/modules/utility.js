@@ -25,6 +25,7 @@ let viewportWidth = document.documentElement.clientWidth;
 export const PageLayouts = Object.freeze({
     HUB: "hub",
     BLOG: "blog",
+    SITEMAP: "sitemap",
 });
 
 /**

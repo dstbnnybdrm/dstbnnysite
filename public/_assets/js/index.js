@@ -19,6 +19,7 @@ import * as Theme from "./modules/theme.js";
 import * as Navi from "./modules/navi.js";
 import * as Frame from "./modules/frame.js";
 import * as Layout from "./modules/layout.js";
+import * as Closet from "./modules/closet.js";
 
 const HEAD = document.getElementsByTagName("head")[0];
 
@@ -43,6 +44,18 @@ window.addEventListener("load", () => {
             frameSource = HOME_URL;
             Layout.randomiseSplashText();
             break;
+        case PageLayouts.SITEMAP:
+            let closetLink = document.getElementById("closet-link");
+            closetLink.addEventListener("click", function () {
+                let userInput = prompt("enter the padlock combination:");
+                switch (userInput) {
+                    case "test":
+                        window.location.href =
+                            "http://" +
+                            window.location.host +
+                            "/closet/butterfly.html";
+                }
+            });
         default:
             break;
     }
