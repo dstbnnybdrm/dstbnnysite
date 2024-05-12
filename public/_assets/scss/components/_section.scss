@@ -12,6 +12,11 @@
         margin-top: var(--spacing-075);
         margin-left: var(--spacing-075);
     }
+
+    &_footer {
+        border-top: 1px dotted var(--color-base);
+        padding-top: var(--spacing-100);
+    }
 }
 
 .section-container {

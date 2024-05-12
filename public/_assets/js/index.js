@@ -20,6 +20,8 @@ import * as Navi from "./modules/navi.js";
 import * as Frame from "./modules/frame.js";
 import * as Layout from "./modules/layout.js";
 
+const HEAD = document.getElementsByTagName("head")[0];
+
 // load user's preferred theme
 window.addEventListener("DOMContentLoaded", Theme.load);
 
@@ -32,8 +34,8 @@ window.addEventListener("load", () => {
     switch (currentPage()) {
         case PageLayouts.BLOG:
             // set frame to most recent blog post
-            const blogPostList = document.querySelectorAll(".navi__link");
-            const mostRecentBlogPost = blogPostList[1].getAttribute("href");
+            const blogPostList = document.querySelectorAll(".menu__link");
+            const mostRecentBlogPost = blogPostList[0].getAttribute("href");
             frameSource = mostRecentBlogPost;
             break;
         case PageLayouts.HUB:
@@ -44,7 +46,6 @@ window.addEventListener("load", () => {
         default:
             break;
     }
-
     Frame.setSource(frameSource);
 
     // load content of major layout sections (footer, marquee, etc.) if

@@ -5,10 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- primary tags -->
+    <!-- meta tags -->
     <title>dstbnnyblog</title>
     <meta name="description" content="various thoughts and ramblings." />
     <meta name="author" content="jp" />
+
+    <!-- open graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="dustbunnybedroom" />
+    <meta property="og:title" content="dstbnnyblog" />
+    <meta property="og:description" content="various thoughts and ramblings." />
+    <meta
+      property="og:url"
+      content="https://dustbunnybedroom.neocities.org/blog"
+    />
 
     <!-- favicon -->
     <link rel="icon" href="/_assets/img/favicon/favicon.ico" sizes="32x32" />
@@ -43,7 +53,6 @@
       </header>
 
       <!-- ~*:._.:*~  NAVIGATION  ~*:._.:*~ -->
-      <!-- <nav class="navi navi_blog  page__navi_blog"> -->
       <nav class="navi navi_blog">
         <h1 class="navi__title">
           <abbr title="dustbunnyblog">dstbnnyblog</abbr>
@@ -53,71 +62,91 @@
 
         <a href="/hub?p=/home" class="navi__link">back to site?</a>
 
-        <!-- <h2 class="navi__heading">entries</h2> -->
+        <ul class="menu menu_visible">
+          <li class="menu__dropdown">
+            <details class="dropdown" open="">
+              <summary class="dropdown__label">2024</summary>
 
-        <button class="button navi__button" id="navi-button" type="button">
-          entries
-        </button>
+              <div class="dropdown__body">
+                <ul class="menu__list">
+                  <!-- add new posts here, me! -->
+                  <li class="menu__item">
+                    <a
+                      class="menu__link"
+                      href="/posts/2024-05-01.html"
+                      target="mainframe"
+                      >the typing experience
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      class="menu__link"
+                      href="/posts/2024-04-09.html"
+                      target="mainframe"
+                      >end of semester thoughts
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      class="menu__link"
+                      href="/posts/2024-03-28.html"
+                      target="mainframe"
+                    >
+                      sleepy march update
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      class="menu__link"
+                      href="/posts/2024-02-23.html"
+                      target="mainframe"
+                    >
+                      on rest
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      class="menu__link"
+                      href="/posts/2024-02-08.html"
+                      target="mainframe"
+                    >
+                      basitar, Ramiel, and guitar experimentation
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a
+                      class="menu__link"
+                      href="/posts/2024-01-09.html"
+                      target="mainframe"
+                    >
+                      here we go again!
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </li>
 
-        <div class="navi__menu" id="navi-menu">
-          <ul class="navi__list">
-            <!-- add new posts here, me! -->
-            <li class="navi__item">
-              <a
-                class="navi__link"
-                href="/posts/2024-04-09.html"
-                target="mainframe"
-              >
-                apr. 09, 2024
-              </a>
-            </li>
-            <li class="navi__item">
-              <a
-                class="navi__link"
-                href="/posts/2024-03-28.html"
-                target="mainframe"
-              >
-                mar. 28, 2024
-              </a>
-            </li>
-            <li class="navi__item">
-              <a
-                class="navi__link"
-                href="/posts/2024-02-23.html"
-                target="mainframe"
-              >
-                feb. 23, 2024
-              </a>
-            </li>
-            <li class="navi__item">
-              <a
-                class="navi__link"
-                href="/posts/2024-02-08.html"
-                target="mainframe"
-              >
-                feb. 08, 2024
-              </a>
-            </li>
-            <li class="navi__item">
-              <a
-                class="navi__link"
-                href="/posts/2024-01-09.html"
-                target="mainframe"
-              >
-                jan. 09, 2024
-              </a>
-            </li>
-            <li class="navi__item">
-              <a
-                class="navi__link"
-                href="/posts/2023-12-30.html"
-                target="mainframe"
-              >
-                dec. 30, 2023
-              </a>
-            </li>
-          </ul>
-        </div>
+          <li class="menu__dropdown">
+            <details class="dropdown">
+              <summary class="dropdown__label">2023</summary>
+
+              <div class="dropdown__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a
+                      class="menu__link"
+                      href="/posts/2023-12-30.html"
+                      target="mainframe"
+                    >
+                      new blog, new me
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </li>
+        </ul>
       </nav>
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
