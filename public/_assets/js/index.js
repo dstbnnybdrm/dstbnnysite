@@ -45,17 +45,10 @@ window.addEventListener("load", () => {
             Layout.randomiseSplashText();
             break;
         case PageLayouts.SITEMAP:
-            let closetLink = document.getElementById("closet-link");
-            closetLink.addEventListener("click", function () {
-                let userInput = prompt("enter the padlock combination:");
-                switch (userInput) {
-                    case "test":
-                        window.location.href =
-                            "http://" +
-                            window.location.host +
-                            "/closet/butterfly.html";
-                }
-            });
+            Closet.closetLink.addEventListener(
+                "click",
+                Closet.promptCombination,
+            );
         default:
             break;
     }

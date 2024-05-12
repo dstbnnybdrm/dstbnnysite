@@ -1116,6 +1116,14 @@ summary {
   font-size: 16px;
 }
 
+.dropdown {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
 .dropdown__label {
   list-style-type: "❧ ";
 }

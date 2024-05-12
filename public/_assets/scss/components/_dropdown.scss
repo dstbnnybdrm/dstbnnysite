@@ -2,6 +2,8 @@
 @use "../abstracts/mixins" as *;
 
 .dropdown {
+    @include text-style(sans);
+    @include text-size(base);
     &__label {
         list-style-type: "❧ ";
         @include button-on-hover();
