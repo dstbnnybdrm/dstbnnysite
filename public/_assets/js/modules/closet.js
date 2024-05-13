@@ -1,5 +1,5 @@
 export let closetLink = document.getElementById("closet-link");
-export const PADLOCK_COMBINATION = "test";
+export const PADLOCK_COMBINATION = "509";
 
 function enterCloset() {
     window.location.href = "http://" + window.location.host + "/closet/";
@@ -18,7 +18,7 @@ export function promptCombination() {
             enterCloset();
             break;
         default:
-            alert("THAT WAS THE WRONG COMBINATION");
+            alert("INCORRECT COMBINATION.");
             break;
     }
 }
