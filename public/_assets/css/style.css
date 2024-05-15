@@ -196,7 +196,8 @@ summary {
   line-height: var(--line-height-base);
 }
 .copy i,
-.copy em {
+.copy em,
+.copy cite {
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -205,6 +206,28 @@ summary {
 }
 .copy_center {
   text-align: center;
+}
+.copy_small {
+  font-size: var(--font-size-smaller);
+  line-height: var(--line-height-smaller);
+}
+
+.small-print {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+.small-print i,
+.small-print em,
+.small-print cite {
+  color: var(--color-base);
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+  letter-spacing: var(--letter-spacing-110);
 }
 
 .block-quote {
@@ -239,7 +262,8 @@ summary {
   list-style: "❀ ";
 }
 .list i,
-.list em {
+.list em,
+.list cite {
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -978,7 +1002,8 @@ summary {
   line-height: var(--line-height-base);
 }
 .table__row i,
-.table__row em {
+.table__row em,
+.table__row cite {
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -1288,7 +1313,8 @@ summary {
   line-height: var(--line-height-base);
 }
 .blog-post__copy i,
-.blog-post__copy em {
+.blog-post__copy em,
+.blog-post__copy cite {
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -1336,7 +1362,8 @@ summary {
   line-height: var(--line-height-base);
 }
 .blog-post__list-item i,
-.blog-post__list-item em {
+.blog-post__list-item em,
+.blog-post__list-item cite {
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;

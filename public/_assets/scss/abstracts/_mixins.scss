@@ -17,7 +17,8 @@
 
 @mixin emphasis-serif {
     i,
-    em {
+    em,
+    cite {
         @include text-style(serif, italic);
         letter-spacing: var(--letter-spacing-110);
     }
