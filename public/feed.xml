@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>dstbnnyfeed</title>
+    <subtitle>blog and site updates for dustbunnybedroom :3c</subtitle>
+    <link  href="https://dustbunnybedroom.neocities.org/feed.xml" rel="self" />
+    <link  href="https://dustbunnybedroom.neocities.org" />
+    <updated>2024-05-14T00:00:00Z</updated>
+    <id>https://dustbunnybedroom.neocities.org/</id>
+    <author>
+        <name>jp</name>
+        <email>dustbunny.bedroom@gmail.com</email>
+    </author>
+
+    <entry>
+        <title>updated /now page (+ created this feed!)</title>
+        <link href="https://dustbunnybedroom.neocities.org/now" />
+        <updated>2024-05-14T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/now</id>
+        <content type="text">
+            i updated the media section of my /now page! and also created this
+            feed! what makes it different from the site-log on the site? well, i
+            plan to put blog posts here and also bigger updates, more-so site 
+            additions, while the site-log is going to continue being very
+            granular in its content! stuff you'd probably want to be notified
+            about and not, like, me fixing a dumb CSS mistake i missed a month
+            ago lol.
+        </content>
+    </entry>
+</feed>
