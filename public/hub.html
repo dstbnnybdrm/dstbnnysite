@@ -5,23 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- primary tags -->
+    <!-- meta tags -->
     <title>dstbnnybdrm</title>
-    <meta name="description" content="proof of my existence &lt;3." />
     <meta name="author" content="jp" />
     <base target="_self" />
 
-    <!-- open graph tags -->
+    <!-- open graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dustbunnybedroom.neocities.org" />
-    <meta property="og:title" content="dustbunnybedroom" />
-    <meta property="og:description" content="proof of my existence &lt;3." />
-
-    <!-- twitter tags -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="https://dustbunnybedroom.neocities.org" />
-    <meta name="twitter:title" content="dustbunnybedroom" />
-    <meta name="twitter:description" content="proof of my existence &lt;3." />
+    <meta property="og:site_name" content="dustbunnybedroom" />
+    <meta property="og:title" content="dstbnnybdrm" />
+    <meta property="og:description" content="" />
+    <meta
+      property="og:url"
+      content="https://dustbunnybedroom.neocities.org/hub"
+    />
 
     <!-- favicon -->
     <link rel="icon" href="/_assets/img/favicon/favicon.ico" sizes="32x32" />
@@ -53,11 +50,13 @@
       <div class="sidebar sidebar_major page__sidebar">
         <!-- ~* NAVIGATION *~ -->
         <nav class="navi sidebar__section">
-          <h1 class="heading l-hidden">site navigation</h1>
+          <h1>
+            <a class="navi__link" href="/home.html" target="mainframe"
+              ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
+            >
+          </h1>
 
-          <a class="navi__link" href="/home.html" target="mainframe"
-            ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
-          >
+          <h2 class="heading l-hidden">site navigation</h2>
 
           <button
             class="button navi__button"
@@ -68,70 +67,69 @@
             navigation
           </button>
 
-          <div class="navi__menu" id="navi-menu">
-            <nav class="navi navi__navi">
-              <h2 class="navi__subheading">from me</h2>
-              <ul class="navi__list">
-                <li class="navi__item">
-                  <a class="navi__link" href="/about.html" target="mainframe"
+          <ul class="menu" id="navi-menu">
+            <li class="menu__section">
+              <span class="menu__heading">from me</span>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="/about.html" target="mainframe"
                     >about</a
                   >
                 </li>
-                <li class="navi__item">
-                  <a class="navi__link" href="/now.html" target="mainframe"
+                <li class="menu__item">
+                  <a class="menu__link" href="/now.html" target="mainframe"
                     >now</a
                   >
                 </li>
-                <li class="navi__item">
-                  <a class="navi__link" href="/blog.html" target="_self"
+                <li class="menu__item">
+                  <a class="menu__link" href="/blog.html" target="_self"
                     >blog</a
                   >
                 </li>
-                <li class="navi__item">
-                  <a class="navi__link" href="/work/" target="mainframe"
+                <li class="menu__item">
+                  <a class="menu__link" href="/work/" target="mainframe"
                     >work</a
                   >
                 </li>
-                <li class="navi__item">
-                  <a class="navi__link" href="/shrines/" target="_self"
+                <li class="menu__item">
+                  <a class="menu__link" href="/shrines/" target="_self"
                     >shrines</a
                   >
                 </li>
               </ul>
-            </nav>
-
-            <nav class="navi navi__navi">
-              <h2 class="navi__subheading">for you</h2>
-              <ul class="navi__list">
-                <li class="navi__item">
+            </li>
+            <li class="menu__section">
+              <span class="menu__heading">for you</span>
+              <ul class="menu__list">
+                <li class="menu__item">
                   <a
-                    class="navi__link"
+                    class="menu__link"
                     href="/commission.html"
                     target="mainframe"
                     >commission</a
                   >
                 </li>
-                <li class="navi__item">
-                  <a class="navi__link" href="/guestbook.html" target="_self"
+                <li class="menu__item">
+                  <a class="menu__link" href="/guestbook.html" target="_self"
                     >guestbook</a
                   >
                 </li>
-                <li class="navi__item">
+                <li class="menu__item">
                   <a
-                    class="navi__link"
+                    class="menu__link"
                     href="/resources.html"
                     target="mainframe"
                     >resources</a
                   >
                 </li>
-                <li class="navi__item">
-                  <a class="navi__link" href="/links.html" target="mainframe"
+                <li class="menu__item">
+                  <a class="menu__link" href="/links.html" target="mainframe"
                     >links</a
                   >
                 </li>
               </ul>
-            </nav>
-          </div>
+            </li>
+          </ul>
         </nav>
 
         <!-- ~* THEME TOGGLE BUTTON *~ -->
@@ -141,6 +139,7 @@
           type="button"
         ></button>
 
+        <!-- ~* FEATURED *~ -->
         <aside class="card directories sidebar__section">
           <h2 class="card__title">featured</h2>
 
@@ -149,16 +148,16 @@
               <img
                 class="image"
                 src="/_assets/img/featured.gif"
-                alt="The Precure Album by Kmoy"
-                title="Kmoy - The Precure Album"
+                alt="LOST ! by WAWAN"
+                title="L O S T ! by WAWAN"
               />
 
               <p class="copy copy_center">
                 <a
                   rel="external"
-                  href="https://kmoy.bandcamp.com/album/the-precure-album"
+                  href="https://wawan.bandcamp.com/album/l-o-s-t"
                   target="_blank"
-                  >Kmoy - <cite class="cite">The Precure Album</cite></a
+                  >WAWAN - <cite class="cite">L O S T !</cite></a
                 >
               </p>
             </div>
@@ -184,6 +183,15 @@
           </div>
         </aside>
       </div>
+
+      <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
+      <main id="main" class="main">
+        <iframe
+          class="main__frame"
+          name="mainframe"
+          title="main content"
+        ></iframe>
+      </main>
 
       <!-- ~*:._.:*~  MINOR SIDEBAR  ~*:._.:*~ -->
       <div class="sidebar sidebar_minor page__sidebar">
@@ -218,15 +226,6 @@
           </div>
         </aside>
       </div>
-
-      <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
-      <main id="main" class="main">
-        <iframe
-          class="main__frame"
-          name="mainframe"
-          title="main content"
-        ></iframe>
-      </main>
 
       <!-- ~*:._.:*~  BUTTONS MARQUEE  ~*:._.:*~ -->
       <aside class="marquee">

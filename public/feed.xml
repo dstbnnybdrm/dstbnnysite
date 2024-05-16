@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>dstbnnyfeed</title>
+    <subtitle>blog and site updates for dustbunnybedroom :3c</subtitle>
+    <link href="https://dustbunnybedroom.neocities.org/feed.xml" rel="self" />
+    <link href="https://dustbunnybedroom.neocities.org" />
+    <updated>2024-05-15T00:00:00Z</updated>
+    <id>https://dustbunnybedroom.neocities.org/</id>
+    <author>
+        <name>jp</name>
+        <email>dustbunny.bedroom@gmail.com</email>
+    </author>
+
+    <entry>
+        <title>new sample pack available! SMI-1460 electronic drum kit voices</title>
+        <summary>released a new sample pack</summary>
+        <link href="https://dustbunnybedroom.neocities.org/samples#smi-1460-voices" />
+        <updated>2024-05-15T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/samples#smi-1460-voices</id>
+        <content type="html"><![CDATA[
+        <p>voices from my SMI-1460 electronic drum kit that was handed down to me. included are two variations: DI through the two 1/4" jacks on the back, and through a normal IEC cassette tape with an Optimus CTR-117 cassette recorder. no processing was done other than a little EQ and normalisation.</p>
+        <p>includes 430 WAV files (44.1kHz, 16bit), 215 voices with two variations each.</p>
+        <p>size: 78.4MB</p>
+        <ul>
+            <li><a rel="external" href="https://ko-fi.com/s/e402fbfc50" target="_blank">download on Ko-fi</a></li>
+            <li><a rel="external" href="https://mega.nz/file/IPcTBK7C#hNFj07DJvx3NEtJPifeL3_HKmLPNOapHwnZjKQOq2jY" target="_blank">download directly</a></li>
+
+        </ul>
+            ]]>
+    </content>
+</entry>
+
+<entry>
+    <title>updated /now page (+ created this feed!)</title>
+    <link href="https://dustbunnybedroom.neocities.org/now" />
+    <updated>2024-05-14T00:00:00Z</updated>
+    <id>https://dustbunnybedroom.neocities.org/now</id>
+    <content type="text">
+        i updated the media section of my /now page! and also created this
+        feed! what makes it different from the site-log on the site? well, i
+        plan to put blog posts here and also bigger updates, more-so site 
+        additions, while the site-log is going to continue being very
+        granular in its content! stuff you'd probably want to be notified
+        about and not, like, me fixing a dumb CSS mistake i missed a month
+        ago lol.
+    </content>
+</entry>
+</feed>

@@ -30,6 +30,17 @@
     &_center {
         text-align: center;
     }
+
+    &_small {
+        @include text-size(smaller);
+    }
+}
+
+.small-print {
+    @include text-style(sans);
+    @include text-size(small);
+
+    @include emphasis-serif();
 }
 
 .block-quote {
