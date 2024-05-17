@@ -58,6 +58,7 @@
 
     flex-direction: column;
     row-gap: var(--spacing-075);
+    align-items: center;
 
     &__webring {
         display: flex;

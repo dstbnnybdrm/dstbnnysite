@@ -1210,6 +1210,7 @@ summary {
   display: flex;
   flex-direction: column;
   row-gap: var(--spacing-075);
+  align-items: center;
 }
 .webrings__webring {
   display: flex;
