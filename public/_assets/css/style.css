@@ -861,7 +861,7 @@ summary {
   justify-items: center;
   row-gap: var(--spacing-100);
 }
-.l-stack_horizontal {
+.l-stack_row {
   flex-direction: row;
   column-gap: var(--spacing-100);
 }
@@ -1193,6 +1193,31 @@ summary {
   row-gap: var(--spacing-125);
   border-bottom: 1px solid var(--color-base);
 }
+.landing__enter-link::before {
+  content: "⟶";
+}
+.landing__enter-link::after {
+  content: "⟵";
+}
+.landing__neighbourhood {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-125);
+  align-items: center;
+}
+
+.webrings {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-075);
+  align-items: center;
+}
+.webrings__webring {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+}
+
 .welcome {
   grid-area: welcome;
   margin: 0rem;
