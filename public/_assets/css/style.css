@@ -118,8 +118,9 @@ a {
   text-decoration-style: dotted;
 }
 
-a[rel*=external]::after {
-  content: "↗";
+/* add marker for external links */
+a[rel*=external]:not(:has(img))::after {
+  content: " ↗";
 }
 
 a:link {
