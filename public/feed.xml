@@ -4,12 +4,23 @@
     <subtitle>blog and site updates for dustbunnybedroom :3c</subtitle>
     <link href="https://dustbunnybedroom.neocities.org/feed.xml" rel="self" />
     <link href="https://dustbunnybedroom.neocities.org" />
-    <updated>2024-05-15T00:00:00Z</updated>
+    <updated>2024-05-20T00:00:00Z</updated>
     <id>https://dustbunnybedroom.neocities.org/</id>
     <author>
         <name>jp</name>
         <email>dustbunny.bedroom@gmail.com</email>
     </author>
+
+    <entry>
+        <title>added a new /uses page!</title>
+        <link href="https://dustbunnybedroom.neocities.org/uses" />
+        <updated>2024-05-20T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/uses</id>
+        <content type="text">
+            created a new page that lists a bunch of things i use to work and
+            create, both hardware and software!
+        </content>
+    </entry>
 
     <entry>
         <title>new sample pack available! SMI-1460 electronic drum kit voices</title>
