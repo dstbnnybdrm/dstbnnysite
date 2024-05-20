@@ -81,9 +81,9 @@ body {
 a {
     text-decoration-style: dotted;
 
-    img {
-        border: 1px dotted var(--color-primary);
-    }
+    // img {
+    //     border: 1px dotted var(--color-primary);
+    // }
 }
 
 /* add marker for external links */
@@ -105,7 +105,7 @@ a:hover {
     color: var(--color-secondary);
 
     img {
-        border: 1px dotted var(--color-secondary);
+        // border: 1px dotted var(--color-secondary);
 
         filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
             brightness(91%) contrast(87%);
