@@ -64,11 +64,15 @@
 
           <ul class="list">
             <li class="list__item">
+              this site aims to be as accessible as possible (and if it isn't,
+              you can message me about it!)
+            </li>
+            <li class="list__item">
               this site is responsive and can be viewed on desktop and mobile
               devices!
             </li>
             <li class="list__item">
-              this site makes use of both iframes and javascript
+              this site makes use of both javascript and iframes especially
             </li>
             <li class="list__item">
               there won't be any explicit material on this site, however i am an
@@ -76,7 +80,9 @@
             </li>
           </ul>
 
-          <a class="copy l-center" href="/hub.html">enter site?</a>
+          <p class="copy copy_center landing__enter-link">
+            <a href="/hub.html">enter site?</a>
+          </p>
 
           <pre class="ascii-art l-center" role="presentation">
 () ___                        .    _______
@@ -87,22 +93,20 @@
           >
         </header>
 
-        <aside class="landing__webrings card">
+        <aside class="landing__neighbourhood">
           <h2 class="card__title">
-            <a
-              rel="external "
-              href="https://neonaut.neocities.org/cyber/webrings/"
-              target="_blank"
-              >webrings</a
+            neighbourhood
+            <small class="small-print"
+              >(<a href="https://32bit.cafe/interactingontheweb/">?</a>)</small
             >
-            &amp; listings
           </h2>
 
           <!-- ~* webrings! *~ -->
+          <section class="webrings">
+            <h3 class="l-hidden">webrings</h3>
 
-          <!-- RPG Maker -->
-          <div class="l-stack">
-            <div id="RPGMaker">
+            <!-- RPG Maker -->
+            <div class="webrings__webring" id="RPGMaker">
               <script
                 type="text/javascript"
                 src="https://mal.ophanimkei.com/onionring-variables.js"
@@ -114,7 +118,7 @@
             </div>
 
             <!-- null -->
-            <div style="display: flex; flex-direction: row">
+            <div class="webrings__webring">
               <script src="https://nuthead.neocities.org/ring/ring.js"></script>
             </div>
 
@@ -129,43 +133,54 @@
             <!--     src="https://epic1.neocities.org/epicring/newclassic-widget.js" -->
             <!--   ></script> -->
             <!-- </div> -->
-          </div>
+          </section>
+
+          <!-- ~* listings! *~ -->
+          <section class="listings">
+            <h3 class="l-hidden">listings</h3>
+            <div class="micro-bars">
+              <!-- responsive web -->
+              <a href="https://kalechips.net/responsive/"
+                ><img
+                  src="/_assets/img/88x31/site/responsive-web-button.gif"
+                  alt="responsive web directory"
+              /></a>
+
+              <!-- smooth sailing -->
+              <a href="https://smoothsailing.asclaria.org/"
+                ><img
+                  src="/_assets/img/88x31/site/smooth-sailing-button.gif"
+                  alt="smooth sailing listings"
+              /></a>
+
+              <!-- small world -->
+              <a href="https://smallworld.mizuki.world/"
+                ><img
+                  src="/_assets/img/88x31/site/small-world-button.gif"
+                  alt="small world"
+              /></a>
+            </div>
+          </section>
 
           <!-- ~* text cliques! *~ -->
+          <section class="cliques">
+            <h3 class="l-hidden">text cliques</h3>
 
-          <!-- rabbithearted -->
-          <div class="l-stack">
-            <p class="copy">
-              I am
-              <a href="https://sanguineroyal.com/com/rabbithearted"
-                >Rabbit Hearted</a
-              >!
-            </p>
-          </div>
+            <ul class="list list_row">
+              <!-- scented-->
+              <li class="clique list__item list__item_row">
+                <a href="http://aromatic.wings.nu/">aromatic</a> // rosebuds
+              </li>
 
-          <!-- ~* directories/listings! *~ -->
-          <div class="l-stack l-stack_horizontal">
-            <!-- responsive web -->
-            <a href="https://kalechips.net/responsive/"
-              ><img
-                src="/_assets/img/88x31/site/responsive-web-button.gif"
-                alt="responsive web directory"
-            /></a>
-
-            <!-- smooth sailing -->
-            <a href="https://smoothsailing.asclaria.org/"
-              ><img
-                src="/_assets/img/88x31/site/smooth-sailing-button.gif"
-                alt="smooth sailing listings"
-            /></a>
-
-            <!-- small world -->
-            <a href="https://smallworld.mizuki.world/"
-              ><img
-                src="/_assets/img/88x31/site/small-world-button.gif"
-                alt="small world"
-            /></a>
-          </div>
+              <!-- rabbit hearted -->
+              <li class="clique list__item list__item_row">
+                <a href="https://sanguineroyal.com/com/rabbithearted"
+                  >Rabbit Hearted</a
+                >
+                // netherland dwarf
+              </li>
+            </ul>
+          </section>
         </aside>
       </main>
     </div>

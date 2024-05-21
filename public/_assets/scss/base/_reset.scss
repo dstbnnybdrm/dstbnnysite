@@ -80,10 +80,17 @@ body {
 
 a {
     text-decoration-style: dotted;
+
+    // img {
+    //     border: 1px dotted var(--color-primary);
+    // }
 }
 
-a[rel*="external"]::after {
-    content: "↗";
+/* add marker for external links */
+a[rel*="external"] {
+    &:not(:has(img))::after {
+        content: " ↗";
+    }
 }
 
 a:link {
@@ -96,6 +103,13 @@ a:visited {
 
 a:hover {
     color: var(--color-secondary);
+
+    img {
+        // border: 1px dotted var(--color-secondary);
+
+        filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
+            brightness(91%) contrast(87%);
+    }
 }
 
 /* - selection - */

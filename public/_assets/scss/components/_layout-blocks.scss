@@ -35,8 +35,8 @@
     justify-items: center;
     row-gap: var(--spacing-100);
 
-    &_horizontal {
-        // @include for-frame-size(large) {
+    &_row {
+        // @include for-viewport-size(desktop) {
         flex-direction: row;
         column-gap: var(--spacing-100);
         // }
