@@ -36,13 +36,11 @@ svg {
     max-width: 100%;
 
     // (try) to disable anti-alias (for pixel art and etc., we WANT the
-    // jaggedness lol)
-    image-rendering: optimizeSpeed; // stop smoothing for speed
+    // pixel jaggedness lol)
+    image-rendering: pixelated; // Universal support since 2021
     image-rendering: -moz-crisp-edges; //           for Firefox
     image-rendering: -o-crisp-edges; //             for Opera
     image-rendering: -webkit-optimize-contrast; //  for Chrome
-    image-rendering: pixelated; // Universal support since 2021
-    image-rendering: optimize-contrast; // CSS3 Proposed
 }
 
 /* remove form typography styles */
