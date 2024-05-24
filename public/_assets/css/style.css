@@ -1059,24 +1059,14 @@ summary {
   display: inline;
 }
 
-.micro-bars {
+.web-graphics {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--spacing-075);
 }
-.micro-bars_no-wrap {
+.web-graphics_no-wrap {
   flex-wrap: nowrap;
-}
-.micro-bars__button {
-  display: inline-block;
-  flex-shrink: 0;
-  align-self: center;
-  width: 88px;
-  height: 31px;
-}
-.micro-bars__decorative {
-  display: inline-block;
 }
 
 .micro-bar {
@@ -1085,6 +1075,14 @@ summary {
   align-self: center;
   width: 88px;
   height: 31px;
+}
+
+.antipixel {
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: center;
+  width: 88px;
+  height: 15px;
 }
 
 .breadcrumb {
