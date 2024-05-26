@@ -677,6 +677,9 @@ summary {
   border-top: 1px dotted var(--color-base);
   padding-top: var(--spacing-075);
 }
+.site-log__entry:nth-child(n+20) {
+  display: none;
+}
 .site-log__date {
   color: var(--color-base);
   font-style: italic;
@@ -933,6 +936,9 @@ summary {
   flex-direction: column;
   row-gap: 1em;
   margin-top: var(--spacing-125);
+}
+.section__body .copy {
+  margin-bottom: 1em;
 }
 .section_subsection {
   margin-top: var(--spacing-075);
@@ -1233,6 +1239,22 @@ summary {
 .update-log {
   grid-area: update;
   margin: 0rem;
+}
+
+.web-guardian {
+  display: flex;
+  float: right;
+  gap: 0.5rem;
+  flex-direction: column;
+  margin: 1rem;
+  width: 200px;
+  border: 1px solid;
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  font-family: times;
+  font-size: 15pt;
 }
 
 @media screen and (min-width: 801px) {
