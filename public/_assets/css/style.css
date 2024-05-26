@@ -871,6 +871,18 @@ summary {
   column-gap: var(--spacing-100);
 }
 
+.l-float {
+  display: block;
+}
+.l-float_left {
+  float: left;
+  margin-right: var(--spacing-100);
+}
+.l-float_right {
+  float: right;
+  margin-left: var(--spacing-100);
+}
+
 .l-center {
   display: flex;
   justify-content: center;
@@ -939,6 +951,10 @@ summary {
 }
 .section__body .copy {
   margin-bottom: 1em;
+}
+.section__card {
+  border: 1px dotted var(--color-base);
+  padding: var(--spacing-100);
 }
 .section_subsection {
   margin-top: var(--spacing-075);
@@ -1067,12 +1083,23 @@ summary {
 
 .web-graphics {
   display: flex;
+  list-style: none;
+}
+.web-graphics_wall {
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-075);
 }
-.web-graphics_no-wrap {
+.web-graphics_row {
+  flex-direction: row;
   flex-wrap: nowrap;
+  gap: var(--spacing-025);
+}
+.web-graphics_column {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: var(--spacing-025);
 }
 
 .micro-bar {
@@ -1088,6 +1115,14 @@ summary {
   flex-shrink: 0;
   align-self: center;
   width: 88px;
+  height: 15px;
+}
+
+.id-button {
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: center;
+  width: 86px;
   height: 15px;
 }
 

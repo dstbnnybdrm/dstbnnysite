@@ -1,13 +1,26 @@
-// wrapper for a wall/collection of graphics
+// wrapper for a collection of graphics
 .web-graphics {
     display: flex;
 
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--spacing-075);
+    list-style: none;
 
-    &_no-wrap {
+    &_wall {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-075);
+    }
+
+    &_row {
+        flex-direction: row;
         flex-wrap: nowrap;
+        gap: var(--spacing-025);
+    }
+
+    &_column {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: var(--spacing-025);
     }
 
     // &__button {
@@ -25,6 +38,7 @@
     // }
 }
 
+// i.e. 88x31 button
 .micro-bar {
     display: inline-block;
 
@@ -35,6 +49,7 @@
     height: 31px;
 }
 
+// i.e. 80x15 button
 .antipixel {
     display: inline-block;
 
@@ -42,5 +57,16 @@
     align-self: center;
 
     width: 88px;
+    height: 15px;
+}
+
+// taken from: https://www1.flightrising.com/forums/cc/3078623
+.id-button {
+    display: inline-block;
+
+    flex-shrink: 0;
+    align-self: center;
+
+    width: 86px;
     height: 15px;
 }
