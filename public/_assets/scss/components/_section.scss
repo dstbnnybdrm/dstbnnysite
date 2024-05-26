@@ -8,6 +8,12 @@
 
     margin-top: var(--spacing-125);
 
+    &__body {
+        .copy {
+            margin-bottom: 1em;
+        }
+    }
+
     &_subsection {
         margin-top: var(--spacing-075);
         margin-left: var(--spacing-075);

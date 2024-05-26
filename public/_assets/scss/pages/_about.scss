@@ -1,0 +1,25 @@
+.web-guardian {
+    display: flex;
+
+    float: right;
+
+    gap: 0.5rem;
+    flex-direction: column;
+
+    margin: 1rem;
+
+    width: 200px;
+
+    border: 1px solid;
+
+    background-color: #fff;
+
+    padding: 10px;
+
+    text-align: center;
+
+    color: #000;
+
+    font-family: times;
+    font-size: 15pt;
+}
