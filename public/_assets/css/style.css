@@ -677,6 +677,9 @@ summary {
   border-top: 1px dotted var(--color-base);
   padding-top: var(--spacing-075);
 }
+.site-log__entry:nth-child(n+20) {
+  display: none;
+}
 .site-log__date {
   color: var(--color-base);
   font-style: italic;
