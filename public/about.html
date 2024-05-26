@@ -40,78 +40,70 @@
 
     <h1 class="title">about</h1>
 
-    <p class="copy">more about me and this website!</p>
+    <p class="copy">
+      more about <a href="#webmaster" target="_self">me</a> and
+      <a href="#website" target="_self">this website</a>!
+    </p>
 
     <section class="section">
-      <h2 class="heading">the webmaster</h2>
+      <h2 class="heading" id="webmaster">the webmaster</h2>
 
-      <div>
-        <div
-          class="l-stack"
-          style="border: 1px solid black; padding: 1rem; float: right"
-        >
-          <pre class="ascii-art">
-(\ (\
-(„• ֊ •„) ♡
-━O━O━━━━━</pre
-          >
+      <div class="section__body">
+        <p class="copy">hi, you can call me jp!</p>
 
-          <!--       <ul class="list list_row"> -->
-          <!--         <li class="list__item list__item_row">20+</li> -->
-          <!--         <li class="list__item list__item_row">Filipino Canadian</li> -->
-          <!--         <li class="list__item list__item_row">ADHD-haver</li> -->
-          <!--         <li class="list__item list__item_row">they/them</li> -->
-          <!--       </ul> -->
+        <article class="l-float l-float_left card section__card">
+          <h3 class="l-hidden">profile</h3>
 
-          <ul>
-            <li>
+          <pre class="ascii-art" role="presentation">૮₍ ´ ꒳ `₎ა</pre>
+
+          <ul class="web-graphics web-graphics_column">
+            <li class="id-button">
               <img
                 src="_assets/img/web-id-buttons/id-twenties.png"
                 alt="twenties"
               />
             </li>
-            <li>
+            <li class="id-button">
               <img
                 src="_assets/img/web-id-buttons/id-filipino.png"
                 alt="filipino"
               />
             </li>
-            <li>
+            <li class="id-button">
               <img
                 src="_assets/img/web-id-buttons/id-canadian.png"
                 alt="canadian"
               />
             </li>
-            <li>
+            <li class="id-button">
               <img src="_assets/img/web-id-buttons/id-adhd.png" alt="ADHD" />
             </li>
-            <li>
+            <li class="id-button">
               <img
                 src="_assets/img/web-id-buttons/id-they-them.png"
                 alt="they/them pronouns"
               />
             </li>
-            <li>
+            <li class="id-button">
               <img
                 src="_assets/img/web-id-buttons/id-musician.png"
                 alt="musician"
               />
             </li>
-            <li>
+            <li class="id-button">
               <img
                 src="_assets/img/web-id-buttons/id-artist.png"
                 alt="artist"
               />
             </li>
-            <li>
+            <li class="id-button">
               <img
                 src="_assets/img/web-id-buttons/id-game-dev.png"
                 alt="game developer"
               />
             </li>
           </ul>
-        </div>
-        <p class="copy">hi, you can call me jp!</p>
+        </article>
 
         <p class="copy">
           i'm a chronically online rabbit, self-taught multi-genre musician and
@@ -130,16 +122,18 @@
           <span class="ascii-art ascii-art_inline">;)</span> i hope you enjoy
           your stay!
         </p>
-      </div>
 
-      <p class="copy">
-        you can head over to my
-        <a href="/now.html" target="_self">/now</a> page to see generally what
-        i've been up to! or, if you're interested in what i use to work and
-        create and check the
-        <a href="/uses.html" target="_self">/uses</a>
-        page!
-      </p>
+        <nav>
+          <p class="copy">
+            you can head over to my
+            <a href="/now.html" target="_self">/now</a> page to see generally
+            what i've been up to! or, if you're interested in what i use to work
+            and create and check the
+            <a href="/uses.html" target="_self">/uses</a>
+            page!
+          </p>
+        </nav>
+      </div>
 
       <p class="copy">online you can find me here:</p>
 
@@ -197,10 +191,10 @@
     </section>
 
     <section class="section">
-      <h2 class="heading">the website</h2>
+      <h2 class="heading" id="website">the website</h2>
 
       <div class="section__body">
-        <article class="web-guardian" style="" aria-hidden="true">
+        <article class="web-guardian" aria-hidden="true">
           <p>This page is protected by a</p>
           <span style="font-weight: bold">BUTTERFLY</span>
           <img

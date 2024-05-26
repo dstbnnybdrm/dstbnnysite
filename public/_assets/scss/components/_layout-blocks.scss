@@ -43,6 +43,20 @@
     }
 }
 
+.l-float {
+    display: block;
+
+    &_left {
+        float: left;
+        margin-right: var(--spacing-100);
+    }
+
+    &_right {
+        float: right;
+        margin-left: var(--spacing-100);
+    }
+}
+
 .l-center {
     display: flex;
 
