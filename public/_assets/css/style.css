@@ -75,12 +75,10 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-  image-rendering: optimizeSpeed;
+  image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: pixelated;
-  image-rendering: optimize-contrast;
 }
 
 /* remove form typography styles */
@@ -679,6 +677,9 @@ summary {
   border-top: 1px dotted var(--color-base);
   padding-top: var(--spacing-075);
 }
+.site-log__entry:nth-child(n+20) {
+  display: none;
+}
 .site-log__date {
   color: var(--color-base);
   font-style: italic;
@@ -870,6 +871,18 @@ summary {
   column-gap: var(--spacing-100);
 }
 
+.l-float {
+  display: block;
+}
+.l-float_left {
+  float: left;
+  margin-right: var(--spacing-100);
+}
+.l-float_right {
+  float: right;
+  margin-left: var(--spacing-100);
+}
+
 .l-center {
   display: flex;
   justify-content: center;
@@ -890,8 +903,7 @@ summary {
   border: 0;
   padding: 0;
   overflow: hidden;
-  clip-path: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
+  clip-path: circle(0);
 }
 
 .card {
@@ -936,6 +948,13 @@ summary {
   flex-direction: column;
   row-gap: 1em;
   margin-top: var(--spacing-125);
+}
+.section__body .copy {
+  margin-bottom: 1em;
+}
+.section__card {
+  border: 1px dotted var(--color-base);
+  padding: var(--spacing-100);
 }
 .section_subsection {
   margin-top: var(--spacing-075);
@@ -1062,24 +1081,25 @@ summary {
   display: inline;
 }
 
-.micro-bars {
+.web-graphics {
   display: flex;
+  list-style: none;
+}
+.web-graphics_wall {
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-075);
 }
-.micro-bars_no-wrap {
+.web-graphics_row {
+  flex-direction: row;
   flex-wrap: nowrap;
+  gap: var(--spacing-025);
 }
-.micro-bars__button {
-  display: inline-block;
-  flex-shrink: 0;
-  align-self: center;
-  width: 88px;
-  height: 31px;
-}
-.micro-bars__decorative {
-  display: inline-block;
+.web-graphics_column {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: var(--spacing-025);
 }
 
 .micro-bar {
@@ -1088,6 +1108,22 @@ summary {
   align-self: center;
   width: 88px;
   height: 31px;
+}
+
+.antipixel {
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: center;
+  width: 88px;
+  height: 15px;
+}
+
+.id-button {
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: center;
+  width: 86px;
+  height: 15px;
 }
 
 .breadcrumb {
@@ -1238,6 +1274,22 @@ summary {
 .update-log {
   grid-area: update;
   margin: 0rem;
+}
+
+.web-guardian {
+  display: flex;
+  float: right;
+  gap: 0.5rem;
+  flex-direction: column;
+  margin: 1rem;
+  width: 200px;
+  border: 1px solid;
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  font-family: times;
+  font-size: 15pt;
 }
 
 @media screen and (min-width: 801px) {

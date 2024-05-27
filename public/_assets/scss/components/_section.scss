@@ -8,6 +8,18 @@
 
     margin-top: var(--spacing-125);
 
+    &__body {
+        .copy {
+            margin-bottom: 1em;
+        }
+    }
+
+    &__card {
+        // margin: 1rem;
+        border: 1px dotted var(--color-base);
+        padding: var(--spacing-100);
+    }
+
     &_subsection {
         margin-top: var(--spacing-075);
         margin-left: var(--spacing-075);
