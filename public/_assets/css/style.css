@@ -1080,7 +1080,6 @@ summary {
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
-  user-select: none;
 }
 .ascii-art_inline {
   display: inline;
