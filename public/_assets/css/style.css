@@ -219,8 +219,8 @@ summary {
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
-  font-size: var(--font-size-small);
-  line-height: var(--line-height-small);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 .small-print i,
 .small-print em,
@@ -274,6 +274,7 @@ summary {
 }
 .list_row {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 .list__item {
@@ -282,6 +283,7 @@ summary {
 .list__item_row {
   display: inline-block;
   margin-left: 0rem;
+  white-space: nowrap;
 }
 .list__item_row:not(:last-child)::after {
   margin: 0 var(--spacing-050);
