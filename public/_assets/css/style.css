@@ -368,7 +368,7 @@ summary {
 @media screen and (min-width: 801px) {
   .page {
     grid-template-areas: "header           header      header" "major-sidebar    main        minor-sidebar" "major-sidebar    marquee     marquee" "footer           footer      footer";
-    grid-template-rows: min-content 1fr min-content var(--spacing-200);
+    grid-template-rows: min-content 1fr min-content min-content;
     grid-template-columns: min-content minmax(0, var(--measure-max)) min-content;
     gap: var(--spacing-100);
     height: 100vh;
@@ -804,8 +804,16 @@ summary {
   }
 }
 
+#footer {
+  display: contents;
+}
+
 .footer {
+  display: flex;
+  flex-direction: column;
   grid-area: footer;
+  gap: var(--spacing-025);
+  padding-bottom: var(--spacing-100);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
@@ -825,11 +833,6 @@ summary {
 .footer__item:not(:last-child)::after {
   margin: 0 var(--spacing-075);
   content: "|";
-}
-@media screen and (max-width: 800px) {
-  .footer {
-    padding-bottom: var(--spacing-050);
-  }
 }
 
 /*:._.:*~ COMPONENTS ~*:._.:*/

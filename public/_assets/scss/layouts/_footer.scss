@@ -1,8 +1,18 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
+#footer {
+    display: contents;
+}
+
 .footer {
+    display: flex;
+
+    flex-direction: column;
     grid-area: footer;
+    gap: var(--spacing-025);
+
+    padding-bottom: var(--spacing-100);
 
     @include text-style(sans);
     font-family: var(--font-family-base);
@@ -28,7 +38,6 @@
         }
     }
 
-    @include for-viewport-size(phone) {
-        padding-bottom: var(--spacing-050);
-    }
+    // @include for-viewport-size(phone) {
+    // }
 }
