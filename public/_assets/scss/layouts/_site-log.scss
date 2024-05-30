@@ -16,6 +16,10 @@
             border-top: 1px dotted var(--color-base);
             padding-top: var(--spacing-075);
         }
+
+        &:nth-child(n + 20) {
+            display: none;
+        }
     }
 
     &__date {

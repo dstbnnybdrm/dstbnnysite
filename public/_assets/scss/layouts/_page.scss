@@ -63,7 +63,7 @@
             min-content
             1fr
             min-content
-            var(--spacing-200);
+            min-content;
         grid-template-columns:
             min-content
             minmax(0, var(--measure-max))

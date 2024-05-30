@@ -40,7 +40,7 @@
 @use "components/table";
 @use "components/figure";
 @use "components/ascii-art";
-@use "components/micro-bar";
+@use "components/web-graphics";
 @use "components/breadcrumb";
 @use "components/text-area";
 @use "components/dropdown";
@@ -48,6 +48,7 @@
 /*:._.:*~ PAGES ~*:._.:*/
 @use "pages/landing";
 @use "pages/home";
+@use "pages/about";
 @use "pages/blog";
 @use "pages/blog-post";
 @use "pages/rpg-maker";

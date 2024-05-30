@@ -5,11 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- primary tags -->
+    <!-- meta tags -->
     <title>dstbnnybdrm</title>
-    <meta name="description" content="proof of my existence &lt;3." />
     <meta name="author" content="jp" />
     <base target="_self" />
+
+    <!-- open graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="dustbunnybedroom" />
+    <meta property="og:title" content="dstbnnybdrm" />
+    <meta property="og:description" content="" />
+    <meta
+      property="og:url"
+      content="https://dustbunnybedroom.neocities.org/hub"
+    />
 
     <!-- favicon -->
     <link rel="icon" href="/_assets/img/favicon/favicon.ico" sizes="32x32" />
@@ -41,11 +50,13 @@
       <div class="sidebar sidebar_major page__sidebar">
         <!-- ~* NAVIGATION *~ -->
         <nav class="navi sidebar__section">
-          <h1 class="heading l-hidden">site navigation</h1>
+          <h1>
+            <a class="navi__link" href="/home.html" target="mainframe"
+              ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
+            >
+          </h1>
 
-          <a class="navi__link" href="/home.html" target="mainframe"
-            ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
-          >
+          <h2 class="heading l-hidden">site navigation</h2>
 
           <button
             class="button navi__button"
@@ -66,18 +77,13 @@
                   >
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="/now.html" target="mainframe"
-                    >now</a
+                  <a class="menu__link" href="/work/" target="mainframe"
+                    >work</a
                   >
                 </li>
                 <li class="menu__item">
                   <a class="menu__link" href="/blog.html" target="_self"
                     >blog</a
-                  >
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/work/" target="mainframe"
-                    >work</a
                   >
                 </li>
                 <li class="menu__item">
@@ -142,11 +148,13 @@
               />
 
               <p class="copy copy_center">
-                <a
-                  rel="external"
-                  href="https://wawan.bandcamp.com/album/l-o-s-t"
-                  target="_blank"
-                  >WAWAN - <cite class="cite">L O S T !</cite></a
+                <cite
+                  ><a
+                    rel="external"
+                    href="https://wawan.bandcamp.com/album/l-o-s-t"
+                    target="_blank"
+                    >WAWAN - L O S T !</a
+                  ></cite
                 >
               </p>
             </div>
@@ -159,19 +167,30 @@
 
           <div class="l-scrollbar-container">
             <div class="card__body">
-              <a href="https://ko-fi.com/dstbnnybdrm"
-                ><img src="/_assets/img/88x31/site/kofi-button.gif" alt="Ko-fi"
+              <a rel="external" href="https://ko-fi.com/dstbnnybdrm"
+                ><img
+                  src="/_assets/img/web-micro-bars/site/kofi-button.gif"
+                  alt="Ko-fi"
               /></a>
 
-              <a href="https://dustbunnybedroom.bandcamp.com/"
+              <a rel="external" href="https://dustbunnybedroom.bandcamp.com/"
                 ><img
-                  src="/_assets/img/88x31/site/bandcamp-button.jpg"
+                  src="/_assets/img/web-micro-bars/site/bandcamp-button.gif"
                   alt="Bandcamp"
               /></a>
             </div>
           </div>
         </aside>
       </div>
+
+      <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
+      <main id="main" class="main">
+        <iframe
+          class="main__frame"
+          name="mainframe"
+          title="main content"
+        ></iframe>
+      </main>
 
       <!-- ~*:._.:*~  MINOR SIDEBAR  ~*:._.:*~ -->
       <div class="sidebar sidebar_minor page__sidebar">
@@ -187,13 +206,22 @@
 
             <footer class="card__footer">
               <div class="l-center micro-bars">
-                <a href="https://status.cafe" target="_blank">
-                  <img
-                    class="micro-bars__button"
-                    src="_assets/img/88x31/site/status-cafe-button.gif"
-                    alt="Status Cafe"
-                  />
-                </a>
+                <!-- <a rel="external" href="https://status.cafe" target="_blank"> -->
+                <!-- <img -->
+                <!--   class="micro-bar" -->
+                <!--   src="_assets/img/web-micro-bars/site/status-cafe-button.gif" -->
+                <!--   alt="Status Cafe" -->
+                <!-- /> -->
+                <!-- </a> -->
+                <a
+                  rel="external"
+                  href="https://status.cafe/users/dstbnnyjp"
+                  target="_blank"
+                  ><img
+                    class="antipixel"
+                    src="https://status.cafe/users/dstbnnyjp/badge.png"
+                    alt="Status Cafe Profile"
+                /></a>
               </div>
             </footer>
           </div>
@@ -206,15 +234,6 @@
           </div>
         </aside>
       </div>
-
-      <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
-      <main id="main" class="main">
-        <iframe
-          class="main__frame"
-          name="mainframe"
-          title="main content"
-        ></iframe>
-      </main>
 
       <!-- ~*:._.:*~  BUTTONS MARQUEE  ~*:._.:*~ -->
       <aside class="marquee">

@@ -35,11 +35,25 @@
     justify-items: center;
     row-gap: var(--spacing-100);
 
-    &_horizontal {
-        // @include for-frame-size(large) {
+    &_row {
+        // @include for-viewport-size(desktop) {
         flex-direction: row;
         column-gap: var(--spacing-100);
         // }
+    }
+}
+
+.l-float {
+    display: block;
+
+    &_left {
+        float: left;
+        margin-right: var(--spacing-100);
+    }
+
+    &_right {
+        float: right;
+        margin-left: var(--spacing-100);
     }
 }
 
@@ -68,6 +82,6 @@
 
     overflow: hidden;
 
-    clip-path: rect(0 0 0 0);
-    clip: rect(0 0 0 0);
+    clip-path: circle(0);
+    // clip: rect(0 0 0 0); // deprecated
 }
