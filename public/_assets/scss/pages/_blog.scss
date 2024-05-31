@@ -1,32 +1,12 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
-.page {
-    @include for-viewport-size(desktop) {
-        &_blog {
-            grid-template-areas:
-                "header     ."
-                "navi       main"
-                "footer     footer";
-            grid-template-rows:
-                min-content
-                1fr
-                var(--spacing-200);
-            grid-template-columns:
-                min-content
-                minmax(0rem, var(--measure-max));
-        }
+.blog {
+    display: inline-grid;
 
-        &__main {
-            &_blog {
-                border: none;
-            }
-        }
-    }
-}
+    gap: var(--spacing-100);
 
-.header {
-    &_blog {
+    &__header {
         align-self: end;
         justify-self: center;
 
@@ -36,131 +16,40 @@
         border: none;
         padding: 0;
     }
-}
 
-.navi {
-    &_blog {
+    &__navi {
         display: flex;
 
         flex-direction: column;
         gap: var(--spacing-100);
+    }
 
-        @include for-viewport-size(phone) {
+    @include for-viewport-size(phone) {
+        &__navi {
             border-top: 1px solid var(--color-base);
             padding-top: var(--spacing-100);
         }
     }
+
+    @include for-viewport-size(desktop) {
+        grid-template-areas:
+            "header     ."
+            "navi       main"
+            "footer     footer";
+        grid-template-rows:
+            min-content
+            1fr
+            min-content;
+        grid-template-columns:
+            min-content
+            minmax(0rem, var(--measure-max));
+    }
 }
 
-// .blog-navi {
-//     display: flex;
-
-//     grid-area: navi;
-
-//     flex-direction: column;
-//     row-gap: var(--spacing-100);
-
-//     @include text-style(sans);
-//     @include text-size(base);
-
-//     &__title {
-//         letter-spacing: var(--letter-spacing-120);
-
-//         @include text-style(sans, normal, bold);
-//         @include text-size(large);
-//     }
-
-//     @include for-viewport-size(phone) {
-//         &__button {
-//             display: block;
-
-//             border: none;
-//             background-color: var(--color-primary);
-//             padding: var(--spacing-075);
-
-//             color: var(--color-background);
-//             font-size: var(--font-size-small);
-
-//             @include button-on-hover();
-//         }
-
-//         &__menu {
-//             display: none;
-
-//             flex-direction: column;
-//             gap: var(--spacing-100);
-
-//             border: 1px dotted var(--color-base);
-//             border-top: none;
-//             padding: 0 var(--spacing-100) var(--spacing-100) var(--spacing-100);
-
-//             &:not(:last-child) {
-//                 border-bottom: none;
-//             }
-//         }
-
-//         .is-visible {
-//             display: flex;
-//         }
-
-//         &__heading {
-//             display: none;
-//         }
-
-//         &__list {
-//             display: flex;
-
-//             flex-direction: column;
-//             gap: var(--spacing-075);
-//         }
-
-//         &__item {
-//             display: contents;
-//         }
-
-//         &__link {
-//             border: 1px dotted var(--color-primary);
-//             padding: var(--spacing-100);
-
-//             @include button-on-hover();
-//         }
-//     }
-
-//     @include for-viewport-size(desktop) {
-//         // &__body {
-//         // }
-
-//         &__heading {
-//             display: inline;
-
-//             letter-spacing: var(--letter-spacing-120);
-
-//             @include text-style(serif, italic);
-//             @include text-size(large);
-//         }
-
-//         &__button {
-//             display: none;
-//         }
-
-//         &__menu {
-//             display: contents;
-//         }
-
-//         &__list {
-//             @include list-margin();
-
-//             text-overflow: ellipsis;
-
-//             @include list-style(navi);
-
-//             @include text-style(sans);
-//         }
-
-//         &__item {
-//         }
-
-//         &__link {
-//         }
-//     }
-// }
+.page {
+    @include for-viewport-size(desktop) {
+        &__main_blog {
+            border: none;
+        }
+    }
+}
