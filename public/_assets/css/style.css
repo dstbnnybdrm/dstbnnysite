@@ -374,7 +374,7 @@ summary {
     grid-template-columns: min-content minmax(0, var(--measure-max)) min-content;
     gap: var(--spacing-100);
     height: 100vh;
-    padding: var(--spacing-200) var(--spacing-200) 0 var(--spacing-200);
+    padding: var(--spacing-100) var(--spacing-200);
   }
 }
 
@@ -815,7 +815,6 @@ summary {
   flex-direction: column;
   grid-area: footer;
   gap: var(--spacing-025);
-  padding-bottom: var(--spacing-100);
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
@@ -1299,7 +1298,7 @@ summary {
 @media screen and (min-width: 801px) {
   .page_blog {
     grid-template-areas: "header     ." "navi       main" "footer     footer";
-    grid-template-rows: min-content 1fr var(--spacing-200);
+    grid-template-rows: min-content 1fr min-content;
     grid-template-columns: min-content minmax(0rem, var(--measure-max));
   }
   .page__main_blog {
@@ -1686,7 +1685,7 @@ summary {
     align-self: self-start;
     grid-template-areas: "navi" "main" "footer";
     grid-template-columns: minmax(0, var(--measure-max));
-    grid-template-rows: auto 1fr 2rem;
+    grid-template-rows: auto 1fr min-content;
     gap: 0;
   }
 }

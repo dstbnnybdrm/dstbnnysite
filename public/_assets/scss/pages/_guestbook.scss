@@ -15,12 +15,11 @@
                 "main"
                 "footer";
             grid-template-columns: minmax(0, var(--measure-max));
-            grid-template-rows: auto 1fr 2rem;
+            grid-template-rows:
+                auto
+                1fr
+                min-content;
             gap: 0;
-
-            // width: 100vw;
-            // max-width: min-content;
-            // max-width: calc(var(--measure-max) * 2);
         }
     }
 }

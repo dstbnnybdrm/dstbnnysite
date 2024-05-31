@@ -11,7 +11,7 @@
             grid-template-rows:
                 min-content
                 1fr
-                var(--spacing-200);
+                min-content;
             grid-template-columns:
                 min-content
                 minmax(0rem, var(--measure-max));

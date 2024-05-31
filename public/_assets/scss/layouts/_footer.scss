@@ -12,7 +12,7 @@
     grid-area: footer;
     gap: var(--spacing-025);
 
-    padding-bottom: var(--spacing-100);
+    // padding-bottom: var(--spacing-100);
 
     @include text-style(sans);
     font-family: var(--font-family-base);
