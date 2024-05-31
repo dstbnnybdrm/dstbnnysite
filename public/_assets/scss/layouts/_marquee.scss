@@ -14,6 +14,10 @@
     overflow: hidden;
     // user-select: none;
 
+    &:hover {
+        animation-play-state: paused;
+    }
+
     &__body {
         display: flex;
 
@@ -23,7 +27,12 @@
 
         min-width: 100%;
 
-        // animation: scroll 10s linear infinite;
+        @media (prefers-reduced-motion: no-preference) {
+            animation: scroll 50s linear infinite;
+        }
+
+        animation-play-state: inherit;
+        // background-color: inherit;
     }
 }
 
@@ -34,9 +43,4 @@
     to {
         transform: translateX(calc(-100% - var(--gap)));
     }
-}
-
-.enable-animation {
-    // background-color: blue;
-    animation: scroll 10s linear infinite;
 }

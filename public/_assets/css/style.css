@@ -780,12 +780,21 @@ summary {
   position: relative;
   overflow: hidden;
 }
+.marquee:hover {
+  animation-play-state: paused;
+}
 .marquee__body {
   display: flex;
   flex-shrink: 0;
   justify-content: space-around;
   gap: var(--gap);
   min-width: 100%;
+  animation-play-state: inherit;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .marquee__body {
+    animation: scroll 50s linear infinite;
+  }
 }
 
 @keyframes scroll {
@@ -796,10 +805,6 @@ summary {
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
-.enable-animation {
-  animation: scroll 10s linear infinite;
-}
-
 #footer {
   display: contents;
 }
