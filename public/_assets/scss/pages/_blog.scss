@@ -1,32 +1,12 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
-.page {
-    @include for-viewport-size(desktop) {
-        &_blog {
-            grid-template-areas:
-                "header     ."
-                "navi       main"
-                "footer     footer";
-            grid-template-rows:
-                min-content
-                1fr
-                min-content;
-            grid-template-columns:
-                min-content
-                minmax(0rem, var(--measure-max));
-        }
+.blog {
+    display: inline-grid;
 
-        &__main {
-            &_blog {
-                border: none;
-            }
-        }
-    }
-}
+    gap: var(--spacing-100);
 
-.header {
-    &_blog {
+    &__header {
         align-self: end;
         justify-self: center;
 
@@ -36,18 +16,40 @@
         border: none;
         padding: 0;
     }
-}
 
-.navi {
-    &_blog {
+    &__navi {
         display: flex;
 
         flex-direction: column;
         gap: var(--spacing-100);
+    }
 
-        @include for-viewport-size(phone) {
+    @include for-viewport-size(phone) {
+        &__navi {
             border-top: 1px solid var(--color-base);
             padding-top: var(--spacing-100);
+        }
+    }
+
+    @include for-viewport-size(desktop) {
+        grid-template-areas:
+            "header     ."
+            "navi       main"
+            "footer     footer";
+        grid-template-rows:
+            min-content
+            1fr
+            min-content;
+        grid-template-columns:
+            min-content
+            minmax(0rem, var(--measure-max));
+    }
+}
+
+.page {
+    @include for-viewport-size(desktop) {
+        &__main_blog {
+            border: none;
         }
     }
 }

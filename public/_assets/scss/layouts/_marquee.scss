@@ -3,15 +3,4 @@
 
 .marquee {
     grid-area: marquee;
-
-    padding: var(--spacing-075) var(--spacing-100);
-
-    @include for-viewport-size(phone) {
-        border-top: 1px dashed var(--color-base);
-        padding: var(--spacing-100) 0;
-    }
-
-    @include for-viewport-size(desktop) {
-        @include layout-border();
-    }
 }

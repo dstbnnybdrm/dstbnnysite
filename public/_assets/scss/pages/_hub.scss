@@ -1,0 +1,61 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.hub {
+    display: inline-grid;
+
+    @include for-viewport-size(phone) {
+        grid-template-areas:
+            "header         header"
+            "navi           navi"
+            "theme-toggle   theme-toggle"
+            "main           main"
+            "support        directories"
+            "status         status"
+            "site-log       site-log"
+            "marquee        marquee"
+            "footer         footer";
+        grid-template-rows: repeat(8, auto) min-content;
+        row-gap: var(--spacing-100);
+    }
+
+    @include for-viewport-size(desktop) {
+        grid-template-areas:
+            "header           header      header"
+            "major-sidebar    main        minor-sidebar"
+            "major-sidebar    marquee     marquee"
+            "footer           footer      footer";
+        grid-template-rows:
+            min-content
+            1fr
+            min-content
+            min-content;
+        grid-template-columns:
+            min-content
+            minmax(0, var(--measure-max))
+            min-content;
+        gap: var(--spacing-100);
+    }
+
+    &__header {
+        @include layout-border;
+        padding: var(--spacing-075) var(--spacing-100);
+
+        @include for-viewport-size(phone) {
+            border: none;
+        }
+    }
+
+    &__marquee {
+        padding: var(--spacing-075) var(--spacing-100);
+
+        @include for-viewport-size(phone) {
+            border-top: 1px dashed var(--color-base);
+            padding: var(--spacing-100) 0;
+        }
+
+        @include for-viewport-size(desktop) {
+            @include layout-border();
+        }
+    }
+}
