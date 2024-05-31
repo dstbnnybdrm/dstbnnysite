@@ -2,5 +2,41 @@
 @use "../abstracts/breakpoints" as *;
 
 .marquee {
-    grid-area: marquee;
+    --gap: 1rem;
+
+    display: flex;
+
+    gap: var(--gap);
+
+    position: relative;
+    // max-width: fit-content;
+
+    overflow: hidden;
+    // user-select: none;
+
+    &__body {
+        display: flex;
+
+        flex-shrink: 0;
+        justify-content: space-around;
+        gap: var(--gap);
+
+        min-width: 100%;
+
+        // animation: scroll 10s linear infinite;
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+.enable-animation {
+    // background-color: blue;
+    animation: scroll 10s linear infinite;
 }

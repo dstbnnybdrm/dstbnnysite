@@ -33,7 +33,7 @@
         grid-template-columns:
             min-content
             minmax(0, var(--measure-max))
-            min-content;
+            10rem;
         gap: var(--spacing-100);
     }
 
@@ -47,6 +47,8 @@
     }
 
     &__marquee {
+        grid-area: marquee;
+
         padding: var(--spacing-075) var(--spacing-100);
 
         @include for-viewport-size(phone) {
