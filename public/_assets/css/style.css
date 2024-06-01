@@ -358,6 +358,7 @@ summary {
 @media screen and (max-width: 800px) {
   .page {
     max-width: var(--measure-max);
+    height: 100vh;
     padding: var(--spacing-200);
   }
 }
@@ -833,6 +834,11 @@ summary {
 .footer__item:not(:last-child)::after {
   margin: 0 var(--spacing-075);
   content: "|";
+}
+@media screen and (max-width: 800px) {
+  .footer {
+    padding-bottom: var(--spacing-200);
+  }
 }
 
 /*:._.:*~ COMPONENTS ~*:._.:*/

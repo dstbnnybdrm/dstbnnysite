@@ -15,6 +15,7 @@
 
     @include for-viewport-size(phone) {
         max-width: var(--measure-max);
+        height: 100vh;
 
         padding: var(--spacing-200);
     }
