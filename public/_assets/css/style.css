@@ -1209,12 +1209,11 @@ summary {
 
 /*:._.:*~ PAGES ~*:._.:*/
 .landing {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-rows: auto;
   row-gap: var(--spacing-125);
-  justify-content: center;
+  align-items: center;
   max-width: var(--measure-max);
-  height: auto;
 }
 .landing__header {
   display: flex;
