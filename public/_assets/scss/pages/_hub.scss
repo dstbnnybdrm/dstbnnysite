@@ -16,6 +16,7 @@
             "marquee        marquee"
             "footer         footer";
         grid-template-rows: repeat(8, auto) min-content;
+        grid-template-columns: repeat(2, minmax(0, var(--measure-max)));
         row-gap: var(--spacing-100);
     }
 
@@ -52,6 +53,7 @@
         padding: var(--spacing-075) var(--spacing-100);
 
         @include for-viewport-size(phone) {
+            width: 100%;
             border-top: 1px dashed var(--color-base);
             padding: var(--spacing-100) 0;
         }

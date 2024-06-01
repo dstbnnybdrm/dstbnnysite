@@ -1268,6 +1268,7 @@ summary {
   .hub {
     grid-template-areas: "header         header" "navi           navi" "theme-toggle   theme-toggle" "main           main" "support        directories" "status         status" "site-log       site-log" "marquee        marquee" "footer         footer";
     grid-template-rows: repeat(8, auto) min-content;
+    grid-template-columns: repeat(2, minmax(0, var(--measure-max)));
     row-gap: var(--spacing-100);
   }
 }
@@ -1294,6 +1295,7 @@ summary {
 }
 @media screen and (max-width: 800px) {
   .hub__marquee {
+    width: 100%;
     border-top: 1px dashed var(--color-base);
     padding: var(--spacing-100) 0;
   }
