@@ -70,6 +70,7 @@
     &__copy {
         line-height: var(--line-height-large);
         letter-spacing: var(--letter-spacing-100);
+        text-indent: 2rem;
 
         @include text-style(sans);
         @include text-size(base);

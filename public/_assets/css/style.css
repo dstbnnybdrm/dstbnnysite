@@ -1444,6 +1444,7 @@ summary {
 .blog-post__copy {
   line-height: var(--line-height-large);
   letter-spacing: var(--letter-spacing-100);
+  text-indent: 2rem;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
