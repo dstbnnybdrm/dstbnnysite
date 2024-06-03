@@ -4,7 +4,7 @@
     <subtitle>blog and site updates for dustbunnybedroom :3c</subtitle>
     <link href="https://dustbunnybedroom.neocities.org/feed.xml" rel="self" />
     <link href="https://dustbunnybedroom.neocities.org" />
-    <updated>2024-05-31T00:00:00Z</updated>
+    <updated>2024-06-03T00:00:00Z</updated>
     <id>https://dustbunnybedroom.neocities.org/</id>
     <author>
         <name>jp</name>
@@ -12,9 +12,23 @@
     </author>
 
     <entry>
+        <title>accessibility!</title>
+        <link href="https://dustbunnybedroom.neocities.org/accessibility" />
+        <updated>2024-05-14T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/accessibility</id>
+        <content type="text">
+            added an accessibility statement to the site! it details the 
+            measures taken for accessibility as well as some of the current 
+            shortcomings that i plan on improving on! if you ever have any
+            feedback to give regarding accessibility please feel free to share
+            with me!
+        </content>
+    </entry>
+
+    <entry>
         <title>dstbnnyblog: end of may update</title>
         <link href="https://dustbunnybedroom.neocities.org/posts/2024-05-31" />
-        <updated>2024-05-31T00:00:00Z</updated>
+        <updated>2024-06-03T00:00:00Z</updated>
         <id>https://dustbunnybedroom.neocities.org/posts/2024-05-31</id>
         <content type="html"><![CDATA[<p>hello again!</p>
     <p>
