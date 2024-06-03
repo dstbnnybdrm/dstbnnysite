@@ -1,6 +1,7 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
+/* wrapper for javascript-inserted contents */
 #footer {
     display: contents;
 }

@@ -347,13 +347,15 @@ summary {
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
+.page {
+  max-height: 100%;
+}
 .page_simple {
   display: flex;
   flex-direction: column;
-  row-gap: var(--spacing-125);
-  justify-content: center;
+  gap: var(--spacing-125);
+  margin: auto;
   max-width: var(--measure-max);
-  min-height: 0;
 }
 @media screen and (max-width: 800px) {
   .page {
@@ -806,6 +808,7 @@ summary {
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
+/* wrapper for javascript-inserted contents */
 #footer {
   display: contents;
 }
