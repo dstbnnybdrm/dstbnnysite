@@ -9,6 +9,7 @@
     <title>accessibility &mdash; dustbunnybedroom</title>
     <meta name="robots" content="noindex" />
     <meta name="author" content="jp" />
+    <base target="_blank" />
 
     <!-- open graph -->
     <meta property="og:type" content="website" />
@@ -37,28 +38,105 @@
 
   <body class="l-imposter">
     <div class="page page_simple">
+      <nav class="navi navi_borderless">
+        <a href="/hub?p=/home" class="navi__link">head back?</a>
+      </nav>
+
       <main class="main main_borderless section">
         <h1 class="title">accessibility</h1>
 
         <p class="copy">
-          i try to make this site as accessible as possible, aiming to meet a
-          minimum conformance of Web Content Accessibility Guidelines (WCAG) 2.2
-          Level AA.
+          i try to make this site as accessible as possible because i believe
+          the Web should be for everybody and that you don't necessarily have to
+          sacrifice accessibility for art and creativity!
         </p>
-
-        <ul class="list"></ul>
 
         <p class="copy">
-          as always, i would love to receive any feedback if you have any! i am
-          merely a hobbyist web developer and i am always learning!
+          this site aims to conform to
+          <a
+            rel="external"
+            href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+            aria-label="Web Content Accessibility Guidelines (opens in a new tab)"
+            >Web Content Accessibility Guidelines</a
+          >
+          (WCAG) 2.2 Level AA to the best of my ability. here are some of the
+          accessibility functions implemented:
         </p>
 
-        <ul class="list"></ul>
+        <ul class="list">
+          <li class="list__item">
+            alternative text is provided for all non-decorative images and ASCII
+            art
+          </li>
+          <li class="list__item">
+            this site is fully responsive and compatible with mobile devices
+          </li>
+          <li class="list__item">
+            all text (except on some shrines pages) has a contrast ratio of at
+            least 4.5:1
+          </li>
+          <li class="list__item">this site will never have autoplay</li>
+          <li class="list__item">
+            pages and text should be able to be resized up to 200% without a
+            loss of content or functionality
+          </li>
+          <li class="list__item">
+            light and dark themes are provided and automatically determined
+            through user preferences (and can be changed by the user if needed)
+          </li>
+          <li class="list__item">
+            this site is written with
+            <a
+              rel="external"
+              href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdustbunnybedroom.neocities.org%2F"
+              aria-label="valid (opens in a new tab)"
+              >valid</a
+            >
+            and semantic HTML5 and periodically tested with a screen reader
+          </li>
+          <li class="list__item">
+            this site is navigable using just a keyboard
+          </li>
+        </ul>
+
+        <p class="copy">
+          note that any content from external sources may vary in their
+          conformance!
+        </p>
+
+        <p class="copy">
+          here are some known things that could have an affect on accessibility
+          (all of which i have plans to work on and improve!):
+        </p>
+
+        <ul class="list">
+          <li class="list__item">
+            this site uses javascript and has not yet been tested without it
+          </li>
+          <li class="list__item">
+            objects that aren't visible (such as links in a marquee that have
+            gone off screen) can be focused on without being able to see them
+          </li>
+          <li class="list__item">a high contrast colour mode isn't provided</li>
+          <li class="list__item">
+            a more accessible theme isn't provided for shrines pages that aren't
+            compliant
+          </li>
+          <li class="list__item">
+            moving images have no options to be frozen or don't have any static
+            alternatives
+          </li>
+        </ul>
+
+        <p class="copy">
+          please <a href="/contact.html">let me know</a> if there are more or if
+          any of the above is incorrect or not working as expected! i am merely
+          a hobbyist web developer and am always learning so any feedback is
+          very much appreciated!
+        </p>
       </main>
 
-      <nav class="navi navi_borderless">
-        <a href="/hub?p=/home" class="navi__link">back to site?</a>
-      </nav>
+      <footer></footer>
     </div>
   </body>
 </html>
