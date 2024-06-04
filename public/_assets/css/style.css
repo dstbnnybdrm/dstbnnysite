@@ -357,6 +357,11 @@ summary {
   margin: auto;
   max-width: var(--measure-max);
 }
+.page__breadcrumb {
+  margin-bottom: var(--spacing-075);
+  border-bottom: 1px var(--color-base) dotted;
+  padding-bottom: var(--spacing-075);
+}
 @media screen and (max-width: 800px) {
   .page {
     max-width: var(--measure-max);
@@ -1132,6 +1137,9 @@ summary {
   height: 15px;
 }
 
+.breadcrumb {
+  grid-area: navi;
+}
 .breadcrumb__list {
   display: flex;
 }
@@ -1729,11 +1737,14 @@ summary {
 @media screen and (min-width: 801px) {
   .guestbook {
     display: grid;
-    align-self: self-start;
     grid-template-areas: "navi" "main" "footer";
     grid-template-columns: minmax(0, var(--measure-max));
     grid-template-rows: auto 1fr min-content;
-    gap: 0;
+    row-gap: var(--spacing-125);
+  }
+  .guestbook__main {
+    align-self: center;
+    justify-items: center;
   }
 }
 

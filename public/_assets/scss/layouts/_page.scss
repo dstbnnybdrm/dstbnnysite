@@ -16,6 +16,12 @@
         // min-height: 0;
     }
 
+    &__breadcrumb {
+        margin-bottom: var(--spacing-075);
+        border-bottom: 1px var(--color-base) dotted;
+        padding-bottom: var(--spacing-075);
+    }
+
     @include for-viewport-size(phone) {
         max-width: var(--measure-max);
         height: 100vh;

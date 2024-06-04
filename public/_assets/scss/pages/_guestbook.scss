@@ -5,7 +5,6 @@
     @include for-viewport-size(desktop) {
         display: grid;
 
-        align-self: self-start;
         grid-template-areas:
             "navi"
             "main"
@@ -15,7 +14,12 @@
             auto
             1fr
             min-content;
-        gap: 0;
+        row-gap: var(--spacing-125);
+
+        &__main {
+            align-self: center;
+            justify-items: center;
+        }
     }
 }
 
