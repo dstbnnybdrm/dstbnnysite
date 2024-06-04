@@ -172,6 +172,7 @@
         gap: var(--spacing-100);
 
         width: 9.6rem;
+        aspect-ratio: 1 / 1;
 
         text-align: center;
         @include text-style(sans);
@@ -179,6 +180,7 @@
     }
 
     &__image {
+        object-fit: cover;
         aspect-ratio: 1 / 1;
     }
 }
