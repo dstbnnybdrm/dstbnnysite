@@ -9,55 +9,64 @@
 
     grid-area: main;
 
-    // &__footer {
-    //     border-top: 1px dashed var(--color-base);
-    //     padding-top: var(--spacing-100);
-    // }
-
     @include for-viewport-size(phone) {
         &__frame {
             display: block;
 
-            border: none;
-
+            /* take up entire WIDTH of grid cell (height is height of content) */
             width: 100%;
+
+            border: none;
         }
     }
 
     @include for-viewport-size(desktop) {
-        // @include layout-border();
-        // @include layout-padding();
-
         &__frame {
-            /* take up entire space of GRID CELL */
+            /* take up entire space of grid cell */
             height: 100%;
             width: 100%;
 
             border: none;
         }
     }
-
-    &_borderless {
-        border: none;
-    }
 }
 
-.main-body {
+.mainframe {
     display: flex;
 
     flex-direction: column;
-    row-gap: 1em;
+    gap: var(--spacing-100);
+
+    &__breadcrumb {
+        display: none;
+    }
+
+    &__main {
+        display: flex;
+
+        flex-direction: column;
+        gap: var(--spacing-100);
+    }
+
+    &__footer {
+        margin-top: var(--spacing-075);
+        border-top: 1px var(--color-base) dotted;
+        padding-top: var(--spacing-075);
+    }
 
     @include for-in-frame() {
         max-width: var(--measure-max);
         margin-inline: auto;
-        // padding-top: var(--spacing-100);
+        padding-top: var(--spacing-100);
 
-        /* show to guide user back outside of frame */
+        /* only shows if user somehow enters the mainframe itself; guides them 
+           out of it if needed */
         &__breadcrumb {
-            // margin-bottom: var(--spacing-075);
-            // border-bottom: 1px var(--color-base) dotted;
-            // padding-bottom: var(--spacing-075);
+            display: block;
+
+            margin-bottom: var(--spacing-075);
+            border-bottom: 1px var(--color-base) dotted;
+            padding-bottom: var(--spacing-075);
         }
     }
 }

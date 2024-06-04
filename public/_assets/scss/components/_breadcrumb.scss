@@ -2,8 +2,6 @@
 @use "../abstracts/breakpoints" as *;
 
 .breadcrumb {
-    display: none;
-
     &__list {
         display: flex;
     }
@@ -29,10 +27,5 @@
     &__current {
         @include text-style(serif, italic);
         @include text-size(small);
-    }
-
-    /* only shows up if user somehow enters the main content frame itself */
-    @include for-in-frame() {
-        display: block;
     }
 }

@@ -723,32 +723,51 @@ summary {
 @media screen and (max-width: 800px) {
   .main__frame {
     display: block;
-    border: none;
+    /* take up entire WIDTH of grid cell (height is height of content) */
     width: 100%;
+    border: none;
   }
 }
 @media screen and (min-width: 801px) {
   .main__frame {
-    /* take up entire space of GRID CELL */
+    /* take up entire space of grid cell */
     height: 100%;
     width: 100%;
     border: none;
   }
 }
-.main_borderless {
-  border: none;
-}
 
-.main-body {
+.mainframe {
   display: flex;
   flex-direction: column;
-  row-gap: 1em;
+  gap: var(--spacing-100);
+}
+.mainframe__breadcrumb {
+  display: none;
+}
+.mainframe__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
+.mainframe__footer {
+  margin-top: var(--spacing-075);
+  border-top: 1px var(--color-base) dotted;
+  padding-top: var(--spacing-075);
 }
 @media screen and (min-width: 44rem) {
-  .main-body {
+  .mainframe {
     max-width: var(--measure-max);
     margin-inline: auto;
-    /* show to guide user back outside of frame */
+    padding-top: var(--spacing-100);
+    /* only shows if user somehow enters the mainframe itself; guides them 
+       out of it if needed */
+  }
+  .mainframe__breadcrumb {
+    display: block;
+    margin-bottom: var(--spacing-075);
+    border-bottom: 1px var(--color-base) dotted;
+    padding-bottom: var(--spacing-075);
   }
 }
 
@@ -1113,10 +1132,6 @@ summary {
   height: 15px;
 }
 
-.breadcrumb {
-  display: none;
-  /* only shows up if user somehow enters the main content frame itself */
-}
 .breadcrumb__list {
   display: flex;
 }
@@ -1149,15 +1164,9 @@ summary {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
 }
-@media screen and (min-width: 44rem) {
-  .breadcrumb {
-    display: block;
-  }
-}
 
 .text-area {
   width: 83%;
-  height: 6rem;
   border: 1px dotted var(--color-base);
   padding: var(--spacing-025);
   background: none;
