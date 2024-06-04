@@ -376,6 +376,7 @@ summary {
   grid-area: header;
   align-items: center;
   flex-direction: column;
+  row-gap: var(--spacing-100);
 }
 .header__splash {
   display: block;
@@ -439,13 +440,10 @@ summary {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  border: 1px solid var(--color-base);
-  padding: var(--spacing-100);
 }
 @media screen and (max-width: 800px) {
   .navi {
     gap: var(--spacing-100);
-    border: none;
     padding: 0;
   }
   .navi__link {
@@ -474,9 +472,6 @@ summary {
   }
 }
 @media screen and (min-width: 801px) {
-  .navi_borderless {
-    border: none;
-  }
   .navi__button {
     display: none;
   }
@@ -725,16 +720,7 @@ summary {
   gap: var(--spacing-100);
   grid-area: main;
 }
-.main__footer {
-  border-top: 1px dashed var(--color-base);
-  padding-top: var(--spacing-100);
-}
 @media screen and (max-width: 800px) {
-  .main {
-    border-top: 1px dashed var(--color-base);
-    border-bottom: 1px dashed var(--color-base);
-    padding: var(--spacing-100) 0;
-  }
   .main__frame {
     display: block;
     border: none;
@@ -742,10 +728,6 @@ summary {
   }
 }
 @media screen and (min-width: 801px) {
-  .main {
-    border: 1px solid var(--color-base);
-    padding: var(--spacing-100);
-  }
   .main__frame {
     /* take up entire space of GRID CELL */
     height: 100%;
@@ -766,13 +748,7 @@ summary {
   .main-body {
     max-width: var(--measure-max);
     margin-inline: auto;
-    padding-top: var(--spacing-100);
     /* show to guide user back outside of frame */
-  }
-  .main-body__breadcrumb {
-    margin-bottom: var(--spacing-075);
-    border-bottom: 1px var(--color-base) dotted;
-    padding-bottom: var(--spacing-075);
   }
 }
 
@@ -1219,26 +1195,20 @@ summary {
 /*:._.:*~ PAGES ~*:._.:*/
 .landing {
   display: grid;
-  grid-auto-rows: auto;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 1fr min-content 1fr;
   row-gap: var(--spacing-125);
-  align-items: center;
   max-width: var(--measure-max);
+  min-height: 0px;
 }
 .landing__header {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--spacing-125);
+  align-self: end;
 }
 .landing__stars {
+  align-self: start;
   margin-left: 4rem;
 }
 .landing__main {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--spacing-125);
-  justify-content: center;
-  max-width: var(--measure-max);
-  height: auto;
   border-bottom: 1px solid var(--color-base);
 }
 .landing__enter-link::before {
@@ -1246,12 +1216,6 @@ summary {
 }
 .landing__enter-link::after {
   content: "⟵";
-}
-.landing__footer {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--spacing-125);
-  align-items: center;
 }
 
 .webrings {
@@ -1295,6 +1259,19 @@ summary {
 @media screen and (max-width: 800px) {
   .hub__header {
     border: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hub__main {
+    border-top: 1px dashed var(--color-base);
+    border-bottom: 1px dashed var(--color-base);
+    padding: var(--spacing-100) 0;
+  }
+}
+@media screen and (min-width: 801px) {
+  .hub__main {
+    border: 1px solid var(--color-base);
+    padding: var(--spacing-100);
   }
 }
 .hub__marquee {
@@ -1362,6 +1339,8 @@ summary {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
+  border: 1px solid var(--color-base);
+  padding: var(--spacing-100);
 }
 @media screen and (max-width: 800px) {
   .blog {

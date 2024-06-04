@@ -9,16 +9,12 @@
 
     grid-area: main;
 
-    &__footer {
-        border-top: 1px dashed var(--color-base);
-        padding-top: var(--spacing-100);
-    }
+    // &__footer {
+    //     border-top: 1px dashed var(--color-base);
+    //     padding-top: var(--spacing-100);
+    // }
 
     @include for-viewport-size(phone) {
-        border-top: 1px dashed var(--color-base);
-        border-bottom: 1px dashed var(--color-base);
-        padding: var(--spacing-100) 0;
-
         &__frame {
             display: block;
 
@@ -29,8 +25,8 @@
     }
 
     @include for-viewport-size(desktop) {
-        @include layout-border();
-        @include layout-padding();
+        // @include layout-border();
+        // @include layout-padding();
 
         &__frame {
             /* take up entire space of GRID CELL */
@@ -55,13 +51,13 @@
     @include for-in-frame() {
         max-width: var(--measure-max);
         margin-inline: auto;
-        padding-top: var(--spacing-100);
+        // padding-top: var(--spacing-100);
 
         /* show to guide user back outside of frame */
         &__breadcrumb {
-            margin-bottom: var(--spacing-075);
-            border-bottom: 1px var(--color-base) dotted;
-            padding-bottom: var(--spacing-075);
+            // margin-bottom: var(--spacing-075);
+            // border-bottom: 1px var(--color-base) dotted;
+            // padding-bottom: var(--spacing-075);
         }
     }
 }

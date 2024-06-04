@@ -11,13 +11,13 @@
     @include text-style(sans);
     @include text-size(base);
 
-    @include layout-border();
-    @include layout-padding();
+    // @include layout-border();
+    // @include layout-padding();
 
     @include for-viewport-size(phone) {
         gap: var(--spacing-100);
 
-        border: none;
+        // border: none;
         padding: 0;
 
         &__link {
@@ -46,9 +46,9 @@
     }
 
     @include for-viewport-size(desktop) {
-        &_borderless {
-            border: none;
-        }
+        // &_borderless {
+        //     border: none;
+        // }
 
         &__button {
             display: none;
