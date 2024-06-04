@@ -563,6 +563,34 @@ summary {
   }
 }
 
+.image-navi__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: var(--spacing-200);
+}
+.image-navi__item {
+  display: contents;
+}
+.image-navi__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-100);
+  width: 9.6rem;
+  text-align: center;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+.image-navi__image {
+  aspect-ratio: 1/1;
+}
+
 .theme-toggle {
   display: flex;
   grid-area: theme-toggle;

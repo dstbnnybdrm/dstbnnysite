@@ -149,3 +149,36 @@
         }
     }
 }
+
+.image-navi {
+    &__list {
+        display: flex;
+
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+        gap: var(--spacing-200);
+    }
+
+    &__item {
+        display: contents;
+    }
+
+    &__link {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--spacing-100);
+
+        width: 9.6rem;
+
+        text-align: center;
+        @include text-style(sans);
+        @include text-size(base);
+    }
+
+    &__image {
+        aspect-ratio: 1 / 1;
+    }
+}
