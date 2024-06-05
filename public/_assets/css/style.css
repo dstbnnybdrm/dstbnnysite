@@ -347,6 +347,14 @@ summary {
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
+.page_simple {
+  display: grid;
+  grid-template-areas: "navi" "main";
+  grid-template-columns: minmax(0, var(--measure-max));
+  grid-template-rows: min-content minmax(0, 1fr);
+  gap: var(--spacing-125);
+  justify-content: center;
+}
 .page__breadcrumb {
   margin-bottom: var(--spacing-075);
   border-bottom: 1px var(--color-base) dotted;
@@ -845,7 +853,6 @@ summary {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
   }
 }
 
