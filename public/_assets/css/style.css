@@ -396,6 +396,10 @@ summary {
     /* no sidebar on mobile layout */
     display: contents;
   }
+  .sidebar__section:not(:first-child) {
+    border-top: 1px dashed var(--color-base);
+    padding-top: var(--spacing-100);
+  }
 }
 @media screen and (min-width: 801px) {
   .sidebar {
@@ -1261,6 +1265,12 @@ summary {
     border: 1px solid var(--color-base);
   }
 }
+@media screen and (max-width: 800px) {
+  .hub__main {
+    border-top: 1px dashed var(--color-base);
+    padding-top: var(--spacing-100);
+  }
+}
 @media screen and (min-width: 801px) {
   .hub__main {
     border: 1px solid var(--color-base);
@@ -1269,6 +1279,12 @@ summary {
 }
 .hub__marquee {
   grid-area: marquee;
+}
+@media screen and (max-width: 800px) {
+  .hub__marquee {
+    border-top: 1px dashed var(--color-base);
+    padding-top: var(--spacing-100);
+  }
 }
 @media screen and (min-width: 801px) {
   .hub__marquee {
@@ -1325,8 +1341,6 @@ summary {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
-  border: 1px solid var(--color-base);
-  padding: var(--spacing-100);
 }
 @media screen and (max-width: 800px) {
   .blog {
@@ -1336,6 +1350,10 @@ summary {
     border-top: 1px solid var(--color-base);
     padding-top: var(--spacing-100);
   }
+  .blog__main {
+    border-top: 1px dashed var(--color-base);
+    padding-top: var(--spacing-100);
+  }
 }
 @media screen and (min-width: 801px) {
   .blog {
@@ -1343,11 +1361,9 @@ summary {
     grid-template-rows: min-content 1fr min-content;
     grid-template-columns: min-content minmax(0rem, var(--measure-max));
   }
-}
-
-@media screen and (min-width: 801px) {
-  .page__main_blog {
-    border: none;
+  .blog__navi {
+    border: 1px solid var(--color-base);
+    padding: var(--spacing-100);
   }
 }
 

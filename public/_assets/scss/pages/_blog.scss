@@ -22,9 +22,6 @@
 
         flex-direction: column;
         gap: var(--spacing-100);
-
-        @include layout-border();
-        @include layout-padding();
     }
 
     @include for-viewport-size(phone) {
@@ -36,6 +33,11 @@
 
         &__navi {
             border-top: 1px solid var(--color-base);
+            padding-top: var(--spacing-100);
+        }
+
+        &__main {
+            border-top: 1px dashed var(--color-base);
             padding-top: var(--spacing-100);
         }
     }
@@ -52,13 +54,10 @@
         grid-template-columns:
             min-content
             minmax(0rem, var(--measure-max));
-    }
-}
 
-.page {
-    @include for-viewport-size(desktop) {
-        &__main_blog {
-            border: none;
+        &__navi {
+            @include layout-border();
+            @include layout-padding();
         }
     }
 }
