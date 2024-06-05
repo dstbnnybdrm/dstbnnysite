@@ -14,13 +14,13 @@
         display: grid;
 
         grid-template-areas: "navi" "main";
-        grid-template-columns: minmax(0, min-content);
+        grid-template-columns: minmax(0, var(--measure-max));
         grid-template-rows: min-content minmax(0, 1fr);
 
         gap: var(--spacing-125);
 
         justify-content: center;
-        align-items: center;
+        // align-items: center;
     }
 
     &_poem {
