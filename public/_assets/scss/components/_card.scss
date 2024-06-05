@@ -7,12 +7,19 @@
     flex-direction: column;
     gap: var(--spacing-100);
 
+    // min-height: 0;
+    // min-width: 0;
+    overflow-x: hidden;
+
     &__body {
         display: flex;
 
         align-items: center;
         flex-direction: column;
         gap: var(--spacing-100);
+
+        // min-height: 0;
+        // min-width: 0;
 
         padding-bottom: var(--spacing-100);
     }

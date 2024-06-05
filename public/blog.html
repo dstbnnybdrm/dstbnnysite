@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- meta tags -->
-    <title>dstbnnyblog</title>
+    <title>dustbunnyblog</title>
     <meta name="description" content="various thoughts and ramblings." />
     <meta name="author" content="jp" />
 
     <!-- open graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="dustbunnybedroom" />
-    <meta property="og:title" content="dstbnnyblog" />
+    <meta property="og:title" content="dustbunnyblog" />
     <meta property="og:description" content="various thoughts and ramblings." />
     <meta
       property="og:url"
@@ -36,10 +36,14 @@
   </head>
 
   <body class="l-imposter">
-    <div class="page page_blog">
+    <div class="blog page">
       <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
-      <header class="header header_blog page__header">
-        <pre class="ascii-art" aria-hidden="true">
+      <header class="header blog__header">
+        <pre
+          class="ascii-art"
+          aria-label="a row of books."
+          title="a row of books."
+        >
        .--.       .---.
    .---|__|       |~~~|
 .--|===|--|_      |~~~|--.
@@ -53,7 +57,7 @@
       </header>
 
       <!-- ~*:._.:*~  NAVIGATION  ~*:._.:*~ -->
-      <nav class="navi navi_blog">
+      <nav class="navi blog__navi">
         <h1 class="navi__title">
           <abbr title="dustbunnyblog">dstbnnyblog</abbr>
         </h1>
@@ -70,6 +74,14 @@
               <div class="dropdown__body">
                 <ul class="menu__list">
                   <!-- add new posts here, me! -->
+                  <li class="menu__item">
+                    <a
+                      class="menu__link"
+                      href="/posts/2024-05-31.html"
+                      target="mainframe"
+                      >end of may update
+                    </a>
+                  </li>
                   <li class="menu__item">
                     <a
                       class="menu__link"
@@ -150,7 +162,7 @@
       </nav>
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
-      <main class="main page__main_blog">
+      <main class="main blog__main">
         <!-- the actual blog post -->
         <iframe class="main__frame" name="mainframe" title="blog post"></iframe>
       </main>

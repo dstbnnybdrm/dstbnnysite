@@ -3,13 +3,4 @@
 
 .support {
     grid-area: support;
-
-    @include for-viewport-size(phone) {
-        border-right: 1px dashed var(--color-base);
-    }
-
-    @include for-viewport-size(desktop) {
-        @include layout-border();
-        @include layout-padding();
-    }
 }

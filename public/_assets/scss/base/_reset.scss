@@ -23,6 +23,8 @@
     font-size: 14px;
 
     scrollbar-width: thin;
+
+    // border: 1px solid green;
 }
 
 /* improve media defaults */
@@ -36,13 +38,11 @@ svg {
     max-width: 100%;
 
     // (try) to disable anti-alias (for pixel art and etc., we WANT the
-    // jaggedness lol)
-    image-rendering: optimizeSpeed; // stop smoothing for speed
+    // pixel jaggedness lol)
+    image-rendering: pixelated; // Universal support since 2021
     image-rendering: -moz-crisp-edges; //           for Firefox
     image-rendering: -o-crisp-edges; //             for Opera
     image-rendering: -webkit-optimize-contrast; //  for Chrome
-    image-rendering: pixelated; // Universal support since 2021
-    image-rendering: optimize-contrast; // CSS3 Proposed
 }
 
 /* remove form typography styles */
@@ -78,24 +78,35 @@ body {
 
 /* - links - */
 
+/* add marker for external links */
+a[rel*="external"] {
+    /* but NOT on images! */
+    &:not(:has(img))::after {
+        content: " ↗";
+    }
+}
+
 a {
     text-decoration-style: dotted;
-}
 
-a[rel*="external"]::after {
-    content: "↗";
-}
+    &:link {
+        color: var(--color-primary);
+    }
 
-a:link {
-    color: var(--color-primary);
-}
+    &:visited {
+        color: var(--color-primary-alt);
+    }
 
-a:visited {
-    color: var(--color-primary-alt);
-}
+    &:hover {
+        color: var(--color-secondary);
 
-a:hover {
-    color: var(--color-secondary);
+        img {
+            // border: 1px dotted var(--color-secondary);
+
+            filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
+                brightness(91%) contrast(87%);
+        }
+    }
 }
 
 /* - selection - */

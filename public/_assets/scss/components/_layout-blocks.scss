@@ -6,8 +6,10 @@
  */
 
 .l-imposter {
-    width: 100vw;
-    height: 100vh;
+    // min-height: 0;
+
+    // FOR DEBUGGING LOL
+    // border: 1px solid green;
 
     @include for-viewport-size(phone) {
         display: flex;
@@ -17,6 +19,7 @@
 
     @include for-viewport-size(desktop) {
         display: flex;
+
         position: absolute;
         top: 0;
         right: 0;
@@ -25,6 +28,11 @@
 
         align-items: center;
         justify-content: center;
+
+        width: 100vw;
+        height: 100vh;
+
+        // overflow: hidden;
     }
 }
 
@@ -35,11 +43,25 @@
     justify-items: center;
     row-gap: var(--spacing-100);
 
-    &_horizontal {
-        // @include for-frame-size(large) {
+    &_row {
+        // @include for-viewport-size(desktop) {
         flex-direction: row;
         column-gap: var(--spacing-100);
         // }
+    }
+}
+
+.l-float {
+    display: block;
+
+    &_left {
+        float: left;
+        margin-right: var(--spacing-100);
+    }
+
+    &_right {
+        float: right;
+        margin-left: var(--spacing-100);
     }
 }
 
@@ -50,10 +72,12 @@
 }
 
 .l-scrollbar-container {
-    display: block;
+    display: contents;
 
-    min-height: 0;
-    overflow-y: auto;
+    @include for-viewport-size(desktop) {
+        min-height: 0;
+        overflow-y: auto;
+    }
 }
 
 /* for visually hiding landmarks needed for screen readers */
@@ -68,6 +92,6 @@
 
     overflow: hidden;
 
-    clip-path: rect(0 0 0 0);
-    clip: rect(0 0 0 0);
+    clip-path: circle(0);
+    // clip: rect(0 0 0 0); // deprecated
 }

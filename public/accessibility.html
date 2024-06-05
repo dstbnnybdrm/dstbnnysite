@@ -1,0 +1,161 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- meta tags -->
+    <title>accessibility &mdash; dustbunnybedroom</title>
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="jp" />
+
+    <!-- open graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="dustbunnybedroom" />
+    <meta
+      property="og:title"
+      content="accessibility &mdash; dustbunnybedroom"
+    />
+    <meta property="og:description" content="an accessibility statement." />
+    <meta
+      property="og:url"
+      content="https://dustbunnybedroom.neocities.org/accessibility"
+    />
+
+    <!-- favicon -->
+    <link rel="icon" href="/_assets/img/favicon/favicon.ico" sizes="32x32" />
+    <link
+      rel="apple-touch-icon"
+      href="/_assets/img/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/_assets/img/favicon/site.webmanifest" />
+
+    <!-- style + script -->
+    <link rel="stylesheet" href="/_assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="page page_simple">
+      <nav class="breadcrumb page__breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__crumb">
+            <a class="breadcrumb__link" href="/hub?p=/home">home</a>
+          </li>
+          <li class="breadcrumb__crumb">
+            <a class="breadcrumb__link" href="/accessibility.html"
+              >accessibility</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main">
+        <h1 class="title">accessibility</h1>
+
+        <p class="copy">
+          i try to make this site as accessible as possible because i believe
+          the Web should be for everybody and that you don't necessarily have to
+          sacrifice accessibility for art and creativity!
+        </p>
+
+        <p class="copy">
+          this site aims to conform to
+          <a
+            rel="external"
+            href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+            target="_blank"
+            aria-label="Web Content Accessibility Guidelines (opens in a new tab)"
+            >Web Content Accessibility Guidelines</a
+          >
+          (WCAG) 2.2 Level AA to the best of my ability. here are some of the
+          accessibility functions implemented:
+        </p>
+
+        <ul class="list">
+          <li class="list__item">
+            alternative text is provided for all non-decorative images and ASCII
+            art
+          </li>
+          <li class="list__item">
+            this site is fully responsive and compatible with mobile devices
+          </li>
+          <li class="list__item">
+            all text (except on some shrines pages) has a contrast ratio of at
+            least 4.5:1
+          </li>
+          <li class="list__item">this site will never have autoplay</li>
+          <li class="list__item">
+            pages and text should be able to be resized up to 200% without a
+            loss of content or functionality
+          </li>
+          <li class="list__item">
+            light and dark themes are provided and automatically determined
+            through user preferences (and can be changed by the user if needed)
+          </li>
+          <li class="list__item">
+            this site is written with
+            <a
+              rel="external"
+              href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdustbunnybedroom.neocities.org%2F"
+              target="_blank"
+              aria-label="valid (opens in a new tab)"
+              >valid</a
+            >
+            and semantic HTML5 and periodically tested with a screen reader
+          </li>
+          <li class="list__item">
+            this site is navigable using just a keyboard
+          </li>
+        </ul>
+
+        <p class="copy">
+          note that any content from external sources may vary in their
+          conformance!
+        </p>
+
+        <p class="copy">
+          here are some known things that could have an affect on accessibility
+          (all of which i have plans to work on and improve!):
+        </p>
+
+        <ul class="list">
+          <li class="list__item">
+            this site uses javascript and has not yet been tested without it
+          </li>
+          <li class="list__item">
+            objects that aren't visible (such as links in a marquee that have
+            gone off screen) can be focused on without being able to see them
+          </li>
+          <li class="list__item">a high contrast colour mode isn't provided</li>
+          <li class="list__item">
+            a more accessible theme isn't provided for shrines pages that aren't
+            compliant
+          </li>
+          <li class="list__item">
+            moving images have no options to be frozen or don't have any static
+            alternatives
+          </li>
+        </ul>
+
+        <p class="copy">
+          please <a href="/contact.html">let me know</a> if there are more or if
+          any of the above is incorrect or not working as expected! i am merely
+          a hobbyist web developer and am always learning so any feedback is
+          very much appreciated!
+        </p>
+
+        <footer class="section section_footer">
+          <p class="copy">
+            <small class="small-print"
+              >last updated:
+              <time class="small-print" datetime="2024-06-03"
+                >monday, june 03, 2024</time
+              ></small
+            >
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

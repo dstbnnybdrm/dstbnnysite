@@ -30,6 +30,17 @@
     &_center {
         text-align: center;
     }
+
+    &_small {
+        @include text-size(smaller);
+    }
+}
+
+.small-print {
+    @include text-style(sans);
+    @include text-size(base);
+
+    @include emphasis-serif();
 }
 
 .block-quote {
@@ -73,6 +84,8 @@
     &_row {
         display: flex;
 
+        flex-wrap: wrap;
+
         list-style: none;
     }
 
@@ -83,6 +96,8 @@
             display: inline-block;
 
             margin-left: 0rem;
+
+            white-space: nowrap;
 
             &:not(:last-child)::after {
                 margin: 0 var(--spacing-050);

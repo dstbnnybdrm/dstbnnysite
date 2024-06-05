@@ -3,7 +3,7 @@
 
 .site-log {
     grid-area: site-log;
-    // min-width: 0;
+
     @include text-size(small);
 
     &__entry {
@@ -27,20 +27,10 @@
     }
 
     &__type {
-        // display: inline;
-
         letter-spacing: var(--letter-spacing-120);
 
         @include text-style(serif, italic);
         @include text-size(small);
-
-        // &::before {
-        //     display: block;
-
-        //     margin-bottom: var(--spacing-025);
-
-        //     content: "";
-        // }
 
         &::after {
             content: ":";
@@ -52,8 +42,6 @@
     }
 
     &__description {
-        // display: inline;
-
         @include text-style(sans);
         @include text-size(small);
 
@@ -63,9 +51,6 @@
     }
 
     @include for-viewport-size(phone) {
-        border-top: 1px dashed var(--color-base);
-        padding: var(--spacing-100) 0;
-
         &__entry {
             &:nth-child(n + 4) {
                 display: none;
@@ -74,9 +59,10 @@
     }
 
     @include for-viewport-size(desktop) {
-        @include layout-border();
-        @include layout-padding();
-
-        // overflow: hidden;
+        &__entry {
+            &:nth-child(n + 10) {
+                display: none;
+            }
+        }
     }
 }
