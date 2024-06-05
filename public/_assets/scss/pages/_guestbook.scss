@@ -2,24 +2,22 @@
 @use "../abstracts/mixins" as *;
 
 .guestbook {
-    @include for-viewport-size(desktop) {
-        display: grid;
+    display: grid;
 
-        grid-template-areas:
-            "navi"
-            "main"
-            "footer";
-        grid-template-columns: minmax(0, var(--measure-max));
-        grid-template-rows:
-            auto
-            1fr
-            min-content;
-        row-gap: var(--spacing-125);
+    grid-template-areas:
+        "navi"
+        "main"
+        "footer";
+    grid-template-columns: minmax(0, var(--measure-max));
+    grid-template-rows:
+        auto
+        1fr
+        min-content;
+    row-gap: var(--spacing-125);
 
-        &__main {
-            align-self: center;
-            justify-items: center;
-        }
+    &__main {
+        align-self: center;
+        justify-items: center;
     }
 }
 

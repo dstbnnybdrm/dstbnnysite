@@ -1734,18 +1734,16 @@ summary {
   }
 }
 
-@media screen and (min-width: 801px) {
-  .guestbook {
-    display: grid;
-    grid-template-areas: "navi" "main" "footer";
-    grid-template-columns: minmax(0, var(--measure-max));
-    grid-template-rows: auto 1fr min-content;
-    row-gap: var(--spacing-125);
-  }
-  .guestbook__main {
-    align-self: center;
-    justify-items: center;
-  }
+.guestbook {
+  display: grid;
+  grid-template-areas: "navi" "main" "footer";
+  grid-template-columns: minmax(0, var(--measure-max));
+  grid-template-rows: auto 1fr min-content;
+  row-gap: var(--spacing-125);
+}
+.guestbook__main {
+  align-self: center;
+  justify-items: center;
 }
 
 div #HCB_comment_box {
