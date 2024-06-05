@@ -2,19 +2,19 @@
 @use "../abstracts/mixins" as *;
 
 .page {
-    max-height: 100%;
+    // max-height: 100%;
 
-    &_simple {
-        display: flex;
+    //     &_simple {
+    //         display: flex;
 
-        flex-direction: column;
-        gap: var(--spacing-125);
-        // justify-content: center;
-        margin: auto;
+    //         flex-direction: column;
+    //         gap: var(--spacing-125);
+    //         // justify-content: center;
+    //         margin: auto;
 
-        max-width: var(--measure-max);
-        // min-height: 0;
-    }
+    //         max-width: var(--measure-max);
+    //         // min-height: 0;
+    //     }
 
     &__breadcrumb {
         margin-bottom: var(--spacing-075);
@@ -24,7 +24,7 @@
 
     @include for-viewport-size(phone) {
         max-width: var(--measure-max);
-        height: 100vh;
+        // height: 100vh;
 
         padding: var(--spacing-200);
     }

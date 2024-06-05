@@ -347,16 +347,6 @@ summary {
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
-.page {
-  max-height: 100%;
-}
-.page_simple {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-125);
-  margin: auto;
-  max-width: var(--measure-max);
-}
 .page__breadcrumb {
   margin-bottom: var(--spacing-075);
   border-bottom: 1px var(--color-base) dotted;
@@ -365,7 +355,6 @@ summary {
 @media screen and (max-width: 800px) {
   .page {
     max-width: var(--measure-max);
-    height: 100vh;
     padding: var(--spacing-200);
   }
 }
@@ -416,9 +405,13 @@ summary {
     /* the primary (left) sidebars */
     /* and the secondary (right) sidebar */
   }
+  .sidebar__section {
+    border: 1px solid var(--color-base);
+    padding: var(--spacing-100);
+  }
   .sidebar_major {
     grid-area: major-sidebar;
-    grid-template-areas: "navi" "theme-toggle" "directories" "support";
+    grid-template-areas: "navi" "theme-toggle" "featured" "support";
     grid-template-rows: min-content var(--spacing-200) auto auto;
     grid-template-columns: min-content;
   }
@@ -427,11 +420,6 @@ summary {
     grid-template-areas: "status" "site-log";
     grid-template-rows: auto auto;
     grid-template-columns: 100%;
-  }
-  .sidebar__section {
-    min-height: 0;
-    border: 1px solid var(--color-base);
-    padding: var(--spacing-100);
   }
 }
 
@@ -615,29 +603,12 @@ summary {
   background-color: var(--color-secondary);
 }
 
-.directories {
-  grid-area: directories;
-}
-@media screen and (min-width: 801px) {
-  .directories {
-    border: 1px solid var(--color-base);
-    padding: var(--spacing-100);
-  }
+.featured {
+  grid-area: featured;
 }
 
 .support {
   grid-area: support;
-}
-@media screen and (max-width: 800px) {
-  .support {
-    border-right: 1px dashed var(--color-base);
-  }
-}
-@media screen and (min-width: 801px) {
-  .support {
-    border: 1px solid var(--color-base);
-    padding: var(--spacing-100);
-  }
 }
 
 .status {
@@ -668,18 +639,6 @@ summary {
 .status #statuscafe #statuscafe-content::before, .status #statuscafe #statuscafe-content::after {
   content: '"';
 }
-@media screen and (max-width: 800px) {
-  .status {
-    border-top: 1px dashed var(--color-base);
-    padding: var(--spacing-100) 0;
-  }
-}
-@media screen and (min-width: 801px) {
-  .status {
-    border: 1px solid var(--color-base);
-    padding: var(--spacing-100);
-  }
-}
 
 .site-log {
   grid-area: site-log;
@@ -694,9 +653,6 @@ summary {
 .site-log__entry:not(:first-child) {
   border-top: 1px dotted var(--color-base);
   padding-top: var(--spacing-075);
-}
-.site-log__entry:nth-child(n+20) {
-  display: none;
 }
 .site-log__date {
   color: var(--color-base);
@@ -734,41 +690,32 @@ summary {
   line-height: var(--line-height-small);
 }
 @media screen and (max-width: 800px) {
-  .site-log {
-    border-top: 1px dashed var(--color-base);
-    padding: var(--spacing-100) 0;
-  }
   .site-log__entry:nth-child(n+4) {
     display: none;
   }
 }
 @media screen and (min-width: 801px) {
-  .site-log {
-    border: 1px solid var(--color-base);
-    padding: var(--spacing-100);
+  .site-log__entry:nth-child(n+10) {
+    display: none;
   }
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-100);
   grid-area: main;
+  gap: var(--spacing-100);
+  min-width: 0;
+  margin: 0;
 }
-@media screen and (max-width: 800px) {
-  .main__frame {
-    display: block;
-    /* take up entire WIDTH of grid cell (height is height of content) */
-    width: 100%;
-    border: none;
-  }
+.main__frame {
+  border: none;
 }
 @media screen and (min-width: 801px) {
   .main__frame {
-    /* take up entire space of grid cell */
+    /* take all of and only the height of the grid cell (i.e. don't 
+       overflow my fucking window!) */
     height: 100%;
-    width: 100%;
-    border: none;
   }
 }
 
@@ -795,7 +742,7 @@ summary {
     max-width: var(--measure-max);
     margin-inline: auto;
     padding-top: var(--spacing-100);
-    /* only shows if user somehow enters the mainframe itself; guides them 
+    /* only shows if user somehow enters the mainframe itself; guides them
        out of it if needed */
   }
   .mainframe__breadcrumb {
@@ -868,20 +815,13 @@ summary {
   margin: 0 var(--spacing-075);
   content: "|";
 }
-@media screen and (max-width: 800px) {
-  .footer {
-    padding-bottom: var(--spacing-200);
-  }
-}
-
 /*:._.:*~ COMPONENTS ~*:._.:*/
 /**
  * convention for layout blocks taken from:
  *    https://bem-cheat-sheet.9elements.com/#layout-blocks
  */
 .l-imposter {
-  width: 100vw;
-  height: 100vh;
+  border: 1px solid green;
 }
 @media screen and (max-width: 800px) {
   .l-imposter {
@@ -899,6 +839,9 @@ summary {
     left: 0;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
   }
 }
 
@@ -931,9 +874,13 @@ summary {
 }
 
 .l-scrollbar-container {
-  display: block;
-  min-height: 0;
-  overflow-y: auto;
+  display: contents;
+}
+@media screen and (min-width: 801px) {
+  .l-scrollbar-container {
+    min-height: 0;
+    overflow-y: auto;
+  }
 }
 
 /* for visually hiding landmarks needed for screen readers */
@@ -953,6 +900,7 @@ summary {
   align-items: center;
   flex-direction: column;
   gap: var(--spacing-100);
+  overflow-x: hidden;
 }
 .card__body {
   display: flex;
@@ -1281,14 +1229,15 @@ summary {
 }
 
 .hub {
-  display: inline-grid;
+  display: grid;
 }
 @media screen and (max-width: 800px) {
   .hub {
-    grid-template-areas: "header         header" "navi           navi" "theme-toggle   theme-toggle" "main           main" "support        directories" "status         status" "site-log       site-log" "marquee        marquee" "footer         footer";
-    grid-template-rows: repeat(8, auto) min-content;
-    grid-template-columns: repeat(2, minmax(0, var(--measure-max)));
+    grid-template-areas: "header" "navi" "theme-toggle" "main" "support" "featured" "status" "site-log" "marquee" "footer";
+    grid-template-rows: repeat(8, max-content) min-content;
+    grid-template-columns: minmax(0, var(--measure-max));
     row-gap: var(--spacing-100);
+    max-width: var(--measure-max);
   }
 }
 @media screen and (min-width: 801px) {
@@ -1300,7 +1249,6 @@ summary {
   }
 }
 .hub__header {
-  border: 1px solid var(--color-base);
   padding: var(--spacing-075) var(--spacing-100);
 }
 @media screen and (max-width: 800px) {
@@ -1308,11 +1256,9 @@ summary {
     border: none;
   }
 }
-@media screen and (max-width: 800px) {
-  .hub__main {
-    border-top: 1px dashed var(--color-base);
-    border-bottom: 1px dashed var(--color-base);
-    padding: var(--spacing-100) 0;
+@media screen and (min-width: 801px) {
+  .hub__header {
+    border: 1px solid var(--color-base);
   }
 }
 @media screen and (min-width: 801px) {
@@ -1323,18 +1269,11 @@ summary {
 }
 .hub__marquee {
   grid-area: marquee;
-  padding: var(--spacing-075) var(--spacing-100);
-}
-@media screen and (max-width: 800px) {
-  .hub__marquee {
-    width: 100%;
-    border-top: 1px dashed var(--color-base);
-    padding: var(--spacing-100) 0;
-  }
 }
 @media screen and (min-width: 801px) {
   .hub__marquee {
     border: 1px solid var(--color-base);
+    padding: var(--spacing-075) var(--spacing-100);
   }
 }
 

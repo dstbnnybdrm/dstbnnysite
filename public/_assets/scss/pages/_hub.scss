@@ -2,22 +2,25 @@
 @use "../abstracts/mixins" as *;
 
 .hub {
-    display: inline-grid;
+    display: grid;
 
     @include for-viewport-size(phone) {
         grid-template-areas:
-            "header         header"
-            "navi           navi"
-            "theme-toggle   theme-toggle"
-            "main           main"
-            "support        directories"
-            "status         status"
-            "site-log       site-log"
-            "marquee        marquee"
-            "footer         footer";
-        grid-template-rows: repeat(8, auto) min-content;
-        grid-template-columns: repeat(2, minmax(0, var(--measure-max)));
+            "header"
+            "navi"
+            "theme-toggle"
+            "main"
+            "support"
+            "featured"
+            "status"
+            "site-log"
+            "marquee"
+            "footer";
+        grid-template-rows: repeat(8, max-content) min-content;
+        grid-template-columns: minmax(0, var(--measure-max));
         row-gap: var(--spacing-100);
+
+        max-width: var(--measure-max);
     }
 
     @include for-viewport-size(desktop) {
@@ -39,19 +42,21 @@
     }
 
     &__header {
-        @include layout-border;
         padding: var(--spacing-075) var(--spacing-100);
 
         @include for-viewport-size(phone) {
             border: none;
         }
+
+        @include for-viewport-size(desktop) {
+            @include layout-border;
+        }
     }
 
     &__main {
         @include for-viewport-size(phone) {
-            border-top: 1px dashed var(--color-base);
-            border-bottom: 1px dashed var(--color-base);
-            padding: var(--spacing-100) 0;
+            // border-bottom: 1px solid var(--color-base);
+            // padding-bottom: var(--spacing-100);
         }
 
         @include for-viewport-size(desktop) {
@@ -63,16 +68,14 @@
     &__marquee {
         grid-area: marquee;
 
-        padding: var(--spacing-075) var(--spacing-100);
-
         @include for-viewport-size(phone) {
-            width: 100%;
-            border-top: 1px dashed var(--color-base);
-            padding: var(--spacing-100) 0;
+            // border-bottom: 1px solid var(--color-base);
+            // padding-bottom: var(--spacing-100);
         }
 
         @include for-viewport-size(desktop) {
             @include layout-border();
+            padding: var(--spacing-075) var(--spacing-100);
         }
     }
 }

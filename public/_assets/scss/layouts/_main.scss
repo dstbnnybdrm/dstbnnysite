@@ -5,28 +5,21 @@
     display: flex;
 
     flex-direction: column;
+    grid-area: main;
     gap: var(--spacing-100);
 
-    grid-area: main;
+    min-width: 0;
+    margin: 0;
 
-    @include for-viewport-size(phone) {
-        &__frame {
-            display: block;
-
-            /* take up entire WIDTH of grid cell (height is height of content) */
-            width: 100%;
-
-            border: none;
-        }
+    &__frame {
+        border: none;
     }
 
     @include for-viewport-size(desktop) {
         &__frame {
-            /* take up entire space of grid cell */
+            /* take all of and only the height of the grid cell (i.e. don't 
+               overflow my fucking window!) */
             height: 100%;
-            width: 100%;
-
-            border: none;
         }
     }
 }
@@ -59,7 +52,7 @@
         margin-inline: auto;
         padding-top: var(--spacing-100);
 
-        /* only shows if user somehow enters the mainframe itself; guides them 
+        /* only shows if user somehow enters the mainframe itself; guides them
            out of it if needed */
         &__breadcrumb {
             display: block;
