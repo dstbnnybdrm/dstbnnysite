@@ -845,9 +845,6 @@ summary {
  * convention for layout blocks taken from:
  *    https://bem-cheat-sheet.9elements.com/#layout-blocks
  */
-.l-imposter {
-  border: 1px solid green;
-}
 @media screen and (max-width: 800px) {
   .l-imposter {
     display: flex;

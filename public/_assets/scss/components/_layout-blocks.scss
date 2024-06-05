@@ -8,7 +8,8 @@
 .l-imposter {
     // min-height: 0;
 
-    border: 1px solid green;
+    // FOR DEBUGGING LOL
+    // border: 1px solid green;
 
     @include for-viewport-size(phone) {
         display: flex;
