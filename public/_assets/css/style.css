@@ -1951,29 +1951,32 @@ textarea#hcb_form_content {
   }
 }
 
-@media screen and (min-width: 801px) {
-  .page_sitemap {
-    display: flex;
-    flex-direction: column;
-    height: min-content;
+.sitemap-page {
+  display: grid;
+  grid-template-areas: "main";
+  grid-template-columns: minmax(0, var(--measure-max));
+  align-content: center;
+  justify-items: center;
+}
+@media screen and (max-width: 800px) {
+  .sitemap-page__main {
+    width: 100%;
   }
 }
 
 .sitemap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  width: 100%;
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
 }
 @media screen and (max-width: 800px) {
-  .sitemap {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-100);
-  }
   .sitemap__home {
     display: block;
-    width: 100%;
     border: 1px dotted var(--color-base);
     padding: var(--spacing-100);
   }
