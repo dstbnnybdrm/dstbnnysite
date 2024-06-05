@@ -347,23 +347,37 @@ summary {
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
-.page_simple {
-  display: grid;
-  grid-template-areas: "navi" "main";
-  grid-template-columns: minmax(0, var(--measure-max));
-  grid-template-rows: min-content minmax(0, 1fr);
-  gap: var(--spacing-125);
-  justify-content: center;
-}
 .page__breadcrumb {
   margin-bottom: var(--spacing-075);
   border-bottom: 1px var(--color-base) dotted;
   padding-bottom: var(--spacing-075);
 }
+.page_simple {
+  display: grid;
+  grid-template-areas: "navi" "main";
+  grid-template-columns: minmax(0, min-content);
+  grid-template-rows: min-content minmax(0, 1fr);
+  gap: var(--spacing-125);
+  justify-content: center;
+  align-items: center;
+}
+.page_poem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-125);
+  justify-content: center;
+  max-width: min-content;
+  margin: auto;
+}
 @media screen and (max-width: 800px) {
   .page {
     max-width: var(--measure-max);
     padding: var(--spacing-200);
+  }
+}
+@media screen and (max-width: 800px) and (max-width: 800px) {
+  .page_poem {
+    max-width: min-content;
   }
 }
 @media screen and (min-width: 801px) {
