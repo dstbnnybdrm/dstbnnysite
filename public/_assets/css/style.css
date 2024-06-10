@@ -1813,7 +1813,7 @@ div #HCB_comment_box #HCB_comment_form_box {
   grid-area: comment-form;
   /* big "comment" button */
 }
-div #HCB_comment_box #HCB_comment_form_box .submit .btn .btn-secondary {
+div #HCB_comment_box #HCB_comment_form_box .submit.btn {
   color: var(--color-base);
   font-style: normal;
   font-weight: normal;
@@ -1823,7 +1823,20 @@ div #HCB_comment_box #HCB_comment_form_box .submit .btn .btn-secondary {
   text-transform: lowercase;
   color: var(--color-background);
 }
-div #HCB_comment_box #HCB_comment_form_box .submit .btn .btn-secondary:hover, div #HCB_comment_box #HCB_comment_form_box .submit .btn .btn-secondary:focus {
+div #HCB_comment_box #HCB_comment_form_box .submit.btn:hover, div #HCB_comment_box #HCB_comment_form_box .submit.btn:focus {
+  background: var(--color-secondary);
+}
+div #HCB_comment_box #HCB_comment_form_box button.btn.btn-secondary {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  border: none;
+  background: var(--color-primary);
+  text-transform: lowercase;
+  color: var(--color-background);
+}
+div #HCB_comment_box #HCB_comment_form_box button.btn.btn-secondary:hover, div #HCB_comment_box #HCB_comment_form_box button.btn.btn-secondary:focus {
   background: var(--color-secondary);
 }
 @media screen and (max-width: 800px) {

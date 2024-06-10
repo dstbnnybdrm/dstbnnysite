@@ -82,7 +82,22 @@ div #HCB_comment_box {
         grid-area: comment-form;
 
         /* big "comment" button */
-        .submit .btn .btn-secondary {
+        .submit.btn {
+            @include text-style(sans);
+
+            border: none;
+            background: var(--color-primary);
+
+            text-transform: lowercase;
+            color: var(--color-background);
+
+            &:hover,
+            &:focus {
+                background: var(--color-secondary);
+            }
+        }
+
+        button.btn.btn-secondary {
             @include text-style(sans);
 
             border: none;
