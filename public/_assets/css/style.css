@@ -346,6 +346,19 @@ summary {
   font-family: var(--font-family-alt);
 }
 
+.code {
+  display: inline;
+  color: var(--color-base);
+  line-height: 1rem;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+}
+.code_block {
+  display: block;
+}
+
 /*:._.:*~ LAYOUTS ~*:._.:*/
 .page__breadcrumb {
   margin-bottom: var(--spacing-075);

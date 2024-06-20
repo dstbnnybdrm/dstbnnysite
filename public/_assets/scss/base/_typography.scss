@@ -160,3 +160,17 @@
         @include text-style(serif);
     }
 }
+
+.code {
+    display: inline;
+
+    color: var(--color-base);
+
+    line-height: 1rem;
+
+    @include text-style(mono);
+
+    &_block {
+        display: block;
+    }
+}
