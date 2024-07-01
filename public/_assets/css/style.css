@@ -1217,7 +1217,8 @@ summary {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
-  margin-left: var(--spacing-100);
+  margin-top: var(--spacing-100);
+  margin-bottom: var(--spacing-100);
 }
 @media screen and (max-width: 800px) {
   .dropdown {
@@ -2113,13 +2114,13 @@ textarea#hcb_form_content {
 
 .closet {
   display: grid;
-  grid-template-areas: "." " main" "navi" "footer" ".";
+  grid-template-areas: "." "main" "navi" "footer";
   grid-template-columns: minmax(0, var(--measure-max));
-  grid-template-rows: 1fr auto min-content min-content 1fr;
+  grid-template-rows: 25% repeat(3, min-content);
   row-gap: var(--spacing-125);
 }
 .closet__main {
-  align-self: center;
+  align-self: start;
   justify-items: center;
 }
 .closet__navi {

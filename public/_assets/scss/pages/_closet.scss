@@ -3,21 +3,15 @@
 
     grid-template-areas:
         "."
-        " main"
+        "main"
         "navi"
-        "footer"
-        ".";
+        "footer";
     grid-template-columns: minmax(0, var(--measure-max));
-    grid-template-rows:
-        1fr
-        auto
-        min-content
-        min-content
-        1fr;
+    grid-template-rows: 25% repeat(3, min-content);
     row-gap: var(--spacing-125);
 
     &__main {
-        align-self: center;
+        align-self: start;
         justify-items: center;
     }
 

@@ -16,7 +16,8 @@
         flex-direction: column;
         row-gap: 1em;
 
-        margin-left: var(--spacing-100);
+        margin-top: var(--spacing-100);
+        margin-bottom: var(--spacing-100);
     }
 
     @include for-viewport-size(phone) {
