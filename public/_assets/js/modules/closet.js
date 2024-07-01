@@ -11,7 +11,7 @@ export function promptCombination() {
         return;
     }
 
-    let userInput = prompt("ENTER THE PADLOCK COMBINATION:");
+    let userInput = prompt("ENTER THE 3-DIGIT PADLOCK COMBINATION:");
     switch (userInput) {
         // user cancels
         case null:
