@@ -29,8 +29,9 @@
         flex-direction: column;
         gap: var(--spacing-125);
         justify-content: center;
+        align-items: center;
 
-        max-width: min-content;
+        max-width: var(--measure-max);
         margin: auto;
     }
 

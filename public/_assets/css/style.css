@@ -326,14 +326,13 @@ summary {
 .poem {
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: var(--spacing-100);
   letter-spacing: var(--letter-spacing-110);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
+  width: min-content;
 }
 .poem__title {
-  width: 100%;
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -344,6 +343,19 @@ summary {
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-alt);
+}
+
+.code {
+  display: inline;
+  color: var(--color-base);
+  line-height: 1rem;
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+}
+.code_block {
+  display: block;
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
@@ -365,7 +377,8 @@ summary {
   flex-direction: column;
   gap: var(--spacing-125);
   justify-content: center;
-  max-width: min-content;
+  align-items: center;
+  max-width: var(--measure-max);
   margin: auto;
 }
 @media screen and (max-width: 800px) {
@@ -1217,6 +1230,21 @@ summary {
 }
 
 /*:._.:*~ PAGES ~*:._.:*/
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-100);
+}
+.not-found__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .landing {
   display: grid;
   grid-template-areas: "header" "main" "footer";
@@ -1832,6 +1860,19 @@ div #HCB_comment_box #HCB_comment_form_box .submit.btn {
   color: var(--color-background);
 }
 div #HCB_comment_box #HCB_comment_form_box .submit.btn:hover, div #HCB_comment_box #HCB_comment_form_box .submit.btn:focus {
+  background: var(--color-secondary);
+}
+div #HCB_comment_box #HCB_comment_form_box button.btn.btn-secondary {
+  color: var(--color-base);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  border: none;
+  background: var(--color-primary);
+  text-transform: lowercase;
+  color: var(--color-background);
+}
+div #HCB_comment_box #HCB_comment_form_box button.btn.btn-secondary:hover, div #HCB_comment_box #HCB_comment_form_box button.btn.btn-secondary:focus {
   background: var(--color-secondary);
 }
 @media screen and (max-width: 800px) {
