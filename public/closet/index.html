@@ -37,7 +37,7 @@
 
   <body class="l-imposter">
     <div class="closet page">
-      <main class="main">
+      <main class="main closet__main">
         <h1 class="title">closet</h1>
 
         <p class="copy">
@@ -49,14 +49,25 @@
             <li class="menu__dropdown">
               <details class="dropdown menu__dropdown">
                 <summary class="dropdown__label">scraps</summary>
-                <ul class="list">
-                  <li class="list__item">
-                    <a href="butterfly.html">butterfly</a>
-                  </li>
-                  <li class="list__item">
-                    <a href="perception.html">perception</a>
-                  </li>
-                </ul>
+
+                <div class="dropdown__body">
+                  <p class="copy">
+                    some of my poetry. i'm still not super confident in my
+                    writing so i keep them tucked away. you're free to read them
+                    while you're here though!
+                  </p>
+                  <ul class="list">
+                    <li class="list__item">
+                      <a href="butterfly.html">butterfly</a>
+                    </li>
+                    <li class="list__item">
+                      <a href="perception.html">perception</a>
+                    </li>
+                    <li class="list__item">
+                      <a href="tied-in-a-loop.html">tied in a loop</a>
+                    </li>
+                  </ul>
+                </div>
               </details>
             </li>
             <li class="menu__dropdown">
@@ -79,15 +90,15 @@
             <!-- </li> -->
           </ul>
         </nav>
-
-        <nav>
-          <a class="copy" href="/hub?p=/home">back to site.</a>
-        </nav>
-
-        <footer class="section section_footer">
-          <p class="copy">last updated: <time datetime=""></time></p>
-        </footer>
       </main>
+
+      <nav class="navi closet__navi">
+        <a class="copy" href="/hub?p=/home">back to site.</a>
+      </nav>
+
+      <footer class="footer closet__footer">
+        <p class="copy">last updated: <time datetime=""></time></p>
+      </footer>
     </div>
   </body>
 </html>

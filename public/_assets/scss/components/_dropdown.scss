@@ -4,9 +4,19 @@
 .dropdown {
     @include text-style(sans);
     @include text-size(base);
+
     &__label {
         list-style-type: "❧ ";
         @include button-on-hover();
+    }
+
+    &__body {
+        display: flex;
+
+        flex-direction: column;
+        row-gap: 1em;
+
+        margin-left: var(--spacing-100);
     }
 
     @include for-viewport-size(phone) {

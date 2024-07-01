@@ -1213,6 +1213,12 @@ summary {
   color: var(--color-background);
   background-color: var(--color-secondary);
 }
+.dropdown__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  margin-left: var(--spacing-100);
+}
 @media screen and (max-width: 800px) {
   .dropdown {
     border: 1px dotted var(--color-base);
@@ -2103,6 +2109,26 @@ textarea#hcb_form_content {
   .sitemap__navi {
     margin-left: var(--spacing-175);
   }
+}
+
+.closet {
+  display: grid;
+  grid-template-areas: "." " main" "navi" "footer" ".";
+  grid-template-columns: minmax(0, var(--measure-max));
+  grid-template-rows: 1fr auto min-content min-content 1fr;
+  row-gap: var(--spacing-125);
+}
+.closet__main {
+  align-self: center;
+  justify-items: center;
+}
+.closet__navi {
+  align-self: center;
+  justify-items: start;
+}
+.closet__footer {
+  border-top: 1px dotted var(--color-base);
+  padding-top: var(--spacing-100);
 }
 
 /*:._.:*~ THEMES ~*:._.:*/

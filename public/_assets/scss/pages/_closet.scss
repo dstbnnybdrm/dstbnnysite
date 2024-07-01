@@ -1,0 +1,33 @@
+.closet {
+    display: grid;
+
+    grid-template-areas:
+        "."
+        " main"
+        "navi"
+        "footer"
+        ".";
+    grid-template-columns: minmax(0, var(--measure-max));
+    grid-template-rows:
+        1fr
+        auto
+        min-content
+        min-content
+        1fr;
+    row-gap: var(--spacing-125);
+
+    &__main {
+        align-self: center;
+        justify-items: center;
+    }
+
+    &__navi {
+        align-self: center;
+        justify-items: start;
+    }
+
+    &__footer {
+        border-top: 1px dotted var(--color-base);
+        padding-top: var(--spacing-100);
+    }
+}
