@@ -61,7 +61,6 @@
 
         @include for-viewport-size(desktop) {
             @include layout-border();
-            @include layout-padding();
         }
     }
 
