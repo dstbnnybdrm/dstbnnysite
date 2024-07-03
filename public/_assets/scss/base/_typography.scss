@@ -143,16 +143,15 @@
     display: flex;
 
     flex-direction: column;
-    align-items: center;
     row-gap: var(--spacing-100);
 
     letter-spacing: var(--letter-spacing-110);
 
     @include text-size(base);
 
-    &__title {
-        width: 100%;
+    width: min-content;
 
+    &__title {
         @include text-style(serif, italic);
     }
 

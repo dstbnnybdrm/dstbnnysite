@@ -30,6 +30,8 @@
     flex-direction: column;
     gap: var(--spacing-100);
 
+    @include layout-padding();
+
     &__breadcrumb {
         display: none;
     }

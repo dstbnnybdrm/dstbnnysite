@@ -326,14 +326,13 @@ summary {
 .poem {
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: var(--spacing-100);
   letter-spacing: var(--letter-spacing-110);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
+  width: min-content;
 }
 .poem__title {
-  width: 100%;
   color: var(--color-base);
   font-style: italic;
   font-weight: normal;
@@ -378,6 +377,7 @@ summary {
   flex-direction: column;
   gap: var(--spacing-125);
   justify-content: center;
+  align-items: center;
   max-width: var(--measure-max);
   margin: auto;
 }
@@ -761,6 +761,7 @@ summary {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
+  padding: var(--spacing-100);
 }
 .mainframe__breadcrumb {
   display: none;
@@ -1319,7 +1320,6 @@ summary {
 @media screen and (min-width: 801px) {
   .hub__main {
     border: 1px solid var(--color-base);
-    padding: var(--spacing-100);
   }
 }
 .hub__marquee {
