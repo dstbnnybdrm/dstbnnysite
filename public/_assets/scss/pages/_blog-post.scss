@@ -13,29 +13,27 @@
     flex-direction: column;
     row-gap: 1em;
 
+    color: var(--color-base);
+
     /* -- headings --- */
 
     h1 {
-        color: var(--color-base);
         @include text-style(sans, normal, bold);
         @include text-size(largest);
     }
 
     h2 {
-        color: var(--color-base);
         @include text-style(sans);
         @include text-size(larger);
     }
 
     h3 {
-        color: var(--color-base);
         letter-spacing: var(--letter-spacing-110);
         @include text-style(serif, italic);
         @include text-size(large);
     }
 
     h4 {
-        color: var(--color-primary-dark);
         letter-spacing: var(--letter-spacing-110);
         @include text-style(serif, italic);
         @include text-size(large);
@@ -44,13 +42,11 @@
     // probably won't ever use these lol
 
     h5 {
-        color: var(--color-base);
         @include text-style(sans);
         @include text-size(base);
     }
 
     h6 {
-        color: var(--color-base);
         @include text-style(sans);
         @include text-size(base);
     }
@@ -75,7 +71,6 @@
 
     dl.activity {
         align-self: flex-start;
-        color: var(--color-base);
         letter-spacing: var(--letter-spacing-110);
 
         @include text-style(sans);
@@ -120,8 +115,6 @@
     /* -- body copy --- */
 
     p {
-        color: var(--color-base);
-
         line-height: var(--line-height-large);
         letter-spacing: var(--letter-spacing-100);
         @include text-style(sans);
@@ -215,8 +208,6 @@
         table-layout: fixed;
         border-collapse: collapse;
 
-        color: var(--color-base);
-
         line-height: var(--line-height-large);
         letter-spacing: var(--letter-spacing-100);
         @include text-style(sans);
@@ -243,13 +234,9 @@
 
         flex-direction: column;
         row-gap: var(--spacing-025);
-
-        color: var(--color-base);
     }
 
     figcaption {
-        color: var(--color-base);
-
         letter-spacing: var(--letter-spacing-140);
 
         @include text-style(serif, italic);
@@ -260,8 +247,6 @@
 
     footer {
         display: block;
-
-        color: var(--color-base);
 
         text-align: right;
         letter-spacing: var(--letter-spacing-110);

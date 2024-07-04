@@ -344,6 +344,9 @@ summary {
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
+.page {
+  color: var(--color-base);
+}
 .page__breadcrumb {
   margin-bottom: var(--spacing-075);
   border-bottom: 1px var(--color-base) dotted;
@@ -1379,6 +1382,7 @@ summary {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
+  color: var(--color-base);
   /* -- headings --- */
   /* -- post date --- */
   /* -- activity --- */
@@ -1392,7 +1396,6 @@ summary {
   /* -- footer --- */
 }
 .markdown-body h1 {
-  color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
@@ -1400,7 +1403,6 @@ summary {
   line-height: var(--line-height-largest);
 }
 .markdown-body h2 {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1408,7 +1410,6 @@ summary {
   line-height: var(--line-height-larger);
 }
 .markdown-body h3 {
-  color: var(--color-base);
   letter-spacing: var(--letter-spacing-110);
   font-style: italic;
   font-weight: normal;
@@ -1417,7 +1418,6 @@ summary {
   line-height: var(--line-height-large);
 }
 .markdown-body h4 {
-  color: var(--color-primary-dark);
   letter-spacing: var(--letter-spacing-110);
   font-style: italic;
   font-weight: normal;
@@ -1426,7 +1426,6 @@ summary {
   line-height: var(--line-height-large);
 }
 .markdown-body h5 {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1434,7 +1433,6 @@ summary {
   line-height: var(--line-height-base);
 }
 .markdown-body h6 {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1455,7 +1453,6 @@ summary {
 }
 .markdown-body dl.activity {
   align-self: flex-start;
-  color: var(--color-base);
   letter-spacing: var(--letter-spacing-110);
   font-style: normal;
   font-weight: normal;
@@ -1492,7 +1489,6 @@ summary {
   content: "❦";
 }
 .markdown-body p {
-  color: var(--color-base);
   line-height: var(--line-height-large);
   letter-spacing: var(--letter-spacing-100);
   font-style: normal;
@@ -1566,7 +1562,6 @@ summary {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
-  color: var(--color-base);
   line-height: var(--line-height-large);
   letter-spacing: var(--letter-spacing-100);
   font-style: normal;
@@ -1590,10 +1585,8 @@ summary {
   display: flex;
   flex-direction: column;
   row-gap: var(--spacing-025);
-  color: var(--color-base);
 }
 .markdown-body figcaption {
-  color: var(--color-base);
   letter-spacing: var(--letter-spacing-140);
   font-style: italic;
   font-weight: normal;
@@ -1603,7 +1596,6 @@ summary {
 }
 .markdown-body footer {
   display: block;
-  color: var(--color-base);
   text-align: right;
   letter-spacing: var(--letter-spacing-110);
   font-style: italic;
