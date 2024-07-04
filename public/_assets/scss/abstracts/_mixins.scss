@@ -25,7 +25,6 @@
 }
 
 @mixin text-style($family, $style: normal, $weight: normal) {
-    color: var(--color-base);
     font-style: $style;
     font-weight: $weight;
 

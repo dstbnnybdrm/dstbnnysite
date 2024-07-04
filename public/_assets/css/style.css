@@ -127,7 +127,7 @@ a:link {
   color: var(--color-primary);
 }
 a:visited {
-  color: var(--color-primary-alt);
+  color: var(--color-primary);
 }
 a:hover {
   color: var(--color-secondary);
@@ -161,7 +161,6 @@ summary {
 
 .title {
   letter-spacing: var(--letter-spacing-110);
-  color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
@@ -171,7 +170,6 @@ summary {
 
 .heading {
   letter-spacing: var(--letter-spacing-120);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -181,7 +179,6 @@ summary {
 
 .subheading {
   letter-spacing: var(--letter-spacing-130);
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -190,7 +187,6 @@ summary {
 }
 
 .copy {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -200,7 +196,6 @@ summary {
 .copy i,
 .copy em,
 .copy cite {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -215,7 +210,6 @@ summary {
 }
 
 .small-print {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -225,7 +219,6 @@ summary {
 .small-print i,
 .small-print em,
 .small-print cite {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -237,7 +230,6 @@ summary {
   flex-direction: column;
   row-gap: var(--spacing-050);
   margin-left: var(--spacing-100);
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -255,7 +247,6 @@ summary {
 }
 
 .list {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -266,7 +257,6 @@ summary {
 .list i,
 .list em,
 .list cite {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -296,7 +286,6 @@ summary {
 .definition-list__term {
   display: inline;
   letter-spacing: var(--letter-spacing-110);
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -311,7 +300,6 @@ summary {
 }
 .definition-list__description {
   display: inline;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -333,13 +321,11 @@ summary {
   width: min-content;
 }
 .poem__title {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
 }
 .poem__body {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -349,7 +335,6 @@ summary {
   display: inline;
   color: var(--color-base);
   line-height: 1rem;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
@@ -410,7 +395,6 @@ summary {
   display: block;
   text-align: center;
   letter-spacing: var(--letter-spacing-120);
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -465,7 +449,6 @@ summary {
   grid-area: navi;
   display: flex;
   flex-direction: column;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -527,7 +510,6 @@ summary {
   .menu__heading {
     display: block;
     margin-bottom: var(--spacing-050);
-    color: var(--color-base);
     font-style: italic;
     font-weight: normal;
     font-family: var(--font-family-alt);
@@ -569,14 +551,12 @@ summary {
   .menu__section {
     margin-left: var(--spacing-175);
     list-style: "∟ ";
-    color: var(--color-base);
     font-style: normal;
     font-weight: normal;
     font-family: var(--font-family-base);
   }
   .menu__heading {
     display: list-item;
-    color: var(--color-base);
     font-style: normal;
     font-weight: normal;
     font-family: var(--font-family-base);
@@ -607,7 +587,6 @@ summary {
   width: 9.6rem;
   aspect-ratio: 1/1;
   text-align: center;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -627,7 +606,6 @@ summary {
   border: none;
   background-color: var(--color-primary);
   padding: var(--spacing-100);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -654,7 +632,6 @@ summary {
   grid-area: status;
 }
 .status #statuscafe #statuscafe-username {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -666,7 +643,6 @@ summary {
   content: "↗";
 }
 .status #statuscafe #statuscafe-content {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -693,7 +669,6 @@ summary {
   padding-top: var(--spacing-075);
 }
 .site-log__date {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -702,7 +677,6 @@ summary {
 }
 .site-log__type {
   letter-spacing: var(--letter-spacing-120);
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -716,7 +690,6 @@ summary {
   padding-top: var(--spacing-100);
 }
 .site-log__description {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -834,7 +807,6 @@ summary {
   flex-direction: column;
   grid-area: footer;
   gap: var(--spacing-025);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -947,7 +919,6 @@ summary {
 .card__title {
   letter-spacing: var(--letter-spacing-120);
   white-space: nowrap;
-  color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
@@ -956,7 +927,6 @@ summary {
 }
 .card__copy {
   letter-spacing: var(--letter-spacing-150);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1016,7 +986,6 @@ summary {
 }
 .feed__title {
   letter-spacing: var(--letter-spacing-120);
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -1042,7 +1011,6 @@ summary {
   border-collapse: collapse;
 }
 .table__row {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1052,7 +1020,6 @@ summary {
 .table__row i,
 .table__row em,
 .table__row cite {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -1063,7 +1030,6 @@ summary {
   padding: var(--spacing-100);
   text-align: left;
   letter-spacing: var(--letter-spacing-100);
-  color: var(--color-base);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
@@ -1085,7 +1051,6 @@ summary {
 }
 .figure__caption {
   letter-spacing: var(--letter-spacing-130);
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -1096,7 +1061,6 @@ summary {
 .ascii-art {
   color: var(--color-base);
   line-height: 1rem;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
@@ -1161,7 +1125,6 @@ summary {
 }
 .breadcrumb__crumb:not(:last-child)::after {
   margin: 0 var(--spacing-075);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1170,7 +1133,6 @@ summary {
   content: ">";
 }
 .breadcrumb__link {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1178,7 +1140,6 @@ summary {
   line-height: var(--line-height-small);
 }
 .breadcrumb__current {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -1191,7 +1152,6 @@ summary {
   border: 1px dotted var(--color-base);
   padding: var(--spacing-025);
   background: none;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
@@ -1415,17 +1375,26 @@ summary {
   }
 }
 
-/* ----- */
 .markdown-body {
   display: flex;
   flex-direction: column;
   row-gap: 1em;
-  color: var(--color-base);
+  /* -- headings --- */
+  /* -- post date --- */
+  /* -- activity --- */
+  /* -- horizontal/dinkus --- */
+  /* -- body copy --- */
+  /* -- quotes --- */
+  /* -- lists --- */
+  /* -- code --- */
+  /* -- table --- */
+  /* -- figure --- */
+  /* -- footer --- */
 }
 .markdown-body h1 {
   color: var(--color-base);
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-family: var(--font-family-base);
   font-size: var(--font-size-largest);
   line-height: var(--line-height-largest);
@@ -1470,15 +1439,46 @@ summary {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
-.markdown-body time {
-  color: var(--color-primary-light);
-  letter-spacing: var(--letter-spacing-100);
-  color: var(--color-base);
+.markdown-body p time.date {
+  align-self: flex-start;
+  padding: var(--spacing-025);
+  background-color: var(--color-primary-light);
+  color: var(--color-background);
+  letter-spacing: var(--letter-spacing-110);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
+}
+.markdown-body dl.activity {
+  align-self: flex-start;
+  color: var(--color-base);
+  letter-spacing: var(--letter-spacing-110);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+.markdown-body dl.activity dt {
+  display: inline;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+.markdown-body dl.activity dt::before {
+  display: block;
+  content: "";
+}
+.markdown-body dl.activity dt::after {
+  margin-inline: 1ch;
+  font-family: inherit;
+  content: ":";
+}
+.markdown-body dl.activity dd {
+  display: inline;
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
 }
 .markdown-body hr {
   border: none;
@@ -1490,9 +1490,9 @@ summary {
   content: "❦";
 }
 .markdown-body p {
+  color: var(--color-base);
   line-height: var(--line-height-large);
   letter-spacing: var(--letter-spacing-100);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1500,12 +1500,11 @@ summary {
   line-height: var(--line-height-base);
 }
 .markdown-body strong {
-  font-weight: bold;
   color: var(--color-primary-dark);
+  font-weight: bold;
 }
 .markdown-body em,
 .markdown-body cite {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -1521,6 +1520,11 @@ summary {
 }
 .markdown-body blockquote p::before, .markdown-body blockquote p::after {
   content: '"';
+  font-family: inherit;
+}
+.markdown-body q::before, .markdown-body q::after {
+  content: '"';
+  font-family: inherit;
 }
 .markdown-body ul,
 .markdown-body ol {
@@ -1531,24 +1535,11 @@ summary {
   display: list-item;
   margin-left: var(--spacing-175);
   letter-spacing: var(--letter-spacing-100);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-}
-.markdown-body ul li i,
-.markdown-body ul li em,
-.markdown-body ul li cite,
-.markdown-body ol li i,
-.markdown-body ol li em,
-.markdown-body ol li cite {
-  color: var(--color-base);
-  font-style: italic;
-  font-weight: normal;
-  font-family: var(--font-family-alt);
-  letter-spacing: var(--letter-spacing-110);
 }
 .markdown-body ul {
   list-style: "- ";
@@ -1561,9 +1552,8 @@ summary {
   border-bottom: 1px dashed var(--color-primary-dark);
   padding: var(--spacing-025);
 }
-.markdown-body pre code {
+.markdown-body code {
   letter-spacing: var(--letter-spacing-130);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
@@ -1574,9 +1564,9 @@ summary {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
+  color: var(--color-base);
   line-height: var(--line-height-large);
   letter-spacing: var(--letter-spacing-100);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1598,10 +1588,11 @@ summary {
   display: flex;
   flex-direction: column;
   row-gap: var(--spacing-025);
+  color: var(--color-base);
 }
 .markdown-body figcaption {
-  letter-spacing: var(--letter-spacing-140);
   color: var(--color-base);
+  letter-spacing: var(--letter-spacing-140);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -1610,88 +1601,14 @@ summary {
 }
 .markdown-body footer {
   display: block;
+  color: var(--color-base);
   text-align: right;
   letter-spacing: var(--letter-spacing-110);
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-}
-
-.blog-post__header {
-  display: inherit;
-  flex-direction: inherit;
-  margin-bottom: var(--spacing-150);
-}
-.blog-post__eyebrow {
-  margin-bottom: var(--spacing-050);
-  text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-130);
-  color: var(--color-base);
-  font-style: normal;
-  font-weight: bold;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-small);
-  line-height: var(--line-height-small);
-}
-.blog-post__activity {
-  margin-top: var(--spacing-100);
-  letter-spacing: var(--letter-spacing-110);
-  color: var(--color-base);
-  font-style: italic;
-  font-weight: normal;
-  font-family: var(--font-family-alt);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-.blog-post__heading {
-  line-height: var(--line-height-larger);
-  letter-spacing: var(--letter-spacing-120);
-  color: var(--color-base);
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-larger);
-  line-height: var(--line-height-larger);
-}
-.blog-post__quote {
-  display: block;
-  margin-top: var(--spacing-050);
-  margin-bottom: var(--spacing-050);
-  margin-left: var(--spacing-200);
-  letter-spacing: var(--letter-spacing-110);
-  color: var(--color-base);
-  font-style: italic;
-  font-weight: normal;
-  font-family: var(--font-family-alt);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-.blog-post__footer {
-  display: block;
-  text-align: right;
-  letter-spacing: var(--letter-spacing-110);
-  color: var(--color-base);
-  font-style: italic;
-  font-weight: normal;
-  font-family: var(--font-family-alt);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-@media screen and (min-width: 44rem) {
-  .blog-post {
-    max-width: var(--measure-max);
-    margin-inline: auto;
-    padding-top: var(--spacing-100);
-    /* show to guide user back outside of frame */
-  }
-  .blog-post__breadcrumb {
-    margin-bottom: var(--spacing-075);
-    border-bottom: 1px var(--color-base) dotted;
-    padding-bottom: var(--spacing-075);
-  }
 }
 
 .shrines {
@@ -1762,7 +1679,6 @@ summary {
   }
 }
 .rpg-maker .copy {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1770,35 +1686,30 @@ summary {
 }
 .rpg-maker .copy i,
 .rpg-maker .copy em {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-base);
   color: var(--colour-base);
 }
 .rpg-maker .title {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   color: var(--colour-base);
 }
 .rpg-maker .heading {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   color: var(--colour-base);
 }
 .rpg-maker .subheading {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   color: var(--colour-base);
 }
 .rpg-maker .list {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1809,7 +1720,6 @@ summary {
   width: min-content;
 }
 .rpg-maker .figure__caption {
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1906,7 +1816,6 @@ div #HCB_comment_box #hcb_msg {
   height: min-content;
   margin: var(--spacing-100) 0;
   text-transform: lowercase;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1915,7 +1824,6 @@ div #HCB_comment_box p.error {
   grid-area: comment-message;
   border: 1px solid var(--color-primary);
   text-transform: lowercase;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1937,7 +1845,6 @@ div #HCB_comment_box #HCB_comment_form_box {
   /* big "comment" button */
 }
 div #HCB_comment_box #HCB_comment_form_box .submit.btn {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1950,7 +1857,6 @@ div #HCB_comment_box #HCB_comment_form_box .submit.btn:hover, div #HCB_comment_b
   background: var(--color-secondary);
 }
 div #HCB_comment_box #HCB_comment_form_box button.btn.btn-secondary {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -1987,7 +1893,6 @@ input#hcb_form_name,
 textarea#hcb_form_content {
   border: 1px dotted var(--color-base);
   background: none;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
@@ -1997,7 +1902,6 @@ textarea#hcb_form_content {
 /* placeholder text */
 ::-webkit-input-placeholder {
   text-transform: lowercase;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
@@ -2006,7 +1910,6 @@ textarea#hcb_form_content {
 
 :-moz-placeholder {
   text-transform: lowercase;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
@@ -2015,7 +1918,6 @@ textarea#hcb_form_content {
 
 ::-moz-placeholder {
   text-transform: lowercase;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
@@ -2024,7 +1926,6 @@ textarea#hcb_form_content {
 
 :-ms-input-placeholder {
   text-transform: lowercase;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
@@ -2040,7 +1941,6 @@ textarea#hcb_form_content {
 }
 #comments_list #no_comments {
   text-transform: lowercase;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -2057,13 +1957,11 @@ textarea#hcb_form_content {
   margin: 0;
 }
 #comments_list p.hcb-comment-body {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
 }
 #comments_list b.author-name {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -2071,7 +1969,6 @@ textarea#hcb_form_content {
 #comments_list span.date {
   text-transform: lowercase;
   letter-spacing: var(--letter-spacing-140);
-  color: var(--color-base);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -2081,7 +1978,6 @@ textarea#hcb_form_content {
 #comments_list p.hcb-comment-tb button {
   text-transform: lowercase;
   color: var(--color-primary);
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -2089,7 +1985,6 @@ textarea#hcb_form_content {
   line-height: var(--line-height-small);
 }
 #comments_list .likes {
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -2125,7 +2020,6 @@ textarea#hcb_form_content {
   flex-direction: column;
   gap: var(--spacing-100);
   width: 100%;
-  color: var(--color-base);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -2139,7 +2033,6 @@ textarea#hcb_form_content {
   .sitemap__subheading {
     display: block;
     margin: var(--spacing-100) 0;
-    color: var(--color-base);
     font-style: normal;
     font-weight: normal;
   }
@@ -2167,7 +2060,6 @@ textarea#hcb_form_content {
 @media screen and (min-width: 801px) {
   .sitemap__subheading {
     display: list-item;
-    color: var(--color-base);
     font-style: normal;
     font-weight: normal;
     font-family: var(--font-family-base);
@@ -2177,7 +2069,6 @@ textarea#hcb_form_content {
   .sitemap__list {
     margin-left: var(--spacing-175);
     line-height: var(--spacing-150);
-    color: var(--color-base);
     font-style: normal;
     font-weight: normal;
     font-family: var(--font-family-base);
