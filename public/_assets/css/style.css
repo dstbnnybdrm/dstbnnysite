@@ -492,6 +492,9 @@ summary {
   .navi__button {
     display: none;
   }
+  .navi__link {
+    align-self: flex-start;
+  }
 }
 
 .menu__dropdown {
@@ -738,6 +741,7 @@ summary {
   flex-direction: column;
   gap: var(--spacing-100);
   padding: var(--spacing-100);
+  color: var(--color-base);
 }
 .mainframe__breadcrumb {
   display: none;
