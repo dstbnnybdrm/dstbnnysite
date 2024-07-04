@@ -1409,17 +1409,19 @@ summary {
 }
 .markdown-body h3 {
   color: var(--color-base);
-  font-style: normal;
+  letter-spacing: var(--letter-spacing-110);
+  font-style: italic;
   font-weight: normal;
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-alt);
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
 }
 .markdown-body h4 {
-  color: var(--color-base);
-  font-style: normal;
+  color: var(--color-primary-dark);
+  letter-spacing: var(--letter-spacing-110);
+  font-style: italic;
   font-weight: normal;
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-alt);
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
 }

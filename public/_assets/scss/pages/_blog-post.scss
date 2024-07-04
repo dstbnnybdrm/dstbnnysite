@@ -29,15 +29,19 @@
 
     h3 {
         color: var(--color-base);
-        @include text-style(sans);
+        letter-spacing: var(--letter-spacing-110);
+        @include text-style(serif, italic);
         @include text-size(large);
     }
 
     h4 {
-        color: var(--color-base);
-        @include text-style(sans);
+        color: var(--color-primary-dark);
+        letter-spacing: var(--letter-spacing-110);
+        @include text-style(serif, italic);
         @include text-size(large);
     }
+
+    // probably won't ever use these lol
 
     h5 {
         color: var(--color-base);
