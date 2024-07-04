@@ -9,7 +9,7 @@
 
 /* ----- */
 
-.blog-post {
+.markdown-body {
     display: flex;
 
     flex-direction: column;
@@ -17,6 +17,188 @@
 
     color: var(--color-base);
 
+    h1 {
+        @include text-style(sans);
+        @include text-size(largest);
+    }
+
+    h2 {
+        @include text-style(sans);
+        @include text-size(larger);
+    }
+
+    h3 {
+        @include text-style(sans);
+        @include text-size(large);
+    }
+
+    h4 {
+        @include text-style(sans);
+        @include text-size(large);
+    }
+
+    h5 {
+        @include text-style(sans);
+        @include text-size(base);
+    }
+
+    h6 {
+        @include text-style(sans);
+        @include text-size(base);
+    }
+
+    time {
+        color: var(--color-primary-light);
+
+        letter-spacing: var(--letter-spacing-100);
+
+        @include text-style(serif, italic);
+        @include text-size(base);
+    }
+
+    hr {
+        border: none;
+        &::before {
+            display: block;
+
+            color: var(--color-base);
+            text-align: center;
+
+            content: "❦";
+        }
+    }
+
+    p {
+        line-height: var(--line-height-large);
+        letter-spacing: var(--letter-spacing-100);
+        // text-indent: 2rem;
+
+        @include text-style(sans);
+        @include text-size(base);
+    }
+
+    strong {
+        font-weight: bold;
+        color: var(--color-primary-dark);
+    }
+
+    em,
+    cite {
+        @include text-style(serif, italic);
+    }
+
+    blockquote {
+        // margin-left: var(--spacing-025);
+        border-left: 4px solid var(--color-primary-dark);
+        padding-left: var(--spacing-150);
+
+        p {
+            padding-top: var(--spacing-025);
+            padding-right: var(--spacing-025);
+            padding-bottom: var(--spacing-025);
+
+            &::before,
+            &::after {
+                content: '"';
+            }
+        }
+    }
+
+    ul,
+    ol {
+        display: block;
+
+        li {
+            display: list-item;
+
+            @include list-margin();
+
+            letter-spacing: var(--letter-spacing-100);
+
+            @include text-style(sans);
+            @include text-size(base);
+
+            @include emphasis-serif();
+        }
+    }
+
+    ul {
+        list-style: "- ";
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    pre {
+        // background-color: var(--color-primary-light);
+        border-top: 1px dashed var(--color-primary-dark);
+        border-bottom: 1px dashed var(--color-primary-dark);
+        padding: var(--spacing-025);
+
+        code {
+            letter-spacing: var(--letter-spacing-130);
+
+            @include text-style(mono);
+            @include text-size(base);
+        }
+    }
+
+    table {
+        width: 100%;
+        // @include list-margin();
+
+        table-layout: fixed;
+        border-collapse: collapse;
+
+        line-height: var(--line-height-large);
+        letter-spacing: var(--letter-spacing-100);
+        // text-indent: 2rem;
+
+        @include text-style(sans);
+        @include text-size(base);
+    }
+
+    th,
+    td {
+        padding: var(--spacing-025);
+        border-bottom: 1px dotted var(--color-base);
+    }
+
+    thead {
+        text-align: left;
+        tr {
+            // background-color: green;
+            border-bottom: 2px solid var(--color-base);
+        }
+    }
+
+    figure {
+        display: flex;
+
+        flex-direction: column;
+        row-gap: var(--spacing-025);
+    }
+
+    figcaption {
+        letter-spacing: var(--letter-spacing-140);
+
+        @include text-style(serif, italic);
+        @include text-size(small);
+    }
+
+    footer {
+        display: block;
+
+        text-align: right;
+        letter-spacing: var(--letter-spacing-110);
+
+        @include text-style(serif, italic);
+        @include text-size(base);
+    }
+}
+
+.blog-post {
     &__header {
         display: inherit;
 
@@ -36,20 +218,6 @@
         @include text-size(small);
     }
 
-    &__title {
-        letter-spacing: var(--letter-spacing-110);
-
-        @include text-style(sans, normal, bold);
-        @include text-size(largest);
-    }
-
-    &__date {
-        letter-spacing: var(--letter-spacing-100);
-
-        @include text-style(serif, italic);
-        @include text-size(large);
-    }
-
     &__activity {
         margin-top: var(--spacing-100);
 
@@ -67,24 +235,6 @@
         @include text-size(larger);
     }
 
-    &__copy {
-        line-height: var(--line-height-large);
-        letter-spacing: var(--letter-spacing-100);
-        text-indent: 2rem;
-
-        @include text-style(sans);
-        @include text-size(base);
-
-        @include emphasis-serif();
-    }
-
-    &__code {
-        letter-spacing: var(--letter-spacing-130);
-
-        @include text-style(mono);
-        @include text-size(base);
-    }
-
     &__quote {
         display: block;
 
@@ -96,49 +246,6 @@
         @include text-size(base);
     }
 
-    &__list {
-        display: block;
-
-        list-style: "- ";
-
-        &_ordered {
-            list-style-type: decimal;
-        }
-    }
-
-    &__list-item {
-        display: list-item;
-
-        @include list-margin();
-
-        letter-spacing: var(--letter-spacing-100);
-
-        @include text-style(sans);
-        @include text-size(base);
-
-        @include emphasis-serif();
-    }
-
-    &__figure {
-        display: flex;
-
-        flex-direction: column;
-        row-gap: var(--spacing-025);
-
-        @include figure-margin();
-    }
-
-    &__figure-caption {
-        letter-spacing: var(--letter-spacing-140);
-
-        @include text-style(serif, italic);
-        @include text-size(small);
-    }
-
-    &__figure-body {
-        width: 83%;
-    }
-
     &__footer {
         display: block;
 
@@ -147,18 +254,6 @@
 
         @include text-style(serif, italic);
         @include text-size(base);
-    }
-
-    &__dinkus {
-        border: none;
-        &::before {
-            display: block;
-
-            color: var(--color-base);
-            text-align: center;
-
-            content: "❦";
-        }
     }
 
     @include for-in-frame() {
