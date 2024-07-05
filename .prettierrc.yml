@@ -10,16 +10,16 @@ trailingComma: all
 singleAttributePerLine: false
 htmlWhitespaceSensitivity: css
 vueIndentScriptAndStyle: false
-proseWrap: preserve
+proseWrap: always
 insertPragma: false
 printWidth: 80
 requirePragma: false
 tabWidth: 2
 overrides:
-  - files: 
-    - "**/*.css"
-    - "**/*.scss"
-    - "**/*.js"
+  - files:
+      - "**/*.css"
+      - "**/*.scss"
+      - "**/*.js"
     options:
       tabWidth: 4
 useTabs: false
