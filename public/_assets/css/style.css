@@ -48,7 +48,7 @@
 
 /* *~  GLOBAL RESETS  ~* 
  *
- * taken from here, very slightly modified:
+ * very slightly modified from here:
  * https://www.joshwcomeau.com/css/custom-css-reset/
  */
 /* less shitty box-sizing (border-based instead of content-based) */
@@ -62,7 +62,9 @@
 * {
   margin: 0;
   padding: 0;
+  /* use the default scrollbar width for the platform, if applicable */
   scrollbar-width: auto;
+  /* set root font size; all REM values are relative to this */
   font-size: 14px;
   scrollbar-width: thin;
 }
@@ -75,10 +77,9 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-  image-rendering: pixelated;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
+  /* disable anti-alias (for pixel art and etc., we WANT the pixel jaggedness
+   * lol) */
+  image-rendering: pixelated; /*            Universal support since 2021 */
 }
 
 /* remove form typography styles */
@@ -150,7 +151,6 @@ a:hover img {
 
 /* - other - */
 abbr {
-  text-decoration: none;
   font: inherit;
   background: none;
 }
@@ -1446,7 +1446,7 @@ summary {
 .markdown-body p time.date {
   align-self: flex-start;
   padding: var(--spacing-025);
-  background-color: var(--color-primary-lo-contrast);
+  background-color: var(--color-primary);
   color: var(--color-background);
   letter-spacing: var(--letter-spacing-110);
   font-style: italic;
@@ -2086,7 +2086,7 @@ textarea#hcb_form_content {
 :root[data-theme=light] {
   color-scheme: light;
   --color-primary: #c43162; /*                  rose red              */
-  --color-primary-lo-contrast: #e296ae; /*      amaranth pink         */
+  --color-primary-lo-contrast: #d36488; /*      amaranth pink         */
   --color-primary-hi-contrast: #932550; /*      quinacridone magenta  */
   --color-secondary: #4f9c86; /*                zomp                  */
   --color-secondary-lo-contrast: #a7cbc0; /*    ash gray              */

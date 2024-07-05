@@ -1,6 +1,6 @@
 /* *~  GLOBAL RESETS  ~* 
  *
- * taken from here, very slightly modified:
+ * very slightly modified from here:
  * https://www.joshwcomeau.com/css/custom-css-reset/
  */
 
@@ -16,15 +16,13 @@
     margin: 0;
     padding: 0;
 
-    // use the default scrollbar width for the platform, if applicable
+    /* use the default scrollbar width for the platform, if applicable */
     scrollbar-width: auto;
 
-    // set root font size; all rem relative to this
+    /* set root font size; all REM values are relative to this */
     font-size: 14px;
 
     scrollbar-width: thin;
-
-    // border: 1px solid green;
 }
 
 /* improve media defaults */
@@ -37,12 +35,12 @@ svg {
 
     max-width: 100%;
 
-    // (try) to disable anti-alias (for pixel art and etc., we WANT the
-    // pixel jaggedness lol)
-    image-rendering: pixelated; // Universal support since 2021
-    image-rendering: -moz-crisp-edges; //           for Firefox
-    image-rendering: -o-crisp-edges; //             for Opera
-    image-rendering: -webkit-optimize-contrast; //  for Chrome
+    /* disable anti-alias (for pixel art and etc., we WANT the pixel jaggedness
+     * lol) */
+    image-rendering: pixelated; /*            Universal support since 2021 */
+    // image-rendering: -moz-crisp-edges; //           for Firefox
+    // image-rendering: -o-crisp-edges; //             for Opera
+    // image-rendering: -webkit-optimize-contrast; //  for Chrome
 }
 
 /* remove form typography styles */
@@ -125,7 +123,7 @@ a {
 /* - other - */
 
 abbr {
-    text-decoration: none;
+    // text-decoration: none;
     font: inherit;
     background: none;
 }
