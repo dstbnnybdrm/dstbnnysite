@@ -214,6 +214,7 @@ textarea#hcb_form_content {
     }
 
     span.date {
+        color: var(--color-primary-hi-contrast);
         text-transform: lowercase;
 
         letter-spacing: var(--letter-spacing-140);

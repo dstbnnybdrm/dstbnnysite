@@ -1962,6 +1962,7 @@ textarea#hcb_form_content {
   font-family: var(--font-family-base);
 }
 #comments_list span.date {
+  color: var(--color-primary-hi-contrast);
   text-transform: lowercase;
   letter-spacing: var(--letter-spacing-140);
   font-style: italic;
