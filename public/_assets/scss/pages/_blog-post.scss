@@ -57,7 +57,7 @@
         align-self: flex-start; // don't take up full width
 
         padding: var(--spacing-025);
-        background-color: var(--color-primary-light);
+        background-color: var(--color-primary-lo-contrast);
 
         color: var(--color-background);
 
@@ -122,7 +122,7 @@
     }
 
     strong {
-        color: var(--color-primary-dark);
+        color: var(--color-primary-hi-contrast);
 
         font-weight: bold;
     }
@@ -135,7 +135,7 @@
     /* -- quotes --- */
 
     blockquote {
-        border-left: 4px solid var(--color-primary-dark);
+        border-left: 4px solid var(--color-primary-hi-contrast);
         padding-left: var(--spacing-150);
 
         p {
@@ -188,8 +188,8 @@
     /* -- code --- */
 
     pre {
-        border-top: 1px dashed var(--color-primary-dark);
-        border-bottom: 1px dashed var(--color-primary-dark);
+        border-top: 1px dashed var(--color-primary-hi-contrast);
+        border-bottom: 1px dashed var(--color-primary-hi-contrast);
         padding: var(--spacing-025);
     }
 
