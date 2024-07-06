@@ -1,0 +1,107 @@
+@use "base/base";
+@use "base/reset";
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
+/* -- GLOBAL -- */
+
+/* links */
+a {
+    text-decoration: initial;
+    text-decoration-style: solid;
+
+    &:link {
+        color: #9999ff;
+    }
+
+    &:active {
+        color: #9999ff;
+    }
+
+    &:visited {
+        color: #666699;
+    }
+
+    &:hover {
+        color: #cccc00;
+    }
+}
+
+p {
+    line-height: var(--line-height-base);
+}
+
+/* -- HTML-SPECIFIC -- */
+
+body {
+    background-color: black;
+
+    color: #f30000;
+
+    font-family: var(--font-family-base);
+
+    .page {
+        display: flex;
+
+        @include for-viewport-size(desktop) {
+            height: 100vh;
+        }
+    }
+
+    .navi {
+        display: flex;
+
+        flex-direction: column;
+        flex-shrink: 0;
+        gap: var(--spacing-200);
+
+        // &__image {
+        // }
+
+        // &__footer {
+        // }
+
+        @include for-viewport-size(desktop) {
+            align-items: center;
+
+            width: 14rem;
+            border-right: 0.3rem solid white;
+            padding: var(--spacing-100);
+
+            text-align: center;
+        }
+
+        // @include for-viewport-size(phone) {
+        //     padding-bottom: var(--spacing-100);
+        //     border-bottom: var(--border-style);
+        // }
+    }
+
+    .main {
+        display: flex;
+
+        flex-direction: column;
+        gap: var(--spacing-100);
+
+        padding: var(--spacing-100);
+        overflow-y: scroll;
+
+        max-width: var(--measure-max);
+
+        &__header {
+            display: flex;
+
+            flex-direction: column;
+            gap: var(--spacing-100);
+        }
+    }
+}
+
+/* -- MARKDOWN-SPECIFIC -- */
+
+.markdown-body {
+    display: flex;
+
+    flex-direction: column;
+    gap: var(--spacing-100);
+}
