@@ -1,31 +1,19 @@
-<header class="section__header">
-  <h3 class="heading" id="yume-nikki">Yume Nikki</h3>
+## Yume Nikki
 
-  <ul class="list">
-    <li class="list__item">
-      <a href="http://yume-nikki.com/">official website</a>
-    </li>
-    <li class="list__item">
-      <a href="https://yumenikki.fandom.com/wiki/Yume_Nikki_Wiki"
-        >fan wiki</a
-      >
-    </li>
-    <li class="list__item">
-      <a href="https://www3.nns.ne.jp/~tk-mto/index.html"
-        >KIKIYAMA's website (in Japanese)</a
-      >
-    </li>
-  </ul>
+- [official website](http://yume-nikki.com/)
+- [fan wiki](https://yumenikki.fandom.com/wiki/Yume_Nikki_Wiki)
+- [KIKIYAMA's website (in Japanese)](https://www3.nns.ne.jp/~tk-mto/index.html)
 
-  <marquee class="marquee" direction="right">
+<marquee class="marquee" direction="right">
     <img
       class=""
       src="/_assets/img/shrines/rpg-maker/Madotsuki_walk_side_big.webp"
       alt=""
       width="100px"
     />
-  </marquee>
-</header>
+</marquee>
+
+---
 
 it's truly difficult to put into words anything that hasn't been said before
 about this game. i think the easiest and only complete way to get a sense of it
@@ -194,9 +182,10 @@ the sky, but i'll leave those for you to discover.
 
 just a few years after its initial release <cite>Yume Nikki</cite> rapidly
 became a niche cult classic on the internet, and lately i've seen an increase in
-interest as the culture around "liminal spaces" continues to grow. it was so
-unlike anything else, and still is to an extent. the only other comparable piece
-of media i can think of is
+interest as the culture around
+"[liminal spaces](<https://en.wikipedia.org/wiki/Liminal_space_(aesthetic)>)"
+continues to grow. it was so unlike anything else, and still is to an extent.
+the only other comparable piece of media i can think of is
 [<cite>LSD: Dream Emulator</cite>](https://en.wikipedia.org/wiki/LSD:_Dream_Emulator)
 , which was released exclusively in Japan about half a decade earlier for the
 Playstation. let's keep in mind that this was developed in <cite>RPG Maker

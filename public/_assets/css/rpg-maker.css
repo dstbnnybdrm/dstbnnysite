@@ -168,7 +168,23 @@ a:hover {
 }
 
 p {
+  display: block;
   line-height: var(--line-height-base);
+}
+
+hr {
+  color: #222244;
+}
+
+/* for Firefox */
+::-moz-selection {
+  background-color: #3399ff;
+  color: white;
+}
+
+::selection {
+  background-color: #3399ff;
+  color: white;
 }
 
 /* -- HTML-SPECIFIC -- */
@@ -177,41 +193,76 @@ body {
   color: #f30000;
   font-family: var(--font-family-base);
 }
+body section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
 body .page {
   display: flex;
 }
+@media screen and (max-width: 800px) {
+  body .page {
+    flex-direction: column;
+    max-width: var(--measure-max);
+    margin-inline: auto;
+  }
+}
 @media screen and (min-width: 801px) {
   body .page {
+    flex-direction: row;
     height: 100vh;
   }
 }
 body .navi {
+  --navi-border: 0.3rem solid white;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  align-items: center;
   gap: var(--spacing-200);
+  padding: var(--spacing-100);
+  text-align: center;
+}
+body .navi hr {
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  body .navi {
+    border-bottom: var(--navi-border);
+  }
 }
 @media screen and (min-width: 801px) {
   body .navi {
-    align-items: center;
     width: 14rem;
-    border-right: 0.3rem solid white;
-    padding: var(--spacing-100);
-    text-align: center;
+    border-right: var(--navi-border);
+    overflow: hidden;
+    resize: inline;
   }
+}
+body .navi-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  list-style: none;
 }
 body .main {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
   padding: var(--spacing-100);
-  overflow-y: scroll;
-  max-width: var(--measure-max);
+  margin-inline: auto;
+  overflow-y: auto;
 }
 body .main__header {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
+}
+@media screen and (min-width: 801px) {
+  body .main {
+    max-width: var(--measure-max);
+  }
 }
 
 /* -- MARKDOWN-SPECIFIC -- */
@@ -219,6 +270,24 @@ body .main__header {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
+}
+.markdown-body ul {
+  margin-left: 4ch;
+}
+.markdown-body figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  margin: var(--spacing-100) 0;
+  text-align: center;
+}
+.markdown-body figure img,
+.markdown-body figure iframe {
+  width: 320px;
+  margin-inline: auto;
+}
+.markdown-body figure figcaption {
+  font-style: italic;
 }
 
 /*# sourceMappingURL=rpg-maker.css.map */
