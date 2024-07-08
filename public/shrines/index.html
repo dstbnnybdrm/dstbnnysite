@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- meta tags -->
-    <title>shrines &mdash; dstbnnybdrm</title>
-    <meta name="description" content="a home for my hyperfixations." />
+    <title>shrines &mdash; dustbunnybedroom</title>
+    <meta
+      name="description"
+      content="a place to ramble on about my hyperfixations."
+    />
     <meta name="author" content="jp" />
 
     <!-- open graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="dustbunnybedroom" />
-    <meta property="og:title" content="shrines &mdash; dstbnnybdrm" />
-    <meta property="og:description" content="a home for my hyperfixations." />
+    <meta property="og:title" content="shrines &mdash; dustbunnybedroom" />
+    <meta
+      property="og:description"
+      content="a place to ramble on about my hyperfixations."
+    />
     <meta
       property="og:url"
       content="https://dustbunnybedroom.neocities.org/shrines/"
@@ -36,42 +42,58 @@
   </head>
 
   <body class="l-imposter">
-    <div class="page page_simple">
-      <main class="main main_borderless">
+    <div class="shrines page">
+      <nav class="breadcrumb page__breadcrumb" aria-label="Breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__crumb">
+            <a class="breadcrumb__link" href="/hub?p=/home">home</a>
+          </li>
+          <li class="breadcrumb__crumb">
+            <a class="breadcrumb__link" href="/shrines/">shrines</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="main shrines__main">
         <h1 class="title">shrines</h1>
 
-        <p class="copy">a home for my hyperfixations.</p>
+        <p class="copy">a place to ramble on about my hyperfixations.</p>
 
-        <nav>
-          <ul class="list">
-            <li class="list__item">
-              <a href="./rpg-maker.html">RPG Maker games</a>
+        <nav class="image-navi">
+          <ul class="image-navi__list">
+            <li class="image-navi__item">
+              <a class="image-navi__link" href="./rpg-maker.html">
+                <img
+                  class="image-navi__image"
+                  src="/_assets/img/shrines/rpg-maker.gif"
+                  alt=""
+                />
+                RPG Maker games</a
+              >
             </li>
-            <!-- <li class="list__item"> -->
-            <!--   <a href="">Nyan~ Neko Sugar Girls</a> -->
+            <!-- <li class="image-navi__item"> -->
+            <!--   <span class="image-navi__link inactive-link"> -->
+            <!--     <img -->
+            <!--       class="image-navi__image" -->
+            <!--       src="../_assets/img/breakdancing-cat.gif" -->
+            <!--       alt="" -->
+            <!--     /> -->
+            <!--     <abbr title="to be determined">TBD</abbr></span -->
+            <!--   > -->
             <!-- </li> -->
           </ul>
         </nav>
-
-        <footer class="main__footer">
-          <p class="copy">
-            (last updated
-            <time datetime="2024-03-26">mon, april 15th, 2024</time>)
-          </p>
-        </footer>
       </main>
 
-      <nav class="navi navi_borderless">
-        <a href="/hub?p=/home" class="navi__link">head back?</a>
-      </nav>
-
-      <!-- <main id="main" class="main page__main page__main_borderless"> -->
-      <!--   <iframe -->
-      <!--     class="main__frame" -->
-      <!--     name="mainframe" -->
-      <!--     title="main content" -->
-      <!--   ></iframe> -->
-      <!-- </main> -->
+      <footer class="footer page__footer">
+        <div id="footer"></div>
+      </footer>
+      <!-- <footer class="main__footer"> -->
+      <!--   <p class="copy"> -->
+      <!--     (last updated -->
+      <!--     <time datetime="2024-03-26">mon, april 15th, 2024</time>) -->
+      <!--   </p> -->
+      <!-- </footer> -->
     </div>
   </body>
 </html>

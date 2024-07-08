@@ -1,6 +1,6 @@
 /* *~  GLOBAL RESETS  ~* 
  *
- * taken from here, very slightly modified:
+ * very slightly modified from here:
  * https://www.joshwcomeau.com/css/custom-css-reset/
  */
 
@@ -16,10 +16,10 @@
     margin: 0;
     padding: 0;
 
-    // use the default scrollbar width for the platform, if applicable
+    /* use the default scrollbar width for the platform, if applicable */
     scrollbar-width: auto;
 
-    // set root font size; all rem relative to this
+    /* set root font size; all REM values are relative to this */
     font-size: 14px;
 
     scrollbar-width: thin;
@@ -35,12 +35,12 @@ svg {
 
     max-width: 100%;
 
-    // (try) to disable anti-alias (for pixel art and etc., we WANT the
-    // pixel jaggedness lol)
-    image-rendering: pixelated; // Universal support since 2021
-    image-rendering: -moz-crisp-edges; //           for Firefox
-    image-rendering: -o-crisp-edges; //             for Opera
-    image-rendering: -webkit-optimize-contrast; //  for Chrome
+    /* disable anti-alias (for pixel art and etc., we WANT the pixel jaggedness
+     * lol) */
+    image-rendering: pixelated; /*            Universal support since 2021 */
+    // image-rendering: -moz-crisp-edges; //           for Firefox
+    // image-rendering: -o-crisp-edges; //             for Opera
+    // image-rendering: -webkit-optimize-contrast; //  for Chrome
 }
 
 /* remove form typography styles */
@@ -76,37 +76,34 @@ body {
 
 /* - links - */
 
-a {
-    text-decoration-style: dotted;
-
-    // img {
-    //     border: 1px dotted var(--color-primary);
-    // }
-}
-
 /* add marker for external links */
 a[rel*="external"] {
+    /* but NOT on images! */
     &:not(:has(img))::after {
         content: " ↗";
     }
 }
 
-a:link {
-    color: var(--color-primary);
-}
+a {
+    text-decoration-style: dotted;
 
-a:visited {
-    color: var(--color-primary-alt);
-}
+    &:link {
+        color: var(--color-primary);
+    }
 
-a:hover {
-    color: var(--color-secondary);
+    &:visited {
+        color: var(--color-primary);
+    }
 
-    img {
-        // border: 1px dotted var(--color-secondary);
+    &:hover {
+        color: var(--color-secondary);
 
-        filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
-            brightness(91%) contrast(87%);
+        img {
+            // border: 1px dotted var(--color-secondary);
+
+            filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
+                brightness(91%) contrast(87%);
+        }
     }
 }
 
@@ -126,7 +123,7 @@ a:hover {
 /* - other - */
 
 abbr {
-    text-decoration: none;
+    // text-decoration: none;
     font: inherit;
     background: none;
 }

@@ -11,13 +11,13 @@
     @include text-style(sans);
     @include text-size(base);
 
-    @include layout-border();
-    @include layout-padding();
+    // @include layout-border();
+    // @include layout-padding();
 
     @include for-viewport-size(phone) {
         gap: var(--spacing-100);
 
-        border: none;
+        // border: none;
         padding: 0;
 
         &__link {
@@ -46,12 +46,18 @@
     }
 
     @include for-viewport-size(desktop) {
-        &_borderless {
-            border: none;
-        }
+        // &_borderless {
+        //     border: none;
+        // }
 
         &__button {
             display: none;
+        }
+
+        &__link {
+            // display: inline-block;
+            align-self: flex-start;
+            // width: min-content;
         }
     }
 }
@@ -147,5 +153,40 @@
 
         &__link {
         }
+    }
+}
+
+.image-navi {
+    &__list {
+        display: flex;
+
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+        gap: var(--spacing-200);
+    }
+
+    &__item {
+        display: contents;
+    }
+
+    &__link {
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--spacing-100);
+
+        width: 9.6rem;
+        aspect-ratio: 1 / 1;
+
+        text-align: center;
+        @include text-style(sans);
+        @include text-size(base);
+    }
+
+    &__image {
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
     }
 }

@@ -7,9 +7,7 @@
     margin-left: var(--spacing-200);
 }
 
-/* ----- */
-
-.blog-post {
+.markdown-body {
     display: flex;
 
     flex-direction: column;
@@ -17,77 +15,51 @@
 
     color: var(--color-base);
 
-    &__header {
-        display: inherit;
+    /* -- headings --- */
 
-        flex-direction: inherit;
-
-        margin-bottom: var(--spacing-150);
-    }
-
-    &__eyebrow {
-        margin-bottom: var(--spacing-050);
-
-        text-transform: uppercase;
-
-        letter-spacing: var(--letter-spacing-130);
-
-        @include text-style(sans, normal, bold);
-        @include text-size(small);
-    }
-
-    &__title {
-        letter-spacing: var(--letter-spacing-110);
-
+    h1 {
         @include text-style(sans, normal, bold);
         @include text-size(largest);
     }
 
-    &__date {
-        letter-spacing: var(--letter-spacing-100);
-
-        @include text-style(serif, italic);
-        @include text-size(large);
-    }
-
-    &__activity {
-        margin-top: var(--spacing-100);
-
-        letter-spacing: var(--letter-spacing-110);
-
-        @include text-style(serif, italic);
-        @include text-size(base);
-    }
-
-    &__heading {
-        line-height: var(--line-height-larger);
-        letter-spacing: var(--letter-spacing-120);
-
+    h2 {
         @include text-style(sans);
         @include text-size(larger);
     }
 
-    &__copy {
-        line-height: var(--line-height-large);
-        letter-spacing: var(--letter-spacing-100);
+    h3 {
+        letter-spacing: var(--letter-spacing-110);
+        @include text-style(serif, italic);
+        @include text-size(large);
+    }
 
+    h4 {
+        letter-spacing: var(--letter-spacing-110);
+        @include text-style(serif, italic);
+        @include text-size(large);
+    }
+
+    // probably won't ever use these lol
+
+    h5 {
         @include text-style(sans);
         @include text-size(base);
-
-        @include emphasis-serif();
     }
 
-    &__code {
-        letter-spacing: var(--letter-spacing-130);
-
-        @include text-style(mono);
+    h6 {
+        @include text-style(sans);
         @include text-size(base);
     }
 
-    &__quote {
-        display: block;
+    /* -- post date --- */
 
-        @include figure-margin();
+    p time.date {
+        align-self: flex-start; // don't take up full width
+
+        padding: var(--spacing-025);
+        background-color: var(--color-primary);
+
+        color: var(--color-background);
 
         letter-spacing: var(--letter-spacing-110);
 
@@ -95,60 +67,40 @@
         @include text-size(base);
     }
 
-    &__list {
-        display: block;
+    /* -- activity --- */
 
-        list-style: "- ";
+    dl.activity {
+        align-self: flex-start;
+        letter-spacing: var(--letter-spacing-110);
 
-        &_ordered {
-            list-style-type: decimal;
+        @include text-style(sans);
+        @include text-size(small);
+
+        dt {
+            display: inline;
+            @include text-size(small);
+
+            &::before {
+                display: block;
+                content: "";
+            }
+
+            &::after {
+                margin-inline: 1ch;
+                font-family: inherit;
+                content: ":";
+            }
+        }
+
+        dd {
+            display: inline;
+            @include text-size(small);
         }
     }
 
-    &__list-item {
-        display: list-item;
+    /* -- horizontal/dinkus --- */
 
-        @include list-margin();
-
-        letter-spacing: var(--letter-spacing-100);
-
-        @include text-style(sans);
-        @include text-size(base);
-
-        @include emphasis-serif();
-    }
-
-    &__figure {
-        display: flex;
-
-        flex-direction: column;
-        row-gap: var(--spacing-025);
-
-        @include figure-margin();
-    }
-
-    &__figure-caption {
-        letter-spacing: var(--letter-spacing-140);
-
-        @include text-style(serif, italic);
-        @include text-size(small);
-    }
-
-    &__figure-body {
-        width: 83%;
-    }
-
-    &__footer {
-        display: block;
-
-        text-align: right;
-        letter-spacing: var(--letter-spacing-110);
-
-        @include text-style(serif, italic);
-        @include text-size(base);
-    }
-
-    &__dinkus {
+    hr {
         border: none;
         &::before {
             display: block;
@@ -160,16 +112,218 @@
         }
     }
 
-    @include for-in-frame() {
-        max-width: var(--measure-max);
-        margin-inline: auto;
-        padding-top: var(--spacing-100);
+    /* -- body copy --- */
 
-        /* show to guide user back outside of frame */
-        &__breadcrumb {
-            margin-bottom: var(--spacing-075);
-            border-bottom: 1px var(--color-base) dotted;
-            padding-bottom: var(--spacing-075);
+    p {
+        line-height: var(--line-height-large);
+        letter-spacing: var(--letter-spacing-100);
+        @include text-style(sans);
+        @include text-size(base);
+    }
+
+    strong {
+        color: var(--color-primary-hi-contrast);
+
+        font-weight: bold;
+    }
+
+    em,
+    cite {
+        @include text-style(serif, italic);
+    }
+
+    /* -- quotes --- */
+
+    blockquote {
+        border-left: 4px solid var(--color-primary-hi-contrast);
+        padding-left: var(--spacing-150);
+
+        p {
+            padding-top: var(--spacing-025);
+            padding-right: var(--spacing-025);
+            padding-bottom: var(--spacing-025);
+
+            &::before,
+            &::after {
+                content: '"';
+                font-family: inherit;
+            }
         }
     }
+
+    q {
+        &::before,
+        &::after {
+            content: '"';
+            font-family: inherit;
+        }
+    }
+
+    /* -- lists --- */
+
+    ul,
+    ol {
+        display: block;
+
+        li {
+            display: list-item;
+
+            @include list-margin();
+
+            letter-spacing: var(--letter-spacing-100);
+
+            @include text-style(sans);
+            @include text-size(base);
+        }
+    }
+
+    ul {
+        list-style: "- ";
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    /* -- code --- */
+
+    pre {
+        border-top: 1px dashed var(--color-primary-hi-contrast);
+        border-bottom: 1px dashed var(--color-primary-hi-contrast);
+        padding: var(--spacing-025);
+    }
+
+    code {
+        letter-spacing: var(--letter-spacing-130);
+        @include text-style(mono);
+        @include text-size(base);
+    }
+
+    /* -- table --- */
+
+    table {
+        width: 100%;
+        // @include list-margin();
+
+        table-layout: fixed;
+        border-collapse: collapse;
+
+        line-height: var(--line-height-large);
+        letter-spacing: var(--letter-spacing-100);
+        @include text-style(sans);
+        @include text-size(base);
+    }
+
+    th,
+    td {
+        padding: var(--spacing-025);
+        border-bottom: 1px dotted var(--color-base);
+    }
+
+    thead {
+        text-align: left;
+        tr {
+            border-bottom: 2px solid var(--color-base);
+        }
+    }
+
+    /* -- figure --- */
+
+    figure {
+        display: flex;
+
+        flex-direction: column;
+        row-gap: var(--spacing-025);
+    }
+
+    figcaption {
+        letter-spacing: var(--letter-spacing-140);
+
+        @include text-style(serif, italic);
+        @include text-size(small);
+    }
+
+    /* -- footer --- */
+
+    footer {
+        display: block;
+
+        text-align: right;
+        letter-spacing: var(--letter-spacing-110);
+
+        @include text-style(serif, italic);
+        @include text-size(base);
+    }
 }
+
+// .blog-post {
+//     &__header {
+//         display: inherit;
+
+//         flex-direction: inherit;
+
+//         margin-bottom: var(--spacing-150);
+//     }
+
+//     &__eyebrow {
+//         margin-bottom: var(--spacing-050);
+
+//         text-transform: uppercase;
+
+//         letter-spacing: var(--letter-spacing-130);
+
+//         @include text-style(sans, normal, bold);
+//         @include text-size(small);
+//     }
+
+//     &__activity {
+//         margin-top: var(--spacing-100);
+
+//         letter-spacing: var(--letter-spacing-110);
+
+//         @include text-style(serif, italic);
+//         @include text-size(base);
+//     }
+
+//     &__heading {
+//         line-height: var(--line-height-larger);
+//         letter-spacing: var(--letter-spacing-120);
+
+//         @include text-style(sans);
+//         @include text-size(larger);
+//     }
+
+//     &__quote {
+//         display: block;
+
+//         @include figure-margin();
+
+//         letter-spacing: var(--letter-spacing-110);
+
+//         @include text-style(serif, italic);
+//         @include text-size(base);
+//     }
+
+//     &__footer {
+//         display: block;
+
+//         text-align: right;
+//         letter-spacing: var(--letter-spacing-110);
+
+//         @include text-style(serif, italic);
+//         @include text-size(base);
+//     }
+
+//     @include for-in-frame() {
+//         max-width: var(--measure-max);
+//         margin-inline: auto;
+//         padding-top: var(--spacing-100);
+
+//         /* show to guide user back outside of frame */
+//         &__breadcrumb {
+//             margin-bottom: var(--spacing-075);
+//             border-bottom: 1px var(--color-base) dotted;
+//             padding-bottom: var(--spacing-075);
+//         }
+//     }
+// }

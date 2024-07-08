@@ -135,6 +135,7 @@
 
         max-width: var(--measure-max);
         border: none;
+        padding: var(--spacing-100);
         overflow-y: auto;
 
         &__header {
@@ -160,11 +161,14 @@
         // &__footer {
         // }
 
+        height: max-content;
+
         @include for-viewport-size(desktop) {
             align-items: center;
 
-            width: 14.4rem;
+            width: 18.8rem;
             border-right: var(--border-style);
+            padding: var(--spacing-100);
 
             text-align: center;
         }

@@ -2,16 +2,45 @@
 @use "../abstracts/breakpoints" as *;
 
 .marquee {
-    grid-area: marquee;
+    --gap: 1rem;
 
-    padding: var(--spacing-075) var(--spacing-100);
+    display: flex;
 
-    @include for-viewport-size(phone) {
-        border-top: 1px dashed var(--color-base);
-        padding: var(--spacing-100) 0;
+    gap: var(--gap);
+
+    position: relative;
+    // max-width: fit-content;
+
+    overflow: hidden;
+    // user-select: none;
+
+    &:hover {
+        animation-play-state: paused;
     }
 
-    @include for-viewport-size(desktop) {
-        @include layout-border();
+    &__body {
+        display: flex;
+
+        flex-shrink: 0;
+        justify-content: space-around;
+        gap: var(--gap);
+
+        min-width: 100%;
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: scroll 50s linear infinite;
+        }
+
+        animation-play-state: inherit;
+        // background-color: inherit;
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
     }
 }

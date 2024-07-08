@@ -4,7 +4,7 @@
     <subtitle>blog and site updates for dustbunnybedroom :3c</subtitle>
     <link href="https://dustbunnybedroom.neocities.org/feed.xml" rel="self" />
     <link href="https://dustbunnybedroom.neocities.org" />
-    <updated>2024-05-20T00:00:00Z</updated>
+    <updated>2024-07-03T00:00:00Z</updated>
     <id>https://dustbunnybedroom.neocities.org/</id>
     <author>
         <name>jp</name>
@@ -12,13 +12,155 @@
     </author>
 
     <entry>
-        <title>added a new /uses page!</title>
-        <link href="https://dustbunnybedroom.neocities.org/uses" />
-        <updated>2024-05-20T00:00:00Z</updated>
-        <id>https://dustbunnybedroom.neocities.org/uses</id>
+        <title>Casio SA-35 Decent Sampler instrument!</title>
+        <summary>released my first sample instrument</summary>
+        <link href="https://dustbunnybedroom.neocities.org/samples#casio-sa-35" />
+        <updated>2024-07-03T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/samples#casio-sa-35</id>
+        <content type="html"><![CDATA[
+          <p class="copy">
+            a
+            <a
+              href="https://www.decentsamples.com/product/decent-sampler-plugin/"
+              >Decent Sampler</a
+            >
+            instrument of all (except one) of the base tones on the Casio SA-35
+            keyboard, also released by Radioshack as the Realistic
+            Concertmate-470. i picked this keyboard up at a thrift store a
+            couple of years ago and fell in love with it! it's super charming
+            and nostalgic sounding. all the sounds were recorded DI using the
+            provided headphone jack, the only processing done being some minor
+            noise reduction to tame some noise/static.
+          </p>
+          <p class="copy">
+            includes 24 presets in total. audio files are mono and in WAV format
+            (48kHz, 24 bit).
+          </p>
+          <p class="copy">size: 205 MB</p>
+          <ul class="list">
+            <li class="list__item">
+              <a
+                rel="external"
+                href="https://ko-fi.com/s/29d92b3d10"
+                target="_blank"
+                >download on Ko-fi</a
+              >
+            </li>
+            <li class="list__item">
+              <a
+                rel="external"
+                href="https://mega.nz/file/dT1GETRC#VpBmvdmN6lewTRhAboFztKmBw7X32ySOE39ue0mVrxs"
+                target="_blank"
+                >download on MEGA</a
+              >
+            </li>
+          </ul>
+            ]]>
+    </content>
+    </entry>
+
+    <entry>
+        <title>accessibility!</title>
+        <link href="https://dustbunnybedroom.neocities.org/accessibility" />
+        <updated>2024-06-03T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/accessibility</id>
         <content type="text">
-            created a new page that lists a bunch of things i use to work and
-            create, both hardware and software!
+            added an accessibility statement to the site! it details the
+            measures taken for accessibility as well as some of the current
+            shortcomings that i plan on improving on! if you ever have any
+            feedback to give regarding accessibility please feel free to share
+            with me!
+        </content>
+    </entry>
+
+    <entry>
+        <title>dstbnnyblog: end of may update</title>
+        <link href="https://dustbunnybedroom.neocities.org/posts/2024-05-31" />
+        <updated>2024-05-14T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/posts/2024-05-31</id>
+        <content type="html"><![CDATA[<p>hello again!</p>
+    <p>
+      i always feel like i should be updating this thing a little more often!
+      the last couple of times i sat down to write one of these i stopped and
+      wondered if what i'm writing about is, i guess, appropriate? in that, i
+      wonder if i'm maybe putting too much of myself out there onto the
+      internet? it's a thought that i find crosses my mind a lot more these
+      days. i have a bit of a habit of oversharing sometimes, and if it were a
+      few years ago i might not have really thought twice about it, but
+      especially lately, i'm a bit more guarded about that stuff. and by
+      oversharing i don't mean like private information, credit card numbers,
+      addresses, and such lol, but more like intimate thoughts and details about
+      your life, your struggles, etc.
+    </p>
+    <p>
+      y'know, sometimes i'll come across a blog post on somebody's personal site
+      and after reading it just sit there kind of dumbstruck and think, "huh, it
+      kind of feels like i maybe shouldn't have read that", like i just walked
+      in on some stranger by accident. i highly value being vulnerable in my
+      creative expression&mdash;which i very much consider this site to
+      be&mdash;but i also don't want to feel like that person that got walked in
+      on with their pants down or something! there's probably a balance to be
+      had, i'm just not exactly sure where the fulcrum point is. i just think my
+      aversion to it is kind of interesting because a lot of my favourite art
+      can be so painfully intimate, sometimes almost uncomfortably so, and i
+      find that i connect with those a lot.
+    </p>
+    <p>
+      i just check myself a lot on whether or not i'm approaching this in a
+      healthy way. maybe that's a good thing or maybe i'm overthinking it all,
+      idk! maybe i'll find out some day!
+    </p>
+    <hr />
+    <p>
+      other than my own self-imposed dilemmas about my online presence things
+      haven't been <em>too</em> eventful lately. for the producers here, i
+      recently released another
+      <a href="/work/samples.html#smi-1460-voices">sample pack</a> i've been
+      wanting to do for a while, and i've been getting a lot of fun ideas for
+      more i could do that branch a bit away from recording dinky lil' toy
+      instruments and stuff (as much as i love dinky lil' toy instruments)!
+      currently, i'm trying to see if i can put together a sample library of one
+      of those toy keyboards using
+      <a
+        rel="external"
+        href="https://www.decentsamples.com/product/decent-sampler-plugin/"
+        >Decent Sampler</a
+      >
+      (and maybe others if i can figure it out lol).
+    </p>
+    <p>
+      feeling very happy with the progress on my own album that i've been slowly
+      but regularly chipping away at! still in the writing stages but i like
+      where it's going so far!
+    </p>
+    <p>
+      trying to stretch every so often and gain some mobility back since i'm a
+      little PC goblin (started practicing guitar standing up so i can at least
+      spend that time standing more) (god, i would love a standing desk
+      <span>:')</span>). picked up yo-yoing
+      again after i stopped randomly last year (ADHD moment), it's been fun to
+      fuck around with it in the times i take a break from the computer.
+      unfortunately the yo-yo i was using somehow exploded lmao and now the two
+      halves of it won't stay together for long (i get like two good throws out
+      of it before it decides to fall apart again). it was a cheap one my mom
+      got at an ice cream store a few years ago so it lived its life, already
+      ordered a new one online
+      <span>&gt;:3c</span>
+    </p>
+    <p>
+      that's all for now! already have a plan for the next post which won't be a
+      personal update but just some rambling about something that i think is
+      neat! take care, i liked how our apple tree looked the other day so here:
+    </p>
+    <figure>
+      <img
+       
+        src="./2024-05-31/apple-tree.jpg"
+        alt="a blooming apple tree."
+      />
+    </figure>
+    <footer>—jp</footer>
+            ]]>
         </content>
     </entry>
 
@@ -39,21 +181,21 @@
         </ul>
             ]]>
     </content>
-</entry>
+    </entry>
 
-<entry>
-    <title>updated /now page (+ created this feed!)</title>
-    <link href="https://dustbunnybedroom.neocities.org/now" />
-    <updated>2024-05-14T00:00:00Z</updated>
-    <id>https://dustbunnybedroom.neocities.org/now</id>
-    <content type="text">
-        i updated the media section of my /now page! and also created this
-        feed! what makes it different from the site-log on the site? well, i
-        plan to put blog posts here and also bigger updates, more-so site 
-        additions, while the site-log is going to continue being very
-        granular in its content! stuff you'd probably want to be notified
-        about and not, like, me fixing a dumb CSS mistake i missed a month
-        ago lol.
-    </content>
-</entry>
+    <entry>
+        <title>updated /now page (+ created this feed!)</title>
+        <link href="https://dustbunnybedroom.neocities.org/now" />
+        <updated>2024-05-14T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/now</id>
+        <content type="text">
+            i updated the media section of my /now page! and also created this
+            feed! what makes it different from the site-log on the site? well, i
+            plan to put blog posts here and also bigger updates, more-so site
+            additions, while the site-log is going to continue being very
+            granular in its content! stuff you'd probably want to be notified
+            about and not, like, me fixing a dumb CSS mistake i missed a month
+            ago lol.
+        </content>
+    </entry>
 </feed>

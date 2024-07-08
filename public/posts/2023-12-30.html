@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- meta tags -->
-  <title>new blog, new me &mdash; dstbnnyblog</title>
+  <title>new blog, new me &mdash; dustbunnyblog</title>
   <meta name="author" content="jp" />
   <meta name="robots" content="noindex" />
 
   <!-- open graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="dstbnnybdrm" />
-  <meta property="og:title" content="new blog, new me &mdash; dstbnnyblog" />
+  <meta property="og:site_name" content="dustbunnybedroom" />
+  <meta property="og:title" content="new blog, new me &mdash; dustbunnyblog" />
   <meta property="article:author" content="jp" />
   <meta property="article:section" content="other" />
   <meta
@@ -21,10 +21,15 @@
   />
 
   <link rel="stylesheet" href="/_assets/css/style.css" />
+
+  <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/zero-md@3?register"
+  ></script>
 </head>
 
-<body class="main-body">
-  <nav class="breadcrumb main-body__breadcrumb" aria-label="Breadcrumb">
+<body class="mainframe">
+  <nav class="breadcrumb mainframe__breadcrumb" aria-label="Breadcrumb">
     <ul class="breadcrumb__list">
       <li class="breadcrumb__crumb">
         <a class="breadcrumb__link" href="/hub?p=/home">home</a>
@@ -35,50 +40,40 @@
     </ul>
   </nav>
 
-  <article class="blog-post">
-    <header class="blog-post__header">
-      <p class="blog-post__eyebrow">personal</p>
-      <h2 class="blog-post__title">new blog, new me</h2>
-      <time class="blog-post__date" datetime="2023-12-30"
-        >saturday, december 30, 2023</time
-      >
-    </header>
+  <zero-md>
+    <template>
+      <link rel="stylesheet" href="/_assets/css/style.css" />
+    </template>
+    <!-- prettier-ignore -->
+    <script type="text/markdown">
+# new blog, new me
 
-    <p class="blog-post__copy">
-      it took a lot longer than i was expecting but the blog is finally up and
-      running! and just in time for the new year too!
-    </p>
+<time class="date" datetime="2023-12-30">saturday, 30 december 2023</time>
 
-    <p class="blog-post__copy">
-      this'll be a place for any random thoughts too long for twitter (not x) or
-      anything i feel like rambling about for an extended amount of time. ADHD
-      hyperfixations and whatnot.
-    </p>
+it took a lot longer than i was expecting but the blog is finally up and
+running! and just in time for the new year too!
 
-    <p class="blog-post__copy">
-      for whatever reason i find the act of writing and making it public, even
-      in this very nonformal blogpost context, to be very, very vulnerable
-      feeling, moreso than any other forms of art i've worked in (visual, music,
-      etc.), so this'll also act as a form of practice and, i guess, exposure
-      therapy? if you can call it that lol.
-    </p>
+this'll be a place for any random thoughts too long for twitter (not x) or
+anything i feel like rambling about for an extended amount of time. ADHD
+hyperfixations and whatnot.
 
-    <p class="blog-post__copy">
-      in any case, i'm excited for a new outlet for expression that isn't
-      commodified and confined to any social media (although i
-      <em>will</em> probably post about this on twitter (not x) oops); a
-      personal lil' void to throw whatever i want into. it'll be fun! and
-      hopefully freeing and cathartic in a way.
-    </p>
+for whatever reason i find the act of writing and making it public, even
+in this very nonformal blogpost context, to be very, very vulnerable
+feeling, moreso than any other forms of art i've worked in (visual, music,
+etc.), so this'll also act as a form of practice and, i guess, exposure
+therapy? if you can call it that lol.
 
-    <p class="blog-post__copy">
-      <i>note that</i>: if you're viewing this on some mobile/smaller screen
-      device you might notice there's no list or navigation for the posts
-      themselves, and that'll be fixed in the future! i just need to figure out
-      a good and mobile friendly way of implementing that since i try to make
-      the site as accessible as i can.
-    </p>
+in any case, i'm excited for a new outlet for expression that isn't commodified
+and confined to any social media (although i _will_ probably post about this on
+twitter (not x) oops); a personal lil void to throw whatever i want into. it'll
+be fun! and hopefully freeing and cathartic in a way.
 
-    <footer class="blog-post__footer">—jp</footer>
-  </article>
+**note that**: if you're viewing this on some mobile/smaller screen device you
+might notice there's no list or navigation for the posts themselves, and that'll
+be fixed in the future! i just need to figure out a good and mobile friendly way
+of implementing that since i try to make the site as accessible as i can.
+
+<footer>—jp</footer>
+    </script>
+  </zero-md>
 </body>

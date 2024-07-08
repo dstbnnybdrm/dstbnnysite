@@ -1,27 +1,23 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
-.page {
-    @include for-viewport-size(phone) {
-    }
+.guestbook {
+    display: grid;
 
-    @include for-viewport-size(desktop) {
-        &_guestbook {
-            display: grid;
+    grid-template-areas:
+        "navi"
+        "main"
+        "footer";
+    grid-template-columns: minmax(0, var(--measure-max));
+    grid-template-rows:
+        auto
+        1fr
+        min-content;
+    row-gap: var(--spacing-125);
 
-            align-self: self-start;
-            grid-template-areas:
-                "navi"
-                "main"
-                "footer";
-            grid-template-columns: minmax(0, var(--measure-max));
-            grid-template-rows: auto 1fr 2rem;
-            gap: 0;
-
-            // width: 100vw;
-            // max-width: min-content;
-            // max-width: calc(var(--measure-max) * 2);
-        }
+    &__main {
+        align-self: center;
+        justify-items: center;
     }
 }
 
@@ -65,12 +61,21 @@ div #HCB_comment_box {
         display: none;
     }
 
-    /* log in icon */
-    .hcb-icon.hcb-door-in {
-        display: inline;
+    .admin-link {
+        // display: ;
+    }
 
+    /* log in icon */
+    .hcb-door-in,
+    .hcb-door-out {
+        display: inline;
         // color: var(--color-primary);
         filter: var(--filter-base);
+
+        &:hover {
+            filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
+                brightness(91%) contrast(87%);
+        }
     }
 
     #HCB_comment_form_box {
@@ -78,6 +83,21 @@ div #HCB_comment_box {
 
         /* big "comment" button */
         .submit.btn {
+            @include text-style(sans);
+
+            border: none;
+            background: var(--color-primary);
+
+            text-transform: lowercase;
+            color: var(--color-background);
+
+            &:hover,
+            &:focus {
+                background: var(--color-secondary);
+            }
+        }
+
+        button.btn.btn-secondary {
             @include text-style(sans);
 
             border: none;
@@ -194,6 +214,7 @@ textarea#hcb_form_content {
     }
 
     span.date {
+        color: var(--color-primary-hi-contrast);
         text-transform: lowercase;
 
         letter-spacing: var(--letter-spacing-140);

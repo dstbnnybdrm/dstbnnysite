@@ -38,7 +38,7 @@
 
 .small-print {
     @include text-style(sans);
-    @include text-size(small);
+    @include text-size(base);
 
     @include emphasis-serif();
 }
@@ -84,6 +84,8 @@
     &_row {
         display: flex;
 
+        flex-wrap: wrap;
+
         list-style: none;
     }
 
@@ -94,6 +96,8 @@
             display: inline-block;
 
             margin-left: 0rem;
+
+            white-space: nowrap;
 
             &:not(:last-child)::after {
                 margin: 0 var(--spacing-050);
@@ -139,20 +143,33 @@
     display: flex;
 
     flex-direction: column;
-    align-items: center;
     row-gap: var(--spacing-100);
 
     letter-spacing: var(--letter-spacing-110);
 
     @include text-size(base);
 
-    &__title {
-        width: 100%;
+    width: min-content;
 
+    &__title {
         @include text-style(serif, italic);
     }
 
     &__body {
         @include text-style(serif);
+    }
+}
+
+.code {
+    display: inline;
+
+    color: var(--color-base);
+
+    line-height: 1rem;
+
+    @include text-style(mono);
+
+    &_block {
+        display: block;
     }
 }

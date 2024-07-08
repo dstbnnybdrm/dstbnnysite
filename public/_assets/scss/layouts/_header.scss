@@ -7,9 +7,7 @@
     grid-area: header;
     align-items: center;
     flex-direction: column;
-
-    @include layout-border;
-    padding: var(--spacing-075) var(--spacing-100);
+    row-gap: var(--spacing-100);
 
     &__splash {
         display: block;
@@ -19,10 +17,6 @@
         letter-spacing: var(--letter-spacing-120);
 
         @include text-style(serif, italic);
-    }
-
-    @include for-viewport-size(phone) {
-        border: none;
     }
 
     @include for-viewport-size(desktop) {

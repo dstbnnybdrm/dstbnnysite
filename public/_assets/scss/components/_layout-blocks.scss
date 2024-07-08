@@ -6,8 +6,10 @@
  */
 
 .l-imposter {
-    width: 100vw;
-    height: 100vh;
+    // min-height: 0;
+
+    // FOR DEBUGGING LOL
+    // border: 1px solid green;
 
     @include for-viewport-size(phone) {
         display: flex;
@@ -17,6 +19,7 @@
 
     @include for-viewport-size(desktop) {
         display: flex;
+
         position: absolute;
         top: 0;
         right: 0;
@@ -25,6 +28,11 @@
 
         align-items: center;
         justify-content: center;
+
+        width: 100vw;
+        height: 100vh;
+
+        // overflow: hidden;
     }
 }
 
@@ -64,10 +72,12 @@
 }
 
 .l-scrollbar-container {
-    display: block;
+    display: contents;
 
-    min-height: 0;
-    overflow-y: auto;
+    @include for-viewport-size(desktop) {
+        min-height: 0;
+        overflow-y: auto;
+    }
 }
 
 /* for visually hiding landmarks needed for screen readers */

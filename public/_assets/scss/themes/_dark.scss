@@ -1,11 +1,19 @@
 @mixin theme-dark() {
     color-scheme: dark;
 
-    --color-primary: #cf4f79;
-    --color-primary-alt: var(--color-primary);
-    --color-secondary: #54b096;
-    --color-base: #d6ccce;
-    --color-background: #1d0612;
+    --color-primary: #cf4f79; /*                  fuchsia rose          */
+    --color-primary-lo-contrast: #cf4f79; /*      quinacridone magenta  */
+    --color-primary-hi-contrast: #d38ea4; /*      puce                  */
+
+    --color-secondary: #54b096; /*                zomp                  */
+    --color-secondary-lo-contrast: #54b096; /*    dark slate gray       */
+    --color-secondary-hi-contrast: #95beb2; /*    cambridge blue        */
+
+    --color-base: #d6ccce; /*                     timberwolf            */
+    --color-background: #1d0612; /*               licorice              */
+
+    // for transparent, black graphics
+    // converted using: https://codepen.io/sosuke/pen/Pjoqqp
     --filter-base: invert(99%) sepia(86%) saturate(259%) hue-rotate(286deg)
         brightness(91%) contrast(83%);
 }

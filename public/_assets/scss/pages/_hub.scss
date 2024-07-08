@@ -1,0 +1,80 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.hub {
+    display: grid;
+
+    @include for-viewport-size(phone) {
+        grid-template-areas:
+            "header"
+            "navi"
+            "theme-toggle"
+            "main"
+            "support"
+            "featured"
+            "status"
+            "site-log"
+            "marquee"
+            "footer";
+        grid-template-rows: repeat(8, max-content) min-content;
+        grid-template-columns: minmax(0, var(--measure-max));
+        row-gap: var(--spacing-100);
+
+        max-width: var(--measure-max);
+    }
+
+    @include for-viewport-size(desktop) {
+        grid-template-areas:
+            "header           header      header"
+            "major-sidebar    main        minor-sidebar"
+            "major-sidebar    marquee     marquee"
+            "footer           footer      footer";
+        grid-template-rows:
+            min-content
+            1fr
+            min-content
+            min-content;
+        grid-template-columns:
+            min-content
+            minmax(0, var(--measure-max))
+            10rem;
+        gap: var(--spacing-100);
+    }
+
+    &__header {
+        padding: var(--spacing-075) var(--spacing-100);
+
+        @include for-viewport-size(phone) {
+            border: none;
+        }
+
+        @include for-viewport-size(desktop) {
+            @include layout-border;
+        }
+    }
+
+    &__main {
+        @include for-viewport-size(phone) {
+            border-top: 1px dashed var(--color-base);
+            padding-top: var(--spacing-100);
+        }
+
+        @include for-viewport-size(desktop) {
+            @include layout-border();
+        }
+    }
+
+    &__marquee {
+        grid-area: marquee;
+
+        @include for-viewport-size(phone) {
+            border-top: 1px dashed var(--color-base);
+            padding-top: var(--spacing-100);
+        }
+
+        @include for-viewport-size(desktop) {
+            @include layout-border();
+            padding: var(--spacing-075) var(--spacing-100);
+        }
+    }
+}
