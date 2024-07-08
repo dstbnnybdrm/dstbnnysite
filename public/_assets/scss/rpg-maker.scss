@@ -40,6 +40,14 @@ hr {
     color: #222244;
 }
 
+q {
+    &:before,
+    &:after {
+        font-family: var(--font-family-base);
+        content: '"';
+    }
+}
+
 /* for Firefox */
 ::-moz-selection {
     background-color: #3399ff;
