@@ -18,27 +18,24 @@ has gone by several names online: publishing this game and others under
 time, at least from what i understand. i'll continue to refer to them as moga
 for brevity!
 
-what ultimately led me to check out the game was its long and interesting title
-title: <cite>Ghost Suburb II: From Beyond Sleep into the Eyes of Madness</cite>.
-you might be used to indie RPG's having simple, few word titles, <cite>Yume
-Nikki</cite> is an obvious one, <cite>OFF</cite> is just three letters, and
-<cite>Ib</cite> beats even that with just two. it almost feels like a novel
-title and does its job well of piquing intrigue. raising even more questions,
-<i>Ghost Suburb II? so where's the first one?</i> well, there isn't one! i
-hadn't even downloaded the game yet and already we have a couple mysterious on
-hand!
+i think what ultimately led me to check out the game was its long and
+interesting title title: <cite>Ghost Suburb II: From Beyond Sleep into the Eyes
+of Madness</cite>. you might be used to indie RPG's having simple, few word
+titles, <cite>Yume Nikki</cite> is an obvious one, <cite>OFF</cite> is just
+three letters, and <cite>Ib</cite> beats even that with just two. it almost
+feels like a novel title and did its job well of piquing my interest.
 
-alright, so what's it about at least? well, the game's description says that
-it's <q cite="https://rpgmaker.net/games/5873/">a game about a nurse in Midland
-Research Hospital Center...her name is Okay. she is a insomniac.</q> which seems
-straightforward enough, until you read that
-<q cite="https://rpgmaker.net/games/5873/">there is a friend named Gertrud, who
-pesters her and is a giant floating sphere of darkness with a eye on it</q> and
-that <q cite="https://rpgmaker.net/games/5873/">it is highly debatable whether
-she is in fact a real thing.</q>
+<!-- alright, so what's it about at least? well, the game's description says that -->
+<!-- it's <q cite="https://rpgmaker.net/games/5873/">a game about a nurse in Midland -->
+<!-- Research Hospital Center...her name is Okay. she is a insomniac.</q> which seems -->
+<!-- straightforward enough, until you read that -->
+<!-- <q cite="https://rpgmaker.net/games/5873/">there is a friend named Gertrud, who -->
+<!-- pesters her and is a giant floating sphere of darkness with a eye on it</q> and -->
+<!-- that <q cite="https://rpgmaker.net/games/5873/">it is highly debatable whether -->
+<!-- she is in fact a real thing.</q> -->
 
-upon starting the game you are immediately thrown into an ominous, foreboding
-introduction. the text that greets us as guests is skewed and pulses with the
+upon starting the game you are immediately thrown into an ominous and foreboding
+introduction. the text that greets us is skewed and pulses with the clanking
 beat of the background music, a despondent voiceover begins but quickly gets
 lost in the foggy ambiance.
 
@@ -70,79 +67,63 @@ where all others go but me"
     <figcaption class="figure__caption">testtesttesttest</figcaption>
 </figure>
 
-it's a little unclear where this dialogue comes from but it's a safe assumption
-that it is from our main character.
-
-speaking of, after this voiceover gets cut off we are treated to static and then
-immediately introduced to her. she tells that she's "Okay", as in, her name is
-Okay. except it might not be, and she just assumed so because that's what
-everyone has asked her for forever. _sheesh_. it's a small bit of dark, comedic
-irony that really sets the tone for this character and also the game in general;
+then we're treated to static and immediately introduced to our main character.
+she tells that she's "okay", as in, her name is Okay. except it might not be,
+because she goes on to say she just assumed so because that's what everyone has
+asked her for forever. _sheesh_. it's a small bit of dark, comedic irony that
+really sets the tone for this character and also the game in general;
 practically every interaction in this game has an underlying dry air of sarcasm
-and apathy within them.
+and apathy within them, a lot of the times it's comedic, sometimes it isn't.
 
-she asks if we're "okay", suddenly shifting to a tangent about adulthood, and
-how nobody seems to care that she's entered it, shifting again to her ultimate
-goal: finding the sleep that seems to elude her.
+<!-- she asks if we're "okay", suddenly shifting to a tangent about adulthood, and -->
+<!-- how nobody seems to care that she's entered it, shifting again to her ultimate -->
+<!-- goal: finding the sleep that seems to elude her. -->
 
 <!-- music & visuals -->
 
 one of the first things you'll notice about <cite>Ghost Suburb II</cite> is the
-incredible soundtrack. when the gameplay itself begins and we're shown the
-interior of Okay's room we're also greeted with dark, murky pads, underscoring
-what sounds to me like chopped piano samples and other distorted sounds. it's
-uneasy, maybe even frightening. all of the music in this game is like this,
-sometimes repetitive loops of dark ambiance, sometimes inter-cut with random
-sounds, metal clanking?, the occasional breakbeat, etc. ... . moga's music as
-bilexth leans towards jungle and other related genres and you can certainly hear
-the influence here.
+dark, jungle-inspired soundtrack; it feels almost hostile at times. when the
+gameplay itself begins and we're shown the interior of Okay's room we're also
+greeted with dark, murky pads, shrouding what sounds to me like chopped piano
+samples and other distorted sounds. it's uneasy, maybe even frightening to some.
+the other tracks are similar in tone, always coated in this dark fogginess,
+occasionally a breakbeat makes its way in but it's always filtered through this
+muddy lens.
 
-the very next thing you'll notice is the way the entire game looks almost
-withered or aged, from the tilesets, to the
-<abbr title="user interface">UI</abbr>, down to even the font to an extent. some
-bold colour choices, like the blues of Okay's nurse outfit, pierce through the
-layer of grunge sitting atop everything. moga's hand-drawn art here is
-characteristically cute and sketchy yet carries an uncomfortable feeling with it
-somehow, even foregoing some of the more violent things that happen. when a
-monster <q>unceremonially</q> bursts through another nurse's stomach near the
-start of the game it's the type of illustrated violence that you might see in a
-child's notebook, which makes it more uncomfortable in a way.
+<figure>
+<!-- (video of "Gal" in the OST) -->
+</figure>
 
-there's no way around it, this game is _bleak_. ...
-
-<!-- sleep & gertrud -->
+the very next thing you'll notice is how way the game looks. while the colour
+choices themselves are bold, like the blues of Okay's outfit and hair, or the
+hot pink floors of her building. everything from the tileset, to the
+<abbr title="user interface">UI</abbr>, down to even the font to an extent looks
+withered or aged, with those colours piercing through this layer of grunge.
+moga's hand-drawn art here is characteristically cute and sketchy yet carries a
+certain _feeling_ with it, even foregoing some of the more violent things that
+happen. when a monster <q>unceremonially</q> bursts through another nurse's
+stomach near the start of the game it's the type of childish depiction of
+violence that can make you uncomfortable from the dissonance of it all.
 
 Okay's need for sleep is the central focus of this game, presently obvious from
-the perpetual eye bags adorning her face. once we're in the game she seems to
-give us a reason after inspecting a drawer <q>i can't sleep if i know i have
-something to do-- ever</q>. after picking up a "Book of Memories" she tells us
-that it's been 3 months since she last slept. what it is she **needs to have
-done** in those 3 months we don't know just yet, and it seems that she doesn't
-either.
-
-here we're then introduced to Gertrud, the aforementioned floating eye thing who
-is, apparently, Okay's only friend, though it certainly doesn't _feel_ like it.
-the way they speak to each other is passively hostile, Gertrud in particular
-seems to talk down on Okay in a way. their friendship is debatable but it's
-clear there's some history between the two. Okay acknowledges how bizarre it is
-that this thing is here, speaks to her, follows her around, and chalks it up to
-just a recurring hallucination of some kind. but Gertrud disagrees, coaxing us
-to take a closer look at her, to touch her and feel that she is indeed real.
-still, Okay can't let go of the absurdism of it all and continues to treat her
-as a figment of her imagination.
-
-Gertrud seems to want to help and suddenly this hunt for sleep seems to become
-quite literal, Okay's dialogue capitalizing "Sleep" as a proper noun, "she needs
-to find Sleep in order to force it to give her some sleep". i believe i missed
-that detail on my first playthrough, and knowing it changes some contexts.
+the perpetual eye bags adorning her face. she tells us <q>i can't sleep if i
+know i have something to do-- ever</q> it's been 3 months since she last slept.
+what it is she **needs to have done** in those 3 months we don't know just yet,
+and it seems that she doesn't either somehow. we're then introduced to Gertrud,
+the aforementioned floating eye thing, or apparently, Okay's only friend. the
+way these two speak to each other is wrought with a familiar passive
+aggressiveness. the game plants doubt to Gertrud's existence right off the bat.
+Okay seems to not want to acknowledge her as anything other than some kind of
+hallucination, but Gertrud disagrees; when we first meet her she coaxes Okay to
+take a closer look, to touch her, feel that she is indeed real.
 
 <!-- medical imagery -->
 
-let's talk about the game's heavy use of medical imagery, which is to be
-expected of a game taking place in a hospital. battles are dubbed "operations"
-here, your attacks are named things like ..., and ..., when a battle is over
-it's .... it kind of reminds me of the
-[menhera](https://menheratic.tumblr.com/nav) aesthetic and subculture.
+there's a bunch of medical imagery, which is to be expected for a game taking
+place in a hospital. battles are dubbed "operations", attacks are named things
+like ..., and ...,. it kind of reminds me of the
+[menhera](https://menheratic.tumblr.com/nav) aesthetic and subculture a little
+bit.
 
 <!-- when i discovered and played Ghost Suburb II it was almost 10 years after its -->
 <!-- initial release in <time datetime="2013">2013</time>. -->
