@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
+:root {
+  --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
+  --font-family-alt: Georgia, "Times New Roman", Times, serif;
+  --font-family-mono: "Courier New", Courier, monospace;
+  /* size ratios mostly derived from minor thirds (6:5) */
+  --font-size-smaller: 0.69rem;
+  --font-size-small: 0.83rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.2rem;
+  --font-size-larger: 1.32rem;
+  --font-size-largest: 1.44rem;
+  --line-height-small: 1.25rem;
+  --line-height-base: 1.5rem;
+  --line-height-large: 1.8rem;
+  --line-height-larger: 1.98rem;
+  --line-height-largest: 2.16rem;
+  --letter-spacing-100: initial;
+  --letter-spacing-110: 0.05rem;
+  --letter-spacing-120: 0.07rem;
+  --letter-spacing-130: 0.09rem;
+  --letter-spacing-140: 0.12rem;
+  /* generic spacing for margin's, padding, gap, etc. */
+  --spacing-025: 0.58rem;
+  --spacing-050: 0.69rem;
+  --spacing-075: 0.83rem;
+  --spacing-100: 1rem;
+  --spacing-125: 1.2rem;
+  --spacing-150: 1.44rem;
+  --spacing-175: 1.73rem;
+  --spacing-200: 2rem;
+  /* the maximum line length that text should span (~74 characters, or ~2.8
+   alphabets) */
+  --measure-max: 44rem;
+}
+
+/* *~  GLOBAL RESETS  ~* 
+ *
+ * very slightly modified from here:
+ * https://www.joshwcomeau.com/css/custom-css-reset/
+ */
+/* less shitty box-sizing (border-based instead of content-based) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* reset layout defaults */
+* {
+  margin: 0;
+  padding: 0;
+  /* use the default scrollbar width for the platform, if applicable */
+  scrollbar-width: auto;
+  /* set root font size; all REM values are relative to this */
+  font-size: 14px;
+  scrollbar-width: thin;
+}
+
+/* improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  /* disable anti-alias (for pixel art and etc., we WANT the pixel jaggedness
+   * lol) */
+  image-rendering: pixelated; /*            Universal support since 2021 */
+}
+
+/* remove form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* --- MY resets :3c --- */
+body {
+  background-color: var(--color-background);
+}
+
+/* - links - */
+/* add marker for external links */
+a[rel*=external] {
+  /* but NOT on images! */
+}
+a[rel*=external]:not(:has(img))::after {
+  content: " ↗";
+}
+
+a {
+  text-decoration-style: dotted;
+}
+a:link {
+  color: var(--color-primary);
+}
+a:visited {
+  color: var(--color-primary);
+}
+a:hover {
+  color: var(--color-secondary);
+}
+a:hover img {
+  filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg) brightness(91%) contrast(87%);
+}
+
+/* - selection - */
+/* for Firefox */
+::-moz-selection {
+  background: var(--color-secondary);
+  color: var(--color-background);
+}
+
+::selection {
+  background: var(--color-secondary);
+  color: var(--color-background);
+}
+
+/* - other - */
+abbr {
+  font: inherit;
+  background: none;
+}
+
+summary {
+  cursor: pointer;
+}
+
+/* -- GLOBAL -- */
+/* links */
+a {
+  text-decoration: initial;
+  text-decoration-style: solid;
+}
+a:link {
+  color: #9999ff;
+}
+a:active {
+  color: #9999ff;
+}
+a:visited {
+  color: #666699;
+}
+a:hover {
+  color: #cccc00;
+}
+
+p {
+  display: block;
+  line-height: var(--line-height-base);
+}
+
+hr {
+  color: #222244;
+}
+
+/* for Firefox */
+::-moz-selection {
+  background-color: #3399ff;
+  color: white;
+}
+
+::selection {
+  background-color: #3399ff;
+  color: white;
+}
+
+/* -- HTML-SPECIFIC -- */
+body {
+  background-color: black;
+  color: #f30000;
+  font-family: var(--font-family-base);
+}
+body section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
+body .page {
+  display: flex;
+}
+@media screen and (max-width: 800px) {
+  body .page {
+    flex-direction: column;
+    max-width: var(--measure-max);
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width: 801px) {
+  body .page {
+    flex-direction: row;
+    height: 100vh;
+  }
+}
+body .navi {
+  --navi-border: 0.3rem solid white;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--spacing-200);
+  padding: var(--spacing-100);
+  text-align: center;
+}
+body .navi hr {
+  width: 100%;
+}
+@media screen and (max-width: 800px) {
+  body .navi {
+    border-bottom: var(--navi-border);
+  }
+}
+@media screen and (min-width: 801px) {
+  body .navi {
+    width: 14rem;
+    border-right: var(--navi-border);
+    overflow: hidden;
+    resize: inline;
+  }
+}
+body .navi-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  list-style: none;
+}
+body .main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  padding: var(--spacing-100);
+  margin-inline: auto;
+  overflow-y: auto;
+}
+body .main__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
+@media screen and (min-width: 801px) {
+  body .main {
+    max-width: var(--measure-max);
+  }
+}
+
+/* -- MARKDOWN-SPECIFIC -- */
+.markdown-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+}
+.markdown-body ul {
+  margin-left: 4ch;
+}
+.markdown-body figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  margin: var(--spacing-100) 0;
+  text-align: center;
+}
+.markdown-body figure img,
+.markdown-body figure iframe {
+  width: 320px;
+  margin-inline: auto;
+}
+.markdown-body figure figcaption {
+  font-style: italic;
+}
+
+/*# sourceMappingURL=rpg-maker.css.map */

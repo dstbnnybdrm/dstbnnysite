@@ -4,7 +4,7 @@
     <subtitle>blog and site updates for dustbunnybedroom :3c</subtitle>
     <link href="https://dustbunnybedroom.neocities.org/feed.xml" rel="self" />
     <link href="https://dustbunnybedroom.neocities.org" />
-    <updated>2024-06-03T00:00:00Z</updated>
+    <updated>2024-07-03T00:00:00Z</updated>
     <id>https://dustbunnybedroom.neocities.org/</id>
     <author>
         <name>jp</name>
@@ -12,13 +12,61 @@
     </author>
 
     <entry>
+        <title>Casio SA-35 Decent Sampler instrument!</title>
+        <summary>released my first sample instrument</summary>
+        <link href="https://dustbunnybedroom.neocities.org/samples#casio-sa-35" />
+        <updated>2024-07-03T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/samples#casio-sa-35</id>
+        <content type="html"><![CDATA[
+          <p class="copy">
+            a
+            <a
+              href="https://www.decentsamples.com/product/decent-sampler-plugin/"
+              >Decent Sampler</a
+            >
+            instrument of all (except one) of the base tones on the Casio SA-35
+            keyboard, also released by Radioshack as the Realistic
+            Concertmate-470. i picked this keyboard up at a thrift store a
+            couple of years ago and fell in love with it! it's super charming
+            and nostalgic sounding. all the sounds were recorded DI using the
+            provided headphone jack, the only processing done being some minor
+            noise reduction to tame some noise/static.
+          </p>
+          <p class="copy">
+            includes 24 presets in total. audio files are mono and in WAV format
+            (48kHz, 24 bit).
+          </p>
+          <p class="copy">size: 205 MB</p>
+          <ul class="list">
+            <li class="list__item">
+              <a
+                rel="external"
+                href="https://ko-fi.com/s/29d92b3d10"
+                target="_blank"
+                >download on Ko-fi</a
+              >
+            </li>
+            <li class="list__item">
+              <a
+                rel="external"
+                href="https://mega.nz/file/dT1GETRC#VpBmvdmN6lewTRhAboFztKmBw7X32ySOE39ue0mVrxs"
+                target="_blank"
+                >download on MEGA</a
+              >
+            </li>
+          </ul>
+            ]]>
+    </content>
+    </entry>
+
+    <entry>
         <title>accessibility!</title>
         <link href="https://dustbunnybedroom.neocities.org/accessibility" />
         <updated>2024-06-03T00:00:00Z</updated>
         <id>https://dustbunnybedroom.neocities.org/accessibility</id>
         <content type="text">
-            added an accessibility statement to the site! it details the 
-            measures taken for accessibility as well as some of the current 
+            added an accessibility statement to the site! it details the
+            measures taken for accessibility as well as some of the current
             shortcomings that i plan on improving on! if you ever have any
             feedback to give regarding accessibility please feel free to share
             with me!
@@ -133,21 +181,21 @@
         </ul>
             ]]>
     </content>
-</entry>
+    </entry>
 
-<entry>
-    <title>updated /now page (+ created this feed!)</title>
-    <link href="https://dustbunnybedroom.neocities.org/now" />
-    <updated>2024-05-14T00:00:00Z</updated>
-    <id>https://dustbunnybedroom.neocities.org/now</id>
-    <content type="text">
-        i updated the media section of my /now page! and also created this
-        feed! what makes it different from the site-log on the site? well, i
-        plan to put blog posts here and also bigger updates, more-so site 
-        additions, while the site-log is going to continue being very
-        granular in its content! stuff you'd probably want to be notified
-        about and not, like, me fixing a dumb CSS mistake i missed a month
-        ago lol.
-    </content>
-</entry>
+    <entry>
+        <title>updated /now page (+ created this feed!)</title>
+        <link href="https://dustbunnybedroom.neocities.org/now" />
+        <updated>2024-05-14T00:00:00Z</updated>
+        <id>https://dustbunnybedroom.neocities.org/now</id>
+        <content type="text">
+            i updated the media section of my /now page! and also created this
+            feed! what makes it different from the site-log on the site? well, i
+            plan to put blog posts here and also bigger updates, more-so site
+            additions, while the site-log is going to continue being very
+            granular in its content! stuff you'd probably want to be notified
+            about and not, like, me fixing a dumb CSS mistake i missed a month
+            ago lol.
+        </content>
+    </entry>
 </feed>

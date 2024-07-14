@@ -53,6 +53,12 @@
         &__button {
             display: none;
         }
+
+        &__link {
+            // display: inline-block;
+            align-self: flex-start;
+            // width: min-content;
+        }
     }
 }
 
