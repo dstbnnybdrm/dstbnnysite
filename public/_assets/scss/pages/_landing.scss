@@ -66,6 +66,10 @@
 
         flex-direction: row;
         justify-self: center;
+
+        &_inline {
+            column-gap: 2rem;
+        }
     }
 
     img {

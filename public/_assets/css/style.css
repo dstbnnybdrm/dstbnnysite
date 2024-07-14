@@ -1241,6 +1241,9 @@ summary {
   flex-direction: row;
   justify-self: center;
 }
+.webrings__webring_inline {
+  column-gap: 2rem;
+}
 .webrings img {
   border: none;
 }
