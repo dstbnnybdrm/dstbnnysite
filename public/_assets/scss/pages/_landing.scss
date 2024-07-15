@@ -68,7 +68,7 @@
         justify-self: center;
 
         &_inline {
-            column-gap: 2rem;
+            column-gap: var(--spacing-100);
         }
     }
 

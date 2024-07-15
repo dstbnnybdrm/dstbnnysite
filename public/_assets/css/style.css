@@ -1242,7 +1242,7 @@ summary {
   justify-self: center;
 }
 .webrings__webring_inline {
-  column-gap: 2rem;
+  column-gap: var(--spacing-100);
 }
 .webrings img {
   border: none;
