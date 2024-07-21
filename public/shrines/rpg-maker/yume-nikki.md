@@ -1,8 +1,10 @@
 ## Yume Nikki
 
 - [official website](http://yume-nikki.com/)
-- [fan wiki](https://yumenikki.fandom.com/wiki/Yume_Nikki_Wiki)
-- [KIKIYAMA's website (in Japanese)](https://www3.nns.ne.jp/~tk-mto/index.html)
+- [Yume Nikki fan wiki](https://yumenikki.fandom.com/wiki/Yume_Nikki_Wiki)
+- [KIKIYAMA's website](https://www3.nns.ne.jp/~tk-mto/index.html)
+- [the Yume Nikki Online Project](https://ynoproject.net/)
+- [Yume Nikki Fangames wiki](https://yumenikkifg.fandom.com/wiki/Yume_Nikki_Fangames_Wiki)
 
 <marquee class="marquee" direction="right">
     <img
