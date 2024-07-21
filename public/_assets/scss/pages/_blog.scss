@@ -6,6 +6,11 @@
 
     gap: var(--spacing-100);
 
+    &__sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__header {
         align-self: end;
         justify-self: center;
@@ -24,36 +29,35 @@
         gap: var(--spacing-100);
     }
 
-    @include for-viewport-size(phone) {
-        grid-template-areas:
-            "header"
-            "navi"
-            "main"
-            "footer";
+    // @include for-viewport-size(phone) {
+    //     grid-template-areas:
+    //         "header"
+    //         "navi"
+    //         "main"
+    //         "footer";
 
-        &__navi {
-            border-top: 1px solid var(--color-base);
-            padding-top: var(--spacing-100);
-        }
+    //     &__navi {
+    //         border-top: 1px solid var(--color-base);
+    //         padding-top: var(--spacing-100);
+    //     }
 
-        &__main {
-            border-top: 1px dashed var(--color-base);
-            padding-top: var(--spacing-100);
-        }
-    }
+    //     &__main {
+    //         border-top: 1px dashed var(--color-base);
+    //         padding-top: var(--spacing-100);
+    //     }
+    // }
 
     @include for-viewport-size(desktop) {
         grid-template-areas:
-            "header     ."
-            "navi       main"
-            "footer     footer";
+            "major-sidebar    main      minor-sidebar"
+            "footer           footer    footer";
         grid-template-rows:
-            min-content
             1fr
             min-content;
         grid-template-columns:
-            min-content
-            minmax(0rem, var(--measure-max));
+            30ch
+            minmax(0rem, var(--measure-max))
+            30ch;
 
         &__navi {
             @include layout-border();

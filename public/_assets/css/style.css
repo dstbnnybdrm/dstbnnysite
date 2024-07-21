@@ -1343,6 +1343,10 @@ summary {
   display: inline-grid;
   gap: var(--spacing-100);
 }
+.blog__sidebar {
+  display: flex;
+  flex-direction: column;
+}
 .blog__header {
   align-self: end;
   justify-self: center;
@@ -1357,24 +1361,11 @@ summary {
   flex-direction: column;
   gap: var(--spacing-100);
 }
-@media screen and (max-width: 800px) {
-  .blog {
-    grid-template-areas: "header" "navi" "main" "footer";
-  }
-  .blog__navi {
-    border-top: 1px solid var(--color-base);
-    padding-top: var(--spacing-100);
-  }
-  .blog__main {
-    border-top: 1px dashed var(--color-base);
-    padding-top: var(--spacing-100);
-  }
-}
 @media screen and (min-width: 801px) {
   .blog {
-    grid-template-areas: "header     ." "navi       main" "footer     footer";
-    grid-template-rows: min-content 1fr min-content;
-    grid-template-columns: min-content minmax(0rem, var(--measure-max));
+    grid-template-areas: "major-sidebar    main      minor-sidebar" "footer           footer    footer";
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: 30ch minmax(0rem, var(--measure-max)) 30ch;
   }
   .blog__navi {
     border: 1px solid var(--color-base);
