@@ -318,7 +318,7 @@ summary {
   letter-spacing: var(--letter-spacing-110);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  width: min-content;
+  max-width: var(--measure-max);
 }
 .poem__title {
   font-style: italic;
@@ -326,11 +326,19 @@ summary {
   font-family: var(--font-family-alt);
 }
 .poem__body {
+  display: flex;
+  flex-direction: column;
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-alt);
 }
-
+.poem__stanza {
+  text-indent: calc(-1 * var(--spacing-200));
+  padding-left: var(--spacing-200);
+}
+.poem__stanza_space-after {
+  margin-bottom: var(--spacing-100);
+}
 .code {
   display: inline;
   color: var(--color-base);
@@ -373,11 +381,6 @@ summary {
   .page {
     max-width: var(--measure-max);
     padding: var(--spacing-200);
-  }
-}
-@media screen and (max-width: 800px) and (max-width: 800px) {
-  .page_poem {
-    max-width: min-content;
   }
 }
 @media screen and (min-width: 801px) {

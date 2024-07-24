@@ -139,6 +139,8 @@
     }
 }
 
+// some suggestions for marking up and styling poetry taken from:
+//    https://yearebase.github.io/blog/poetry-in-html/
 .poem {
     display: flex;
 
@@ -149,14 +151,30 @@
 
     @include text-size(base);
 
-    width: min-content;
+    max-width: var(--measure-max);
 
     &__title {
         @include text-style(serif, italic);
     }
 
     &__body {
+        display: flex;
+
+        flex-direction: column;
+
         @include text-style(serif);
+    }
+
+    &__stanza {
+        text-indent: calc(-1 * var(--spacing-200));
+        padding-left: var(--spacing-200);
+
+        &_space-after {
+            margin-bottom: var(--spacing-100);
+        }
+    }
+
+    &__line {
     }
 }
 

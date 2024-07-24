@@ -43,7 +43,7 @@
 
         &_poem {
             @include for-viewport-size(phone) {
-                max-width: min-content;
+                // max-width: min-content;
             }
         }
     }
