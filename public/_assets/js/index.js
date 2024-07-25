@@ -44,28 +44,39 @@ window.addEventListener("load", () => {
             Layout.randomiseSplashText();
             break;
         case PageLayouts.CRAZY:
-            let dialogueCount = 0;
             const dialogues = [
                 "i was crazy once.",
-                "they locked me in a room",
+                "they locked me in a room.",
                 "a rubber room.",
                 "a rubber room with rats.",
-                "and rats make me crazy",
+                "and rats make me crazy.",
                 "crazy?",
             ];
-            const dialogue = document.getElementById("dialogue");
-            let continueButton =
+            let dialogueIndex = 0;
+
+            const dialogueBox = document.getElementById("dialogue-box");
+
+            const continueButton =
                 document.getElementsByClassName("continue-dialogue")[0];
+
             continueButton.addEventListener("click", function () {
-                const text = document.createTextNode(dialogues[dialogueCount]);
+                // create paragraph and append current dialogue
+                const text = document.createTextNode(dialogues[dialogueIndex]);
                 const para = document.createElement("p");
                 para.classList.add("copy");
                 para.append(text);
-                dialogue.append(para);
-                dialogueCount++;
-                if (dialogueCount > 5) dialogueCount = 0;
+
+                dialogueBox.append(para);
+
+                // move on to next dialogue
+                dialogueIndex++;
+
+                // reset index if at end
+                if (dialogueIndex >= dialogues.length) {
+                    dialogueIndex = 0;
+                }
             });
-            console.log(continueButton);
+
             break;
         default:
             break;
