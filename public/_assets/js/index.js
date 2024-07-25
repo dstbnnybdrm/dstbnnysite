@@ -43,6 +43,30 @@ window.addEventListener("load", () => {
             frameSource = HOME_URL;
             Layout.randomiseSplashText();
             break;
+        case PageLayouts.CRAZY:
+            let dialogueCount = 0;
+            const dialogues = [
+                "i was crazy once.",
+                "they locked me in a room",
+                "a rubber room.",
+                "a rubber room with rats.",
+                "and rats make me crazy",
+                "crazy?",
+            ];
+            const dialogue = document.getElementById("dialogue");
+            let continueButton =
+                document.getElementsByClassName("continue-dialogue")[0];
+            continueButton.addEventListener("click", function () {
+                const text = document.createTextNode(dialogues[dialogueCount]);
+                const para = document.createElement("p");
+                para.classList.add("copy");
+                para.append(text);
+                dialogue.append(para);
+                dialogueCount++;
+                if (dialogueCount > 5) dialogueCount = 0;
+            });
+            console.log(continueButton);
+            break;
         default:
             break;
     }
