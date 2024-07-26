@@ -1,0 +1,33 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.dialogue-box {
+    &__dialogue {
+    }
+}
+
+.continue-dialogue {
+    background: none;
+    border: none;
+
+    color: var(--color-primary);
+    @include text-style(sans);
+    @include text-size(base);
+    text-align: left;
+    text-decoration: underline dotted;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--color-secondary);
+    }
+
+    @include for-viewport-size(phone) {
+        display: block;
+
+        width: 100%;
+        border: 1px dotted var(--color-primary);
+        padding: var(--spacing-100);
+
+        @include button-on-hover();
+    }
+}

@@ -499,6 +499,9 @@ summary {
     align-self: flex-start;
   }
 }
+.navi__hidden {
+  display: none;
+}
 
 .menu__dropdown {
   list-style: none;
@@ -2082,6 +2085,36 @@ textarea#hcb_form_content {
   }
   .sitemap__navi {
     margin-left: var(--spacing-175);
+  }
+}
+
+.continue-dialogue {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  text-align: left;
+  text-decoration: underline dotted;
+}
+.continue-dialogue:hover {
+  cursor: pointer;
+  color: var(--color-secondary);
+}
+@media screen and (max-width: 800px) {
+  .continue-dialogue {
+    display: block;
+    width: 100%;
+    border: 1px dotted var(--color-primary);
+    padding: var(--spacing-100);
+  }
+  .continue-dialogue:hover {
+    border-color: var(--color-background);
+    color: var(--color-background);
+    background-color: var(--color-secondary);
   }
 }
 

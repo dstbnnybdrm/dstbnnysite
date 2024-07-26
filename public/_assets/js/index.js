@@ -53,20 +53,45 @@ window.addEventListener("load", () => {
                 "crazy?",
             ];
             let dialogueIndex = 0;
+            let hasRepeated = false;
 
+            const navi = document.getElementById("navi");
             const dialogueBox = document.getElementById("dialogue-box");
+            const dialogueContinue =
+                document.getElementById("continue-dialogue");
 
-            const continueButton =
-                document.getElementsByClassName("continue-dialogue")[0];
+            dialogueContinue.addEventListener("click", function () {
+                if (hasRepeated) {
+                    navi.classList.remove("navi__hidden");
+                }
 
-            continueButton.addEventListener("click", function () {
                 // create paragraph and append current dialogue
                 const text = document.createTextNode(dialogues[dialogueIndex]);
                 const para = document.createElement("p");
                 para.classList.add("copy");
+                para.classList.add("dialogue-box__dialogue");
                 para.append(text);
-
                 dialogueBox.append(para);
+
+                // change continue button text
+                switch (dialogueIndex) {
+                    // "i was crazy once"
+                    case 0:
+                        dialogueContinue.innerHTML = "why?";
+                        break;
+                    // "they locked me in a room."
+                    case 1:
+                        dialogueContinue.innerHTML = "what kind of room?";
+                        break;
+                    // "a rubber room with rats."
+                    case 3:
+                        dialogueContinue.innerHTML = "with rats?";
+                        break;
+                    // else
+                    default:
+                        dialogueContinue.innerHTML = "...";
+                        break;
+                }
 
                 // move on to next dialogue
                 dialogueIndex++;
@@ -74,6 +99,7 @@ window.addEventListener("load", () => {
                 // reset index if at end
                 if (dialogueIndex >= dialogues.length) {
                     dialogueIndex = 0;
+                    hasRepeated = true;
                 }
             });
 

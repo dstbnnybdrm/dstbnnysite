@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
@@ -28,22 +28,23 @@
   <body>
     <div class="page page_simple">
       <main class="main">
-        <div id="dialogue-box">
-          <p class="copy">crazy?</p>
+        <div class="dialogue-box" id="dialogue-box">
+          <p class="copy dialogue-box__dialogue">crazy?</p>
         </div>
 
         <button
           class="continue-dialogue"
+          id="continue-dialogue"
           type="button"
           aria-label="continue dialogue"
         >
           ...
         </button>
-      </main>
 
-      <!-- <nav class="navi"> -->
-      <!--   <a href="/hub?p=/home" class="navi__link">back</a> -->
-      <!-- </nav> -->
+        <nav class="navi navi__hidden" id="navi">
+          <a href="/hub?p=/home" class="navi__link">back</a>
+        </nav>
+      </main>
     </div>
   </body>
 </html>

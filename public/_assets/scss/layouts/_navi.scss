@@ -60,6 +60,10 @@
             // width: min-content;
         }
     }
+
+    &__hidden {
+        display: none;
+    }
 }
 
 .menu {
