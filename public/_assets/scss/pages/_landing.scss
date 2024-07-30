@@ -1,3 +1,4 @@
+@use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
 .landing {
@@ -21,6 +22,12 @@
     &__stars {
         align-self: start;
         margin-left: 4rem;
+
+        @include for-viewport-size(desktop) {
+            @media screen and (max-height: 630px) {
+                display: none;
+            }
+        }
     }
 
     &__main {

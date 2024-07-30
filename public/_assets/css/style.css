@@ -862,6 +862,7 @@ summary {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
 }
 
@@ -1225,6 +1226,11 @@ summary {
 .landing__stars {
   align-self: start;
   margin-left: 4rem;
+}
+@media screen and (min-width: 801px) and (max-height: 630px) {
+  .landing__stars {
+    display: none;
+  }
 }
 .landing__main {
   border-bottom: 1px solid var(--color-base);
