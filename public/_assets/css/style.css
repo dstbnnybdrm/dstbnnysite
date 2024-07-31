@@ -362,11 +362,12 @@ summary {
 }
 .page_simple {
   display: grid;
-  grid-template-areas: "navi" "main";
+  grid-template-areas: "." "main" "navi" ".";
   grid-template-columns: minmax(0, var(--measure-max));
-  grid-template-rows: min-content minmax(0, 1fr);
+  grid-template-rows: 1fr min-content auto 1fr;
   gap: var(--spacing-125);
   justify-content: center;
+  overflow: auto;
 }
 .page_poem {
   display: flex;
