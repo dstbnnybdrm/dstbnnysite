@@ -169,7 +169,8 @@
         text-indent: calc(-1 * var(--spacing-200));
         padding-left: var(--spacing-200);
 
-        &_space-after {
+        &:not(:last-child) {
+            // background-color: blue;
             margin-bottom: var(--spacing-100);
         }
     }

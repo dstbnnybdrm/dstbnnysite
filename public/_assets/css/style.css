@@ -336,7 +336,7 @@ summary {
   text-indent: calc(-1 * var(--spacing-200));
   padding-left: var(--spacing-200);
 }
-.poem__stanza_space-after {
+.poem__stanza:not(:last-child) {
   margin-bottom: var(--spacing-100);
 }
 .code {
