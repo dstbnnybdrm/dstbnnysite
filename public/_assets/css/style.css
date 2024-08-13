@@ -413,6 +413,7 @@ summary {
   .header__splash::before, .header__splash::after {
     margin: 0 var(--spacing-200);
     content: "⸙͎۪۫｡˚۰˚☽˚⁀➷｡˚⸙͎۪۫⋆";
+    text-wrap: nowrap;
   }
 }
 
