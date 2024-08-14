@@ -27,16 +27,22 @@ window.addEventListener("DOMContentLoaded", Theme.load);
 
 Navi.button?.addEventListener("click", Navi.toggleMenu);
 
+async function populate() {
+    const requestURL = "_data/blog-posts.json";
+    const request = new Request(requestURL);
+
+    const response = await fetch(request);
+    const blogPosts = await response.json();
+    console.log(blogPosts);
+}
+
 // page set up
 window.addEventListener("load", () => {
     // set up page depending on which layout it should have
     let frameSource;
     switch (currentPage()) {
         case PageLayouts.BLOG:
-            // set frame to most recent blog post
-            const blogPostList = document.querySelectorAll(".menu__link");
-            const mostRecentBlogPost = blogPostList[0].getAttribute("href");
-            frameSource = mostRecentBlogPost;
+            populate();
             break;
         case PageLayouts.HUB:
             // set frame to home page
