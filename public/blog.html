@@ -37,14 +37,15 @@
 
   <body class="l-imposter">
     <div class="blog page">
-      <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
-      <header class="header blog__header">
-        <pre
-          class="ascii-art"
-          role="img"
-          aria-label="a row of books."
-          title="a row of books."
-        >
+      <div class="sidebar sidebar_major blog__sidebar">
+        <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
+        <header class="header blog__header">
+          <pre
+            class="ascii-art"
+            role="img"
+            aria-label="a row of books."
+            title="a row of books."
+          >
        .--.       .---.
    .---|__|       |~~~|
 .--|===|--|_      |~~~|--.
@@ -54,119 +55,32 @@
 |  |   |  | \  \  |   |  |
 |  |   |__|  \.'\ |~~~|__|
 |  |===|--|   \.'\|~~~|--|</pre
-        >
-      </header>
+          >
+        </header>
 
-      <!-- ~*:._.:*~  NAVIGATION  ~*:._.:*~ -->
-      <nav class="navi blog__navi">
-        <h1 class="navi__title">
-          <abbr title="dustbunnyblog">dstbnnyblog</abbr>
-        </h1>
+        <!-- ~*:._.:*~  NAVIGATION  ~*:._.:*~ -->
+        <nav class="navi blog__navi">
+          <h1 class="navi__title">
+            <abbr title="dustbunnyblog">dstbnnyblog</abbr>
+          </h1>
 
-        <p class="copy">various thoughts and ramblings.</p>
+          <p class="copy">various thoughts and ramblings.</p>
 
-        <a href="/hub?p=/home" class="navi__link">back to site?</a>
+          <a href="/hub?p=/home" class="navi__link">back to site?</a>
 
-        <ul class="menu menu_visible">
-          <li class="menu__dropdown">
-            <details class="dropdown" open="">
-              <summary class="dropdown__label">2024</summary>
-
-              <div class="dropdown__body">
-                <ul class="menu__list">
-                  <!-- add new posts here, me! -->
-                  <li class="menu__item">
-                    <a
-                      class="menu__link"
-                      href="/posts/2024-05-31.html"
-                      target="mainframe"
-                      >end of may update
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a
-                      class="menu__link"
-                      href="/posts/2024-05-01.html"
-                      target="mainframe"
-                      >the typing experience
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a
-                      class="menu__link"
-                      href="/posts/2024-04-09.html"
-                      target="mainframe"
-                      >end of semester thoughts
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a
-                      class="menu__link"
-                      href="/posts/2024-03-28.html"
-                      target="mainframe"
-                    >
-                      sleepy march update
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a
-                      class="menu__link"
-                      href="/posts/2024-02-23.html"
-                      target="mainframe"
-                    >
-                      on rest
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a
-                      class="menu__link"
-                      href="/posts/2024-02-08.html"
-                      target="mainframe"
-                    >
-                      basitar, Ramiel, and guitar experimentation
-                    </a>
-                  </li>
-                  <li class="menu__item">
-                    <a
-                      class="menu__link"
-                      href="/posts/2024-01-09.html"
-                      target="mainframe"
-                    >
-                      here we go again!
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </details>
-          </li>
-
-          <li class="menu__dropdown">
-            <details class="dropdown">
-              <summary class="dropdown__label">2023</summary>
-
-              <div class="dropdown__body">
-                <ul class="menu__list">
-                  <li class="menu__item">
-                    <a
-                      class="menu__link"
-                      href="/posts/2023-12-30.html"
-                      target="mainframe"
-                    >
-                      new blog, new me
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </details>
-          </li>
-        </ul>
-      </nav>
+          <ul id="blog-list" class="menu menu_visible"></ul>
+        </nav>
+      </div>
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
       <main class="main blog__main">
         <!-- the actual blog post -->
         <iframe class="main__frame" name="mainframe" title="blog post"></iframe>
       </main>
+
+      <!-- <div class="sidebar sidebar_minor blog__sidebar"> -->
+      <!--   <section style="border: 1px solid black"></section> -->
+      <!-- </div> -->
 
       <!-- ~*:._.:*~  FOOTER  ~*:._.:*~ -->
       <footer class="footer page__footer">

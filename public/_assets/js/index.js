@@ -15,6 +15,7 @@ import {
     updateViewportWidth,
     viewportWidthChanged,
 } from "./modules/utility.js";
+import * as Blog from "./modules/blog.js";
 import * as Theme from "./modules/theme.js";
 import * as Navi from "./modules/navi.js";
 import * as Frame from "./modules/frame.js";
@@ -33,15 +34,13 @@ window.addEventListener("load", () => {
     let frameSource;
     switch (currentPage()) {
         case PageLayouts.BLOG:
-            // set frame to most recent blog post
-            const blogPostList = document.querySelectorAll(".menu__link");
-            const mostRecentBlogPost = blogPostList[0].getAttribute("href");
-            frameSource = mostRecentBlogPost;
+            Blog.populateMenu();
+            Blog.setSource();
             break;
         case PageLayouts.HUB:
-            // set frame to home page
-            frameSource = HOME_URL;
             Layout.randomiseSplashText();
+            // set frame to home page
+            Frame.setSource(HOME_URL);
             break;
         case PageLayouts.CRAZY:
             const dialogues = [
@@ -107,7 +106,6 @@ window.addEventListener("load", () => {
         default:
             break;
     }
-    Frame.setSource(frameSource);
 
     // load content of major layout sections (footer, marquee, etc.) if
     // applicable

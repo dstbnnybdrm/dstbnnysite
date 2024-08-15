@@ -1389,12 +1389,14 @@ summary {
   display: inline-grid;
   gap: var(--spacing-100);
 }
+.blog__sidebar {
+  display: flex;
+  flex-direction: column;
+}
 .blog__header {
-  align-self: end;
+  align-self: center;
   justify-self: center;
   width: min-content;
-  /* counteract grid gap in layout */
-  margin-bottom: calc(var(--spacing-100) * -1);
   border: none;
   padding: 0;
 }
@@ -1418,13 +1420,18 @@ summary {
 }
 @media screen and (min-width: 801px) {
   .blog {
-    grid-template-areas: "header     ." "navi       main" "footer     footer";
-    grid-template-rows: min-content 1fr min-content;
-    grid-template-columns: min-content minmax(0rem, var(--measure-max));
+    grid-template-areas: "major-sidebar    main" "footer           footer";
+    grid-template-rows: 1fr min-content;
+    grid-template-columns: 30ch minmax(0rem, var(--measure-max));
   }
   .blog__navi {
     border: 1px solid var(--color-base);
     padding: var(--spacing-100);
+    height: 100%;
+  }
+  .blog__header {
+    /* counteract grid gap in layout */
+    margin-bottom: calc(var(--spacing-100) * -1);
   }
 }
 
