@@ -12,12 +12,10 @@
     }
 
     &__header {
-        align-self: end;
+        align-self: center;
         justify-self: center;
 
         width: min-content;
-        /* counteract grid gap in layout */
-        margin-bottom: calc(var(--spacing-100) * -1);
         border: none;
         padding: 0;
     }
@@ -29,42 +27,50 @@
         gap: var(--spacing-100);
     }
 
-    // @include for-viewport-size(phone) {
-    //     grid-template-areas:
-    //         "header"
-    //         "navi"
-    //         "main"
-    //         "footer";
+    @include for-viewport-size(phone) {
+        grid-template-areas:
+            "header"
+            "navi"
+            "main"
+            "footer";
 
-    //     &__navi {
-    //         border-top: 1px solid var(--color-base);
-    //         padding-top: var(--spacing-100);
-    //     }
+        &__navi {
+            border-top: 1px solid var(--color-base);
+            padding-top: var(--spacing-100);
+        }
 
-    //     &__main {
-    //         border-top: 1px dashed var(--color-base);
-    //         padding-top: var(--spacing-100);
-    //     }
-    // }
+        &__main {
+            border-top: 1px dashed var(--color-base);
+            padding-top: var(--spacing-100);
+        }
+
+        &__header {
+        }
+    }
 
     @include for-viewport-size(desktop) {
         grid-template-areas:
-            "major-sidebar    main      minor-sidebar"
-            "footer           footer    footer";
+            "major-sidebar    main"
+            "footer           footer";
         grid-template-rows:
             1fr
             min-content;
         grid-template-columns:
             30ch
-            minmax(0rem, var(--measure-max))
-            30ch;
+            minmax(0rem, var(--measure-max));
 
         &__navi {
             @include layout-border();
             @include layout-padding();
+            height: 100%;
         }
 
         &__main {
+        }
+
+        &__header {
+            /* counteract grid gap in layout */
+            margin-bottom: calc(var(--spacing-100) * -1);
         }
     }
 }
