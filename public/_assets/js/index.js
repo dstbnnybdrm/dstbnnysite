@@ -35,16 +35,16 @@ window.addEventListener("load", () => {
     switch (currentPage()) {
         case PageLayouts.BLOG:
             Blog.populateMenu();
+            Blog.setSource();
             break;
         case PageLayouts.HUB:
-            // set frame to home page
-            frameSource = HOME_URL;
             Layout.randomiseSplashText();
+            // set frame to home page
+            Frame.setSource(HOME_URL);
             break;
         default:
             break;
     }
-    // Frame.setSource(frameSource);
 
     // load content of major layout sections (footer, marquee, etc.) if
     // applicable
