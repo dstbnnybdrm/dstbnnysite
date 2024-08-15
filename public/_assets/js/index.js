@@ -15,6 +15,7 @@ import {
     updateViewportWidth,
     viewportWidthChanged,
 } from "./modules/utility.js";
+import * as Blog from "./modules/blog.js";
 import * as Theme from "./modules/theme.js";
 import * as Navi from "./modules/navi.js";
 import * as Frame from "./modules/frame.js";
@@ -27,22 +28,13 @@ window.addEventListener("DOMContentLoaded", Theme.load);
 
 Navi.button?.addEventListener("click", Navi.toggleMenu);
 
-async function populate() {
-    const requestURL = "_data/blog-posts.json";
-    const request = new Request(requestURL);
-
-    const response = await fetch(request);
-    const blogPosts = await response.json();
-    console.log(blogPosts);
-}
-
 // page set up
 window.addEventListener("load", () => {
     // set up page depending on which layout it should have
     let frameSource;
     switch (currentPage()) {
         case PageLayouts.BLOG:
-            populate();
+            Blog.populateMenu();
             break;
         case PageLayouts.HUB:
             // set frame to home page
@@ -52,7 +44,7 @@ window.addEventListener("load", () => {
         default:
             break;
     }
-    Frame.setSource(frameSource);
+    // Frame.setSource(frameSource);
 
     // load content of major layout sections (footer, marquee, etc.) if
     // applicable
