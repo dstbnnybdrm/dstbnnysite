@@ -1,7 +1,18 @@
 import * as Frame from "./frame.js";
 
+/**
+ * the list of blog posts on the page.
+ *
+ * @type {?HTMLElement}
+ */
 const blogList = document.getElementById("blog-list");
 
+/**
+ * fetch the list of blog posts from a JSON file.
+ *
+ *
+ * @returns {Promise<Object>}
+ */
 async function getJSON() {
     const requestURL = "_data/blog-posts.json";
     const request = new Request(requestURL);
@@ -11,6 +22,10 @@ async function getJSON() {
     return blogPosts;
 }
 
+/**
+ * populate the blog posts menu with links to blog posts.
+ *
+ */
 export async function populateMenu() {
     const blogPosts = await getJSON();
 
@@ -20,13 +35,17 @@ export async function populateMenu() {
     }
 }
 
+/**
+ * set frame source to the most recent blog post.
+ *
+ */
 export async function setSource() {
     const blogPosts = await getJSON();
     let yearObject = blogPosts.year[0];
     let year = Object.keys(blogPosts.year[0]);
     let recentPost = yearObject[year][0];
-    // console.log(recentPost);
     Frame.setSource(`posts/${recentPost.date}.html`);
+    Frame.updateSize();
 }
 
 function appendYearList(yearObject) {
