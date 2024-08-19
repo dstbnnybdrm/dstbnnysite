@@ -4,9 +4,14 @@
 .shrines {
     display: grid;
 
-    grid-template-areas: "navi" "main" "footer";
+    grid-template-areas:
+        "."
+        "main"
+        "navi"
+        "footer";
     grid-template-columns: minmax(0, var(--measure-max));
     grid-template-rows:
+        1fr
         auto
         1fr
         min-content;
