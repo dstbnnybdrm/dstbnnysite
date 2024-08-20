@@ -1298,7 +1298,7 @@ summary {
 }
 @media screen and (max-width: 800px) {
   .hub {
-    grid-template-areas: "header" "theme-toggle" "navi" "main" "featured" "status" "site-log" "marquee" "footer";
+    grid-template-areas: "header" "navi" "main" "featured" "status" "site-log" "marquee" "footer";
     grid-template-rows: repeat(7, max-content) min-content;
     grid-template-columns: minmax(0, var(--measure-max));
     row-gap: var(--spacing-100);

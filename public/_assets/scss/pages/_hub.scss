@@ -7,7 +7,6 @@
     @include for-viewport-size(phone) {
         grid-template-areas:
             "header"
-            "theme-toggle"
             "navi"
             "main"
             "featured"
