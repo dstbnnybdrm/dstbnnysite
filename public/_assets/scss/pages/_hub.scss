@@ -7,16 +7,15 @@
     @include for-viewport-size(phone) {
         grid-template-areas:
             "header"
-            "navi"
             "theme-toggle"
+            "navi"
             "main"
-            "support"
             "featured"
             "status"
             "site-log"
             "marquee"
             "footer";
-        grid-template-rows: repeat(8, max-content) min-content;
+        grid-template-rows: repeat(7, max-content) min-content;
         grid-template-columns: minmax(0, var(--measure-max));
         row-gap: var(--spacing-100);
 

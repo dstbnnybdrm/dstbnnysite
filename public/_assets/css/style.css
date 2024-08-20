@@ -440,8 +440,8 @@ summary {
   }
   .sidebar_major {
     grid-area: major-sidebar;
-    grid-template-areas: "navi" "theme-toggle" "featured" "support";
-    grid-template-rows: min-content var(--spacing-200) auto auto;
+    grid-template-areas: "theme-toggle" "navi" "featured";
+    grid-template-rows: var(--spacing-200) min-content auto;
     grid-template-columns: min-content;
   }
   .sidebar_minor {
@@ -1298,8 +1298,8 @@ summary {
 }
 @media screen and (max-width: 800px) {
   .hub {
-    grid-template-areas: "header" "navi" "theme-toggle" "main" "support" "featured" "status" "site-log" "marquee" "footer";
-    grid-template-rows: repeat(8, max-content) min-content;
+    grid-template-areas: "header" "theme-toggle" "navi" "main" "featured" "status" "site-log" "marquee" "footer";
+    grid-template-rows: repeat(7, max-content) min-content;
     grid-template-columns: minmax(0, var(--measure-max));
     row-gap: var(--spacing-100);
     max-width: var(--measure-max);
