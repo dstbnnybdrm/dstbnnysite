@@ -1,4 +1,4 @@
-import { fetchAsText, COMPONENTS_URL, DATA_URL } from "./utility.js";
+import { fetchAsText, COMPONENTS_URL, DATA_URL, fetchJSON } from "./utility.js";
 
 /**
  * the IDs of all the templated layout sections.
@@ -9,6 +9,7 @@ import { fetchAsText, COMPONENTS_URL, DATA_URL } from "./utility.js";
 const LAYOUT_IDS = ["marquee", "footer", "site-log"];
 /** @type {?HTMLElement} */
 const splashElement = document.getElementById("splash");
+const splashTextURL = "_data/splash.json";
 
 /**
  * load the templated major layout sections (ex. footer) into their respective
@@ -29,30 +30,15 @@ export async function load() {
 }
 
 /**
- * get all of the splash texts from their text file.
- *
- * @async
- * @returns {Array<string>} an array of all the splash texts
- */
-async function getSplashes() {
-    let splashes = await fetchAsText(DATA_URL + "splash.txt");
-    let splashList = splashes.split("\n");
-
-    splashList.pop(); // remove the final empty string
-
-    return splashList;
-}
-
-/**
  * choose a random splash text and load it into the splash's HTML element
  *
  * @returns {undefined}
  */
 export async function randomiseSplashText() {
     if (splashElement == null) return;
-    const splashList = await getSplashes();
-    const index = Math.floor(Math.random() * splashList.length);
-    const random_splash = splashList[index];
+    const splash = await fetchJSON(splashTextURL);
+    const index = Math.floor(Math.random() * splash.texts.length);
+    const random_splash = splash.texts[index];
 
     splashElement.innerHTML = random_splash;
 }
