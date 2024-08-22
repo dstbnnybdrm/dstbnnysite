@@ -1,4 +1,5 @@
 import * as Frame from "./frame.js";
+import { fetchJSON } from "./utility.js";
 
 /**
  * the list of blog posts on the page.
@@ -6,28 +7,14 @@ import * as Frame from "./frame.js";
  * @type {?HTMLElement}
  */
 const blogList = document.getElementById("blog-list");
-
-/**
- * fetch the list of blog posts from a JSON file.
- *
- *
- * @returns {Promise<Object>}
- */
-async function getJSON() {
-    const requestURL = "_data/blog-posts.json";
-    const request = new Request(requestURL);
-
-    const response = await fetch(request);
-    const blogPosts = await response.json();
-    return blogPosts;
-}
+const blogListURL = "_data/blog-posts.json";
 
 /**
  * populate the blog posts menu with links to blog posts.
  *
  */
 export async function populateMenu() {
-    const blogPosts = await getJSON();
+    const blogPosts = await fetchJSON(blogListURL);
 
     // create dropdown for each year
     for (var i = 0; i < blogPosts.year.length; i++) {
@@ -40,7 +27,7 @@ export async function populateMenu() {
  *
  */
 export async function setSource() {
-    const blogPosts = await getJSON();
+    const blogPosts = await fetchJSON(blogListURL);
     let yearObject = blogPosts.year[0];
     let year = Object.keys(blogPosts.year[0]);
     let recentPost = yearObject[year][0];
