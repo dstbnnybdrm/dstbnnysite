@@ -12,6 +12,7 @@ import {
     HOME_URL,
     PageLayouts,
     currentPage,
+    fetchJSON,
     updateViewportWidth,
     viewportWidthChanged,
 } from "./modules/utility.js";
@@ -41,6 +42,7 @@ window.addEventListener("load", () => {
             Layout.randomiseSplashText();
             // set frame to home page
             Frame.setSource(HOME_URL);
+            Layout.randomiseFeaturedMedia();
             break;
         case PageLayouts.CRAZY:
             const dialogues = [
