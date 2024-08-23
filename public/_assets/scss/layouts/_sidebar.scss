@@ -33,12 +33,12 @@
         &_major {
             grid-area: major-sidebar;
             grid-template-areas:
-                "theme-toggle"
                 "navi"
+                "theme-toggle"
                 "featured";
             grid-template-rows:
-                var(--spacing-200)
                 min-content
+                var(--spacing-200)
                 auto;
             grid-template-columns: min-content;
         }
