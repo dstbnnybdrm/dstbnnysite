@@ -35,12 +35,10 @@
             grid-template-areas:
                 "navi"
                 "theme-toggle"
-                "featured"
-                "support";
+                "featured";
             grid-template-rows:
                 min-content
                 var(--spacing-200)
-                auto
                 auto;
             grid-template-columns: min-content;
         }
