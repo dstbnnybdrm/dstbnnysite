@@ -67,7 +67,10 @@ export async function randomiseFeaturedMedia() {
     link.setAttribute("target", "_blank");
 
     const thumbnail = document.createElement("img");
-    thumbnail.setAttribute("src", "_assets/img/" + media.thumb + ".gif");
+    thumbnail.setAttribute(
+        "src",
+        "_assets/img/featured/" + media.thumb + ".gif",
+    );
 
     const name = document.createElement("p");
     name.classList.add("copy");
@@ -77,10 +80,10 @@ export async function randomiseFeaturedMedia() {
     link.appendChild(thumbnail);
     link.appendChild(name);
 
-    const description = document.createElement("p");
-    description.classList.add("copy");
-    description.append(media.description);
+    // const description = document.createElement("p");
+    // description.classList.add("copy");
+    // description.append(media.description);
 
     featuredElement.appendChild(link);
-    featuredElement.appendChild(description);
+    // featuredElement.appendChild(description);
 }

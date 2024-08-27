@@ -3,12 +3,36 @@
     "name": "your arms are my cocoon - death of a rabbit",
     "link": "https://yourarmsaremycocoonemo.bandcamp.com/album/death-of-a-rabbit",
     "description": "album",
-    "thumb": "featured"
+    "thumb": "yaamc-doar"
   },
   {
     "name": "Weatherday - Come in",
     "link": "https://weatherornot.bandcamp.com/album/come-in",
     "description": "album",
-    "thumb": "featured"
+    "thumb": "w-ci"
+  },
+  {
+    "name": "Kmoy - The Precure Album",
+    "link": "https://kmoy.bandcamp.com/album/the-precure-album",
+    "description": "album",
+    "thumb": "k-tpa"
+  },
+  {
+    "name": "Prince Daddy & The Hyena - Cosmic Thrill Seekers",
+    "link": "https://princedaddyandthehyena.bandcamp.com/album/cosmic-thrill-seekers",
+    "description": "album",
+    "thumb": "pdath-cts"
+  },
+  {
+    "name": "patrick hardy - elsewhere",
+    "link": "https://patrickhardy.bandcamp.com/album/elsewhere",
+    "description": "album",
+    "thumb": "ph-e"
+  },
+  {
+    "name": "WAWAN - L O S T !",
+    "link": "https://wawan.bandcamp.com/album/l-o-s-t",
+    "description": "album",
+    "thumb": "w-lost"
   }
 ]
