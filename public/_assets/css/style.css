@@ -1858,6 +1858,11 @@ div #HCB_comment_box {
   /* "not using html comment box yet?" */
   /* log in icon */
 }
+div #HCB_comment_box p {
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+}
 div #HCB_comment_box h3 {
   display: none;
 }

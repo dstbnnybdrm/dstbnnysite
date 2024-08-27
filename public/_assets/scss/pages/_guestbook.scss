@@ -29,6 +29,10 @@ div #HCB_comment_box {
 
     height: auto;
 
+    p {
+        @include text-style(sans);
+    }
+
     /* comments heading */
     h3 {
         display: none;
