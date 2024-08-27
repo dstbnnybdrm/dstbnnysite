@@ -29,7 +29,7 @@ div #HCB_comment_box {
 
     height: auto;
 
-    p {
+    p:not(#hcb_msg) {
         @include text-style(sans);
         text-transform: lowercase;
 

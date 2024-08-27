@@ -1858,16 +1858,16 @@ div #HCB_comment_box {
   /* "not using html comment box yet?" */
   /* log in icon */
 }
-div #HCB_comment_box p {
+div #HCB_comment_box p:not(#hcb_msg) {
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
   text-transform: lowercase;
 }
-div #HCB_comment_box p::before {
+div #HCB_comment_box p:not(#hcb_msg)::before {
   content: "(";
 }
-div #HCB_comment_box p::after {
+div #HCB_comment_box p:not(#hcb_msg)::after {
   content: ")";
 }
 div #HCB_comment_box h3 {
