@@ -38,9 +38,13 @@ export async function load() {
  */
 export async function randomiseSplashText() {
     if (splashElement == null) return;
+
+    // fetch list of splash texts
     const splash = await fetchJSON(splashTextURL);
-    const index = Math.floor(Math.random() * splash.texts.length);
-    const random_splash = splash.texts[index];
+
+    // pick random text from list
+    const index = Math.floor(Math.random() * splash.length);
+    const random_splash = splash[index];
 
     splashElement.innerHTML = random_splash;
 }
