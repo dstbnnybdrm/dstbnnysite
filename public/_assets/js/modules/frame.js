@@ -72,6 +72,8 @@ export function setSource(defaultPage) {
 export function updateSize() {
     if (!mainframe) return;
 
+    console.log("updating size!");
+
     const frameContent = mainframe?.contentWindow;
 
     // reset first (for when the resulting height is smaller than the initial)

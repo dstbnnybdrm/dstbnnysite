@@ -110,6 +110,7 @@ function toggle() {
  */
 export function load() {
     let currentTheme = getCurrentTheme();
+    console.log("load theme");
 
     updateRoot(currentTheme);
     updateButton(currentTheme);
