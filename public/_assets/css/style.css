@@ -1862,6 +1862,13 @@ div #HCB_comment_box p {
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
+  text-transform: lowercase;
+}
+div #HCB_comment_box p::before {
+  content: "(";
+}
+div #HCB_comment_box p::after {
+  content: ")";
 }
 div #HCB_comment_box h3 {
   display: none;

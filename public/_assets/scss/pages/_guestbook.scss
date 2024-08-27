@@ -31,6 +31,15 @@ div #HCB_comment_box {
 
     p {
         @include text-style(sans);
+        text-transform: lowercase;
+
+        &::before {
+            content: "(";
+        }
+
+        &::after {
+            content: ")";
+        }
     }
 
     /* comments heading */
