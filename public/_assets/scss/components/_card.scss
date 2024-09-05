@@ -22,15 +22,25 @@
         // min-width: 0;
 
         padding-bottom: var(--spacing-100);
+        border-top: none;
     }
 
     &__title {
         letter-spacing: var(--letter-spacing-120);
         white-space: nowrap;
 
+        margin-top: calc(-1 * var(--spacing-100));
+
         @include text-style(sans, normal, bold);
         @include text-size(base);
+        text-align: center;
+
+        background-color: var(--color-base);
+        color: var(--color-background);
+        width: calc(100% + var(--spacing-200));
+        line-height: var(--spacing-200);
     }
+
     &__copy {
         letter-spacing: var(--letter-spacing-150);
 

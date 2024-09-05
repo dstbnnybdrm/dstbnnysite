@@ -26,6 +26,7 @@
 
         &__section {
             @include layout-border();
+            border-top: none;
             @include layout-padding();
         }
 
