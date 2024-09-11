@@ -72,9 +72,12 @@
 }
 
 .l-scrollbar-container {
-    display: contents;
+    @include for-viewport-size(phone) {
+        display: contents;
+    }
 
     @include for-viewport-size(desktop) {
+        display: block;
         min-height: 0;
         overflow-y: auto;
     }

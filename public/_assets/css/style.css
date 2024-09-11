@@ -895,11 +895,14 @@ summary {
   justify-content: center;
 }
 
-.l-scrollbar-container {
-  display: contents;
+@media screen and (max-width: 800px) {
+  .l-scrollbar-container {
+    display: contents;
+  }
 }
 @media screen and (min-width: 801px) {
   .l-scrollbar-container {
+    display: block;
     min-height: 0;
     overflow-y: auto;
   }
@@ -922,7 +925,7 @@ summary {
   align-items: center;
   flex-direction: column;
   gap: var(--spacing-100);
-  overflow-x: hidden;
+  min-height: 0;
 }
 .card__body {
   display: flex;
