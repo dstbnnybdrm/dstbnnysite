@@ -10,9 +10,6 @@
             &:not(:first-child) {
                 border-top: 1px dashed var(--color-base);
                 padding-top: var(--spacing-100);
-                // @include layout-border();
-                // border-bottom: var(--spacing-025) solid var(--color-base);
-                // @include layout-padding();
             }
         }
     }
@@ -26,7 +23,6 @@
 
         &__section {
             @include layout-border();
-            // border-top: none;
             @include layout-padding();
         }
 
