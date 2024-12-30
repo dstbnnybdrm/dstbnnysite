@@ -53,7 +53,8 @@
 
     /* -- post date --- */
 
-    p time.date {
+    p time.date,
+    time.date {
         align-self: flex-start; // don't take up full width
 
         padding: var(--spacing-025);

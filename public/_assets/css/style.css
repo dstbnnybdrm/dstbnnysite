@@ -1495,7 +1495,8 @@ summary {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
-.markdown-body p time.date {
+.markdown-body p time.date,
+.markdown-body time.date {
   align-self: flex-start;
   padding: var(--spacing-025);
   background-color: var(--color-primary);
