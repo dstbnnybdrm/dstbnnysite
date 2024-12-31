@@ -7,13 +7,38 @@
     margin-left: var(--spacing-200);
 }
 
-.markdown-body {
+.blog-post {
     display: flex;
 
     flex-direction: column;
     row-gap: 1em;
 
     color: var(--color-base);
+
+    section,
+    header {
+        display: inherit;
+        flex-direction: inherit;
+        row-gap: inherit;
+        padding-bottom: var(--spacing-025);
+    }
+
+    /* -- post date --- */
+
+    p time.date,
+    time.date {
+        align-self: flex-start; // don't take up full width
+
+        padding: var(--spacing-025);
+        background-color: var(--color-primary);
+
+        color: var(--color-background);
+
+        letter-spacing: var(--letter-spacing-110);
+
+        @include text-style(serif, italic);
+        @include text-size(base);
+    }
 
     /* -- headings --- */
 
@@ -48,23 +73,6 @@
 
     h6 {
         @include text-style(sans);
-        @include text-size(base);
-    }
-
-    /* -- post date --- */
-
-    p time.date,
-    time.date {
-        align-self: flex-start; // don't take up full width
-
-        padding: var(--spacing-025);
-        background-color: var(--color-primary);
-
-        color: var(--color-background);
-
-        letter-spacing: var(--letter-spacing-110);
-
-        @include text-style(serif, italic);
         @include text-size(base);
     }
 
@@ -235,6 +243,9 @@
 
         flex-direction: column;
         row-gap: var(--spacing-025);
+
+        padding-top: var(--spacing-025);
+        padding-bottom: var(--spacing-025);
     }
 
     figcaption {
@@ -255,76 +266,9 @@
         @include text-style(serif, italic);
         @include text-size(base);
     }
+
+    .footnotes {
+        border-top: 1px dashed var(--color-primary-hi-contrast);
+        padding-top: var(--spacing-025);
+    }
 }
-
-// .blog-post {
-//     &__header {
-//         display: inherit;
-
-//         flex-direction: inherit;
-
-//         margin-bottom: var(--spacing-150);
-//     }
-
-//     &__eyebrow {
-//         margin-bottom: var(--spacing-050);
-
-//         text-transform: uppercase;
-
-//         letter-spacing: var(--letter-spacing-130);
-
-//         @include text-style(sans, normal, bold);
-//         @include text-size(small);
-//     }
-
-//     &__activity {
-//         margin-top: var(--spacing-100);
-
-//         letter-spacing: var(--letter-spacing-110);
-
-//         @include text-style(serif, italic);
-//         @include text-size(base);
-//     }
-
-//     &__heading {
-//         line-height: var(--line-height-larger);
-//         letter-spacing: var(--letter-spacing-120);
-
-//         @include text-style(sans);
-//         @include text-size(larger);
-//     }
-
-//     &__quote {
-//         display: block;
-
-//         @include figure-margin();
-
-//         letter-spacing: var(--letter-spacing-110);
-
-//         @include text-style(serif, italic);
-//         @include text-size(base);
-//     }
-
-//     &__footer {
-//         display: block;
-
-//         text-align: right;
-//         letter-spacing: var(--letter-spacing-110);
-
-//         @include text-style(serif, italic);
-//         @include text-size(base);
-//     }
-
-//     @include for-in-frame() {
-//         max-width: var(--measure-max);
-//         margin-inline: auto;
-//         padding-top: var(--spacing-100);
-
-//         /* show to guide user back outside of frame */
-//         &__breadcrumb {
-//             margin-bottom: var(--spacing-075);
-//             border-bottom: 1px var(--color-base) dotted;
-//             padding-bottom: var(--spacing-075);
-//         }
-//     }
-// }
