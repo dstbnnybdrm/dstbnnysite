@@ -1499,7 +1499,6 @@ summary {
 .blog-post cite {
   font-style: italic;
   font-weight: normal;
-  font-family: var(--font-family-alt);
 }
 .blog-post blockquote {
   border-left: 4px solid var(--color-primary-hi-contrast);

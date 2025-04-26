@@ -138,7 +138,7 @@
 
     em,
     cite {
-        @include text-style(serif, italic);
+        @include text-style(normal, italic);
     }
 
     /* -- quotes --- */
