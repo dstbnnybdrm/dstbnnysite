@@ -6,7 +6,7 @@ ______  _____ ___________ _   _  _   ___   ______________________  ___
 |___/  \____/  \_/ \____/\_| \_/\_| \_/ \_/ \____/|___/ \_| \_\_|  |_/
 
 Weatherday
-“Sleep in while you’re doing your best”
+"Sleep in while you're doing your best"
 Come in
 
 tabbed by: dstbnnyjp
@@ -22,12 +22,12 @@ Key: D
 Guitar 1 & 2: DADAC#E, capo 5
 
 tab is written relative to capo.
-timing is notated underneath the tab line (with “1 e + a…” being 16th notes).
+timing is notated underneath the tab line (with "1 e + a..." being 16th notes).
 
 [Intro]
 
 (Guitars 1 and 2 do this call and response thing, so they definitely could be
-played by one guitarist, though Sputnik doesn’t do this live)
+played by one guitarist, though Sputnik doesn't do this live)
 
 Guitar 1
                        rest----|
@@ -65,7 +65,7 @@ c#|---------|-----5p0---------0-|---------|-----------------|
 [Verse] 
 
 Guitar 1
-“She ran from the concert…”
+"She ran from the concert..."
 
  e||-0-------0-0-0---|-0---0-----0-0-0-|-0---0-----0-0-0-|-0---0-----0-0-0-|
 c#||-0-------0-0-0---|-0---0-----0-0-0-|-0---0-----0-0-0-|-0---0-----0-0-0-|
@@ -75,7 +75,7 @@ c#||-0-------0-0-0---|-0---0-----0-0-0-|-0---0-----0-0-0-|-0---0-----0-0-0-|
  D||-7-------7-7-4---|-4---4-----4-0-0-|-0---0-----0-0-0-|-0---0-----0-0-0-|
      1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +  
 
-“…you said that it was either then or never!”
+"...you said that it was either then or never!"
 
  e||-0---0-----0-0-0-|-0---0-0-0-0-0-0-|-0---0---0-0-0-0-|-0---0---0-0-0-0-|
 c#||-0---0-----0-0-0-|-0---0-0-0-0-0-0-|-0---0---0-0-0-0-|-0---0---0-0-0-0-|
@@ -93,7 +93,7 @@ c#||-0---0-----0-0-0-|-0---0-0-0-0-0-0-|-0---0---0-0-0-0-|-0---0---0-0-0-0-|
  D||-7---7-----7-7-7-|-7---7-7-7-7-7-7-|-0---0---0-0-0-0-|-0---0---0-0-0-0-|
      1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +  
 
-“I can’t be this weak…”
+"I can't be this weak..."
 
  e|-0---0-----0-0-0-|-0---0-0-0-0-0-0-|-0---0---0-0-0-0-|-0---0---0-0-0-0-|
 c#|-0---0-----0-0-0-|-0---0-0-0-0-0-0-|-0---0---0-0-0-0-|-0---0---0-0-0-0-|
@@ -103,7 +103,7 @@ c#|-0---0-----0-0-0-|-0---0-0-0-0-0-0-|-0---0---0-0-0-0-|-0---0---0-0-0-0-|
  D|-2---2-----2-2-0-|-0---0-0-0-0-0-0-|-4---4---4-4-4-0-|-0---0---0-0-0-0-|
     1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +   1 + 2 + 3 + 4 +  
 
-“‘Oh!’, weather day…”
+"'Oh!', weather day..."
 
                                         let ring--------------|
  e|-0---0-----0-0-0-|-0---0---0-0-0-0-|-0--------|-(0)--------|
@@ -118,7 +118,7 @@ Guitar 2
 
 (rest for 12 bars)
 
-“…either then or never!”
+"...either then or never!"
 
 (no guitar actually plays this
 bell-like part, live or in the
@@ -135,11 +135,11 @@ c#||---7-----7-|-(7)---------|
 
 (rest for 15 bars)
 
-“…either that or weather day…”
+"...either that or weather day..."
 
 (Sputnik has said that many lead guitar parts on Come in were improvised on the
-spot and i’m pretty sure this section is too. the timing here isn't very
-precise and i’m not 100% sure on any of it so i include it here just for
+spot and i'm pretty sure this section is too. the timing here isn't very
+precise and i'm not 100% sure on any of it so i include it here just for
 completeness)
 
  e||-----------------|------------------|-----------------|-----------------|
@@ -182,7 +182,7 @@ c#|-0-------|-5-------|---------5-|-(5)/10--------|
  D|---------|---------|-----------|---------------|
     1 2 3 4   1 2 3 4    1  2 3 4       1   2 3 4  
 
-“‘Oh!’, weather day…”
+"'Oh!', weather day..."
                             let ring-----------|
  e|-(9)-------|-/9-------|-(9)-------|---------|
 c#|-----------|----------|-----------|---------|
@@ -196,7 +196,7 @@ c#|-----------|----------|-----------|---------|
 
 Guitar 1
 
-“‘Um…’ ‘Hm?’ ‘Nevermind’”
+"'Um...' 'Hm?' 'Nevermind'"
 
 (strum through these chords very slowly)
 
