@@ -1,21 +1,21 @@
 @use "../abstracts/mixins" as *;
 
 .title {
-    letter-spacing: var(--letter-spacing-110);
+    // letter-spacing: var(--letter-spacing-110);
 
     @include text-style($family: sans, $weight: bold);
     @include text-size(largest);
 }
 
 .heading {
-    letter-spacing: var(--letter-spacing-120);
+    // letter-spacing: var(--letter-spacing-120);
 
     @include text-style(sans);
     @include text-size(larger);
 }
 
 .subheading {
-    letter-spacing: var(--letter-spacing-130);
+    // letter-spacing: var(--letter-spacing-130);
 
     @include text-style(serif, italic);
     @include text-size(large);
@@ -36,43 +36,43 @@
     }
 }
 
-.small-print {
-    @include text-style(sans);
-    @include text-size(base);
+// .small-print {
+//     @include text-style(sans);
+//     @include text-size(base);
 
-    @include emphasis-serif();
-}
+//     @include emphasis-serif();
+// }
 
-.block-quote {
-    display: flex;
+// .block-quote {
+//     display: flex;
 
-    flex-direction: column;
-    row-gap: var(--spacing-050);
+//     flex-direction: column;
+//     row-gap: var(--spacing-050);
 
-    margin-left: var(--spacing-100);
+//     margin-left: var(--spacing-100);
 
-    @include text-style(serif, italic);
-    @include text-size(base);
+//     @include text-style(serif, italic);
+//     @include text-size(base);
 
-    &__body {
-    }
+//     &__body {
+//     }
 
-    &__cite {
-    }
-}
+//     &__cite {
+//     }
+// }
 
-.dinkus {
-    border: none;
+// .dinkus {
+//     border: none;
 
-    &::before {
-        display: block;
+//     &::before {
+//         display: block;
 
-        color: var(--color-base);
-        text-align: center;
+//         color: var(--color-base);
+//         text-align: center;
 
-        content: "❦";
-    }
-}
+//         content: "❦";
+//     }
+// }
 
 .list {
     @include text-style(sans);
@@ -108,87 +108,87 @@
     }
 }
 
-.definition-list {
-    @include list-style(base);
+// .definition-list {
+//     @include list-style(base);
 
-    &__term {
-        display: inline;
+//     &__term {
+//         display: inline;
 
-        letter-spacing: var(--letter-spacing-110);
+//         letter-spacing: var(--letter-spacing-110);
 
-        @include text-style(serif, italic);
+//         @include text-style(serif, italic);
 
-        &::before {
-            display: block;
+//         &::before {
+//             display: block;
 
-            margin-bottom: var(--spacing-025);
+//             margin-bottom: var(--spacing-025);
 
-            content: "";
-        }
+//             content: "";
+//         }
 
-        &::after {
-            content: ":";
-        }
-    }
+//         &::after {
+//             content: ":";
+//         }
+//     }
 
-    &__description {
-        display: inline;
+//     &__description {
+//         display: inline;
 
-        @include text-style(sans);
-        @include description-list-spacing();
-    }
-}
+//         @include text-style(sans);
+//         @include description-list-spacing();
+//     }
+// }
 
-// some suggestions for marking up and styling poetry taken from:
-//    https://yearebase.github.io/blog/poetry-in-html/
-.poem {
-    display: flex;
+// // some suggestions for marking up and styling poetry taken from:
+// //    https://yearebase.github.io/blog/poetry-in-html/
+// .poem {
+//     display: flex;
 
-    flex-direction: column;
-    row-gap: var(--spacing-100);
+//     flex-direction: column;
+//     row-gap: var(--spacing-100);
 
-    letter-spacing: var(--letter-spacing-110);
+//     letter-spacing: var(--letter-spacing-110);
 
-    @include text-size(base);
+//     @include text-size(base);
 
-    max-width: var(--measure-max);
+//     max-width: var(--measure-max);
 
-    &__title {
-        @include text-style(serif, italic);
-    }
+//     &__title {
+//         @include text-style(serif, italic);
+//     }
 
-    &__body {
-        display: flex;
+//     &__body {
+//         display: flex;
 
-        flex-direction: column;
+//         flex-direction: column;
 
-        @include text-style(serif);
-    }
+//         @include text-style(serif);
+//     }
 
-    &__stanza {
-        text-indent: calc(-1 * var(--spacing-200));
-        padding-left: var(--spacing-200);
+//     &__stanza {
+//         text-indent: calc(-1 * var(--spacing-200));
+//         padding-left: var(--spacing-200);
 
-        &:not(:last-child) {
-            // background-color: blue;
-            margin-bottom: var(--spacing-100);
-        }
-    }
+//         &:not(:last-child) {
+//             // background-color: blue;
+//             margin-bottom: var(--spacing-100);
+//         }
+//     }
 
-    &__line {
-    }
-}
+//     &__line {
+//     }
+// }
 
-.code {
-    display: inline;
+// .code {
+//     display: inline;
 
-    color: var(--color-base);
+//     color: var(--color-base);
 
-    line-height: 1rem;
+//     line-height: 1rem;
 
-    @include text-style(mono);
+//     @include text-style(mono);
 
-    &_block {
-        display: block;
-    }
-}
+//     &_block {
+//         display: block;
+//     }
+// }

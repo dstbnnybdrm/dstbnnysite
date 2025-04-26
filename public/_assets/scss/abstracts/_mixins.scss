@@ -19,8 +19,8 @@
     i,
     em,
     cite {
-        @include text-style(serif, italic);
-        letter-spacing: var(--letter-spacing-110);
+        @include text-style(regular, italic);
+        // letter-spacing: var(--letter-spacing-110);
     }
 }
 

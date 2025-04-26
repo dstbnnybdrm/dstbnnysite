@@ -10,10 +10,57 @@
  */
 /*:._.:*~ ABSTRACTS ~*:._.:*/
 /*:._.:*~ BASE ~*:._.:*/
+/* 
+ * i already love Fira Sans and have been using it for a while but i did yoink
+ * this font pairing with Charter from Matthew Butterick of Practical
+ * Typography. 
+ */
+/* -- sans serif font -- */
+@font-face {
+  font-family: "Fira";
+  src: url("/_assets/font/FiraSans-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fira";
+  src: url("/_assets/font/FiraSans-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Fira";
+  src: url("/_assets/font/FiraSans-Italic.woff2") format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Fira";
+  src: url("/_assets/font/FiraSans-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+/* -- serif font -- */
+@font-face {
+  font-family: "Charter";
+  src: url("/_assets/font/charter_regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Charter";
+  src: url("/_assets/font/charter_bold.woff2") format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Charter";
+  src: url("/_assets/font/charter_italic.woff2") format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Charter";
+  src: url("/_assets/font/charter_bold_italic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
 /*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
 :root {
-  --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
-  --font-family-alt: Georgia, "Times New Roman", Times, serif;
+  --font-family-base: "Fira", Verdana, Geneva, Tahoma, sans-serif;
+  --font-family-alt: "Charter", Georgia, "Times New Roman", Times, serif;
   --font-family-mono: "Courier New", Courier, monospace;
   /* size ratios mostly derived from minor thirds (6:5) */
   --font-size-smaller: 0.69rem;
@@ -43,7 +90,7 @@
   --spacing-200: 2rem;
   /* the maximum line length that text should span (~74 characters, or ~2.8
    alphabets) */
-  --measure-max: 44rem;
+  --measure-max: 40rem;
 }
 
 /* *~  GLOBAL RESETS  ~* 
@@ -65,7 +112,7 @@
   /* use the default scrollbar width for the platform, if applicable */
   scrollbar-width: auto;
   /* set root font size; all REM values are relative to this */
-  font-size: 14px;
+  font-size: 15px;
   scrollbar-width: thin;
 }
 
@@ -160,7 +207,6 @@ summary {
 }
 
 .title {
-  letter-spacing: var(--letter-spacing-110);
   font-style: normal;
   font-weight: bold;
   font-family: var(--font-family-base);
@@ -169,7 +215,6 @@ summary {
 }
 
 .heading {
-  letter-spacing: var(--letter-spacing-120);
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-base);
@@ -178,7 +223,6 @@ summary {
 }
 
 .subheading {
-  letter-spacing: var(--letter-spacing-130);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -198,8 +242,6 @@ summary {
 .copy cite {
   font-style: italic;
   font-weight: normal;
-  font-family: var(--font-family-alt);
-  letter-spacing: var(--letter-spacing-110);
 }
 .copy_center {
   text-align: center;
@@ -207,43 +249,6 @@ summary {
 .copy_small {
   font-size: var(--font-size-smaller);
   line-height: var(--line-height-smaller);
-}
-
-.small-print {
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-.small-print i,
-.small-print em,
-.small-print cite {
-  font-style: italic;
-  font-weight: normal;
-  font-family: var(--font-family-alt);
-  letter-spacing: var(--letter-spacing-110);
-}
-
-.block-quote {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--spacing-050);
-  margin-left: var(--spacing-100);
-  font-style: italic;
-  font-weight: normal;
-  font-family: var(--font-family-alt);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-.dinkus {
-  border: none;
-}
-.dinkus::before {
-  display: block;
-  color: var(--color-base);
-  text-align: center;
-  content: "❦";
 }
 
 .list {
@@ -259,8 +264,6 @@ summary {
 .list cite {
   font-style: italic;
   font-weight: normal;
-  font-family: var(--font-family-alt);
-  letter-spacing: var(--letter-spacing-110);
 }
 .list_row {
   display: flex;
@@ -278,77 +281,6 @@ summary {
 .list__item_row:not(:last-child)::after {
   margin: 0 var(--spacing-050);
   content: "/";
-}
-
-.definition-list {
-  list-style: "❀ ";
-}
-.definition-list__term {
-  display: inline;
-  letter-spacing: var(--letter-spacing-110);
-  font-style: italic;
-  font-weight: normal;
-  font-family: var(--font-family-alt);
-}
-.definition-list__term::before {
-  display: block;
-  margin-bottom: var(--spacing-025);
-  content: "";
-}
-.definition-list__term::after {
-  content: ":";
-}
-.definition-list__description {
-  display: inline;
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-base);
-  /* selects a description that has a definition list directly following
-      it */
-}
-.definition-list__description:has(+ .definition-list__description)::after {
-  margin: 0 0.5ch;
-  content: ",";
-}
-
-.poem {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--spacing-100);
-  letter-spacing: var(--letter-spacing-110);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  max-width: var(--measure-max);
-}
-.poem__title {
-  font-style: italic;
-  font-weight: normal;
-  font-family: var(--font-family-alt);
-}
-.poem__body {
-  display: flex;
-  flex-direction: column;
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-alt);
-}
-.poem__stanza {
-  text-indent: calc(-1 * var(--spacing-200));
-  padding-left: var(--spacing-200);
-}
-.poem__stanza:not(:last-child) {
-  margin-bottom: var(--spacing-100);
-}
-.code {
-  display: inline;
-  color: var(--color-base);
-  line-height: 1rem;
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-mono);
-}
-.code_block {
-  display: block;
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
@@ -1036,8 +968,6 @@ summary {
 .table__row cite {
   font-style: italic;
   font-weight: normal;
-  font-family: var(--font-family-alt);
-  letter-spacing: var(--letter-spacing-110);
 }
 .table__header {
   border: 1px solid var(--color-base);

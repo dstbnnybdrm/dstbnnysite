@@ -1,8 +1,8 @@
 /*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
 
 :root {
-    --font-family-base: Verdana, Geneva, Tahoma, sans-serif;
-    --font-family-alt: Georgia, "Times New Roman", Times, serif;
+    --font-family-base: "Fira", Verdana, Geneva, Tahoma, sans-serif;
+    --font-family-alt: "Charter", Georgia, "Times New Roman", Times, serif;
     --font-family-mono: "Courier New", Courier, monospace;
 
     /* size ratios mostly derived from minor thirds (6:5) */
@@ -37,5 +37,5 @@
 
     /* the maximum line length that text should span (~74 characters, or ~2.8
      alphabets) */
-    --measure-max: 44rem;
+    --measure-max: 40rem;
 }
