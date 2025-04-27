@@ -22,7 +22,8 @@
     &__title {
         letter-spacing: var(--letter-spacing-120);
 
-        @include text-style(serif, italic);
+        @include text-style(sans);
+        font-variant: small-caps;
         // @include text-size(large);
     }
 
