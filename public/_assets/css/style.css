@@ -12,8 +12,8 @@
 /*:._.:*~ BASE ~*:._.:*/
 /* 
  * i already love Fira Sans and have been using it for a while but i did yoink
- * this font pairing with Charter from Matthew Butterick of Practical
- * Typography. 
+ * this particular font pairing (Fira and Charter) from Matthew Butterick of
+ * Practical Typography. 
  */
 /* -- sans serif font -- */
 @font-face {
@@ -57,11 +57,21 @@
   font-weight: bold;
   font-style: italic;
 }
+/* -- monospace font -- */
+@font-face {
+  font-family: "Fira Mono";
+  src: url("/_assets/font/FiraMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fira Mono";
+  src: url("/_assets/font/FiraMono-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
 /*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
 :root {
   --font-family-base: "Fira", Verdana, Geneva, Tahoma, sans-serif;
   --font-family-alt: "Charter", Georgia, "Times New Roman", Times, serif;
-  --font-family-mono: "Courier New", Courier, monospace;
+  --font-family-mono: "Fira Mono", Courier, monospace;
   /* size ratios mostly derived from minor thirds (6:5) */
   --font-size-smaller: 0.69rem;
   --font-size-small: 0.83rem;
@@ -166,6 +176,8 @@ a[rel*=external] {
 }
 a[rel*=external]:not(:has(img))::after {
   content: " ↗";
+  font-weight: normal;
+  font-style: normal;
 }
 
 a {
@@ -223,11 +235,12 @@ summary {
 }
 
 .subheading {
-  font-style: italic;
+  font-style: normal;
   font-weight: normal;
-  font-family: var(--font-family-alt);
+  font-family: var(--font-family-base);
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
+  font-variant: small-caps;
 }
 
 .copy {
@@ -237,18 +250,34 @@ summary {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
-.copy i,
-.copy em,
-.copy cite {
+
+.small-print {
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+.block-quote {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-050);
+  margin-left: var(--spacing-100);
   font-style: italic;
   font-weight: normal;
+  font-family: var(--font-family-alt);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
-.copy_center {
+.dinkus {
+  border: none;
+}
+.dinkus::before {
+  display: block;
+  color: var(--color-base);
   text-align: center;
-}
-.copy_small {
-  font-size: var(--font-size-smaller);
-  line-height: var(--line-height-smaller);
+  content: "❦";
 }
 
 .list {
@@ -258,12 +287,6 @@ summary {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   list-style: "❀ ";
-}
-.list i,
-.list em,
-.list cite {
-  font-style: italic;
-  font-weight: normal;
 }
 .list_row {
   display: flex;
@@ -281,6 +304,78 @@ summary {
 .list__item_row:not(:last-child)::after {
   margin: 0 var(--spacing-050);
   content: "/";
+}
+
+.definition-list {
+  list-style: "❀ ";
+}
+.definition-list__term {
+  display: inline;
+  letter-spacing: var(--letter-spacing-110);
+  font-style: normal;
+  font-weight: bold;
+  font-family: var(--font-family-base);
+}
+.definition-list__term::before {
+  display: block;
+  margin-bottom: var(--spacing-025);
+  content: "";
+}
+.definition-list__term::after {
+  content: ":";
+  font-weight: normal;
+}
+.definition-list__description {
+  display: inline;
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-base);
+  /* selects a description that has a definition list directly following
+      it */
+}
+.definition-list__description:has(+ .definition-list__description)::after {
+  margin: 0 0.5ch;
+  content: ",";
+}
+
+.poem {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-100);
+  letter-spacing: var(--letter-spacing-110);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  max-width: var(--measure-max);
+}
+.poem__title {
+  font-style: italic;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+}
+.poem__body {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-alt);
+}
+.poem__stanza {
+  text-indent: calc(-1 * var(--spacing-200));
+  padding-left: var(--spacing-200);
+}
+.poem__stanza:not(:last-child) {
+  margin-bottom: var(--spacing-100);
+}
+.code {
+  display: inline;
+  color: var(--color-base);
+  line-height: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  font-family: var(--font-family-mono);
+}
+.code_block {
+  display: block;
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
@@ -899,7 +994,6 @@ summary {
 }
 .section_subsection {
   margin-top: var(--spacing-075);
-  margin-left: var(--spacing-075);
 }
 .section_footer {
   border-top: 1px dotted var(--color-base);
@@ -932,9 +1026,10 @@ summary {
 }
 .feed__title {
   letter-spacing: var(--letter-spacing-120);
-  font-style: italic;
+  font-style: normal;
   font-weight: normal;
-  font-family: var(--font-family-alt);
+  font-family: var(--font-family-base);
+  font-variant: small-caps;
 }
 
 .image {
@@ -994,7 +1089,7 @@ summary {
   margin-left: var(--spacing-150);
 }
 .figure__caption {
-  letter-spacing: var(--letter-spacing-130);
+  letter-spacing: var(--letter-spacing-110);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
@@ -1008,9 +1103,6 @@ summary {
   font-style: normal;
   font-weight: normal;
   font-family: var(--font-family-mono);
-}
-.ascii-art_inline {
-  display: inline;
 }
 
 .web-graphics {
