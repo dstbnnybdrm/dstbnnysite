@@ -88,6 +88,9 @@ a[rel*="external"] {
     /* but NOT on images! */
     &:not(:has(img))::after {
         content: " ↗";
+        // don't take the styling of whatever its attached to
+        font-weight: normal;
+        font-style: normal;
     }
 }
 
