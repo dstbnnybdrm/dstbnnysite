@@ -1,7 +1,7 @@
 /* 
  * i already love Fira Sans and have been using it for a while but i did yoink
- * this font pairing with Charter from Matthew Butterick of Practical
- * Typography. 
+ * this particular font pairing (Fira and Charter) from Matthew Butterick of
+ * Practical Typography. 
  */
 
 /* -- sans serif font -- */
@@ -54,4 +54,17 @@
     src: url("/_assets/font/charter_bold_italic.woff2") format("woff2");
     font-weight: bold;
     font-style: italic;
+}
+
+/* -- monospace font -- */
+
+@font-face {
+    font-family: "Fira Mono";
+    src: url("/_assets/font/FiraMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Fira Mono";
+    src: url("/_assets/font/FiraMono-Bold.woff2") format("woff2");
+    font-weight: bold;
 }
