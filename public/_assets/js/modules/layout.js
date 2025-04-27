@@ -72,13 +72,13 @@ export async function randomiseFeaturedMedia() {
         "_assets/img/featured/" + media.thumb + ".gif",
     );
 
-    const name = document.createElement("p");
-    name.classList.add("copy");
-    name.classList.add("copy_center");
-    name.append(media.name);
+    // const name = document.createElement("p");
+    // name.classList.add("copy");
+    // name.classList.add("copy_center");
+    // name.append(media.name);
 
     link.appendChild(thumbnail);
-    link.appendChild(name);
+    // link.appendChild(name);
 
     // const description = document.createElement("p");
     // description.classList.add("copy");
