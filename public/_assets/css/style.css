@@ -250,6 +250,13 @@ summary {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
+.copy_center {
+  text-align: center;
+}
+.copy_small {
+  font-size: var(--font-size-smaller);
+  line-height: var(--line-height-smaller);
+}
 
 .small-print {
   font-style: normal;

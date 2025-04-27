@@ -27,13 +27,13 @@
     @include text-style(sans);
     @include text-size(base);
 
-    // &_center {
-    //     text-align: center;
-    // }
+    &_center {
+        text-align: center;
+    }
 
-    // &_small {
-    //     @include text-size(smaller);
-    // }
+    &_small {
+        @include text-size(smaller);
+    }
 }
 
 .small-print {
