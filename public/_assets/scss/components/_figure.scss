@@ -9,7 +9,7 @@
     margin-left: var(--spacing-150);
 
     &__caption {
-        letter-spacing: var(--letter-spacing-130);
+        letter-spacing: var(--letter-spacing-110);
 
         @include text-style(serif, italic);
         @include text-size(small);
