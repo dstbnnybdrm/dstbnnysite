@@ -6,10 +6,4 @@
     line-height: 1rem;
 
     @include text-style(mono);
-
-    // user-select: none;
-
-    &_inline {
-        display: inline;
-    }
 }
