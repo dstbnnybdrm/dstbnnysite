@@ -1,11 +1,11 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/breakpoints" as *;
 
-@mixin figure-margin() {
-    margin-top: var(--spacing-050);
-    margin-bottom: var(--spacing-050);
-    margin-left: var(--spacing-200);
-}
+// @mixin figure-margin() {
+//     margin-top: var(--spacing-050);
+//     margin-bottom: var(--spacing-050);
+//     margin-left: var(--spacing-200);
+// }
 
 .blog-post {
     display: flex;
@@ -15,29 +15,31 @@
 
     color: var(--color-base);
 
+    font-family: var(--font-family-base);
+
+    section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+    }
+
     section,
     header {
         display: inherit;
         flex-direction: inherit;
-        row-gap: inherit;
-        padding-bottom: var(--spacing-025);
+        // row-gap: var(--spacing-025);
     }
 
     /* -- post date --- */
 
     p time.date,
     time.date {
-        align-self: flex-start; // don't take up full width
-
-        padding: var(--spacing-025);
-        background-color: var(--color-primary);
-
-        color: var(--color-background);
-
+        font-family: var(--font-family-alt);
+        font-style: italic;
         letter-spacing: var(--letter-spacing-110);
 
-        @include text-style(serif, italic);
-        @include text-size(base);
+        // @include text-style(serif, italic);
+        // @include text-size(base);
     }
 
     /* -- headings --- */
@@ -67,13 +69,13 @@
     // probably won't ever use these lol
 
     h5 {
-        @include text-style(sans);
-        @include text-size(base);
+        // @include text-style(sans);
+        // @include text-size(base);
     }
 
     h6 {
-        @include text-style(sans);
-        @include text-size(base);
+        // @include text-style(sans);
+        // @include text-size(base);
     }
 
     /* -- activity --- */
@@ -124,21 +126,17 @@
     /* -- body copy --- */
 
     p {
-        line-height: var(--line-height-large);
-        letter-spacing: var(--letter-spacing-100);
-        @include text-style(sans);
-        @include text-size(base);
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
     }
 
     strong {
-        color: var(--color-primary-hi-contrast);
-
         font-weight: bold;
     }
 
     em,
     cite {
-        @include text-style(normal, italic);
+        font-style: italic;
     }
 
     /* -- quotes --- */
@@ -249,10 +247,10 @@
     }
 
     figcaption {
-        letter-spacing: var(--letter-spacing-140);
+        letter-spacing: var(--letter-spacing-110);
 
         @include text-style(serif, italic);
-        @include text-size(small);
+        // @include text-size(small);
     }
 
     /* -- footer --- */

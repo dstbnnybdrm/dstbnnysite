@@ -1468,6 +1468,7 @@ summary {
   flex-direction: column;
   row-gap: 1em;
   color: var(--color-base);
+  font-family: var(--font-family-base);
   /* -- post date --- */
   /* -- headings --- */
   /* -- activity --- */
@@ -1480,25 +1481,21 @@ summary {
   /* -- figure --- */
   /* -- footer --- */
 }
+.blog-post section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
 .blog-post section,
 .blog-post header {
   display: inherit;
   flex-direction: inherit;
-  row-gap: inherit;
-  padding-bottom: var(--spacing-025);
 }
 .blog-post p time.date,
 .blog-post time.date {
-  align-self: flex-start;
-  padding: var(--spacing-025);
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  letter-spacing: var(--letter-spacing-110);
-  font-style: italic;
-  font-weight: normal;
   font-family: var(--font-family-alt);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+  font-style: italic;
+  letter-spacing: var(--letter-spacing-110);
 }
 .blog-post h1 {
   font-style: normal;
@@ -1529,20 +1526,6 @@ summary {
   font-family: var(--font-family-alt);
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
-}
-.blog-post h5 {
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-}
-.blog-post h6 {
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
 }
 .blog-post dl.activity {
   align-self: flex-start;
@@ -1582,22 +1565,15 @@ summary {
   content: "❦";
 }
 .blog-post p {
-  line-height: var(--line-height-large);
-  letter-spacing: var(--letter-spacing-100);
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
 .blog-post strong {
-  color: var(--color-primary-hi-contrast);
   font-weight: bold;
 }
 .blog-post em,
 .blog-post cite {
   font-style: italic;
-  font-weight: normal;
 }
 .blog-post blockquote {
   border-left: 4px solid var(--color-primary-hi-contrast);
@@ -1681,12 +1657,10 @@ summary {
   padding-bottom: var(--spacing-025);
 }
 .blog-post figcaption {
-  letter-spacing: var(--letter-spacing-140);
+  letter-spacing: var(--letter-spacing-110);
   font-style: italic;
   font-weight: normal;
   font-family: var(--font-family-alt);
-  font-size: var(--font-size-small);
-  line-height: var(--line-height-small);
 }
 .blog-post footer {
   display: block;
