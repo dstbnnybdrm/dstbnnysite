@@ -1,12 +1,6 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/breakpoints" as *;
 
-// @mixin figure-margin() {
-//     margin-top: var(--spacing-050);
-//     margin-bottom: var(--spacing-050);
-//     margin-left: var(--spacing-200);
-// }
-
 .blog-post {
     display: flex;
 
@@ -14,7 +8,6 @@
     row-gap: 1em;
 
     color: var(--color-base);
-
     font-family: var(--font-family-base);
 
     section {
@@ -23,11 +16,10 @@
         row-gap: 1em;
     }
 
-    section,
     header {
-        display: inherit;
-        flex-direction: inherit;
-        // row-gap: var(--spacing-025);
+        display: flex;
+        flex-direction: column;
+        row-gap: var(--spacing-025);
     }
 
     /* -- post date --- */
@@ -37,59 +29,45 @@
         font-family: var(--font-family-alt);
         font-style: italic;
         letter-spacing: var(--letter-spacing-110);
-
-        // @include text-style(serif, italic);
-        // @include text-size(base);
     }
 
     /* -- headings --- */
 
     h1 {
-        @include text-style(sans, normal, bold);
-        @include text-size(largest);
+        font-size: var(--font-size-largest);
     }
 
     h2 {
-        @include text-style(sans);
-        @include text-size(larger);
+        font-size: var(--font-size-larger);
     }
 
     h3 {
-        letter-spacing: var(--letter-spacing-110);
-        @include text-style(serif, italic);
-        @include text-size(large);
+        font-family: var(--font-family-alt);
+        font-size: var(--font-size-large);
+        font-style: italic;
+        font-weight: normal;
     }
 
-    h4 {
-        letter-spacing: var(--letter-spacing-110);
-        @include text-style(serif, italic);
-        @include text-size(large);
-    }
+    // probably won't use these often lol
 
-    // probably won't ever use these lol
-
-    h5 {
-        // @include text-style(sans);
-        // @include text-size(base);
-    }
-
+    h4,
+    h5,
     h6 {
-        // @include text-style(sans);
-        // @include text-size(base);
+        font-size: var(--font-size-base);
+        font-variant: small-caps;
     }
 
     /* -- activity --- */
 
     dl.activity {
         align-self: flex-start;
-        letter-spacing: var(--letter-spacing-110);
 
-        @include text-style(sans);
-        @include text-size(small);
+        font-family: var(--font-family-base);
+        font-variant: small-caps;
 
         dt {
+            font-size: var(--font-size-small);
             display: inline;
-            @include text-size(small);
 
             &::before {
                 display: block;
@@ -104,8 +82,8 @@
         }
 
         dd {
+            font-size: var(--font-size-small);
             display: inline;
-            @include text-size(small);
         }
     }
 
@@ -139,6 +117,11 @@
         font-style: italic;
     }
 
+    em.caps {
+        font-style: normal;
+        text-transform: uppercase;
+    }
+
     /* -- quotes --- */
 
     blockquote {
@@ -159,9 +142,12 @@
     }
 
     q {
-        &::before,
+        &::before {
+            content: "“";
+            font-family: inherit;
+        }
         &::after {
-            content: '"';
+            content: "”";
             font-family: inherit;
         }
     }
@@ -250,7 +236,7 @@
         letter-spacing: var(--letter-spacing-110);
 
         @include text-style(serif, italic);
-        // @include text-size(small);
+        @include text-size(small);
     }
 
     /* -- footer --- */
