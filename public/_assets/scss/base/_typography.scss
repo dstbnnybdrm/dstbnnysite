@@ -1,26 +1,23 @@
 @use "../abstracts/mixins" as *;
 
 .title {
-    // letter-spacing: var(--letter-spacing-110);
-
     @include text-style($family: sans, $weight: bold);
-    @include text-size(largest);
+    font-size: var(--font-size-largest);
 }
 
 .heading {
-    // letter-spacing: var(--letter-spacing-120);
-
     @include text-style(sans);
-    @include text-size(larger);
+    font-size: var(--font-size-larger);
 }
 
 .subheading {
-    // letter-spacing: var(--letter-spacing-130);
-
-    // @include text-style(serif, italic);
-    @include text-style(sans);
-    @include text-size(large);
-    font-variant: small-caps;
+    // @include text-style(sans);
+    // @include text-size(large);
+    // font-variant: small-caps;
+    font-family: var(--font-family-alt);
+    font-size: var(--font-size-large);
+    font-style: italic;
+    font-weight: normal;
 }
 
 .copy {
@@ -172,8 +169,8 @@
         }
     }
 
-    &__line {
-    }
+    // &__line {
+    // }
 }
 
 .code {

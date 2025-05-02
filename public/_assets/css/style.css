@@ -223,7 +223,6 @@ summary {
   font-weight: bold;
   font-family: var(--font-family-base);
   font-size: var(--font-size-largest);
-  line-height: var(--line-height-largest);
 }
 
 .heading {
@@ -231,16 +230,13 @@ summary {
   font-weight: normal;
   font-family: var(--font-family-base);
   font-size: var(--font-size-larger);
-  line-height: var(--line-height-larger);
 }
 
 .subheading {
-  font-style: normal;
-  font-weight: normal;
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-alt);
   font-size: var(--font-size-large);
-  line-height: var(--line-height-large);
-  font-variant: small-caps;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .copy {
@@ -373,6 +369,7 @@ summary {
 .poem__stanza:not(:last-child) {
   margin-bottom: var(--spacing-100);
 }
+
 .code {
   display: inline;
   color: var(--color-base);
