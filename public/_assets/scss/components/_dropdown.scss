@@ -1,28 +1,2 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
-
-.dropdown {
-    &__label {
-        list-style-type: "❧ ";
-        @include button-on-hover();
-    }
-
-    @include for-viewport-size(phone) {
-        border: 1px dotted var(--color-base);
-
-        &__label {
-            padding: var(--spacing-100);
-            // @include button-on-hover();
-        }
-
-        &__body {
-            padding: var(--spacing-100);
-        }
-    }
-}
-
-.dropdown[open] {
-    .dropdown__label {
-        list-style-type: "❦ ";
-    }
-}

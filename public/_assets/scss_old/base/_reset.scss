@@ -1,0 +1,143 @@
+/* *~  GLOBAL RESETS  ~* 
+ *
+ * very slightly modified from here:
+ * https://www.joshwcomeau.com/css/custom-css-reset/
+ */
+
+/* less shitty box-sizing (border-based instead of content-based) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* reset layout defaults */
+* {
+    margin: 0;
+    padding: 0;
+
+    /* use the default scrollbar width for the platform, if applicable */
+    scrollbar-width: auto;
+
+    /* set root font size; all REM values are relative to this */
+    font-size: 15px;
+
+    scrollbar-width: thin;
+
+    // border: 1px dashed blue;
+}
+
+/* improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+
+    max-width: 100%;
+
+    /* disable anti-alias (for pixel art and etc., we WANT the pixel jaggedness
+     * lol) */
+    image-rendering: pixelated; /*            Universal support since 2021 */
+    // image-rendering: -moz-crisp-edges; //           for Firefox
+    // image-rendering: -o-crisp-edges; //             for Opera
+    // image-rendering: -webkit-optimize-contrast; //  for Chrome
+}
+
+/* remove form typography styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* create a root stacking context */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* --- MY resets :3c --- */
+
+// html {
+//     border: 1px solid blue;
+//     height: 100%;
+// }
+
+body {
+    background-color: var(--color-background);
+}
+
+/* - links - */
+
+/* add marker for external links */
+a[rel*="external"] {
+    /* but NOT on images! */
+    &:not(:has(img))::after {
+        content: " ↗";
+        // don't take the styling of whatever its attached to
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+a {
+    text-decoration-style: dotted;
+
+    &:link {
+        color: var(--color-primary);
+    }
+
+    &:visited {
+        color: var(--color-primary);
+    }
+
+    &:hover {
+        color: var(--color-secondary);
+
+        img {
+            // border: 1px dotted var(--color-secondary);
+
+            filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
+                brightness(91%) contrast(87%);
+        }
+    }
+}
+
+/* - selection - */
+
+/* for Firefox */
+::-moz-selection {
+    background: var(--color-secondary);
+    color: var(--color-background);
+}
+
+::selection {
+    background: var(--color-secondary);
+    color: var(--color-background);
+}
+
+/* - other - */
+
+abbr {
+    // text-decoration: none;
+    font: inherit;
+    background: none;
+}
+
+summary {
+    cursor: pointer;
+}

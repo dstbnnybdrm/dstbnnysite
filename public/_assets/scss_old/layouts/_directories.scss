@@ -1,0 +1,9 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
+
+.featured {
+    grid-area: featured;
+    @include for-viewport-size(phone) {
+        display: none;
+    }
+}

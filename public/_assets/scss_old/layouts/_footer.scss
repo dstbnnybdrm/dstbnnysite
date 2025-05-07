@@ -1,0 +1,45 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+/* wrapper for javascript-inserted contents */
+#footer {
+    display: contents;
+}
+
+.footer {
+    display: flex;
+
+    flex-direction: column;
+    grid-area: footer;
+    gap: var(--spacing-025);
+
+    @include text-style(sans);
+    font-family: var(--font-family-base);
+
+    // overflow-x: hidden;
+
+    &__list {
+        display: flex;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    &__item {
+        display: inline-block;
+
+        white-space: nowrap;
+
+        &:not(:last-child)::after {
+            margin: 0 var(--spacing-075);
+
+            content: "|";
+        }
+    }
+
+    @include for-viewport-size(phone) {
+        // padding-bottom: var(--spacing-200);
+    }
+}

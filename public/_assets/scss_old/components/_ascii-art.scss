@@ -1,0 +1,9 @@
+@use "../abstracts/mixins" as *;
+
+.ascii-art {
+    color: var(--color-base);
+
+    line-height: 1rem;
+
+    @include text-style(mono);
+}

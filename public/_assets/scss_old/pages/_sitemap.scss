@@ -1,0 +1,97 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.sitemap-page {
+    display: grid;
+
+    grid-template-areas: "main";
+    grid-template-columns: minmax(0, var(--measure-max));
+    align-content: center;
+    justify-items: center;
+
+    @include for-viewport-size(phone) {
+        &__main {
+            width: 100%;
+        }
+    }
+}
+
+.sitemap {
+    display: flex;
+
+    flex-direction: column;
+    gap: var(--spacing-100);
+    // align-items: center;
+
+    width: 100%;
+
+    @include text-style(sans);
+
+    @include for-viewport-size(phone) {
+        &__home {
+            display: block;
+
+            border: 1px dotted var(--color-base);
+            padding: var(--spacing-100);
+        }
+
+        &__subheading {
+            display: block;
+
+            margin: var(--spacing-100) 0;
+
+            @include text-style(italic);
+        }
+
+        &__list {
+            display: flex;
+
+            flex-direction: column;
+            gap: var(--spacing-075);
+
+            @include list-margin();
+            border-left: 1px dotted var(--color-base);
+            padding-left: var(--spacing-100);
+        }
+
+        &__item {
+            display: contents;
+        }
+
+        &__link {
+            border: 1px dotted var(--color-primary);
+            padding: var(--spacing-100);
+
+            @include button-on-hover();
+        }
+    }
+
+    @include for-viewport-size(desktop) {
+        &__subheading {
+            display: list-item;
+
+            @include text-style(sans);
+            @include list-style(navi);
+            font-size: var(--font-size-base);
+        }
+
+        &__list {
+            @include list-margin();
+
+            line-height: var(--spacing-150);
+
+            @include text-style(sans);
+            @include list-style(navi);
+        }
+
+        &__link {
+            width: max-content;
+
+            line-height: var(--spacing-150);
+        }
+
+        &__navi {
+            @include list-margin();
+        }
+    }
+}

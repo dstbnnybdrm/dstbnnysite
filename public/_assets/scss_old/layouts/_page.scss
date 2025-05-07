@@ -1,0 +1,59 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.page {
+    color: var(--color-base);
+
+    &__breadcrumb {
+        margin-bottom: var(--spacing-075);
+        border-bottom: 1px var(--color-base) dotted;
+        padding-bottom: var(--spacing-075);
+    }
+
+    &_simple {
+        display: grid;
+
+        grid-template-areas:
+            "."
+            "main"
+            "navi"
+            ".";
+        grid-template-columns: minmax(0, var(--measure-max));
+        grid-template-rows: 1fr min-content auto 1fr;
+
+        gap: var(--spacing-125);
+
+        justify-content: center;
+        overflow: auto;
+    }
+
+    &_poem {
+        display: flex;
+
+        flex-direction: column;
+        gap: var(--spacing-125);
+        justify-content: center;
+        align-items: center;
+
+        max-width: var(--measure-max);
+        margin: auto;
+    }
+
+    @include for-viewport-size(phone) {
+        max-width: var(--measure-max);
+
+        padding: var(--spacing-200);
+
+        &_poem {
+            @include for-viewport-size(phone) {
+                // max-width: min-content;
+            }
+        }
+    }
+
+    @include for-viewport-size(desktop) {
+        height: 100vh;
+
+        padding: var(--spacing-100) var(--spacing-200);
+    }
+}

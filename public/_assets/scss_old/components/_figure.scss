@@ -1,0 +1,17 @@
+@use "../abstracts/mixins" as *;
+
+.figure {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: var(--spacing-075);
+
+    margin-left: var(--spacing-150);
+
+    &__caption {
+        letter-spacing: var(--letter-spacing-110);
+
+        @include text-style(serif, italic);
+        @include text-size(small);
+    }
+}

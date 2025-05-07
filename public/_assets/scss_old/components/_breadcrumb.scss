@@ -1,0 +1,33 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
+
+.breadcrumb {
+    grid-area: navi;
+
+    &__list {
+        display: flex;
+    }
+
+    &__crumb {
+        display: inline-block;
+
+        &:not(:last-child)::after {
+            margin: 0 var(--spacing-075);
+
+            @include text-style(sans);
+            @include text-size(small);
+
+            content: ">";
+        }
+    }
+
+    &__link {
+        @include text-style(sans);
+        @include text-size(small);
+    }
+
+    &__current {
+        @include text-style(serif, italic);
+        @include text-size(small);
+    }
+}

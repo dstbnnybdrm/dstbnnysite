@@ -1,22 +1,2 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
-
-.theme-toggle {
-    display: flex;
-
-    grid-area: theme-toggle;
-
-    align-items: center;
-    justify-content: center;
-
-    border: none;
-    background-color: var(--color-primary);
-    @include layout-padding();
-
-    @include text-style(sans);
-    @include text-size(small);
-
-    color: var(--color-background);
-
-    @include button-on-hover();
-}

@@ -1,0 +1,12 @@
+@use "../abstracts/mixins" as *;
+
+.text-area {
+    width: 83%;
+    border: 1px dotted var(--color-base);
+    padding: var(--spacing-025);
+    background: none;
+
+    @include text-style(mono);
+
+    font-size: 16px;
+}

@@ -3,31 +3,23 @@
 
 .header {
     display: flex;
-
     grid-area: header;
-    align-items: center;
-    flex-direction: column;
-    row-gap: var(--spacing-100);
+
+    justify-content: center;
+
+    padding: var(--spacing-050);
 
     &__splash {
-        display: block;
+        font-family: var(--font-family-alt);
+        font-style: italic;
+        font-size: var(--font-size-base);
 
-        text-align: center;
-
-        letter-spacing: var(--letter-spacing-120);
-
-        @include text-style(serif, italic);
-    }
-
-    @include for-viewport-size(desktop) {
-        justify-content: center;
-
-        &__splash {
-            &::before,
-            &::after {
-                margin: 0 var(--spacing-200);
-                content: "⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆";
-            }
+        &::before,
+        &::after {
+            font-family: var(--font-family-base);
+            font-style: normal;
+            margin: 0 var(--spacing-200);
+            content: "⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆";
         }
     }
 }

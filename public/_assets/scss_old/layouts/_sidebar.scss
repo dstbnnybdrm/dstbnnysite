@@ -1,0 +1,58 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
+.sidebar {
+    @include for-viewport-size(phone) {
+        /* no sidebar on mobile layout */
+        display: contents;
+
+        &__section {
+            &:not(:first-child) {
+                border-top: 1px dashed var(--color-base);
+                padding-top: var(--spacing-100);
+                // @include layout-border();
+                // border-bottom: var(--spacing-025) solid var(--color-base);
+                // @include layout-padding();
+            }
+        }
+    }
+
+    @include for-viewport-size(desktop) {
+        display: grid;
+
+        row-gap: var(--spacing-100);
+
+        min-height: 0;
+
+        &__section {
+            @include layout-border();
+            @include layout-padding();
+        }
+
+        /* the primary (left) sidebars */
+        &_major {
+            grid-area: major-sidebar;
+            grid-template-areas:
+                "navi"
+                "theme-toggle"
+                "featured";
+            grid-template-rows:
+                min-content
+                var(--spacing-200)
+                auto;
+            grid-template-columns: min-content;
+        }
+
+        /* and the secondary (right) sidebar */
+        &_minor {
+            grid-area: minor-sidebar;
+            grid-template-areas:
+                "status"
+                "site-log";
+            grid-template-rows:
+                auto
+                auto;
+            grid-template-columns: 100%;
+        }
+    }
+}

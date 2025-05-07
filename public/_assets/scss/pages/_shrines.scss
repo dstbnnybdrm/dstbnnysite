@@ -1,24 +1,2 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
-
-.shrines {
-    display: grid;
-
-    grid-template-areas:
-        "."
-        "main"
-        "navi"
-        "footer";
-    grid-template-columns: minmax(0, var(--measure-max));
-    grid-template-rows:
-        1fr
-        auto
-        1fr
-        min-content;
-    row-gap: var(--spacing-125);
-
-    &__main {
-        align-self: center;
-        justify-items: center;
-    }
-}

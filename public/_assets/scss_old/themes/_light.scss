@@ -1,0 +1,25 @@
+@mixin theme-light() {
+    color-scheme: light;
+
+    --color-primary: #c43162; /*                  rose red              */
+    --color-primary-lo-contrast: #d36488; /*      amaranth pink         */
+    --color-primary-hi-contrast: #932550; /*      quinacridone magenta  */
+
+    --color-secondary: #4f9c86; /*                zomp                  */
+    --color-secondary-lo-contrast: #a7cbc0; /*    ash gray              */
+    --color-secondary-hi-contrast: #585b62; /*    Davy's gray           */
+
+    --color-base: #61193e; /*                     tyrian purple         */
+    --color-background: #fffafa; /*               snow                  */
+
+    // for transparent, black graphics
+    // converted using: https://codepen.io/sosuke/pen/Pjoqqp
+    --filter-base: invert(14%) sepia(28%) saturate(4517%) hue-rotate(302deg)
+        brightness(85%) contrast(94%);
+}
+
+// from: https://www.aleksandrhovhannisyan.com/blog/the-perfect-theme-switch/
+:root,
+:root[data-theme="light"] {
+    @include theme-light();
+}

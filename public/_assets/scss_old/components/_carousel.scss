@@ -1,0 +1,33 @@
+// modified from: https://css-tricks.com/css-only-carousel/
+.carousel {
+    // width: 300px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+
+    &__slides {
+        display: flex;
+
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
+    }
+
+    &__slide {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        position: relative;
+
+        scroll-snap-align: start;
+
+        width: 100%;
+
+        transform-origin: center center;
+        transform: scale(1);
+        transition: transform 0.5s;
+    }
+}

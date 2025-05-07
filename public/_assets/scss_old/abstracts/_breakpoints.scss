@@ -1,0 +1,35 @@
+@mixin for-viewport-size($size) {
+    @if $size == phone {
+        @media screen and (max-width: 800px) {
+            @content;
+        }
+    } @else if $size == desktop {
+        @media screen and (min-width: 801px) {
+            @content;
+        }
+    }
+}
+
+// @mixin for-frame-size($size) {
+//     @if $size == small {
+//         @media (max-width: 599px) {
+//             @content;
+//         }
+//     } @else if $size == large {
+//         @media (min-width: 600px) {
+//             @content;
+//         }
+//     }
+// }
+
+$measure-max: 44rem;
+
+// when user happens to be inside the main content frame (i.e. they
+// clicked "show only this frame", etc. lol)
+// only really accounts for desktop, but idek how you'd enter the frame
+// on mobile lmao so ¯\_(ツ)_/¯
+@mixin for-in-frame() {
+    @media screen and (min-width: $measure-max) {
+        @content;
+    }
+}

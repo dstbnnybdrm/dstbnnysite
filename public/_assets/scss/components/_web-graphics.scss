@@ -1,54 +1,3 @@
-// wrapper for a collection of graphics
-.web-graphics {
-    display: flex;
-
-    list-style: none;
-
-    &_wall {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: var(--spacing-075);
-    }
-
-    &_row {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        gap: var(--spacing-025);
-    }
-
-    &_column {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: var(--spacing-025);
-    }
-
-    // &__button {
-    //     display: inline-block;
-
-    //     flex-shrink: 0;
-    //     align-self: center;
-
-    //     width: 88px;
-    //     height: 31px;
-    // }
-
-    // &__decorative {
-    //     display: inline-block;
-    // }
-}
-
-// i.e. 88x31 button
-.micro-bar {
-    display: inline-block;
-
-    flex-shrink: 0;
-    align-self: center;
-
-    width: 88px;
-    height: 31px;
-}
-
 // i.e. 80x15 button
 .antipixel {
     display: inline-block;
@@ -57,16 +6,5 @@
     align-self: center;
 
     width: 88px;
-    height: 15px;
-}
-
-// taken from: https://www1.flightrising.com/forums/cc/3078623
-.id-button {
-    display: inline-block;
-
-    flex-shrink: 0;
-    align-self: center;
-
-    width: 86px;
     height: 15px;
 }
