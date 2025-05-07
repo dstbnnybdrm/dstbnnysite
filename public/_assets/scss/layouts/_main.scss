@@ -2,68 +2,14 @@
 @use "../abstracts/mixins" as *;
 
 .main {
-    display: flex;
-
-    flex-direction: column;
     grid-area: main;
-    gap: var(--spacing-100);
 
-    min-width: 0;
-    margin: 0;
+    padding: var(--spacing-050);
 
     &__frame {
+        // padding: var(--spacing-050);
         border: none;
-    }
-
-    @include for-viewport-size(desktop) {
-        &__frame {
-            /* take all of and only the height of the grid cell (i.e. don't 
-               overflow my fucking window!) */
-            height: 100%;
-        }
-    }
-}
-
-.mainframe {
-    display: flex;
-
-    flex-direction: column;
-    gap: var(--spacing-100);
-
-    @include layout-padding();
-
-    color: var(--color-base);
-
-    &__breadcrumb {
-        display: none;
-    }
-
-    &__main {
-        display: flex;
-
-        flex-direction: column;
-        gap: var(--spacing-100);
-    }
-
-    &__footer {
-        margin-top: var(--spacing-075);
-        border-top: 1px var(--color-base) dotted;
-        padding-top: var(--spacing-075);
-    }
-
-    @include for-in-frame() {
-        max-width: var(--measure-max);
-        margin-inline: auto;
-        padding-top: var(--spacing-100);
-
-        /* only shows if user somehow enters the mainframe itself; guides them
-           out of it if needed */
-        &__breadcrumb {
-            display: block;
-
-            margin-bottom: var(--spacing-075);
-            border-bottom: 1px var(--color-base) dotted;
-            padding-bottom: var(--spacing-075);
-        }
+        width: 100%;
+        height: 100%;
     }
 }

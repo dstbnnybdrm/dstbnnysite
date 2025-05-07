@@ -33,137 +33,72 @@
 
     <script src="/_assets/js/set-theme.js"></script>
     <script src="/_assets/js/index.js" type="module"></script>
-    <script
-      src="https://status.cafe/current-status.js?name=dstbnnyjp"
-      defer
-    ></script>
+    <!-- <script -->
+    <!--   src="https://status.cafe/current-status.js?name=dstbnnyjp" -->
+    <!--   defer -->
+    <!-- ></script> -->
   </head>
 
-  <body class="l-imposter">
-    <div class="hub page">
+  <body>
+    <div class="hub">
       <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
-      <header class="header hub__header">
+      <header class="header">
         <p class="header__splash" id="splash" role="presentation">…</p>
       </header>
 
       <!-- ~*:._.:*~  MAJOR SIDEBAR  ~*:._.:*~ -->
-      <div class="sidebar sidebar_major hub__sidebar">
+      <div class="sidebar">
         <!-- ~* THEME TOGGLE BUTTON *~ -->
-        <button
-          class="theme-toggle sidebar__theme-toggle"
-          id="theme-toggle"
-          type="button"
-        ></button>
+        <!-- <button id="theme-toggle" type="button"></button> -->
 
         <!-- ~* NAVIGATION *~ -->
-        <nav class="navi sidebar__section">
-          <h1>
-            <a class="navi__link" href="/home.html" target="mainframe"
-              ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
-            >
-          </h1>
+        <nav class="navi">
+          <h2>navigation</h2>
 
-          <h2 class="heading l-hidden">site navigation</h2>
-
-          <button
-            class="button navi__button"
-            id="navi-button"
-            type="button"
-            aria-expanded="false"
-          >
-            navigation
-          </button>
-
-          <ul class="menu" id="navi-menu">
-            <li class="menu__section">
-              <span class="menu__heading">from me</span>
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a class="menu__link" href="/about.html" target="mainframe"
-                    >about</a
-                  >
+          <ul class="navi__list body-copy" id="navi-menu">
+            <li class="navi__item">
+              <a class="" href="/home.html" target="mainframe">home</a>
+            </li>
+            <li class="navi__item">
+              from me
+              <ul class="navi__list navi__list_sub">
+                <li class="navi__item navi__item_sub">
+                  <a href="/about.html" target="mainframe">about</a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/work/" target="mainframe"
-                    >work</a
-                  >
+                <li class="navi__item navi__item_sub">
+                  <a href="/work/" target="mainframe">work</a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/blog.html" target="_self"
-                    >blog</a
-                  >
+                <li class="navi__item navi__item_sub">
+                  <a class="" href="/blog.html" target="_self">blog</a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/shrines/" target="_self"
-                    >shrines</a
-                  >
+                <li class="navi__item navi__item_sub">
+                  <a class="" href="/shrines/" target="_self">shrines</a>
                 </li>
               </ul>
             </li>
-            <li class="menu__section">
-              <span class="menu__heading">for you</span>
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a
-                    class="menu__link"
-                    href="/commission.html"
-                    target="mainframe"
-                    >commission</a
-                  >
+            <li class="navi__item">
+              for you
+              <ul class="navi__list navi__list_sub">
+                <li class="navi__item navi__item_sub">
+                  <a href="/commission.html" target="mainframe">commission</a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/guestbook.html" target="_self"
-                    >guestbook</a
-                  >
+                <li class="navi__item navi__item_sub">
+                  <a href="/guestbook.html" target="_self">guestbook</a>
                 </li>
-                <li class="menu__item">
-                  <a
-                    class="menu__link"
-                    href="/resources.html"
-                    target="mainframe"
-                    >resources</a
-                  >
+                <li class="navi__item navi__item_sub">
+                  <a href="/resources.html" target="mainframe">resources</a>
                 </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/links.html" target="mainframe"
-                    >links</a
-                  >
+                <li class="navi__item navi__item_sub">
+                  <a href="/links.html" target="mainframe">links</a>
                 </li>
               </ul>
             </li>
           </ul>
         </nav>
-
-        <!-- ~* FEATURED *~ -->
-        <aside class="card featured sidebar__section">
-          <h2 class="card__title">featured</h2>
-
-          <div class="l-scrollbar-container">
-            <div class="card__body" id="featured">
-              <!-- <img -->
-              <!--   class="image" -->
-              <!--   src="/_assets/img/featured.gif" -->
-              <!--   alt="death of a rabbit by your arms are my cocoon" -->
-              <!--   title="death of a rabbit by your arms are my cocoon" -->
-              <!-- /> -->
-
-              <!-- <p class="copy copy_center"> -->
-              <!--   <cite -->
-              <!--     ><a -->
-              <!--       rel="external" -->
-              <!--       href="https://yourarmsaremycocoonemo.bandcamp.com/album/death-of-a-rabbit" -->
-              <!--       target="_blank" -->
-              <!--       >your arms are my cocoon - death of a rabbit</a -->
-              <!--     ></cite -->
-              <!--   > -->
-              <!-- </p> -->
-            </div>
-          </div>
-        </aside>
       </div>
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
-      <main id="main" class="main hub__main">
+      <main class="main" id="main">
         <iframe
           class="main__frame"
           name="mainframe"
@@ -171,51 +106,49 @@
         ></iframe>
       </main>
 
-      <!-- ~*:._.:*~  MINOR SIDEBAR  ~*:._.:*~ -->
-      <div class="sidebar sidebar_minor hub__sidebar">
-        <!-- ~* STATUS WIDGET *~ -->
-        <aside class="card status sidebar__section">
-          <h2 class="card__title">latest status</h2>
-
-          <div class="l-scrollbar-container">
-            <div class="card__body" id="statuscafe">
-              <div id="statuscafe-username"></div>
-              <div id="statuscafe-content">…</div>
-            </div>
-
-            <footer class="card__footer">
-              <div class="l-center micro-bars">
-                <a
-                  rel="external"
-                  href="https://status.cafe/users/dstbnnyjp"
-                  target="_blank"
-                  ><img
-                    class="antipixel"
-                    src="https://status.cafe/users/dstbnnyjp/badge.png"
-                    alt="Status Cafe Profile"
-                /></a>
-              </div>
-            </footer>
-          </div>
-        </aside>
-
-        <aside class="card site-log sidebar__section">
-          <h2 class="card__title">site log</h2>
-          <div class="l-scrollbar-container" role="log">
-            <div class="feed" id="site-log">…</div>
-          </div>
-        </aside>
-      </div>
-
-      <!-- ~*:._.:*~  BUTTONS MARQUEE  ~*:._.:*~ -->
-      <aside class="hub__marquee">
-        <div id="marquee">…</div>
-      </aside>
-
       <!-- ~*:._.:*~  FOOTER  ~*:._.:*~ -->
       <footer class="footer">
         <div id="footer">…</div>
       </footer>
+
+      <!-- ~*:._.:*~  MINOR SIDEBAR  ~*:._.:*~ -->
+      <!-- <div> -->
+      <!-- ~* STATUS WIDGET *~ -->
+      <!-- <aside> -->
+      <!--   <h2>status</h2> -->
+
+      <!--   <div id="statuscafe"> -->
+      <!--     <div id="statuscafe-username"></div> -->
+      <!--     <div id="statuscafe-content">…</div> -->
+      <!--   </div> -->
+
+      <!--   <footer class=""> -->
+      <!--     <div class=""> -->
+      <!--       <a -->
+      <!--         rel="external" -->
+      <!--         href="https://status.cafe/users/dstbnnyjp" -->
+      <!--         target="_blank" -->
+      <!--         ><img -->
+      <!--           class="" -->
+      <!--           src="https://status.cafe/users/dstbnnyjp/badge.png" -->
+      <!--           alt="Status Cafe Profile" -->
+      <!--       /></a> -->
+      <!--     </div> -->
+      <!--   </footer> -->
+      <!-- </aside> -->
+
+      <!-- <aside> -->
+      <!--   <h2>changelog</h2> -->
+      <!--   <div role="log"> -->
+      <!--     <div id="site-log">…</div> -->
+      <!--   </div> -->
+      <!-- </aside> -->
+      <!-- </div> -->
+
+      <!-- ~*:._.:*~  BUTTONS MARQUEE  ~*:._.:*~ -->
+      <!-- <aside> -->
+      <!--   <div id="marquee">…</div> -->
+      <!-- </aside> -->
     </div>
   </body>
 </html>
