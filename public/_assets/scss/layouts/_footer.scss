@@ -16,6 +16,10 @@
 
     gap: var(--spacing-025);
 
+    color: var(--color-base);
+
+    // border-style: ridge none none none;
+
     &__list {
         display: flex;
 

@@ -33,27 +33,35 @@
 
     <script src="/_assets/js/set-theme.js"></script>
     <script src="/_assets/js/index.js" type="module"></script>
-    <!-- <script -->
-    <!--   src="https://status.cafe/current-status.js?name=dstbnnyjp" -->
-    <!--   defer -->
-    <!-- ></script> -->
+    <script
+      src="https://status.cafe/current-status.js?name=dstbnnyjp"
+      defer
+    ></script>
   </head>
 
-  <body>
+  <body class="page">
     <div class="hub">
       <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
       <header class="header">
         <p class="header__splash" id="splash" role="presentation">…</p>
       </header>
 
-      <!-- ~*:._.:*~  MAJOR SIDEBAR  ~*:._.:*~ -->
+      <!-- ~*:._.:*~  SIDEBAR  ~*:._.:*~ -->
       <div class="sidebar">
         <!-- ~* THEME TOGGLE BUTTON *~ -->
         <!-- <button id="theme-toggle" type="button"></button> -->
 
+        <!-- landing button -->
+        <a class="home-button" href="/">
+          <img
+            src="/_assets/img/web-micro-bars/site/dstbnnybdrm-button.gif"
+            alt="dustbunnybedroom"
+          />
+        </a>
+
         <!-- ~* NAVIGATION *~ -->
         <nav class="navi">
-          <h2>navigation</h2>
+          <h2 class="body-copy">navigation</h2>
 
           <ul class="navi__list body-copy" id="navi-menu">
             <li class="navi__item">
@@ -95,6 +103,39 @@
             </li>
           </ul>
         </nav>
+
+        <!-- ~* STATUS CAFE *~ -->
+        <aside class="status">
+          <h2 class="l-hidden">status</h2>
+
+          <div id="statuscafe">
+            <div class="body-copy" id="statuscafe-username">…</div>
+            <div class="body-copy" id="statuscafe-content">…</div>
+          </div>
+
+          <a
+            rel="external"
+            href="https://status.cafe/users/dstbnnyjp"
+            target="_blank"
+            ><img
+              class=""
+              src="https://status.cafe/users/dstbnnyjp/badge.png"
+              alt="Status Cafe Profile"
+          /></a>
+        </aside>
+
+        <!-- ~* CHANGELOG *~ -->
+        <aside class="changelog">
+          <h2 class="body-copy">changelog</h2>
+          <!-- <div role="log"> -->
+          <!--   <div id="site-log">…</div> -->
+          <!-- </div> -->
+        </aside>
+
+        <!-- ~* MARQUEE *~ -->
+        <aside class="marquee">
+          <!-- <div id="marquee">…</div> -->
+        </aside>
       </div>
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
@@ -110,45 +151,6 @@
       <footer class="footer">
         <div id="footer">…</div>
       </footer>
-
-      <!-- ~*:._.:*~  MINOR SIDEBAR  ~*:._.:*~ -->
-      <!-- <div> -->
-      <!-- ~* STATUS WIDGET *~ -->
-      <!-- <aside> -->
-      <!--   <h2>status</h2> -->
-
-      <!--   <div id="statuscafe"> -->
-      <!--     <div id="statuscafe-username"></div> -->
-      <!--     <div id="statuscafe-content">…</div> -->
-      <!--   </div> -->
-
-      <!--   <footer class=""> -->
-      <!--     <div class=""> -->
-      <!--       <a -->
-      <!--         rel="external" -->
-      <!--         href="https://status.cafe/users/dstbnnyjp" -->
-      <!--         target="_blank" -->
-      <!--         ><img -->
-      <!--           class="" -->
-      <!--           src="https://status.cafe/users/dstbnnyjp/badge.png" -->
-      <!--           alt="Status Cafe Profile" -->
-      <!--       /></a> -->
-      <!--     </div> -->
-      <!--   </footer> -->
-      <!-- </aside> -->
-
-      <!-- <aside> -->
-      <!--   <h2>changelog</h2> -->
-      <!--   <div role="log"> -->
-      <!--     <div id="site-log">…</div> -->
-      <!--   </div> -->
-      <!-- </aside> -->
-      <!-- </div> -->
-
-      <!-- ~*:._.:*~  BUTTONS MARQUEE  ~*:._.:*~ -->
-      <!-- <aside> -->
-      <!--   <div id="marquee">…</div> -->
-      <!-- </aside> -->
     </div>
   </body>
 </html>

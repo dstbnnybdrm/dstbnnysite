@@ -13,3 +13,13 @@
         height: 100%;
     }
 }
+
+.mainframe {
+    display: flex;
+
+    flex-direction: column;
+    gap: var(--spacing-100);
+
+    color: var(--color-base);
+    // max-width: var(--measure-max);
+}

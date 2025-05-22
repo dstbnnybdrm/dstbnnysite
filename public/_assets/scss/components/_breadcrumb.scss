@@ -1,2 +1,7 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/breakpoints" as *;
+
+.breadcrumb {
+    // TEMPORARY
+    display: none;
+}

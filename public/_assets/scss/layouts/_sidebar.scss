@@ -3,9 +3,26 @@
 
 .sidebar {
     display: flex;
+
+    overflow: auto;
+
     flex-direction: column;
     grid-area: sidebar;
+
     padding: var(--spacing-050);
+
+    // text colour
+    color: var(--color-base);
+
+    border-color: initial;
+    border-style: none ridge none none;
+
+    gap: var(--spacing-100);
+}
+
+.home-button {
+    display: block;
+    align-self: center;
 }
 
 .navi {

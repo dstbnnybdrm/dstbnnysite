@@ -3,18 +3,21 @@
 
 .hub {
     display: grid;
+
+    background-color: var(--color-background);
+
     height: 100vh;
+    width: fit-content;
 
     grid-template-areas:
-        "header     header"
-        "sidebar    main"
-        "footer    footer";
+        "sidebar  header"
+        "sidebar  main"
+        "sidebar  footer";
     grid-template-rows:
         min-content
         1fr
         min-content;
     grid-template-columns:
-        minmax(0, min-content)
+        minmax(0, calc(var(--measure-max) / 3))
         minmax(0, var(--measure-max));
-    // gap: var(--spacing-100);
 }

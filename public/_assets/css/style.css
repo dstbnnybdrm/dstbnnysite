@@ -250,11 +250,17 @@ summary {
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
+.page {
+  background-image: url("/_assets/img/stars5.gif");
+  background-repeat: repeat;
+}
+
 .header {
   display: flex;
   grid-area: header;
   justify-content: center;
   padding: var(--spacing-050);
+  color: var(--color-base);
 }
 .header__splash {
   font-family: var(--font-family-alt);
@@ -270,9 +276,19 @@ summary {
 
 .sidebar {
   display: flex;
+  overflow: auto;
   flex-direction: column;
   grid-area: sidebar;
   padding: var(--spacing-050);
+  color: var(--color-base);
+  border-color: initial;
+  border-style: none ridge none none;
+  gap: var(--spacing-100);
+}
+
+.home-button {
+  display: block;
+  align-self: center;
 }
 
 .navi {
@@ -285,6 +301,11 @@ summary {
   margin-left: var(--spacing-175);
   list-style: "∟ ";
 }
+.status {
+  border: 1px var(--color-base) solid;
+  padding: var(--spacing-050);
+}
+
 .main {
   grid-area: main;
   padding: var(--spacing-050);
@@ -293,6 +314,13 @@ summary {
   border: none;
   width: 100%;
   height: 100%;
+}
+
+.mainframe {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  color: var(--color-base);
 }
 
 /* wrapper for javascript-inserted contents */
@@ -306,6 +334,7 @@ summary {
   flex-direction: column;
   padding: var(--spacing-050);
   gap: var(--spacing-025);
+  color: var(--color-base);
 }
 .footer__list {
   display: flex;
@@ -414,13 +443,19 @@ summary {
   height: 15px;
 }
 
+.breadcrumb {
+  display: none;
+}
+
 /*:._.:*~ PAGES ~*:._.:*/
 .hub {
   display: grid;
+  background-color: var(--color-background);
   height: 100vh;
-  grid-template-areas: "header     header" "sidebar    main" "footer    footer";
+  width: fit-content;
+  grid-template-areas: "sidebar  header" "sidebar  main" "sidebar  footer";
   grid-template-rows: min-content 1fr min-content;
-  grid-template-columns: minmax(0, min-content) minmax(0, var(--measure-max));
+  grid-template-columns: minmax(0, calc(var(--measure-max) / 3)) minmax(0, var(--measure-max));
 }
 
 /*:._.:*~ THEMES ~*:._.:*/

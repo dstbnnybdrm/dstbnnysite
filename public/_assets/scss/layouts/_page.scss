@@ -1,2 +1,7 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
+
+.page {
+    background-image: url("/_assets/img/stars5.gif");
+    background-repeat: repeat;
+}

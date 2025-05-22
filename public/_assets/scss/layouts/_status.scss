@@ -1,2 +1,7 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
+
+.status {
+    border: 1px var(--color-base) solid;
+    padding: var(--spacing-050);
+}
