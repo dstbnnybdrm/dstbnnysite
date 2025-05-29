@@ -41,54 +41,47 @@
     <script src="/_assets/js/index.js" type="module"></script>
   </head>
 
-  <body class="l-imposter">
-    <div class="shrines page">
-      <main class="main shrines__main">
-        <h1 class="title">shrines</h1>
+  <body class="mainframe">
+    <nav class="breadcrumb mainframe__breadcrumb" aria-label="Breadcrumb">
+      <ul class="breadcrumb__list">
+        <li class="breadcrumb__crumb">
+          <a class="breadcrumb__link" href="/hub?p=/home">home</a>
+        </li>
+        <li class="breadcrumb__crumb">
+          <a class="breadcrumb__link" href="/hub?p=/about">about</a>
+        </li>
+      </ul>
+    </nav>
 
-        <p class="copy">a place to ramble on about my hyperfixations.</p>
+    <main class="mainframe__main">
+      <h1 class="title">shrines</h1>
 
-        <nav class="image-navi">
-          <ul class="image-navi__list">
-            <li class="image-navi__item">
-              <a class="image-navi__link" href="./rpg-maker.html">
-                <img
-                  class="image-navi__image"
-                  src="/_assets/img/shrines/rpg-maker.gif"
-                  alt=""
-                />
-                RPG Maker games</a
-              >
-            </li>
-            <!-- <li class="image-navi__item"> -->
-            <!--   <span class="image-navi__link inactive-link"> -->
-            <!--     <img -->
-            <!--       class="image-navi__image" -->
-            <!--       src="../_assets/img/breakdancing-cat.gif" -->
-            <!--       alt="" -->
-            <!--     /> -->
-            <!--     <abbr title="to be determined">TBD</abbr></span -->
-            <!--   > -->
-            <!-- </li> -->
-          </ul>
-        </nav>
-      </main>
+      <p class="copy">a place to ramble on about my hyperfixations.</p>
 
-      <nav class="navi">
-        <p class="copy">
-          <a href="/hub?p=/home">back to home</a>
-        </p>
+      <nav class="image-navi">
+        <ul class="image-navi__list">
+          <li class="image-navi__item">
+            <a class="image-navi__link" href="./rpg-maker.html" target="_top">
+              <img
+                class="image-navi__image"
+                src="/_assets/img/shrines/rpg-maker.gif"
+                alt=""
+              />
+              ~ RPG Maker games ~</a
+            >
+          </li>
+          <li class="image-navi__item">
+            <span class="image-navi__link inactive-link">
+              <img
+                class="image-navi__image"
+                src="../_assets/img/breakdancing-cat.gif"
+                alt=""
+              />
+              <abbr title="to be determined">~ TBD ~</abbr></span
+            >
+          </li>
+        </ul>
       </nav>
-
-      <footer class="footer page__footer">
-        <div id="footer"></div>
-      </footer>
-      <!-- <footer class="main__footer"> -->
-      <!--   <p class="copy"> -->
-      <!--     (last updated -->
-      <!--     <time datetime="2024-03-26">mon, april 15th, 2024</time>) -->
-      <!--   </p> -->
-      <!-- </footer> -->
-    </div>
+    </main>
   </body>
 </html>

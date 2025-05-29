@@ -11,14 +11,16 @@
 
     grid-area: footer;
     flex-direction: column;
+    // background-image: url("/_assets/img/whitegrain2.gif");
+    // background-repeat: repeat;
 
     padding: var(--spacing-050);
+    background-color: var(--color-background);
 
     gap: var(--spacing-025);
 
     color: var(--color-base);
-
-    // border-style: ridge none none none;
+    width: var(--measure-max);
 
     &__list {
         display: flex;
@@ -50,4 +52,6 @@
 
         justify-content: center;
     }
+
+    display: none;
 }

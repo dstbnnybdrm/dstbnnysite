@@ -22,7 +22,7 @@
     /* set root font size; all REM values are relative to this */
     font-size: 15px;
 
-    scrollbar-width: thin;
+    // scrollbar-width: thin;
 
     // border: 1px dashed blue;
 }
@@ -78,7 +78,7 @@ h6 {
 // }
 
 body {
-    background-color: var(--color-background);
+    background: none;
 }
 
 /* - links - */
@@ -109,8 +109,6 @@ a {
         color: var(--color-secondary);
 
         img {
-            // border: 1px dotted var(--color-secondary);
-
             filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
                 brightness(91%) contrast(87%);
         }

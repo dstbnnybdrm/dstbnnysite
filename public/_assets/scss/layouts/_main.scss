@@ -2,24 +2,31 @@
 @use "../abstracts/mixins" as *;
 
 .main {
+    display: flex;
+    flex-direction: column;
+
     grid-area: main;
 
-    padding: var(--spacing-050);
+    overflow-y: auto;
 
     &__frame {
-        // padding: var(--spacing-050);
         border: none;
-        width: 100%;
-        height: 100%;
+        // max-width: var(--measure-max);
+        width: var(--measure-max);
     }
 }
 
-.mainframe {
+.frame-body {
     display: flex;
 
     flex-direction: column;
     gap: var(--spacing-100);
+    align-items: center;
 
+    padding: var(--spacing-050);
+
+    background-color: var(--color-background);
     color: var(--color-base);
-    // max-width: var(--measure-max);
+    height: 100vh;
+    max-width: var(--measure-max);
 }

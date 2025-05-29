@@ -11,19 +11,25 @@
 
     color: var(--color-base);
 
-    // border-style: none none ridge none;
+    border-style: none none ridge none;
 
     &__splash {
         font-family: var(--font-family-alt);
         font-style: italic;
         font-size: var(--font-size-base);
 
-        &::before,
-        &::after {
+        &::before {
             font-family: var(--font-family-base);
             font-style: normal;
             margin: 0 var(--spacing-200);
             content: "⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆";
+        }
+
+        &::after {
+            font-family: var(--font-family-base);
+            font-style: normal;
+            margin: 0 var(--spacing-200);
+            content: "⋆⚘˚｡➷⁀˚☽˚۰˚｡⚘";
         }
     }
 }

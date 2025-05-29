@@ -6,18 +6,17 @@
 
     background-color: var(--color-background);
 
-    height: 100vh;
-    width: fit-content;
+    aspect-ratio: 8 / 6;
+    border: 1px var(--color-base) solid;
 
     grid-template-areas:
-        "sidebar  header"
-        "sidebar  main"
-        "sidebar  footer";
+        "header   header"
+        "sidebar  main";
     grid-template-rows:
         min-content
-        1fr
-        min-content;
+        1fr;
     grid-template-columns:
-        minmax(0, calc(var(--measure-max) / 3))
-        minmax(0, var(--measure-max));
+        minmax(0, 12rem)
+        //     // minmax(0, var(--measure-max));
+        minmax(0, 1fr);
 }
