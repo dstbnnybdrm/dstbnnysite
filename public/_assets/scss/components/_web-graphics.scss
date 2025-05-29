@@ -1,3 +1,14 @@
+// i.e. 88x31 button
+.micro-bar {
+    display: inline-block;
+
+    flex-shrink: 0;
+    align-self: flex-start;
+
+    width: 88px;
+    height: 31px;
+}
+
 // i.e. 80x15 button
 .antipixel {
     display: inline-block;

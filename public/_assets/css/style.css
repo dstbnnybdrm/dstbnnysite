@@ -220,20 +220,13 @@ summary {
 .title {
   font-family: var(--font-family-base);
   font-weight: bold;
-  font-size: var(--font-size-largest);
+  font-size: var(--font-size-large);
 }
 
 .heading {
   font-family: var(--font-family-base);
-  font-weight: normal;
-  font-size: var(--font-size-larger);
-}
-
-.subheading {
-  font-family: var(--font-family-base);
-  font-variant: small-caps;
-  font-weight: normal;
-  font-size: var(--font-size-large);
+  font-weight: bold;
+  font-size: var(--font-size-base);
 }
 
 .body-copy {
@@ -246,6 +239,30 @@ summary {
   font-family: var(--font-family-base);
   font-weight: normal;
   font-size: var(--font-size-small);
+}
+
+.definition-list__term {
+  display: inline;
+  font-family: var(--font-family-base);
+  font-weight: bold;
+  font-size: var(--font-size-base);
+}
+.definition-list__term::before {
+  display: block;
+  margin-bottom: var(--spacing-025);
+  content: "";
+}
+.definition-list__term::after {
+  content: ":";
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+}
+.definition-list__definition {
+  display: inline;
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-normal);
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
@@ -336,13 +353,13 @@ summary {
 .frame-body {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-100);
-  align-items: center;
+  gap: var(--spacing-050);
   padding: var(--spacing-050);
   background-color: var(--color-background);
   color: var(--color-base);
   height: 100vh;
   max-width: var(--measure-max);
+  align-items: flex-start;
 }
 
 /* wrapper for javascript-inserted contents */
@@ -464,6 +481,17 @@ summary {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
+  padding-bottom: var(--spacing-100);
+  border-bottom: 2px var(--color-base) solid;
+  margin-bottom: var(--spacing-100);
+}
+
+.micro-bar {
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 88px;
+  height: 31px;
 }
 
 .antipixel {

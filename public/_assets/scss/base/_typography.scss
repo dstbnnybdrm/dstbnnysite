@@ -1,22 +1,28 @@
 @use "../abstracts/mixins" as *;
 
 .title {
+    // font-family: var(--font-family-base);
+    // font-weight: bold;
+    // font-size: var(--font-size-largest);
     font-family: var(--font-family-base);
     font-weight: bold;
-    font-size: var(--font-size-largest);
+    font-size: var(--font-size-large);
 }
 
 .heading {
+    // font-family: var(--font-family-base);
+    // font-weight: normal;
+    // font-size: var(--font-size-larger);
     font-family: var(--font-family-base);
-    font-weight: normal;
-    font-size: var(--font-size-larger);
+    font-weight: bold;
+    font-size: var(--font-size-base);
 }
 
 .subheading {
-    font-family: var(--font-family-base);
-    font-variant: small-caps;
-    font-weight: normal;
-    font-size: var(--font-size-large);
+    // font-family: var(--font-family-base);
+    // font-variant: small-caps;
+    // font-weight: normal;
+    // font-size: var(--font-size-large);
 }
 
 .body-copy {
@@ -29,4 +35,37 @@
     font-family: var(--font-family-base);
     font-weight: normal;
     font-size: var(--font-size-small);
+}
+
+.definition-list {
+    &__term {
+        display: inline;
+
+        font-family: var(--font-family-base);
+        font-weight: bold;
+        font-size: var(--font-size-base);
+
+        &::before {
+            display: block;
+
+            margin-bottom: var(--spacing-025);
+
+            content: "";
+        }
+
+        &::after {
+            content: ":";
+            font-family: var(--font-family-base);
+            font-weight: normal;
+            font-size: var(--font-size-base);
+        }
+    }
+
+    &__definition {
+        display: inline;
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-normal);
+    }
 }

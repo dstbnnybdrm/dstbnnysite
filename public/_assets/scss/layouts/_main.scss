@@ -20,8 +20,7 @@
     display: flex;
 
     flex-direction: column;
-    gap: var(--spacing-100);
-    align-items: center;
+    gap: var(--spacing-050);
 
     padding: var(--spacing-050);
 
@@ -29,4 +28,5 @@
     color: var(--color-base);
     height: 100vh;
     max-width: var(--measure-max);
+    align-items: flex-start;
 }
