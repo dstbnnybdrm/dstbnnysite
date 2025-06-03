@@ -27,6 +27,12 @@
     align-self: center;
 }
 
+.theme-toggler {
+    font-family: var(--font-family-alt);
+    font-style: normal;
+    font-size: var(--font-size-base);
+}
+
 .navi {
     display: flex;
 
