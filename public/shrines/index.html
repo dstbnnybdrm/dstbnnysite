@@ -41,65 +41,51 @@
     <script src="/_assets/js/index.js" type="module"></script>
   </head>
 
-  <body class="mainframe">
+  <body class="frame-body">
     <nav class="breadcrumb mainframe__breadcrumb" aria-label="Breadcrumb">
       <ul class="breadcrumb__list">
         <li class="breadcrumb__crumb">
           <a class="breadcrumb__link" href="/hub?p=/home">home</a>
         </li>
         <li class="breadcrumb__crumb">
-          <a class="breadcrumb__link" href="/hub?p=/about">about</a>
+          <a
+            class="breadcrumb__link"
+            href="/hub?p=/shrines/"
+            aria-current="page"
+            >shrines</a
+          >
         </li>
       </ul>
     </nav>
+    <main class="section">
+      <h2 class="heading">shrines</h2>
 
-    <main class="frame-body">
-      <nav class="breadcrumb mainframe__breadcrumb" aria-label="Breadcrumb">
-        <ul class="breadcrumb__list">
-          <li class="breadcrumb__crumb">
-            <a class="breadcrumb__link" href="/hub?p=/home">home</a>
+      <p class="body-copy">a place to ramble on about my hyperfixations.</p>
+
+      <nav style="display: contents">
+        <ul class="block-list l-center">
+          <li class="block-list__item">
+            <a href="./rpg-maker.html" target="_top">
+              <img
+                class="block-list__image"
+                src="/_assets/img/shrines/rpg-maker.gif"
+                alt=""
+              />
+              <span class="block-list__text">RPG Maker games</span></a
+            >
           </li>
-          <li class="breadcrumb__crumb">
-            <a
-              class="breadcrumb__link"
-              href="/hub?p=/shrines/"
-              aria-current="page"
-              >shrines</a
+          <li class="block-list__item">
+            <img
+              class="block-list__image"
+              src="../_assets/img/breakdancing-cat.gif"
+              alt=""
+            />
+            <span class="block-list__text"
+              ><abbr title="to be determined">TBD</abbr></span
             >
           </li>
         </ul>
       </nav>
-
-      <section class="section">
-        <h2 class="heading">shrines</h2>
-
-        <p class="body-copy">a place to ramble on about my hyperfixations.</p>
-
-        <nav style="display: contents">
-          <ul class="block-list l-center">
-            <li class="block-list__item">
-              <a href="./rpg-maker.html" target="_top">
-                <img
-                  class="block-list__image"
-                  src="/_assets/img/shrines/rpg-maker.gif"
-                  alt=""
-                />
-                <span class="block-list__text">RPG Maker games</span></a
-              >
-            </li>
-            <li class="block-list__item">
-              <img
-                class="block-list__image"
-                src="../_assets/img/breakdancing-cat.gif"
-                alt=""
-              />
-              <span class="block-list__text"
-                ><abbr title="to be determined">TBD</abbr></span
-              >
-            </li>
-          </ul>
-        </nav>
-      </section>
     </main>
   </body>
 </html>
