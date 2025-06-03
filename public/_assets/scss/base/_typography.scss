@@ -15,7 +15,7 @@
     // font-size: var(--font-size-larger);
     font-family: var(--font-family-base);
     font-weight: bold;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-large);
 }
 
 .subheading {
@@ -23,6 +23,13 @@
     // font-variant: small-caps;
     // font-weight: normal;
     // font-size: var(--font-size-large);
+    font-family: var(--font-family-base);
+    font-weight: bold;
+    font-size: var(--font-size-base);
+
+    &_inline {
+        display: inline;
+    }
 }
 
 .body-copy {
@@ -36,6 +43,8 @@
     font-weight: normal;
     font-size: var(--font-size-small);
 }
+
+// lists
 
 .definition-list {
     &__term {
@@ -67,5 +76,41 @@
         font-family: var(--font-family-base);
         font-weight: normal;
         font-size: var(--font-size-normal);
+    }
+}
+
+.block-list {
+    display: flex;
+
+    flex-wrap: wrap;
+    font-family: var(--font-family-base);
+    font-weight: normal;
+    font-size: var(--font-size-base);
+
+    gap: var(--spacing-100);
+
+    a {
+        display: contents;
+    }
+
+    &__item {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        text-align: center;
+        width: 9.6rem;
+    }
+
+    &__image {
+        display: block;
+        aspect-ratio: 1/1;
+    }
+
+    &__text {
+        display: block;
+        &::before,
+        &::after {
+            content: " ~ ";
+        }
     }
 }
