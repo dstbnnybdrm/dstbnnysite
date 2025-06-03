@@ -1,3 +1,14 @@
+.graphics-wall {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+
+    list-style: none;
+}
+
 // i.e. 88x31 button
 .micro-bar {
     display: inline-block;
