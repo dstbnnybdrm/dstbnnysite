@@ -46,6 +46,18 @@
 
 // lists
 
+.list {
+    font-family: var(--font-family-base);
+    font-weight: normal;
+    font-size: var(--font-size-base);
+
+    list-style: "❀ ";
+
+    &__item {
+        margin-left: var(--spacing-175);
+    }
+}
+
 .definition-list {
     &__term {
         display: inline;
