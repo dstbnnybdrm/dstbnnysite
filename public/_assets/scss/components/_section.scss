@@ -5,8 +5,14 @@
 
     flex-direction: column;
     gap: var(--spacing-100);
+    // align-items: flex-start;
 
     padding-bottom: var(--spacing-100);
-    border-bottom: 2px var(--color-base) solid;
-    margin-bottom: var(--spacing-100);
+    width: 100%;
+
+    // last section on page doesn't get border
+    &:not(:last-child) {
+        border-bottom: 2px var(--color-base) solid;
+        margin-bottom: var(--spacing-100);
+    }
 }
