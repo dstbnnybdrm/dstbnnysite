@@ -41,12 +41,11 @@
 
     flex-direction: column;
     justify-items: center;
-    row-gap: var(--spacing-100);
+    gap: var(--spacing-100);
 
     &_row {
         // @include for-viewport-size(desktop) {
         flex-direction: row;
-        column-gap: var(--spacing-100);
         // }
     }
 }
@@ -56,12 +55,12 @@
 
     &_left {
         float: left;
-        margin-right: var(--spacing-100);
+        margin-right: 1rem;
     }
 
     &_right {
         float: right;
-        margin-left: var(--spacing-100);
+        margin-left: 1rem;
     }
 }
 
