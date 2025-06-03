@@ -250,6 +250,33 @@ summary {
   font-size: var(--font-size-small);
 }
 
+.list {
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  list-style: "❀ ";
+}
+.list__item {
+  margin-left: var(--spacing-175);
+}
+
+.row-list {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  list-style: none;
+}
+.row-list__item {
+  display: inline-block;
+  white-space: nowrap;
+}
+.row-list__item:not(:last-child)::after {
+  margin: 0 var(--spacing-050);
+  content: "/";
+}
+
 .definition-list__term {
   display: inline;
   font-family: var(--font-family-base);
@@ -556,6 +583,15 @@ summary {
   margin-bottom: var(--spacing-100);
 }
 
+.graphics-wall {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  list-style: none;
+}
+
 .micro-bar {
   display: inline-block;
   flex-shrink: 0;
@@ -574,6 +610,17 @@ summary {
 
 .breadcrumb {
   display: none;
+}
+
+.text-area {
+  width: 83%;
+  border: 1px dotted var(--color-base);
+  padding: var(--spacing-025);
+  background: none;
+  font-family: var(--font-family-mono);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  font-size: 16px;
 }
 
 /*:._.:*~ PAGES ~*:._.:*/
