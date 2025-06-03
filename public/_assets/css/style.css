@@ -226,7 +226,16 @@ summary {
 .heading {
   font-family: var(--font-family-base);
   font-weight: bold;
+  font-size: var(--font-size-large);
+}
+
+.subheading {
+  font-family: var(--font-family-base);
+  font-weight: bold;
   font-size: var(--font-size-base);
+}
+.subheading_inline {
+  display: inline;
 }
 
 .body-copy {
@@ -263,6 +272,35 @@ summary {
   font-family: var(--font-family-base);
   font-weight: normal;
   font-size: var(--font-size-normal);
+}
+
+.block-list {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  gap: var(--spacing-100);
+}
+.block-list a {
+  display: contents;
+}
+.block-list__item {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  text-align: center;
+  width: 9.6rem;
+}
+.block-list__image {
+  display: block;
+  aspect-ratio: 1/1;
+}
+.block-list__text {
+  display: block;
+}
+.block-list__text::before, .block-list__text::after {
+  content: " ~ ";
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
@@ -324,6 +362,12 @@ summary {
   align-self: center;
 }
 
+.theme-toggler {
+  font-family: var(--font-family-alt);
+  font-style: normal;
+  font-size: var(--font-size-base);
+}
+
 .navi {
   display: flex;
   flex-direction: column;
@@ -339,6 +383,30 @@ summary {
   padding: var(--spacing-050);
 }
 
+.changelog {
+  grid-area: site-log;
+}
+.changelog__entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-025);
+}
+.changelog__entry:not(:first-child) {
+  border-top: 1px dotted var(--color-base);
+  padding-top: var(--spacing-075);
+}
+.changelog__entry:nth-child(n+4) {
+  display: none;
+}
+.changelog__type {
+  letter-spacing: var(--letter-spacing-120);
+}
+.changelog__type::after {
+  content: ":";
+}
+.changelog__type:not(:first-of-type) {
+  padding-top: var(--spacing-100);
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -431,11 +499,10 @@ summary {
   display: flex;
   flex-direction: column;
   justify-items: center;
-  row-gap: var(--spacing-100);
+  gap: var(--spacing-100);
 }
 .l-stack_row {
   flex-direction: row;
-  column-gap: var(--spacing-100);
 }
 
 .l-float {
@@ -443,11 +510,11 @@ summary {
 }
 .l-float_left {
   float: left;
-  margin-right: var(--spacing-100);
+  margin-right: 1rem;
 }
 .l-float_right {
   float: right;
-  margin-left: var(--spacing-100);
+  margin-left: 1rem;
 }
 
 .l-center {
@@ -482,6 +549,9 @@ summary {
   flex-direction: column;
   gap: var(--spacing-100);
   padding-bottom: var(--spacing-100);
+  width: 100%;
+}
+.section:not(:last-child) {
   border-bottom: 2px var(--color-base) solid;
   margin-bottom: var(--spacing-100);
 }
