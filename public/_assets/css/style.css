@@ -250,6 +250,24 @@ summary {
   font-size: var(--font-size-small);
 }
 
+.block-quote {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-050);
+  margin-left: var(--spacing-100);
+}
+.block-quote__body {
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-style: italic;
+  font-size: var(--font-size-base);
+}
+.block-quote__body::before {
+  content: "“";
+}
+.block-quote__body::after {
+  content: "”";
+}
 .list {
   font-family: var(--font-family-base);
   font-weight: normal;
@@ -331,7 +349,13 @@ summary {
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
-.page {
+.page__main {
+  padding: var(--spacing-050);
+  margin: var(--spacing-150) auto 0 auto;
+  width: var(--measure-max);
+  background-color: var(--color-background);
+}
+.page_hub {
   display: flex;
   background-image: url("/_assets/img/stars5.gif");
   position: absolute;
@@ -343,6 +367,9 @@ summary {
   justify-content: center;
   width: 100vw;
   height: 100vh;
+}
+.page_about {
+  background-image: url("/_assets/img/stars5.gif");
 }
 
 .header {
@@ -384,7 +411,7 @@ summary {
   gap: var(--spacing-100);
 }
 
-.home-button {
+.site-button {
   display: block;
   align-self: center;
 }
@@ -405,6 +432,7 @@ summary {
   margin-left: var(--spacing-175);
   list-style: "∟ ";
 }
+
 .status {
   border: 1px var(--color-base) solid;
   padding: var(--spacing-050);
@@ -439,6 +467,7 @@ summary {
   flex-direction: column;
   grid-area: main;
   overflow-y: auto;
+  color: var(--color-base);
 }
 .main__frame {
   border: none;
@@ -633,7 +662,6 @@ summary {
   grid-template-rows: min-content 1fr;
   grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
 }
-
 /*:._.:*~ THEMES ~*:._.:*/
 :root,
 :root[data-theme=light] {
