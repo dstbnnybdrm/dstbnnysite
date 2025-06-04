@@ -44,6 +44,33 @@
     font-size: var(--font-size-small);
 }
 
+.block-quote {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: var(--spacing-050);
+
+    margin-left: var(--spacing-100);
+
+    &__body {
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-style: italic;
+        font-size: var(--font-size-base);
+
+        &::before {
+            content: "“";
+        }
+
+        &::after {
+            content: "”";
+        }
+    }
+
+    &__cite {
+    }
+}
+
 // lists
 
 .list {
