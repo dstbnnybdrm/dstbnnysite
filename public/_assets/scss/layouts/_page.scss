@@ -2,20 +2,32 @@
 @use "../abstracts/mixins" as *;
 
 .page {
-    display: flex;
+    &__main {
+        padding: var(--spacing-050);
+        margin: var(--spacing-150) auto 0 auto;
+        width: var(--measure-max);
+        background-color: var(--color-background);
+    }
 
-    background-image: url("/_assets/img/stars5.gif");
+    &_hub {
+        display: flex;
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+        background-image: url("/_assets/img/stars5.gif");
 
-    align-items: center;
-    justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-    width: 100vw;
-    height: 100vh;
-    // overflow: hidden;
+        align-items: center;
+        justify-content: center;
+
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &_about {
+        background-image: url("/_assets/img/stars5.gif");
+    }
 }
