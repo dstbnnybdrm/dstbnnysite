@@ -42,14 +42,14 @@
   <body class="page">
     <div class="hub">
       <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
-      <header class="header">
+      <header class="hub__header header">
         <p class="header__splash" id="splash" role="presentation">…</p>
       </header>
 
       <!-- ~*:._.:*~  SIDEBAR  ~*:._.:*~ -->
-      <div class="sidebar">
-        <!-- landing button -->
-        <a class="home-button" href="/">
+      <div class="hub__sidebar sidebar">
+        <!-- site button -->
+        <a class="site-button" href="/">
           <img
             src="/_assets/img/web-micro-bars/site/dstbnnybdrm-button.gif"
             alt="dustbunnybedroom"
@@ -60,7 +60,7 @@
         <button class="theme-toggler" id="theme-toggle" type="button"></button>
 
         <!-- ~* NAVIGATION *~ -->
-        <nav class="navi">
+        <nav class="sidebar__navi navi">
           <h2 class="body-copy">navigation</h2>
 
           <ul class="navi__list body-copy" id="navi-menu">
@@ -105,7 +105,7 @@
         </nav>
 
         <!-- ~* STATUS CAFE *~ -->
-        <aside class="status">
+        <aside class="sidebar__status status">
           <h2 class="l-hidden">status</h2>
 
           <div id="statuscafe">
@@ -125,7 +125,7 @@
         </aside>
 
         <!-- ~* CHANGELOG *~ -->
-        <aside class="changelog">
+        <aside class="sidebar__changelog changelog">
           <h2 class="body-copy">changelog</h2>
           <div role="log">
             <div id="site-log">…</div>
@@ -139,17 +139,17 @@
       </div>
 
       <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
-      <main class="main" id="main">
+      <main class="hub__main main" id="main">
         <iframe
           class="main__frame"
           name="mainframe"
           title="main content"
         ></iframe>
       </main>
-
-      <footer class="footer">
-        <div id="footer">…</div>
-      </footer>
     </div>
+
+    <footer class="page__footer footer">
+      <div id="footer">…</div>
+    </footer>
   </body>
 </html>
