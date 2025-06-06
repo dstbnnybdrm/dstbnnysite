@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .landing {
-    margin: var(--spacing-200);
+    padding: var(--spacing-200) 0;
     max-width: var(--measure-max);
 
     color: var(--color-base);
@@ -52,5 +52,8 @@
 
     &__bed {
         border-bottom: 1px var(--color-base) solid;
+    }
+
+    &__subheading {
     }
 }
