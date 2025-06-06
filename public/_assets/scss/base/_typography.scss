@@ -1,14 +1,5 @@
 @use "../abstracts/mixins" as *;
 
-.title {
-    // font-family: var(--font-family-base);
-    // font-weight: bold;
-    // font-size: var(--font-size-largest);
-    font-family: var(--font-family-base);
-    font-weight: bold;
-    font-size: var(--font-size-large);
-}
-
 .heading {
     // font-family: var(--font-family-base);
     // font-weight: normal;
@@ -16,32 +7,28 @@
     font-family: var(--font-family-base);
     font-weight: bold;
     font-size: var(--font-size-large);
+    line-height: 1.5;
 }
 
 .subheading {
-    // font-family: var(--font-family-base);
-    // font-variant: small-caps;
-    // font-weight: normal;
-    // font-size: var(--font-size-large);
     font-family: var(--font-family-base);
     font-weight: bold;
     font-size: var(--font-size-base);
-
-    &_inline {
-        display: inline;
-    }
+    line-height: 1.5;
 }
 
 .body-copy {
     font-family: var(--font-family-base);
     font-weight: normal;
     font-size: var(--font-size-base);
+    line-height: 1.5;
 }
 
 .small-copy {
     font-family: var(--font-family-base);
     font-weight: normal;
     font-size: var(--font-size-small);
+    line-height: 1.5;
 }
 
 .block-quote {
@@ -74,11 +61,19 @@
 // lists
 
 .list {
+    display: flex;
+
+    flex-direction: column;
+
     font-family: var(--font-family-base);
     font-weight: normal;
     font-size: var(--font-size-base);
 
+    align-items: flex-start;
+    gap: 1ex; // x-height
+
     list-style: "❀ ";
+    line-height: 1.5;
 
     &__item {
         margin-left: var(--spacing-175);
@@ -94,6 +89,7 @@
     font-weight: normal;
     font-size: var(--font-size-base);
     list-style: none;
+    line-height: 1.5;
 
     &__item {
         display: inline-block;
@@ -109,6 +105,7 @@
 }
 
 .definition-list {
+    line-height: 1.5;
     &__term {
         display: inline;
 

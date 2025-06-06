@@ -1,2 +1,56 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
+
+.landing {
+    margin: var(--spacing-200);
+    max-width: var(--measure-max);
+
+    color: var(--color-base);
+
+    &__header {
+        padding: 0 var(--spacing-175);
+    }
+
+    &__heading {
+        margin: 0 calc(-1 * var(--spacing-175));
+
+        font-family: var(--font-family-alt);
+        font-weight: bold;
+        font-style: normal;
+        font-size: var(--font-size-base);
+        text-align: right;
+    }
+
+    &__quote {
+        font-family: var(--font-family-alt);
+        font-weight: normal;
+        font-style: italic;
+        font-size: var(--font-size-base);
+    }
+
+    &__main {
+    }
+
+    &__enter-link {
+        &::before {
+            font-family: var(--font-family-base);
+            font-style: normal;
+            margin-right: 1ch;
+            content: "⟶";
+        }
+
+        &::after {
+            font-family: var(--font-family-base);
+            font-style: normal;
+            margin-left: 1ch;
+            content: "⟵";
+        }
+    }
+
+    &__footer {
+    }
+
+    &__bed {
+        border-bottom: 1px var(--color-base) solid;
+    }
+}

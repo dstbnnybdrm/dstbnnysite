@@ -1,1 +1,12 @@
 @use "../abstracts/mixins" as *;
+
+.ascii-art {
+    color: var(--color-base);
+
+    line-height: 1rem;
+
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-base);
+    font-weight: normal;
+    font-style: normal;
+}
