@@ -3,65 +3,18 @@
  *
  *    https://getbem.com/
  *
- * and Sass extension language 
+ * the Sass extension language 
  *
  *    https://sass-lang.com/
+ *
+ * and the Sass 7-1 pattern
+ *
+ *    https://sass-guidelin.es/#the-7-1-pattern
  */
 
-/*:._.:*~ ABSTRACTS ~*:._.:*/
-@use "abstracts/breakpoints";
-@use "abstracts/mixins";
-
-/*:._.:*~ BASE ~*:._.:*/
-@use "base/fonts";
-@use "base/base";
-@use "base/reset";
-@use "base/typography";
-
-/*:._.:*~ LAYOUTS ~*:._.:*/
-@use "layouts/page";
-@use "layouts/header";
-@use "layouts/sidebar";
-@use "layouts/navi";
-@use "layouts/theme-toggle";
-@use "layouts/directories";
-@use "layouts/support";
-@use "layouts/status";
-@use "layouts/changelog";
-@use "layouts/main";
-@use "layouts/marquee";
-@use "layouts/footer";
-
-/*:._.:*~ COMPONENTS ~*:._.:*/
-@use "components/layout-blocks";
-@use "components/card";
-@use "components/section";
-@use "components/feed";
-@use "components/image";
-@use "components/table";
-@use "components/figure";
-@use "components/ascii-art";
-@use "components/web-graphics";
-@use "components/breadcrumb";
-@use "components/text-area";
-@use "components/dropdown";
-@use "components/carousel";
-
-/*:._.:*~ PAGES ~*:._.:*/
-@use "pages/not-found";
-@use "pages/landing";
-@use "pages/hub";
-@use "pages/home";
-@use "pages/about";
-@use "pages/blog";
-@use "pages/blog-post";
-@use "pages/shrines";
-@use "pages/rpg-maker";
-@use "pages/guestbook";
-@use "pages/sitemap";
-@use "pages/closet";
-
-/*:._.:*~ THEMES ~*:._.:*/
-@use "themes/light";
-@use "themes/dark";
-// @use "themes/high-contrast";
+@use "abstracts";
+@use "base";
+@use "layouts";
+@use "components";
+@use "pages";
+@use "themes";

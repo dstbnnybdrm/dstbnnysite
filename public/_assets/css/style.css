@@ -4,12 +4,54 @@
  *
  *    https://getbem.com/
  *
- * and Sass extension language 
+ * the Sass extension language 
  *
  *    https://sass-lang.com/
+ *
+ * and the Sass 7-1 pattern
+ *
+ *    https://sass-guidelin.es/#the-7-1-pattern
  */
 /*:._.:*~ ABSTRACTS ~*:._.:*/
+/* Sass tools and helpers */
 /*:._.:*~ BASE ~*:._.:*/
+/* basically boilerplate code */
+/*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
+:root {
+  --font-family-base: "Fira", Verdana, Geneva, Tahoma, sans-serif;
+  --font-family-alt: "Charter", Georgia, "Times New Roman", Times, serif;
+  --font-family-mono: "Fira Mono", Courier, monospace;
+  /* size ratios mostly derived from minor thirds (6:5) */
+  --font-size-smaller: 0.69rem;
+  --font-size-small: 0.83rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.2rem;
+  --font-size-larger: 1.32rem;
+  --font-size-largest: 1.44rem;
+  --line-height-small: 1.25rem;
+  --line-height-base: 1.5rem;
+  --line-height-large: 1.8rem;
+  --line-height-larger: 1.98rem;
+  --line-height-largest: 2.16rem;
+  --letter-spacing-100: initial;
+  --letter-spacing-110: 0.05rem;
+  --letter-spacing-120: 0.07rem;
+  --letter-spacing-130: 0.09rem;
+  --letter-spacing-140: 0.12rem;
+  /* generic spacing for margin's, padding, gap, etc. */
+  --spacing-025: 0.58rem;
+  --spacing-050: 0.69rem;
+  --spacing-075: 0.83rem;
+  --spacing-100: 1rem;
+  --spacing-125: 1.2rem;
+  --spacing-150: 1.44rem;
+  --spacing-175: 1.73rem;
+  --spacing-200: 2rem;
+  /* the maximum line length that text should span (~74 characters, or ~2.8
+   alphabets) */
+  --measure-max: 40rem;
+}
+
 /* 
  * i already love Fira Sans and have been using it for a while but i did yoink
  * this particular font pairing (Fira and Charter) from Matthew Butterick of
@@ -67,42 +109,6 @@
   src: url("/_assets/font/FiraMono-Bold.woff2") format("woff2");
   font-weight: bold;
 }
-/*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
-:root {
-  --font-family-base: "Fira", Verdana, Geneva, Tahoma, sans-serif;
-  --font-family-alt: "Charter", Georgia, "Times New Roman", Times, serif;
-  --font-family-mono: "Fira Mono", Courier, monospace;
-  /* size ratios mostly derived from minor thirds (6:5) */
-  --font-size-smaller: 0.69rem;
-  --font-size-small: 0.83rem;
-  --font-size-base: 1rem;
-  --font-size-large: 1.2rem;
-  --font-size-larger: 1.32rem;
-  --font-size-largest: 1.44rem;
-  --line-height-small: 1.25rem;
-  --line-height-base: 1.5rem;
-  --line-height-large: 1.8rem;
-  --line-height-larger: 1.98rem;
-  --line-height-largest: 2.16rem;
-  --letter-spacing-100: initial;
-  --letter-spacing-110: 0.05rem;
-  --letter-spacing-120: 0.07rem;
-  --letter-spacing-130: 0.09rem;
-  --letter-spacing-140: 0.12rem;
-  /* generic spacing for margin's, padding, gap, etc. */
-  --spacing-025: 0.58rem;
-  --spacing-050: 0.69rem;
-  --spacing-075: 0.83rem;
-  --spacing-100: 1rem;
-  --spacing-125: 1.2rem;
-  --spacing-150: 1.44rem;
-  --spacing-175: 1.73rem;
-  --spacing-200: 2rem;
-  /* the maximum line length that text should span (~74 characters, or ~2.8
-   alphabets) */
-  --measure-max: 40rem;
-}
-
 /* *~  GLOBAL RESETS  ~* 
  *
  * very slightly modified from here:
@@ -349,131 +355,7 @@ summary {
 }
 
 /*:._.:*~ LAYOUTS ~*:._.:*/
-.page__main {
-  padding: var(--spacing-050);
-  margin: var(--spacing-150) auto 0 auto;
-  width: var(--measure-max);
-  background-color: var(--color-background);
-}
-.page_hub {
-  display: flex;
-  background-image: url("/_assets/img/stars5.gif");
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-}
-.page_about {
-  background-image: url("/_assets/img/stars5.gif");
-}
-
-.header {
-  display: flex;
-  grid-area: header;
-  justify-content: center;
-  padding: var(--spacing-050);
-  color: var(--color-base);
-  border-style: none none ridge none;
-}
-.header__splash {
-  font-family: var(--font-family-alt);
-  font-style: italic;
-  font-size: var(--font-size-base);
-}
-.header__splash::before {
-  font-family: var(--font-family-base);
-  font-style: normal;
-  margin: 0 var(--spacing-200);
-  content: "⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆";
-}
-.header__splash::after {
-  font-family: var(--font-family-base);
-  font-style: normal;
-  margin: 0 var(--spacing-200);
-  content: "⋆⚘˚｡➷⁀˚☽˚۰˚｡⚘";
-}
-
-.sidebar {
-  display: flex;
-  overflow: auto;
-  flex-direction: column;
-  grid-area: sidebar;
-  padding: var(--spacing-050);
-  background-color: var(--color-background);
-  color: var(--color-base);
-  border-color: initial;
-  border-style: none ridge none none;
-  gap: var(--spacing-100);
-}
-
-.site-button {
-  display: block;
-  align-self: center;
-}
-
-.theme-toggler {
-  font-family: var(--font-family-alt);
-  font-style: normal;
-  font-size: var(--font-size-base);
-}
-
-.navi {
-  display: flex;
-  flex-direction: column;
-}
-.navi__list {
-  display: flex;
-  flex-direction: column;
-  margin-left: var(--spacing-175);
-  list-style: "∟ ";
-}
-
-.status {
-  border: 1px var(--color-base) solid;
-  padding: var(--spacing-050);
-}
-
-.changelog {
-  grid-area: site-log;
-}
-.changelog__entry {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-025);
-}
-.changelog__entry:not(:first-child) {
-  border-top: 1px dotted var(--color-base);
-  padding-top: var(--spacing-075);
-}
-.changelog__entry:nth-child(n+4) {
-  display: none;
-}
-.changelog__type {
-  letter-spacing: var(--letter-spacing-120);
-}
-.changelog__type::after {
-  content: ":";
-}
-.changelog__type:not(:first-of-type) {
-  padding-top: var(--spacing-100);
-}
-.main {
-  display: flex;
-  flex-direction: column;
-  grid-area: main;
-  overflow-y: auto;
-  color: var(--color-base);
-}
-.main__frame {
-  border: none;
-  width: var(--measure-max);
-}
-
+/* everything that takes part in laying out the site */
 .frame-body {
   display: flex;
   flex-direction: column;
@@ -525,67 +407,152 @@ summary {
   justify-content: center;
 }
 
+.header {
+  display: flex;
+  grid-area: header;
+  justify-content: center;
+  padding: var(--spacing-050);
+  color: var(--color-base);
+  border-style: none none ridge none;
+}
+.header__splash {
+  font-family: var(--font-family-alt);
+  font-style: italic;
+  font-size: var(--font-size-base);
+}
+.header__splash::before {
+  font-family: var(--font-family-base);
+  font-style: normal;
+  margin: 0 var(--spacing-200);
+  content: "⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆";
+}
+.header__splash::after {
+  font-family: var(--font-family-base);
+  font-style: normal;
+  margin: 0 var(--spacing-200);
+  content: "⋆⚘˚｡➷⁀˚☽˚۰˚｡⚘";
+}
+
+.l-imposter {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  grid-area: main;
+  overflow-y: auto;
+  color: var(--color-base);
+}
+.main__frame {
+  border: none;
+  width: var(--measure-max);
+}
+
+.page__main {
+  padding: var(--spacing-050);
+  margin: var(--spacing-150) auto 0 auto;
+  width: var(--measure-max);
+  background-color: var(--color-background);
+}
+.page_hub {
+  display: flex;
+  background-image: url("/_assets/img/stars5.gif");
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.page_about {
+  background-image: url("/_assets/img/stars5.gif");
+}
+
+.sidebar {
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  grid-area: sidebar;
+  padding: var(--spacing-050);
+  background-color: var(--color-background);
+  color: var(--color-base);
+  border-color: initial;
+  border-style: none ridge none none;
+  gap: var(--spacing-100);
+}
+
+.site-button {
+  display: block;
+  align-self: center;
+}
+
+.theme-toggler {
+  font-family: var(--font-family-alt);
+  font-style: normal;
+  font-size: var(--font-size-base);
+}
+
+.navi {
+  display: flex;
+  flex-direction: column;
+}
+.navi__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--spacing-175);
+  list-style: "∟ ";
+}
+
 /*:._.:*~ COMPONENTS ~*:._.:*/
+/* smaller components; more focused on widgets */
+.breadcrumb {
+  display: none;
+}
+
+.changelog {
+  grid-area: site-log;
+}
+.changelog__entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-025);
+}
+.changelog__entry:not(:first-child) {
+  border-top: 1px dotted var(--color-base);
+  padding-top: var(--spacing-075);
+}
+.changelog__entry:nth-child(n+4) {
+  display: none;
+}
+.changelog__type {
+  letter-spacing: var(--letter-spacing-120);
+}
+.changelog__type::after {
+  content: ":";
+}
+.changelog__type:not(:first-of-type) {
+  padding-top: var(--spacing-100);
+}
 /**
  * convention for layout blocks taken from:
  *    https://bem-cheat-sheet.9elements.com/#layout-blocks
  */
-@media screen and (max-width: 800px) {
-  .l-imposter {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 801px) {
-  .l-imposter {
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-  }
-}
-
-.l-stack {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  gap: var(--spacing-100);
-}
-.l-stack_row {
-  flex-direction: row;
-}
-
-.l-float {
-  display: block;
-}
-.l-float_left {
-  float: left;
-  margin-right: 1rem;
-}
-.l-float_right {
-  float: right;
-  margin-left: 1rem;
-}
-
 .l-center {
   display: flex;
   justify-content: center;
-}
-
-.l-scrollbar-container {
-  display: contents;
-}
-@media screen and (min-width: 801px) {
-  .l-scrollbar-container {
-    min-height: 0;
-    overflow-y: auto;
-  }
 }
 
 /* for visually hiding landmarks needed for screen readers */
@@ -610,6 +577,38 @@ summary {
 .section:not(:last-child) {
   border-bottom: 2px var(--color-base) solid;
   margin-bottom: var(--spacing-100);
+}
+
+.l-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--spacing-100);
+}
+.l-stack_row {
+  flex-direction: row;
+}
+.l-stack_justify-center {
+  justify-content: center;
+}
+.l-stack_align-center {
+  align-content: center;
+}
+
+.status {
+  border: 1px var(--color-base) solid;
+  padding: var(--spacing-050);
+}
+
+.text-area {
+  width: 83%;
+  border: 1px dotted var(--color-base);
+  padding: var(--spacing-025);
+  background: none;
+  font-family: var(--font-family-mono);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  font-size: 16px;
 }
 
 .graphics-wall {
@@ -637,22 +636,8 @@ summary {
   height: 15px;
 }
 
-.breadcrumb {
-  display: none;
-}
-
-.text-area {
-  width: 83%;
-  border: 1px dotted var(--color-base);
-  padding: var(--spacing-025);
-  background: none;
-  font-family: var(--font-family-mono);
-  font-weight: normal;
-  font-size: var(--font-size-base);
-  font-size: 16px;
-}
-
 /*:._.:*~ PAGES ~*:._.:*/
+/* page-specific styles */
 .hub {
   display: grid;
   background-color: var(--color-background);
@@ -662,22 +647,8 @@ summary {
   grid-template-rows: min-content 1fr;
   grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
 }
-/*:._.:*~ THEMES ~*:._.:*/
-:root,
-:root[data-theme=light] {
-  color-scheme: light;
-  --color-primary: #c43162; /*                  rose red              */
-  --color-primary-lo-contrast: #d36488; /*      amaranth pink         */
-  --color-primary-hi-contrast: #932550; /*      quinacridone magenta  */
-  --color-secondary: #4f9c86; /*                zomp                  */
-  --color-secondary-lo-contrast: #a7cbc0; /*    ash gray              */
-  --color-secondary-hi-contrast: #585b62; /*    Davy's gray           */
-  --color-base: #61193e; /*                     tyrian purple         */
-  --color-background: #fffafa; /*               snow                  */
-  --filter-base: invert(14%) sepia(28%) saturate(4517%) hue-rotate(302deg)
-      brightness(85%) contrast(94%);
-}
 
+/*:._.:*~ THEMES ~*:._.:*/
 :root[data-theme=dark] {
   color-scheme: dark;
   --color-primary: #cf4f79; /*                  fuchsia rose          */
@@ -706,6 +677,20 @@ summary {
     --filter-base: invert(99%) sepia(86%) saturate(259%) hue-rotate(286deg)
         brightness(91%) contrast(83%);
   }
+}
+:root,
+:root[data-theme=light] {
+  color-scheme: light;
+  --color-primary: #c43162; /*                  rose red              */
+  --color-primary-lo-contrast: #d36488; /*      amaranth pink         */
+  --color-primary-hi-contrast: #932550; /*      quinacridone magenta  */
+  --color-secondary: #4f9c86; /*                zomp                  */
+  --color-secondary-lo-contrast: #a7cbc0; /*    ash gray              */
+  --color-secondary-hi-contrast: #585b62; /*    Davy's gray           */
+  --color-base: #61193e; /*                     tyrian purple         */
+  --color-background: #fffafa; /*               snow                  */
+  --filter-base: invert(14%) sepia(28%) saturate(4517%) hue-rotate(302deg)
+      brightness(85%) contrast(94%);
 }
 
 /*# sourceMappingURL=style.css.map */
