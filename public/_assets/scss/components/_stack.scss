@@ -1,0 +1,19 @@
+.l-stack {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--spacing-100);
+
+    &_row {
+        flex-direction: row;
+    }
+
+    &_justify-center {
+        justify-content: center;
+    }
+
+    &_align-center {
+        align-content: center;
+    }
+}

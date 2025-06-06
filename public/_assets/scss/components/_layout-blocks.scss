@@ -5,78 +5,10 @@
  *    https://bem-cheat-sheet.9elements.com/#layout-blocks
  */
 
-.l-imposter {
-    // min-height: 0;
-
-    // FOR DEBUGGING LOL
-    // border: 1px solid green;
-
-    @include for-viewport-size(phone) {
-        display: flex;
-
-        justify-content: center;
-    }
-
-    @include for-viewport-size(desktop) {
-        display: flex;
-
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        align-items: center;
-        justify-content: center;
-
-        width: 100vw;
-        height: 100vh;
-
-        // overflow: hidden;
-    }
-}
-
-.l-stack {
-    display: flex;
-
-    flex-direction: column;
-    justify-items: center;
-    gap: var(--spacing-100);
-
-    &_row {
-        // @include for-viewport-size(desktop) {
-        flex-direction: row;
-        // }
-    }
-}
-
-.l-float {
-    display: block;
-
-    &_left {
-        float: left;
-        margin-right: 1rem;
-    }
-
-    &_right {
-        float: right;
-        margin-left: 1rem;
-    }
-}
-
 .l-center {
     display: flex;
 
     justify-content: center;
-}
-
-.l-scrollbar-container {
-    display: contents;
-
-    @include for-viewport-size(desktop) {
-        min-height: 0;
-        overflow-y: auto;
-    }
 }
 
 /* for visually hiding landmarks needed for screen readers */
