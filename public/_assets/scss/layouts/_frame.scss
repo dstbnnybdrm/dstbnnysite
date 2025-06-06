@@ -1,0 +1,14 @@
+.frame-body {
+    display: flex;
+
+    flex-direction: column;
+    gap: var(--spacing-050);
+
+    padding: var(--spacing-050);
+
+    background-color: var(--color-background);
+    color: var(--color-base);
+    height: 100vh;
+    max-width: var(--measure-max);
+    align-items: flex-start;
+}
