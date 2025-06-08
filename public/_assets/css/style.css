@@ -471,6 +471,12 @@ summary {
 .page_landing {
   background-color: var(--color-background);
 }
+.page_now {
+  background-color: var(--color-background);
+}
+.page_uses {
+  background-color: var(--color-background);
+}
 
 .sidebar {
   display: flex;
@@ -638,18 +644,8 @@ summary {
 
 /*:._.:*~ PAGES ~*:._.:*/
 /* page-specific styles */
-.hub {
-  display: grid;
-  background-color: var(--color-background);
-  aspect-ratio: 8/6;
-  border: 1px var(--color-base) solid;
-  grid-template-areas: "header   header" "sidebar  main";
-  grid-template-rows: min-content 1fr;
-  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
-}
-
 .landing {
-  margin: var(--spacing-200);
+  padding: var(--spacing-200) 0;
   max-width: var(--measure-max);
   color: var(--color-base);
 }
@@ -684,6 +680,29 @@ summary {
 }
 .landing__bed {
   border-bottom: 1px var(--color-base) solid;
+}
+.hub {
+  display: grid;
+  background-color: var(--color-background);
+  aspect-ratio: 8/6;
+  border: 1px var(--color-base) solid;
+  grid-template-areas: "header   header" "sidebar  main";
+  grid-template-rows: min-content 1fr;
+  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+}
+
+.about {
+  padding: var(--spacing-200) 0;
+  max-width: var(--measure-max);
+  color: var(--color-base);
+}
+.now {
+  max-width: var(--measure-max);
+  color: var(--color-base);
+}
+
+.uses {
+  color: var(--color-base);
 }
 
 /*:._.:*~ THEMES ~*:._.:*/
