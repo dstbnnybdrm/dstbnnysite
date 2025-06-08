@@ -17,6 +17,20 @@
         1fr;
     grid-template-columns:
         minmax(0, 12rem)
-        //     // minmax(0, var(--measure-max));
         minmax(0, 1fr);
+
+    &__footer {
+        display: flex;
+
+        // position at bottom left of window
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        justify-content: center;
+
+        // take up entire width of container
+        width: 100%;
+        padding: var(--spacing-025);
+    }
 }
