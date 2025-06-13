@@ -4,16 +4,15 @@
 .changelog {
     grid-area: site-log;
 
+    font-family: var(--font-family-alt);
+    font-weight: normal;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+
     &__entry {
         display: flex;
 
         flex-direction: column;
-        gap: var(--spacing-025);
-
-        &:not(:first-child) {
-            border-top: 1px dotted var(--color-base);
-            padding-top: var(--spacing-075);
-        }
 
         &:nth-child(n + 4) {
             display: none;
@@ -27,7 +26,13 @@
     }
 
     &__type {
-        letter-spacing: var(--letter-spacing-120);
+        display: inline;
+
+        &::before {
+            display: block;
+
+            content: "";
+        }
 
         &::after {
             content: ":";
@@ -39,7 +44,6 @@
     }
 
     &__description {
-        * {
-        }
+        display: inline;
     }
 }

@@ -20,6 +20,27 @@
     border-style: none ridge none none;
 
     gap: var(--spacing-100);
+
+    &__heading {
+        font-family: var(--font-family-base);
+        font-weight: bold;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+    }
+
+    &__navi {
+    }
+
+    &__status {
+    }
+
+    &__changelog {
+        min-height: 10rem;
+        border: 1px blue solid;
+        overflow-y: auto;
+        border: 1px var(--color-base) solid;
+        padding: var(--spacing-050);
+    }
 }
 
 .site-button {
