@@ -662,6 +662,33 @@ summary {
   height: 15px;
 }
 
+.poem {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-100);
+  align-items: flex-start;
+  max-width: var(--measure-max);
+  font-family: var(--font-family-alt);
+  font-weight: normal;
+  font-style: normal;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+.poem__title {
+  font-weight: normal;
+  font-style: italic;
+}
+.poem__body {
+  display: flex;
+  flex-direction: column;
+}
+.poem__stanza {
+  text-indent: calc(-1 * var(--spacing-200));
+  padding-left: var(--spacing-200);
+}
+.poem__stanza:not(:last-child) {
+  margin-bottom: var(--spacing-100);
+}
 /*:._.:*~ PAGES ~*:._.:*/
 /* page-specific styles */
 .landing {

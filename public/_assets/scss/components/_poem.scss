@@ -1,0 +1,44 @@
+// some suggestions for marking up and styling poetry taken from:
+//    https://yearebase.github.io/blog/poetry-in-html/
+.poem {
+    display: flex;
+
+    flex-direction: column;
+    row-gap: var(--spacing-100);
+    align-items: flex-start;
+
+    max-width: var(--measure-max);
+
+    font-family: var(--font-family-alt);
+    font-weight: normal;
+    font-style: normal;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+
+    &__title {
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    &__body {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    &__stanza {
+        text-indent: calc(-1 * var(--spacing-200));
+        padding-left: var(--spacing-200);
+
+        &:not(:last-child) {
+            // background-color: blue;
+            margin-bottom: var(--spacing-100);
+        }
+    }
+
+    &__verse {
+    }
+
+    &__illustration {
+    }
+}
