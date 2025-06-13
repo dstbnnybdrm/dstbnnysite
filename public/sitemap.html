@@ -32,96 +32,94 @@
     <script src="/_assets/js/index.js" type="module"></script>
   </head>
 
-  <body class="l-imposter">
-    <div class="sitemap-page page">
-      <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
-      <main class="main sitemap-page__main">
-        <h1 class="title">sitemap</h1>
+  <body class="page page_sitemap">
+    <div class="sitemap">
+      <main class="sitemap__main">
+        <h1 class="sitemap__heading">sitemap</h1>
 
-        <!-- ~* NAVIGATION *~ -->
-        <nav class="sitemap">
-          <section class="sitemap__list">
+        <nav class="sitemap__navi">
+          <ul class="sitemap__list">
+            <li class="sitemap__item"><a href=".">landing</a></li>
             <li class="sitemap__item">
-              <a class="sitemap__link" href="/">landing</a>
+              <a href="/hub.html?p=/home.html">home</a>
             </li>
             <li class="sitemap__item">
-              <a class="sitemap__link" href="/hub?p=/home">home</a>
+              from me
+              <ul class="sitemap__list">
+                <li class="sitemap__item">
+                  <a href="/about.html">about</a>
+                  <ul class="sitemap__list">
+                    <li class="sitemap__item"><a href="/now.html">now</a></li>
+                    <li class="sitemap__item"><a href="/uses.html">uses</a></li>
+                  </ul>
+                </li>
+                <li class="sitemap__item">
+                  <a href="/hub.html?p=/work/">work</a>
+                  <ul class="sitemap__list">
+                    <li class="sitemap__item">
+                      <a href="/hub.html?p=/work/music.html">music</a>
+                    </li>
+                    <li class="sitemap__item">
+                      <a href="/hub.html?p=/work/samples.html">samples</a>
+                    </li>
+                    <li class="sitemap__item">
+                      <a href="/hub.html?p=/work/tabs.html">tabs</a>
+                    </li>
+                    <li class="sitemap__item">
+                      <a href="/hub.html?p=/work/game-dev.html">game dev</a>
+                    </li>
+                    <li class="sitemap__item">
+                      <a href="/hub.html?p=/work/misc.html">other</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sitemap__item"><a href="/blog.html">blog</a></li>
+                <li class="sitemap__item">
+                  <a href="/hub.html?p=/shrines/">shrines</a>
+                  <ul class="sitemap__list">
+                    <li class="sitemap__item">
+                      <a href="/shrines/rpg-maker.html">RPG Maker games</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li class="sitemap__item">
-              <a class="sitemap__link" href="/sitemap.html"
-                >sitemap (you are here!)</a
-              >
+              for you
+              <ul class="sitemap__list">
+                <li class="sitemap__item">
+                  <a href="/hub.html?p=/commission.html">commission</a>
+                </li>
+                <li class="sitemap__item">
+                  <a href="/hub.html?p=/resources.html">resources</a>
+                </li>
+                <li class="sitemap__item">
+                  <a href="/guestbook.html">guestbook</a>
+                </li>
+                <li class="sitemap__item">
+                  <a href="/hub.html?p=/links.html">links</a>
+                </li>
+              </ul>
             </li>
-
-            <h2 class="sitemap__subheading">from me</h2>
-
-            <ul class="sitemap__list">
-              <li class="sitemap__item">
-                <a class="sitemap__link" href="/hub?p=/about">about</a>
-                <ul class="sitemap__list">
-                  <li class="sitemap__item">
-                    <a class="sitemap__link" href="/hub?p=/now">/now</a>
-                  </li>
-                  <li class="sitemap__item">
-                    <a class="sitemap__link" href="/hub?p=/uses">/uses</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="sitemap__item">
-                <a class="sitemap__link" href="/blog.html">blog</a>
-              </li>
-              <li class="sitemap__item">
-                <a class="sitemap__link" href="/hub?p=/work">work</a>
-                <ul class="sitemap__list">
-                  <li class="sitemap__item">
-                    <a class="sitemap__link" href="/hub?p=/work/music">music</a>
-                  </li>
-                  <li class="sitemap__item">
-                    <a class="sitemap__link" href="/hub?p=/work/samples"
-                      >samples</a
-                    >
-                  </li>
-                  <li class="sitemap__item">
-                    <a class="sitemap__link" href="/hub?p=/work/game-dev"
-                      >game dev</a
-                    >
-                  </li>
-                  <li class="sitemap__item">
-                    <a class="sitemap__link" href="/hub?p=/work/tabs">tabs</a>
-                  </li>
-                  <li class="sitemap__item">
-                    <a class="sitemap__link" href="/hub?p=/work/misc">misc</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="sitemap__item">
-                <a class="sitemap__link" href="/shrines/">shrines</a>
-              </li>
-            </ul>
-
-            <h2 class="sitemap__subheading">for you</h2>
-            <ul class="sitemap__list">
-              <li class="sitemap__item">
-                <a class="sitemap__link" href="/hub?p=/commission"
-                  >commission</a
-                >
-              </li>
-              <li class="sitemap__item">
-                <a class="sitemap__link" href="/hub?p=/resources">resources</a>
-              </li>
-              <li class="sitemap__item">
-                <a class="sitemap__link" href="/hub?p=/links">links</a>
-              </li>
-              <li class="sitemap__item">
-                <a class="sitemap__link" href="/guestbook.html">guestbook</a>
-              </li>
-            </ul>
-
-            <h2 class="sitemap__subheading">closet</h2>
-            <ul class="sitemap__list">
-              <li class="sitemap__item">???</li>
-            </ul>
-          </section>
+            <li class="sitemap__item">
+              footer
+              <ul class="sitemap__list">
+                <li class="sitemap__item">sitemap (you are here!)</li>
+                <li class="sitemap__item">
+                  <a href="/accessibility.html">accessibility</a>
+                </li>
+                <li class="sitemap__item">
+                  <a href="/contact.html">contact</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sitemap__item">
+              <a>warren</a>
+              <ul class="sitemap__list">
+                <li class="sitemap__item">?</li>
+              </ul>
+            </li>
+          </ul>
         </nav>
       </main>
     </div>

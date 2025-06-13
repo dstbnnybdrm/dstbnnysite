@@ -1,2 +1,31 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
+
+.sitemap {
+    &__heading {
+    }
+
+    &__navi {
+    }
+
+    &__list {
+        display: flex;
+
+        flex-direction: column;
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+
+        align-items: flex-start;
+        // space between list items
+        gap: 1ex; // x-height
+
+        list-style: "❀ ";
+        line-height: 1.5;
+    }
+
+    &__item {
+        margin-left: var(--spacing-175);
+    }
+}
