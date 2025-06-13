@@ -379,36 +379,29 @@ summary {
 
 .footer {
   display: flex;
-  grid-area: footer;
   flex-direction: column;
-  padding: var(--spacing-050);
-  background-color: var(--color-background);
-  gap: var(--spacing-025);
+  justify-items: center;
+  align-items: center;
+  gap: 0.5ex;
   color: var(--color-base);
-  width: var(--measure-max);
-  display: none;
+  background-color: var(--color-background);
 }
 .footer__list {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  list-style: none;
+  line-height: 1.5;
 }
 .footer__item {
   display: inline-block;
-  /* keep items all in a line */
   white-space: nowrap;
-  /* dividers between items */
 }
 .footer__item:not(:last-child)::after {
-  margin: 0 var(--spacing-075);
+  margin: 0 var(--spacing-050);
   content: "|";
-}
-.footer__buttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .header {
@@ -490,6 +483,19 @@ summary {
   border-style: none ridge none none;
   gap: var(--spacing-100);
 }
+.sidebar__heading {
+  font-family: var(--font-family-base);
+  font-weight: bold;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+.sidebar__changelog {
+  min-height: 10rem;
+  border: 1px blue solid;
+  overflow-y: auto;
+  border: 1px var(--color-base) solid;
+  padding: var(--spacing-050);
+}
 
 .site-button {
   display: block;
@@ -530,21 +536,24 @@ summary {
 
 .changelog {
   grid-area: site-log;
+  font-family: var(--font-family-alt);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
 }
 .changelog__entry {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-025);
-}
-.changelog__entry:not(:first-child) {
-  border-top: 1px dotted var(--color-base);
-  padding-top: var(--spacing-075);
 }
 .changelog__entry:nth-child(n+4) {
   display: none;
 }
 .changelog__type {
-  letter-spacing: var(--letter-spacing-120);
+  display: inline;
+}
+.changelog__type::before {
+  display: block;
+  content: "";
 }
 .changelog__type::after {
   content: ":";
@@ -552,6 +561,10 @@ summary {
 .changelog__type:not(:first-of-type) {
   padding-top: var(--spacing-100);
 }
+.changelog__description {
+  display: inline;
+}
+
 /**
  * convention for layout blocks taken from:
  *    https://bem-cheat-sheet.9elements.com/#layout-blocks
@@ -602,6 +615,10 @@ summary {
 }
 
 .status {
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-smaller);
+  line-height: 1;
   border: 1px var(--color-base) solid;
   padding: var(--spacing-050);
 }
@@ -689,6 +706,15 @@ summary {
   grid-template-areas: "header   header" "sidebar  main";
   grid-template-rows: min-content 1fr;
   grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+}
+.hub__footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  width: 100%;
+  padding: var(--spacing-025);
 }
 
 .about {
