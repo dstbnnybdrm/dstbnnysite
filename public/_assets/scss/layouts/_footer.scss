@@ -7,10 +7,26 @@
 }
 
 .footer {
+    display: flex;
+
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 0.5ex;
+
     color: var(--color-base);
     background-color: var(--color-background);
 
     &__list {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        list-style: none;
+        line-height: 1.5;
     }
 
     &__item {
@@ -21,7 +37,7 @@
         &:not(:last-child)::after {
             margin: 0 var(--spacing-050);
 
-            content: "/";
+            content: "|";
         }
     }
 }
