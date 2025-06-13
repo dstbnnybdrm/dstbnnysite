@@ -470,6 +470,9 @@ summary {
 .page_uses {
   background-color: var(--color-background);
 }
+.page_sitemap {
+  background-color: var(--color-background);
+}
 
 .sidebar {
   display: flex;
@@ -729,6 +732,21 @@ summary {
 
 .uses {
   color: var(--color-base);
+}
+
+.sitemap__list {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  align-items: flex-start;
+  gap: 1ex;
+  list-style: "❀ ";
+  line-height: 1.5;
+}
+.sitemap__item {
+  margin-left: var(--spacing-175);
 }
 
 /*:._.:*~ THEMES ~*:._.:*/
