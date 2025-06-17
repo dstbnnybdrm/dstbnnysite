@@ -473,6 +473,9 @@ summary {
 .page_sitemap {
   background-color: var(--color-background);
 }
+.page_not-found {
+  background-color: var(--color-background);
+}
 
 .sidebar {
   display: flex;
@@ -774,6 +777,102 @@ summary {
 }
 .sitemap__item {
   margin-left: var(--spacing-175);
+}
+
+.not-found {
+  margin: auto;
+  text-align: left;
+  width: 57.69em;
+  min-width: 750px;
+}
+.not-found .box-outer {
+  border: 1px solid;
+  zoom: 100%;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+}
+.not-found .top-box {
+  background: #fff;
+}
+.not-found .boxcontent {
+  padding: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0;
+  line-height: 130%;
+}
+.not-found .boxbar {
+  padding-left: 0.5em;
+  line-height: 2em;
+  background: #fca;
+  color: #800;
+}
+.not-found ul,
+.not-found ol,
+.not-found dl {
+  margin: 0;
+}
+.not-found ol li {
+  list-style: decimal outside;
+}
+.not-found em {
+  font-style: italic;
+}
+.not-found strong {
+  font-weight: bold;
+}
+.not-found .boxcontent h3 {
+  font-size: 116%;
+}
+.not-found .boxcontent h4 {
+  font-weight: bold;
+}
+.not-found .boxcontent {
+  color: black;
+  line-height: 1.5em;
+}
+.not-found ul {
+  margin-left: 0;
+}
+.not-found ol {
+  margin-left: 0;
+}
+.not-found .boxcontent p {
+  margin: 0.5em 0;
+}
+.not-found hr {
+  border: 0;
+  color: #800;
+  background: #800;
+  height: 1px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+.not-found span.trip {
+  color: #117743;
+}
+.not-found .postblock {
+  background: #ffe;
+  border: 1px solid #fca;
+  color: #800;
+  font-size: 116%;
+  height: 2em;
+  line-height: 2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.not-found ul li {
+  list-style-type: none;
+}
+.not-found h2 {
+  text-align: center;
+}
+.not-found #error-blurb {
+  text-align: center;
+  padding: 0 0.5em;
+}
+.not-found .boxcontent img {
+  display: block;
+  margin: auto;
 }
 
 /*:._.:*~ THEMES ~*:._.:*/

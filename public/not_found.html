@@ -21,23 +21,29 @@
 
     <!-- style + script -->
     <link rel="stylesheet" href="/_assets/css/style.css" />
+    <script src="/_assets/js/index.js" type="module"></script>
   </head>
 
-  <body>
-    <div class="not-found page">
-      <header class="header" aria-hidden="true">
-        <pre class="ascii-art">૮꒰ ˶- ༝ -˶꒱ა</pre>
+  <body class="page page_not-found">
+    <div class="not-found">
+      <header class="not-found__header">
+        <h1><a href="./" title="home">dstbnnybdrm</a></h1>
       </header>
 
-      <main class="main not-found__main">
-        <h1 class="l-hidden">404 error</h1>
-
-        <p class="copy">
-          looks like the page you were trying to access doesn’t exist!
-        </p>
+      <main class="not-found__main" id="bd">
+        <div class="box-outer top-box">
+          <div class="box-inner">
+            <div class="boxbar">
+              <h2>404 not found</h2>
+            </div>
+            <div id="js-rid" class="boxcontent"></div>
+          </div>
+        </div>
       </main>
 
-      <nav class="navi"><a href="/" target="_parent">back to site</a></nav>
+      <footer class="footer">
+        <div id="footer">…</div>
+      </footer>
     </div>
   </body>
 </html>
