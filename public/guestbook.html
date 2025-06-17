@@ -40,58 +40,52 @@
     <script src="/_assets/js/index.js" type="module"></script>
   </head>
 
-  <body class="l-imposter">
-    <div class="guestbook page">
-      <nav class="breadcrumb page__breadcrumb" aria-label="Breadcrumb">
-        <ul class="breadcrumb__list">
-          <li class="breadcrumb__crumb">
-            <a class="breadcrumb__link" href="/hub?p=/home">home</a>
-          </li>
-          <li class="breadcrumb__crumb">
-            <a class="breadcrumb__link" href="/guestbook.html">guestbook</a>
-          </li>
-        </ul>
-      </nav>
+  <body class="page page_guestbook">
+    <div class="l-imposter">
+      <div class="guestbook">
+        <main class="guestbook__main">
+          <h1 class="header">guestbook</h1>
 
-      <main class="main guestbook__main">
-        <h1 class="title">guestbook</h1>
+          <p class="body-copy">
+            you can sign my guestbook and share any thoughts you may have below!
+          </p>
 
-        <p class="copy">
-          you can sign my guestbook and share any thoughts you may have below!
-        </p>
+          <!-- begin wwww.htmlcommentbox.com -->
+          <div id="HCB_comment_box">
+            <a rel="external" href="http://www.htmlcommentbox.com"
+              >Comment Box</a
+            >
+            is loading comments...
+          </div>
+          <script type="text/javascript" id="hcb">
+            if (!window.hcb_user) {
+              hcb_user = {};
+            }
+            (function () {
+              var s = document.createElement("script"),
+                l =
+                  hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"),
+                h = "https://www.htmlcommentbox.com";
+              s.setAttribute("type", "text/javascript");
+              s.setAttribute(
+                "src",
+                h +
+                  "/jread?page=" +
+                  encodeURIComponent(l).replace("+", "%2B") +
+                  "&mod=%241%24wq1rdBcg%249uQ99sWaFhC5XHrQ7T5jV1" +
+                  "&opts=16646&num=10&ts=1705102805023",
+              );
+              if (typeof s != "undefined")
+                document.getElementsByTagName("head")[0].appendChild(s);
+            })();
+          </script>
+          <!-- end www.htmlcommentbox.com -->
+        </main>
 
-        <!-- begin wwww.htmlcommentbox.com -->
-        <div id="HCB_comment_box">
-          <a rel="external" href="http://www.htmlcommentbox.com">Comment Box</a>
-          is loading comments...
-        </div>
-        <script type="text/javascript" id="hcb">
-          if (!window.hcb_user) {
-            hcb_user = {};
-          }
-          (function () {
-            var s = document.createElement("script"),
-              l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"),
-              h = "https://www.htmlcommentbox.com";
-            s.setAttribute("type", "text/javascript");
-            s.setAttribute(
-              "src",
-              h +
-                "/jread?page=" +
-                encodeURIComponent(l).replace("+", "%2B") +
-                "&mod=%241%24wq1rdBcg%249uQ99sWaFhC5XHrQ7T5jV1" +
-                "&opts=16646&num=10&ts=1705102805023",
-            );
-            if (typeof s != "undefined")
-              document.getElementsByTagName("head")[0].appendChild(s);
-          })();
-        </script>
-        <!-- end www.htmlcommentbox.com -->
-      </main>
-
-      <footer class="footer page__footer">
-        <div id="footer"></div>
-      </footer>
+        <footer class="footer">
+          <div id="footer"></div>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

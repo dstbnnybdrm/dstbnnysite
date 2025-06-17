@@ -1,2 +1,301 @@
-@use "../abstracts/breakpoints" as *;
-@use "../abstracts/mixins" as *;
+.guestbook {
+    display: grid;
+
+    grid-template-areas:
+        "navi"
+        "main"
+        "footer";
+    grid-template-columns: minmax(0, var(--measure-max));
+    grid-template-rows:
+        auto
+        1fr
+        min-content;
+    row-gap: var(--spacing-125);
+
+    &__main {
+        align-self: center;
+        justify-items: center;
+    }
+}
+
+// thank god for Sass lmao
+div #HCB_comment_box {
+    display: flex;
+
+    flex-direction: column;
+
+    height: auto;
+
+    p {
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+        text-transform: lowercase;
+
+        // &::before {
+        //     content: "(";
+        // }
+
+        // &::after {
+        //     content: ")";
+        // }
+    }
+
+    /* comments heading */
+    h3 {
+        display: none;
+    }
+
+    /* HCB's messages to user */
+    #hcb_msg {
+        grid-area: comment-message;
+
+        height: min-content;
+        margin: var(--spacing-100) 0;
+
+        text-transform: lowercase;
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+    }
+
+    p.error {
+        grid-area: comment-message;
+
+        border: 1px solid var(--color-primary);
+
+        text-transform: lowercase;
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+    }
+
+    /* "not using html comment box yet?" */
+    div.home-desc {
+        display: none;
+    }
+
+    .admin-link {
+        // display: ;
+    }
+
+    /* log in icon */
+    .hcb-door-in,
+    .hcb-door-out {
+        display: inline;
+        // color: var(--color-primary);
+        filter: var(--filter-base);
+
+        &:hover {
+            filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
+                brightness(91%) contrast(87%);
+        }
+    }
+
+    #HCB_comment_form_box {
+        grid-area: comment-form;
+
+        /* big "comment" button */
+        .submit.btn {
+            font-family: var(--font-family-base);
+            font-weight: normal;
+            font-size: var(--font-size-base);
+            line-height: 1.5;
+
+            border: none;
+            background: var(--color-primary);
+
+            text-transform: lowercase;
+            color: var(--color-background);
+
+            &:hover,
+            &:focus {
+                background: var(--color-secondary);
+            }
+        }
+
+        button.btn.btn-secondary {
+            font-family: var(--font-family-base);
+            font-weight: normal;
+            font-size: var(--font-size-base);
+            line-height: 1.5;
+
+            border: none;
+            background: var(--color-primary);
+
+            text-transform: lowercase;
+            color: var(--color-background);
+
+            &:hover,
+            &:focus {
+                background: var(--color-secondary);
+            }
+        }
+    }
+
+    display: grid;
+
+    grid-template-areas:
+        "comment-message    ."
+        "comment-form       comments-list";
+    // grid-template-rows: min-content var(--spacing-100);
+    grid-template-columns: repeat(2, minmax(0rem, 1fr));
+    column-gap: var(--spacing-100);
+
+    #HCB_comment_form_box {
+        aspect-ratio: 1 / 1.41;
+        border: 1px solid var(--color-base);
+        padding: var(--spacing-100);
+    }
+}
+
+/* --- COMMENT FORMS --- */
+
+/* text forms */
+input#hcb_form_name,
+textarea#hcb_form_content {
+    border: 1px dotted var(--color-base);
+    background: none;
+
+    font-family: var(--font-family-mono);
+    font-weight: normal;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+
+    font-size: 16px;
+}
+
+/* placeholder text */
+::-webkit-input-placeholder {
+    text-transform: lowercase;
+
+    font-family: var(--font-family-mono);
+    font-weight: normal;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+:-moz-placeholder {
+    text-transform: lowercase;
+
+    font-family: var(--font-family-mono);
+    font-weight: normal;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+::-moz-placeholder {
+    text-transform: lowercase;
+
+    font-family: var(--font-family-mono);
+    font-weight: normal;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+:-ms-input-placeholder {
+    text-transform: lowercase;
+
+    font-family: var(--font-family-mono);
+    font-weight: normal;
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* --- COMMENTS LIST --- */
+
+#comments_list {
+    grid-area: comments-list;
+
+    border-top: 1px dotted var(--color-base);
+    padding-top: var(--spacing-100);
+
+    #no_comments {
+        text-transform: lowercase;
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+    }
+
+    div.comment {
+        margin: 0;
+        padding: 0;
+    }
+
+    blockquote {
+        margin: 0;
+        padding: 0;
+    }
+
+    p.hcb-comment-tb {
+        margin: 0;
+    }
+
+    p.hcb-comment-body {
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+    }
+
+    b.author-name {
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+    }
+
+    span.date {
+        color: var(--color-primary-hi-contrast);
+        text-transform: lowercase;
+
+        letter-spacing: var(--letter-spacing-140);
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-style: italic;
+        font-size: var(--font-size-small);
+        line-height: 1.5;
+    }
+
+    /* comment buttons */
+    p.hcb-comment-tb button {
+        text-transform: lowercase;
+
+        color: var(--color-primary);
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-small);
+        line-height: 1.5;
+    }
+
+    .likes {
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+
+        img {
+            display: inline-block;
+        }
+    }
+
+    aspect-ratio: 1 / 1.41;
+    border: 1px solid var(--color-base);
+    padding: var(--spacing-100);
+
+    overflow-y: auto;
+    overflow-x: hidden !important;
+}
