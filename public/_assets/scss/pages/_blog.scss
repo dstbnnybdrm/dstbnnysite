@@ -1,2 +1,57 @@
-@use "../abstracts/breakpoints" as *;
-@use "../abstracts/mixins" as *;
+.blog {
+    padding: var(--spacing-200);
+    // max-width: var(--measure-max);
+    width: fit-content;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-100);
+        border: 1px black solid;
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+    }
+
+    &__nav {
+        border: 1px black solid;
+
+        font-family: var(--font-family-base);
+        font-weight: normal;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+
+        ul {
+            display: flex;
+            gap: var(--spacing-100);
+            list-style: none;
+            line-height: 1.5;
+        }
+    }
+
+    &__post-list {
+        display: content;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            font-family: var(--font-family-base);
+            font-weight: normal;
+            font-size: var(--font-size-base);
+
+            align-items: flex-start;
+            // space between list items
+            gap: 1ex; // x-height
+
+            list-style: "❀ ";
+            line-height: 1.5;
+        }
+
+        li {
+            margin-left: var(--spacing-175);
+        }
+    }
+}
