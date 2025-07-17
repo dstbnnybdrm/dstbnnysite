@@ -10,7 +10,10 @@ const list = document.getElementById("mobile-navi-list");
  * @returns {undefined}
  */
 export function toggleMenu() {
+    // toggle visibility
     list?.classList.toggle("mobile-navi__list_visible");
+
+    // update ARIA attribute
     if (button.ariaExpanded == "false") {
         button.ariaExpanded = "true";
         return;
