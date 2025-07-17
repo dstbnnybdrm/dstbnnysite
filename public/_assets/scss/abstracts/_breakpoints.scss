@@ -1,26 +1,19 @@
-@mixin for-viewport-size($size) {
-    @if $size == phone {
-        @media screen and (max-width: 800px) {
-            @content;
-        }
-    } @else if $size == desktop {
-        @media screen and (min-width: 801px) {
-            @content;
-        }
+@mixin for-phone {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+@mixin for-desktop-small {
+    @media (min-width: 601px) and (max-width: 800px) {
+        @content;
     }
 }
 
-// @mixin for-frame-size($size) {
-//     @if $size == small {
-//         @media (max-width: 599px) {
-//             @content;
-//         }
-//     } @else if $size == large {
-//         @media (min-width: 600px) {
-//             @content;
-//         }
-//     }
-// }
+@mixin for-desktop-large {
+    @media (min-width: 801px) {
+        @content;
+    }
+}
 
 $measure-max: 44rem;
 

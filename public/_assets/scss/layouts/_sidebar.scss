@@ -5,8 +5,8 @@
     display: flex;
 
     overflow: auto;
-
     flex-direction: column;
+
     grid-area: sidebar;
 
     padding: var(--spacing-050);
@@ -40,6 +40,10 @@
         overflow-y: auto;
         border: 1px var(--color-base) solid;
         padding: var(--spacing-050);
+    }
+
+    @include for-phone {
+        display: none;
     }
 }
 

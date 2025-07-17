@@ -16,7 +16,6 @@ import {
     updateViewportWidth,
     viewportWidthChanged,
 } from "./modules/utility.js";
-import * as Blog from "./modules/blog.js";
 import * as Theme from "./modules/theme.js";
 import * as Navi from "./modules/navi.js";
 import * as Frame from "./modules/frame.js";
@@ -35,8 +34,6 @@ window.addEventListener("load", () => {
     let frameSource;
     switch (currentPage()) {
         case PageLayouts.BLOG:
-            Blog.populateMenu();
-            Blog.setSource();
             break;
         case PageLayouts.HUB:
             Layout.randomiseSplashText();

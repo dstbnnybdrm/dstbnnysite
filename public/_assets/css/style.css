@@ -383,6 +383,7 @@ summary {
   justify-items: center;
   align-items: center;
   gap: 0.5ex;
+  grid-area: footer;
   color: var(--color-base);
   background-color: var(--color-background);
 }
@@ -431,16 +432,21 @@ summary {
 }
 
 .l-imposter {
-  display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  display: contents;
+}
+@media (min-width: 801px) {
+  .l-imposter {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 .main {
@@ -452,9 +458,25 @@ summary {
 }
 .main__frame {
   border: none;
-  width: var(--measure-max);
 }
 
+.mobile-navi {
+  display: none;
+}
+@media (max-width: 600px) {
+  .mobile-navi {
+    display: flex;
+    flex-direction: column;
+    border-style: none none ridge none;
+  }
+}
+.mobile-navi__list {
+  display: none;
+}
+.mobile-navi__list_visible {
+  display: flex;
+  flex-direction: column;
+}
 .page_about {
   background-color: var(--color-background);
 }
@@ -474,6 +496,9 @@ summary {
   background-color: var(--color-background);
 }
 .page_not-found {
+  background-color: var(--color-background);
+}
+.page_blog {
   background-color: var(--color-background);
 }
 
@@ -501,6 +526,11 @@ summary {
   overflow-y: auto;
   border: 1px var(--color-base) solid;
   padding: var(--spacing-050);
+}
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
 }
 
 .site-button {
@@ -734,20 +764,47 @@ summary {
 .hub {
   display: grid;
   background-color: var(--color-background);
-  aspect-ratio: 8/6;
-  border: 1px var(--color-base) solid;
-  grid-template-areas: "header   header" "sidebar  main";
-  grid-template-rows: min-content 1fr;
-  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
 }
 .hub__footer {
   display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  justify-content: center;
   width: 100%;
   padding: var(--spacing-025);
+}
+@media (min-width: 801px) {
+  .hub {
+    aspect-ratio: 8/6;
+    border: 1px var(--color-base) solid;
+    grid-template-areas: "header   header" "sidebar  main";
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: minmax(0, 12rem) minmax(0, var(--measure-max));
+  }
+  .hub__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+  .hub {
+    grid-template-areas: "header   header" "sidebar  main" "footer   footer";
+    grid-template-rows: min-content 100% min-content;
+    grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+  }
+  .hub__footer {
+    border-style: ridge none none none;
+  }
+}
+@media (max-width: 600px) {
+  .hub {
+    grid-template-areas: "header" "mobile-nav" "main" "footer";
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+  }
+  .hub__footer {
+    border-style: ridge none none none;
+    display: none;
+  }
 }
 
 .about {
@@ -1095,6 +1152,51 @@ textarea#hcb_form_content {
 }
 #comments_list .likes img {
   display: inline-block;
+}
+
+.blog {
+  padding: var(--spacing-200);
+  width: fit-content;
+}
+.blog__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  border: 1px black solid;
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+.blog__nav {
+  border: 1px black solid;
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+.blog__nav ul {
+  display: flex;
+  gap: var(--spacing-100);
+  list-style: none;
+  line-height: 1.5;
+}
+.blog__post-list {
+  display: content;
+}
+.blog__post-list ul {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  font-weight: normal;
+  font-size: var(--font-size-base);
+  align-items: flex-start;
+  gap: 1ex;
+  list-style: "❀ ";
+  line-height: 1.5;
+}
+.blog__post-list li {
+  margin-left: var(--spacing-175);
 }
 
 /*:._.:*~ THEMES ~*:._.:*/

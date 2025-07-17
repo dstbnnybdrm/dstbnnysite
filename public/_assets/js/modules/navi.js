@@ -1,8 +1,8 @@
 /** @type {?HTMLElement} */
-export const button = document.getElementById("navi-button");
+export const button = document.getElementById("mobile-navi-button");
 
 /** @type {?HTMLElement} */
-const menu = document.getElementById("navi-menu");
+const list = document.getElementById("mobile-navi-list");
 
 /**
  * toggle the visibility of the navigation menu (only applicable to mobile!).
@@ -10,7 +10,7 @@ const menu = document.getElementById("navi-menu");
  * @returns {undefined}
  */
 export function toggleMenu() {
-    menu?.classList.toggle("menu_visible");
+    list?.classList.toggle("mobile-navi__list_visible");
     if (button.ariaExpanded == "false") {
         button.ariaExpanded = "true";
         return;
@@ -20,7 +20,7 @@ export function toggleMenu() {
 
 /** @returns {boolean} */
 export function isMenuOpen() {
-    return menu?.classList.contains("menu_visible")
+    return list?.classList.contains("menu_visible")
         ? true //
         : false; //
 }
