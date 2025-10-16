@@ -6,68 +6,66 @@
 
     background-color: var(--color-background);
 
+    aspect-ratio: 8 / 6;
+    border: 1px var(--color-base) solid;
+
+    grid-template-areas:
+        "header   header"
+        "sidebar  main";
+    grid-template-rows:
+        min-content
+        1fr;
+    grid-template-columns:
+        minmax(0, 12rem)
+        minmax(0, var(--measure-max));
+
+    &__header {
+        display: flex;
+        grid-area: header;
+
+        justify-content: center;
+
+        padding: var(--spacing-050);
+
+        color: var(--color-base);
+
+        border-style: none none ridge none;
+    }
+
+    &__sidebar {
+        display: flex;
+
+        overflow: auto;
+        flex-direction: column;
+
+        padding: var(--spacing-050);
+
+        background-color: var(--color-background);
+
+        // text colour
+        color: var(--color-base);
+
+        border-color: initial;
+        border-style: none ridge none none;
+
+        gap: var(--spacing-100);
+    }
+
+    &__main {
+    }
+
     &__footer {
         display: flex;
 
         // take up entire width of container
         width: 100%;
         padding: var(--spacing-025);
-    }
 
-    @include for-desktop-large {
-        aspect-ratio: 8 / 6;
-        border: 1px var(--color-base) solid;
+        // position at bottom left of window
+        position: absolute;
+        bottom: 0;
+        left: 0;
 
-        grid-template-areas:
-            "header   header"
-            "sidebar  main";
-        grid-template-rows:
-            min-content
-            1fr;
-        grid-template-columns:
-            minmax(0, 12rem)
-            minmax(0, var(--measure-max));
-
-        &__footer {
-            // position at bottom left of window
-            position: absolute;
-            bottom: 0;
-            left: 0;
-
-            justify-content: center;
-        }
-    }
-
-    @include for-desktop-small {
-        grid-template-areas:
-            "header   header"
-            "sidebar  main"
-            "footer   footer";
-        grid-template-rows:
-            min-content
-            100%
-            min-content;
-        grid-template-columns:
-            minmax(0, 12rem)
-            minmax(0, 1fr);
-
-        &__footer {
-            border-style: ridge none none none;
-        }
-    }
-
-    @include for-phone {
-        grid-template-areas:
-            "header"
-            "mobile-nav"
-            "main"
-            "footer";
-        grid-template-columns: 100%;
-        grid-auto-rows: auto;
-
-        &__footer {
-            border-style: ridge none none none;
-            display: none;
-        }
+        justify-content: center;
     }
 }

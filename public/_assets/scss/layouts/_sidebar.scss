@@ -2,24 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .sidebar {
-    display: flex;
-
-    overflow: auto;
-    flex-direction: column;
-
     grid-area: sidebar;
-
-    padding: var(--spacing-050);
-
-    background-color: var(--color-background);
-
-    // text colour
-    color: var(--color-base);
-
-    border-color: initial;
-    border-style: none ridge none none;
-
-    gap: var(--spacing-100);
 
     &__heading {
         font-family: var(--font-family-base);
@@ -29,6 +12,9 @@
     }
 
     &__navi {
+        display: flex;
+
+        flex-direction: column;
     }
 
     &__status {
@@ -56,18 +42,4 @@
     font-family: var(--font-family-alt);
     font-style: normal;
     font-size: var(--font-size-base);
-}
-
-.navi {
-    display: flex;
-
-    flex-direction: column;
-
-    &__list {
-        display: flex;
-
-        flex-direction: column;
-        @include list-margin();
-        list-style: "∟ ";
-    }
 }

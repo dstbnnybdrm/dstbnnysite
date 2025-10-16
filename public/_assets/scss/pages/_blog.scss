@@ -1,57 +1,50 @@
+@use "../abstracts/breakpoints" as *;
+@use "../abstracts/mixins" as *;
+
 .blog {
-    padding: var(--spacing-200);
-    // max-width: var(--measure-max);
-    width: fit-content;
+    display: grid;
+
+    grid-template-areas: "sidebar main";
+    grid-template-rows: 1fr;
+    grid-template-columns:
+        31ch
+        minmax(0, var(--measure-max));
+    gap: var(--spacing-100);
+
+    &__sidebar {
+        display: flex;
+
+        overflow: auto;
+        flex-direction: column;
+
+        background-color: var(--color-background);
+
+        // text colour
+        color: var(--color-base);
+
+        // border-color: initial;
+        // border-style: none ridge none none;
+
+        // border: 1px var(--color-base) solid;
+        gap: var(--spacing-100);
+    }
+
+    &__header {
+        // display: none;
+
+        margin-bottom: -1rem;
+        align-self: center;
+        width: min-content;
+        border: none;
+        padding: 0;
+    }
+
+    &__navi {
+        padding: var(--spacing-050);
+        border: 1px var(--color-base) solid;
+    }
 
     &__main {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-100);
-        border: 1px black solid;
-
-        font-family: var(--font-family-base);
-        font-weight: normal;
-        font-size: var(--font-size-base);
-        line-height: 1.5;
-    }
-
-    &__nav {
-        border: 1px black solid;
-
-        font-family: var(--font-family-base);
-        font-weight: normal;
-        font-size: var(--font-size-base);
-        line-height: 1.5;
-
-        ul {
-            display: flex;
-            gap: var(--spacing-100);
-            list-style: none;
-            line-height: 1.5;
-        }
-    }
-
-    &__post-list {
-        display: content;
-
-        ul {
-            display: flex;
-            flex-direction: column;
-
-            font-family: var(--font-family-base);
-            font-weight: normal;
-            font-size: var(--font-size-base);
-
-            align-items: flex-start;
-            // space between list items
-            gap: 1ex; // x-height
-
-            list-style: "❀ ";
-            line-height: 1.5;
-        }
-
-        li {
-            margin-left: var(--spacing-175);
-        }
+        // border: 1px var(--color-base) solid;
     }
 }

@@ -2,16 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .header {
-    display: flex;
     grid-area: header;
-
-    justify-content: center;
-
-    padding: var(--spacing-050);
-
-    color: var(--color-base);
-
-    border-style: none none ridge none;
 
     &__splash {
         font-family: var(--font-family-alt);

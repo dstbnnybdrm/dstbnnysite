@@ -12,16 +12,17 @@ import {
     HOME_URL,
     PageLayouts,
     currentPage,
-    fetchJSON,
+    // fetchJSON,
     updateViewportWidth,
     viewportWidthChanged,
 } from "./modules/utility.js";
 import * as Theme from "./modules/theme.js";
 import * as Navi from "./modules/navi.js";
 import * as Frame from "./modules/frame.js";
+import * as Blog from "./modules/blog.js";
 import * as Layout from "./modules/layout.js";
 
-const HEAD = document.getElementsByTagName("head")[0];
+// const HEAD = document.getElementsByTagName("head")[0];
 
 // load user's preferred theme
 window.addEventListener("DOMContentLoaded", Theme.load);
@@ -31,9 +32,11 @@ Navi.button?.addEventListener("click", Navi.toggleMenu);
 // page set up
 window.addEventListener("load", () => {
     // set up page depending on which layout it should have
-    let frameSource;
+    // let frameSource;
     switch (currentPage()) {
         case PageLayouts.BLOG:
+            Blog.populateMenu();
+            Blog.setSource();
             break;
         case PageLayouts.HUB:
             Layout.randomiseSplashText();
@@ -100,7 +103,6 @@ window.addEventListener("load", () => {
                     hasRepeated = true;
                 }
             });
-
             break;
         default:
             break;
