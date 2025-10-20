@@ -1158,8 +1158,8 @@ textarea#hcb_form_content {
 
 .blog {
   display: grid;
-  grid-template-areas: "sidebar main";
-  grid-template-rows: 1fr;
+  grid-template-areas: "sidebar main" "footer  footer";
+  grid-template-rows: 1fr min-content;
   grid-template-columns: 31ch minmax(0, var(--measure-max));
   gap: var(--spacing-100);
 }
@@ -1182,6 +1182,13 @@ textarea#hcb_form_content {
   padding: var(--spacing-050);
   border: 1px var(--color-base) solid;
 }
+.blog__footer {
+  display: flex;
+  width: 100%;
+  padding: var(--spacing-025);
+  justify-content: center;
+}
+
 .blog-post {
   display: flex;
   flex-direction: column;

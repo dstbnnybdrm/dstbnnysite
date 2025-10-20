@@ -4,8 +4,10 @@
 .blog {
     display: grid;
 
-    grid-template-areas: "sidebar main";
-    grid-template-rows: 1fr;
+    grid-template-areas:
+        "sidebar main"
+        "footer  footer";
+    grid-template-rows: 1fr min-content;
     grid-template-columns:
         31ch
         minmax(0, var(--measure-max));
@@ -22,10 +24,6 @@
         // text colour
         color: var(--color-base);
 
-        // border-color: initial;
-        // border-style: none ridge none none;
-
-        // border: 1px var(--color-base) solid;
         gap: var(--spacing-100);
     }
 
@@ -46,5 +44,20 @@
 
     &__main {
         // border: 1px var(--color-base) solid;
+    }
+
+    &__footer {
+        display: flex;
+
+        // take up entire width of container
+        width: 100%;
+        padding: var(--spacing-025);
+
+        // // position at bottom left of window
+        // position: absolute;
+        // bottom: 0;
+        // left: 0;
+
+        justify-content: center;
     }
 }
