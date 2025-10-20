@@ -2,22 +2,31 @@
 @use "../abstracts/mixins" as *;
 
 .hub {
-    display: grid;
+    display: flex;
+    flex-direction: column;
 
     background-color: var(--color-background);
 
-    aspect-ratio: 8 / 6;
-    border: 1px var(--color-base) solid;
+    &__container {
+        display: grid;
 
-    grid-template-areas:
-        "header   header"
-        "sidebar  main";
-    grid-template-rows:
-        min-content
-        1fr;
-    grid-template-columns:
-        minmax(0, 12rem)
-        minmax(0, var(--measure-max));
+        max-width: 800px;
+        max-height: 600px;
+
+        border: 1px var(--color-base) solid;
+
+        grid-area: hub-container;
+
+        grid-template-areas:
+            "header   header"
+            "sidebar  main";
+        grid-template-rows:
+            min-content
+            1fr;
+        grid-template-columns:
+            minmax(0, 12rem)
+            minmax(0, var(--measure-max));
+    }
 
     &__header {
         display: flex;
@@ -40,8 +49,6 @@
 
         padding: var(--spacing-050);
 
-        background-color: var(--color-background);
-
         // text colour
         color: var(--color-base);
 
@@ -57,15 +64,45 @@
     &__footer {
         display: flex;
 
-        // take up entire width of container
-        width: 100%;
         padding: var(--spacing-025);
+    }
 
-        // position at bottom left of window
-        position: absolute;
-        bottom: 0;
-        left: 0;
+    @media (max-height: 700px) or (max-width: 800px) {
+        display: grid;
 
-        justify-content: center;
+        height: 100%;
+        border-left: 1px var(--color-base) solid;
+        border-right: 1px var(--color-base) solid;
+
+        grid-template-areas:
+            "header   header"
+            "sidebar  main"
+            "footer   footer";
+        grid-template-rows:
+            min-content
+            1fr
+            min-content;
+        grid-template-columns:
+            minmax(0, 12rem)
+            minmax(0, var(--measure-max));
+
+        &__container {
+            display: contents;
+        }
+
+        &__footer {
+            border-style: ridge none none none;
+        }
+
+        width: 100%;
+        border: none;
+
+        grid-template-columns:
+            1fr
+            3fr;
+    }
+
+    @media (max-width: 630px) {
+        display: none;
     }
 }

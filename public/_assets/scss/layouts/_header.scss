@@ -3,6 +3,7 @@
 
 .header {
     grid-area: header;
+    background-color: var(--color-background);
 
     &__splash {
         font-family: var(--font-family-alt);

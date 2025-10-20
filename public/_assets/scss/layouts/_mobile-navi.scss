@@ -3,11 +3,11 @@
 .mobile-navi {
     display: none;
 
-    @include for-phone {
-        display: flex;
-        flex-direction: column;
-        border-style: none none ridge none;
-    }
+    // @include for-phone {
+    //     display: flex;
+    //     flex-direction: column;
+    //     border-style: none none ridge none;
+    // }
 
     &__button {
     }

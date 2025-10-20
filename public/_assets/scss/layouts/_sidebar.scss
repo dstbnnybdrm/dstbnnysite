@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .sidebar {
+    background-color: var(--color-background);
     grid-area: sidebar;
 
     &__heading {
@@ -26,10 +27,6 @@
         overflow-y: auto;
         border: 1px var(--color-base) solid;
         padding: var(--spacing-050);
-    }
-
-    @include for-phone {
-        display: none;
     }
 }
 

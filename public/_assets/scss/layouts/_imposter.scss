@@ -1,28 +1,19 @@
 @use "../abstracts/breakpoints" as *;
 
 .l-imposter {
-    display: contents;
-    //     @include for-viewport-size(phone) {
-    //         display: flex;
+    display: flex;
 
-    //         justify-content: center;
-    //     }
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-    @include for-desktop-large {
-        display: flex;
+    // // centre content on both axes
+    align-items: center;
+    justify-content: center;
 
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        // centre content on both axes
-        align-items: center;
-        justify-content: center;
-
-        // take up entire viewport
-        width: 100vw;
-        height: 100vh;
-    }
+    // // take up entire viewport
+    width: 100vw;
+    height: 100vh;
 }
