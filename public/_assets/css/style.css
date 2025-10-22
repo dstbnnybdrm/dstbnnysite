@@ -429,15 +429,19 @@ summary {
 
 .l-imposter {
   display: flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+}
+@media screen and (min-width: 631px) {
+  .l-imposter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 .main {
@@ -502,6 +506,12 @@ summary {
 .page_blog {
   background-color: var(--color-background);
 }
+@media screen and (max-width: 630px) {
+  .page {
+    background-image: none;
+    background-color: var(--color-background);
+  }
+}
 
 .sidebar {
   background-color: var(--color-background);
@@ -517,12 +527,22 @@ summary {
   display: flex;
   flex-direction: column;
 }
-.sidebar__changelog {
-  min-height: 10rem;
-  border: 1px blue solid;
-  overflow-y: auto;
-  border: 1px var(--color-base) solid;
-  padding: var(--spacing-050);
+@media screen and (min-width: 631px) {
+  .sidebar__changelog {
+    min-height: 10rem;
+    border: 1px blue solid;
+    overflow-y: auto;
+    border: 1px var(--color-base) solid;
+    padding: var(--spacing-050);
+  }
+}
+@media screen and (max-width: 630px) {
+  .sidebar__status {
+    display: none;
+  }
+  .sidebar__changelog {
+    display: none;
+  }
 }
 
 .site-button {
@@ -747,16 +767,6 @@ summary {
   flex-direction: column;
   background-color: var(--color-background);
 }
-.hub__container {
-  display: grid;
-  max-width: 800px;
-  max-height: 600px;
-  border: 1px var(--color-base) solid;
-  grid-area: hub-container;
-  grid-template-areas: "header   header" "sidebar  main";
-  grid-template-rows: min-content 1fr;
-  grid-template-columns: minmax(0, 12rem) minmax(0, var(--measure-max));
-}
 .hub__header {
   display: flex;
   grid-area: header;
@@ -765,29 +775,41 @@ summary {
   color: var(--color-base);
   border-style: none none ridge none;
 }
-.hub__sidebar {
-  display: flex;
-  overflow: auto;
-  flex-direction: column;
-  padding: var(--spacing-050);
-  color: var(--color-base);
-  border-color: initial;
-  border-style: none ridge none none;
-  gap: var(--spacing-100);
+@media screen and (min-width: 631px) {
+  .hub__container {
+    display: grid;
+    max-width: 800px;
+    max-height: 600px;
+    border: 1px var(--color-base) solid;
+    grid-area: hub-container;
+    grid-template-areas: "header   header" "sidebar  main";
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: minmax(0, 12rem) minmax(0, var(--measure-max));
+  }
+  .hub__sidebar {
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    padding: var(--spacing-050);
+    color: var(--color-base);
+    border-color: initial;
+    border-style: none ridge none none;
+    gap: var(--spacing-100);
+  }
+  .hub__footer {
+    display: flex;
+    padding: var(--spacing-025);
+  }
 }
-.hub__footer {
-  display: flex;
-  padding: var(--spacing-025);
-}
-@media (max-height: 700px) or (max-width: 800px) {
+@media screen and (min-width: 631px) and ((max-height: 700px) or (max-width: 800px)) {
   .hub {
     display: grid;
     height: 100%;
-    border-left: 1px var(--color-base) solid;
-    border-right: 1px var(--color-base) solid;
+    width: 100%;
+    border: none;
     grid-template-areas: "header   header" "sidebar  main" "footer   footer";
     grid-template-rows: min-content 1fr min-content;
-    grid-template-columns: minmax(0, 12rem) minmax(0, var(--measure-max));
+    grid-template-columns: 1fr 3fr;
   }
   .hub__container {
     display: contents;
@@ -795,15 +817,10 @@ summary {
   .hub__footer {
     border-style: ridge none none none;
   }
-  .hub {
-    width: 100%;
-    border: none;
-    grid-template-columns: 1fr 3fr;
-  }
 }
-@media (max-width: 630px) {
-  .hub {
-    display: none;
+@media screen and (max-width: 630px) {
+  .hub__container {
+    display: contents;
   }
 }
 

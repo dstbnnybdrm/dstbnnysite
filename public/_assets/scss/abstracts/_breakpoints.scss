@@ -1,5 +1,17 @@
 $measure-max: 44rem;
 
+@mixin for-mobile() {
+    @media screen and (max-width: 630px) {
+        @content;
+    }
+}
+
+@mixin for-desktop() {
+    @media screen and (min-width: 631px) {
+        @content;
+    }
+}
+
 // when user happens to be inside the main content frame (i.e. they
 // clicked "show only this frame", etc. lol)
 // only really accounts for desktop, but idek how you'd enter the frame

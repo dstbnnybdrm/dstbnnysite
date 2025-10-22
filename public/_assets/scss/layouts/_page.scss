@@ -35,4 +35,9 @@
     &_blog {
         background-color: var(--color-background);
     }
+
+    @include for-mobile {
+        background-image: none;
+        background-color: var(--color-background);
+    }
 }

@@ -18,15 +18,39 @@
         flex-direction: column;
     }
 
-    &__status {
+    @include for-desktop {
+        // &__heading {
+        // }
+
+        // &__navi {
+        // }
+
+        // &__status {
+        // }
+
+        &__changelog {
+            min-height: 10rem;
+            border: 1px blue solid;
+            overflow-y: auto;
+            border: 1px var(--color-base) solid;
+            padding: var(--spacing-050);
+        }
     }
 
-    &__changelog {
-        min-height: 10rem;
-        border: 1px blue solid;
-        overflow-y: auto;
-        border: 1px var(--color-base) solid;
-        padding: var(--spacing-050);
+    @include for-mobile {
+        // &__heading {
+        // }
+
+        // &__navi {
+        // }
+
+        &__status {
+            display: none;
+        }
+
+        &__changelog {
+            display: none;
+        }
     }
 }
 
