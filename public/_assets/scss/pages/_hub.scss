@@ -1,14 +1,18 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
+// hub
+//    container
+//    header
+//    sidebar
+//    main
+//    footer
+
 .hub {
     display: flex;
     flex-direction: column;
 
     background-color: var(--color-background);
-
-    &__container {
-    }
 
     &__header {
         display: flex;
@@ -21,15 +25,6 @@
         color: var(--color-base);
 
         border-style: none none ridge none;
-    }
-
-    &__sidebar {
-    }
-
-    &__main {
-    }
-
-    &__footer {
     }
 
     @include for-desktop {
@@ -54,9 +49,6 @@
                 minmax(0, var(--measure-max));
         }
 
-        &__header {
-        }
-
         &__sidebar {
             display: flex;
 
@@ -72,9 +64,6 @@
             border-style: none ridge none none;
 
             gap: var(--spacing-100);
-        }
-
-        &__main {
         }
 
         &__footer {
@@ -117,6 +106,10 @@
     @include for-mobile {
         &__container {
             display: contents;
+        }
+
+        &__header {
+            display: none;
         }
     }
 }

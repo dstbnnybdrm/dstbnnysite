@@ -1,27 +1,36 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
+// header
+//    splash
+
 .header {
     grid-area: header;
-    background-color: var(--color-background);
 
-    &__splash {
-        font-family: var(--font-family-alt);
-        font-style: italic;
-        font-size: var(--font-size-base);
+    @include for-desktop {
+        background-color: var(--color-background);
 
-        &::before {
-            font-family: var(--font-family-base);
-            font-style: normal;
-            margin: 0 var(--spacing-200);
-            content: "⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆";
-        }
+        &__splash {
+            font-family: var(--font-family-alt);
+            font-style: italic;
+            font-size: var(--font-size-base);
 
-        &::after {
-            font-family: var(--font-family-base);
-            font-style: normal;
-            margin: 0 var(--spacing-200);
-            content: "⋆⚘˚｡➷⁀˚☽˚۰˚｡⚘";
+            &::before {
+                font-family: var(--font-family-base);
+                font-style: normal;
+                margin: 0 var(--spacing-200);
+                content: "⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆";
+            }
+
+            &::after {
+                font-family: var(--font-family-base);
+                font-style: normal;
+                margin: 0 var(--spacing-200);
+                content: "⋆⚘˚｡➷⁀˚☽˚۰˚｡⚘";
+            }
         }
     }
+
+    // @include for-mobile {
+    // }
 }

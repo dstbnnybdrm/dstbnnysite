@@ -1,6 +1,12 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
+// navi
+//    navi__list
+//    navi__list_sub
+//    navi__item
+//    navi__item_sub
+
 .navi {
     grid-area: navi;
 
@@ -9,11 +15,82 @@
     font-size: var(--font-size-base);
     line-height: 1.5;
 
+    background-color: var(--color-background);
+    color: var(--color-base);
+
     &__list {
         display: flex;
-
         flex-direction: column;
-        @include list-margin();
-        list-style: "∟ ";
+    }
+
+    @include for-desktop {
+        &__list {
+            @include list-margin();
+            list-style: "∟ ";
+        }
+    }
+
+    @include for-mobile {
+        text-align: right;
+        // border: 2px black solid;
+        padding: 2ch;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        height: 100vh;
+        min-width: 10rem;
+        width: 35%;
+
+        &__list {
+            list-style: none;
+            gap: var(--spacing-025);
+        }
+
+        &__item {
+            a {
+                display: flex;
+                justify-content: end;
+
+                cursor: pointer;
+                padding: var(--spacing-025);
+
+                background-color: var(--color-primary);
+                color: var(--color-background);
+
+                text-decoration: none;
+
+                &:hover {
+                    background-color: var(--color-secondary);
+                }
+            }
+        }
+    }
+}
+
+.navi-overlay {
+    @include for-desktop {
+        display: none;
+    }
+
+    @include for-mobile {
+        background-color: rgb(97, 25, 62, 0.5);
+        position: fixed;
+        inset: 0;
+        z-index: 9;
+    }
+}
+
+.navi-button {
+    @include for-desktop {
+        display: none;
+    }
+
+    @include for-mobile {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        padding: var(--spacing-025);
     }
 }
