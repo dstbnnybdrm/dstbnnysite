@@ -1,7 +1,15 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
+// sidebar
+//    heading
+//    container
+//    navi
+//    status
+//    changelog
+
 .sidebar {
+    display: flex;
     background-color: var(--color-background);
     grid-area: sidebar;
 
@@ -12,25 +20,22 @@
         line-height: 1.5;
     }
 
-    &__navi {
-        display: flex;
-
-        flex-direction: column;
-    }
-
     @include for-desktop {
-        // &__heading {
-        // }
+        overflow: auto;
+        flex-direction: column;
 
-        // &__navi {
-        // }
+        padding: var(--spacing-050);
 
-        // &__status {
-        // }
+        color: var(--color-base);
+
+        gap: var(--spacing-100);
+
+        &__container {
+            display: contents;
+        }
 
         &__changelog {
             min-height: 10rem;
-            border: 1px blue solid;
             overflow-y: auto;
             border: 1px var(--color-base) solid;
             padding: var(--spacing-050);
@@ -38,11 +43,20 @@
     }
 
     @include for-mobile {
-        // &__heading {
-        // }
+        position: sticky;
+        top: 0;
 
-        // &__navi {
-        // }
+        width: 100vw;
+        padding: var(--spacing-050);
+
+        flex-direction: column;
+        gap: var(--spacing-025);
+
+        &__container {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: var(--spacing-025);
+        }
 
         &__status {
             display: none;
@@ -55,8 +69,15 @@
 }
 
 .site-button {
-    display: block;
     align-self: center;
+
+    @include for-desktop {
+        display: block;
+    }
+
+    @include for-mobile {
+        width: fit-content;
+    }
 }
 
 .theme-toggler {

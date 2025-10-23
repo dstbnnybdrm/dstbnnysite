@@ -56,32 +56,27 @@
               />
             </a>
 
-            <button
-              class="theme-toggler"
-              id="theme-toggle"
-              type="button"
-            ></button>
-
-            <!-- for mobile -->
-            <button
-              class="navi-open-button"
-              id="navi-open-button"
-              type="button"
-            >
-              =
-            </button>
-
-            <nav class="navi sidebar__navi">
+            <div class="sidebar__container">
               <button
-                class="navi-close-button"
-                id="navi-close-button"
+                class="theme-toggler"
+                id="theme-toggle"
                 type="button"
-              >
+              ></button>
+
+              <!-- for mobile -->
+              <button class="navi-button" id="navi-open-button" type="button">
+                navigation
+              </button>
+            </div>
+
+            <nav class="navi sidebar__navi" id="navi">
+              <button class="navi-button" id="navi-close-button" type="button">
                 X
               </button>
+
               <h2 class="sidebar__heading">navigation</h2>
 
-              <ul class="navi__list" id="navi-menu">
+              <ul class="navi__list">
                 <li class="navi__item">
                   <a class="" href="/home.html" target="mainframe">home</a>
                 </li>
@@ -124,7 +119,7 @@
               </ul>
             </nav>
 
-            <div class="navi-overlay"></div>
+            <div class="navi-overlay" id="navi-overlay"></div>
 
             <aside class="status sidebar__status">
               <h2 class="l-hidden">status</h2>

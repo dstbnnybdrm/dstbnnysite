@@ -27,7 +27,9 @@ import * as Layout from "./modules/layout.js";
 // load user's preferred theme
 window.addEventListener("DOMContentLoaded", Theme.load);
 
-Navi.button?.addEventListener("click", Navi.toggleMenu);
+Navi.openButton?.addEventListener("click", Navi.open);
+Navi.closeButton?.addEventListener("click", Navi.close);
+Navi.overlay?.addEventListener("click", Navi.close);
 
 // page set up
 window.addEventListener("load", () => {
@@ -124,7 +126,7 @@ Frame.mainframe?.addEventListener("load", Theme.updateFrame);
 Frame.mainframe?.addEventListener("load", Frame.updateHistory);
 Frame.mainframe?.addEventListener("load", Frame.updateSize);
 
-// auto-close mobile navigation menu after changing pages
-Frame.mainframe?.addEventListener("load", function () {
-    if (Navi.isMenuOpen()) Navi.toggleMenu();
-});
+// // auto-close mobile navigation menu after changing pages
+// Frame.mainframe?.addEventListener("load", function () {
+//     if (Navi.isMenuOpen()) Navi.toggleMenu();
+// });

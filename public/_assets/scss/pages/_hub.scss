@@ -50,20 +50,8 @@
         }
 
         &__sidebar {
-            display: flex;
-
-            overflow: auto;
-            flex-direction: column;
-
-            padding: var(--spacing-050);
-
-            // text colour
-            color: var(--color-base);
-
             border-color: initial;
             border-style: none ridge none none;
-
-            gap: var(--spacing-100);
         }
 
         &__footer {

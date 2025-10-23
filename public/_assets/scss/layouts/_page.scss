@@ -2,10 +2,9 @@
 @use "../abstracts/mixins" as *;
 
 .page {
-    margin: 1rem 1rem 0 1rem;
+    background-color: var(--color-background);
 
     &_about {
-        background-color: var(--color-background);
     }
 
     &_hub {
@@ -34,6 +33,10 @@
 
     &_blog {
         background-color: var(--color-background);
+    }
+
+    @include for-desktop {
+        margin: 1rem 1rem 0 1rem;
     }
 
     @include for-mobile {

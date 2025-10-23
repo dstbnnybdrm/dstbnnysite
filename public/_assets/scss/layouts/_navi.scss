@@ -8,6 +8,9 @@
 //    navi__item_sub
 
 .navi {
+    display: flex;
+
+    flex-direction: column;
     grid-area: navi;
 
     font-family: var(--font-family-base);
@@ -31,6 +34,12 @@
     }
 
     @include for-mobile {
+        display: none;
+
+        &_open {
+            display: flex;
+        }
+
         text-align: right;
         // border: 2px black solid;
         padding: 2ch;
@@ -75,6 +84,12 @@
     }
 
     @include for-mobile {
+        display: none;
+
+        &_open {
+            display: block;
+        }
+
         background-color: rgb(97, 25, 62, 0.5);
         position: fixed;
         inset: 0;
@@ -90,7 +105,7 @@
     @include for-mobile {
         display: flex;
         width: 100%;
-        justify-content: end;
+        // justify-content: center;
         padding: var(--spacing-025);
     }
 }
