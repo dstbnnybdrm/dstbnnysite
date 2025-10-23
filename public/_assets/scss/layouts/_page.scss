@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 .page {
+    display: block;
     background-color: var(--color-background);
 
     &_about {
@@ -40,6 +41,7 @@
     }
 
     @include for-mobile {
+        margin: var(--spacing-200) var(--spacing-100);
         background-image: none;
         background-color: var(--color-background);
     }

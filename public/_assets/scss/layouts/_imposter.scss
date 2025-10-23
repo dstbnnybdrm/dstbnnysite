@@ -1,10 +1,10 @@
 @use "../abstracts/breakpoints" as *;
 
 .l-imposter {
-    display: flex;
-    justify-content: center;
-
     @include for-desktop {
+        display: flex;
+        justify-content: center;
+
         position: absolute;
         top: 0;
         right: 0;
@@ -16,5 +16,9 @@
         // take up entire viewport
         width: 100vw;
         height: 100vh;
+    }
+
+    @include for-mobile {
+        display: contents;
     }
 }

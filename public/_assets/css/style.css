@@ -388,8 +388,8 @@ summary {
   background-color: var(--color-background);
 }
 .footer__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: inline;
+  text-align: center;
   font-family: var(--font-family-base);
   font-weight: normal;
   font-size: var(--font-size-base);
@@ -431,12 +431,10 @@ summary {
   }
 }
 
-.l-imposter {
-  display: flex;
-  justify-content: center;
-}
 @media screen and (min-width: 631px) {
   .l-imposter {
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 0;
     right: 0;
@@ -445,6 +443,11 @@ summary {
     align-items: center;
     width: 100vw;
     height: 100vh;
+  }
+}
+@media screen and (max-width: 630px) {
+  .l-imposter {
+    display: contents;
   }
 }
 
@@ -544,7 +547,6 @@ summary {
 @media screen and (max-width: 630px) {
   .navi-button {
     display: flex;
-    width: 100%;
     padding: var(--spacing-025);
   }
 }
@@ -560,6 +562,7 @@ summary {
   flex-direction: column;
 }
 .page {
+  display: block;
   background-color: var(--color-background);
 }
 .page_hub {
@@ -590,6 +593,7 @@ summary {
 }
 @media screen and (max-width: 630px) {
   .page {
+    margin: var(--spacing-200) var(--spacing-100);
     background-image: none;
     background-color: var(--color-background);
   }
@@ -628,7 +632,7 @@ summary {
   .sidebar {
     position: sticky;
     top: 0;
-    width: 100vw;
+    width: 100%;
     padding: var(--spacing-050);
     flex-direction: column;
     gap: var(--spacing-025);
@@ -636,6 +640,7 @@ summary {
   .sidebar__container {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     gap: var(--spacing-025);
   }
   .sidebar__status {
