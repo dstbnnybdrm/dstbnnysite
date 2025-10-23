@@ -19,9 +19,10 @@
     background-color: var(--color-background);
 
     &__list {
-        display: flex;
+        display: inline;
 
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        text-align: center;
 
         font-family: var(--font-family-base);
         font-weight: normal;
