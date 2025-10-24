@@ -31,7 +31,11 @@
         gap: var(--spacing-100);
 
         &__container {
-            display: contents;
+            display: flex;
+
+            flex-direction: row;
+            justify-content: space-between;
+            gap: var(--spacing-025);
         }
 
         &__changelog {
@@ -52,10 +56,12 @@
         flex-direction: column;
         gap: var(--spacing-025);
 
+        border-bottom: 1px var(--color-base) solid;
+
         &__container {
             display: flex;
 
-            flex-direction: row-reverse;
+            flex-direction: row;
             justify-content: space-between;
             gap: var(--spacing-025);
         }
@@ -70,6 +76,45 @@
     }
 }
 
+.navi-button {
+    font-family: var(--font-family-alt);
+    font-style: normal;
+    font-size: var(--font-size-base);
+
+    width: 31px;
+    aspect-ratio: 1 / 1;
+
+    border: none;
+
+    color: var(--color-background);
+    background-color: var(--color-primary);
+
+    @include for-desktop {
+        display: none;
+    }
+
+    @include for-mobile {
+        display: flex;
+
+        padding: var(--spacing-025);
+    }
+}
+
+#navi-open-button {
+    order: 1;
+
+    &::before {
+        content: "☰";
+    }
+}
+
+#navi-close-button {
+    display: none;
+    &::before {
+        content: "";
+    }
+}
+
 .site-button {
     align-self: center;
 
@@ -79,6 +124,7 @@
 
     @include for-mobile {
         width: fit-content;
+        order: 2;
     }
 }
 
@@ -86,4 +132,20 @@
     font-family: var(--font-family-alt);
     font-style: normal;
     font-size: var(--font-size-base);
+
+    width: 31px;
+    aspect-ratio: 1 / 1;
+
+    border: none;
+
+    background-color: var(--color-base);
+
+    &::before {
+        content: var(--theme-button-icon);
+    }
+
+    @include for-mobile {
+        // display: none;
+        order: 3;
+    }
 }

@@ -68,8 +68,6 @@
                 background-color: var(--color-primary);
                 color: var(--color-background);
 
-                text-decoration: none;
-
                 &:hover {
                     background-color: var(--color-secondary);
                 }
@@ -94,30 +92,5 @@
         position: fixed;
         inset: 0;
         z-index: 9;
-    }
-}
-
-.navi-button {
-    @include for-desktop {
-        display: none;
-    }
-
-    @include for-mobile {
-        display: flex;
-
-        // justify-content: center;
-        padding: var(--spacing-025);
-    }
-}
-
-#navi-open-button {
-    &::before {
-        content: "";
-    }
-}
-
-#navi-close-button {
-    &::before {
-        content: "";
     }
 }

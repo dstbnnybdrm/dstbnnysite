@@ -81,7 +81,7 @@ function updateButton(theme) {
     if (!TOGGLE_BUTTON) return;
 
     TOGGLE_BUTTON.ariaLabel = "current theme is " + theme.valueOf();
-    TOGGLE_BUTTON.innerText = "theme: " + theme.valueOf();
+    // TOGGLE_BUTTON.innerText = "theme: " + theme.valueOf();
 }
 
 /**

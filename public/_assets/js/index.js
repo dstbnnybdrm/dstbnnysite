@@ -117,7 +117,9 @@ window.addEventListener("load", () => {
 
 // dynamically resize frame size when the viewport width changes
 window.addEventListener("resize", () => {
-    if (viewportWidthChanged()) Frame.updateSize();
+    if (viewportWidthChanged()) {
+        Frame.updateSize();
+    }
     updateViewportWidth();
 });
 
