@@ -19,7 +19,6 @@ export function close() {
     navi.classList.remove("navi_open");
     overlay.classList.remove("navi-overlay_open");
     // button.ariaExpanded = "false";
-    console.log("close navi");
 }
 
 export function open() {
@@ -27,12 +26,11 @@ export function open() {
     navi.classList.add("navi_open");
     overlay.classList.add("navi-overlay_open");
     // button.ariaExpanded = "true";
-    console.log("open navi");
 }
 
 /** @returns {boolean} */
-export function isMenuOpen() {
-    return list?.classList.contains("menu_visible")
+export function isOpen() {
+    return navi?.classList.contains("navi_open")
         ? true //
         : false; //
 }

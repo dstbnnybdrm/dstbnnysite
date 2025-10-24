@@ -126,7 +126,9 @@ Frame.mainframe?.addEventListener("load", Theme.updateFrame);
 Frame.mainframe?.addEventListener("load", Frame.updateHistory);
 Frame.mainframe?.addEventListener("load", Frame.updateSize);
 
-// // auto-close mobile navigation menu after changing pages
-// Frame.mainframe?.addEventListener("load", function () {
-//     if (Navi.isMenuOpen()) Navi.toggleMenu();
-// });
+// auto-close mobile navigation menu after changing pages
+Frame.mainframe?.addEventListener("load", function () {
+    if (Navi.isOpen()) {
+        Navi.close();
+    }
+});
