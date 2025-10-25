@@ -28,8 +28,8 @@
         font-size: var(--font-size-base);
     }
 
-    &__main {
-    }
+    // &__main {
+    // }
 
     &__enter-link {
         &::before {
@@ -48,12 +48,52 @@
     }
 
     &__footer {
+        // @media screen and (max-width: 460px) {
+        //     border-top: 1px var(--color-base) solid;
+        //     padding-top: var(--spacing-100);
+        // }
     }
 
     &__bed {
         border-bottom: 1px var(--color-base) solid;
+
+        &_mobile {
+            display: none;
+        }
+
+        @media screen and (max-width: 460px) {
+            display: none;
+
+            &_mobile {
+                display: flex;
+            }
+        }
     }
 
-    &__subheading {
+    // &__subheading {
+    // }
+
+    &__container {
+        display: grid;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-auto-flow: column;
+        justify-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 460px) {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: var(--spacing-100);
+
+            section {
+                flex-shrink: 0;
+            }
+
+            /* this one can shrink because it's just text */
+            #cliques {
+                flex-shrink: 1;
+            }
+        }
     }
 }

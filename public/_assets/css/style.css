@@ -935,6 +935,42 @@ summary {
 .landing__bed {
   border-bottom: 1px var(--color-base) solid;
 }
+.landing__bed_mobile {
+  display: none;
+}
+@media screen and (max-width: 460px) {
+  .landing__bed {
+    display: none;
+  }
+  .landing__bed_mobile {
+    display: flex;
+  }
+}
+.landing__container {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  justify-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 460px) {
+  .landing__container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: var(--spacing-100);
+  }
+  .landing__container section {
+    flex-shrink: 0;
+  }
+  .landing__container {
+    /* this one can shrink because it's just text */
+  }
+  .landing__container #cliques {
+    flex-shrink: 1;
+  }
+}
+
 .hub {
   display: flex;
   flex-direction: column;
