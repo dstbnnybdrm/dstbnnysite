@@ -1,0 +1,21 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpoints" as *;
+
+.tooltip {
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &__text {
+        visibility: hidden;
+        position: absolute;
+        text-align: center;
+        color: var(--color-background);
+        background-color: var(--color-base);
+        margin-bottom: 1rem;
+    }
+
+    &:hover &__text {
+        visibility: visible;
+    }
+}
