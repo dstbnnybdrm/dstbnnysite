@@ -5,43 +5,37 @@
     display: block;
     background-color: var(--color-background);
 
-    &_about {
-    }
+    // &_about {
+    // }
 
     &_hub {
         background-image: url("/_assets/img/stars5.gif");
     }
 
-    &_landing {
-        background-color: var(--color-background);
-    }
+    // &_landing {
+    // }
 
-    &_now {
-        background-color: var(--color-background);
-    }
+    // &_now {
+    // }
 
-    &_uses {
-        background-color: var(--color-background);
-    }
+    // &_uses {
+    // }
 
-    &_sitemap {
-        background-color: var(--color-background);
-    }
+    // &_sitemap {
+    // }
 
-    &_not-found {
-        background-color: var(--color-background);
-    }
+    // &_not-found {
+    // }
 
-    &_blog {
-        background-color: var(--color-background);
-    }
+    // &_blog {
+    // }
 
     @include for-desktop {
-        margin: 1rem 1rem 0 1rem;
+        margin: var(--spacing-100) var(--spacing-100) 0 var(--spacing-100);
     }
 
     @include for-mobile {
-        margin: var(--spacing-200) var(--spacing-100);
+        margin: 0 var(--spacing-200) var(--spacing-100) var(--spacing-200);
         background-image: none;
         background-color: var(--color-background);
     }
