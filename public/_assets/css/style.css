@@ -933,18 +933,10 @@ summary {
   content: "⟵";
 }
 .landing__bed {
+  display: flex;
+  gap: 4ch;
+  justify-content: center;
   border-bottom: 1px var(--color-base) solid;
-}
-.landing__bed_mobile {
-  display: none;
-}
-@media screen and (max-width: 460px) {
-  .landing__bed {
-    display: none;
-  }
-  .landing__bed_mobile {
-    display: flex;
-  }
 }
 .landing__container {
   display: grid;
@@ -954,6 +946,12 @@ summary {
   justify-content: center;
 }
 @media screen and (max-width: 460px) {
+  .landing {
+    /* not a very BEM-like way of doing this but like whatever lol */
+  }
+  .landing__bed .ascii-art:nth-child(2) {
+    display: none;
+  }
   .landing__container {
     display: flex;
     justify-content: space-evenly;

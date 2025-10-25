@@ -1,6 +1,16 @@
 @use "../abstracts/breakpoints" as *;
 @use "../abstracts/mixins" as *;
 
+// landing
+//    header
+//    heading
+//    quote
+//    main
+//    enter-link
+//    footer
+//    bed
+//    container
+
 .landing {
     padding: var(--spacing-200) 0;
     max-width: var(--measure-max);
@@ -47,27 +57,15 @@
         }
     }
 
-    &__footer {
-        // @media screen and (max-width: 460px) {
-        //     border-top: 1px var(--color-base) solid;
-        //     padding-top: var(--spacing-100);
-        // }
-    }
+    // &__footer {
+    // }
 
     &__bed {
+        display: flex;
+        gap: 4ch;
+        justify-content: center;
+
         border-bottom: 1px var(--color-base) solid;
-
-        &_mobile {
-            display: none;
-        }
-
-        @media screen and (max-width: 460px) {
-            display: none;
-
-            &_mobile {
-                display: flex;
-            }
-        }
     }
 
     // &__subheading {
@@ -79,8 +77,17 @@
         grid-auto-flow: column;
         justify-items: center;
         justify-content: center;
+    }
 
-        @media screen and (max-width: 460px) {
+    @media screen and (max-width: 460px) {
+        /* not a very BEM-like way of doing this but like whatever lol */
+        &__bed {
+            .ascii-art:nth-child(2) {
+                display: none;
+            }
+        }
+
+        &__container {
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
