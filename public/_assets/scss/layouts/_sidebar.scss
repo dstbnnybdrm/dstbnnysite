@@ -31,11 +31,11 @@
         gap: var(--spacing-100);
 
         &__container {
-            display: flex;
+            display: contents;
+            // display: flex;
 
-            flex-direction: column;
-            // justify-content: space-between;
-            gap: var(--spacing-025);
+            // flex-direction: column;
+            // gap: var(--spacing-025);
         }
 
         &__changelog {

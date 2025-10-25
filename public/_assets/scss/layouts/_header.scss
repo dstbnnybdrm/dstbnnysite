@@ -8,29 +8,29 @@
     grid-area: header;
 
     @include for-desktop {
+        display: flex;
+        gap: var(--spacing-200);
+
         background-color: var(--color-background);
+
+        &__ornament {
+            align-self: center;
+            font-family: var(--font-family-base);
+            font-style: normal;
+            text-wrap: nowrap;
+        }
 
         &__splash {
             font-family: var(--font-family-alt);
             font-style: italic;
             font-size: var(--font-size-base);
 
-            &::before {
-                font-family: var(--font-family-base);
-                font-style: normal;
-                margin: 0 var(--spacing-200);
-                content: "⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆";
-            }
-
-            &::after {
-                font-family: var(--font-family-base);
-                font-style: normal;
-                margin: 0 var(--spacing-200);
-                content: "⋆⚘˚｡➷⁀˚☽˚۰˚｡⚘";
-            }
+            text-align: center;
+            text-wrap: wrap;
         }
     }
 
-    // @include for-mobile {
-    // }
+    @include for-mobile {
+        display: none;
+    }
 }
