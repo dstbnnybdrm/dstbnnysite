@@ -590,8 +590,7 @@ summary {
   }
   .sidebar__container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     gap: var(--spacing-025);
   }
   .sidebar__changelog {
@@ -600,6 +599,9 @@ summary {
     border: 1px var(--color-base) solid;
     padding: var(--spacing-050);
   }
+}
+.sidebar {
+  /* turns into a sticky header on mobile */
 }
 @media screen and (max-width: 630px) {
   .sidebar {
@@ -683,20 +685,30 @@ summary {
   font-family: var(--font-family-alt);
   font-style: normal;
   font-size: var(--font-size-base);
-  width: 31px;
-  aspect-ratio: 1/1;
   border: none;
-  background-color: var(--color-base);
-}
-.theme-toggler::before {
-  content: var(--theme-button-icon);
+  color: var(--color-background);
+  background-color: var(--color-primary);
 }
 .theme-toggler:hover {
   background-color: var(--color-secondary);
 }
+@media screen and (min-width: 631px) {
+  .theme-toggler {
+    width: 100%;
+    padding: 4px;
+  }
+  .theme-toggler::before {
+    content: "theme: " var(--theme-button-icon);
+  }
+}
 @media screen and (max-width: 630px) {
   .theme-toggler {
     order: 3;
+    width: 31px;
+    aspect-ratio: 1/1;
+  }
+  .theme-toggler::before {
+    content: var(--theme-button-icon);
   }
 }
 
@@ -867,6 +879,23 @@ summary {
 .poem__stanza:not(:last-child) {
   margin-bottom: var(--spacing-100);
 }
+.tooltip {
+  display: inline-block;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tooltip__text {
+  visibility: hidden;
+  position: absolute;
+  text-align: center;
+  color: var(--color-background);
+  background-color: var(--color-base);
+  margin-bottom: 1rem;
+}
+.tooltip:hover .tooltip__text {
+  visibility: visible;
+}
+
 /*:._.:*~ PAGES ~*:._.:*/
 /* page-specific styles */
 .landing {
