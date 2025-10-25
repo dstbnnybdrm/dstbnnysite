@@ -415,12 +415,14 @@ summary {
     background-color: var(--color-background);
   }
   .header__ornament {
+    display: inline-block;
     align-self: center;
     font-family: var(--font-family-base);
     font-style: normal;
     text-wrap: nowrap;
   }
   .header__splash {
+    display: inline;
     font-family: var(--font-family-alt);
     font-style: italic;
     font-size: var(--font-size-base);
@@ -809,12 +811,28 @@ summary {
 }
 
 .status {
+  display: flex;
+  flex-direction: column;
+  border: 1px var(--color-base) solid;
+  padding: var(--spacing-050);
   font-family: var(--font-family-base);
   font-weight: normal;
   font-size: var(--font-size-smaller);
   line-height: 1;
-  border: 1px var(--color-base) solid;
-  padding: var(--spacing-050);
+}
+.status #statuscafe {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-025);
+}
+.status #statuscafe-content {
+  display: block;
+}
+.status #statuscafe-content::before {
+  content: "“";
+}
+.status #statuscafe-content::after {
+  content: "”";
 }
 
 .text-area {

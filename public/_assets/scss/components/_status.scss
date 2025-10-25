@@ -2,10 +2,36 @@
 @use "../abstracts/mixins" as *;
 
 .status {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px var(--color-base) solid;
+    padding: var(--spacing-050);
+
     font-family: var(--font-family-base);
     font-weight: normal;
     font-size: var(--font-size-smaller);
     line-height: 1;
-    border: 1px var(--color-base) solid;
-    padding: var(--spacing-050);
+
+    #statuscafe {
+        display: flex;
+
+        flex-direction: column;
+        gap: var(--spacing-025);
+
+        // &-username {
+        // }
+
+        &-content {
+            display: block;
+
+            &::before {
+                content: "“";
+            }
+
+            &::after {
+                content: "”";
+            }
+        }
+    }
 }

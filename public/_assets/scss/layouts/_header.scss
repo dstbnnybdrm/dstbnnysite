@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 // header
+//    ornament
 //    splash
 
 .header {
@@ -14,13 +15,18 @@
         background-color: var(--color-background);
 
         &__ornament {
+            display: inline-block;
+
             align-self: center;
+
             font-family: var(--font-family-base);
             font-style: normal;
             text-wrap: nowrap;
         }
 
         &__splash {
+            display: inline;
+
             font-family: var(--font-family-alt);
             font-style: italic;
             font-size: var(--font-size-base);
