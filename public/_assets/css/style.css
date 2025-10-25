@@ -489,6 +489,7 @@ summary {
   }
   .navi_open {
     display: flex;
+    gap: var(--spacing-025);
   }
   .navi {
     text-align: right;
@@ -555,32 +556,14 @@ summary {
 .page_hub {
   background-image: url("/_assets/img/stars5.gif");
 }
-.page_landing {
-  background-color: var(--color-background);
-}
-.page_now {
-  background-color: var(--color-background);
-}
-.page_uses {
-  background-color: var(--color-background);
-}
-.page_sitemap {
-  background-color: var(--color-background);
-}
-.page_not-found {
-  background-color: var(--color-background);
-}
-.page_blog {
-  background-color: var(--color-background);
-}
 @media screen and (min-width: 631px) {
   .page {
-    margin: 1rem 1rem 0 1rem;
+    margin: var(--spacing-100) var(--spacing-100) 0 var(--spacing-100);
   }
 }
 @media screen and (max-width: 630px) {
   .page {
-    margin: var(--spacing-200) var(--spacing-100);
+    margin: 0 var(--spacing-200) var(--spacing-100) var(--spacing-200);
     background-image: none;
     background-color: var(--color-background);
   }
@@ -652,6 +635,9 @@ summary {
   color: var(--color-background);
   background-color: var(--color-primary);
 }
+.navi-button:hover {
+  background-color: var(--color-secondary);
+}
 @media screen and (min-width: 631px) {
   .navi-button {
     display: none;
@@ -704,6 +690,9 @@ summary {
 }
 .theme-toggler::before {
   content: var(--theme-button-icon);
+}
+.theme-toggler:hover {
+  background-color: var(--color-secondary);
 }
 @media screen and (max-width: 630px) {
   .theme-toggler {
