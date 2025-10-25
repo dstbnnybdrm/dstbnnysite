@@ -89,6 +89,10 @@
     color: var(--color-background);
     background-color: var(--color-primary);
 
+    &:hover {
+        background-color: var(--color-secondary);
+    }
+
     @include for-desktop {
         display: none;
     }
@@ -142,6 +146,10 @@
 
     &::before {
         content: var(--theme-button-icon);
+    }
+
+    &:hover {
+        background-color: var(--color-secondary);
     }
 
     @include for-mobile {

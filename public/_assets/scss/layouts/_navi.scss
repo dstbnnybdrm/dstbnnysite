@@ -38,6 +38,7 @@
 
         &_open {
             display: flex;
+            gap: var(--spacing-025);
         }
 
         text-align: right;
