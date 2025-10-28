@@ -1,8 +1,14 @@
 .about {
+    display: flex;
+
+    flex-direction: column;
+
     padding: var(--spacing-200) 0;
+
     max-width: var(--measure-max);
+
     color: var(--color-base);
 
-    &__main {
-    }
+    // &__main {
+    // }
 }
