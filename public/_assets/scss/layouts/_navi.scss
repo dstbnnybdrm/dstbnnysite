@@ -53,6 +53,8 @@
         min-width: 10rem;
         width: 35%;
 
+        overflow: auto;
+
         &__list {
             list-style: none;
             gap: var(--spacing-025);
