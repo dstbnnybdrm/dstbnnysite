@@ -40,6 +40,8 @@
   </head>
 
   <body class="page page_hub">
+    <h1 class="l-hidden">home</h1>
+
     <div class="l-imposter">
       <div class="hub">
         <div class="hub__container">
@@ -49,8 +51,8 @@
             <div class="header__ornament" aria-hidden="true">⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆</div>
           </header>
 
-          <div class="sidebar hub__sidebar">
-            <div class="sidebar__container">
+          <aside class="hub-sidebar hub__hub-sidebar">
+            <div class="hub-sidebar__container">
               <a class="site-button" href="/">
                 <img
                   src="/_assets/img/web-micro-bars/site/dstbnnybdrm-button.gif"
@@ -65,17 +67,19 @@
               ></button>
 
               <!-- for mobile -->
-              <button class="navi-button" id="navi-open-button" type="button">
-                <!-- navigation -->
-              </button>
+              <button
+                class="navi-button"
+                id="navi-open-button"
+                type="button"
+              ></button>
             </div>
 
-            <nav class="navi sidebar__navi" id="navi">
+            <nav class="navi hub-sidebar__navi" id="navi">
               <button class="navi-button" id="navi-close-button" type="button">
                 X
               </button>
 
-              <h2 class="sidebar__heading">navigation</h2>
+              <h2 class="hub-sidebar__heading">navigation</h2>
 
               <ul class="navi__list">
                 <li class="navi__item">
@@ -142,8 +146,8 @@
               <!-- /></a> -->
             </aside>
 
-            <aside class="changelog sidebar__changelog">
-              <h2 class="sidebar__heading">changelog</h2>
+            <aside class="changelog hub-sidebar__changelog">
+              <h2 class="hub-sidebar__heading">changelog</h2>
               <div role="log">
                 <div id="site-log">…</div>
               </div>
@@ -152,7 +156,7 @@
             <!-- <aside class="marquee"> -->
             <!-- <div id="marquee">…</div> -->
             <!-- </aside> -->
-          </div>
+          </aside>
 
           <main id="main" class="main hub__main">
             <iframe

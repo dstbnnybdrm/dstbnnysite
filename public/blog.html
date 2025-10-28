@@ -37,10 +37,8 @@
 
   <body class="page page_blog">
     <div class="blog">
-      <!-- SIDEBAR -->
-      <aside class="sidebar blog__sidebar">
-        <!-- ~*:._.:*~ HEADER ~*:._.:*~ -->
-        <header class="header blog__header">
+      <aside class="blog-sidebar blog__blog-sidebar">
+        <header class="header blog-sidebar__header">
           <pre
             class="ascii-art"
             role="img"
@@ -59,15 +57,38 @@
           >
         </header>
 
-        <nav class="navi blog__navi">
-          <a href="/hub?p=/home" class="body-copy navi__link">back to site?</a>
-
-          <h1 class="heading navi__title">dustbunnyblog</h1>
+        <section class="blog-sidebar__container">
+          <h1 class="heading">dustbunnyblog</h1>
 
           <p class="body-copy">various thoughts and ramblings.</p>
+        </section>
 
-          <ul id="blog-list" class="menu menu_visible"></ul>
+        <div class="blog-sidebar__buttons">
+          <button
+            class="theme-toggler"
+            id="theme-toggle"
+            type="button"
+          ></button>
+
+          <button
+            class="navi-button"
+            id="navi-open-button"
+            type="button"
+          ></button>
+        </div>
+
+        <nav id="navi" class="navi blog-sidebar__navi">
+          <h2 class="blog-sidebar__heading">navigation</h2>
+
+          <ul id="blog-list" class="menu menu_visible">
+            <li class="navi__item">
+              <a href="/hub?p=/home" class="navi__link">home</a>
+            </li>
+          </ul>
         </nav>
+
+        <!-- darkens screen on mobile when navi is opened -->
+        <div class="navi-overlay" id="navi-overlay"></div>
       </aside>
 
       <main class="main blog__main">
