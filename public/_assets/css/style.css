@@ -1484,9 +1484,6 @@ textarea#hcb_form_content {
   .blog-sidebar__container {
     display: none;
   }
-  .blog-sidebar__navi {
-    z-index: 10;
-  }
   .blog-sidebar__buttons {
     display: flex;
     flex-direction: row;
