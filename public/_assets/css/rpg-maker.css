@@ -1,3 +1,216 @@
+@charset "UTF-8";
+/*:._.:*~ CUSTOM PROPERTIES ~*:._.:*/
+:root {
+  --font-family-base: "Fira", Verdana, Geneva, Tahoma, sans-serif;
+  --font-family-alt: "Charter", Georgia, "Times New Roman", Times, serif;
+  --font-family-mono: "Fira Mono", Courier, monospace;
+  /* size ratios mostly derived from minor thirds (6:5) */
+  --font-size-smaller: 0.69rem;
+  --font-size-small: 0.83rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.2rem;
+  --font-size-larger: 1.32rem;
+  --font-size-largest: 1.44rem;
+  --line-height-small: 1.25rem;
+  --line-height-base: 1.5rem;
+  --line-height-large: 1.8rem;
+  --line-height-larger: 1.98rem;
+  --line-height-largest: 2.16rem;
+  --letter-spacing-100: initial;
+  --letter-spacing-110: 0.05rem;
+  --letter-spacing-120: 0.07rem;
+  --letter-spacing-130: 0.09rem;
+  --letter-spacing-140: 0.12rem;
+  /* generic spacing for margin's, padding, gap, etc. */
+  --spacing-025: 0.58rem;
+  --spacing-050: 0.69rem;
+  --spacing-075: 0.83rem;
+  --spacing-100: 1rem;
+  --spacing-125: 1.2rem;
+  --spacing-150: 1.44rem;
+  --spacing-175: 1.73rem;
+  --spacing-200: 2rem;
+  /* the maximum line length that text should span (~74 characters, or ~2.8
+   alphabets) */
+  --measure-max: 40rem;
+}
 
+/* 
+ * i already love Fira Sans and have been using it for a while but i did yoink
+ * this particular font pairing (Fira and Charter) from Matthew Butterick of
+ * Practical Typography. 
+ */
+/* -- sans serif font -- */
+@font-face {
+  font-family: "Fira";
+  src: url("/_assets/font/FiraSans-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fira";
+  src: url("/_assets/font/FiraSans-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Fira";
+  src: url("/_assets/font/FiraSans-Italic.woff2") format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Fira";
+  src: url("/_assets/font/FiraSans-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+/* -- serif font -- */
+@font-face {
+  font-family: "Charter";
+  src: url("/_assets/font/charter_regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Charter";
+  src: url("/_assets/font/charter_bold.woff2") format("woff2");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Charter";
+  src: url("/_assets/font/charter_italic.woff2") format("woff2");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Charter";
+  src: url("/_assets/font/charter_bold_italic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+/* -- monospace font -- */
+@font-face {
+  font-family: "Fira Mono";
+  src: url("/_assets/font/FiraMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fira Mono";
+  src: url("/_assets/font/FiraMono-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+/*  
+ *  the style of this page is an homage to KIKIYAMA's site
+ *  (https://www3.nns.ne.jp/~tk-mto/index.html), and so borrows a lot of CSS
+ *  from there!
+ */
+/* less shitty box-sizing (border-based instead of content-based) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  /* use the default scrollbar width for the platform, if applicable */
+  scrollbar-width: auto;
+  /* set root font size; all REM values are relative to this */
+  font-size: 15px;
+}
+
+/* improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  /* disable anti-alias (for pixel art and etc., we WANT the pixel jaggedness
+   * lol) */
+  image-rendering: pixelated; /*            Universal support since 2021 */
+}
+
+/* links */
+a {
+  text-decoration: initial;
+  text-decoration-style: solid;
+}
+a:link {
+  color: #9999ff;
+}
+a:active {
+  color: #9999ff;
+}
+a:visited {
+  color: #666699;
+}
+a:hover {
+  color: #cccc00;
+}
+
+/* add marker for external links */
+a[rel*=external] {
+  /* but NOT on images! */
+}
+a[rel*=external]:not(:has(img))::after {
+  content: " ★";
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #000000;
+  color: #cc0000;
+  font-size: 15px;
+  font-family: var(--font-family-mono);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px, 0px, 0px, 0px;
+  width: 18%;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  border-color: white;
+  border-right-style: ridge;
+  height: 100vh;
+  padding: var(--spacing-100);
+}
+nav hr {
+  width: 100%;
+  color: #222244;
+}
+
+main {
+  padding: var(--spacing-100);
+  max-width: var(--measure-max);
+}
+
+h1 {
+  font-size: 1rem;
+}
+h1::before {
+  content: "★ ";
+}
+
+h2 {
+  font-size: 1rem;
+}
+h2::before {
+  content: "｢";
+}
+h2::after {
+  content: "｣";
+}
+
+figure {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-025);
+}
+figure figcaption {
+  flex: 0 0 100%;
+}
 
 /*# sourceMappingURL=rpg-maker.css.map */

@@ -1,4 +1,146 @@
-// @use "base/base";
-// @use "base/reset";
-// @use "abstracts/breakpoints" as *;
-// @use "abstracts/mixins" as *;
+@use "base/base";
+@use "base/fonts";
+
+/*  
+ *  the style of this page is an homage to KIKIYAMA's site
+ *  (https://www3.nns.ne.jp/~tk-mto/index.html), and so borrows a lot of CSS
+ *  from there!
+ */
+
+/* less shitty box-sizing (border-based instead of content-based) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    /* use the default scrollbar width for the platform, if applicable */
+    scrollbar-width: auto;
+
+    /* set root font size; all REM values are relative to this */
+    font-size: 15px;
+}
+
+/* improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+
+    max-width: 100%;
+
+    /* disable anti-alias (for pixel art and etc., we WANT the pixel jaggedness
+     * lol) */
+    image-rendering: pixelated; /*            Universal support since 2021 */
+    // image-rendering: -moz-crisp-edges; //           for Firefox
+    // image-rendering: -o-crisp-edges; //             for Opera
+    // image-rendering: -webkit-optimize-contrast; //  for Chrome
+}
+
+/* links */
+a {
+    text-decoration: initial;
+    text-decoration-style: solid;
+
+    &:link {
+        color: #9999ff;
+    }
+
+    &:active {
+        color: #9999ff;
+    }
+
+    &:visited {
+        color: #666699;
+    }
+
+    &:hover {
+        color: #cccc00;
+    }
+}
+
+/* add marker for external links */
+a[rel*="external"] {
+    /* but NOT on images! */
+    &:not(:has(img))::after {
+        content: " ★";
+        // don't take the styling of whatever its attached to
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: #000000;
+    color: #cc0000;
+
+    font-size: 15px;
+    font-family: var(--font-family-mono);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px, 0px, 0px, 0px;
+
+    width: 18%;
+
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+
+    border-color: white;
+    border-right-style: ridge;
+
+    height: 100vh;
+    padding: var(--spacing-100);
+
+    hr {
+        width: 100%;
+        color: #222244;
+    }
+}
+
+main {
+    padding: var(--spacing-100);
+    max-width: var(--measure-max);
+}
+
+h1 {
+    font-size: 1rem;
+    &::before {
+        content: "★ ";
+    }
+}
+
+h2 {
+    font-size: 1rem;
+    &::before {
+        content: "｢";
+    }
+    &::after {
+        content: "｣";
+    }
+}
+
+figure {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-025);
+
+    figcaption {
+        flex: 0 0 100%;
+    }
+}
