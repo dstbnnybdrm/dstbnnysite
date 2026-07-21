@@ -1,0 +1,15 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <div class="center-y">
+    <div class="flow wrapper">
+      <div class="center-x">
+        <article class="poem">{{ content | safe }}</article>
+      </div>
+
+      <nav class="[ center-x ] [ font-alt ]">
+        <p><a href="/hub.html">main site</a></p>
+      </nav>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <div class="[ has-sticky-footer ] [ gap-l ]">
+    <div class="flow">
+      <nav class="[ slash-nav ] [ box center-x wrapper ]">
+        <h2 class="visually-hidden">navigation</h2>
+
+        {% include "partials/skip-link.njk" %}
+
+        <div class="cluster">
+          <ul class="board-list" role="list">
+            <li><a href="/hub.html">main site</a></li>
+          </ul>
+
+          <ul class="board-list" role="list">
+            <li><a href="/about.html" {% if "about" in page.url %}aria-current="page"{% endif %}>about</a></li>
+            <li><a href="/now.html" {% if "now" in page.url %}aria-current="page"{% endif %}>now</a></li>
+            <li><a href="/uses.html" {% if "uses" in page.url %}aria-current="page"{% endif %}>uses</a></li>
+          </ul>
+
+          <ul class="board-list" role="list">
+            <li><a href="/blank.html">blank</a></li>
+            <li><a href="/for.html">for</a></li>
+          </ul>
+
+          <ul class="board-list" role="list">
+            <li><a href="/colophon.html" {% if "colophon" in page.url %}aria-current="page"{% endif %}>colophon</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="[ prose ] [ flow wrapper ]" id="main">{{ content | safe }}</main>
+    </div>
+
+    <footer class="[ box flow wrapper ] [ flow-space-3xs ]">
+      <h2 class="visually-hidden">footer</h2>
+
+      {% include "partials/footer.njk" %}
+    </footer>
+  </div>
+{% endblock content %}

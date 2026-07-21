@@ -1,0 +1,160 @@
+{% set title = "hub" %}
+{% set bodyClass = "hub" %}
+{% extends "layouts/base.njk" %}
+
+{% block styles %}
+  <noscript>
+    <style>
+      #theme-picker,
+      #sidebar-open-button {
+        display: none;
+      }
+    </style>
+  </noscript>
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://status.cafe/current-status.js?name=dstbnnyjp" defer></script>
+{% endblock %}
+
+{% block content %}
+  <h1 class="visually-hidden">{{ title }}</h1>
+
+  {% include "partials/skip-link.njk" %}
+
+  <div class="has-sticky-footer">
+    <div class="hub-container">
+      <header class="[ hub-container__header ] [ box center-x ]">
+        <h2 class="visually-hidden">header</h2>
+
+        {#
+          <!-- <aside class="aside-box" id="theme-picker"> -->
+          <!--   <label for="theme-select">choose theme:</label> -->
+          <!---->
+          <!--   <select name="themes" id="theme-select"> -->
+          <!--     <option value="light">light</option> -->
+          <!--     <option value="dark">dark</option> -->
+          <!--   </select> -->
+          <!-- </aside> -->
+          <!---->
+        #}
+
+        <div class="[ cluster ] [ flex-nowrap ] [ hidden@mobile ]">
+          <span class="header-ornament" aria-hidden="true" role="img">⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆</span>
+          <p class="header-text" id="splash-text">dstbnnybdrm</p>
+          <span class="header-ornament" aria-hidden="true" role="img">⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆</span>
+        </div>
+
+        <button class="drawer-open-button" id="sidebar-open-button" type="button">menu</button>
+
+        <noscript>
+          <nav class="hidden@desktop">
+            <ul class="cluster" role="list" style="justify-content:center; row-gap:0;">
+              <li class="board-list">
+                <a href="/home.html" {% if "home" in page.url %}aria-current="page"{% endif %}>home</a>
+              </li>
+              <li>
+                <ul class="board-list" role="list">
+                  <li><a href="/about.html">about</a></li>
+                  <li>
+                    <a
+                      href="/projects/"
+                      target="mainframe"
+                      {% if "projects" in page.url %}aria-current="page"{% endif %}
+                      >projects</a
+                    >
+                  </li>
+                  <li><a href="/blog/">blog</a></li>
+                  <li>
+                    <a href="/shrines/" target="mainframe" {% if "shrines" in page.url %}aria-current="page"{% endif %}
+                      >shrines</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <ul class="board-list" role="list">
+                  <li>
+                    <a
+                      href="/resources.html"
+                      target="mainframe"
+                      {% if "resources" in page.url %}aria-current="page"{% endif %}
+                      >resources</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/links.html" target="mainframe" {% if "links" in page.url %}aria-current="page"{% endif %}
+                      >links</a
+                    >
+                  </li>
+                  <li><a href="/guestbook.html">guestbook</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </noscript>
+      </header>
+
+      <div class="has-drawer@mobile">
+        <aside class="[ hub-container__sidebar ] [ box flow ]" id="sidebar">
+          <h2 class="visually-hidden">sidebar</h2>
+
+          <div class="center-x">
+            <img
+              src="https://file.garden/ZhWP_IgEyxzXJSNb/dstbnnybdrm.gif"
+              alt="dusbunnybunnybedroom"
+              title="dusbunnybunnybedroom"
+            />
+          </div>
+
+          <nav class="text-center" id="nav">
+            <h3 class="visually-hidden">navigation</h3>
+
+            <ul class="[ hub-nav-list drawer-list@mobile ] [ flow ]" role="list">
+              <li>
+                <a href="/home.html" target="mainframe">home</a>
+              </li>
+
+              <li>
+                <div class="list-subheading">from me</div>
+                <ul role="list">
+                  <li><a href="/about.html">about</a></li>
+                  <li><a href="/projects/" target="mainframe">projects</a></li>
+                  <li><a href="/blog/">blog</a></li>
+                  <li><a href="/shrines/" target="mainframe">shrines</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <div class="list-subheading">for you</div>
+                <ul role="list">
+                  <li><a href="/resources.html" target="mainframe">resources</a></li>
+                  <li><a href="/links.html" target="mainframe">links</a></li>
+                  <li><a href="/guestbook.html">guestbook</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <article class="[ sidebar-section ] [ status-cafe ]" id="statuscafe">
+            <div class="[ sidebar-section__content ] [ flow ]">{% include "partials/status-cafe.njk" %}</div>
+          </article>
+
+          <article class="sidebar-section">
+            <div class="[ sidebar-section__content ] [ flow ]">{% include "partials/changelog.njk" %}</div>
+          </article>
+        </aside>
+
+        <!-- darkens screen on mobile when nav is opened -->
+        <div class="drawer-scrim" id="sidebar-overlay"></div>
+
+        <main id="main">
+          <iframe src="/home.html" name="mainframe" title="main content"></iframe>
+        </main>
+      </div>
+    </div>
+
+    <footer class="[ hub-footer ] [ box flow ]">{% include "partials/footer.njk" %}</footer>
+  </div>
+{% endblock %}

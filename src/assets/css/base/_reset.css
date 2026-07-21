@@ -1,0 +1,81 @@
+/* --------------------------------- RESET ---------------------------------- */
+
+/*
+ * slightly modified from here:
+ * https://www.joshwcomeau.com/css/custom-css-reset/
+ */
+
+/* less shitty box-sizing (border-based instead of content-based) */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* remove all animations and transitions for people that prefer not to see them */
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+
+/* remove default padding */
+ul[role],
+ol[role] {
+    padding: 0;
+    list-style: none;
+}
+
+/* body defaults */
+body {
+    min-height: 100vh;
+
+    line-height: var(--line-height-base);
+}
+
+/* ensure text decoration won't interfere with ascenders and descenders */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg,
+audio {
+    display: block;
+
+    /* disable anti-alias (for pixel art and etc., we WANT the pixel jaggedness
+     * lol) */
+    image-rendering: pixelated;
+    max-width: 100%;
+}
+
+/* forms inherit their typography styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* wrap instead of overflow text */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}

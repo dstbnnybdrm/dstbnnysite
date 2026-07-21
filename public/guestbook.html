@@ -1,96 +1,126 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- meta tags -->
-    <title>guestbook &mdash; dustbunnybedroom</title>
-    <meta
-      name="description"
-      content="sign my guestbook and share any thoughts you might have!"
-    />
-    <meta name="author" content="jp" />
+    <title>guestbook ❊ dustbunnybedroom</title>
 
-    <!-- open graph -->
+    <meta name="author" content="jp" />
+    <meta name="robots" content="noai, noimageai" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- icons -->
+    <link rel="icon" href="/dstbnnybdrm.gif" sizes="88x31" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+
+    <!-- open graph protocol -->
+    <meta property="og:title" content="guestbook" />
+
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="dustbunnybedroom" />
-    <meta property="og:title" content="guestbook &mdash; dustbunnybedroom" />
-    <meta
-      property="og:description"
-      content="sign my guestbook and share any thoughts you might have!"
-    />
-    <meta
-      property="og:url"
-      content="https://dustbunnybedroom.neocities.org/guestbook"
-    />
 
-    <!-- favicon -->
-    <link rel="icon" href="/_assets/img/favicon/favicon.ico" sizes="32x32" />
-    <link
-      rel="apple-touch-icon"
-      href="/_assets/img/favicon/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="/_assets/img/favicon/site.webmanifest" />
-
-    <!-- style + script -->
-    <link rel="stylesheet" href="/_assets/css/style.css" />
-    <script src="/_assets/js/set-theme.js"></script>
-    <script src="/_assets/js/index.js" type="module"></script>
+    <!-- scripts -->
+    <script src="/assets/js/script.js" type="module"></script>
   </head>
 
-  <body class="l-imposter">
-    <div class="guestbook page">
-      <nav class="breadcrumb page__breadcrumb" aria-label="Breadcrumb">
-        <ul class="breadcrumb__list">
-          <li class="breadcrumb__crumb">
-            <a class="breadcrumb__link" href="/hub?p=/home">home</a>
+  <body id="top">
+    <div class="has-sticky-footer">
+      <div class="flow">
+        <header class="wrapper">
+          <h1>guestbook</h1>
+
+          <nav><a href="/hub.html">main site</a></nav>
+        </header>
+
+        <main class="flow wrapper">
+          <p>
+            you can sign my guestbook and share any thoughts you may have below! i love hearing from anybody who comes
+            across my silly little site.
+          </p>
+
+          <aside>
+            <p>(forgive the default look of this guestbook lmao, i haven’t gotten around to styling it yet!)</p>
+          </aside>
+
+          <!-- begin wwww.htmlcommentbox.com -->
+          <div id="HCB_comment_box">
+            <noscript><p>sorry, this section requires JavaScript!</p></noscript>
+
+            <!-- <a rel="external" href="http://www.htmlcommentbox.com">Comment Box</a> -->
+            <!-- is loading comments... -->
+          </div>
+
+          <script type="text/javascript" id="hcb">
+            if (!window.hcb_user) {
+              hcb_user = {};
+            }
+            (function () {
+              var s = document.createElement("script"),
+                l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"),
+                h = "https://www.htmlcommentbox.com";
+              s.setAttribute("type", "text/javascript");
+              s.setAttribute(
+                "src",
+                h +
+                  "/jread?page=" +
+                  encodeURIComponent(l).replace("+", "%2B") +
+                  "&mod=%241%24wq1rdBcg%249uQ99sWaFhC5XHrQ7T5jV1" +
+                  "&opts=16646&num=10&ts=1705102805023",
+              );
+              if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
+            })();
+          </script>
+          <!-- end www.htmlcommentbox.com -->
+        </main>
+      </div>
+
+      <footer class="[ box flow wrapper ] [ flow-space-3xs ]">
+        <h2 class="visually-hidden">footer</h2>
+
+        <ul class="[ pipe-list ] [ cluster ] [ justify-center ]" role="list">
+          <li>©&nbsp;<time class="u-caps-spacing" datetime="2022">2022</time> dustbunnybedroom</li>
+          <li><a href="/sitemap.html">sitemap</a></li>
+          <li><a href="/about.html#elsewhere">contact</a></li>
+          <li><a rel="external" href="https://github.com/dstbnnybdrm/dstbnnysite">source code</a></li>
+        </ul>
+
+        <ul class="[ cluster ] [ justify-center ]" role="list">
+          <li>
+            <a rel="external" href="https://neocities.org/"
+              ><img
+                src="/assets/img/antipixels/host-neocities.gif"
+                alt="Hosted by Neocities"
+                title="Hosted by Neocities"
+                width="80px"
+                height="15px"
+            /></a>
           </li>
-          <li class="breadcrumb__crumb">
-            <a class="breadcrumb__link" href="/guestbook.html">guestbook</a>
+          <li>
+            <a rel="external" href="https://neovim.io/"
+              ><img
+                src="/assets/img/antipixels/nvim-powered.gif"
+                alt="Powered by Neovim"
+                title="Powered by Neovim"
+                width="80px"
+                height="15px"
+            /></a>
+          </li>
+          <li>
+            <a rel="external" href="https://www.11ty.dev/"
+              ><img
+                src="/assets/img/antipixels/11ty-powered.gif"
+                alt="Powered by Eleventy"
+                title="Powered by Eleventy"
+                width="80px"
+                height="15px"
+            /></a>
           </li>
         </ul>
-      </nav>
-
-      <main class="main guestbook__main">
-        <h1 class="title">guestbook</h1>
-
-        <p class="copy">
-          you can sign my guestbook and share any thoughts you may have below!
-        </p>
-
-        <!-- begin wwww.htmlcommentbox.com -->
-        <div id="HCB_comment_box">
-          <a rel="external" href="http://www.htmlcommentbox.com">Comment Box</a>
-          is loading comments...
-        </div>
-        <script type="text/javascript" id="hcb">
-          if (!window.hcb_user) {
-            hcb_user = {};
-          }
-          (function () {
-            var s = document.createElement("script"),
-              l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"),
-              h = "https://www.htmlcommentbox.com";
-            s.setAttribute("type", "text/javascript");
-            s.setAttribute(
-              "src",
-              h +
-                "/jread?page=" +
-                encodeURIComponent(l).replace("+", "%2B") +
-                "&mod=%241%24wq1rdBcg%249uQ99sWaFhC5XHrQ7T5jV1" +
-                "&opts=16646&num=10&ts=1705102805023",
-            );
-            if (typeof s != "undefined")
-              document.getElementsByTagName("head")[0].appendChild(s);
-          })();
-        </script>
-        <!-- end www.htmlcommentbox.com -->
-      </main>
-
-      <footer class="footer page__footer">
-        <div id="footer"></div>
       </footer>
     </div>
   </body>

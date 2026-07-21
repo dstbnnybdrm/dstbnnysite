@@ -1,0 +1,94 @@
+.has-drawer\@mobile {
+    --_drawer-width: var(--drawer-width, 1fr);
+    --_drawer-content-width: var(--drawer-content-width, 3fr);
+
+    display: grid;
+    grid-template-columns:
+        var(--_drawer-width)
+        var(--_drawer-content-width);
+
+    /* since grid items can't be smaller than their content by default */
+    min-height: 0;
+    overflow-y: hidden;
+
+    @media (--mobile-viewport) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.has-drawer\@mobile > :first-child {
+    /* allow scrolling to prevent overflow */
+    min-height: 0;
+    overflow-y: auto;
+
+    @media (--mobile-viewport) {
+        /* hide by default */
+        display: none;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        background-color: var(--color-background);
+
+        width: 45%;
+        min-width: 14rem;
+        height: 100vh;
+
+        &[data-open] {
+            display: initial;
+        }
+    }
+}
+
+.drawer-list\@mobile {
+    @media (--mobile-viewport) {
+        & a,
+        & .list-subheading {
+            border-bottom: 1px dotted;
+            padding: var(--space-2xs);
+        }
+
+        & li > a {
+            display: block;
+
+            text-decoration: none;
+
+            &:hover {
+                background-color: var(--color-secondary);
+                color: var(--color-background);
+            }
+        }
+    }
+}
+
+.drawer-scrim {
+    @media (--mobile-viewport) {
+        position: fixed;
+        z-index: 9;
+
+        margin: none;
+        inset: 0;
+
+        background-color: rgb(0, 0, 0, 0.5);
+
+        &[data-visible] {
+            display: initial;
+        }
+    }
+}
+
+.drawer-open-button,
+.drawer-close-button,
+.drawer-scrim {
+    display: none;
+}
+
+.drawer-open-button,
+.drawer-close-button {
+    @media (--mobile-viewport) {
+        display: block;
+        width: 100%;
+    }
+}

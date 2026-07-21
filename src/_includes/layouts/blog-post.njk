@@ -1,0 +1,25 @@
+---
+layout: "layouts/blog.njk"
+---
+
+{#
+  <aside class="flow">
+    <p class="">dustbunnyblog</p>
+
+    {% include "partials/blog-home.njk" %}
+  </aside>
+#}
+<main class="wrapper">
+  <article class="[ prose ] [ flow ]">
+    <header>
+      <h1>{{ title }}</h1>
+      <time class="letter-spacing-caps" datetime="{{ page.date | ISODate }}">{{ page.date | ISODate }}</time>
+    </header>
+
+    {{ content | safe }}
+
+    <p class="text-end">—JP</p>
+  </article>
+
+  <p class="text-center"><a href="#top">back to top</a></p>
+</main>

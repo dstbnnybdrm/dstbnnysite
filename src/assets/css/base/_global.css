@@ -1,0 +1,217 @@
+/* --------------------------------- GLOBAL --------------------------------- */
+
+:root {
+    /* 15px */
+    font-size: 93.75%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: var(--color-background);
+    height: 100%;
+    color: var(--color-base);
+
+    font-family: var(--font-base);
+}
+
+[hidden] {
+    display: none;
+}
+
+/* ---- PSEUDO ELEMENTS ---- */
+
+::selection {
+    background: var(--color-accent);
+    color: var(--color-background);
+}
+
+/* ---- CONTENT SECTIONING ---- */
+
+main > iframe:only-child {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: var(--step-3);
+    line-height: var(--line-height-compact);
+}
+
+h2 {
+    font-size: var(--step-2);
+    line-height: var(--line-height-compact);
+}
+
+h3 {
+    font-size: var(--step-1);
+    line-height: var(--line-height-compact);
+}
+
+h4,
+h5,
+h6 {
+    font-size: var(--step-0);
+    line-height: var(--line-height-compact);
+}
+
+/* ---- TEXT CONTENT ---- */
+
+p,
+li,
+hr,
+dd,
+dt {
+    max-width: var(--measure-max);
+}
+
+blockquote {
+    padding-left: 2em;
+
+    font-style: italic;
+    line-height: var(--line-height-compact);
+}
+
+figure > img + img {
+    margin-top: var(--space-xs);
+}
+
+figcaption {
+    margin-top: var(--space-2xs);
+    font-size: var(--step--1);
+    line-height: var(--line-height-compact);
+}
+
+pre {
+    line-height: 1rem;
+    font-family: monospace;
+}
+
+ul,
+ol {
+    padding-left: calc(var(--space-s) + var(--space-3xs));
+}
+
+ul {
+    list-style: "❊\00A0";
+}
+
+dl {
+}
+
+dt {
+    font-weight: bold;
+
+    * + & {
+        margin-top: var(--space-2xs);
+    }
+}
+
+dd {
+    display: list-item;
+
+    margin-left: 1.5ch;
+
+    list-style: "::\00A0";
+}
+
+[aria-current="page"] {
+    font-weight: bold;
+}
+
+/* ---- INLINE TEXT SEMANTICS ---- */
+
+a {
+    text-decoration-style: dotted;
+
+    /* add marker for external links */
+    &[rel*="external"] {
+        /* but NOT on images! */
+        &:not(:has(img))::after {
+            content: "\00A0⚘";
+            font-style: normal;
+            /* don't take the styling of whatever its attached to */
+            font-weight: normal;
+        }
+    }
+
+    &:link {
+        color: var(--color-primary);
+    }
+
+    &:visited {
+        color: var(--color-primary);
+    }
+
+    &:hover {
+        color: var(--color-secondary);
+
+        & img {
+            /* converted using: https://codepen.io/sosuke/pen/Pjoqqp */
+            filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
+                brightness(91%) contrast(87%);
+        }
+    }
+}
+
+abbr {
+    background: none;
+    font: inherit;
+
+    &:not([data-no-spacing]) {
+        letter-spacing: var(--caps-letter-spacing);
+    }
+}
+
+small {
+    font-size: var(--step--1);
+}
+
+/* IMAGE / MULTIMEDIA */
+
+img {
+    /* tone down images in dark mode. from:
+     * https://www.bram.us/2019/10/09/implementing-dark-mode-on-adactio-com/ */
+    @media (prefers-color-scheme: dark) {
+        filter: brightness(0.8) contrast(1.2);
+    }
+}
+
+audio {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* EMBEDDED CONTENT */
+
+iframe {
+    border: none;
+}
+
+/* ---- FORMS ---- */
+
+button {
+    border: none;
+    background-color: var(--color-primary);
+    padding: var(--space-3xs);
+    color: var(--color-background);
+
+    &:hover {
+        background-color: var(--color-secondary);
+    }
+}
+
+textarea {
+    width: 100%;
+
+    font-size: 16px;
+    font-family: var(--font-mono);
+}
+
+/* ---- INTERACTIVE ---- */
+
+summary {
+    cursor: pointer;
+}

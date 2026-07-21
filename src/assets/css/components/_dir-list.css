@@ -1,0 +1,5 @@
+ul.dir-list,
+.dir-list ul {
+    padding-inline-start: 1.3em;
+    list-style: "∟\00A0";
+}

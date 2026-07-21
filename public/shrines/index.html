@@ -1,94 +1,100 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- meta tags -->
-    <title>shrines &mdash; dustbunnybedroom</title>
-    <meta
-      name="description"
-      content="a place to ramble on about my hyperfixations."
-    />
-    <meta name="author" content="jp" />
+    <title>shrines ❊ dustbunnybedroom</title>
 
-    <!-- open graph -->
+    <meta name="author" content="jp" />
+    <meta name="robots" content="noai, noimageai" />
+
+    <base target="_parent" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/assets/css/inner-frame.css" />
+
+    <!-- icons -->
+    <link rel="icon" href="/dstbnnybdrm.gif" sizes="88x31" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+
+    <!-- open graph protocol -->
+    <meta property="og:title" content="shrines" />
+
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="dustbunnybedroom" />
-    <meta property="og:title" content="shrines &mdash; dustbunnybedroom" />
-    <meta
-      property="og:description"
-      content="a place to ramble on about my hyperfixations."
-    />
-    <meta
-      property="og:url"
-      content="https://dustbunnybedroom.neocities.org/shrines/"
-    />
 
-    <!-- favicon -->
-    <link rel="icon" href="/_assets/img/favicon/favicon.ico" sizes="32x32" />
-    <link
-      rel="apple-touch-icon"
-      href="/_assets/img/favicon/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="/_assets/img/favicon/site.webmanifest" />
-
-    <!-- style + script -->
-    <link rel="stylesheet" href="/_assets/css/style.css" />
-
-    <script src="/_assets/js/set-theme.js"></script>
-    <script src="/_assets/js/index.js" type="module"></script>
+    <!-- scripts -->
+    <script src="/assets/js/script.js" type="module"></script>
   </head>
 
-  <body class="l-imposter">
-    <div class="shrines page">
-      <main class="main shrines__main">
-        <h1 class="title">shrines</h1>
+  <body id="top">
+    <div class="[ inner-frame ] [ flow box ]">
+      <main class="prose flow">
+        <h2>shrines</h2>
 
-        <p class="copy">a place to ramble on about my hyperfixations.</p>
+        <p>
+          web shrines are pages or sometimes whole websites that are dedicated to things that the creator/webmaster
+          loves. here are mine!
+        </p>
 
-        <nav class="image-navi">
-          <ul class="image-navi__list">
-            <li class="image-navi__item">
-              <a class="image-navi__link" href="./rpg-maker.html">
-                <img
-                  class="image-navi__image"
-                  src="/_assets/img/shrines/rpg-maker.gif"
-                  alt=""
-                />
-                RPG Maker games</a
-              >
+        <nav>
+          <ul class="[ block-list ] [ cluster ]" role="list">
+            <li>
+              <a href="./rpg-maker/"
+                ><img src="/shrines/img/rpg-maker.gif" alt="" />
+                <span><abbr title="Role-Playing Game">RPG</abbr> Maker</span>
+              </a>
             </li>
-            <!-- <li class="image-navi__item"> -->
-            <!--   <span class="image-navi__link inactive-link"> -->
-            <!--     <img -->
-            <!--       class="image-navi__image" -->
-            <!--       src="../_assets/img/breakdancing-cat.gif" -->
-            <!--       alt="" -->
-            <!--     /> -->
-            <!--     <abbr title="to be determined">TBD</abbr></span -->
-            <!--   > -->
-            <!-- </li> -->
           </ul>
         </nav>
       </main>
 
-      <nav class="navi">
-        <p class="copy">
-          <a href="/hub?p=/home">back to home</a>
-        </p>
-      </nav>
+      <noscript>
+        <div class="[ inner-frame__footer ] [ box ] [ mt-s text-center ]">
+          <small>want to get <a href="/hub.html">outside of frame</a>?</small>
+        </div>
+      </noscript>
 
-      <footer class="footer page__footer">
-        <div id="footer"></div>
+      <footer class="[ inner-frame__footer ] [ box ]" id="inner-frame-footer" hidden>
+        <nav>
+          <ul class="cluster" role="list" style="justify-content: center; row-gap: 0">
+            <li class="board-list">
+              <a href="/home.html">home</a>
+            </li>
+            <li>
+              <ul class="board-list" role="list">
+                <li><a href="/about.html">about</a></li>
+                <li>
+                  <a href="/projects/" target="_self">projects</a>
+                </li>
+                <li><a href="/blog/">blog</a></li>
+                <li>
+                  <a href="/shrines/" target="_self" aria-current="page">shrines</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <ul class="board-list" role="list">
+                <li>
+                  <a href="/resources.html" target="_self">resources</a>
+                </li>
+                <li>
+                  <a href="/links.html" target="_self">links</a>
+                </li>
+                <li><a href="/guestbook.html">guestbook</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="text-center">
+            <small>want to get <a href="/hub.html">outside of frame</a>?</small>
+          </div>
+        </nav>
       </footer>
-      <!-- <footer class="main__footer"> -->
-      <!--   <p class="copy"> -->
-      <!--     (last updated -->
-      <!--     <time datetime="2024-03-26">mon, april 15th, 2024</time>) -->
-      <!--   </p> -->
-      <!-- </footer> -->
     </div>
   </body>
 </html>

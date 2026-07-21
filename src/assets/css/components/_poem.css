@@ -1,0 +1,25 @@
+/*
+ * some suggestions for both marking up and styling poetry taken from:
+ * @link: https://web.archive.org/web/20220802003441/https://yearebase.github.io/blog/poetry-in-html/
+ */
+.poem {
+    max-width: var(--measure-max);
+
+    font-family: var(--font-alt);
+}
+
+.poem > * + * {
+    margin-top: 1em;
+}
+
+.poem__title {
+    font-style: italic;
+    font-weight: normal;
+    font-size: var(--step-0);
+}
+
+/* hang indents when lines wrap */
+.poem__stanza {
+    padding-left: var(--space-l);
+    text-indent: calc(-1 * var(--space-l));
+}

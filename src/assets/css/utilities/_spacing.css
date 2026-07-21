@@ -1,0 +1,29 @@
+/* -------------------------------- SPACING --------------------------------- */
+
+.p-s {
+    padding: var(--space-s) !important;
+}
+
+.p-xs {
+    padding: var(--space-xs) !important;
+}
+
+.pt-s {
+    padding-top: var(--space-s) !important;
+}
+
+.mt-s {
+    margin-top: var(--space-s) !important;
+}
+
+.mx-auto {
+    margin-inline: auto !important;
+}
+
+.flow-space-l {
+    --flow-space: var(--space-l) !important;
+}
+
+.flow-space-3xs {
+    --flow-space: var(--space-3xs) !important;
+}

@@ -1,0 +1,53 @@
+/* --------------------------------- LAYOUT --------------------------------- */
+
+.hidden {
+    display: none !important;
+}
+
+.hidden\@mobile {
+    @media (--mobile-viewport) {
+        display: none !important;
+    }
+}
+
+.hidden\@desktop {
+    @media (--desktop-viewport) {
+        display: none !important;
+    }
+}
+
+/*
+ *  visually hides an object while still making it available to screen readers.
+ *  taken from:
+ *  https://www.a11yproject.com/posts/how-to-hide-content/
+ */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* fixes max width and horizontally centres */
+.wrapper {
+    margin-inline: auto;
+    padding-inline: var(--space-s);
+
+    width: 100%;
+    max-width: var(--measure-max);
+}
+
+.float-left {
+    --float-space: 1em;
+    float: left !important;
+    margin-right: var(--float-space);
+}
+
+.float-right {
+    --float-space: 1em;
+    float: right !important;
+    margin-left: var(--float-space);
+}

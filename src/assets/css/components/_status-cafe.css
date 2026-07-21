@@ -1,0 +1,25 @@
+/*
+ * widget from:
+ * @link: https://status.cafe/current-status 
+ */
+
+.status-cafe blockquote {
+    padding: initial;
+
+    font-style: initial;
+    font-size: var(--step--1);
+    line-height: var(--line-height-base);
+    text-align: center;
+}
+
+.status-cafe p {
+    quotes: auto;
+
+    &::before {
+        content: open-quote;
+    }
+
+    &::after {
+        content: close-quote;
+    }
+}

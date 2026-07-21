@@ -1,0 +1,232 @@
+---
+title: "links"
+layout: "layouts/inner-frame.njk"
+---
+
+<h2>{{ title }}</h2>
+
+<aside>
+  <blockquote cite="https://thoughts.melonking.net/thoughts/every-site-needs-a-links-page-why-linking-matters">
+    <p>
+      linking to the work of others is a way of celebrating their achievements and, by doing so, gaining dignity for
+      yourself and your work. you deserve to be part of the web, not its final destination.
+    </p>
+  </blockquote>
+  <!-- <small> -->
+  <!--   from -->
+  <!--   <cite> -->
+  <!--     <a rel="external" href="https://thoughts.melonking.net/thoughts/every-site-needs-a-links-page-why-linking-matters" -->
+  <!--       >melonking.net</a -->
+  <!--     ></cite -->
+  <!--   > -->
+  <!-- </small> -->
+</aside>
+
+<p>
+  had enough of this place? here’s an assortment of links to other sites you should consider visiting! (note that, just
+  like this site, i can’t and won’t guarantee that any of these sites will be child-friendly!)
+</p>
+
+<p>
+  i go back and forth with myself on whether i should organize these in more structured way, but i also kind of like the
+  idea of just letting you explore at your own discretion, so as of now none of these are displayed in any particular
+  order! i may still do it some time, who knows! either way, have fun!
+</p>
+
+<aside>
+  <p>
+    (if your site is on here and you would like it updated or removed please feel free to message me about it and i’ll
+    sort that out as soon as i can!)
+  </p>
+</aside>
+
+<h3>friends</h3>
+
+<p>
+  some of my personal friends and frequent collaborators! they don’t really have personal sites in the vein of mine and
+  others’ on here so i’ll be linking whatever socials/portfolios they want instead!
+</p>
+
+<ul class="[ pipe-list ] [ cluster ] [ justify-center ]">
+  <li>
+    <a rel="external" href="https://mahalslick.carrd.co/">Mahal Slick</a>
+  </li>
+  <li>
+    <a rel="external" href="https://leonardocomplexity.com/">leonardocomplexity</a>
+  </li>
+  <li>
+    <a rel="external" href="https://www.instagram.com/kewomondo/">Kewo Mondo</a>
+  </li>
+  <li>
+    <a rel="external" href="https://www.instagram.com/wa_waaaaan/">WAWAN</a>
+  </li>
+  <li>
+    <a rel="external" href="https://www.instagram.com/allbyhmsf/">hmslf</a>
+  </li>
+</ul>
+
+<h3>neighbourhood</h3>
+
+<p>
+  below are some mutuals of mine in some way! maybe our sites link each other, or we follow each other elsewhere, et
+  cetera!
+</p>
+
+<!-- button links -->
+<ul class="[ cluster ] [ justify-center ]" role="list">
+  {% for site in neighbourhood %}
+    {% if site.button %}
+      <li>
+        <a rel="external" href="{{ site.href }}">
+          <img
+            src="/assets/img/micro-bars/neighbourhood/{{ site.button }}"
+            alt="{{ site.title }}"
+            title="{{ site.title }}"
+            width="88px"
+            height="31px"
+          />
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<!-- text links (for sites w/o a button) -->
+<ul class="[ pipe-list ] [ cluster ] [ justify-center ]">
+  {% for site in neighbourhood %}
+    {% if not site.button %}
+      <li><a rel="external" href="{{ site.href }}">{{ site.title }} </a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h4>joined</h4>
+
+<p>
+  and here are the various <b>webrings</b>, <b>listings</b>, and <b>text cliques</b> this site is a part of! if you
+  don’t know what any of that means,
+  <a rel="external" href="https://32bit.cafe/interactingontheweb/">this article</a> gives a great overview on them!
+</p>
+
+{% include "partials/neighbourhood.njk" %}
+
+<h3>other</h3>
+
+<p>other sites i like, mostly personal sites!</p>
+
+<!-- button links -->
+<ul class="[ cluster ] [ justify-center ]" role="list">
+  {% for site in outgoingSites %}
+    {% if site.button %}
+      <li>
+        <a rel="external" href="{{ site.href }}">
+          <img
+            src="/assets/img/micro-bars/other-sites/{{ site.button }}"
+            alt="{{ site.title }}"
+            title="{{ site.title }}"
+            width="88px"
+            height="31px"
+          />
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<!-- text links (for sites w/o a button) -->
+<ul class="[ pipe-list ] [ cluster ] [ justify-center ]">
+  {% for site in outgoingSites %}
+    {% if not site.button %}
+      <li><a rel="external" href="{{ site.href }}">{{ site.title }} </a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h3>link me?</h3>
+
+{% include "partials/link-me.njk" %}
+
+{#
+<!-- dead/broken neighbourhood sites -->
+
+<!-- <li> -->
+<!--   <a rel="external" href="https://cyberangel.club/"> -->
+<!--     <img src="/_assets/img/micro-bars/site/cyberangel-button.gif" alt="digital angel" title="digital angel" /> -->
+<!--   </a> -->
+<!-- </li> -->
+<!-- <li> -->
+<!--   <a rel="external" href="https://snowyfin.neocities.org/"> -->
+<!--     <img src="/_assets/img/micro-bars/site/snowyfin-button.gif" alt="snowy fin" title="snowy fin" /> -->
+<!--   </a> -->
+<!-- </li> -->
+<!-- <li> -->
+<!--   <a rel="external" href="https://tomorrowsbreakfast.neocities.org/"> -->
+<!--     <img -->
+<!--       src="/_assets/img/micro-bars/site/tomorrowsbreakfast-button.gif" -->
+<!--       alt="Tommorowsbreakfast" -->
+<!--       title="Tommorowsbreakfast" -->
+<!--     /> -->
+<!--   </a> -->
+<!-- </li> -->
+<!-- <li> -->
+<!--   <a rel="external" href="https://heavnstreet.neocities.org/">heavnstreet</a> -->
+<!-- </li> -->
+<!--   </ul> -->
+
+<!-- dead/inactive/broken sites :( -->
+
+<!-- <li> -->
+<!--   <a rel="external" href="https://thedeepcuts.org/" -->
+<!--     ><img -->
+<!--       src="/_assets/img/micro-bars/site/thedeepcuts-button.gif" -->
+<!--       alt="The Deep Cuts" -->
+<!--       title="The Deep Cuts" -->
+<!--   /></a> -->
+<!-- </li> -->
+
+<!-- 
+            ok so apparently they suck lol?? 
+              https://www.youtube.com/watch?v=3hhQufCKQ-w 
+          -->
+<!-- <li> -->
+<!--   <a rel="external" href="https://pastaaa1.neocities.org/" -->
+<!--     ><img -->
+<!--       src="/_assets/img/micro-bars/site/pasta-button.gif" -->
+<!--       alt="pastarru" -->
+<!--       title="pastarru" -->
+<!--   /></a> -->
+<!-- </li> -->
+
+<!-- different owner now? -->
+<!-- <li> -->
+<!--   <a rel="external" href="https://denpa.neocities.org/" -->
+<!--     ><img -->
+<!--       src="/_assets/img/micro-bars/site/denpa-button.gif" -->
+<!--       alt="denpa" -->
+<!--       title="denpa" -->
+<!--   /></a> -->
+<!-- </li> -->
+
+<!-- <li> -->
+<!--   <a rel="external" href="https://randoseru.neocities.org/"> -->
+<!--     <img src="/_assets/img/micro-bars/site/sunflower.gif" alt="sunflower" title="sunflower" /> -->
+<!--   </a> -->
+<!-- </li> -->
+<!-- <li> -->
+<!--   <a rel="external" href="https://abyssl.neocities.org/gsii"> -->
+<!--     <img -->
+<!--       src="/_assets/img/micro-bars/site/gsii_okay.gif" -->
+<!--       alt="ghost suburbs ii fanlisting" -->
+<!--     /> -->
+<!--   </a> -->
+<!-- </li> -->
+<!-- <li> -->
+<!--   <a rel="external" href="https://abyssl.neocities.org/"> -->
+<!--     <img -->
+<!--       src="/_assets/img/micro-bars/site/abyssl-button-05.gif" -->
+<!--       alt="abyssl" -->
+<!--     /> -->
+<!--   </a> -->
+<!-- </li> -->
+<!-- </ul> -->
+#}

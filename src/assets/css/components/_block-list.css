@@ -1,0 +1,30 @@
+/*
+ * inspired by the links at the bottom of this page:
+ * @link: https://geocities.restorativland.org/Tokyo/Lights/8912/
+ */
+
+.block-list {
+    justify-content: center;
+}
+
+.block-list > li {
+    display: flex;
+    flex-direction: column;
+
+    width: 7.88rem;
+
+    list-style: none;
+    text-align: center;
+}
+
+.block-list img {
+    display: block;
+    aspect-ratio: 1/1;
+}
+
+.block-list span {
+    &::before,
+    &::after {
+        content: "\00A0~\00A0";
+    }
+}

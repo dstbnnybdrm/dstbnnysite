@@ -1,220 +1,260 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- meta tags -->
-    <title>hub &mdash; dustbunnybedroom</title>
-    <meta name="author" content="jp" />
-    <meta name="robots" content="noindex" />
-    <base target="_self" />
+    <title>hub ❊ dustbunnybedroom</title>
 
-    <!-- open graph -->
+    <meta name="author" content="jp" />
+    <meta name="robots" content="noai, noimageai" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <noscript>
+      <style>
+        #theme-picker,
+        #sidebar-open-button {
+          display: none;
+        }
+      </style>
+    </noscript>
+
+    <!-- icons -->
+    <link rel="icon" href="/dstbnnybdrm.gif" sizes="88x31" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+
+    <!-- open graph protocol -->
+    <meta property="og:title" content="hub" />
+
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="dustbunnybedroom" />
-    <meta property="og:title" content="hub &mdash; dustbunnybedroom" />
-    <meta
-      property="og:url"
-      content="https://dustbunnybedroom.neocities.org/hub"
-    />
 
-    <!-- favicon -->
-    <link rel="icon" href="/_assets/img/favicon/favicon.ico" sizes="32x32" />
-    <link
-      rel="apple-touch-icon"
-      href="/_assets/img/favicon/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="/_assets/img/favicon/site.webmanifest" />
+    <!-- scripts -->
+    <script src="/assets/js/script.js" type="module"></script>
 
-    <!-- style + script -->
-    <link rel="stylesheet" href="/_assets/css/style.css" />
-
-    <script src="/_assets/js/set-theme.js"></script>
-    <script src="/_assets/js/index.js" type="module"></script>
-    <script
-      src="https://status.cafe/current-status.js?name=dstbnnyjp"
-      defer
-    ></script>
+    <script src="https://status.cafe/current-status.js?name=dstbnnyjp" defer></script>
   </head>
 
-  <body class="l-imposter">
-    <div class="hub page">
-      <!-- ~*:._.:*~  HEADER  ~*:._.:*~ -->
-      <header class="header hub__header">
-        <p class="header__splash" id="splash" role="presentation">…</p>
-      </header>
+  <body class="hub" id="top">
+    <h1 class="visually-hidden">hub</h1>
 
-      <!-- ~*:._.:*~  MAJOR SIDEBAR  ~*:._.:*~ -->
-      <div class="sidebar sidebar_major hub__sidebar">
-        <!-- ~* THEME TOGGLE BUTTON *~ -->
-        <button
-          class="theme-toggle sidebar__theme-toggle"
-          id="theme-toggle"
-          type="button"
-        ></button>
+    <a class="skip-link" href="#main" id="skip-link">skip to main content</a>
 
-        <!-- ~* NAVIGATION *~ -->
-        <nav class="navi sidebar__section">
-          <h1>
-            <a class="navi__link" href="/home.html" target="mainframe"
-              ><abbr title="dustbunnybedroom">dstbnnybdrm</abbr></a
-            >
-          </h1>
+    <div class="has-sticky-footer">
+      <div class="hub-container">
+        <header class="[ hub-container__header ] [ box center-x ]">
+          <h2 class="visually-hidden">header</h2>
 
-          <h2 class="heading l-hidden">site navigation</h2>
-
-          <button
-            class="button navi__button"
-            id="navi-button"
-            type="button"
-            aria-expanded="false"
-          >
-            navigation
-          </button>
-
-          <ul class="menu" id="navi-menu">
-            <li class="menu__section">
-              <span class="menu__heading">from me</span>
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a class="menu__link" href="/about.html" target="mainframe"
-                    >about</a
-                  >
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/work/" target="mainframe"
-                    >work</a
-                  >
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/blog.html" target="_self"
-                    >blog</a
-                  >
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/shrines/" target="_self"
-                    >shrines</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="menu__section">
-              <span class="menu__heading">for you</span>
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a
-                    class="menu__link"
-                    href="/commission.html"
-                    target="mainframe"
-                    >commission</a
-                  >
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/guestbook.html" target="_self"
-                    >guestbook</a
-                  >
-                </li>
-                <li class="menu__item">
-                  <a
-                    class="menu__link"
-                    href="/resources.html"
-                    target="mainframe"
-                    >resources</a
-                  >
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link" href="/links.html" target="mainframe"
-                    >links</a
-                  >
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- ~* FEATURED *~ -->
-        <aside class="card featured sidebar__section">
-          <h2 class="card__title">featured</h2>
-
-          <div class="l-scrollbar-container">
-            <div class="card__body" id="featured">
-              <!-- <img -->
-              <!--   class="image" -->
-              <!--   src="/_assets/img/featured.gif" -->
-              <!--   alt="death of a rabbit by your arms are my cocoon" -->
-              <!--   title="death of a rabbit by your arms are my cocoon" -->
-              <!-- /> -->
-
-              <!-- <p class="copy copy_center"> -->
-              <!--   <cite -->
-              <!--     ><a -->
-              <!--       rel="external" -->
-              <!--       href="https://yourarmsaremycocoonemo.bandcamp.com/album/death-of-a-rabbit" -->
-              <!--       target="_blank" -->
-              <!--       >your arms are my cocoon - death of a rabbit</a -->
-              <!--     ></cite -->
-              <!--   > -->
-              <!-- </p> -->
-            </div>
+          <div class="[ cluster ] [ flex-nowrap ] [ hidden@mobile ]">
+            <span class="header-ornament" aria-hidden="true" role="img">⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆</span>
+            <p class="header-text" id="splash-text">dstbnnybdrm</p>
+            <span class="header-ornament" aria-hidden="true" role="img">⚘｡˚۰˚☽˚⁀➷｡˚⚘⋆</span>
           </div>
-        </aside>
-      </div>
 
-      <!-- ~*:._.:*~  MAIN  ~*:._.:*~ -->
-      <main id="main" class="main hub__main">
-        <iframe
-          class="main__frame"
-          name="mainframe"
-          title="main content"
-        ></iframe>
-      </main>
+          <button class="drawer-open-button" id="sidebar-open-button" type="button">menu</button>
 
-      <!-- ~*:._.:*~  MINOR SIDEBAR  ~*:._.:*~ -->
-      <div class="sidebar sidebar_minor hub__sidebar">
-        <!-- ~* STATUS WIDGET *~ -->
-        <aside class="card status sidebar__section">
-          <h2 class="card__title">latest status</h2>
+          <noscript>
+            <nav class="hidden@desktop">
+              <ul class="cluster" role="list" style="justify-content: center; row-gap: 0">
+                <li class="board-list">
+                  <a href="/home.html">home</a>
+                </li>
+                <li>
+                  <ul class="board-list" role="list">
+                    <li><a href="/about.html">about</a></li>
+                    <li>
+                      <a href="/projects/" target="mainframe">projects</a>
+                    </li>
+                    <li><a href="/blog/">blog</a></li>
+                    <li>
+                      <a href="/shrines/" target="mainframe">shrines</a>
+                    </li>
+                  </ul>
+                </li>
 
-          <div class="l-scrollbar-container">
-            <div class="card__body" id="statuscafe">
-              <div id="statuscafe-username"></div>
-              <div id="statuscafe-content">…</div>
+                <li>
+                  <ul class="board-list" role="list">
+                    <li>
+                      <a href="/resources.html" target="mainframe">resources</a>
+                    </li>
+                    <li>
+                      <a href="/links.html" target="mainframe">links</a>
+                    </li>
+                    <li><a href="/guestbook.html">guestbook</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </noscript>
+        </header>
+
+        <div class="has-drawer@mobile">
+          <aside class="[ hub-container__sidebar ] [ box flow ]" id="sidebar">
+            <h2 class="visually-hidden">sidebar</h2>
+
+            <div class="center-x">
+              <img
+                src="https://file.garden/ZhWP_IgEyxzXJSNb/dstbnnybdrm.gif"
+                alt="dusbunnybunnybedroom"
+                title="dusbunnybunnybedroom"
+              />
             </div>
 
-            <footer class="card__footer">
-              <div class="l-center micro-bars">
-                <a
-                  rel="external"
-                  href="https://status.cafe/users/dstbnnyjp"
-                  target="_blank"
-                  ><img
-                    class="antipixel"
-                    src="https://status.cafe/users/dstbnnyjp/badge.png"
-                    alt="Status Cafe Profile"
-                /></a>
+            <nav class="text-center" id="nav">
+              <h3 class="visually-hidden">navigation</h3>
+
+              <ul class="[ hub-nav-list drawer-list@mobile ] [ flow ]" role="list">
+                <li>
+                  <a href="/home.html" target="mainframe">home</a>
+                </li>
+
+                <li>
+                  <div class="list-subheading">from me</div>
+                  <ul role="list">
+                    <li><a href="/about.html">about</a></li>
+                    <li><a href="/projects/" target="mainframe">projects</a></li>
+                    <li><a href="/blog/">blog</a></li>
+                    <li><a href="/shrines/" target="mainframe">shrines</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <div class="list-subheading">for you</div>
+                  <ul role="list">
+                    <li><a href="/resources.html" target="mainframe">resources</a></li>
+                    <li><a href="/links.html" target="mainframe">links</a></li>
+                    <li><a href="/guestbook.html">guestbook</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+
+            <article class="[ sidebar-section ] [ status-cafe ]" id="statuscafe">
+              <div class="[ sidebar-section__content ] [ flow ]">
+                <header class="visually-hidden">
+                  <h3>status cafe</h3>
+                  <p id="statuscafe-username" hidden></p>
+                </header>
+
+                <blockquote>
+                  <p id="statuscafe-content">
+                    <noscript>sorry, this section requires JavaScript!</noscript>
+                  </p>
+                </blockquote>
+
+                <footer class="center-x">
+                  <a href="https://status.cafe/users/dstbnnyjp"
+                    ><img src="https://status.cafe/users/dstbnnyjp/badge.png" alt="Status Cafe Profile"
+                  /></a>
+                </footer>
               </div>
-            </footer>
-          </div>
-        </aside>
+            </article>
 
-        <aside class="card site-log sidebar__section">
-          <h2 class="card__title">site log</h2>
-          <div class="l-scrollbar-container" role="log">
-            <div class="feed" id="site-log">…</div>
-          </div>
-        </aside>
+            <article class="sidebar-section">
+              <div class="[ sidebar-section__content ] [ flow ]">
+                <h3>changelog</h3>
+
+                <div class="[ changelog ] [ aside-box box ]">
+                  <ul class="flow" role="list">
+                    <li>
+                      <article class="changelog__entry">
+                        <time datetime="2026-07-20">2026-07-20:</time>
+                        <p>
+                          new site revamp! we’re at version 3.0 of the dstbnnysite i think! still tweaking some things
+                          here and there but i think the bulk of the work is done now! i hope it’s cool lol
+                        </p>
+                      </article>
+                    </li>
+
+                    <li>
+                      <article class="changelog__entry">
+                        <time datetime="2025-06-13">2025-06-13:</time>
+                        <p>
+                          updated, fixed, or removed some links on the
+                          <a href="/links.html" target="mainframe">links</a> page!
+                        </p>
+                      </article>
+                    </li>
+
+                    <li>
+                      <article class="changelog__entry">
+                        <time datetime="2025-04-27">2025-04-27:</time>
+                        <p>added a new tab to the <a href="/projects/tabs/" target="mainframe">tabs</a> page!</p>
+                      </article>
+                    </li>
+
+                    <li>
+                      <article class="changelog__entry">
+                        <time datetime="2025-04-27">2025-04-27:</time>
+                        <p>
+                          in the progress of updating some typography stuff! now using new fonts
+                          <a rel="external" href="https://mozilla.github.io/Fira/">Fira</a> and
+                          <a rel="external" href="https://practicaltypography.com/charter.html">Charter</a> in place of
+                          Verdana and Georgia respectively!
+                        </p>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </aside>
+
+          <!-- darkens screen on mobile when nav is opened -->
+          <div class="drawer-scrim" id="sidebar-overlay"></div>
+
+          <main id="main">
+            <iframe src="/home.html" name="mainframe" title="main content"></iframe>
+          </main>
+        </div>
       </div>
 
-      <!-- ~*:._.:*~  BUTTONS MARQUEE  ~*:._.:*~ -->
-      <aside class="hub__marquee">
-        <div id="marquee">…</div>
-      </aside>
+      <footer class="[ hub-footer ] [ box flow ]">
+        <h2 class="visually-hidden">footer</h2>
 
-      <!-- ~*:._.:*~  FOOTER  ~*:._.:*~ -->
-      <footer class="footer">
-        <div id="footer">…</div>
+        <ul class="[ pipe-list ] [ cluster ] [ justify-center ]" role="list">
+          <li>©&nbsp;<time class="u-caps-spacing" datetime="2022">2022</time> dustbunnybedroom</li>
+          <li><a href="/sitemap.html">sitemap</a></li>
+          <li><a href="/about.html#elsewhere">contact</a></li>
+          <li><a rel="external" href="https://github.com/dstbnnybdrm/dstbnnysite">source code</a></li>
+        </ul>
+
+        <ul class="[ cluster ] [ justify-center ]" role="list">
+          <li>
+            <a rel="external" href="https://neocities.org/"
+              ><img
+                src="/assets/img/antipixels/host-neocities.gif"
+                alt="Hosted by Neocities"
+                title="Hosted by Neocities"
+                width="80px"
+                height="15px"
+            /></a>
+          </li>
+          <li>
+            <a rel="external" href="https://neovim.io/"
+              ><img
+                src="/assets/img/antipixels/nvim-powered.gif"
+                alt="Powered by Neovim"
+                title="Powered by Neovim"
+                width="80px"
+                height="15px"
+            /></a>
+          </li>
+          <li>
+            <a rel="external" href="https://www.11ty.dev/"
+              ><img
+                src="/assets/img/antipixels/11ty-powered.gif"
+                alt="Powered by Eleventy"
+                title="Powered by Eleventy"
+                width="80px"
+                height="15px"
+            /></a>
+          </li>
+        </ul>
       </footer>
     </div>
   </body>

@@ -1,0 +1,1068 @@
+@charset "UTF-8";
+
+/* =============================== ABSTRACTS ================================ */
+
+/* --------------------------------- FONTS ---------------------------------- */
+
+/* ---- SANS SERIF ---- */
+
+@font-face {
+    src: url("/assets/fonts/FiraSans-Regular.woff2") format("woff2");
+    font-family: "Fira";
+}
+
+@font-face {
+    font-weight: bold;
+    src: url("/assets/fonts/FiraSans-Bold.woff2") format("woff2");
+    font-family: "Fira";
+}
+
+@font-face {
+    font-style: italic;
+    src: url("/assets/fonts/FiraSans-Italic.woff2") format("woff2");
+    font-family: "Fira";
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: bold;
+    src: url("/assets/fonts/FiraSans-BoldItalic.woff2") format("woff2");
+    font-family: "Fira";
+}
+
+/* ---- JP GOTHIC ---- */
+
+@font-face {
+    font-style: normal;
+    font-weight: normal;
+    src: url("/assets/fonts/noto-sans-jp-v56-japanese-regular.woff2")
+        format("woff2");
+    font-family: "Noto Sans JP";
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: bold;
+    src: url("/assets/fonts/noto-sans-jp-v56-japanese-700.woff2")
+        format("woff2");
+    font-family: "Noto Sans JP";
+    font-display: swap;
+}
+
+/* ---- SERIF ---- */
+
+@font-face {
+    src: url("/assets/fonts/charter_regular.woff2") format("woff2");
+    font-family: "Charter";
+}
+
+@font-face {
+    font-weight: bold;
+    src: url("/assets/fonts/charter_bold.woff2") format("woff2");
+    font-family: "Charter";
+}
+
+@font-face {
+    font-style: italic;
+    src: url("/assets/fonts/charter_italic.woff2") format("woff2");
+    font-family: "Charter";
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: bold;
+    src: url("/assets/fonts/charter_bold_italic.woff2") format("woff2");
+    font-family: "Charter";
+}
+
+/* ---- JP MINCHO ---- */
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/noto-serif-jp-v33-latin-regular.woff2")
+        format("woff2");
+    font-family: "Noto Serif JP";
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: bold;
+    src: url("/assets/fonts/noto-serif-jp-v33-latin-700.woff2") format("woff2");
+    font-family: "Noto Serif JP";
+}
+
+/* ---- MONOSPACE ---- */
+
+@font-face {
+    src: url("/assets/fonts/FiraMono-Regular.woff2") format("woff2");
+    font-family: "Fira Mono";
+}
+
+@font-face {
+    font-weight: bold;
+    src: url("/assets/fonts/FiraMono-Bold.woff2") format("woff2");
+    font-family: "Fira Mono";
+}
+
+/* --------------------------------- TOKENS --------------------------------- */
+
+:root {
+    /* ---- SPACE SCALE ---- */
+    --space-3xs: 0.25rem;
+    --space-2xs: 0.5rem;
+    --space-xs: 0.75rem;
+    --space-s: 1rem;
+    --space-m: 1.5rem;
+    --space-l: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+
+    /* fonts. fallbacks taken from: https://modernfontstacks.com/ */
+    --font-base:
+        "Fira", Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+        source-sans-pro, sans-serif;
+    --font-jp-base: "Noto Sans JP", sans-serif;
+    --font-alt: "Charter", "Bitstream Charter", "Sitka Text", Cambria, serif;
+    --font-jp-alt: "Noto Serif JP", serif;
+    --font-mono:
+        "Fira Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+        Consolas, "DejaVu Sans Mono", monospace;
+
+    /* ---- TYPE SCALE ---- */
+    --step--1: 0.83rem;
+    --step-0: 1rem;
+    --step-1: 1.2rem;
+    --step-2: 1.44rem;
+    --step-3: 1.73rem;
+    --step-4: 2.07rem;
+
+    --line-height-flat: 1;
+    --line-height-compact: 1.2;
+    --line-height-base: 1.5;
+    --line-height-loose: 1.7;
+
+    /* see https://webtypography.net/2.1.6 */
+    --caps-letter-spacing: 0.04em;
+
+    /* in our base font, ~66 characters, or around 2.5 alphabets */
+    --measure-max: 34.27rem;
+
+    /* (800px × 600px) ÷ 16px (the default font size) */
+    --svga-width: 50rem;
+    --svga-height: 37.5rem;
+
+    /* border style that emulates frameset borders */
+    --border-frame-set: 3px double;
+
+    --hub-gutter: var(--space-xs);
+}
+
+/* ================================== BASE ================================== */
+
+/* --------------------------------- RESET ---------------------------------- */
+
+/*
+ * slightly modified from here:
+ * https://www.joshwcomeau.com/css/custom-css-reset/
+ */
+
+/* less shitty box-sizing (border-based instead of content-based) */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* remove default margin */
+
+*:not(dialog) {
+    margin: 0;
+}
+
+/* remove default padding */
+
+ul[role],
+ol[role] {
+    padding: 0;
+    list-style: none;
+}
+
+/* body defaults */
+
+body {
+    min-height: 100vh;
+
+    line-height: var(--line-height-base);
+}
+
+/* ensure text decoration won't interfere with ascenders and descenders */
+
+a:not([class]) {
+    -webkit-text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}
+
+/* improve media defaults */
+
+img,
+picture,
+video,
+canvas,
+svg,
+audio {
+    display: block;
+
+    /* disable anti-alias (for pixel art and etc., we WANT the pixel jaggedness
+     * lol) */
+    image-rendering: pixelated;
+    max-width: 100%;
+}
+
+/* forms inherit their typography styles */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* wrap instead of overflow text */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* --------------------------------- GLOBAL --------------------------------- */
+
+:root {
+    /* 15px */
+    font-size: 93.75%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: var(--color-background);
+    height: 100%;
+    color: var(--color-base);
+
+    font-family: var(--font-base);
+}
+
+[hidden] {
+    display: none;
+}
+
+/* ---- PSEUDO ELEMENTS ---- */
+
+::-moz-selection {
+    background: var(--color-accent);
+    color: var(--color-background);
+}
+
+::selection {
+    background: var(--color-accent);
+    color: var(--color-background);
+}
+
+/* ---- CONTENT SECTIONING ---- */
+
+main > iframe:only-child {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: var(--step-3);
+    line-height: var(--line-height-compact);
+}
+
+h2 {
+    font-size: var(--step-2);
+    line-height: var(--line-height-compact);
+}
+
+h3 {
+    font-size: var(--step-1);
+    line-height: var(--line-height-compact);
+}
+
+h4,
+h5,
+h6 {
+    font-size: var(--step-0);
+    line-height: var(--line-height-compact);
+}
+
+/* ---- TEXT CONTENT ---- */
+
+p,
+li,
+hr,
+dd,
+dt {
+    max-width: var(--measure-max);
+}
+
+blockquote {
+    padding-left: 2em;
+
+    font-style: italic;
+    line-height: var(--line-height-compact);
+}
+
+figure > img + img {
+    margin-top: var(--space-xs);
+}
+
+figcaption {
+    margin-top: var(--space-2xs);
+    font-size: var(--step--1);
+    line-height: var(--line-height-compact);
+}
+
+pre {
+    line-height: 1rem;
+    font-family: monospace;
+}
+
+ul,
+ol {
+    padding-left: calc(var(--space-s) + var(--space-3xs));
+}
+
+ul {
+    list-style: "❊\00A0";
+}
+
+dt {
+    font-weight: bold;
+}
+
+* + dt {
+    margin-top: var(--space-2xs);
+}
+
+dd {
+    display: list-item;
+
+    margin-left: 1.5ch;
+
+    list-style: "::\00A0";
+}
+
+[aria-current="page"] {
+    font-weight: bold;
+}
+
+/* ---- INLINE TEXT SEMANTICS ---- */
+
+a {
+    text-decoration-style: dotted;
+
+    /* add marker for external links */
+}
+
+/* but NOT on images! */
+
+a[rel*="external"]:not(:has(img))::after {
+    content: "\00A0⚘";
+    font-style: normal;
+    /* don't take the styling of whatever its attached to */
+    font-weight: normal;
+}
+
+a:link {
+    color: var(--color-primary);
+}
+
+a:visited {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+a:hover img {
+    /* converted using: https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: grayscale(1) sepia(34%) saturate(499%) hue-rotate(112deg)
+        brightness(91%) contrast(87%);
+}
+
+abbr {
+    background: none;
+    font: inherit;
+}
+
+abbr:not([data-no-spacing]) {
+    letter-spacing: var(--caps-letter-spacing);
+}
+
+small {
+    font-size: var(--step--1);
+}
+
+/* IMAGE / MULTIMEDIA */
+
+/* tone down images in dark mode. from:
+     * https://www.bram.us/2019/10/09/implementing-dark-mode-on-adactio-com/ */
+
+audio {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* EMBEDDED CONTENT */
+
+iframe {
+    border: none;
+}
+
+/* ---- FORMS ---- */
+
+button {
+    border: none;
+    background-color: var(--color-primary);
+    padding: var(--space-3xs);
+    color: var(--color-background);
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+}
+
+textarea {
+    width: 100%;
+
+    font-size: 16px;
+    font-family: var(--font-mono);
+}
+
+/* ---- INTERACTIVE ---- */
+
+summary {
+    cursor: pointer;
+}
+
+/* ================================ LAYOUTS ================================= */
+
+.box {
+    --_box-padding: var(--box-padding, 1em);
+    padding: var(--_box-padding);
+}
+
+.flow {
+    --flow-space: 1em;
+}
+
+/* don't add space after an invisible block */
+
+.flow > :is(.visually-hidden, [hidden], .skip-link) + * {
+    margin-block: 0;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space);
+}
+
+.center-x {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-y {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100%;
+}
+
+.center-y > * {
+    margin-block: auto;
+}
+
+.cluster {
+    --_cluster-space: var(--cluster-space, var(--space-s));
+
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: var(--_cluster-space);
+}
+
+.switcher {
+    /* width at which the layout "breaks" */
+    --_switcher-gap: var(--switcher-gap, var(--space-s));
+    --_switcher-threshold: var(--switcher-threshold, 30rem);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--_switcher-gap);
+}
+
+.switcher > * {
+    flex-grow: 1;
+    /* value is dropped when negative, causing the switch to vertical */
+    flex-basis: calc((var(--_switcher-threshold) - 100%) * 999);
+}
+
+/* assumes _only 2_ direct children */
+
+.has-sidebar {
+    --_sidebar-basis: var(--sidebar-basis, auto);
+    --_sidebar-breakpoint: var(--sidebar-breakpoint, 50%);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /* allow both to shrink */
+    min-height: 0;
+}
+
+/* the actual sidebar */
+
+.has-sidebar:not([data-reversed]) > :first-child,
+.has-sidebar[data-reversed] > :last-child {
+    flex-grow: 1;
+    flex-basis: var(--_sidebar-basis);
+}
+
+/* the rest of the content */
+
+.has-sidebar:not([data-reversed]) > :last-child,
+.has-sidebar[data-reversed] > :first-child {
+    flex-grow: 999;
+    /* grow content from nothing */
+    flex-basis: 0;
+    min-width: var(--_sidebar-breakpoint);
+}
+
+.carousel {
+    --_carousel-gap: var(--carousel-gap, var(--space-s));
+
+    display: flex;
+
+    align-items: center;
+    gap: var(--_carousel-gap);
+
+    overflow-x: auto;
+}
+
+.carousel[data-snap] {
+    scroll-snap-type: x mandatory;
+}
+
+.carousel > li {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+
+.carousel[data-snap] > li {
+    scroll-snap-align: center;
+}
+
+/* =============================== COMPONENTS =============================== */
+
+/*
+ * a link, hidden by default until focused, that skips navigation links for
+ * primarily-keyboard users.
+ */
+
+.skip-link {
+    clip: rect(1px, 1px, 1px, 1px);
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    clip: auto;
+    background-color: var(--color-background);
+    padding: var(--space-xs);
+    width: auto;
+    height: auto;
+    overflow: visible;
+    line-height: 1;
+}
+
+ul.dir-list,
+.dir-list ul {
+    padding-inline-start: 1.3em;
+    list-style: "∟\00A0";
+}
+
+.pipe-list {
+    --cluster-space: 0;
+
+    display: flex;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.pipe-list > *:not(:last-child)::after {
+    margin-inline: 1ch;
+
+    content: "|";
+}
+
+/*
+* inspired by navigation links in image boards.
+ */
+
+.board-list {
+    display: flex;
+
+    list-style: none;
+}
+
+.board-list::before {
+    content: "[\00A0";
+}
+
+.board-list::after {
+    content: "\00A0]";
+}
+
+.board-list > li:not(:last-child)::after {
+    content: "\00A0/\00A0";
+}
+
+/*
+ * inspired by the links at the bottom of this page:
+ * @link: https://geocities.restorativland.org/Tokyo/Lights/8912/
+ */
+
+.block-list {
+    justify-content: center;
+}
+
+.block-list > li {
+    display: flex;
+    flex-direction: column;
+
+    width: 7.88rem;
+
+    list-style: none;
+    text-align: center;
+}
+
+.block-list img {
+    display: block;
+    aspect-ratio: 1/1;
+}
+
+:is(.block-list span)::before,
+:is(.block-list span)::after {
+    content: "\00A0~\00A0";
+}
+
+/*
+ * some suggestions for both marking up and styling poetry taken from:
+ * @link: https://web.archive.org/web/20220802003441/https://yearebase.github.io/blog/poetry-in-html/
+ */
+
+.poem {
+    max-width: var(--measure-max);
+
+    font-family: var(--font-alt);
+}
+
+.poem > * + * {
+    margin-top: 1em;
+}
+
+.poem__title {
+    font-style: italic;
+    font-weight: normal;
+    font-size: var(--step-0);
+}
+
+/* hang indents when lines wrap */
+
+.poem__stanza {
+    padding-left: var(--space-l);
+    text-indent: calc(-1 * var(--space-l));
+}
+
+.changelog {
+    max-height: 14rem;
+    overflow-y: auto;
+}
+
+.changelog__entry {
+    font-size: var(--step--1);
+    text-align: left;
+}
+
+.changelog__entry > time {
+    display: block;
+    font-weight: bold;
+    letter-spacing: var(--caps-letter-spacing);
+}
+
+/*
+ * widget from:
+ * @link: https://status.cafe/current-status 
+ */
+
+.status-cafe blockquote {
+    padding: initial;
+
+    font-style: initial;
+    font-size: var(--step--1);
+    line-height: var(--line-height-base);
+    text-align: center;
+}
+
+.status-cafe p {
+    quotes: auto;
+}
+
+:is(.status-cafe p)::before {
+    content: open-quote;
+}
+
+:is(.status-cafe p)::after {
+    content: close-quote;
+}
+
+/*
+ * used in tandem with FLOW to style and space typographical elements.
+ */
+
+.prose {
+    --flow-space: 1em;
+}
+
+.prose > h2 {
+    --flow-space: 1.44em;
+}
+
+.prose > h3 {
+    --flow-space: 1.2em;
+}
+
+/* subsequent headings look better with smaller space between them */
+
+.prose :is(h1, h2, h3) + :is(h2, h3, h4) {
+    --flow-space: 0.58em;
+}
+
+.prose address {
+    --flow-space: 0;
+}
+
+.prose hr {
+    border: none;
+}
+
+.prose hr,
+.prose hr + * {
+    --flow-space: 2.49em;
+}
+
+/* use decorative dinkus instead */
+
+.prose hr::before {
+    display: block;
+
+    content: "᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃";
+
+    color: var(--color-base);
+    text-align: center;
+}
+
+/* increased space for figure blocks */
+
+.prose pre,
+.prose pre + *,
+.prose figure,
+.prose figure + * {
+    --flow-space: 2.07em;
+}
+
+/* reduce space for figure blocks after headings */
+
+.prose :is(h1, h2, h3, h4) + :is(pre, figure) {
+    --flow-space: 1em;
+}
+
+.aside-box {
+    border: 1px dashed;
+}
+
+/* =============================== UTILITIES ================================ */
+
+/*
+ * mostly using naming conventions from
+ * Tailwind (https://tailwindcss.com/docs/styling-with-utility-classes), not cuz
+ * i like them necessarily, but to distinguish them from other components
+ * without having to use a namespace like "u-*"
+ */
+
+/* --------------------------------- LAYOUT --------------------------------- */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ *  visually hides an object while still making it available to screen readers.
+ *  taken from:
+ *  https://www.a11yproject.com/posts/how-to-hide-content/
+ */
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    position: absolute;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* fixes max width and horizontally centres */
+
+.wrapper {
+    margin-inline: auto;
+    padding-inline: var(--space-s);
+
+    width: 100%;
+    max-width: var(--measure-max);
+}
+
+.float-left {
+    --float-space: 1em;
+    float: left !important;
+    margin-right: var(--float-space);
+}
+
+.float-right {
+    --float-space: 1em;
+    float: right !important;
+    margin-left: var(--float-space);
+}
+
+/* -------------------------------- SPACING --------------------------------- */
+
+.p-s {
+    padding: var(--space-s) !important;
+}
+
+.p-xs {
+    padding: var(--space-xs) !important;
+}
+
+.pt-s {
+    padding-top: var(--space-s) !important;
+}
+
+.mt-s {
+    margin-top: var(--space-s) !important;
+}
+
+.mx-auto {
+    margin-inline: auto !important;
+}
+
+.flow-space-l {
+    --flow-space: var(--space-l) !important;
+}
+
+.flow-space-3xs {
+    --flow-space: var(--space-3xs) !important;
+}
+
+/* ------------------------------- TYPOGRAPHY ------------------------------- */
+
+.font-alt {
+    font-family: var(--font-alt) !important;
+}
+
+.font-mono {
+    font-family: var(--font-mono) !important;
+}
+
+.font-jp-base {
+    font-family: var(--font-jp-base) !important;
+}
+
+.font-jp-alt {
+    font-family: var(--font-jp-alt) !important;
+}
+
+.text--1 {
+    font-size: var(--step--1) !important;
+}
+
+.text-0 {
+    font-size: var(--step-0) !important;
+}
+
+.font-normal {
+    font-weight: normal !important;
+}
+
+/* using advice from: https://webtypography.net/2.1.6 */
+
+.letter-spacing-caps {
+    letter-spacing: var(--caps-letter-spacing) !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-end {
+    text-align: end !important;
+}
+
+.line-through {
+    text-decoration: line-through !important;
+}
+
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
+/* ----------------------------- FLEXBOX / GRID ----------------------------- */
+
+.basis-auto {
+    flex-basis: auto !important;
+}
+
+.gap-s {
+    gap: var(--space-s) !important;
+}
+
+.gap-l {
+    gap: var(--space-l) !important;
+}
+
+.justify-center {
+    justify-content: center !important;
+}
+
+.justify-items-center {
+    justify-items: center !important;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+/* ---- SIZE ---- */
+
+.h-full {
+    height: 100%;
+}
+
+/* ---- BORDER ---- */
+
+.border-b-1 {
+    border-bottom: 1px solid !important;
+}
+
+.sidebar-breakpoint-0 {
+    --_sidebar-breakpoint: 0% !important;
+}
+
+/* ================================= THEMES ================================= */
+
+:root {
+    color-scheme: light dark;
+}
+
+:root,
+[data-force-theme="light"]:root {
+    --color-base: #61193e;
+    /* for colouring transparent, black graphics 
+         * converted using: https://codepen.io/sosuke/pen/Pjoqqp */
+    --filter-base: invert(14%) sepia(28%) saturate(4517%) hue-rotate(302deg)
+        brightness(85%) contrast(94%);
+    --color-background: #fffafa;
+
+    --color-primary: #c43162;
+    --color-secondary: #4f9c86;
+    --color-accent: #ef9a56;
+}
+
+/* ======================= INNER FRAME-SPECIFIC START ======================= */
+
+.inner-frame {
+    --box-padding: var(--hub-gutter);
+    max-width: var(--svga-width);
+}
+
+.inner-frame__footer {
+    border-top: 2px solid;
+}
+
+/* ================================ QUERIES ================================= */
+
+@media screen and (min-width: 541px) {
+    .hidden\@desktop {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .changelog {
+        max-height: none;
+    }
+
+    .hidden\@mobile {
+        display: none !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    img {
+        filter: brightness(0.8) contrast(1.2);
+    }
+
+    :root {
+        --color-base: #dcd8e1;
+        --filter-base: invert(99%) sepia(86%) saturate(259%) hue-rotate(286deg)
+            brightness(91%) contrast(83%);
+        --color-background: #040416;
+
+        --color-primary: #bb5d6b;
+        /* --color-secondary: #3b8e96; */
+        --color-secondary: #36848c;
+        --color-accent: #dfaf75;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* remove all animations and transitions for people that prefer not to see them */
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

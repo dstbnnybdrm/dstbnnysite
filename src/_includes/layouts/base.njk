@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      {% if title %}{{ title }} ❊{% endif %}
+      {% if "/blog" in page.url %}dustbunnyblog{% else %}dustbunnybedroom{% endif %}
+    </title>
+
+    {% if description %}
+      <meta name="description" content="{{ description }}" />
+    {% endif %}
+    <meta name="author" content="jp" />
+    <meta name="robots" content="noai, noimageai" />
+    {% block meta %}{% endblock %}
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/assets/css/{% if not stylesheet %}style{% else %}{{ stylesheet }}{% endif %}.css" />
+    {% block styles %}
+    {% endblock %}
+
+    <!-- icons -->
+    <link rel="icon" href="/dstbnnybdrm.gif" sizes="88x31" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+
+    {#
+    <!-- make feed auto-discoverable -->
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="dstbnnyfeed" />
+    #}
+
+    <!-- open graph protocol -->
+    <meta property="og:title" content="{{ title }}" />
+    {#
+      <meta property="og:image" content="" />
+      <meta property="og:url" content="" />
+    #}
+    {% if description %}
+      <meta property="og:description" content="{{ description }}" />
+    {% endif %}
+    {% if "/blog/post" in page.url %}
+      <meta property="og:type" content="article" />
+      <meta property="og:site_name" content="dustbunnyblog" />
+      <meta property="og:author" content="dstbnnyjp" />
+    {% else %}
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="dustbunnybedroom" />
+    {% endif %}
+
+    <!-- scripts -->
+    <script src="/assets/js/script.js" type="module"></script>
+    {% block scripts %}{% endblock %}
+  </head>
+
+  <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %} id="top">
+    {% block content %}
+      {{ content | safe }}
+    {% endblock content %}
+  </body>
+</html>

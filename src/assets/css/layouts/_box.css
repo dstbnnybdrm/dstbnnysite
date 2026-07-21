@@ -1,0 +1,4 @@
+.box {
+    --_box-padding: var(--box-padding, 1em);
+    padding: var(--_box-padding);
+}

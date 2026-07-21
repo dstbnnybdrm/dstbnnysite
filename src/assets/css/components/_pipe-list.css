@@ -1,0 +1,15 @@
+.pipe-list {
+    --cluster-space: 0;
+
+    display: flex;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.pipe-list > *:not(:last-child)::after {
+    margin-inline: 1ch;
+
+    content: "|";
+}

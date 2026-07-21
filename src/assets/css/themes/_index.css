@@ -1,0 +1,31 @@
+/* ================================= THEMES ================================= */
+
+:root {
+    color-scheme: light dark;
+
+    &,
+    &[data-force-theme="light"] {
+        --color-base: #61193e;
+        /* for colouring transparent, black graphics 
+         * converted using: https://codepen.io/sosuke/pen/Pjoqqp */
+        --filter-base: invert(14%) sepia(28%) saturate(4517%) hue-rotate(302deg)
+            brightness(85%) contrast(94%);
+        --color-background: #fffafa;
+
+        --color-primary: #c43162;
+        --color-secondary: #4f9c86;
+        --color-accent: #ef9a56;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        --color-base: #dcd8e1;
+        --filter-base: invert(99%) sepia(86%) saturate(259%) hue-rotate(286deg)
+            brightness(91%) contrast(83%);
+        --color-background: #040416;
+
+        --color-primary: #bb5d6b;
+        /* --color-secondary: #3b8e96; */
+        --color-secondary: #36848c;
+        --color-accent: #dfaf75;
+    }
+}

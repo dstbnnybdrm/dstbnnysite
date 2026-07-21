@@ -1,0 +1,25 @@
+/* ----------------------------- FLEXBOX / GRID ----------------------------- */
+
+.basis-auto {
+    flex-basis: auto !important;
+}
+
+.gap-s {
+    gap: var(--space-s) !important;
+}
+
+.gap-l {
+    gap: var(--space-l) !important;
+}
+
+.justify-center {
+    justify-content: center !important;
+}
+
+.justify-items-center {
+    justify-items: center !important;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}

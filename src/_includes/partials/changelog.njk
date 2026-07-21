@@ -1,0 +1,16 @@
+<h3>changelog</h3>
+
+<div class="[ changelog ] [ aside-box box ]">
+  <ul class="flow" role="list">
+    {% for entry in changelog %}
+      {% if loop.index <= 5 %}
+        <li>
+          <article class="changelog__entry">
+            <time datetime="{{ entry.date }}">{{ entry.date }}:</time>
+            <p>{{ entry.description | safe }}</p>
+          </article>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

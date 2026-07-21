@@ -1,0 +1,29 @@
+/* =============================== UTILITIES ================================ */
+
+/*
+ * mostly using naming conventions from
+ * Tailwind (https://tailwindcss.com/docs/styling-with-utility-classes), not cuz
+ * i like them necessarily, but to distinguish them from other components
+ * without having to use a namespace like "u-*"
+ */
+
+@import url("_layout.css");
+@import url("_spacing.css");
+@import url("_typography.css");
+@import url("_flexbox-grid.css");
+
+/* ---- SIZE ---- */
+
+.h-full {
+    height: 100%;
+}
+
+/* ---- BORDER ---- */
+
+.border-b-1 {
+    border-bottom: 1px solid !important;
+}
+
+.sidebar-breakpoint-0 {
+    --_sidebar-breakpoint: 0% !important;
+}

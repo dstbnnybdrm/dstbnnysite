@@ -1,0 +1,12 @@
+.flow {
+    --flow-space: 1em;
+}
+
+/* don't add space after an invisible block */
+.flow > :is(.visually-hidden, [hidden], .skip-link) + * {
+    margin-block: 0;
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space);
+}

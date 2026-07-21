@@ -1,0 +1,21 @@
+.carousel {
+    --_carousel-gap: var(--carousel-gap, var(--space-s));
+
+    display: flex;
+
+    align-items: center;
+    gap: var(--_carousel-gap);
+
+    overflow-x: auto;
+}
+.carousel[data-snap] {
+    scroll-snap-type: x mandatory;
+}
+
+.carousel > li {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+.carousel[data-snap] > li {
+    scroll-snap-align: center;
+}

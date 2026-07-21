@@ -1,0 +1,20 @@
+/*
+* inspired by navigation links in image boards.
+ */
+.board-list {
+    display: flex;
+
+    list-style: none;
+}
+
+.board-list::before {
+    content: "[\00A0";
+}
+
+.board-list::after {
+    content: "\00A0]";
+}
+
+.board-list > li:not(:last-child)::after {
+    content: "\00A0/\00A0";
+}

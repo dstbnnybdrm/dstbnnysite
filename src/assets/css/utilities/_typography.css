@@ -1,0 +1,50 @@
+/* ------------------------------- TYPOGRAPHY ------------------------------- */
+
+.font-alt {
+    font-family: var(--font-alt) !important;
+}
+
+.font-mono {
+    font-family: var(--font-mono) !important;
+}
+
+.font-jp-base {
+    font-family: var(--font-jp-base) !important;
+}
+
+.font-jp-alt {
+    font-family: var(--font-jp-alt) !important;
+}
+
+.text--1 {
+    font-size: var(--step--1) !important;
+}
+
+.text-0 {
+    font-size: var(--step-0) !important;
+}
+
+.font-normal {
+    font-weight: normal !important;
+}
+
+/* using advice from: https://webtypography.net/2.1.6 */
+.letter-spacing-caps {
+    letter-spacing: var(--caps-letter-spacing) !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-end {
+    text-align: end !important;
+}
+
+.line-through {
+    text-decoration: line-through !important;
+}
+
+.white-space-nowrap {
+    white-space: nowrap;
+}

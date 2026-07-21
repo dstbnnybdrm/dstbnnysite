@@ -1,0 +1,27 @@
+/* ------------------------------- NOT FOUND -------------------------------- */
+
+.not-found-main {
+    border: 1px solid;
+
+    & h2 {
+        border-bottom: 1px dotted;
+        width: 100%;
+        font-size: var(--step-1);
+        text-align: center;
+    }
+}
+
+.not-found-main__content {
+    padding: var(--space-s);
+    min-height: 1rem;
+
+    & img {
+        margin-right: auto;
+        margin-left: auto;
+        border: 2px dashed;
+    }
+
+    & p {
+        text-align: center;
+    }
+}

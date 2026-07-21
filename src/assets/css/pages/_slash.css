@@ -1,0 +1,19 @@
+/* ------------------------------ SLASH PAGES ------------------------------- */
+
+.slash-nav {
+    --box-padding: var(--space-xs);
+    --cluster-space: 1ch;
+
+    z-index: 100;
+    border-bottom: 1px dashed;
+    background-color: var(--color-background);
+
+    @media (--mobile-viewport) {
+        position: sticky;
+        top: 0;
+    }
+}
+
+.slash-nav > * {
+    justify-content: center;
+}

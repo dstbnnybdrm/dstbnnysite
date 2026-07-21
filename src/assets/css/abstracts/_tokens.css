@@ -1,0 +1,57 @@
+/* --------------------------------- TOKENS --------------------------------- */
+
+:root {
+    /* ---- SPACE SCALE ---- */
+    --space-3xs: 0.25rem;
+    --space-2xs: 0.5rem;
+    --space-xs: 0.75rem;
+    --space-s: 1rem;
+    --space-m: 1.5rem;
+    --space-l: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+    --space-3xl: 6rem;
+
+    /* fonts. fallbacks taken from: https://modernfontstacks.com/ */
+    --font-base:
+        "Fira", Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+        source-sans-pro, sans-serif;
+    --font-jp-base: "Noto Sans JP", sans-serif;
+    --font-alt: "Charter", "Bitstream Charter", "Sitka Text", Cambria, serif;
+    --font-jp-alt: "Noto Serif JP", serif;
+    --font-mono:
+        "Fira Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+        Consolas, "DejaVu Sans Mono", monospace;
+
+    /* ---- TYPE SCALE ---- */
+    --step--1: 0.83rem;
+    --step-0: 1rem;
+    --step-1: 1.2rem;
+    --step-2: 1.44rem;
+    --step-3: 1.73rem;
+    --step-4: 2.07rem;
+
+    --line-height-flat: 1;
+    --line-height-compact: 1.2;
+    --line-height-base: 1.5;
+    --line-height-loose: 1.7;
+
+    /* see https://webtypography.net/2.1.6 */
+    --caps-letter-spacing: 0.04em;
+
+    /* in our base font, ~66 characters, or around 2.5 alphabets */
+    --measure-max: 34.27rem;
+
+    /* (800px × 600px) ÷ 16px (the default font size) */
+    --svga-width: 50rem;
+    --svga-height: 37.5rem;
+
+    /* border style that emulates frameset borders */
+    --border-frame-set: 3px double;
+
+    --hub-gutter: var(--space-xs);
+}
+
+@custom-media --mobile-viewport screen and (max-width: 540px);
+@custom-media --desktop-viewport screen and (min-width: 541px);
+@custom-media --large-desktop-viewport screen and (min-width: 750px);

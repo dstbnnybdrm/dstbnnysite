@@ -1,0 +1,26 @@
+/*
+ * a link, hidden by default until focused, that skips navigation links for
+ * primarily-keyboard users.
+ */
+
+.skip-link {
+    clip: rect(1px, 1px, 1px, 1px);
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    clip: auto;
+    background-color: var(--color-background);
+    padding: var(--space-xs);
+    width: auto;
+    height: auto;
+    overflow: visible;
+    line-height: 1;
+}

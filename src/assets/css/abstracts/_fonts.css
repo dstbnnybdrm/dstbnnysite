@@ -1,0 +1,103 @@
+/* --------------------------------- FONTS ---------------------------------- */
+
+/* ---- SANS SERIF ---- */
+
+@font-face {
+    src: url("/assets/fonts/FiraSans-Regular.woff2") format("woff2");
+    font-family: "Fira";
+}
+
+@font-face {
+    font-weight: bold;
+    src: url("/assets/fonts/FiraSans-Bold.woff2") format("woff2");
+    font-family: "Fira";
+}
+
+@font-face {
+    font-style: italic;
+    src: url("/assets/fonts/FiraSans-Italic.woff2") format("woff2");
+    font-family: "Fira";
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: bold;
+    src: url("/assets/fonts/FiraSans-BoldItalic.woff2") format("woff2");
+    font-family: "Fira";
+}
+
+/* ---- JP GOTHIC ---- */
+
+@font-face {
+    font-style: normal;
+    font-weight: normal;
+    src: url("/assets/fonts/noto-sans-jp-v56-japanese-regular.woff2")
+        format("woff2");
+    font-family: "Noto Sans JP";
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: bold;
+    src: url("/assets/fonts/noto-sans-jp-v56-japanese-700.woff2")
+        format("woff2");
+    font-family: "Noto Sans JP";
+    font-display: swap;
+}
+
+/* ---- SERIF ---- */
+
+@font-face {
+    src: url("/assets/fonts/charter_regular.woff2") format("woff2");
+    font-family: "Charter";
+}
+
+@font-face {
+    font-weight: bold;
+    src: url("/assets/fonts/charter_bold.woff2") format("woff2");
+    font-family: "Charter";
+}
+
+@font-face {
+    font-style: italic;
+    src: url("/assets/fonts/charter_italic.woff2") format("woff2");
+    font-family: "Charter";
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: bold;
+    src: url("/assets/fonts/charter_bold_italic.woff2") format("woff2");
+    font-family: "Charter";
+}
+
+/* ---- JP MINCHO ---- */
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/noto-serif-jp-v33-latin-regular.woff2")
+        format("woff2");
+    font-family: "Noto Serif JP";
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: bold;
+    src: url("/assets/fonts/noto-serif-jp-v33-latin-700.woff2") format("woff2");
+    font-family: "Noto Serif JP";
+}
+
+/* ---- MONOSPACE ---- */
+
+@font-face {
+    src: url("/assets/fonts/FiraMono-Regular.woff2") format("woff2");
+    font-family: "Fira Mono";
+}
+
+@font-face {
+    font-weight: bold;
+    src: url("/assets/fonts/FiraMono-Bold.woff2") format("woff2");
+    font-family: "Fira Mono";
+}

@@ -1,0 +1,27 @@
+/* assumes _only 2_ direct children */
+.has-sidebar {
+    --_sidebar-basis: var(--sidebar-basis, auto);
+    --_sidebar-breakpoint: var(--sidebar-breakpoint, 50%);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /* allow both to shrink */
+    min-height: 0;
+}
+
+/* the actual sidebar */
+.has-sidebar:not([data-reversed]) > :first-child,
+.has-sidebar[data-reversed] > :last-child {
+    flex-grow: 1;
+    flex-basis: var(--_sidebar-basis);
+}
+
+/* the rest of the content */
+.has-sidebar:not([data-reversed]) > :last-child,
+.has-sidebar[data-reversed] > :first-child {
+    flex-grow: 999;
+    /* grow content from nothing */
+    flex-basis: 0;
+    min-width: var(--_sidebar-breakpoint);
+}

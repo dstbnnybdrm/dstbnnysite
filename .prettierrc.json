@@ -1,0 +1,31 @@
+{
+    "plugins": ["prettier-plugin-jinja-template", "prettier-plugin-css-order"],
+    "arrowParens": "always",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "semi": true,
+    "singleQuote": false,
+    "jsxSingleQuote": false,
+    "quoteProps": "as-needed",
+    "trailingComma": "all",
+    "singleAttributePerLine": false,
+    "htmlWhitespaceSensitivity": "css",
+    "vueIndentScriptAndStyle": false,
+    "proseWrap": "always",
+    "insertPragma": false,
+    "printWidth": 80,
+    "requirePragma": false,
+    "tabWidth": 4,
+    "useTabs": false,
+    "embeddedLanguageFormatting": "auto",
+    "overrides": [
+        {
+            "files": ["**/*.html", "**/*.njk"],
+            "options": {
+                "parser": "jinja-template",
+                "tabWidth": 2,
+                "printWidth": 120
+            }
+        }
+    ]
+}

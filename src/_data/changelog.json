@@ -1,0 +1,18 @@
+[
+    {
+        "date": "2026-07-20",
+        "description": "new site revamp! we’re at version 3.0 of the dstbnnysite i think! still tweaking some things here and there but i think the bulk of the work is done now! i hope it’s cool lol"
+    },
+    {
+        "date": "2025-06-13",
+        "description": "updated, fixed, or removed some links on the <a href='/links.html' target='mainframe'>links</a> page!"
+    },
+    {
+        "date": "2025-04-27",
+        "description": "added a new tab to the <a href='/projects/tabs/' target='mainframe'>tabs</a> page!"
+    },
+    {
+        "date": "2025-04-27",
+        "description": "in the progress of updating some typography stuff! now using new fonts <a rel='external' href='https://mozilla.github.io/Fira/'>Fira</a> and <a rel='external' href='https://practicaltypography.com/charter.html'>Charter</a> in place of Verdana and Georgia respectively!"
+    }
+]

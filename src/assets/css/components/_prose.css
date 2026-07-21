@@ -1,0 +1,55 @@
+/*
+ * used in tandem with FLOW to style and space typographical elements.
+ */
+.prose {
+    --flow-space: 1em;
+}
+
+.prose > h2 {
+    --flow-space: 1.44em;
+}
+
+.prose > h3 {
+    --flow-space: 1.2em;
+}
+
+/* subsequent headings look better with smaller space between them */
+.prose :is(h1, h2, h3) + :is(h2, h3, h4) {
+    --flow-space: 0.58em;
+}
+
+.prose address {
+    --flow-space: 0;
+}
+
+.prose hr {
+    border: none;
+}
+
+.prose hr,
+.prose hr + * {
+    --flow-space: 2.49em;
+}
+
+/* use decorative dinkus instead */
+.prose hr::before {
+    display: block;
+
+    content: "᠃ ⚘᠂ ⚘ ˚ ⚘ ᠂ ⚘ ᠃";
+
+    color: var(--color-base);
+    text-align: center;
+}
+
+/* increased space for figure blocks */
+.prose pre,
+.prose pre + *,
+.prose figure,
+.prose figure + * {
+    --flow-space: 2.07em;
+}
+
+/* reduce space for figure blocks after headings */
+.prose :is(h1, h2, h3, h4) + :is(pre, figure) {
+    --flow-space: 1em;
+}

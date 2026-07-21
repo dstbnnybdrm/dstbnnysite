@@ -1,4 +1,14 @@
-.DS_Store
-.un~
-~
-*.sh
+# Node dependencies
+node_modules/
+
+# Sass cache and mapping
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Mac file for folders or some shit
+*.DS_Store
+
+# just for me, so my file picker doesn't show node_modules/ and public/
+.rgignore

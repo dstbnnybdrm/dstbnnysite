@@ -1,0 +1,14 @@
+.wrapper {
+    --_wrapper-padding: var(--wrapper-padding, var(--space-s));
+    --_wrapper-max-width: var(--wrapper-max-width, var(--measure-max));
+
+    position: relative;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    padding-right: var(--_wrapper-padding);
+    padding-left: var(--_wrapper-padding);
+
+    max-width: var(--_wrapper-max-width);
+}

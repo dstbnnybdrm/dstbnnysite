@@ -1,0 +1,15 @@
+.switcher {
+    /* width at which the layout "breaks" */
+    --_switcher-gap: var(--switcher-gap, var(--space-s));
+    --_switcher-threshold: var(--switcher-threshold, 30rem);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--_switcher-gap);
+}
+
+.switcher > * {
+    flex-grow: 1;
+    /* value is dropped when negative, causing the switch to vertical */
+    flex-basis: calc((var(--_switcher-threshold) - 100%) * 999);
+}

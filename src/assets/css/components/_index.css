@@ -1,0 +1,15 @@
+/* =============================== COMPONENTS =============================== */
+
+@import url("_skip-link.css");
+@import url("_dir-list.css");
+@import url("_pipe-list.css");
+@import url("_board-list.css");
+@import url("_block-list.css");
+@import url("_poem.css");
+@import url("_changelog.css");
+@import url("_status-cafe.css");
+@import url("_prose.css");
+
+.aside-box {
+    border: 1px dashed;
+}
