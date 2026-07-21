@@ -56,26 +56,27 @@
   }
 
   // src/assets/js/modules/hub.js
-  var mainFrame = document.getElementsByName("mainframe")[0];
+  var mainFrame;
   var urlParameter = "page";
-  var isFirstLoad = true;
   function initHub() {
-    randomizeSplash();
+    mainFrame = document.getElementsByName("mainframe")[0];
     if (!mainFrame) {
       return;
     }
-    setSource();
     mainFrame.addEventListener("load", function() {
-      if (isFirstLoad) {
-        isFirstLoad = false;
-        return;
-      }
       if (isOpen) {
         close();
       }
       mainFrame.focus();
       updateHistory();
     });
+    setFrameSource();
+    window.addEventListener("popstate", function(event) {
+      if (event.state !== null) {
+        setFrameSource();
+      }
+    });
+    window.addEventListener("load", randomizeSplash);
   }
   function randomizeSplash() {
     return __async(this, null, function* () {
@@ -90,18 +91,23 @@
       splashElement.innerHTML = randomSplash;
     });
   }
-  function setSource() {
+  function setFrameSource() {
     const parameters = new URLSearchParams(window.location.search);
-    const page = parameters.get(urlParameter);
+    let page = parameters.get(urlParameter);
     if (page) {
+      page = page.replace("javascript:", "");
       mainFrame.src = page;
+    } else {
+      mainFrame.src = "/home.html";
     }
   }
   function updateHistory() {
-    const pageTitle = mainFrame.contentDocument.title;
-    const pathName = mainFrame.contentWindow.location.pathname;
-    history.replaceState(null, "", "?" + urlParameter + "=" + pathName);
-    document.title = pageTitle;
+    return __async(this, null, function* () {
+      const pageTitle = mainFrame.contentDocument.title;
+      const pathName = mainFrame.contentWindow.location.pathname;
+      history.replaceState(null, "", "?" + urlParameter + "=" + pathName);
+      document.title = pageTitle;
+    });
   }
 
   // src/assets/js/modules/inner-frame.js
@@ -114,7 +120,7 @@
   }
 
   // src/assets/js/script.js
-  document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("DOMContentLoaded", () => {
     initSidebar();
     initHub();
     initInnerFrame();

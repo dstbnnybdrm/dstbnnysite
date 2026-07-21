@@ -1,33 +1,39 @@
+/*
+ * lots of mainframe functionality taken and modified from:
+ * https://forum.melonland.net/index.php?topic=115
+ * thank you!
+ */
+
 import * as Utility from "./utility.js";
 import * as Sidebar from "./mobile-sidebar.js";
 
-const mainFrame = document.getElementsByName("mainframe")[0];
+let mainFrame;
 const urlParameter = "page";
 let isFirstLoad = true;
 
 export function initHub() {
-    randomizeSplash();
-
+    mainFrame = document.getElementsByName("mainframe")[0];
     if (!mainFrame) {
         return;
     }
 
-    setSource();
-
-    // i.e. when the main frame's source changes
     mainFrame.addEventListener("load", function () {
-        if (isFirstLoad) {
-            isFirstLoad = false;
-            return;
-        }
-
         if (Sidebar.isOpen) {
             Sidebar.close();
         }
-
         mainFrame.focus();
         updateHistory();
     });
+    setFrameSource();
+
+    // handle back button presses
+    window.addEventListener("popstate", function (event) {
+        if (event.state !== null) {
+            setFrameSource();
+        }
+    });
+
+    window.addEventListener("load", randomizeSplash);
 }
 
 /**
@@ -49,29 +55,31 @@ async function randomizeSplash() {
     splashElement.innerHTML = randomSplash;
 }
 
-function setSource() {
+/**
+ * check to see if a page parameter exists and if so set the main frame source
+ * to that page
+ */
+function setFrameSource() {
     const parameters = new URLSearchParams(window.location.search);
-    const page = parameters.get(urlParameter);
+    let page = parameters.get(urlParameter);
 
     if (page) {
+        // security to stop URL scripts
+        page = page.replace("javascript:", "");
         mainFrame.src = page;
+    } else {
+        mainFrame.src = "/home.html";
     }
 }
 
 /**
  * add query string to URL and update title to reflect the main frame's current
  * source.
- *
- * taken and modified from: https://forum.melonland.net/index.php?topic=115
- * thank you!
  */
-function updateHistory() {
+async function updateHistory() {
     const pageTitle = mainFrame.contentDocument.title;
     const pathName = mainFrame.contentWindow.location.pathname;
-    // const fileName = pathName.replace(/^\/|\/$/g, "");
-    // const fileName = pathName.replace(/\//, "");
 
-    // pathname.replace(/\//, "")
     history.replaceState(null, "", "?" + urlParameter + "=" + pathName);
     document.title = pageTitle;
 }
