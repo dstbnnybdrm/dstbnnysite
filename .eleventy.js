@@ -32,7 +32,7 @@ export default async function (eleventyConfig) {
         }
 
         try {
-            const stats = fs.statSync("src" + url);
+            const stats = fs.statSync("public" + url);
             const dateModified = stats.mtimeMs;
             url += "?v=" + dateModified;
         } catch (error) {}
