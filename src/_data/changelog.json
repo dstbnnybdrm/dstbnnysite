@@ -1,5 +1,13 @@
 [
     {
+        "date": "2026-07-26",
+        "description": "updated <a href='links.html' target='mainframe'>links page</a>! + added back in the increment widget on the <a href='home.html' target='mainframe'>home page</a>"
+    },
+    {
+        "date": "2026-07-23",
+        "description": "implemented cache-busting (i think i hope lmao)!"
+    },
+    {
         "date": "2026-07-21",
         "description": "updated how iframe links work"
     },
