@@ -108,7 +108,6 @@
     src: url("/assets/fonts/FiraMono-Bold.woff2") format("woff2");
     font-family: "Fira Mono";
 }
-
 /* --------------------------------- TOKENS --------------------------------- */
 
 :root {
@@ -162,7 +161,6 @@
 
     --hub-gutter: var(--space-xs);
 }
-
 /* ================================== BASE ================================== */
 
 /* --------------------------------- RESET ---------------------------------- */
@@ -173,7 +171,6 @@
  */
 
 /* less shitty box-sizing (border-based instead of content-based) */
-
 *,
 *::before,
 *::after {
@@ -181,13 +178,11 @@
 }
 
 /* remove default margin */
-
 *:not(dialog) {
     margin: 0;
 }
 
 /* remove default padding */
-
 ul[role],
 ol[role] {
     padding: 0;
@@ -195,7 +190,6 @@ ol[role] {
 }
 
 /* body defaults */
-
 body {
     min-height: 100vh;
 
@@ -203,14 +197,12 @@ body {
 }
 
 /* ensure text decoration won't interfere with ascenders and descenders */
-
 a:not([class]) {
     -webkit-text-decoration-skip: ink;
     text-decoration-skip-ink: auto;
 }
 
 /* improve media defaults */
-
 img,
 picture,
 video,
@@ -226,7 +218,6 @@ audio {
 }
 
 /* forms inherit their typography styles */
-
 input,
 button,
 textarea,
@@ -235,7 +226,6 @@ select {
 }
 
 /* wrap instead of overflow text */
-
 p,
 h1,
 h2,
@@ -245,7 +235,6 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
-
 /* --------------------------------- GLOBAL --------------------------------- */
 
 :root {
@@ -460,14 +449,12 @@ textarea {
 summary {
     cursor: pointer;
 }
-
 /* ================================ LAYOUTS ================================= */
 
 .box {
     --_box-padding: var(--box-padding, 1em);
     padding: var(--_box-padding);
 }
-
 .wrapper {
     --_wrapper-padding: var(--wrapper-padding, var(--space-s));
     --_wrapper-max-width: var(--wrapper-max-width, var(--measure-max));
@@ -482,13 +469,11 @@ summary {
 
     max-width: var(--_wrapper-max-width);
 }
-
 .flow {
     --flow-space: 1em;
 }
 
 /* don't add space after an invisible block */
-
 .flow > :is(.visually-hidden, [hidden], .skip-link) + * {
     margin-block: 0;
 }
@@ -496,7 +481,6 @@ summary {
 .flow > * + * {
     margin-top: var(--flow-space);
 }
-
 .center-x {
     display: flex;
     flex-direction: column;
@@ -513,7 +497,6 @@ summary {
 .center-y > * {
     margin-block: auto;
 }
-
 .cluster {
     --_cluster-space: var(--cluster-space, var(--space-s));
 
@@ -522,7 +505,6 @@ summary {
     flex-wrap: wrap;
     gap: var(--_cluster-space);
 }
-
 .switcher {
     /* width at which the layout "breaks" */
     --_switcher-gap: var(--switcher-gap, var(--space-s));
@@ -538,7 +520,6 @@ summary {
     /* value is dropped when negative, causing the switch to vertical */
     flex-basis: calc((var(--_switcher-threshold) - 100%) * 999);
 }
-
 .has-drawer\@mobile {
     --_drawer-width: var(--drawer-width, 1fr);
     --_drawer-content-width: var(--drawer-content-width, 3fr);
@@ -564,9 +545,7 @@ summary {
 .drawer-scrim {
     display: none;
 }
-
 /* assumes _only 2_ direct children */
-
 .has-sidebar {
     --_sidebar-basis: var(--sidebar-basis, auto);
     --_sidebar-breakpoint: var(--sidebar-breakpoint, 50%);
@@ -579,7 +558,6 @@ summary {
 }
 
 /* the actual sidebar */
-
 .has-sidebar:not([data-reversed]) > :first-child,
 .has-sidebar[data-reversed] > :last-child {
     flex-grow: 1;
@@ -587,7 +565,6 @@ summary {
 }
 
 /* the rest of the content */
-
 .has-sidebar:not([data-reversed]) > :last-child,
 .has-sidebar[data-reversed] > :first-child {
     flex-grow: 999;
@@ -595,14 +572,12 @@ summary {
     flex-basis: 0;
     min-width: var(--_sidebar-breakpoint);
 }
-
 .has-sticky-footer {
     display: grid;
     grid-template-rows: 1fr min-content;
 
     height: 100%;
 }
-
 .carousel {
     --_carousel-gap: var(--carousel-gap, var(--space-s));
 
@@ -613,7 +588,6 @@ summary {
 
     overflow-x: auto;
 }
-
 .carousel[data-snap] {
     scroll-snap-type: x mandatory;
 }
@@ -622,11 +596,9 @@ summary {
     flex-shrink: 0;
     scroll-snap-align: center;
 }
-
 .carousel[data-snap] > li {
     scroll-snap-align: center;
 }
-
 /* =============================== UTILITIES ================================ */
 
 /*
@@ -647,7 +619,6 @@ summary {
  *  taken from:
  *  https://www.a11yproject.com/posts/how-to-hide-content/
  */
-
 .visually-hidden {
     clip: rect(0 0 0 0);
     position: absolute;
@@ -659,7 +630,6 @@ summary {
 }
 
 /* fixes max width and horizontally centres */
-
 .wrapper {
     margin-inline: auto;
     padding-inline: var(--space-s);
@@ -679,7 +649,6 @@ summary {
     float: right !important;
     margin-left: var(--float-space);
 }
-
 /* -------------------------------- SPACING --------------------------------- */
 
 .p-s {
@@ -713,7 +682,6 @@ summary {
 .flow-space-l {
     --flow-space: var(--space-l) !important;
 }
-
 /* ------------------------------- TYPOGRAPHY ------------------------------- */
 
 .font-alt {
@@ -745,7 +713,6 @@ summary {
 }
 
 /* using advice from: https://webtypography.net/2.1.6 */
-
 .letter-spacing-caps {
     letter-spacing: var(--caps-letter-spacing) !important;
 }
@@ -765,7 +732,6 @@ summary {
 .white-space-nowrap {
     white-space: nowrap;
 }
-
 /* ----------------------------- FLEXBOX / GRID ----------------------------- */
 
 .basis-auto {
@@ -827,12 +793,10 @@ summary {
 /* --------------------------------- GLOBAL --------------------------------- */
 
 /* ---- PSEUDO ELEMENTS ---- */
-
 ::-moz-selection {
     background-color: Highlight;
     color: HighlightText;
 }
-
 ::selection {
     background-color: Highlight;
     color: HighlightText;
@@ -881,29 +845,24 @@ figcaption {
 /* ------------------------------- COMPONENTS ------------------------------- */
 
 /* ---- PROSE ---- */
-
 .prose {
     --flow-space: 1em;
 }
-
 .prose figure,
 .prose figure + * {
     --flow-space: var(--space-2xl);
 }
-
 .prose figure > figure + figure {
     margin-top: var(--space-l);
 }
 
 /* ---- CONTAINER ---- */
-
 .container {
     display: grid;
     grid-template-columns: minmax(auto, var(--sidebar-width)) 1fr;
 }
 
 /* ---- SIDEBAR ---- */
-
 .sidebar {
     --box-padding: var(--space-s);
     border-right: var(--border-frame-set) white;
@@ -915,7 +874,6 @@ figcaption {
 }
 
 /* ---- NAV ---- */
-
 .nav {
     --flow-space: var(--space-s);
 }
@@ -931,23 +889,19 @@ figcaption {
 }
 
 /* ---- MAIN ---- */
-
 .main {
     --box-padding: var(--space-s);
 }
 
 /* ---- FOOTER ---- */
-
 .footer {
     border-top: 2px solid var(--color-hr);
 }
-
 @media screen and (min-width: 541px) {
     .hidden\@desktop {
         display: none !important;
     }
 }
-
 @media screen and (max-width: 540px) {
     .has-drawer\@mobile {
         grid-template-columns: 1fr;
@@ -1012,12 +966,10 @@ figcaption {
     .hidden\@mobile {
         display: none !important;
     }
-
     .container {
         grid-template-rows: auto 1fr;
         grid-template-columns: 1fr;
     }
-
     .sidebar {
         border-right: none;
         border-bottom: var(--border-frame-set) white;
@@ -1032,13 +984,11 @@ figcaption {
         padding-bottom: 0;
     }
 }
-
 @media (prefers-color-scheme: dark) {
     img {
         filter: brightness(0.8) contrast(1.2);
     }
 }
-
 @media (prefers-reduced-motion: reduce) {
     /* remove all animations and transitions for people that prefer not to see them */
     * {
