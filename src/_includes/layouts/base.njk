@@ -17,7 +17,10 @@
     {% block meta %}{% endblock %}
 
     <!-- styles -->
-    <link rel="stylesheet" href="/assets/css/{% if not stylesheet %}style{% else %}{{ stylesheet }}{% endif %}.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/css/{% if not stylesheet %}style{% else %}{{ stylesheet }}{% endif %}.css{{ nocache }}"
+    />
     {% block styles %}
     {% endblock %}
 
@@ -51,7 +54,7 @@
     {% endif %}
 
     <!-- scripts -->
-    <script src="/assets/js/script.js" type="module"></script>
+    <script src="/assets/js/script.js{{ nocache }}" type="module"></script>
     {% block scripts %}{% endblock %}
   </head>
 

@@ -105,7 +105,6 @@
     src: url("/assets/fonts/FiraMono-Bold.woff2") format("woff2");
     font-family: "Fira Mono";
 }
-
 /* --------------------------------- TOKENS --------------------------------- */
 
 :root {
@@ -159,7 +158,6 @@
 
     --hub-gutter: var(--space-xs);
 }
-
 /* ================================== BASE ================================== */
 
 /* --------------------------------- RESET ---------------------------------- */
@@ -170,7 +168,6 @@
  */
 
 /* less shitty box-sizing (border-based instead of content-based) */
-
 *,
 *::before,
 *::after {
@@ -178,13 +175,11 @@
 }
 
 /* remove default margin */
-
 *:not(dialog) {
     margin: 0;
 }
 
 /* remove default padding */
-
 ul[role],
 ol[role] {
     padding: 0;
@@ -192,7 +187,6 @@ ol[role] {
 }
 
 /* body defaults */
-
 body {
     min-height: 100vh;
 
@@ -200,14 +194,12 @@ body {
 }
 
 /* ensure text decoration won't interfere with ascenders and descenders */
-
 a:not([class]) {
     -webkit-text-decoration-skip: ink;
     text-decoration-skip-ink: auto;
 }
 
 /* improve media defaults */
-
 img,
 picture,
 video,
@@ -223,7 +215,6 @@ audio {
 }
 
 /* forms inherit their typography styles */
-
 input,
 button,
 textarea,
@@ -232,7 +223,6 @@ select {
 }
 
 /* wrap instead of overflow text */
-
 p,
 h1,
 h2,
@@ -242,7 +232,6 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
-
 /* --------------------------------- GLOBAL --------------------------------- */
 
 :root {
@@ -457,14 +446,12 @@ textarea {
 summary {
     cursor: pointer;
 }
-
 /* ================================ LAYOUTS ================================= */
 
 .box {
     --_box-padding: var(--box-padding, 1em);
     padding: var(--_box-padding);
 }
-
 .wrapper {
     --_wrapper-padding: var(--wrapper-padding, var(--space-s));
     --_wrapper-max-width: var(--wrapper-max-width, var(--measure-max));
@@ -479,13 +466,11 @@ summary {
 
     max-width: var(--_wrapper-max-width);
 }
-
 .flow {
     --flow-space: 1em;
 }
 
 /* don't add space after an invisible block */
-
 .flow > :is(.visually-hidden, [hidden], .skip-link) + * {
     margin-block: 0;
 }
@@ -493,7 +478,6 @@ summary {
 .flow > * + * {
     margin-top: var(--flow-space);
 }
-
 .center-x {
     display: flex;
     flex-direction: column;
@@ -510,7 +494,6 @@ summary {
 .center-y > * {
     margin-block: auto;
 }
-
 .cluster {
     --_cluster-space: var(--cluster-space, var(--space-s));
 
@@ -519,7 +502,6 @@ summary {
     flex-wrap: wrap;
     gap: var(--_cluster-space);
 }
-
 .switcher {
     /* width at which the layout "breaks" */
     --_switcher-gap: var(--switcher-gap, var(--space-s));
@@ -535,7 +517,6 @@ summary {
     /* value is dropped when negative, causing the switch to vertical */
     flex-basis: calc((var(--_switcher-threshold) - 100%) * 999);
 }
-
 .has-drawer\@mobile {
     --_drawer-width: var(--drawer-width, 1fr);
     --_drawer-content-width: var(--drawer-content-width, 3fr);
@@ -561,9 +542,7 @@ summary {
 .drawer-scrim {
     display: none;
 }
-
 /* assumes _only 2_ direct children */
-
 .has-sidebar {
     --_sidebar-basis: var(--sidebar-basis, auto);
     --_sidebar-breakpoint: var(--sidebar-breakpoint, 50%);
@@ -576,7 +555,6 @@ summary {
 }
 
 /* the actual sidebar */
-
 .has-sidebar:not([data-reversed]) > :first-child,
 .has-sidebar[data-reversed] > :last-child {
     flex-grow: 1;
@@ -584,7 +562,6 @@ summary {
 }
 
 /* the rest of the content */
-
 .has-sidebar:not([data-reversed]) > :last-child,
 .has-sidebar[data-reversed] > :first-child {
     flex-grow: 999;
@@ -592,14 +569,12 @@ summary {
     flex-basis: 0;
     min-width: var(--_sidebar-breakpoint);
 }
-
 .has-sticky-footer {
     display: grid;
     grid-template-rows: 1fr min-content;
 
     height: 100%;
 }
-
 .carousel {
     --_carousel-gap: var(--carousel-gap, var(--space-s));
 
@@ -610,7 +585,6 @@ summary {
 
     overflow-x: auto;
 }
-
 .carousel[data-snap] {
     scroll-snap-type: x mandatory;
 }
@@ -619,11 +593,9 @@ summary {
     flex-shrink: 0;
     scroll-snap-align: center;
 }
-
 .carousel[data-snap] > li {
     scroll-snap-align: center;
 }
-
 /* =============================== COMPONENTS =============================== */
 
 /*
@@ -652,13 +624,11 @@ summary {
     overflow: visible;
     line-height: 1;
 }
-
 ul.dir-list,
 .dir-list ul {
     padding-inline-start: 1.3em;
     list-style: "∟\00A0";
 }
-
 .pipe-list {
     --cluster-space: 0;
 
@@ -674,11 +644,9 @@ ul.dir-list,
 
     content: "|";
 }
-
 /*
 * inspired by navigation links in image boards.
  */
-
 .board-list {
     display: flex;
 
@@ -696,7 +664,6 @@ ul.dir-list,
 .board-list > li:not(:last-child)::after {
     content: "\00A0/\00A0";
 }
-
 /*
  * inspired by the links at the bottom of this page:
  * @link: https://geocities.restorativland.org/Tokyo/Lights/8912/
@@ -725,12 +692,10 @@ ul.dir-list,
 :is(.block-list span)::after {
     content: "\00A0~\00A0";
 }
-
 /*
  * some suggestions for both marking up and styling poetry taken from:
  * @link: https://web.archive.org/web/20220802003441/https://yearebase.github.io/blog/poetry-in-html/
  */
-
 .poem {
     max-width: var(--measure-max);
 
@@ -748,12 +713,10 @@ ul.dir-list,
 }
 
 /* hang indents when lines wrap */
-
 .poem__stanza {
     padding-left: var(--space-l);
     text-indent: calc(-1 * var(--space-l));
 }
-
 .changelog {
     max-height: 14rem;
     overflow-y: auto;
@@ -769,7 +732,6 @@ ul.dir-list,
     font-weight: bold;
     letter-spacing: var(--caps-letter-spacing);
 }
-
 /*
  * widget from:
  * @link: https://status.cafe/current-status 
@@ -795,11 +757,9 @@ ul.dir-list,
 :is(.status-cafe p)::after {
     content: close-quote;
 }
-
 /*
  * used in tandem with FLOW to style and space typographical elements.
  */
-
 .prose {
     --flow-space: 1em;
 }
@@ -813,7 +773,6 @@ ul.dir-list,
 }
 
 /* subsequent headings look better with smaller space between them */
-
 .prose :is(h1, h2, h3) + :is(h2, h3, h4) {
     --flow-space: 0.58em;
 }
@@ -832,7 +791,6 @@ ul.dir-list,
 }
 
 /* use decorative dinkus instead */
-
 .prose hr::before {
     display: block;
 
@@ -843,7 +801,6 @@ ul.dir-list,
 }
 
 /* increased space for figure blocks */
-
 .prose pre,
 .prose pre + *,
 .prose figure,
@@ -852,7 +809,6 @@ ul.dir-list,
 }
 
 /* reduce space for figure blocks after headings */
-
 .prose :is(h1, h2, h3, h4) + :is(pre, figure) {
     --flow-space: 1em;
 }
@@ -860,7 +816,6 @@ ul.dir-list,
 .aside-box {
     border: 1px dashed;
 }
-
 /* ================================= PAGES ================================== */
 
 /* ------------------------------- NOT FOUND -------------------------------- */
@@ -890,13 +845,11 @@ ul.dir-list,
 .not-found-main__content p {
     text-align: center;
 }
-
 /* ---------------------------------- HUB ----------------------------------- */
 
 .hub {
     display: grid;
 }
-
 .hub-container {
     --box-padding: var(--hub-gutter);
     --flow-space: var(--hub-gutter);
@@ -953,7 +906,6 @@ ul.dir-list,
 
     border-top: var(--border-frame-set);
 }
-
 /* ------------------------------ SLASH PAGES ------------------------------- */
 
 .slash-nav {
@@ -968,7 +920,6 @@ ul.dir-list,
 .slash-nav > * {
     justify-content: center;
 }
-
 /* =============================== UTILITIES ================================ */
 
 /*
@@ -989,7 +940,6 @@ ul.dir-list,
  *  taken from:
  *  https://www.a11yproject.com/posts/how-to-hide-content/
  */
-
 .visually-hidden {
     clip: rect(0 0 0 0);
     position: absolute;
@@ -1001,7 +951,6 @@ ul.dir-list,
 }
 
 /* fixes max width and horizontally centres */
-
 .wrapper {
     margin-inline: auto;
     padding-inline: var(--space-s);
@@ -1021,7 +970,6 @@ ul.dir-list,
     float: right !important;
     margin-left: var(--float-space);
 }
-
 /* -------------------------------- SPACING --------------------------------- */
 
 .p-s {
@@ -1044,14 +992,17 @@ ul.dir-list,
     margin-inline: auto !important;
 }
 
-.flow-space-l {
-    --flow-space: var(--space-l) !important;
-}
-
 .flow-space-3xs {
     --flow-space: var(--space-3xs) !important;
 }
 
+.flow-space-xs {
+    --flow-space: var(--space-xs) !important;
+}
+
+.flow-space-l {
+    --flow-space: var(--space-l) !important;
+}
 /* ------------------------------- TYPOGRAPHY ------------------------------- */
 
 .font-alt {
@@ -1083,7 +1034,6 @@ ul.dir-list,
 }
 
 /* using advice from: https://webtypography.net/2.1.6 */
-
 .letter-spacing-caps {
     letter-spacing: var(--caps-letter-spacing) !important;
 }
@@ -1103,7 +1053,6 @@ ul.dir-list,
 .white-space-nowrap {
     white-space: nowrap;
 }
-
 /* ----------------------------- FLEXBOX / GRID ----------------------------- */
 
 .basis-auto {
@@ -1145,7 +1094,6 @@ ul.dir-list,
 .sidebar-breakpoint-0 {
     --_sidebar-breakpoint: 0% !important;
 }
-
 /* ================================= THEMES ================================= */
 
 :root {
@@ -1252,7 +1200,6 @@ ul.dir-list,
         display: block;
         width: 100%;
     }
-
     .changelog {
         max-height: none;
     }

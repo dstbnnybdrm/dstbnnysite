@@ -20,10 +20,14 @@
     margin-inline: auto !important;
 }
 
-.flow-space-l {
-    --flow-space: var(--space-l) !important;
-}
-
 .flow-space-3xs {
     --flow-space: var(--space-3xs) !important;
+}
+
+.flow-space-xs {
+    --flow-space: var(--space-xs) !important;
+}
+
+.flow-space-l {
+    --flow-space: var(--space-l) !important;
 }
