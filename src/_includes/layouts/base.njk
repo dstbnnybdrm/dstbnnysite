@@ -36,7 +36,7 @@
     #}
 
     <!-- open graph protocol -->
-    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:title" content="{% if title %}{{ title }}{% else %}dustbunnybedroom{% endif %}" />
     {#
       <meta property="og:image" content="" />
       <meta property="og:url" content="" />
