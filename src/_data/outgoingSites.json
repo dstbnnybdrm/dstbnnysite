@@ -1,73 +1,131 @@
 [
     {
-        "title": "",
-        "href": "",
-        "button": ""
+        "title": "stupied",
+        "href": "https://stupied.net/",
+        "button": "stupied-button.gif"
     },
     {
-        "title": "",
-        "href": "",
-        "button": ""
+        "title": "turd",
+        "href": "https://turd.neocities.org/",
+        "button": "turd-button.gif"
     },
     {
-        "title": "",
-        "href": "",
-        "button": ""
+        "title": "melonking",
+        "href": "https://melonking.net/",
+        "button": "melonking-button.gif"
     },
     {
-        "title": "",
-        "href": "",
-        "button": ""
+        "title": "vulpecula",
+        "href": "https://vulpecula.neocities.org/",
+        "button": "vulpecula-button-3.gif"
     },
     {
-        "title": "",
-        "href": "",
-        "button": ""
+        "title": "Lost Letters",
+        "href": "https://lostletters.neocities.org/",
+        "button": "lostletters-button.gif"
     },
     {
-        "title": "",
-        "href": "",
-        "button": ""
+        "title": "ribo zone",
+        "href": "https://ribo.zone/",
+        "button": "ribozone-button.gif"
     },
     {
-        "title": "",
-        "href": "",
-        "button": ""
+        "title": "olliveen",
+        "href": "https://olliveen.neocities.org/",
+        "button": "olliveen-button.gif"
     },
     {
-        "title": "",
-        "href": "",
-        "button": ""
+        "title": "key’s klubhouse",
+        "href": "https://keysklubhouse.com/",
+        "button": "keysklubhouse-button.gif"
+    },
+    {
+        "title": "cinni’s dream home",
+        "href": "https://cinni.net/",
+        "button": "cinni-button.gif"
+    },
+    {
+        "title": "encountersltd",
+        "href": "https://encounters-ltd.neocities.org/",
+        "button": "encountersltd-button.gif"
+    },
+    {
+        "title": "waxwing",
+        "href": "https://waxwing.neocities.org/"
+    },
+    {
+        "title": "neonaut",
+        "href": "https://neonaut.neocities.org/",
+        "button": "neonaut-button.gif"
+    },
+    {
+        "title": "Mason Armand",
+        "href": "https://masonarmand.com/"
+    },
+    {
+        "title": "frills",
+        "href": "https://frills.dev/",
+        "button": "frills-button.gif"
+    },
+    {
+        "title": "velvet blue",
+        "href": "https://velvet-blue.neocities.org",
+        "button": "velvetblue-button-2.gif"
+    },
+    {
+        "title": "hill house",
+        "href": "https://hillhouse.neocities.org/",
+        "button": "hillhouse-button-sunset.gif"
+    },
+    {
+        "title": "Cinnamuff’s Galaxy!",
+        "href": "https://www.cinnamuff.space/",
+        "button": "cinnamuff-button.gif"
+    },
+    {
+        "title": "BevWeb",
+        "href": "https://bevweb.neocities.org/",
+        "button": "bevweb-button.gif"
+    },
+    {
+        "title": "i will never be happy",
+        "href": "https://iwillneverbehappy.neocities.org",
+        "button": "iwillneverbehappy-button.gif"
+    },
+    {
+        "title": "camo93",
+        "href": "https://camo93.neocities.org/",
+        "button": "camo93-button.gif"
+    },
+    {
+        "title": "CD-ROMe",
+        "href": "https://vampfag.top/",
+        "button": "cdrome-button.gif"
+    },
+    {
+        "title": "fairygore",
+        "href": "https://fairygore.neocities.org/",
+        "button": "fairygore-button.gif"
     },
     {
         "title": "ABYSSAL",
         "href": "https://leviathren.neocities.org",
-        "button": ""
-    },
-    {
-        "title": "kirbeedia",
-        "href": "https://kirb.pet/",
-        "button": ""
+        "button": "leviathren-button.gif"
     },
     {
         "title": "maplebear",
         "href": "https://maplebear.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "sneerful",
-        "href": "https://sneerful.neocities.org/",
-        "button": ""
+        "button": "maplebear-button.gif"
     },
     {
         "title": "uuupah",
         "href": "https://uuupah.neocities.org/",
-        "button": ""
+        "button": "uuupah-button.gif"
     },
     {
         "title": "whiona.me",
         "href": "https://whiona.me/",
-        "button": ""
+        "button": "whiona-button.gif"
     },
     {
         "title": "localghost",
@@ -76,97 +134,67 @@
     {
         "title": "hekate",
         "href": "https://hekate.neocities.org/",
-        "button": ""
+        "button": "hekate-button.gif"
     },
     {
         "title": "yard on third street",
         "href": "https://yardonthirdstreet.neocities.org/",
-        "button": ""
+        "button": "yard-button.gif"
     },
     {
         "title": "freaksaint",
         "href": "https://freaksaint.neocities.org/",
-        "button": ""
+        "button": "freaksaint-button.gif"
     },
     {
         "title": "angel’s landing",
         "href": "https://angelnetcast.com/",
-        "button": ""
-    },
-    {
-        "title": "the museum of alexandria",
-        "href": "https://xandra.cc/",
-        "button": ""
+        "button": "angelnetcast-button.gif"
     },
     {
         "title": "paupowpow",
         "href": "https://paupowpow.neocities.org/",
-        "button": ""
+        "button": "paupowpow-button.gif"
     },
     {
         "title": "buryevil",
         "href": "https://buryevil.neocities.org/",
-        "button": ""
+        "button": "buryevil-button.gif"
     },
     {
-        "title": "multo’s graveyard",
-        "href": "https://multohhh.neocities.org/",
-        "button": ""
+        "title": "yapi.LOL",
+        "href": "https://yapi.lol/",
+        "button": "yapilol-button.gif"
     },
     {
         "title": "oops!!",
         "href": "https://ooops.lol/",
-        "button": ""
+        "button": "oops-button.gif"
     },
     {
         "title": "andou",
         "href": "https://andou.gay/",
-        "button": ""
+        "button": "andou-button-2.gif"
     },
     {
         "title": "SLASHFIC",
         "href": "https://slashfic.neocities.org/",
-        "button": ""
+        "button": "slashfic-button.gif"
     },
     {
         "title": "WHITEDESERT",
         "href": "https://whitedesert.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "LIME ZONE !",
-        "href": "https://363787.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "Ari’s Garden",
-        "href": "https://aribluejeans.neocities.org/",
-        "button": ""
+        "button": "whitedesert-button.gif"
     },
     {
         "title": "nerucom",
         "href": "https://nerucom.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "eggs &amp; mint",
-        "href": "https://eggsandmint.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "cabbage sorter",
-        "href": "https://cabbagesorter.net/",
-        "button": ""
+        "button": "nerucom-button.gif"
     },
     {
         "title": "the soup site",
         "href": "https://thesoupsite.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "devils.gay",
-        "href": "https://devils.gay/eng/",
-        "button": ""
+        "button": "thesoupsite-button-2.gif"
     },
     {
         "title": "endlessseternity",
@@ -179,7 +207,12 @@
     {
         "title": "mitzyrie",
         "href": "https://mitzyrie.neocities.org/",
-        "button": ""
+        "button": "mitzyrie-button.gif"
+    },
+    {
+        "title": "starbreaker",
+        "href": "https://starbreaker.org/",
+        "button": "starbreaker-button.gif"
     },
     {
         "title": "patchwork coffeeshop",
@@ -188,52 +221,37 @@
     {
         "title": "EGGSPACE",
         "href": "https://eggspace.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "b0n35",
-        "href": "https://b0n35.neocities.org/",
-        "button": ""
+        "button": "eggspace-button.gif"
     },
     {
         "title": "99GIF shop",
         "href": "https://99gifshop.neocities.org/",
-        "button": ""
+        "button": "99gifshop-button-3.gif"
     },
     {
         "title": "yayazizi",
         "href": "https://yayazizi.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "camo93",
-        "href": "https://camo93.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "morocerasus",
-        "href": "https://morocerasus.neocities.org/",
-        "button": ""
+        "button": "yayazizi-button.gif"
     },
     {
         "title": "jasmine’s journal",
         "href": "https://jasm1nii.xyz/",
-        "button": ""
+        "button": "jasminesjournal-button.gif"
+    },
+    {
+        "title": "Forestfolke",
+        "href": "https://forestfolke.neocities.org/",
+        "button": "forestfolke-button-2.gif"
     },
     {
         "title": "chartreuse",
         "href": "https://chartreuse.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "hivemindmoshpit",
-        "href": "https://hivemindmoshpit.neocities.org/",
-        "button": ""
+        "button": "chartreuse-button.gif"
     },
     {
         "title": "you are mad about concrete",
         "href": "https://concrete.neocities.org/",
-        "button": ""
+        "button": "youaremadaboutconcrete-button.gif"
     },
     {
         "title": "averycutedog",
@@ -242,17 +260,26 @@
     {
         "title": "byrdseed",
         "href": "https://byrdseed.neocities.org/",
-        "button": ""
-    },
-    {
-        "title": "puppinu’s house",
-        "href": "https://puppinu.neocities.org/",
-        "button": ""
+        "button": "byrdseed-button.gif"
     },
     {
         "title": "intergalacticgoblincore",
-        "href": "https://intergalacticgoblincore.neocities.org/",
-        "button": ""
+        "href": "https://intergalacticgoblincore.neocities.org/"
+    },
+    {
+        "title": "apple dust",
+        "href": "https://www.lejlart.com/apple.html",
+        "button": "appledust-button.gif"
+    },
+    {
+        "title": "lulu in cyberspace",
+        "href": "https://lu.tiny-universes.net/",
+        "button": "luluincyberspace-button.gif"
+    },
+    {
+        "title": "In Love With a Ghost",
+        "href": "https://ilwag.com/",
+        "button": "ilwag-button.gif"
     },
     {
         "href": "https://lamezone.net/",
@@ -263,31 +290,27 @@
         "title": "vgperson"
     },
     {
-        "href": "https://sees.neocities.org/",
-        "title": "sees"
+        "title": "sees",
+        "href": "https://sees.neocities.org/"
     },
     {
-        "href": "https://endlessseternity.neocities.org/",
-        "title": "endlesseternity"
+        "title": "endlesseternity",
+        "href": "https://endlessseternity.neocities.org/"
     },
     {
-        "href": "https://classicj.neocities.org/",
-        "title": "the website of classicj"
+        "title": "the website of classicj",
+        "href": "https://classicj.neocities.org/"
     },
     {
-        "href": "https://moriyashrine.org/",
-        "title": " Moriya Shrine"
+        "title": " Moriya Shrine",
+        "href": "https://moriyashrine.org/"
     },
     {
-        "href": "https://vimm.net/",
-        "title": "Vimm"
+        "title": "Vimm",
+        "href": "https://vimm.net/"
     },
     {
-        "href": "https://www.flatsound.org/",
-        "title": "flatsound"
-    },
-    {
-        "href": "https://forestfolke.neocities.org/",
-        "title": "Forestfolke"
+        "title": "flatsound",
+        "href": "https://www.flatsound.org/"
     }
 ]
