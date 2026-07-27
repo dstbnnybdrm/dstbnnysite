@@ -20,10 +20,7 @@
     {% block meta %}{% endblock %}
 
     <!-- styles -->
-    <link
-      rel="stylesheet"
-      href="/assets/css/{% if not stylesheet %}style{% else %}{{ stylesheet }}{% endif %}.css{{ nocache }}"
-    />
+    <link rel="stylesheet" href="{{ stylesheet | cacheBust("css") }}" />
     {% block styles %}
     {% endblock %}
 
@@ -57,7 +54,7 @@
     {% endif %}
 
     <!-- scripts -->
-    <script src="/assets/js/script.js{{ nocache }}" type="module"></script>
+    <script src="{{ 'script' | cacheBust("js")}}" type="module"></script>
     {% block scripts %}{% endblock %}
   </head>
 

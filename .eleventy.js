@@ -7,6 +7,7 @@ import postcssDiscardEmpty from "postcss-discard-empty";
 import postcssSortMediaQueries from "postcss-sort-media-queries";
 import autoprefixer from "autoprefixer";
 import esbuild from "esbuild";
+import fs from "fs";
 
 export default async function (eleventyConfig) {
     // disables noisy console output
@@ -17,6 +18,26 @@ export default async function (eleventyConfig) {
     eleventyConfig.addGlobalData("permalink", () => {
         return (data) =>
             `${data.page.filePathStem}.${data.page.outputFileExtension}`;
+    });
+
+    // add filter for cache busting
+    // learned from: https://bnijenhuis.nl/notes/cache-busting-in-eleventy/
+    eleventyConfig.addFilter("cacheBust", (filename, filetype) => {
+        let url = "/assets/" + filetype + "/";
+
+        if (filetype == "css" && !filename) {
+            url += "style.css";
+        } else {
+            url += filename + "." + filetype;
+        }
+
+        try {
+            const stats = fs.statSync("src" + url);
+            const dateModified = stats.mtimeMs;
+            url += "?v=" + dateModified;
+        } catch (error) {}
+
+        return url;
     });
 
     // ---- HTML ----

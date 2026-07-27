@@ -357,6 +357,10 @@ dd {
     font-weight: bold;
 }
 
+[lang="ja"] {
+    font-family: var(--font-jp-base);
+}
+
 /* ---- INLINE TEXT SEMANTICS ---- */
 
 a {
