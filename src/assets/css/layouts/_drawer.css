@@ -6,6 +6,7 @@
     grid-template-columns:
         var(--_drawer-width)
         var(--_drawer-content-width);
+    height: 100%;
 
     /* since grid items can't be smaller than their content by default */
     min-height: 0;
@@ -17,6 +18,7 @@
 }
 
 .has-drawer\@mobile > :first-child {
+    height: 100%;
     /* allow scrolling to prevent overflow */
     min-height: 0;
     overflow-y: auto;
