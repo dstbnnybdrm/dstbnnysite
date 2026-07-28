@@ -307,6 +307,7 @@ hr,
 dd,
 dt {
     max-width: var(--measure-max);
+    hyphens: auto;
 }
 
 blockquote {
