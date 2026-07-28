@@ -1,5 +1,9 @@
 [
     {
+        "date": "2026-07-28",
+        "description": "added static versions of most animated <code>.gifs</code> for those who prefer reduced motion + fixed something i fucked up with the JavaScript lol"
+    },
+    {
         "date": "2026-07-27",
         "description": "already changed cache-busting LOL, made it use the file’s date modified vs the current date as of building + fixed the mobile layout on the hub page to account for the address bar."
     },
