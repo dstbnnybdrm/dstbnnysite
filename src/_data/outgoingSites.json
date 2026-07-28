@@ -17,37 +17,44 @@
     {
         "title": "vulpecula",
         "href": "https://vulpecula.neocities.org/",
-        "button": "vulpecula-button-3.gif"
+        "button": "vulpecula-button-3.gif",
+        "buttonReducedMotion": "vulpecula-button-3-rm.gif"
     },
     {
         "title": "Lost Letters",
         "href": "https://lostletters.neocities.org/",
-        "button": "lostletters-button.gif"
+        "button": "lostletters-button.gif",
+        "buttonReducedMotion": "lostletters-button-rm.gif"
     },
     {
         "title": "ribo zone",
         "href": "https://ribo.zone/",
-        "button": "ribozone-button.gif"
+        "button": "ribozone-button.gif",
+        "buttonReducedMotion": "ribozone-button-rm.gif"
     },
     {
         "title": "olliveen",
         "href": "https://olliveen.neocities.org/",
-        "button": "olliveen-button.gif"
+        "button": "olliveen-button.gif",
+        "buttonReducedMotion": "olliveen-button-rm.gif"
     },
     {
         "title": "key’s klubhouse",
         "href": "https://keysklubhouse.com/",
-        "button": "keysklubhouse-button.gif"
+        "button": "keysklubhouse-button.gif",
+        "buttonReducedMotion": "keysklubhouse-button-rm.gif"
     },
     {
         "title": "cinni’s dream home",
         "href": "https://cinni.net/",
-        "button": "cinni-button.gif"
+        "button": "cinni-button.gif",
+        "buttonReducedMotion": "cinni-button-rm.gif"
     },
     {
         "title": "encountersltd",
         "href": "https://encounters-ltd.neocities.org/",
-        "button": "encountersltd-button.gif"
+        "button": "encountersltd-button.gif",
+        "buttonReducedMotion": "encountersltd-button-rm.gif"
     },
     {
         "title": "waxwing",
@@ -70,7 +77,8 @@
     {
         "title": "velvet blue",
         "href": "https://velvet-blue.neocities.org",
-        "button": "velvetblue-button-2.gif"
+        "button": "velvetblue-button-2.gif",
+        "buttonReducedMotion": "velvetblue-button-2-rm.gif"
     },
     {
         "title": "hill house",
@@ -110,12 +118,14 @@
     {
         "title": "ABYSSAL",
         "href": "https://leviathren.neocities.org",
-        "button": "leviathren-button.gif"
+        "button": "leviathren-button.gif",
+        "buttonReducedMotion": "leviathren-button-rm.gif"
     },
     {
         "title": "maplebear",
         "href": "https://maplebear.neocities.org/",
-        "button": "maplebear-button.gif"
+        "button": "maplebear-button.gif",
+        "buttonReducedMotion": "maplebear-button-rm.gif"
     },
     {
         "title": "uuupah",
@@ -149,7 +159,8 @@
     {
         "title": "angel’s landing",
         "href": "https://angelnetcast.com/",
-        "button": "angelnetcast-button.gif"
+        "button": "angelnetcast-button.gif",
+        "buttonReducedMotion": "angelnetcast-button-rm.gif"
     },
     {
         "title": "paupowpow",
@@ -164,22 +175,26 @@
     {
         "title": "yapi.LOL",
         "href": "https://yapi.lol/",
-        "button": "yapilol-button.gif"
+        "button": "yapilol-button.gif",
+        "buttonReducedMotion": "yapilol-button-rm.gif"
     },
     {
         "title": "oops!!",
         "href": "https://ooops.lol/",
-        "button": "oops-button.gif"
+        "button": "oops-button.gif",
+        "buttonReducedMotion": "oops-button-rm.gif"
     },
     {
         "title": "andou",
         "href": "https://andou.gay/",
-        "button": "andou-button-2.gif"
+        "button": "andou-button-2.gif",
+        "buttonReducedMotion": "andou-button-2-rm.gif"
     },
     {
         "title": "SLASHFIC",
         "href": "https://slashfic.neocities.org/",
-        "button": "slashfic-button.gif"
+        "button": "slashfic-button.gif",
+        "buttonReducedMotion": "slashfic-button-rm.gif"
     },
     {
         "title": "WHITEDESERT",
@@ -189,12 +204,14 @@
     {
         "title": "nerucom",
         "href": "https://nerucom.neocities.org/",
-        "button": "nerucom-button.gif"
+        "button": "nerucom-button.gif",
+        "buttonReducedMotion": "nerucom-button-rm.gif"
     },
     {
         "title": "the soup site",
         "href": "https://thesoupsite.neocities.org/",
-        "button": "thesoupsite-button-2.gif"
+        "button": "thesoupsite-button-2.gif",
+        "buttonReducedMotion": "thesoupsite-button-2-rm.gif"
     },
     {
         "title": "endlessseternity",
@@ -212,7 +229,8 @@
     {
         "title": "starbreaker",
         "href": "https://starbreaker.org/",
-        "button": "starbreaker-button.gif"
+        "button": "starbreaker-button.gif",
+        "buttonReducedMotion": "starbreaker-button-rm.gif"
     },
     {
         "title": "patchwork coffeeshop",
@@ -221,7 +239,8 @@
     {
         "title": "EGGSPACE",
         "href": "https://eggspace.neocities.org/",
-        "button": "eggspace-button.gif"
+        "button": "eggspace-button.gif",
+        "buttonReducedMotion": "eggspace-button-rm.gif"
     },
     {
         "title": "99GIF shop",
@@ -231,7 +250,8 @@
     {
         "title": "yayazizi",
         "href": "https://yayazizi.neocities.org/",
-        "button": "yayazizi-button.gif"
+        "button": "yayazizi-button.gif",
+        "buttonReducedMotion": "yayazizi-button-rm.gif"
     },
     {
         "title": "jasmine’s journal",
@@ -241,17 +261,20 @@
     {
         "title": "Forestfolke",
         "href": "https://forestfolke.neocities.org/",
-        "button": "forestfolke-button-2.gif"
+        "button": "forestfolke-button-2.gif",
+        "buttonReducedMotion": "forestfolke-button-2-rm.gif"
     },
     {
         "title": "chartreuse",
         "href": "https://chartreuse.neocities.org/",
-        "button": "chartreuse-button.gif"
+        "button": "chartreuse-button.gif",
+        "buttonReducedMotion": "chartreuse-button-rm.gif"
     },
     {
         "title": "you are mad about concrete",
         "href": "https://concrete.neocities.org/",
-        "button": "youaremadaboutconcrete-button.gif"
+        "button": "youaremadaboutconcrete-button.gif",
+        "buttonReducedMotion": "youaremadaboutconcrete-button-rm.gif"
     },
     {
         "title": "averycutedog",
@@ -269,17 +292,20 @@
     {
         "title": "apple dust",
         "href": "https://www.lejlart.com/apple.html",
-        "button": "appledust-button.gif"
+        "button": "appledust-button.gif",
+        "buttonReducedMotion": "appledust-button-rm.gif"
     },
     {
         "title": "lulu in cyberspace",
         "href": "https://lu.tiny-universes.net/",
-        "button": "luluincyberspace-button.gif"
+        "button": "luluincyberspace-button.gif",
+        "buttonReducedMotion": "luluincyberspace-button-rm.gif"
     },
     {
         "title": "In Love With a Ghost",
         "href": "https://ilwag.com/",
-        "button": "ilwag-button.gif"
+        "button": "ilwag-button.gif",
+        "buttonReducedMotion": "ilwag-button-rm.gif"
     },
     {
         "href": "https://lamezone.net/",

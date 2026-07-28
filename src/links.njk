@@ -64,7 +64,25 @@ layout: "layouts/inner-frame.njk"
 <!-- button links -->
 <ul class="[ cluster ] [ justify-center ]" role="list">
   {% for site in neighbourhood %}
-    {% if site.button %}
+    {% if site.buttonReducedMotion %}
+      <li>
+        <a rel="external" href="{{ site.href }}">
+          <picture>
+            <source
+              srcset="/assets/img/micro-bars/neighbourhood/{{ site.buttonReducedMotion }}"
+              media="(prefers-reduced-motion: reduce)"
+            />
+            <img
+              src="/assets/img/micro-bars/neighbourhood/{{ site.button }}"
+              alt="{{ site.title }}"
+              title="{{ site.title }}"
+              width="88"
+              height="31"
+            />
+          </picture>
+        </a>
+      </li>
+    {% elif site.button %}
       <li>
         <a rel="external" href="{{ site.href }}">
           <img
@@ -106,7 +124,25 @@ layout: "layouts/inner-frame.njk"
 <!-- button links -->
 <ul class="[ cluster ] [ justify-center ]" role="list">
   {% for site in outgoingSites %}
-    {% if site.button %}
+    {% if site.buttonReducedMotion %}
+      <li>
+        <a rel="external" href="{{ site.href }}">
+          <picture>
+            <source
+              srcset="/assets/img/micro-bars/other-sites/{{ site.buttonReducedMotion }}"
+              media="(prefers-reduced-motion: reduce)"
+            />
+            <img
+              src="/assets/img/micro-bars/other-sites/{{ site.button }}"
+              alt="{{ site.title }}"
+              title="{{ site.title }}"
+              width="88"
+              height="31"
+            />
+          </picture>
+        </a>
+      </li>
+    {% elif site.button %}
       <li>
         <a rel="external" href="{{ site.href }}">
           <img

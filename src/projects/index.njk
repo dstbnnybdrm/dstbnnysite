@@ -14,13 +14,31 @@ layout: "layouts/inner-frame.njk"
 <nav>
   <ul class="[ block-list ] [ cluster ]" role="list">
     <li>
-      <a href="./music/" target="_self"><img src="/assets/img/bunny-fall.gif" alt="" /><span>music</span></a>
+      <a href="./music/" target="_self">
+        <picture>
+          <source srcset="/assets/img/bunny-fall-rm.gif" media="(prefers-reduced-motion: reduce)" />
+          <img src="/assets/img/bunny-fall.gif" alt="" />
+        </picture>
+        <span>music</span></a
+      >
     </li>
     <li>
-      <a href="./samples/" target="_self"><img src="/assets/img/bunny-fall.gif" alt="" /><span>samples</span></a>
+      <a href="./samples/" target="_self">
+        <picture>
+          <source srcset="/assets/img/bunny-fall-rm.gif" media="(prefers-reduced-motion: reduce)" />
+          <img src="/assets/img/bunny-fall.gif" alt="" />
+        </picture>
+        <span>samples</span></a
+      >
     </li>
     <li>
-      <a href="./tabs/" target="_self"><img src="/assets/img/bunny-fall.gif" alt="" /><span>tabs</span></a>
+      <a href="./tabs/" target="_self">
+        <picture>
+          <source srcset="/assets/img/bunny-fall-rm.gif" media="(prefers-reduced-motion: reduce)" />
+          <img src="/assets/img/bunny-fall.gif" alt="" />
+        </picture>
+        <span>tabs</span></a
+      >
     </li>
   </ul>
 </nav>

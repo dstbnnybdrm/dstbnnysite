@@ -2,7 +2,8 @@
     {
         "title": "Lazer Bunny",
         "href": "https://lazer-bunny.neocities.org/",
-        "button": "lazerbunny-button.gif"
+        "button": "lazerbunny-button.gif",
+        "buttonReducedMotion": "lazerbunny-button-rm.gif"
     },
     {
         "title": "badgraph1csghost",
@@ -17,17 +18,20 @@
     {
         "title": "midifreak",
         "href": "https://midifreak.online/",
-        "button": "midifreak-button.gif"
+        "button": "midifreak-button.gif",
+        "buttonReducedMotion": "midifreak-button-rm.gif"
     },
     {
         "title": "NomnomNami",
         "href": "https://neocities.org/site/nomnomnami",
-        "button": "nomnomnami-button.gif"
+        "button": "nomnomnami-button.gif",
+        "buttonReducedMotion": "nomnomnami-button-rm.gif"
     },
     {
         "title": "petrapixel",
         "href": "https://petrapixel.neocities.org/",
-        "button": "petrapixel-button.gif"
+        "button": "petrapixel-button.gif",
+        "buttonReducedMotion": "petrapixel-button-rm.gif"
     },
     {
         "title": "incessantpain",
@@ -37,7 +41,8 @@
     {
         "title": "maggotgirl",
         "href": "https://maggotgirl2002.neocities.org/",
-        "button": "maggotgirl-button.gif"
+        "button": "maggotgirl-button.gif",
+        "buttonReducedMotion": "maggotgirl-button-rm.gif"
     },
     {
         "title": "auberylis dot moe ",
@@ -51,12 +56,14 @@
     {
         "title": "Nanacore",
         "href": "https://nanacore.net/",
-        "button": "nanacore-button.gif"
+        "button": "nanacore-button.gif",
+        "buttonReducedMotion": "nanacore-button-rm.gif"
     },
     {
         "title": "grossgirl94",
         "href": "https://grossgirl94.neocities.org/",
-        "button": "grossgirl94-button.gif"
+        "button": "grossgirl94-button.gif",
+        "buttonReducedMotion": "grossgirl94-button-rm.gif"
     },
     {
         "title": "trendgender",
@@ -70,7 +77,8 @@
     {
         "title": "kirbeedia",
         "href": "https://kirb.pet/",
-        "button": "kirbeedia-button.gif"
+        "button": "kirbeedia-button.gif",
+        "buttonReducedMotion": "kirbeedia-button-rm.gif"
     },
     {
         "title": "the museum of alexandra",
@@ -85,7 +93,8 @@
     {
         "title": "devils.gay",
         "href": "https://devils.gay/eng/",
-        "button": "devils-button.gif"
+        "button": "devils-button.gif",
+        "buttonReducedMotion": "devils-button-rm.gif"
     },
     {
         "title": "multo’s graveyard",
