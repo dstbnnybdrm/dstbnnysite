@@ -1,17 +1,21 @@
 <p>rabbit occasionally yapping and writing words.</p>
 
 <nav class="flow" aria-labelledby="nav-2">
-  <p id="nav-2">recent posts:</p>
+  <h2 class="text-1" id="nav-2">recent posts</h2>
 
-  <ul>
+  <ul class="leader-list" role="list">
     {% for post in collections.post | reverse %}
       {% if loop.index <= 4 %}
         <li>
-          <a href="{{ post.url }}">{{ post.data.title }}</a>
+          <a href="{{ post.url }}">
+            <span class="leader-list__title">{{ post.data.title }}</span>
+            <span class="leader-list__leader"></span>
+            <time datetime="{{ post.date | ISODate }}">{{ post.date | ISODate }}</time>
+          </a>
         </li>
       {% endif %}
     {% endfor %}
   </ul>
 
-  <p><a href="/blog/archive.html">more posts</a></p>
+  <p><a href="/blog/archive.html">more posts…</a></p>
 </nav>

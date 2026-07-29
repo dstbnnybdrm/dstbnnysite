@@ -1,0 +1,29 @@
+/*
+ * inspired by and some styles taken from: 
+ * https://masonarmand.com/
+ */
+.leader-list {
+    & a {
+        display: flex;
+        align-items: baseline;
+        gap: var(--space-3xs);
+        text-decoration: none;
+    }
+
+    & time {
+        color: var(--color-base);
+        font-family: var(--font-alt);
+        text-decoration: none;
+    }
+}
+
+.leader-list__title {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.leader-list__leader {
+    flex: 1;
+    border-bottom: 1px dotted;
+    color: var(--color-base);
+}
