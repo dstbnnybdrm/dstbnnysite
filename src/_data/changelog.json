@@ -1,5 +1,9 @@
 [
     {
+        "date": "2026-08-12",
+        "description": "updated one of my <a href='/links.html#friends' target='mainframe'>friends’</a> links on the links page lol"
+    },
+    {
         "date": "2026-07-28",
         "description": "added static versions of most animated <code>.gifs</code> for those who prefer reduced motion + fixed something i fucked up with the JavaScript lol + add site to-do list on <a href='home.html#to-do-list' target='mainframe'>home page</a> + styled lists in <a href='blog/'>blog</a>"
     },
